@@ -1,0 +1,109 @@
+# if this file is in any repository other than "Cortex.Shared", any changes to it will be overwritten on build. 
+# files in the following directories may be excluded as well, if they are included in "Cortex.Shared":
+#   docs/assets/*
+#   theme/*
+site_name: Reed Sutliff
+site_url: https://ffilt.us/
+#repo_url: 'https://github.com/reedsutliff/personal-blog'
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/reed-sutliff-21213b114/
+    - icon: fontawesome/brands/github
+      link: https://github.com/reedsutliff
+#edit_uri: '?path=/docs/'
+theme:
+  name: material
+  custom_dir: theme/
+  logo: assets/logo.svg
+  icon:
+    repo: fontawesome/brands/git-alt 
+  #favicon: assets/impower.png
+  font:
+    text: Inter
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+  palette:
+    - scheme: default
+      logo: assets/logo.svg
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode 
+    - scheme: slate
+      logo: assets/logo-white.svg
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+plugins:
+  blogging:
+    paging: false
+    features:
+      tags: {}
+    dirs:
+      - blog
+  search : {}
+  git-authors:
+    fallback_to_empty: false
+    exclude:
+      - /*/_*.md
+    enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
+  git-revision-date-localized:
+      fallback_to_build_date: true
+      enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
+  table-reader:
+      base_path: docs_dir
+  exclude-search:
+      exclude:
+        - /*/_*.md
+  include-markdown : {}
+  kroki:
+      FencePrefix: 'kroki-'
+      EnableBlockDiag: true
+      EnableMermaid: true
+      HttpMethod: 'POST'
+      DownloadImages: true
+  #swagger-ui-tag : {}
+  #rss:
+  #    abstract_chars_count: 150
+  #    match_path: "^((?!_nav).)*$"
+  #    enabled: !ENV [MKDOCS_ENABLE_RSS, True]
+  #    pretty_print: false
+  literate-nav:
+      nav_file: _nav.md
+      implicit_index: true
+extra_css:
+  - assets/theme.css
+markdown_extensions:
+  toc : {}
+  footnotes : {}
+  meta : {}
+  admonition : {}
+  pymdownx.details : {}
+  pymdownx.highlight:
+    anchor_linenums: true
+  pymdownx.inlinehilite : {}
+  pymdownx.snippets : {}
+  pymdownx.tabbed: 
+    alternate_style: true 
+  attr_list : {}
+  def_list : {}
+  pymdownx.emoji:
+    emoji_index: !!python/name:materialx.emoji.twemoji
+    emoji_generator: !!python/name:materialx.emoji.to_svg
+    options:
+      custom_icons:
+        - theme/.icons
+  pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - assets/tablesort.js
