@@ -56,8 +56,6 @@ plugins:
   git-revision-date-localized:
       fallback_to_build_date: true
       enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
-  table-reader:
-      base_path: docs_dir
   exclude-search:
       exclude:
         - /*/_*.md
