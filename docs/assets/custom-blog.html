@@ -12,9 +12,11 @@
 {% if render_blog is not defined %}
 {% macro render_blog(title, description, time, url, pg) -%}<a href="{{ url }}">
     <div class="blog-override-post" style="max-height:250px;">
-        <div class="blog-logo">
-            <img src="{{ pg.meta.logo }}" />
-        </div>
+        {% if "logo" in pg.meta %}
+            <div class="blog-logo">
+                <img src="{{ pg.meta.logo }}" />
+            </div>
+        {% endif %}
         <div>
             <h3 class="blog-post-title">{{ title }}</h3>
             {% if show_tags and "tags" in pg.meta %}
@@ -23,7 +25,7 @@
             {% endif %}
             <p class="blog-post-description">{{ description }}</p>
             <div class="blog-post-extra">
-                {{ ("Updated" if is_revision else "Published") + " at: " + time }}
+                {{ ("Updated" if is_revision else "Published") + " on: " + time.split(',')[0] }}
             </div>
         </div>
     </div>

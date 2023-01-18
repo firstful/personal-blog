@@ -1,9 +1,8 @@
 [data-md-color-scheme="default"]  {
-    --md-primary-fg-color:        #0071E3;
-}
-[data-md-color-scheme="slate"]  {
-    --md-primary-fg-color:        #0071E3;
-    
+    --md-primary-fg-color: #252525;
+    --md-primary-bg-color: #bea88b;
+    --md-accent-fg-color: #a38256;
+    --md-accent-bg-color:  #dacfc0;
 }
 [data-md-color-scheme="slate"] img[alt="Kroki"]{
     -webkit-filter: invert(75%);

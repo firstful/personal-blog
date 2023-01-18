@@ -2,7 +2,7 @@
 # files in the following directories may be excluded as well, if they are included in "Cortex.Shared":
 #   docs/assets/*
 #   theme/*
-site_name: Reed Sutliff
+site_name: Sutliff
 site_url: https://ffilt.us/
 #repo_url: 'https://github.com/reedsutliff/personal-blog'
 extra:
@@ -15,10 +15,10 @@ extra:
 theme:
   name: material
   custom_dir: theme/
-  logo: assets/logo.svg
+  logo: assets/logo.png
   icon:
     repo: fontawesome/brands/git-alt 
-  #favicon: assets/impower.png
+  favicon: assets/logo.png
   font:
     text: Inter
   features:
@@ -32,14 +32,6 @@ theme:
   palette:
     - scheme: default
       logo: assets/logo.svg
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode 
-    - scheme: slate
-      logo: assets/logo-white.svg
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 plugins:
   blogging:
     template: docs/assets/custom-blog.html
