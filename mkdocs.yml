@@ -12,7 +12,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/reedsutliff
     - icon: fontawesome/solid/rss
-      link: https://ffilt.us/feed_rss_created.xml
+      link: /feed_rss_created.xml
 #edit_uri: '?path=/docs/'
 theme:
   name: material
@@ -64,8 +64,7 @@ plugins:
     HttpMethod: 'POST'
     DownloadImages: true
   rss:
-    abstract_chars_count: 150
-    match_path: "^((?!_nav).)*$"
+    match_path: "blog\\.*"
     enabled: !ENV [MKDOCS_ENABLE_RSS, True]
     pretty_print: false
   literate-nav:

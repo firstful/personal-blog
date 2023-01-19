@@ -12,9 +12,9 @@
 {% if render_blog is not defined %}
 {% macro render_blog(title, description, time, url, pg) -%}<a href="{{ url }}">
     <div class="blog-override-post" style="max-height:250px;">
-        {% if "logo" in pg.meta %}
+        {% if "image" in pg.meta %}
             <div class="blog-logo">
-                <img src="{{ pg.meta.logo }}" />
+                <img src="{{ pg.meta.image }}" />
             </div>
         {% endif %}
         <div>

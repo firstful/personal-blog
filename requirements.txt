@@ -98,5 +98,5 @@ webencodings==0.5.1
 websockets==10.3
 wsproto==1.1.0
 zipp==3.8.1
-zopfli==0.2.1
 mkdocs-blogging-plugin==2.2.2 
+mkdocs-rss-plugin==1.5.0
