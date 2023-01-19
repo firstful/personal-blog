@@ -11,6 +11,8 @@ extra:
       link: https://www.linkedin.com/in/reed-sutliff-21213b114/
     - icon: fontawesome/brands/github
       link: https://github.com/reedsutliff
+    - icon: fontawesome/solid/rss
+      link: https://ffilt.us/feed_rss_created.xml
 #edit_uri: '?path=/docs/'
 theme:
   name: material
@@ -33,6 +35,8 @@ theme:
     - scheme: default
       logo: assets/logo.svg
 plugins:
+  tags: 
+    tags_file: tags.md
   blogging:
     template: docs/assets/custom-blog.html
     paging: false
@@ -54,20 +58,19 @@ plugins:
         - /*/_*.md
   include-markdown : {}
   kroki:
-      FencePrefix: 'kroki-'
-      EnableBlockDiag: true
-      EnableMermaid: true
-      HttpMethod: 'POST'
-      DownloadImages: true
-  #swagger-ui-tag : {}
-  #rss:
-  #    abstract_chars_count: 150
-  #    match_path: "^((?!_nav).)*$"
-  #    enabled: !ENV [MKDOCS_ENABLE_RSS, True]
-  #    pretty_print: false
+    FencePrefix: 'kroki-'
+    EnableBlockDiag: true
+    EnableMermaid: true
+    HttpMethod: 'POST'
+    DownloadImages: true
+  rss:
+    abstract_chars_count: 150
+    match_path: "^((?!_nav).)*$"
+    enabled: !ENV [MKDOCS_ENABLE_RSS, True]
+    pretty_print: false
   literate-nav:
-      nav_file: _nav.md
-      implicit_index: true
+    nav_file: _nav.md
+    implicit_index: true
 extra_css:
   - assets/theme.css
 markdown_extensions:
