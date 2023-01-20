@@ -1,11 +1,13 @@
 ---
 tags:
-    - tutorial
-    - openapi
-    - codegen
-    - gh-actions
+    - Tutorial
+    - OpenAPI
+    - Github Actions
+    - C#
+    - Python
+    - TypeScript
 description: |
     How to build models from OpenAPI using Github Actions for CI/CD
-image: https://avatars3.githubusercontent.com/u/16343502?v=3&s=200
+image: https://avatars3.githubusercontent.com/u/16343502
 ---
 # Generating Models from OpenAPI with Github Actions

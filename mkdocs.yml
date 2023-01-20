@@ -6,6 +6,19 @@ site_name: Sutliff
 site_url: https://ffilt.us/
 #repo_url: 'https://github.com/reedsutliff/personal-blog'
 extra:
+  tags:
+    C# : csharp
+    Azure Pipelines: azure-pipelines
+    Github Actions: github-actions
+    AsyncAPI : asyncapi
+    OpenAPI : openapi
+    Azure Functions : azure-functions
+    Azure : azure
+    MkDocs: mkdocs
+    Tutorial: tutorial
+    JSON: json
+    Python: python
+    TypeScript: typescript
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/reed-sutliff-21213b114/
@@ -19,12 +32,24 @@ theme:
   custom_dir: theme/
   logo: assets/logo.png
   icon:
+    tag:
+      asyncapi : custom/asyncapi
+      python : simple/python
+      csharp : material/code-braces
+      azure-pipelines: simple/azurepipelines
+      github-actions: simple/githubactions
+      json: simple/json
+      tutorial: material/directions
+      azure-functions: custom/azure-functions
+      azure: custom/azure
+      openapi : custom/openapi
+      mkdocs : custom/mkdocs
+      typescript : simple/typescript
     repo: fontawesome/brands/git-alt 
   favicon: assets/logo.png
   font:
     text: Inter
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -39,7 +64,6 @@ plugins:
     tags_file: tags.md
   blogging:
     template: docs/assets/custom-blog.html
-    paging: false
     features:
       tags: {}
     dirs:

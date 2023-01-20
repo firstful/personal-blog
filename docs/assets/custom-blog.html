@@ -3,14 +3,15 @@
 {% macro render_tags(tags, base_url) -%}
     <div class="blogging-tags-grid">
         {% for tag in tags %}
-        <code style="color: var(--md-typeset-color)">#{{ tag }}</code>
+        <span class="md-tag md-tag-icon md-tag-icon--{{ tag.lower().replace(" ","-").replace("#","sharp") }}">{{ tag }}</span>
         {% endfor %}
     </div>
     {{ caller() }}
 {% endmacro %}
 
 {% if render_blog is not defined %}
-{% macro render_blog(title, description, time, url, pg) -%}<a href="{{ url }}">
+{% macro render_blog(title, description, time, url, pg) -%}
+<a class="no-hover" href="{{ url }}">
     <div class="blog-override-post" style="max-height:250px;">
         {% if "image" in pg.meta %}
             <div class="blog-logo">
