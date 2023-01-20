@@ -31,6 +31,7 @@ jobs:
         run: |
           python -m mkdocs build
         env:
+          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
           MKDOCS_ENABLE_GIT_INFO : true 
       - name: Build And Deploy
         id: builddeploy
