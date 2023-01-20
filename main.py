@@ -33,5 +33,5 @@ def define_env(env):
         return retrieve_private_git("reedsutliff", "blog-examples", path)
     @env.macro
     def retrieve_private_git(owner,repo,path):
-        pat = os.environ['MKDOCS_GITHUB_PAT'] or os.environ['GITHUB_TOKEN']
+        pat = os.environ['MKDOCS_GITHUB_PAT']
         return retrieve_file(pat,owner,repo,path)
