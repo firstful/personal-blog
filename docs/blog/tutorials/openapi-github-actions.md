@@ -23,19 +23,19 @@ Below are a few snippets from an example definition:
 ### POST Definition
 This snippet defines a POST operation to create a new pet.
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),60,69)}}
+{{format_text(retrieve_example('openapi-generator/definition.yaml'),60,69,0)}}
 ```
 
 ### GET Definition with path parameter
 This snippet defines a GET operation allowing the user to fetch a Pet by ID
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),83,94)}}
+{{format_text(retrieve_example('openapi-generator/definition.yaml'),83,94,0)}}
 ```
 
 ### Pet Schema
 This snippet defines the shape of the 'Pet' object
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),128,139)}}
+{{format_text(retrieve_example('openapi-generator/definition.yaml'),128,139,0)}}
 ```
 
 ## Autogeneration
