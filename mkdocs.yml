@@ -2,6 +2,8 @@ site_name: Sutliff
 site_url: https://ffilt.us/
 extra:
   tags:
+    UiPath : uipath
+    Engineering : eng
     C# : c-sharp
     Azure Pipelines: azure-pipelines
     Github Actions: github-actions
@@ -31,9 +33,11 @@ theme:
   logo: assets/logo.png
   icon:
     tag:
+      uipath : custom/uipath
+      eng : material/laptop
       asyncapi : custom/asyncapi
       python : simple/python
-      c-sharp : material/code-braces
+      c-sharp : simple/csharp
       azure-pipelines: simple/azurepipelines
       github-actions: simple/githubactions
       json: simple/json
