@@ -3,13 +3,11 @@ tags:
     - Tutorial
     - OpenAPI
     - Github Actions
-    - C#
-    - Python
-    - TypeScript
 description: |
     How to build models from OpenAPI using Github Actions for CI/CD
 image: https://avatars3.githubusercontent.com/u/16343502
 ---
+
 # Generating Models from OpenAPI with Github Actions
 
 ## What is OpenAPI?
@@ -54,13 +52,12 @@ npm install @openapitools/openapi-generator-cli -g
 
 Alternatively, we can use the `npx` command to run the cli without worrying about the installation. We can now pass the path to our definition and the language we would like to generate to the CLI
 
+```bash
+npx @openapitools/openapi-generator-cli generate -g python -i /path/to/my/definition.yaml -o output
 ```
-npx @openapitools/openapi-generator-cli
-generate
--g python
--i /path/to/my/definition.yaml
--o output
-```
+
+!!! warning Incomplete
+    Article is incomplete. Check back soon!
 
 
 [^1]: [See current members of the OpenAPI Initiative](https://www.openapis.org/membership/members)

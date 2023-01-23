@@ -1,3 +1,5 @@
-* [Blog](index.md)
+* [All](index.md)
+* [Tutorials](tutorials.md)
+* [Opinions](opinions.md)
 * [About](about.md)
-* [Tags](tags.md)
+
