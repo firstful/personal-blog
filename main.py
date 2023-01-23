@@ -1,6 +1,8 @@
 import os
 from http.client import HTTPSConnection
 from dotenv import load_dotenv
+import glob
+import os.path
 
 def retrieve_file(password, owner, repo, path):
     conn = HTTPSConnection("api.github.com")
@@ -15,6 +17,17 @@ def retrieve_file(password, owner, repo, path):
 
 def define_env(env):
     load_dotenv()
+    @env.macro
+    def create_index(target_path: str):
+        docs_dir = os.path.join(os.getcwd(),"docs")
+        target_path = os.path.join(docs_dir,target_path)
+        output = ""
+        for file in glob.glob(target_path+"\\*.md"):
+            name = os.path.basename(file)
+            if(name == "index.md"):
+                continue
+            output = output + f"\n\n [{name}]({name})"
+        return output
     @env.macro
     def format_text(text, start_line = 0,end_line = 20, indent = 1):
         lines = text.splitlines()

@@ -22,7 +22,14 @@ Many engineering "talent acquisition" roles could be more aptly named "risk mana
 
 !!! quote "Isaac Lyman[^4]"
 
-    Employers are constantly at risk of hiring developers with 20 years of job experience but no passion or drive, instead of developers with 4 years of job experience, 6 years of childhood hackery, 3 years of weekends on GitHub, and a lifetime of enthusiasm for cool software.
+    *Employers are constantly at risk of hiring developers with 20 years of job experience but no passion or drive, instead of developers with 4 years of job experience, 6 years of childhood hackery, 3 years of weekends on GitHub, and a lifetime of enthusiasm for cool software.*
+
+!!! quote "Jeff Atwood[^1]"
+
+    *Somehow, they've forgetten [sic] that ***what software developers do best is learn***. Employers should be looking for passionate, driven, flexible self-educators who have a proven ability to code in whatever language -- and serving them up interesting projects they can engage with.* 
+
+## The Solution
+
 
 [^1]: [The YOE Myth](https://blog.codinghorror.com/the-years-of-experience-myth/)
 [^2]: [Your Company Is Too Risk Averse](https://hbr.org/2020/03/your-company-is-too-risk-averse)

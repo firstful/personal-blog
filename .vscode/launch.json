@@ -10,7 +10,8 @@
             "request": "launch",
             "module": "mkdocs",
             "args": [
-                "serve"
+                "serve",
+                "--dirtyreload"
             ],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
