@@ -1,6 +1,6 @@
 ---
-tags:
-    - Opinion
+#tags:
+#    - Opinion
 description: |
     A short overview about why attaching yourself to a programming language is marketable but bad for your code.
 image: https://i.stack.imgur.com/686wZ.png
