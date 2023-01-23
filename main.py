@@ -22,7 +22,7 @@ def define_env(env):
         docs_dir = os.path.join(os.getcwd(),"docs")
         target_path = os.path.join(docs_dir,target_path)
         output = ""
-        for file in glob.glob(target_path+"\\*.md"):
+        for file in glob.glob(target_path+os.sep+"*.md"):
             name = os.path.basename(file)
             if(name == "index.md"):
                 continue

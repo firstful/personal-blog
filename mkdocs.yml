@@ -86,7 +86,6 @@ plugins:
           - blog/opinions
     dirs:
       - blog
-  macros: {}
   search : {}
   git-authors:
     fallback_to_empty: false
@@ -99,6 +98,7 @@ plugins:
   exclude-search:
       exclude:
         - /*/_*.md
+        - wip/*
   include-markdown : {}
   kroki:
     FencePrefix: 'kroki-'
