@@ -6,5 +6,11 @@
     "azureFunctions.preDeployTask": "publish (functions)",
     "cSpell.words": [
         "mkdocs"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file"
+        }
     ]
 }

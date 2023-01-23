@@ -1,3 +1,4 @@
+* [All](index.md)
+* [Tutorials](tutorials.md)
+* [Opinions](opinions.md)
 * [About](about.md)
-* [Blog](blog.md)
-* [Tags](tags.md)

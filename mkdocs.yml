@@ -7,7 +7,10 @@ site_url: https://ffilt.us/
 #repo_url: 'https://github.com/reedsutliff/personal-blog'
 extra:
   tags:
-    C# : csharp
+    Opinion: opinion
+    UiPath : uipath
+    Engineering : eng
+    C# : c-sharp
     Azure Pipelines: azure-pipelines
     Github Actions: github-actions
     AsyncAPI : asyncapi
@@ -26,13 +29,15 @@ extra:
       link: https://github.com/reedsutliff
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
-#edit_uri: '?path=/docs/'
 theme:
   name: material
   custom_dir: theme/
   logo: assets/logo.png
   icon:
     tag:
+      opinion: material/thought-bubble
+      uipath : custom/uipath
+      eng : material/laptop
       asyncapi : custom/asyncapi
       python : simple/python
       csharp : material/code-braces
@@ -55,7 +60,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.indexes
     - toc.follow
-    - toc.integrate
+    - content.tabs.link
   palette:
     - scheme: default
       logo: assets/logo.svg
@@ -66,8 +71,22 @@ plugins:
     template: docs/assets/custom-blog.html
     features:
       tags: {}
+    categories:
+      - name: tutorial
+        template: docs/assets/custom-blog.html
+        features:
+          tags: {}
+        dirs:
+          - blog/tutorials
+      - name: opinion
+        template: docs/assets/custom-blog.html
+        features:
+          tags: {}
+        dirs:
+          - blog/opinions
     dirs:
       - blog
+  macros: {}
   search : {}
   git-authors:
     fallback_to_empty: false
@@ -88,8 +107,8 @@ plugins:
     HttpMethod: 'POST'
     DownloadImages: true
   rss:
-    match_path: "blog\\\\.+\\.md"
-    enabled: !ENV [MKDOCS_ENABLE_RSS, True]
+    match_path: "blog(\\\\|/).+\\.md"
+    enabled: !ENV [MKDOCS_ENABLE_RSS, false]
     pretty_print: false
   literate-nav:
     nav_file: _nav.md
@@ -110,6 +129,7 @@ markdown_extensions:
     alternate_style: true 
   attr_list : {}
   def_list : {}
+  md_in_html : {}
   pymdownx.emoji:
     emoji_index: !!python/name:materialx.emoji.twemoji
     emoji_generator: !!python/name:materialx.emoji.to_svg
