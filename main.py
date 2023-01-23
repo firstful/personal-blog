@@ -18,15 +18,16 @@ def retrieve_file(password, owner, repo, path):
 def define_env(env):
     load_dotenv()
     @env.macro
-    def create_index(target_path: str):
+    def create_index(relative_path: str):
         docs_dir = os.path.join(os.getcwd(),"docs")
-        target_path = os.path.join(docs_dir,target_path)
+        target_path = os.path.join(docs_dir,relative_path)
         output = ""
         for file in glob.glob(target_path+os.sep+"*.md"):
-            name = os.path.basename(file)
-            if(name == "index.md"):
+            name = os.path.splitext(os.path.basename(file))[0]
+            href = "/" + relative_path + "/" + name
+            if(name == "index"):
                 continue
-            output = output + f"\n\n [{name}]({name})"
+            output = output + f"\n\n [{name}]({href})"
         return output
     @env.macro
     def format_text(text, start_line = 0,end_line = 20, indent = 1):
