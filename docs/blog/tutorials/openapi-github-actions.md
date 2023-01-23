@@ -52,7 +52,6 @@ npm install @openapitools/openapi-generator-cli -g
 
 Alternatively, we can use the `npx` command to run the cli without worrying about the installation. We can now pass the path to our definition and the language we would like to generate to the CLI
 
-
 ```bash
 npx @openapitools/openapi-generator-cli generate -g python -i /path/to/my/definition.yaml -o output
 ```

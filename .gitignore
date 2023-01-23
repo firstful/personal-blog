@@ -1,3 +1,5 @@
 site
 .venv
 .env
+*.pyc
+

@@ -1,10 +1,5 @@
-# if this file is in any repository other than "Cortex.Shared", any changes to it will be overwritten on build. 
-# files in the following directories may be excluded as well, if they are included in "Cortex.Shared":
-#   docs/assets/*
-#   theme/*
 site_name: Sutliff
 site_url: https://ffilt.us/
-#repo_url: 'https://github.com/reedsutliff/personal-blog'
 extra:
   tags:
     Opinion: opinion
@@ -23,6 +18,8 @@ extra:
     Python: python
     TypeScript: typescript
   social:
+    - icon: material/email-fast
+      link: mailto:reed@ffilt.us
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/reed-sutliff-21213b114/
     - icon: fontawesome/brands/github
@@ -40,7 +37,7 @@ theme:
       eng : material/laptop
       asyncapi : custom/asyncapi
       python : simple/python
-      csharp : material/code-braces
+      c-sharp : simple/csharp
       azure-pipelines: simple/azurepipelines
       github-actions: simple/githubactions
       json: simple/json
@@ -55,16 +52,19 @@ theme:
   font:
     text: Inter
   features:
+    - content.code.copy
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.indexes
+    - navigation.top
     - toc.follow
     - content.tabs.link
   palette:
     - scheme: default
       logo: assets/logo.svg
 plugins:
+  macros: {}
   tags: 
     tags_file: tags.md
   blogging:

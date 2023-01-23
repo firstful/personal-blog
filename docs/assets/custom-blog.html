@@ -3,7 +3,7 @@
 {% macro render_tags(tags, base_url) -%}
     <div class="blogging-tags-grid">
         {% for tag in tags %}
-        <span class="md-tag md-tag-icon md-tag-icon--{{ tag.lower().replace(" ","-").replace("#","sharp") }}">{{ tag }}</span>
+        <span class="md-tag md-tag-icon md-tag-icon--{{ mkdocs_context.config.extra.tags[tag] }}">{{ tag }}</span>
         {% endfor %}
     </div>
     {{ caller() }}
