@@ -33,6 +33,7 @@ jobs:
         env:
           MKDOCS_GITHUB_PAT : ${{ secrets.MKDOCS_DEPLOY_TOKEN }}
           MKDOCS_ENABLE_GIT_INFO : true 
+          MKDOCS_ENABLE_RSS: true
       - name: Copy Config
         run: |
           cp staticwebapp.config.json site/staticwebapp.config.json
