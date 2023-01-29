@@ -96,9 +96,9 @@ plugins:
       fallback_to_build_date: true
       enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
   exclude-search:
-      exclude:
-        - /*/_*.md
-        - wip/*
+    exclude:
+      - __nav.md
+      - /*/_nav.md
   include-markdown : {}
   kroki:
     FencePrefix: 'kroki-'
