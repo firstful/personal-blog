@@ -100,6 +100,7 @@ plugins:
       - __nav.md
       - /*/_nav.md
   include-markdown : {}
+  glightbox: {}
   kroki:
     FencePrefix: 'kroki-'
     EnableBlockDiag: true
