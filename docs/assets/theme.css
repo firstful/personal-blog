@@ -40,6 +40,11 @@ img.round{
   height: 150px;
   margin:0px;
 }
+@media only screen and (max-width: 600px){
+  .blogging-tags-grid {
+    display: none;
+  }
+}
 
 
 .card a img {
