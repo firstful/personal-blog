@@ -5,7 +5,7 @@ hide:
     - toc
 ---
 
-# Tutorials
+# Opinions
 
 Below is a list of opinion pieces.
 
