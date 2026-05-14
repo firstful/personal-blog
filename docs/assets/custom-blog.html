@@ -1,5 +1,22 @@
 {% extends "blog.html" %}
 
+{% block extrahead %}
+  {{ super() }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "{{ config.site_name }} Blog",
+    "description": "{{ config.site_description }}",
+    "url": "{{ config.site_url }}{{ page.url }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ config.site_author }}"
+    }
+  }
+  </script>
+{% endblock %}
+
 {% macro render_tags(tags, base_url) -%}
     <div class="blogging-tags-grid">
         {% for tag in tags %}
@@ -12,10 +29,10 @@
 {% if render_blog is not defined %}
 {% macro render_blog(title, description, time, url, pg) -%}
 <a class="no-hover" href="{{ url }}">
-    <div class="blog-override-post" style="max-height:250px;">
+    <div class="blog-override-post">
         {% if "image" in pg.meta %}
             <div class="blog-logo">
-                <img src="{{ pg.meta.image }}" />
+                <img src="{{ pg.meta.image }}" alt="{{ title }}" />
             </div>
         {% endif %}
         <div>

@@ -1,3 +1,9 @@
+---
+description: |
+  Interactive resume of Reed Sutliff — senior software engineer specializing
+  in backend development, API design, and developer tooling.
+---
+
 <link rel="stylesheet" href="/assets/resume/interactive.css">
 
 <div class="rf-container" id="rf-app">

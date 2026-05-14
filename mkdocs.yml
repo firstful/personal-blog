@@ -1,5 +1,10 @@
 site_name: Sutliff
 site_url: https://ffilt.us/
+site_description: >-
+  Personal blog of Reed Sutliff — a developer passionate about open source,
+  API design, automation, and software engineering.
+site_author: Reed Sutliff
+copyright: Copyright &copy; 2026 Reed Sutliff
 extra:
   tags:
     Opinion: opinion
