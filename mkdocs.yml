@@ -135,6 +135,8 @@ plugins:
     implicit_index: true
 extra_css:
   - assets/theme.css
+extra_javascript:
+  - assets/js/main.js
 markdown_extensions:
   toc : {}
   footnotes : {}
