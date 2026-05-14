@@ -1,0 +1,19 @@
+{
+  "name": "sutliff-blog",
+  "private": true,
+  "scripts": {
+    "build:css": "postcss src/css/main.css -o docs/assets/theme.css --env production",
+    "build:site": "mkdocs build",
+    "build": "npm run build:css && npm run build:site",
+    "dev:css": "postcss src/css/main.css -o docs/assets/theme.css --watch",
+    "dev:site": "mkdocs serve",
+    "validate": "npm run build && test -f docs/index.html && echo Validation passed"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0"
+  }
+}

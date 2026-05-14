@@ -1,8 +1,33 @@
 import os
+import shutil
+import subprocess
 from http.client import HTTPSConnection
 from dotenv import load_dotenv
 import glob
 import os.path
+
+_RESUME_BUILT = False
+
+def _build_resume_assets():
+    global _RESUME_BUILT
+    if _RESUME_BUILT:
+        return
+
+    # 1. Compile TypeScript => JS
+    ts_script = os.path.join(os.getcwd(), "resume", "scripts", "build-ts.py")
+    if os.path.exists(ts_script):
+        subprocess.run(["python3", ts_script], capture_output=True)
+
+    # 2. Copy resume PDFs
+    src_dir = os.path.join(os.getcwd(), "resume", "output")
+    dst_dir = os.path.join(os.getcwd(), "docs", "assets", "resume")
+    if os.path.exists(src_dir):
+        os.makedirs(dst_dir, exist_ok=True)
+        for pdf in glob.glob(os.path.join(src_dir, "*", "resume.pdf")):
+            variant = os.path.basename(os.path.dirname(pdf))
+            shutil.copy2(pdf, os.path.join(dst_dir, f"{variant}.pdf"))
+
+    _RESUME_BUILT = True
 
 def retrieve_file(password, owner, repo, path):
     conn = HTTPSConnection("api.github.com")
@@ -17,6 +42,7 @@ def retrieve_file(password, owner, repo, path):
 
 def define_env(env):
     load_dotenv()
+    _build_resume_assets()
     @env.macro
     def create_index(relative_path: str):
         docs_dir = os.path.join(os.getcwd(),"docs")

@@ -56,9 +56,88 @@ Alternatively, we can use the `npx` command to run the cli without worrying abou
 npx @openapitools/openapi-generator-cli generate -g python -i /path/to/my/definition.yaml -o output
 ```
 
-!!! warning Incomplete
-    Article is incomplete. Check back soon!
+## Automating with GitHub Actions
 
+Manual generation is useful for one-off tasks, but the real value comes from automating this process in CI/CD. Below is a GitHub Actions workflow that generates typed clients from your OpenAPI spec on every push:
+
+```yaml
+name: Generate API Client
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "specs/**"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate Python client
+        run: |
+          npx @openapitools/openapi-generator-cli generate \
+            -g python \
+            -i specs/api.yaml \
+            -o generated/python-client
+
+      - name: Generate TypeScript client
+        run: |
+          npx @openapitools/openapi-generator-cli generate \
+            -g typescript-axios \
+            -i specs/api.yaml \
+            -o generated/typescript-client
+
+      - name: Upload generated clients as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-clients
+          path: generated/
+```
+
+## Validating the Spec Before Generation
+
+To catch errors early, add a validation step before generating:
+
+```yaml
+- name: Validate OpenAPI spec
+  run: |
+    npx @openapitools/openapi-generator-cli validate \
+      -i specs/api.yaml
+```
+
+Or use [Spectral](https://stoplight.io/open-source/spectral) for more fine-grained linting:
+
+```yaml
+- name: Lint with Spectral
+  run: |
+    npx @stoplight/spectral-cli lint specs/api.yaml
+```
+
+## Publishing Generated Packages
+
+For teams that consume the API, you can publish generated clients to a package registry:
+
+```yaml
+- name: Publish Python client to PyPI
+  run: |
+    cd generated/python-client
+    pip install build twine
+    python -m build
+    twine upload dist/*
+  env:
+    TWINE_USERNAME: __token__
+    TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+```
+
+## Summary
+
+Combining OpenAPI generation with GitHub Actions creates a workflow where your API clients are always in sync with your specification. This eliminates manual code generation, reduces drift, and ensures that consumers always have access to up-to-date, typed clients.
 
 [^1]: [See current members of the OpenAPI Initiative](https://www.openapis.org/membership/members)
 [^2]: [Article explaining 'Swagger' vs. 'OpenAPI'](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)

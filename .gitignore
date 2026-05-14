@@ -2,4 +2,9 @@ site
 .venv
 .env
 *.pyc
+node_modules/
+
+# Resume build artifacts
+resume/build/
+resume/output/
 

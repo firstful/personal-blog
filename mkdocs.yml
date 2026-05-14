@@ -62,6 +62,20 @@ theme:
     - content.tabs.link
   palette:
     - scheme: default
+      primary: custom
+      accent: custom
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      logo: assets/logo.svg
+    - scheme: slate
+      primary: custom
+      accent: custom
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
       logo: assets/logo.svg
 plugins:
   macros: {}
