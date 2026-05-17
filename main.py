@@ -1,7 +1,6 @@
 import os
 import shutil
 import subprocess
-from http.client import HTTPSConnection
 from dotenv import load_dotenv
 import glob
 import os.path
@@ -28,17 +27,6 @@ def _build_resume_assets():
             shutil.copy2(pdf, os.path.join(dst_dir, f"{variant}.pdf"))
 
     _RESUME_BUILT = True
-
-def retrieve_file(password, owner, repo, path):
-    conn = HTTPSConnection("api.github.com")
-    headers = {
-        'User-Agent' : "MkDocs Build Agent",
-        'Authorization' : f"Bearer {password}",
-        'Accept' : 'application/vnd.github.raw'
-    }
-    conn.request('GET',f"/repos/{owner}/{repo}/contents/{path}", headers=headers)
-    response = conn.getresponse()
-    return response.read().decode('utf-8')
 
 def define_env(env):
     load_dotenv()
@@ -68,10 +56,3 @@ def define_env(env):
                 break
             output.append("\t" * indent + line)
         return "\n".join(output)
-    @env.macro
-    def retrieve_example(path):
-        return retrieve_private_git("reedsutliff", "blog-examples", path)
-    @env.macro
-    def retrieve_private_git(owner,repo,path):
-        pat = os.environ['MKDOCS_GITHUB_PAT']
-        return retrieve_file(pat,owner,repo,path)

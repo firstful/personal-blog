@@ -106,14 +106,6 @@ plugins:
     dirs:
       - blog
   search : {}
-  git-authors:
-    fallback_to_empty: false
-    exclude:
-      - /*/_*.md
-    enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
-  git-revision-date-localized:
-      fallback_to_build_date: true
-      enabled: !ENV [MKDOCS_ENABLE_GIT_INFO, false]
   exclude-search:
     exclude:
       - __nav.md
@@ -126,10 +118,6 @@ plugins:
     EnableMermaid: true
     HttpMethod: 'POST'
     DownloadImages: true
-  rss:
-    match_path: "blog(\\\\|/).+\\.md"
-    enabled: !ENV [MKDOCS_ENABLE_RSS, false]
-    pretty_print: false
   literate-nav:
     nav_file: _nav.md
     implicit_index: true
