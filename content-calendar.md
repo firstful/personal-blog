@@ -7,7 +7,7 @@
 | — | Opinion | **The 0.01% That Justifies Anything** | ✅ Released 5/16 (auto-published) |
 | Mon 5/17 | Opinion | **The 500-Million-Year Head Start** | ✅ Written, scheduled |
 | Tue 5/18 | Opinion | **Any Library You Want: $20** | ✅ Written, scheduled |
-| Wed 5/19 | How-To | **Testing LLM Output at Scale** | ⚠️ AT RISK — not yet written |
+|| Wed 5/19 | How-To | **Testing LLM Output at Scale** | ✍️ Drafted |
 | Thu 5/20 | Opinion | **The Uncomfortable Truth About Developer "Productivity" Metrics** | ⚠️ AT RISK — not yet written |
 | Fri 5/21 | Reference | **Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond** | ⚠️ AT RISK — not yet written |
 
