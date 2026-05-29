@@ -19,21 +19,70 @@ image: https://avatars3.githubusercontent.com/u/16343502
 Below are a few snippets from an example definition:
 
 ### POST Definition
-This snippet defines a POST operation to create a new pet.
+This snippet defines a POST operation to create a new pet:
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),60,69,0)}}
+paths:
+  /pets:
+    post:
+      summary: Create a pet
+      operationId: createPet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pet'
+      responses:
+        '201':
+          description: Pet created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
 ```
 
 ### GET Definition with path parameter
-This snippet defines a GET operation allowing the user to fetch a Pet by ID
+This snippet defines a GET operation to fetch a pet by ID:
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),83,94,0)}}
+paths:
+  /pets/{petId}:
+    get:
+      summary: Get a pet by ID
+      operationId: getPetById
+      parameters:
+        - name: petId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: A pet
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
 ```
 
 ### Pet Schema
-This snippet defines the shape of the 'Pet' object
+This snippet defines the shape of the Pet object:
 ```yaml
-{{format_text(retrieve_example('openapi-generator/definition.yaml'),128,139,0)}}
+components:
+  schemas:
+    Pet:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        tag:
+          type: string
 ```
 
 ## Autogeneration
@@ -139,5 +188,5 @@ For teams that consume the API, you can publish generated clients to a package r
 
 Combining OpenAPI generation with GitHub Actions creates a workflow where your API clients are always in sync with your specification. This eliminates manual code generation, reduces drift, and ensures that consumers always have access to up-to-date, typed clients.
 
-[^1]: [See current members of the OpenAPI Initiative](https://www.openapis.org/membership/members)
+[^1]: [OpenAPI Initiative members](https://www.openapis.org/membershipmembers)
 [^2]: [Article explaining 'Swagger' vs. 'OpenAPI'](https://swagger.io/blog/api-strategy/difference-between-swagger-and-openapi/)

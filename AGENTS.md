@@ -1,32 +1,25 @@
-# Build commands
+# Repo: personal-blog
 
-Build everything (CSS + TS + site):
-```
-npm run build
-```
+## Service Config
 
-Watch CSS:
-```
-npm run dev:css
-```
+Desired state: `agent-stack.json` in this repo
 
-Serve locally:
-```
-npm run dev:site
-```
+## Containerfile
 
-# CSS
+This repo contains a `Containerfile` that builds the image `stack/personal-blog:latest`.
 
-Source: `src/css/*.css` (PostCSS partials with @import)
-Output: `docs/assets/theme.css` (minified)
-Compiler: postcss-cli + autoprefixer + cssnano + postcss-import
-Config: `postcss.config.js`
+## Deployment Workflow
 
-# TypeScript
+1. **Make changes** to this repo (Containerfile, source code, etc.)
+2. Test your changes locally inside the running container if needed
+3. **Commit** your changes:
+   ```
+   git add . && git commit -m "describe your changes"
+   ```
+   The controller will detect the new commit hash within 5 seconds, rebuild the image, and recreate the container.
 
-Source: `src/ts/*.ts` (ES module imports/exports)
-Output: `docs/assets/js/main.js` (bundled, single IIFE)
-Compiler: esbuild (fast, handles TS natively)
-Build step: `esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js`
+> **Important**: The controller uses the git commit hash to detect source changes. Uncommitted file edits will NOT trigger a rebuild. (`agent-stack.json` edits always trigger a rebuild regardless of commits.)
 
-The output is loaded via `extra_javascript` in `mkdocs.yml` as a plain `<script>` tag (no `type="module"` needed since esbuild bundles into an IIFE).
+## Config Changes
+
+To change ports, volumes, env vars, or expose settings, edit `agent-stack.json` in this repo directly — this always triggers a container recreation on the next reconcile (no commit required).

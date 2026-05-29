@@ -49,7 +49,7 @@
   {% set _ = json_ld.update({"image": page.meta.image}) %}
   {% endif %}
   {% if page.meta.date %}
-  {% set _ = json_ld.update({"datePublished": page.meta.date}) %}
+  {% set _ = json_ld.update({"datePublished": page.meta.date.isoformat() if page.meta.date.isoformat is defined else page.meta.date}) %}
   {% endif %}
   <script type="application/ld+json">
   {{ json_ld | tojson }}

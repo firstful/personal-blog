@@ -11,7 +11,7 @@ image: https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2021/07/
 
 # Creating Private Documentation with MkDocs and Azure SWA
 
-MkDocs is a fast, simple static site generator geared toward project documentation. Azure Static Web Apps (SWA) is a service that automatically builds and deploys full-stack web apps to Azure from a code repository. Together, they make an excellent platform for hosting both public and private documentation.
+MkDocs is a fast static site generator for project documentation. Azure Static Web Apps builds and deploys full-stack web apps from a code repository. Together, they make an excellent platform for public and private documentation.
 
 ## Why Azure Static Web Apps?
 
@@ -49,9 +49,9 @@ Azure SWA needs a configuration file to know how to build your site. Create `sta
 }
 ```
 
-## Configuring Authentication for Private Docs
+## Authentication for Private Docs
 
-If you want your documentation to be private, Azure SWA makes this straightforward. Add authentication rules to your `staticwebapp.config.json`:
+Azure SWA makes private documentation straightforward. Add authentication rules to `staticwebapp.config.json`:
 
 ```json
 {
@@ -83,7 +83,7 @@ This blocks all unauthenticated users. You can also be more granular, allowing a
 
 ## GitHub Actions Workflow
 
-Azure SWA can generate a GitHub Actions workflow automatically when you connect your repository. Alternatively, here is a manual workflow:
+Azure SWA can generate a workflow automatically when you connect your repository. Here is a manual version:
 
 ```yaml
 name: Build and Deploy MkDocs
@@ -124,4 +124,4 @@ In the Azure portal, navigate to your Static Web App resource and select **Custo
 
 ## Summary
 
-Azure SWA provides a polished hosting experience for MkDocs sites with minimal configuration. The built-in authentication makes it particularly appealing for internal documentation that should not be publicly accessible, while still being easy to set up and maintain.
+Azure SWA provides polished hosting for MkDocs sites with minimal configuration. Built-in authentication makes it ideal for internal documentation that should stay private, without sacrificing ease of setup.

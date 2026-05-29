@@ -21,7 +21,7 @@ function initTypewriter(introPara: HTMLParagraphElement): void {
 
   function type(): void {
     const cur = tags[ti];
-    tagSpan.textContent = del ? cur.substring(0, ci--) : cur.substring(0, ci++);
+    tagSpan.textContent = del ? cur.substring(0, --ci) : cur.substring(0, ++ci);
     if (!del && ci === cur.length) { del = true; setTimeout(type, 1800); return; }
     if (del && ci === 0) { del = false; ti = (ti + 1) % tags.length; setTimeout(type, 400); return; }
     setTimeout(type, del ? 35 : 70);

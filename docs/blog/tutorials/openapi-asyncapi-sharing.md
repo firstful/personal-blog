@@ -11,13 +11,13 @@ image: https://avatars.githubusercontent.com/u/16401334
 
 # Sharing Schemas Between OpenAPI and AsyncAPI Specs
 
-If your application exposes both HTTP APIs (OpenAPI) and event-driven APIs (AsyncAPI), you likely have overlapping data models. A `User` object or an `Order` payload should look the same whether it arrives via REST or a message queue. Manually duplicating these schemas across two specification files leads to drift and maintenance headaches.
+If your application exposes HTTP APIs (OpenAPI) and event-driven APIs (AsyncAPI), you have overlapping data models. A `User` object or `Order` payload should look the same whether it arrives via REST or a message queue. Duplicating schemas across two spec files guarantees drift and maintenance pain.
 
-This tutorial covers strategies for sharing schemas between OpenAPI and AsyncAPI specifications.
+This tutorial covers strategies for sharing schemas between OpenAPI and AsyncAPI.
 
 ## The Problem
 
-Consider an e-commerce system where:
+Consider an e-commerce system:
 
 - A REST endpoint `POST /orders` accepts an `Order` payload (defined in OpenAPI)
 - A message broker emits an `OrderPlaced` event with a nearly identical `Order` payload (defined in AsyncAPI)
@@ -119,7 +119,7 @@ paths:
             schema: *Order
 ```
 
-This works for a single file, but be aware that YAML anchors are a parser feature and some tools may not resolve them as expected.
+This works for single files, but YAML anchors are a parser feature — some tools may not resolve them.
 
 ## Strategy 3: Schema Bundling with Tools
 
@@ -152,4 +152,4 @@ For larger teams, consider generating both specs from a common source of truth:
 
 ## Summary
 
-Sharing schemas between OpenAPI and AsyncAPI is essential for maintaining consistency in polyglot API ecosystems. External `$ref` files offer the best balance of simplicity and tooling support, while bundling ensures compatibility with tools that do not follow references.
+Sharing schemas between OpenAPI and AsyncAPI is essential for consistency in polyglot API ecosystems. External `$ref` files offer the best balance of simplicity and tooling support. Bundling ensures compatibility with tools that do not follow references.

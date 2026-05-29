@@ -106,7 +106,7 @@
     let ti = 0, ci = 0, del = false;
     function type() {
       const cur = tags[ti];
-      tagSpan.textContent = del ? cur.substring(0, ci--) : cur.substring(0, ci++);
+      tagSpan.textContent = del ? cur.substring(0, --ci) : cur.substring(0, ++ci);
       if (!del && ci === cur.length) {
         del = true;
         setTimeout(type, 1800);
