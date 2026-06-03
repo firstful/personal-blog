@@ -15,7 +15,7 @@
 
 | Day | Type | Topic | Notes |
 |---|---|---|---|
-| Mon 5/24 | Opinion | **OpenAPI Is the Worst Form of API Documentation Except All the Others** | ⚠️ AT RISK — not yet written |
+|| Mon 5/24 | Opinion | **OpenAPI Is the Worst Form of API Documentation Except All the Others** | ✍️ Drafted |
 | Tue 5/25 | Reference | **Design Trade-Offs Every Engineer Should Know** | ⚠️ AT RISK — not yet written |
 | Wed 5/26 | Opinion | **"It Works on My Machine" Is a Valid Architectural Requirement** | ⚠️ AT RISK — not yet written |
 | Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ⚠️ AT RISK — not yet written |
