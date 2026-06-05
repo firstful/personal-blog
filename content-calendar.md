@@ -9,7 +9,7 @@
 | Tue 5/18 | Opinion | **Any Library You Want: $20** | ✅ Written, scheduled |
 || Wed 5/19 | How-To | **Testing LLM Output at Scale** | ✍️ Drafted |
 || Thu 5/20 | Opinion | **The Uncomfortable Truth About Developer "Productivity" Metrics** | ✍️ Drafted |
-| Fri 5/21 | Reference | **Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond** | ⚠️ AT RISK — not yet written |
+|| Fri 5/21 | Reference | **Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond** | ✍️ Drafted |
 
 ## Week of May 24
 
