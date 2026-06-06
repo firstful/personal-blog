@@ -18,7 +18,7 @@
 || Mon 5/24 | Opinion | **OpenAPI Is the Worst Form of API Documentation Except All the Others** | ✍️ Drafted |
 | Tue 5/25 | Reference | **Design Trade-Offs Every Engineer Should Know** | ⚠️ AT RISK — not yet written |
 || Wed 5/26 | Opinion | **"It Works on My Machine" Is a Valid Architectural Requirement** | ✍️ Drafted |
-| Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ⚠️ AT RISK — not yet written |
+|| Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ✍️ Drafted |
 | Fri 5/28 | How-To | **Building a Personal MkDocs Theme with PostCSS + esbuild** | ⚠️ AT RISK — not yet written |
 
 ## Backlog (no date)
