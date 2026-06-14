@@ -30,4 +30,4 @@
 || Opinion | **The Case Against Premature Abstraction** — When to wait for the third instance before extracting a shared library | ✍️ Drafted |
 ||| Opinion | **The Myth of the Full-Stack Developer** — T-shaped vs. m-shaped skills in an AI-assisted world | ✍️ Drafted |
 || How-To | **Prompt Chaining vs. Tool Use: When to Use What** — Patterns for multi-step LLM interactions | ✍️ Drafted |
-|| How-To | **GitHub Actions as a Content Publishing Platform** |
+||| How-To | **GitHub Actions as a Content Publishing Platform** | ✍️ Drafted |
