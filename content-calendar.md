@@ -21,6 +21,12 @@
 || Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ✍️ Drafted |
 || Fri 5/28 | How-To | **Building a Personal MkDocs Theme with PostCSS + esbuild** | ✍️ Drafted |
 
+## June 15–30
+
+| Day | Type | Topic | Notes |
+|---|---|---|---|
+| Mon 6/15 | Opinion | **Six Months of Agent-Stacks: What Running AI Coding Agents in Production Taught Me** | ✍️ Drafted |
+
 ## Backlog (no date)
 
 | Type | Topic | Status |
