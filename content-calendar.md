@@ -26,6 +26,7 @@
 | Day | Type | Topic | Notes |
 |---|---|---|---|
 | Mon 6/15 | Opinion | **Six Months of Agent-Stacks: What Running AI Coding Agents in Production Taught Me** | ✍️ Drafted |
+|| Tue 6/16 | Opinion | **Code Review When AI Writes the First Draft** | ✍️ Drafted |
 
 ## Backlog (no date)
 
