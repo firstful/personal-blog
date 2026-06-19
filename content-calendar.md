@@ -28,7 +28,7 @@
 | Mon 6/15 | Opinion | **Six Months of Agent-Stacks: What Running AI Coding Agents in Production Taught Me** | ✍️ Drafted |
 | Tue 6/16 | Opinion | **Code Review When AI Writes the First Draft** | ✍️ Drafted |
 || Thu 6/18 | Opinion | **LLM Architecture vs. The Human Brain** | ✅ Released |
-|| Fri 6/19 | Opinion | **Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything** | ✍️ Drafted |
+|| Fri 6/19 | Opinion | **Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything** | ✅ Released |
 
 ## Backlog (no date)
 

@@ -1,6 +1,6 @@
 ---
 title: "Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything"
-date: 2026-06-18
+date: 2026-06-19
 tags: [infrastructure, architecture, DevOps, Kubernetes, agent-stack, engineering]
 description: |
     Why the most reliable production systems are the ones that do the same thing
