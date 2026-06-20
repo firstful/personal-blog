@@ -40,3 +40,4 @@
 ||| Opinion | **The Myth of the Full-Stack Developer** — T-shaped vs. m-shaped skills in an AI-assisted world | ✍️ Drafted |
 || How-To | **Prompt Chaining vs. Tool Use: When to Use What** — Patterns for multi-step LLM interactions | ✍️ Drafted |
 ||| How-To | **GitHub Actions as a Content Publishing Platform** | ✍️ Drafted |
+|| Opinion | **The Observability Tax: What I Learned Running Grafana on a Server That Costs $40 a Month** — The hidden cost of observability at personal-infrastructure scale, and why you should still pay it | ✍️ Drafted |
