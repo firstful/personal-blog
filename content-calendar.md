@@ -31,6 +31,7 @@
 | Fri 6/19 | Opinion | **Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything** | ✅ Released |
 | Mon 6/22 | Opinion | **Configuration as Code Is a Lie: Why Desired State Always Drifts** | ✍️ Drafted |
 | Tue 6/23 | Opinion | **The Drift Log: What a Reconciliation Loop Taught Me About Invisible Failures** | ✍️ Drafted |
+| Wed 6/24 | Opinion | **The Operator's Paradox: How Automating Everything Made Me a Better Manual Engineer** | ✍️ Drafted |
 
 ## Backlog (no date)
 
