@@ -17,9 +17,16 @@ health-checking, and slot-swapping without human intervention. The goal was
 boring reliability: a system that runs itself so I could focus on building
 things instead of fighting fires.
 
-It worked. The system is boring now. Containers restart when they crash. TLS
-certificates renew automatically. Deployments flow from `git push` without me
-touking anything. Dashboard green, alerts silent, sleep uninterrupted.
+Before this, operations was a daily ritual. I SSH'd in every morning to check
+logs, restart containers, verify that nothing had silently broken overnight. It
+wasn't glamorous, but it built a relationship with the machine — a tactile
+awareness of how it breathed, where its bottlenecks lived, what normal felt
+like. The terminal was an extension of my nervous system.
+
+The reconciliation loop changed everything. The system is boring now. Containers
+restart when they crash. TLS certificates renew automatically. Deployments flow
+from `git push` without me touching anything. Dashboard green, alerts silent,
+sleep uninterrupted.
 
 And that's exactly when the trouble started.
 
@@ -64,6 +71,18 @@ resolution issue three times in six months — each time rediscovering the
 fix rather than remembering it from last time, because last time the loop
 fixed it before I even noticed.
 
+**Configuration blindness.** When you never manually edit a configuration
+file, you forget what's in it. My `agent-stack.json` files have accumulated
+fields over six months — health check paths, environment variables, volume
+mounts, sidecar definitions, deploy strategies — and I've reached the point
+where I open a file to verify a setting and discover something I don't
+remember adding. The worst case was a stale `memory_limit` that capped a
+container at 256 MB while its data set had grown to require 512 MB. The
+container was OOM-killed roughly once a week, and I'd stopped looking
+because the reconciliation loop was restarting it automatically. Six weeks
+of silently degraded performance because I'd stopped reading the files my
+automation was reading.
+
 **Over-reliance on green checks.** When your dashboard has been green for six
 weeks, you start to believe that green means "everything is fine" rather than
 "the automation is masking the failures." The drift log post I wrote recently
@@ -80,6 +99,15 @@ to 90% — and time myself from first symptom to full recovery. It's chaos
 engineering for an audience of one. The first time, it took me 22 minutes to
 diagnose and fix a container I'd configured to crash on startup. The third
 time, it took four. The practice matters more than the theory.
+
+The specifics matter here. I don't simulate random failures — I simulate the
+failures that have actually happened in the last six months: certificate
+expiry, OOM kills, disk pressure, DNS outages, config syntax errors, tunnel
+dropouts. Each drill reinforces the diagnostic path for a failure I've already
+seen. My terminal history has become a personal incident-response playbook:
+`podman logs --tail 50`, `journalctl -u agent-stack -n 20`,
+`curl -sfI http://localhost:<port>/health`, `podman inspect --format '{{.State.Error}}'`.
+I run through them from muscle memory now.
 
 **Read-only exploration.** Once a week, I spend ten minutes reading the
 runtime state files, the controller logs, and the Podman container list. I
@@ -115,3 +143,18 @@ language you haven't spoken in months.
 
 The best automation doesn't make the operator obsolete. It makes the operator
 ready for the moments that automation can't handle.
+
+## The Takeaway
+
+If you're building a convergent system — a reconciliation loop, a Kubernetes
+operator, a self-healing deployment pipeline — build two things: the loop that
+keeps the system running, and a practice that keeps *you* ready to run it.
+Schedule your monthly drill. Read the drift log. Open a config file you haven't
+touched in a while and actually read it. SSH in and look around for ten
+minutes even though there's nothing to fix.
+
+The system will stay green. The alerts will stay silent. And when, inevitably,
+something slips through — a race condition the loop can't converge, a state
+that no health check anticipates, a failure that only a human who knows the
+machine can diagnose — you'll be ready. Not because the automation prepared
+you, but because you prepared yourself.
