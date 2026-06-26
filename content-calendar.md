@@ -7,19 +7,19 @@
 | — | Opinion | **The 0.01% That Justifies Anything** | ✅ Released 5/16 (auto-published) |
 | Mon 5/17 | Opinion | **The 500-Million-Year Head Start** | ✅ Written, scheduled |
 | Tue 5/18 | Opinion | **Any Library You Want: $20** | ✅ Written, scheduled |
-| Wed 5/19 | How-To | **Testing LLM Output at Scale** | ✍️ Drafted |
-| Thu 5/20 | Opinion | **The Uncomfortable Truth About Developer "Productivity" Metrics** | ✍️ Drafted |
-| Fri 5/21 | Reference | **Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond** | ✍️ Drafted |
+| Wed 5/19 | How-To | **Testing LLM Output at Scale** | ✅ Released |
+| Thu 5/20 | Opinion | **The Uncomfortable Truth About Developer "Productivity" Metrics** | ✅ Released |
+| Fri 5/21 | Reference | **Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond** | ✅ Released |
 
 ## Week of May 24
 
 | Day | Type | Topic | Notes |
 |---|---|---|---|
-| Mon 5/24 | Opinion | **OpenAPI Is the Worst Form of API Documentation Except All the Others** | ✍️ Drafted |
-| Tue 5/25 | Reference | **Design Trade-Offs Every Engineer Should Know** | ✍️ Drafted |
-| Wed 5/26 | Opinion | **"It Works on My Machine" Is a Valid Architectural Requirement** | ✍️ Drafted |
-| Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ✍️ Drafted |
-| Fri 5/28 | How-To | **Building a Personal MkDocs Theme with PostCSS + esbuild** | ✍️ Drafted |
+| Mon 5/24 | Opinion | **OpenAPI Is the Worst Form of API Documentation Except All the Others** | ✅ Released |
+| Tue 5/25 | Reference | **Design Trade-Offs Every Engineer Should Know** | ✅ Released |
+| Wed 5/26 | Opinion | **"It Works on My Machine" Is a Valid Architectural Requirement** | ✅ Released |
+| Thu 5/27 | How-To | **Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel** | ✅ Released |
+| Fri 5/28 | How-To | **Building a Personal MkDocs Theme with PostCSS + esbuild** | ✅ Released |
 
 ## June 15–30
 
