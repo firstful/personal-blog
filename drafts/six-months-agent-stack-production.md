@@ -2,6 +2,9 @@
 title: "Six Months of Agent-Stacks: What Running AI Coding Agents in Production Taught Me"
 date: 2026-06-15
 tags: [AI, software engineering, infrastructure, agents, production, DevOps]
+description: |
+    Six months of running AI coding agents as production infrastructure — what works,
+    what breaks, and what every engineer should know before deploying an agent fleet.
 ---
 
 # Six Months of Agent-Stacks: What Running AI Coding Agents in Production Taught Me
