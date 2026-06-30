@@ -29,10 +29,10 @@
 | Tue 6/16 | Opinion | **Code Review When AI Writes the First Draft** | ✅ Released |
 | Thu 6/18 | Opinion | **LLM Architecture vs. The Human Brain** | ✅ Released |
 | Fri 6/19 | Opinion | **Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything** | ✅ Released |
-| Mon 6/22 | Opinion | **Configuration as Code Is a Lie: Why Desired State Always Drifts** | ✍️ Drafted |
-| Tue 6/23 | Opinion | **The Drift Log: What a Reconciliation Loop Taught Me About Invisible Failures** | ✍️ Drafted |
-| Wed 6/24 | Opinion | **The Operator's Paradox: How Automating Everything Made Me a Better Manual Engineer** | ✍️ Drafted |
-| Tue 6/30 | Opinion | **Agent-Driven Development: What a Year of AI-Assisted Engineering Actually Looks Like** | ✍️ Drafted |
+| Mon 6/22 | Opinion | **Configuration as Code Is a Lie: Why Desired State Always Drifts** | ✅ Released |
+| Tue 6/23 | Opinion | **The Drift Log: What a Reconciliation Loop Taught Me About Invisible Failures** | ✅ Released |
+| Wed 6/24 | Opinion | **The Operator's Paradox: How Automating Everything Made Me a Better Manual Engineer** | ✅ Released |
+| Tue 6/30 | Opinion | **Agent-Driven Development: What a Year of AI-Assisted Engineering Actually Looks Like** | ✅ Released |
 
 ## Backlog (no date)
 
