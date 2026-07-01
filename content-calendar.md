@@ -34,6 +34,13 @@
 | Wed 6/24 | Opinion | **The Operator's Paradox: How Automating Everything Made Me a Better Manual Engineer** | ✅ Released |
 | Tue 6/30 | Opinion | **Agent-Driven Development: What a Year of AI-Assisted Engineering Actually Looks Like** | ✅ Released |
 
+## July 1–15
+
+| Day | Type | Topic | Notes |
+|---|---|---|---|
+| Wed 7/1 | Opinion | **The Appointment Calendar: What a Month of Automated Blogging Taught Me About Consistency** | ✍️ Drafted |
+| — | — | *More TBD* | |
+
 ## Backlog (no date)
 
 | Type | Topic | Status |
