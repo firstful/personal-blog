@@ -39,6 +39,7 @@
 | Day | Type | Topic | Notes |
 |---|---|---|---|
 | Wed 7/1 | Opinion | **The Appointment Calendar: What a Month of Automated Blogging Taught Me About Consistency** | ✍️ Drafted |
+| Thu 7/2 | Tutorial | **Post-Deployment Validation: What I Check After Every Automated Deploy** | ✍️ Drafted |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
