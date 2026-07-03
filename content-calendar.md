@@ -40,6 +40,7 @@
 |---|---|---|---|
 | Wed 7/1 | Opinion | **The Appointment Calendar: What a Month of Automated Blogging Taught Me About Consistency** | ✍️ Drafted |
 | Thu 7/2 | Tutorial | **Post-Deployment Validation: What I Check After Every Automated Deploy** | ✍️ Drafted |
+| Fri 7/3 | Opinion | **The False Alarm Tax: Why Every Validation Pipeline Needs to Know When to Stay Quiet** | ✍️ Drafted |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
