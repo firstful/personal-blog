@@ -1,4 +1,6 @@
 ---
+title: "Post-Deployment Validation: What I Check After Every Automated Deploy"
+date: 2026-07-02
 tags:
     - Tutorial
     - DevOps
