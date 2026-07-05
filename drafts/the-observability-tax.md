@@ -53,6 +53,16 @@ After a few months of trial and error, I found the configurations that let me ke
 
 **Cut the fat.** Do I really need a live-updating dashboard for my RSS reader's memory usage? No. I removed every panel that I hadn't looked at in the last 30 days. The result was a Grafana config at 40% of its original size and noticeably faster dashboard load times.
 
+## The Attention Tax
+
+The one cost nobody puts on a spreadsheet is the cost of looking.
+
+When you have a real-time dashboard for every service, you start checking it. Not because there's a problem — but because it's there. During a build, you glance at Loki to see if the logs look normal. Between meetings, you pull up Grafana to watch the CPU graph flatten out. Before bed, you scroll the alert list to make sure nothing is red. None of these checks are urgent. None of them produce actionable information most of the time. But each one costs you a fragment of focus — a context switch that pulls you out of whatever you were doing and into "infrastructure monitoring mode."
+
+I didn't notice this tax at first because it doesn't show up on any graph. There's no Prometheus metric for "developer attention diverted." But over the course of a week, those micro-checks add up. A quick peek at a dashboard every twenty minutes, extrapolated across an eight-hour day, is nearly two hours of fragmented attention. Two hours where I was technically reading dashboards but not truly reasoning about anything.
+
+The fix was boring, which is how you know it's right: I set a schedule. I check dashboards once in the morning to confirm overnight health, once after a deployment to verify the roll went clean, and I set alerts to page me for everything else. If nothing's paging, I don't look. The dashboards exist, they capture everything, but they demand my attention only when they have something to say. This is harder than it sounds — the pull of a live-updating dashboard is real and it takes discipline to ignore the green lights. But the productivity gain from recovering those micro-checks was larger than the CPU savings from sampling aggressive.
+
 ## The Bottom Line
 
 Observability is infrastructure debt you take on today to pay down debugging debt tomorrow. At production scale, the trade-off is a no-brainer — the cost of observability is dwarfed by the cost of downtime. At personal-infrastructure scale, the math is closer. Fifteen percent of a single CPU is not nothing. A gigabyte and a half of RAM is real money on a budget server.
