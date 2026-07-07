@@ -42,6 +42,7 @@
 | Thu 7/2 | Tutorial | **Post-Deployment Validation: What I Check After Every Automated Deploy** | ✅ Released |
 | Fri 7/3 | Opinion | **The False Alarm Tax: Why Every Validation Pipeline Needs to Know When to Stay Quiet** | ✍️ Drafted |
 | Mon 7/6 | Opinion | **Backlog Grooming for Bloggers: What Sprint Planning Taught Me About Content Strategy** | ✍️ Drafted |
+| Tue 7/7 | Opinion | **The Editor's Eye: What a Month of Reviewing AI Drafts Taught Me About Writing** | ✍️ Drafted |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
