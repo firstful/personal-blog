@@ -43,6 +43,7 @@
 | Fri 7/3 | Opinion | **The False Alarm Tax: Why Every Validation Pipeline Needs to Know When to Stay Quiet** | ✍️ Drafted |
 | Mon 7/6 | Opinion | **Backlog Grooming for Bloggers: What Sprint Planning Taught Me About Content Strategy** | ✍️ Drafted |
 | Tue 7/7 | Opinion | **The Editor's Eye: What a Month of Reviewing AI Drafts Taught Me About Writing** | ✍️ Drafted |
+| Wed 7/8 | Opinion | **The Idea Supply Chain: What Happens to Creativity When AI Handles the Drafting** | ✍️ Drafted |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
