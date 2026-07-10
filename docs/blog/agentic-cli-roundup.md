@@ -21,7 +21,7 @@ I've spent the past six months working with every major entry in this space — 
 | **Claude Code** | Anthropic | Claude 3.5/4 Sonnet, Opus | No | Deep reasoning, long context, edit-first |
 | **Gemini CLI** | Google | Gemini 2.5 Pro | No | Google Cloud integration, massive context |
 | **Codex CLI** | OpenAI | GPT-4o, o-series | No | Sandboxed execution, strong coding benchmarks |
-| **opencode** | Community (Sutliff Labs) | BYOM (bring your own model) | Yes (MIT) | Model-agnostic, extensible, agent orchestration |
+| **opencode** | Anomaly (anomalyco) | BYOM (bring your own model) | Yes (MIT) | Model-agnostic, extensible, agent orchestration |
 | **Copilot CLI** | GitHub (Microsoft) | GPT-4o, Claude 3.5 | No | Ubiquity, natural language to shell |
 
 Each occupies a different point in the design space. The differences matter more than the similarities.
@@ -82,7 +82,7 @@ OpenAI's model pricing adds up similarly to Claude's. Each agentic loop — prop
 
 ## opencode: The Open Alternative
 
-Full disclosure: I work on opencode. But that's exactly why I'm including it — I have the most intimate knowledge of its design decisions and trade-offs.
+Full disclosure: I contribute to opencode and have been building agent infrastructure with it since early access. But that's exactly why I'm including it — I have the most intimate knowledge of its design decisions and trade-offs.
 
 opencode is model-agnostic by design. You bring your own model — any OpenAI-compatible API, local GGUF via llama.cpp, Anthropic, Google, or a custom endpoint. This has real consequences for the user experience:
 

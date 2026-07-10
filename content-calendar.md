@@ -44,6 +44,10 @@
 | Mon 7/6 | Opinion | **Backlog Grooming for Bloggers: What Sprint Planning Taught Me About Content Strategy** | ✍️ Drafted |
 | Tue 7/7 | Opinion | **The Editor's Eye: What a Month of Reviewing AI Drafts Taught Me About Writing** | ✍️ Drafted |
 | Wed 7/8 | Opinion | **The Idea Supply Chain: What Happens to Creativity When AI Handles the Drafting** | ✍️ Drafted |
+| Thu 7/9 | Tutorial | **Running OpenCode as a Homelab Service Behind Cloudflare Tunnel** — Containerfile, health checks, slot-swap deploy, remote access | ✍️ Drafted |
+| Fri 7/10 | Tutorial | **OpenCode Headless on a Cron Job: Automated PR Review Every Morning** — Wire opencode to review overnight PRs via systemd timer | ✍️ Drafted |
+| Mon 7/13 | Opinion | **The Open-Weight Tipping Point: When $3.48/MTok Matches $25/MTok** — Open-weight models now match proprietary coding benchmarks at 7x lower cost | ✍️ Drafted |
+| Tue 7/14 | Reference | **OpenCode's Go TUI: Why Polyglot CLI Architecture Works** — How a TypeScript server + Go terminal UI delivers the best of both runtimes | ✍️ Drafted |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
@@ -57,3 +61,10 @@
 | How-To | **GitHub Actions as a Content Publishing Platform** | ✍️ Drafted |
 | Opinion | **The Observability Tax: What I Learned Running Grafana on a Server That Costs $40 a Month** — The hidden cost of observability at personal-infrastructure scale, and why you should still pay it | ✍️ Drafted |
 | Opinion | **The Meta-Post: What I Learned When My AI Blog Pipeline Started Lying to Me** — A postmortem on discovering and removing fabricated content | ✍️ Drafted |
+
+## July 16–31
+
+| Day | Type | Topic | Notes |
+|---|---|---|---|
+| Thu 7/16 | Opinion | **Reconciliation Loops Are the Right Architecture for Agent Infrastructure** — Why "declare, converge, repeat" beats event-driven for agent systems | |
+| — | — | *More TBD* | |
