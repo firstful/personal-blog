@@ -48,6 +48,7 @@
 | Fri 7/10 | Tutorial | **OpenCode Headless on a Cron Job: Automated PR Review Every Morning** — Wire opencode to review overnight PRs via systemd timer | ✍️ Drafted |
 | Mon 7/13 | Opinion | **The Open-Weight Tipping Point: When $3.48/MTok Matches $25/MTok** — Open-weight models now match proprietary coding benchmarks at 7x lower cost | ✍️ Drafted |
 | Tue 7/14 | Reference | **OpenCode's Go TUI: Why Polyglot CLI Architecture Works** — How a TypeScript server + Go terminal UI delivers the best of both runtimes | ✍️ Drafted |
+| Sat 7/11 | Opinion | **When My AI Blog Pipeline Started Lying to Me** | ✅ Released |
 | — | — | *More TBD* | |
 
 ## Backlog (no date)
@@ -60,11 +61,10 @@
 | How-To | **Prompt Chaining vs. Tool Use: When to Use What** — Patterns for multi-step LLM interactions | ✍️ Drafted |
 | How-To | **GitHub Actions as a Content Publishing Platform** | ✍️ Drafted |
 | Opinion | **The Observability Tax: What I Learned Running Grafana on a Server That Costs $40 a Month** — The hidden cost of observability at personal-infrastructure scale, and why you should still pay it | ✍️ Drafted |
-| Opinion | **The Meta-Post: What I Learned When My AI Blog Pipeline Started Lying to Me** — A postmortem on discovering and removing fabricated content | ✍️ Drafted |
 
 ## July 16–31
 
 | Day | Type | Topic | Notes |
 |---|---|---|---|
-| Thu 7/16 | Opinion | **Reconciliation Loops Are the Right Architecture for Agent Infrastructure** — Why "declare, converge, repeat" beats event-driven for agent systems | |
+| Thu 7/16 | Opinion | **Reconciliation Loops Are the Right Architecture for Agent Infrastructure** — Why "declare, converge, repeat" beats event-driven for agent systems | ✍️ Drafted |
 | — | — | *More TBD* | |
