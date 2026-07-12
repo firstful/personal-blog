@@ -143,6 +143,45 @@ providers:
 
 The homelab economics change when you can route simple tasks to a local model that costs nothing and save the cloud models for problems that actually need them.
 
+## Secrets Management
+
+API keys are the trickiest part of running an AI agent as a service. You can't bake them into the container image — that violates every security practice and means rebuilding on every key rotation. You can't use env vars at build time either, because the image might be cached and the key leaks into the layer history.
+
+The pattern I use is a **vault service** — a lightweight container on the same podman network that stores secrets and serves them to services on startup. The agent-stack config references secrets with placeholders:
+
+```json
+{
+  "env": {
+    "ANTHROPIC_API_KEY": "{SECRETS.ANTHROPIC_API_KEY}",
+    "DEEPSEEK_API_KEY": "{SECRETS.DEEPSEEK_API_KEY}"
+  }
+}
+```
+
+At deploy time, the controller resolves `{SECRETS.*}` tokens by calling the vault API, then passes the resolved values to the container. The vault itself is a simple encrypted JSON store with a single HTTP endpoint — small enough to audit, no moving parts.
+
+If you aren't using a vault, the fallback is a `.env` file mounted from a host path:
+
+```json
+{
+  "env_file": "/srv/secrets/opencode.env"
+}
+```
+
+This keeps keys off the image and out of version control. The tradeoff is that the `.env` file becomes part of your backup strategy — lose the file, lose access to the service.
+
+## Troubleshooting
+
+A few things that have gone wrong running opencode headless:
+
+**Health check timing.** The default health check interval is 30s with a 5s timeout. If opencode takes longer to start — slow model downloads, dependency installs on first boot — the health check fails and the blue-green swap aborts. Fix: increase the `startPeriod` to 60s in the health check config, or pre-warm the container with a dummy request.
+
+**Port conflicts.** If you're running multiple services on the homelab, the auto-port range (4000-4999 in agent-stack) can collide. Run `sudo -u reeds podman ps` to check what's already bound, or pin the port explicitly in the config.
+
+**Cloudflare tunnel goes stale.** The cloudflared sidecar can lose its connection after a network interruption. The reconciliation loop handles this — it detects the tunnel process is down and restarts it within 5 seconds — but you'll see a brief blip in availability. Add a retry in your client code for tolerance.
+
+**Model provider rate limits.** When running headless, the agent processes tasks as fast as the API allows. If you're sending multiple PR reviews in parallel, you'll hit provider rate limits quickly. The solution is a simple token-bucket rate limiter in the provider config, or queueing tasks through a sidecar with a configurable concurrency limit.
+
 ## Step 5: Verification
 
 ```bash
@@ -162,5 +201,9 @@ curl https://opencode.ffilt.us/api/v1/sessions/{session_id}
 ## Why This Matters
 
 Running opencode on a homelab isn't about saving money — it's about control. Your code never leaves your infrastructure unless you choose to send it to a cloud model. You can switch providers based on task requirements, not vendor lock-in. And when the next model release drops, you add it to your config, not to your monthly bill.
+
+The economics are real too. At $3.48/MTok for open-weight models like DeepSeek V4 Pro, the cost per task is fractions of a cent for routine reviews. Routing simple tasks to a local Ollama model costs zero. The homelab pays for itself once you're processing more than a few hundred agent tasks a month — which, if you're using coding agents daily, you almost certainly are.
+
+The broader point is that agent infrastructure is just infrastructure. The same patterns that keep a web service running — health checks, blue-green deploys, reconciliation loops, secrets management — keep an agent running too. Once you treat the agent like any other service in your stack, the operational complexity drops to near zero.
 
 The agent runs on your terms. That's the homelab promise, and opencode delivers it.
