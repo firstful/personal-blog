@@ -38,15 +38,15 @@
 
 | Day | Type | Topic | Notes |
 |---|---|---|---|
-| Wed 7/1 | Opinion | **The Appointment Calendar: What a Month of Automated Blogging Taught Me About Consistency** | ✍️ Drafted |
+| Wed 7/1 | Opinion | **The Appointment Calendar: What a Month of Automated Blogging Taught Me About Consistency** | ✅ Released |
 | Thu 7/2 | Tutorial | **Post-Deployment Validation: What I Check After Every Automated Deploy** | ✅ Released |
-| Fri 7/3 | Opinion | **The False Alarm Tax: Why Every Validation Pipeline Needs to Know When to Stay Quiet** | ✍️ Drafted |
-| Mon 7/6 | Opinion | **Backlog Grooming for Bloggers: What Sprint Planning Taught Me About Content Strategy** | ✍️ Drafted |
-| Tue 7/7 | Opinion | **The Editor's Eye: What a Month of Reviewing AI Drafts Taught Me About Writing** | ✍️ Drafted |
-| Wed 7/8 | Opinion | **The Idea Supply Chain: What Happens to Creativity When AI Handles the Drafting** | ✍️ Drafted |
-| Thu 7/9 | Tutorial | **Running OpenCode as a Homelab Service Behind Cloudflare Tunnel** — Containerfile, health checks, slot-swap deploy, remote access | ✍️ Drafted |
-| Fri 7/10 | Tutorial | **OpenCode Headless on a Cron Job: Automated PR Review Every Morning** — Wire opencode to review overnight PRs via systemd timer | ✍️ Drafted |
-| Mon 7/13 | Opinion | **The Open-Weight Tipping Point: When $3.48/MTok Matches $25/MTok** — Open-weight models now match proprietary coding benchmarks at 7x lower cost | ✍️ Drafted |
+| Fri 7/3 | Opinion | **The False Alarm Tax: Why Every Validation Pipeline Needs to Know When to Stay Quiet** | ✅ Released |
+| Mon 7/6 | Opinion | **Backlog Grooming for Bloggers: What Sprint Planning Taught Me About Content Strategy** | ✅ Released |
+| Tue 7/7 | Opinion | **The Editor's Eye: What a Month of Reviewing AI Drafts Taught Me About Writing** | ✅ Released |
+| Wed 7/8 | Opinion | **The Idea Supply Chain: What Happens to Creativity When AI Handles the Drafting** | ✅ Released |
+| Thu 7/9 | Tutorial | **Running OpenCode as a Homelab Service Behind Cloudflare Tunnel** — Containerfile, health checks, slot-swap deploy, remote access | ✅ Released |
+| Fri 7/10 | Tutorial | **OpenCode Headless on a Cron Job: Automated PR Review Every Morning** — Wire opencode to review overnight PRs via systemd timer | ✅ Released |
+| Mon 7/13 | Opinion | **The Open-Weight Tipping Point: When $3.48/MTok Matches $25/MTok** — Open-weight models now match proprietary coding benchmarks at 7x lower cost | ✅ Released |
 | Tue 7/14 | Reference | **OpenCode's Go TUI: Why Polyglot CLI Architecture Works** — How a TypeScript server + Go terminal UI delivers the best of both runtimes | ✍️ Drafted |
 | Sat 7/11 | Opinion | **When My AI Blog Pipeline Started Lying to Me** | ✅ Released |
 | — | — | *More TBD* | |
