@@ -89,6 +89,12 @@ This constraint means:
 - Testing the server doesn't require a terminal — it's a standard HTTP API
 - ACP becomes the universal interface: any editor, any agent, same protocol
 
+## Advantage 4: Operational Clarity
+
+When both the TUI and server live in one process, crashes are opaque — was it a rendering bug or a model timeout? With separate processes, logs tell the story immediately. The Go binary logs are terminal events (resize, input, focus). The Bun server logs are model calls, tool outputs, and session lifecycles. When something breaks, the relevant log file tells you which layer failed without cross-referencing timestamps.
+
+This also means you can restart one without the other. If the Go TUI hangs on a rendering edge case, `kill` it and reopen — the Bun server keeps running, preserves session state, and the new TUI process reconnects via ACP. You don't lose your conversation because the rendering layer crashed.
+
 ## The Polyglot Bet
 
 OpenCode's architecture bets that the best runtime for terminal interaction (Go) is different from the best runtime for agent logic (TypeScript on Bun). Bun was chosen for the server because the AI SDK ecosystem is TypeScript-first — Vercel AI SDK, model providers, MCP libraries are all JS/TS. Go was chosen for the TUI because Bubble Tea (the Go TUI framework) is the most mature terminal UI library across any language, and Go's runtime characteristics match terminal rendering requirements.
