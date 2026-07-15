@@ -69,6 +69,16 @@ Podman's `stop` sends SIGTERM with a 10-second grace period. If the request fini
 
 For most HTTP services this isn't a problem — requests are measured in milliseconds. But for streaming responses from AI agents, a request might last 30 seconds. The fix is to configure a longer stop timeout or implement a graceful shutdown handler in the service. The agent-stack provides a `container.stopTimeout` config option for this exactly.
 
+### The Canary Extension
+
+Standard blue-green deployment assumes you can instantly trust the new image. Canary deployments acknowledge that you can't — and the slot swap mechanism actually creates a natural window for canary observation.
+
+A canary deployment in the agent-stack works like this: after the new container passes its health check, instead of immediately swapping traffic, the controller routes a configurable fraction — say 10% — to the new slot. It then monitors 5xx error rates for an observation window, defaulting to two minutes. If error rates stay below the threshold, it promotes the new slot to full traffic. If they spike, it drains the canary, logs the failure, and the active slot remains unchanged — no traffic lost, no deployment rollback needed.
+
+The slot architecture makes this possible because both containers are already running side by side. The only change is in the traffic routing layer. A reverse proxy like Traefik handles percentage-based routing natively — it just needs to know which slot gets what weight.
+
+In practice, most failures surface within the first 30 seconds of canary traffic — a misconfigured environment variable crashes on the first request, or a database migration error surfaces on the first write. The two-minute window catches nearly everything a health check misses, without adding meaningful deployment delay. The system also supports a hard-swap override (`[stack hard-swap]` in the commit message) that skips the observation window entirely for emergency rollouts or changes already validated in staging.
+
 ## Why This Design Wins
 
 The slot swap mechanism is complex, but the reconciliation loop that drives it remains simple. Each pass does the same thing: inspect state, compare, act. The complexity lives in the actions, not the orchestration.
