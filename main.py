@@ -75,6 +75,53 @@ def define_env(env):
         )
 
     @env.macro
+    def persona_profile(handle: str):
+        """Render a full persona profile page."""
+        persona = PERSONAS.get(handle)
+        if not persona:
+            return f'<div class="forum-post-body">Persona "{handle}" not found.</div>'
+
+        avatar = persona.get("avatar", "●")
+        color = persona.get("color", "#33ff33")
+        display = persona.get("screen_name", handle)
+        title = persona.get("title", "")
+        tagline = persona.get("tagline", "")
+        bio = persona.get("bio", "")
+        catchphrase = persona.get("catchphrase", "")
+        pronouns = persona.get("pronouns", "")
+        joined = persona.get("joined", "")
+        signature = persona.get("signature", "")
+        badge = persona.get("badge", "")
+        archetype = persona.get("archetype", "")
+
+        badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
+
+        return f'''
+<div class="forum-post" style="border-left-color:{color}">
+  <div class="forum-post-header" style="border-bottom-color:{color}">
+    <span class="forum-avatar" style="font-size:48px;color:{color}">{avatar}</span>
+    <div>
+      <div style="font-size:20px;font-weight:700;color:{color}">{display} {badge_html}</div>
+      <div style="font-size:13px;color:var(--term-fg-dim)">{title}</div>
+    </div>
+  </div>
+  <div class="forum-post-body">
+    <p><em>"{tagline}"</em></p>
+    <hr style="border-color:var(--term-border-dim)">
+    <p>{bio}</p>
+    <hr style="border-color:var(--term-border-dim)">
+    <table style="font-size:13px;color:var(--term-fg-dim)">
+      <tr><td style="padding-right:16px"><strong>Archetype</strong></td><td>{archetype}</td></tr>
+      <tr><td><strong>Catchphrase</strong></td><td><em>"{catchphrase}"</em></td></tr>
+      {"<tr><td><strong>Pronouns</strong></td><td>" + pronouns + "</td></tr>" if pronouns else ""}
+      <tr><td><strong>Joined</strong></td><td>{joined}</td></tr>
+    </table>
+  </div>
+  <div class="forum-signature">— {signature}</div>
+</div>
+'''
+
+    @env.macro
     def create_index(relative_path: str):
         docs_dir = os.path.join(os.getcwd(),"docs")
         target_path = os.path.join(docs_dir,relative_path)
