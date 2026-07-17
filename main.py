@@ -31,6 +31,49 @@ def _build_resume_assets():
 def define_env(env):
     load_dotenv()
     _build_resume_assets()
+
+    # Load personas
+    import json
+    personas_path = os.path.join(os.getcwd(), "personas", "personas.json")
+    try:
+        with open(personas_path) as f:
+            PERSONAS = json.load(f)
+    except:
+        PERSONAS = {}
+
+    @env.macro
+    def forum_post(handle: str, timestamp: str, body: str, sig: bool = True):
+        """Render a forum post from a persona. Set sig=False to omit signature."""
+        persona = PERSONAS.get(handle, {})
+        display = persona.get("screen_name", handle)
+        avatar = persona.get("avatar", "●")
+        color = persona.get("color", "#33ff33")
+        title = persona.get("title", "")
+        signature = persona.get("signature", "")
+        badge = persona.get("badge", "")
+
+        body = body.strip().replace("\n", "\n    ")
+
+        badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
+
+        sig_html = ""
+        if sig and signature:
+            sig_html = f'\n  <div class="forum-signature">— {signature}</div>'
+
+        return (
+            f'<div class="forum-post">'
+            f'  <div class="forum-post-header">'
+            f'    <span class="forum-avatar" style="color:{color}">{avatar}</span>'
+            f'    <span class="forum-author" style="color:{color}">{display}</span>'
+            f'    {badge_html}'
+            f'    <span class="forum-title">· {title}</span>'
+            f'    <span class="forum-timestamp">· {timestamp}</span>'
+            f'  </div>'
+            f'  <div class="forum-post-body">\n{body}\n  </div>'
+            f'{sig_html}'
+            f'</div>'
+        )
+
     @env.macro
     def create_index(relative_path: str):
         docs_dir = os.path.join(os.getcwd(),"docs")

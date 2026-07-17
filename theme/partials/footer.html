@@ -17,7 +17,7 @@
       &copy; {{ build_date_utc.year if build_date_utc is defined else "2026" }} {{ config.site_author | default("Reed Sutliff") }}
     </div>
     <div class="bbs-footer-eliza">
-      Type /HELP for assistance, or say "goodbye" to disconnect.
+      ⚠ NOT EVERYTHING ON THE INTERNET IS REAL. THESE USERS ARE NOT REAL.
     </div>
   </div>
 </footer>
@@ -58,8 +58,11 @@
 }
 .bbs-footer-eliza {
   text-align: center;
-  color: var(--term-fg-dark);
-  font-style: italic;
+  color: #ffcc00;
+  font-weight: bold;
   font-size: 11px;
+  border: 1px solid #ffcc00;
+  padding: 6px 12px;
+  margin-top: 8px;
 }
 </style>
