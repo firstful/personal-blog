@@ -9,6 +9,7 @@ import { initTypingAnimation } from './typing';
 import { initArticleChat } from './article';
 import { initGridNav } from './grid-nav';
 import { markArticleRead, applyNewBadges } from './read-tracker';
+import { initConsoleTray } from './console-tray';
 
 // Initialize BBS boot sequence on every page
 initBootSequence();
@@ -18,6 +19,7 @@ document.addEventListener('boot:complete', () => {
   initTypingAnimation();
   initArticleChat();
   initGridNav();
+  initConsoleTray();
 
   // Read tracking
   markArticleRead();

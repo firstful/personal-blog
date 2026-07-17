@@ -1063,7 +1063,7 @@ a:hover {
     font-size: 12px;
   }
   .md-content {
-    padding: 0 12px 30px;
+    padding: 0 12px 170px;
   }
   .bbs-article-nav {
     flex-direction: column;
@@ -1075,9 +1075,93 @@ a:hover {
   }
 }
 
+/* ── Console Tray ──────────────────────────────────────────── */
+.bbs-console-tray {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--term-bg);
+  border-top: 1px solid var(--term-border-dim);
+  font-family: var(--term-font);
+  font-size: 13px;
+  color: var(--term-fg);
+  max-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bbs-console-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 12px;
+  max-height: 110px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--term-fg-dark) transparent;
+}
+
+.bbs-console-output::-webkit-scrollbar {
+  width: 4px;
+}
+.bbs-console-output::-webkit-scrollbar-thumb {
+  background: var(--term-fg-dark);
+  border-radius: 2px;
+}
+
+.bbs-console-line {
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.bbs-console-cmd {
+  color: var(--term-fg-bright);
+}
+.bbs-console-response {
+  color: var(--term-fg-dim);
+}
+.bbs-console-error {
+  color: #ff4444;
+}
+.bbs-console-welcome {
+  color: var(--term-fg-dark);
+  font-style: italic;
+}
+.bbs-console-input-line {
+  color: var(--term-fg-dim);
+  padding: 2px 12px 4px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--term-border-dim);
+}
+
+.bbs-console-prompt-text {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.bbs-console-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--term-fg-bright);
+  font-family: var(--term-font);
+  font-size: 13px;
+  caret-color: var(--term-fg);
+  padding: 0;
+  margin: 0;
+}
+
+/* Bottom padding so content isn't hidden behind the tray */
+.md-content {
+  padding-bottom: 170px;
+}
+
 /* ── Print Styles ─────────────────────────────────────────── */
 @media print {
-  body::after, body::before, #boot-screen, .bbs-header, .bbs-menu {
+  body::after, body::before, #boot-screen, .bbs-header, .bbs-menu, .bbs-console-tray {
     display: none !important;
   }
   .md-typeset h2::before, .md-typeset h2::after {
