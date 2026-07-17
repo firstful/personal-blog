@@ -43,34 +43,36 @@ def define_env(env):
 
     @env.macro
     def forum_post(handle: str, timestamp: str, body: str, sig: bool = True):
-        """Render a forum post from a persona. Set sig=False to omit signature."""
+        """Render a forum post in classic two-column layout."""
         persona = PERSONAS.get(handle, {})
         display = persona.get("screen_name", handle)
         avatar = persona.get("avatar", "●")
-        color = persona.get("color", "#33ff33")
         title = persona.get("title", "")
         signature = persona.get("signature", "")
         badge = persona.get("badge", "")
+        joined = persona.get("joined", "")
+        pcount = persona.get("posts", 0)
 
         body = body.strip().replace("\n", "\n    ")
 
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
-
-        sig_html = ""
-        if sig and signature:
-            sig_html = f'\n  <div class="forum-signature">— {signature}</div>'
+        sig_html = f'\n  <div class="forum-signature">— {signature}</div>' if sig and signature else ""
 
         return (
             f'<div class="forum-post">'
-            f'  <div class="forum-post-header">'
-            f'    <span class="forum-avatar" style="color:{color}">{avatar}</span>'
-            f'    <span class="forum-author" style="color:{color}">{display}</span>'
+            f'  <div class="fp-left">'
+            f'    <div class="fp-avatar">{avatar}</div>'
+            f'    <div class="fp-username">{display}</div>'
             f'    {badge_html}'
-            f'    <span class="forum-title">· {title}</span>'
-            f'    <span class="forum-timestamp">· {timestamp}</span>'
+            f'    <div class="fp-usertitle">{title}</div>'
+            f'    <div class="fp-stat">Posts: {pcount}</div>'
+            f'    <div class="fp-stat">Joined: {joined}</div>'
             f'  </div>'
-            f'  <div class="forum-post-body">\n{body}\n  </div>'
+            f'  <div class="fp-right">'
+            f'    <div class="fp-timestamp">{timestamp}</div>'
+            f'    <div class="fp-body">\n{body}\n  </div>'
             f'{sig_html}'
+            f'  </div>'
             f'</div>'
         )
 

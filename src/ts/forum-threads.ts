@@ -52,14 +52,7 @@ function markRead(slug: string): void {
 /* ── Render helpers ── */
 
 function personaBadge(handle: string): string {
-  const colors: Record<string, string> = {
-    'ffiltus': '#33ff33', 'ne0n_sage': '#00ff88', 'bitcruncher': '#ff4444',
-    'cobol_kid': '#ffaa00', 'void_main': '#4488ff', 'xss_princess': '#cc66ff',
-    'oldschool_phreak': '#ff6600', 'skiddie': '#ff66aa', 'vibecoder': '#ff00ff',
-    'dad_joker': '#88aacc', 'selfhost_king': '#b87333',
-  };
-  const color = colors[handle] || '#33ff33';
-  return `<span class="thread-author" style="color:${color}">${handle}</span>`;
+  return `<span class="thread-author">${handle}</span>`;
 }
 
 function formatDate(iso: string): string {
