@@ -30,7 +30,7 @@ description: |
             `"""`
 </div>
 
-<div class="ascii-divider">──── SUTLIFF BBS v1.0 — PICKERINGTON, OH ────</div>
+<div class="ascii-divider">──── SUTLIFF BBS v1.0 — COLUMBUS, OH ────</div>
 
 <p class="tagline typing">
   <span style="color:var(--term-fg-dim)">></span> Personal site of Reed Sutliff — software engineer, open source advocate, and automation enthusiast.
