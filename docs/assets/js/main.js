@@ -767,6 +767,130 @@
     }
   }
 
+  // src/ts/forum-threads.ts
+  var ARTICLE_JSON = "/assets/articles.json";
+  var COOKIE_NAME2 = "bbs_read";
+  var COOKIE_EXPIRY_DAYS2 = 90;
+  function getReadMap2() {
+    const m = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME2}=([^;]*)`));
+    if (!m) return {};
+    try {
+      return JSON.parse(decodeURIComponent(m[1]));
+    } catch {
+      return {};
+    }
+  }
+  function setReadMap2(map) {
+    const encoded = encodeURIComponent(JSON.stringify(map));
+    const expires = /* @__PURE__ */ new Date();
+    expires.setDate(expires.getDate() + COOKIE_EXPIRY_DAYS2);
+    document.cookie = `${COOKIE_NAME2}=${encoded}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+  }
+  function markRead(slug) {
+    const map = getReadMap2();
+    const path = `/${slug}`;
+    if (map[path]) return;
+    map[path] = (/* @__PURE__ */ new Date()).toISOString();
+    setReadMap2(map);
+  }
+  function personaBadge(handle) {
+    const colors = {
+      "ffiltus": "#33ff33",
+      "ne0n_sage": "#00ff88",
+      "bitcruncher": "#ff4444",
+      "cobol_kid": "#ffaa00",
+      "void_main": "#4488ff",
+      "xss_princess": "#cc66ff",
+      "oldschool_phreak": "#ff6600",
+      "skiddie": "#ff66aa",
+      "vibecoder": "#ff00ff",
+      "dad_joker": "#88aacc",
+      "selfhost_king": "#b87333"
+    };
+    const color = colors[handle] || "#33ff33";
+    return `<span class="thread-author" style="color:${color}">${handle}</span>`;
+  }
+  function formatDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+  function tagHtml(tag) {
+    const t = tag.replace(/[^a-z0-9-]/gi, "").toLowerCase();
+    return `<span class="thread-tag" data-tag="${t}">[${tag}]</span>`;
+  }
+  function renderThreadList(articles, readMap) {
+    const container = document.getElementById("forum-thread-list");
+    if (!container) return;
+    const unread = [];
+    const read = [];
+    for (const a of articles) {
+      const path = `/${a.slug}`;
+      if (readMap[path]) {
+        read.push(a);
+      } else {
+        unread.push(a);
+      }
+    }
+    let html = "";
+    if (unread.length > 0) {
+      html += `<div class="thread-section-header"><span>UNREAD MESSAGES (${unread.length})</span></div>`;
+      for (const a of unread) {
+        html += renderThread(a, true);
+      }
+    }
+    if (read.length > 0) {
+      html += `<div class="thread-section-header"><span>READ MESSAGES (${read.length})</span></div>`;
+      for (const a of read) {
+        html += renderThread(a, false);
+      }
+    }
+    if (!html) {
+      html = '<div class="thread-empty">No threads found.</div>';
+    }
+    container.innerHTML = html;
+    container.querySelectorAll(".forum-thread").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        const slug = el.dataset.slug;
+        if (slug) {
+          markRead(slug);
+          window.location.href = `/${slug}`;
+        }
+      });
+    });
+  }
+  function renderThread(a, isUnread) {
+    const badge = isUnread ? '<span class="thread-new-badge">NEW</span>' : "";
+    const date = formatDate(a.date);
+    const starterHtml = a.starter ? personaBadge(a.starter) : '<span class="thread-author" style="color:var(--term-fg-dim)">System</span>';
+    const tagsHtml = a.tags.map((tag) => tagHtml(tag)).join(" ");
+    return `
+    <div class="forum-thread ${isUnread ? "forum-thread-unread" : "forum-thread-read"}" data-slug="${a.slug}">
+      <div class="thread-icon ${isUnread ? "thread-icon-unread" : "thread-icon-read"}">${isUnread ? "\u25B6" : "\u25CF"}</div>
+      <div class="thread-body">
+        <div class="thread-title">${badge} ${a.title}</div>
+        <div class="thread-meta">
+          ${starterHtml} \xB7 ${date} \xB7 <span class="thread-replies">${a.posts} ${a.posts === 1 ? "reply" : "replies"}</span>
+        </div>
+        <div class="thread-desc">${a.description}</div>
+        <div class="thread-tags">${tagsHtml}</div>
+      </div>
+    </div>
+  `;
+  }
+  function initForumThreads() {
+    const container = document.getElementById("forum-thread-list");
+    if (!container) return;
+    fetch(ARTICLE_JSON).then((r) => r.json()).then((articles) => {
+      articles.sort((a, b) => b.date.localeCompare(a.date));
+      const readMap = getReadMap2();
+      renderThreadList(articles, readMap);
+    }).catch((err) => {
+      console.error("Failed to load articles.json:", err);
+      container.innerHTML = '<div class="thread-empty">Could not load threads.</div>';
+    });
+  }
+
   // src/ts/main.ts
   initBootSequence();
   document.addEventListener("boot:complete", () => {
@@ -774,6 +898,7 @@
     initArticleChat();
     initGridNav();
     initConsoleTray();
+    initForumThreads();
     markArticleRead();
     applyNewBadges();
     initThemeTransitions();

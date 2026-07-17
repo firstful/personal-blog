@@ -40,4 +40,10 @@ description: |
 
 <div class="ascii-divider">─────  LATEST MESSAGES  ─────</div>
 
+<div id="forum-thread-list" class="forum-thread-list">
+  <div class="thread-empty">Loading threads...</div>
+</div>
+
+<div class="bbs-static-list" style="display:none">
 {{ blog_content }}
+</div>

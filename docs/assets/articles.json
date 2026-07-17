@@ -12,6 +12,8 @@
       "experience"
     ],
     "description": "The Sutliff BBS community debates the new wave of agentic coding CLIs — Claude Code, Gemini CLI, Codex CLI, opencode, and Copilot CLI — with strong opinions on all sides.",
+    "starter": "ne0n_sage",
+    "posts": 7,
     "category": "post"
   },
   {
@@ -27,6 +29,8 @@
       "reliability"
     ],
     "description": "The BBS #devops channel debates whether Configuration as Code delivers on its promises — or if drift is just a fact of life.",
+    "starter": "bitcruncher",
+    "posts": 7,
     "category": "opinion"
   },
   {
@@ -42,6 +46,8 @@
       "engineering"
     ],
     "description": "The Sutliff BBS devops channel debates whether boring five-second reconciliation loops are actually superior to sophisticated event-driven architectures.",
+    "starter": "void_main",
+    "posts": 8,
     "category": "opinion"
   }
 ]

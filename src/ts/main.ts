@@ -10,6 +10,7 @@ import { initArticleChat } from './article';
 import { initGridNav } from './grid-nav';
 import { markArticleRead, applyNewBadges } from './read-tracker';
 import { initConsoleTray } from './console-tray';
+import { initForumThreads } from './forum-threads';
 
 // Initialize BBS boot sequence on every page
 initBootSequence();
@@ -20,6 +21,7 @@ document.addEventListener('boot:complete', () => {
   initArticleChat();
   initGridNav();
   initConsoleTray();
+  initForumThreads();
 
   // Read tracking
   markArticleRead();

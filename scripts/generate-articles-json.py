@@ -88,12 +88,26 @@ def parse_frontmatter(filepath: str) -> dict | None:
     else:
         tags = []
 
+    # Extract starter and post count from content
+    starter = ""
+    posts = 0
+    with open(filepath, encoding="utf-8") as f:
+        raw = f.read()
+    for line in raw.split("\n"):
+        m_s = re.search(r"\{\{\s*forum_post\('(\w+)'", line)
+        if m_s:
+            posts += 1
+            if not starter:
+                starter = m_s.group(1)
+
     return {
         "title": meta.get("title", ""),
         "slug": slug,
         "date": parsed_date.isoformat() if parsed_date else "",
         "tags": tags,
         "description": meta.get("description", ""),
+        "starter": starter,
+        "posts": posts,
         "category": "opinion" if slug.startswith("opinions/") or "/opinions/" in slug else "tutorial" if slug.startswith("tutorials/") or "/tutorials/" in slug else "post",
     }
 
