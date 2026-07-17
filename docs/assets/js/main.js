@@ -516,12 +516,85 @@
     });
   }
 
+  // src/ts/read-tracker.ts
+  var COOKIE_NAME = "bbs_read";
+  var COOKIE_EXPIRY_DAYS = 90;
+  function getReadMap() {
+    const match = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`));
+    if (!match) return {};
+    try {
+      return JSON.parse(decodeURIComponent(match[1]));
+    } catch {
+      return {};
+    }
+  }
+  function setReadMap(map) {
+    const encoded = encodeURIComponent(JSON.stringify(map));
+    const expires = /* @__PURE__ */ new Date();
+    expires.setDate(expires.getDate() + COOKIE_EXPIRY_DAYS);
+    document.cookie = `${COOKIE_NAME}=${encoded}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+  }
+  function markArticleRead() {
+    const path = window.location.pathname;
+    if (!path.match(/\/blog\/.+|\/opinions\/.|\/tutorials\/./)) return;
+    const map = getReadMap();
+    if (map[path]) return;
+    map[path] = (/* @__PURE__ */ new Date()).toISOString();
+    setReadMap(map);
+    document.dispatchEvent(new CustomEvent("bbs:read-update", { detail: { path } }));
+  }
+  function applyNewBadges() {
+    const map = getReadMap();
+    const cards = document.querySelectorAll(".bbs-post-card");
+    const statusBar = document.querySelector(".bbs-header-status");
+    if (statusBar) {
+      let unread = 0;
+      cards.forEach((card) => {
+        const href = card.getAttribute("href");
+        if (!href) return;
+        const path = href.startsWith("http") ? new URL(href).pathname : href;
+        if (!map[path]) unread++;
+      });
+      const existing = statusBar.querySelector(".unread-count");
+      if (existing) {
+        existing.textContent = `${unread} unread`;
+      } else {
+        const span = document.createElement("span");
+        span.className = "unread-count";
+        span.textContent = `${unread} unread`;
+        span.style.cssText = "color:var(--term-fg-bright);margin-left:8px;";
+        statusBar.appendChild(span);
+      }
+    }
+    cards.forEach((card) => {
+      const href = card.getAttribute("href");
+      if (!href) return;
+      const path = href.startsWith("http") ? new URL(href).pathname : href;
+      if (!map[path]) {
+        card.classList.add("bbs-unread");
+        let badge = card.querySelector(".bbs-new-badge");
+        if (!badge) {
+          badge = document.createElement("span");
+          badge.className = "bbs-new-badge";
+          badge.textContent = "NEW";
+          card.prepend(badge);
+        }
+      } else {
+        card.classList.remove("bbs-unread");
+        const badge = card.querySelector(".bbs-new-badge");
+        if (badge) badge.remove();
+      }
+    });
+  }
+
   // src/ts/main.ts
   initBootSequence();
   document.addEventListener("boot:complete", () => {
     initTypingAnimation();
     initArticleChat();
     initGridNav();
+    markArticleRead();
+    applyNewBadges();
     initThemeTransitions();
     initConfettiOnToggle();
     initClickRipple();

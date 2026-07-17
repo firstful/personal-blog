@@ -651,6 +651,29 @@ a:hover {
   box-shadow: 0 0 8px var(--term-glow), 0 0 16px rgba(0, 255, 65, 0.15);
 }
 
+/* NEW badge for unread articles */
+.bbs-new-badge {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: var(--term-fg);
+  color: var(--term-bg);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 6px;
+  line-height: 1;
+}
+.bbs-post-card.bbs-unread {
+  border-color: var(--term-fg-dim);
+}
+.bbs-post-card.bbs-unread .post-title::after {
+  content: ' [N]';
+  color: var(--term-fg);
+  font-size: 11px;
+  font-weight: 700;
+}
+
 /* ── Chat Conversation Layout (article pages) ────────────── */
 .bbs-chat {
   margin: 8px 0 0;
