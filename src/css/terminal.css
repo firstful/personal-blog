@@ -1148,6 +1148,21 @@ a:hover {
   font-style: italic;
 }
 
+/* ── Dad Joke styling ──────────────────────────────────────── */
+.forum-joke {
+  color: #88aacc;
+  font-style: italic;
+  display: block;
+}
+.forum-joke::before {
+  content: "💬 ";
+}
+.forum-joke::after {
+  content: " — dad_joker, probably";
+  font-size: 11px;
+  color: var(--term-fg-dark);
+}
+
 /* ── Console Tray ──────────────────────────────────────────── */
 .bbs-console-tray {
   position: fixed;

