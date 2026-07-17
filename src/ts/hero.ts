@@ -11,8 +11,9 @@ function initAccentBar(introPara: HTMLParagraphElement): void {
 
 function initTypewriter(introPara: HTMLParagraphElement): void {
   const typeEl = document.createElement('div');
-  typeEl.style.cssText = 'margin-bottom: 1.5em; font-size: 0.95em; color: var(--md-typeset-color);';
-  typeEl.innerHTML = '<span>I work with&nbsp;</span><span class="hero-typewriter"></span>';
+  typeEl.className = 'term-prompt';
+  typeEl.style.cssText = 'margin-bottom: 1.5em; font-size: 0.95em;';
+  typeEl.innerHTML = '<span style="color:var(--term-fg-dim)">$ I work with&nbsp;</span><span class="hero-typewriter" style="color:var(--term-fg-bright)"></span><span class="terminal-underscore-cursor">_</span>';
   introPara.parentNode!.insertBefore(typeEl, introPara.nextSibling!);
 
   const tagSpan = typeEl.querySelector('.hero-typewriter') as HTMLElement;

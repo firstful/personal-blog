@@ -616,6 +616,14 @@ a:hover {
   vertical-align: text-bottom;
 }
 
+/* ── Terminal Underscore Cursor ────────────────────────────── */
+.terminal-underscore-cursor {
+  color: var(--term-fg);
+  font-weight: bold;
+  margin-left: 1px;
+  animation: cursor-blink 1s step-end infinite;
+}
+
 @keyframes cursor-blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
