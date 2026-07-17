@@ -201,7 +201,7 @@
     { text: "[NET] Connecting to FFILT.US BBS......", cls: "", delay: 300 },
     { text: "[NET] Resolving host.................. OK", cls: "ok", delay: 200 },
     { text: "[NET] Handshake....................... OK", cls: "ok", delay: 250 },
-    { text: "[NET] Connected \u2014 Node: PICKERINGTON, OH 57600 baud", cls: "ok", delay: 150 },
+    { text: "[NET] Connected \u2014 Node: COLUMBUS, OH 57600 baud", cls: "ok", delay: 150 },
     { text: "", cls: "", delay: 80 },
     { text: "[AUTH] Authenticating user............", cls: "", delay: 400 },
     { text: "[AUTH] Identity verified............... OK", cls: "ok", delay: 100 },
