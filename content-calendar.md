@@ -69,4 +69,5 @@
 |---|---|---|---|
 | Thu 7/16 | Opinion | **Reconciliation Loops Are the Right Architecture for Agent Infrastructure** — Why "declare, converge, repeat" beats event-driven for agent systems | ✅ Released |
 | Fri 7/17 | Reference | **When Nine Builds Collide: Queue Management Inside a Reconciliation Loop** — How a five-second loop manages builds without a build queue | ✅ Released |
+| Sat 7/18 | Opinion | **Trust, But Verify: Why Reconciliation Loops Check Everything Twice** — Why the verification pattern behind lock files extends to every part of a reconciliation loop | ✍️ Drafted |
 | — | — | *More TBD* | |
