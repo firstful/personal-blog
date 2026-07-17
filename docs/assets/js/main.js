@@ -178,6 +178,14 @@
   }
 
   // src/ts/boot.ts
+  var BOOT_COOKIE = "bbs_booted";
+  function getCookie(name) {
+    const m = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  function setSessionCookie(name, value) {
+    document.cookie = `${name}=${encodeURIComponent(value)}; path=/; SameSite=Lax`;
+  }
   var BOOT_LINES = [
     { text: "[SUTLIFF BBS v1.0]", cls: "info", delay: 300 },
     { text: "", cls: "", delay: 100 },
@@ -205,6 +213,10 @@
     { text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550", cls: "info", delay: 200 }
   ];
   function initBootSequence() {
+    if (getCookie(BOOT_COOKIE)) {
+      document.dispatchEvent(new CustomEvent("boot:complete"));
+      return;
+    }
     const existing = document.getElementById("boot-screen");
     if (existing) {
       existing.remove();
@@ -240,6 +252,7 @@
             bootScreen.remove();
           }, 900);
         }, 2e3);
+        setSessionCookie(BOOT_COOKIE, "1");
         document.dispatchEvent(new CustomEvent("boot:complete"));
         return;
       }

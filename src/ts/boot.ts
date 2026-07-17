@@ -1,10 +1,23 @@
 /**
  * SUTLIFF BBS — Boot Sequence
  *
- * Full-screen terminal boot animation that plays on page load.
- * Shows kernel initialization, network connect, auth, then fades
- * to reveal the main content.
+ * Full-screen terminal boot animation that plays once per browser
+ * session (tab/window).  Subsequent navigations within the same
+ * session skip the animation via a session cookie.
  */
+
+const BOOT_COOKIE = 'bbs_booted';
+
+/** Get a cookie value by name. */
+function getCookie(name: string): string | null {
+  const m = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return m ? decodeURIComponent(m[1]) : null;
+}
+
+/** Set a session cookie (no expiry — cleared when tab/window closes). */
+function setSessionCookie(name: string, value: string): void {
+  document.cookie = `${name}=${encodeURIComponent(value)}; path=/; SameSite=Lax`;
+}
 
 const BOOT_LINES: Array<{ text: string; cls: string; delay: number }> = [
   { text: '[SUTLIFF BBS v1.0]', cls: 'info', delay: 300 },
@@ -34,6 +47,12 @@ const BOOT_LINES: Array<{ text: string; cls: string; delay: number }> = [
 ];
 
 export function initBootSequence(): void {
+  // Skip animation if already shown this session
+  if (getCookie(BOOT_COOKIE)) {
+    document.dispatchEvent(new CustomEvent('boot:complete'));
+    return;
+  }
+
   const existing = document.getElementById('boot-screen');
   if (existing) {
     existing.remove();
@@ -80,6 +99,7 @@ export function initBootSequence(): void {
       }, 2000);
 
       // Start typing the hero text now
+      setSessionCookie(BOOT_COOKIE, '1');
       document.dispatchEvent(new CustomEvent('boot:complete'));
       return;
     }
