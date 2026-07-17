@@ -594,11 +594,9 @@ a:hover {
   font-size: 13px;
   line-height: 1.25;
   white-space: pre;
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: 16px;
   font-family: var(--term-font);
-  display: flex;
-  justify-content: center;
 }
 
 .bbs-hero .tagline {
