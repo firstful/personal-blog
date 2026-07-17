@@ -68,5 +68,5 @@
 | Day | Type | Topic | Notes |
 |---|---|---|---|
 | Thu 7/16 | Opinion | **Reconciliation Loops Are the Right Architecture for Agent Infrastructure** — Why "declare, converge, repeat" beats event-driven for agent systems | ✅ Released |
-| Fri 7/17 | Reference | **When Nine Builds Collide: Queue Management Inside a Reconciliation Loop** — How a five-second loop manages builds without a build queue | ✍️ Drafted |
+| Fri 7/17 | Reference | **When Nine Builds Collide: Queue Management Inside a Reconciliation Loop** — How a five-second loop manages builds without a build queue | ✅ Released |
 | — | — | *More TBD* | |
