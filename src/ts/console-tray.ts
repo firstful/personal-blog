@@ -8,33 +8,6 @@
  */
 
 const TYPING_SPEED = 30;
-const STORAGE_KEY = 'bbs_tasks';
-
-// ── Task persistence ──
-
-interface Task {
-  id: number;
-  text: string;
-  done: boolean;
-  createdAt: string;
-}
-
-let tasks: Task[] = [];
-let nextTaskId = 1;
-
-function loadTasks(): void {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      tasks = JSON.parse(raw);
-      nextTaskId = tasks.length > 0 ? Math.max(...tasks.map(t => t.id)) + 1 : 1;
-    }
-  } catch { tasks = []; }
-}
-
-function saveTasks(): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
-}
 
 // ── Console state ──
 
@@ -84,13 +57,6 @@ function typeToConsole(text: string, onDone: () => void): void {
   tick();
 }
 
-function formatTasks(): string {
-  if (tasks.length === 0) return 'No tasks. Use /addtask <description> to create one.';
-  return tasks.map((t, i) =>
-    `  ${i + 1}. [${t.done ? '✓' : ' '}] ${t.text}`
-  ).join('\n');
-}
-
 // ── Command dispatch ──
 
 function executeCommand(cmd: string): void {
@@ -107,66 +73,11 @@ function executeCommand(cmd: string): void {
     case '/help':
       writeln([
         'Available commands:',
-        '  /help          — Show this help',
-        '  /tasks         — List all tasks',
-        '  /addtask <txt> — Add a new task',
-        '  /donetask <n>  — Mark task N as done',
-        '  /deltask <n>   — Delete task N',
-        '  nav <path>     — Navigate to a page',
-        '  clear          — Clear the console',
-        '  echo <text>    — Echo text back',
+        '  /help       — Show this help',
+        '  nav <path>  — Navigate to a page (e.g. "nav blog/opinions")',
+        '  clear       — Clear the console',
+        '  echo <text> — Echo text back',
       ].join('\n'), 'bbs-console-response');
-      break;
-
-    case '/tasks':
-      writeln(formatTasks(), 'bbs-console-response');
-      break;
-
-    case '/addtask':
-    case '/add':
-      if (args.length === 0) {
-        writeln('Usage: /addtask <description>', 'bbs-console-error');
-        break;
-      }
-      const task: Task = {
-        id: nextTaskId++,
-        text: args.join(' '),
-        done: false,
-        createdAt: new Date().toISOString(),
-      };
-      tasks.push(task);
-      saveTasks();
-      writeln(`Task added: "${task.text}" (#${task.id})`, 'bbs-console-response');
-      break;
-
-    case '/donetask':
-    case '/done':
-    case '/check':
-      {
-        const n = parseInt(args[0], 10);
-        if (isNaN(n) || n < 1 || n > tasks.length) {
-          writeln('Usage: /donetask <N> (see /tasks for numbers)', 'bbs-console-error');
-          break;
-        }
-        tasks[n - 1].done = true;
-        saveTasks();
-        writeln(`Task ${n} marked done: "${tasks[n - 1].text}"`, 'bbs-console-response');
-      }
-      break;
-
-    case '/deltask':
-    case '/del':
-    case '/rm':
-      {
-        const n = parseInt(args[0], 10);
-        if (isNaN(n) || n < 1 || n > tasks.length) {
-          writeln('Usage: /deltask <N> (see /tasks for numbers)', 'bbs-console-error');
-          break;
-        }
-        const removed = tasks.splice(n - 1, 1)[0];
-        saveTasks();
-        writeln(`Task deleted: "${removed.text}"`, 'bbs-console-response');
-      }
       break;
 
     case 'clear':
@@ -257,8 +168,6 @@ function onInputKeydown(e: KeyboardEvent): void {
 // ── Init ──
 
 function createConsoleTray(): void {
-  loadTasks();
-
   trayEl = document.createElement('div');
   trayEl.className = 'bbs-console-tray';
   trayEl.innerHTML = `
