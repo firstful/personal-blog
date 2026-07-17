@@ -56,6 +56,7 @@ def define_env(env):
         body = body.strip().replace("\n", "\n    ")
 
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
+        pcount_html = f'    <div class="fp-stat">Posts: {pcount}</div>\n' if pcount else ""
         sig_html = f'\n  <div class="forum-signature">— {signature}</div>' if sig and signature else ""
 
         return (
@@ -65,7 +66,7 @@ def define_env(env):
             f'    <div class="fp-username">{display}</div>'
             f'    {badge_html}'
             f'    <div class="fp-usertitle">{title}</div>'
-            f'    <div class="fp-stat">Posts: {pcount}</div>'
+            f'{pcount_html}'
             f'    <div class="fp-stat">Joined: {joined}</div>'
             f'  </div>'
             f'  <div class="fp-right">'

