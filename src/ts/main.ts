@@ -6,7 +6,8 @@ import { initHomePage } from './hero';
 import { initConsoleEaster } from './console-easter';
 import { initBootSequence } from './boot';
 import { initTypingAnimation } from './typing';
-import { initArticlePage } from './article';
+import { initArticleChat } from './article';
+import { initGridNav } from './grid-nav';
 
 // Initialize BBS boot sequence on every page
 initBootSequence();
@@ -14,7 +15,8 @@ initBootSequence();
 // Defer all interactions until boot completes
 document.addEventListener('boot:complete', () => {
   initTypingAnimation();
-  initArticlePage();
+  initArticleChat();
+  initGridNav();
   initThemeTransitions();
   initConfettiOnToggle();
   initClickRipple();

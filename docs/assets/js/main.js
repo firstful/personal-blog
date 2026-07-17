@@ -293,34 +293,235 @@
   }
 
   // src/ts/article.ts
-  function initArticlePage() {
-    const isArticle = window.location.pathname.match(/\/blog\/(opinions|tutorials)\/.+/);
-    if (!isArticle) return;
-    const titleEl = document.querySelector(".md-content__inner h1");
-    if (!titleEl) return;
-    const articleContent = document.querySelector(".md-content__inner .md-typeset");
-    if (!articleContent) return;
-    const pageTitle = titleEl.textContent || "Untitled";
-    const header = document.createElement("div");
-    header.className = "bbs-article-header";
-    header.innerHTML = `
-    <div>\u250C\u2500 File: ${window.location.pathname.replace(/^\//, "")}</div>
-    <div>\u2502  Author: Reed Sutliff</div>
-    <div>\u2502  Path: ${window.location.pathname}</div>
-    <div>\u2514\u2500</div>
-  `;
-    titleEl.parentNode?.insertBefore(header, titleEl);
-    const existingNav = document.querySelector(".md-content__inner .md-typeset + nav, .md-content__inner nav:last-child");
-    if (existingNav) {
-      existingNav.classList.add("bbs-article-nav");
+  var SOCK_PUPPETS = [
+    "cypher_punk",
+    "null_pointer",
+    "stack_trace",
+    "kernel_panic",
+    "root_access",
+    "packet_loss",
+    "segfault_42",
+    "syntax_error",
+    "fork_bomb",
+    "dead_lock",
+    "bit_rot",
+    "race_condition",
+    "buffer_overflow",
+    "cache_miss",
+    "zombie_proc"
+  ];
+  function pickSockPuppets(title) {
+    let hash = 0;
+    for (let i = 0; i < title.length; i++) {
+      hash = (hash << 5) - hash + title.charCodeAt(i);
+      hash |= 0;
     }
+    const count = 1 + Math.abs(hash) % 2;
+    const names = [];
+    for (let i = 0; i < count; i++) {
+      const idx = (Math.abs(hash) + i * 7) % SOCK_PUPPETS.length;
+      names.push(SOCK_PUPPETS[idx]);
+    }
+    return names;
+  }
+  function generateTimestamp(index) {
+    const base = /* @__PURE__ */ new Date();
+    base.setHours(20 + Math.floor(index / 20), index * 3 % 60);
+    return base.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
+  }
+  function initArticleChat() {
+    const isArticle = window.location.pathname.match(/\/blog\/(opinions|tutorials)\/.+/) || window.location.pathname.match(/\/opinions\/(?!$)/) || window.location.pathname.match(/\/tutorials\/(?!$)/);
+    if (!isArticle) return;
+    const content = document.querySelector(".md-content__inner .md-typeset");
+    if (!content) return;
+    const titleEl = content.querySelector("h1");
+    if (!titleEl) return;
+    const articleTitle = titleEl.textContent || "Untitled";
+    const socks = pickSockPuppets(articleTitle);
+    const participants = ["ffiltus", ...socks];
+    const chat = document.createElement("div");
+    chat.className = "bbs-chat";
+    const disclaimer = document.createElement("div");
+    disclaimer.className = "bbs-chat-disclaimer";
+    disclaimer.innerHTML = `<strong>\u26A0 FICTIONAL DIALOGUE</strong> \u2014 This article is presented as a conversation between <strong>ffiltus</strong> and fictional sock-puppet accounts for illustrative purposes. None of the participants except the author (ffiltus) are real people.`;
+    chat.appendChild(disclaimer);
+    const header = document.createElement("div");
+    header.className = "bbs-chat-header";
+    const topic = articleTitle.length > 60 ? articleTitle.slice(0, 60) + "\u2026" : articleTitle;
+    header.innerHTML = `
+    <div class="chat-title">#${articleTitle}</div>
+    <div class="chat-participants">
+      Participants: ${participants.map(
+      (p) => `<span class="chat-participant ${p === "ffiltus" ? "ffiltus" : "sock"}">${p}</span>`
+    ).join("")}
+    </div>`;
+    chat.appendChild(header);
+    let msgIndex = 0;
+    const children = Array.from(content.children);
+    for (let i = 0; i < children.length; i++) {
+      const el = children[i];
+      if (el.tagName === "H1") continue;
+      if (el.classList.contains("bbs-article-header")) continue;
+      if (el.tagName === "STYLE") continue;
+      if (el.tagName === "BLOCKQUOTE") {
+        const currentSock = socks[msgIndex % socks.length];
+        const msg = createChatMessage(currentSock, el.innerHTML, msgIndex, "sock");
+        chat.appendChild(msg);
+        msgIndex++;
+        continue;
+      }
+      if (el.classList.contains("bbs-article-nav")) continue;
+      if (el.classList.contains("md-tags")) continue;
+      if (el.tagName === "P" || el.tagName === "UL" || el.tagName === "OL" || el.tagName === "PRE" || el.tagName === "TABLE" || el.tagName === "HR" || el.tagName === "H2" || el.tagName === "H3" || el.tagName === "H4" || el.tagName === "DIV" || el.tagName === "DL") {
+        if (el.tagName === "HR") {
+          const divider = document.createElement("div");
+          divider.style.cssText = "border-top:1px solid var(--term-fg-dark); margin:12px 0;";
+          chat.appendChild(divider);
+          continue;
+        }
+        if (el.tagName === "H2" || el.tagName === "H3" || el.tagName === "H4") {
+          const msg2 = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus", true);
+          chat.appendChild(msg2);
+          msgIndex++;
+          continue;
+        }
+        const msg = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus");
+        chat.appendChild(msg);
+        msgIndex++;
+      }
+    }
+    const inputBar = document.createElement("div");
+    inputBar.className = "bbs-chat-input";
+    inputBar.innerHTML = `<span class="input-prompt">></span> <span>/reply to continue the conversation...</span><span class="input-cursor"></span>`;
+    chat.appendChild(inputBar);
+    const footer = document.createElement("div");
+    footer.className = "bbs-chat-footer";
+    footer.textContent = `\u2014 End of chat log \u2014 ${articleTitle} \xB7 ${participants.length} participants \xB7 ${msgIndex} messages \u2014`;
+    chat.appendChild(footer);
+    content.innerHTML = "";
+    content.appendChild(chat);
+  }
+  function createChatMessage(username, innerHtml, index, side, isHeading = false) {
+    const container = document.createElement("div");
+    container.className = `bbs-chat-msg from-${side}`;
+    const avatar = document.createElement("div");
+    avatar.className = "bbs-chat-avatar";
+    avatar.textContent = username.charAt(0).toUpperCase();
+    const bubble = document.createElement("div");
+    bubble.className = "bbs-chat-bubble";
+    const nameEl = document.createElement("div");
+    nameEl.className = "bbs-chat-username";
+    nameEl.textContent = username;
+    const textEl = document.createElement("div");
+    textEl.className = "bbs-chat-text";
+    if (isHeading) {
+      textEl.innerHTML = innerHtml;
+      textEl.style.cssText += "background:transparent; border-color:transparent; font-weight:700;";
+      textEl.querySelector("h2, h3, h4")?.style.setProperty("margin", "0");
+    } else {
+      textEl.innerHTML = innerHtml;
+    }
+    const timeEl = document.createElement("div");
+    timeEl.className = "bbs-chat-time";
+    timeEl.textContent = generateTimestamp(index);
+    bubble.appendChild(nameEl);
+    bubble.appendChild(textEl);
+    bubble.appendChild(timeEl);
+    container.appendChild(avatar);
+    container.appendChild(bubble);
+    return container;
+  }
+
+  // src/ts/grid-nav.ts
+  function initGridNav() {
+    const grid = document.querySelector(".page");
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll(".bbs-post-card"));
+    if (cards.length === 0) return;
+    cards.forEach((card) => card.setAttribute("tabindex", "0"));
+    function getColCount() {
+      const style = getComputedStyle(grid);
+      const template = style.gridTemplateColumns;
+      return template.split(" ").filter((s) => s.trim() && s !== "none").length;
+    }
+    function focusCard(idx) {
+      if (idx < 0) idx = cards.length - 1;
+      if (idx >= cards.length) idx = 0;
+      cards[idx].focus();
+    }
+    function getFocusedIndex() {
+      const active = document.activeElement;
+      if (!active) return -1;
+      return cards.indexOf(active);
+    }
+    grid.addEventListener("keydown", (e) => {
+      const idx = getFocusedIndex();
+      if (idx === -1) return;
+      const cols = getColCount();
+      switch (e.key) {
+        case "ArrowRight":
+        case "l":
+        case "L":
+          e.preventDefault();
+          focusCard(idx + 1);
+          break;
+        case "ArrowLeft":
+        case "h":
+        case "H":
+          e.preventDefault();
+          focusCard(idx - 1);
+          break;
+        case "ArrowDown":
+        case "j":
+        case "J":
+          e.preventDefault();
+          focusCard(idx + cols);
+          break;
+        case "ArrowUp":
+        case "k":
+        case "K":
+          e.preventDefault();
+          focusCard(idx - cols);
+          break;
+        case "Enter":
+        case " ":
+          e.preventDefault();
+          cards[idx].click();
+          break;
+        case "Home":
+        case "g":
+          e.preventDefault();
+          focusCard(0);
+          break;
+        case "End":
+        case "G":
+          e.preventDefault();
+          focusCard(cards.length - 1);
+          break;
+      }
+    });
+    document.addEventListener("keydown", function firstKey(e) {
+      if (["h", "j", "k", "l", "g", "G", "ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(e.key)) {
+        if (!document.activeElement || document.activeElement === document.body) {
+          if (!window.location.pathname.match(/\/blog\/(opinions|tutorials)\/.+/)) {
+            focusCard(0);
+            const newIdx = getFocusedIndex();
+            if (newIdx === 0) {
+              setTimeout(() => cards[0].focus(), 10);
+            }
+          }
+        }
+        document.removeEventListener("keydown", firstKey);
+      }
+    });
   }
 
   // src/ts/main.ts
   initBootSequence();
   document.addEventListener("boot:complete", () => {
     initTypingAnimation();
-    initArticlePage();
+    initArticleChat();
+    initGridNav();
     initThemeTransitions();
     initConfettiOnToggle();
     initClickRipple();

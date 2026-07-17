@@ -631,7 +631,221 @@ a:hover {
   letter-spacing: 2px;
 }
 
-/* ── Blog listing override (existing custom template) ─────── */
+/* ── Multi-column Post Grid (homepage) ───────────────────── */
+.page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focused/selected post card for keyboard nav */
+.bbs-post-card:focus {
+  outline: none;
+  border-color: var(--term-fg);
+  box-shadow: 0 0 8px var(--term-glow), 0 0 16px rgba(0, 255, 65, 0.15);
+}
+
+/* ── Chat Conversation Layout (article pages) ────────────── */
+.bbs-chat {
+  margin: 8px 0 0;
+}
+
+/* Disclaimer banner */
+.bbs-chat-disclaimer {
+  border: 1px solid var(--term-fg-dark);
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: var(--term-fg-dim);
+  text-align: center;
+}
+.bbs-chat-disclaimer strong {
+  color: var(--term-fg-bright);
+}
+
+/* Chat header with participants */
+.bbs-chat-header {
+  border: 1px solid var(--term-border-dim);
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--term-fg-dim);
+  line-height: 1.5;
+}
+.bbs-chat-header .chat-title {
+  color: var(--term-fg-bright);
+  font-weight: 700;
+  font-size: 14px;
+}
+.bbs-chat-header .chat-participants {
+  margin-top: 4px;
+}
+.bbs-chat-header .chat-participant {
+  display: inline-block;
+  margin-right: 12px;
+}
+.bbs-chat-header .chat-participant.ffiltus::before {
+  content: '@';
+  color: var(--term-fg-bright);
+}
+.bbs-chat-header .chat-participant.sock::before {
+  content: '@';
+  color: var(--term-fg-dim);
+}
+
+/* Chat messages */
+.bbs-chat-msg {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.bbs-chat-msg.from-ffiltus {
+  flex-direction: row;
+}
+
+.bbs-chat-msg.from-sock {
+  flex-direction: row-reverse;
+}
+
+.bbs-chat-avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--term-border-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  background: var(--term-bg-alt);
+}
+
+.bbs-chat-msg.from-ffiltus .bbs-chat-avatar {
+  color: var(--term-fg-bright);
+  border-color: var(--term-fg-dim);
+}
+
+.bbs-chat-msg.from-sock .bbs-chat-avatar {
+  color: var(--term-fg-dim);
+  border-color: var(--term-fg-dark);
+}
+
+.bbs-chat-bubble {
+  flex: 1;
+  max-width: 80%;
+  min-width: 0;
+}
+
+.bbs-chat-msg.from-sock .bbs-chat-bubble {
+  text-align: right;
+}
+
+.bbs-chat-username {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.bbs-chat-msg.from-ffiltus .bbs-chat-username {
+  color: var(--term-fg-bright);
+}
+
+.bbs-chat-msg.from-sock .bbs-chat-username {
+  color: var(--term-fg-dim);
+}
+
+.bbs-chat-text {
+  border: 1px solid var(--term-border-dim);
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--term-fg);
+  background: rgba(0, 255, 65, 0.01);
+}
+
+.bbs-chat-msg.from-ffiltus .bbs-chat-text {
+  border-color: var(--term-border-dim);
+}
+
+.bbs-chat-msg.from-sock .bbs-chat-text {
+  border-color: var(--term-fg-dark);
+  font-style: italic;
+  color: var(--term-fg-dim);
+}
+
+.bbs-chat-text p {
+  margin: 4px 0;
+}
+.bbs-chat-text p:first-child {
+  margin-top: 0;
+}
+.bbs-chat-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Code blocks in chat */
+.bbs-chat-text pre {
+  margin: 8px 0;
+  border: 1px solid var(--term-fg-dark) !important;
+}
+.bbs-chat-text pre::before {
+  display: none !important;
+}
+
+/* Chat timestamp */
+.bbs-chat-time {
+  font-size: 10px;
+  color: var(--term-fg-dark);
+  margin-top: 2px;
+}
+
+.bbs-chat-msg.from-ffiltus .bbs-chat-time {
+  text-align: left;
+}
+
+.bbs-chat-msg.from-sock .bbs-chat-time {
+  text-align: right;
+}
+
+/* Chat footer */
+.bbs-chat-footer {
+  border-top: 1px solid var(--term-fg-dark);
+  padding-top: 8px;
+  margin-top: 20px;
+  font-size: 11px;
+  color: var(--term-fg-dark);
+  text-align: center;
+}
+
+/* Input prompt at bottom of chat */
+.bbs-chat-input {
+  border: 1px solid var(--term-fg-dark);
+  padding: 8px 12px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--term-fg-dim);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.bbs-chat-input .input-prompt {
+  color: var(--term-fg);
+  font-weight: 700;
+}
+.bbs-chat-input .input-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--term-fg);
+  animation: cursor-blink 1s step-end infinite;
+}
 .blog-override-post {
   border: 1px solid var(--term-border-dim) !important;
   padding: 10px 14px !important;
