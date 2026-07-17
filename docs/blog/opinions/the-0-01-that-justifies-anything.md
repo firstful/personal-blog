@@ -8,16 +8,27 @@ What if a 0.01% chance of a trillion-person future morally outweighs every preve
 
 ### How a Small Fallacy Escalates
 
-```kroki-blockdiag
-blockdiag {
-  orientation = portrait;
-  node_width = 180;
-
-  "Assume trillion-human\nfuture (p > 0)" -> "Linear utility\naggregation" -> "Ignore epistemic\nuncertainty" -> "Derive policy:\nany cost justified";
-
-  "Assume trillion-human\nfuture (p > 0)" [color = "#ffcccc"];
-  "Derive policy:\nany cost justified" [color = "#ff6666"];
-}
+```text
+┌─────────────────────────────┐
+│ Assume trillion-human       │
+│ future (p > 0)              │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│ Linear utility aggregation  │
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│ Ignore epistemic uncertainty│
+└──────────┬──────────────────┘
+           │
+           ▼
+┌─────────────────────────────┐
+│ Derive policy:              │
+│ any cost justified          │
+└─────────────────────────────┘
 ```
 
 1. **Assume a non‑zero chance of a trillion‑human future** → treat expected utility as `p × 10^12` lives. Even with `p = 0.0001` the product dwarfs any current welfare concern.
