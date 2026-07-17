@@ -8,8 +8,11 @@ description: |
   and the practices that shape the industry.
 ---
 
-# Opinions
-
-Below is a list of opinion pieces.
+<div class="bbs-board-header">
+  <div class="title-line">[ OPINIONS BOARD ]</div>
+  <div class="info-line">
+    <span>Board: GENERAL / OPINIONS</span>
+  </div>
+</div>
 
 {{ blog_content opinion }}

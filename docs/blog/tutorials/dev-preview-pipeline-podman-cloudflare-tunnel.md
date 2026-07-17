@@ -9,7 +9,7 @@ description: |
     A practical guide to building a lightweight dev preview pipeline using
     rootless Podman containers behind Cloudflare Tunnels — no Kubernetes
     required, full HTTPS, and zero-downtime deploys.
-image: https://blog.ffilt.us/assets/logo.png
+
 ---
 
 # Crafting a Dev Preview Pipeline with Podman + Cloudflare Tunnel

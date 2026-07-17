@@ -177,11 +177,155 @@
     }, 100);
   }
 
+  // src/ts/boot.ts
+  var BOOT_LINES = [
+    { text: "[SUTLIFF BBS v1.0]", cls: "info", delay: 300 },
+    { text: "", cls: "", delay: 100 },
+    { text: "Initializing memory.................... OK", cls: "ok", delay: 200 },
+    { text: "Loading kernel........................ OK", cls: "ok", delay: 150 },
+    { text: "Mounting filesystem................... OK", cls: "ok", delay: 180 },
+    { text: "Starting services....................", cls: "", delay: 100 },
+    { text: "  [CRT] Display subsystem............. OK", cls: "ok", delay: 120 },
+    { text: "  [KEY] Keyboard controller........... OK", cls: "ok", delay: 80 },
+    { text: "  [CLK] System clock................. OK", cls: "ok", delay: 100 },
+    { text: "", cls: "", delay: 80 },
+    { text: "[NET] Connecting to FFILT.US BBS......", cls: "", delay: 300 },
+    { text: "[NET] Resolving host.................. OK", cls: "ok", delay: 200 },
+    { text: "[NET] Handshake....................... OK", cls: "ok", delay: 250 },
+    { text: "[NET] Connected \u2014 Node: PICKERINGTON, OH 57600 baud", cls: "ok", delay: 150 },
+    { text: "", cls: "", delay: 80 },
+    { text: "[AUTH] Authenticating user............", cls: "", delay: 400 },
+    { text: "[AUTH] Identity verified............... OK", cls: "ok", delay: 100 },
+    { text: "[AUTH] Access level: SYSOP", cls: "info", delay: 100 },
+    { text: "[AUTH] Last login: " + (/* @__PURE__ */ new Date()).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" }), cls: "info", delay: 100 },
+    { text: "", cls: "", delay: 150 },
+    { text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550", cls: "info", delay: 100 },
+    { text: "  Welcome to Sutliff BBS!", cls: "info", delay: 200 },
+    { text: "  SYSOP online  \u2014  ffilt.us  \u2014  57600 baud", cls: "info", delay: 80 },
+    { text: "\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550", cls: "info", delay: 200 }
+  ];
+  function initBootSequence() {
+    const existing = document.getElementById("boot-screen");
+    if (existing) {
+      existing.remove();
+    }
+    const bootScreen = document.createElement("div");
+    bootScreen.id = "boot-screen";
+    bootScreen.innerHTML = '<div class="boot-content" id="boot-content"></div>';
+    document.body.appendChild(bootScreen);
+    const bootContent = document.getElementById("boot-content");
+    let totalDelay = 0;
+    let lineIndex = 0;
+    function addLine(line) {
+      const p = document.createElement("p");
+      p.className = `boot-line ${line.cls}`;
+      p.textContent = line.text;
+      bootContent.appendChild(p);
+      requestAnimationFrame(() => {
+        p.classList.add("visible");
+      });
+    }
+    function addPrompt() {
+      const promptDiv = document.createElement("div");
+      promptDiv.className = "boot-prompt";
+      promptDiv.innerHTML = `<span class="input-text">${window.location.hostname}:~$ </span><span class="cursor">\u258C</span>`;
+      bootContent.appendChild(promptDiv);
+    }
+    function tick() {
+      if (lineIndex >= BOOT_LINES.length) {
+        addPrompt();
+        setTimeout(() => {
+          bootScreen.classList.add("hidden");
+          setTimeout(() => {
+            bootScreen.remove();
+          }, 900);
+        }, 2e3);
+        document.dispatchEvent(new CustomEvent("boot:complete"));
+        return;
+      }
+      const line = BOOT_LINES[lineIndex];
+      addLine(line);
+      lineIndex++;
+      const baseInterval = 40 + Math.random() * 30;
+      const delay = Math.max(baseInterval, line.delay || baseInterval);
+      setTimeout(tick, delay);
+    }
+    tick();
+  }
+
+  // src/ts/typing.ts
+  function initTypingAnimation() {
+    const heroTagline = document.querySelector(".tagline.typing");
+    if (!heroTagline) return;
+    const text = heroTagline.textContent || "";
+    heroTagline.textContent = "";
+    heroTagline.style.display = "inline";
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    cursor.style.display = "none";
+    heroTagline.after(cursor);
+    let index = 0;
+    const charsPerTick = 1;
+    const baseDelay = 35;
+    function typeTick() {
+      if (index >= text.length) {
+        cursor.style.display = "inline-block";
+        return;
+      }
+      const next = text.slice(index, index + charsPerTick);
+      heroTagline.textContent = text.slice(0, index + charsPerTick);
+      index += charsPerTick;
+      const jitter = Math.random() * 20;
+      const delay = baseDelay + jitter;
+      setTimeout(typeTick, delay);
+    }
+    const startTyping = () => {
+      setTimeout(() => {
+        cursor.style.display = "inline-block";
+        typeTick();
+      }, 400);
+    };
+    if (document.querySelector("#boot-screen")) {
+      document.addEventListener("boot:complete", startTyping, { once: true });
+    } else {
+      startTyping();
+    }
+  }
+
+  // src/ts/article.ts
+  function initArticlePage() {
+    const isArticle = window.location.pathname.match(/\/blog\/(opinions|tutorials)\/.+/);
+    if (!isArticle) return;
+    const titleEl = document.querySelector(".md-content__inner h1");
+    if (!titleEl) return;
+    const articleContent = document.querySelector(".md-content__inner .md-typeset");
+    if (!articleContent) return;
+    const pageTitle = titleEl.textContent || "Untitled";
+    const header = document.createElement("div");
+    header.className = "bbs-article-header";
+    header.innerHTML = `
+    <div>\u250C\u2500 File: ${window.location.pathname.replace(/^\//, "")}</div>
+    <div>\u2502  Author: Reed Sutliff</div>
+    <div>\u2502  Path: ${window.location.pathname}</div>
+    <div>\u2514\u2500</div>
+  `;
+    titleEl.parentNode?.insertBefore(header, titleEl);
+    const existingNav = document.querySelector(".md-content__inner .md-typeset + nav, .md-content__inner nav:last-child");
+    if (existingNav) {
+      existingNav.classList.add("bbs-article-nav");
+    }
+  }
+
   // src/ts/main.ts
-  initThemeTransitions();
-  initConfettiOnToggle();
-  initClickRipple();
-  initReadProgress();
-  initHomePage();
-  initConsoleEaster();
+  initBootSequence();
+  document.addEventListener("boot:complete", () => {
+    initTypingAnimation();
+    initArticlePage();
+    initThemeTransitions();
+    initConfettiOnToggle();
+    initClickRipple();
+    initReadProgress();
+    initHomePage();
+    initConsoleEaster();
+  }, { once: true });
 })();

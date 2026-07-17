@@ -18,16 +18,16 @@
 {% endblock %}
 
 {% macro render_tags(tags, base_url, category) -%}
-    <div class="blogging-tags-grid">
+    <div class="post-tags">
         {% for tag in tags %}
-        <span class="md-tag md-tag-icon md-tag-icon--{{ mkdocs_context.config.extra.tags[tag] }} tag-{{ category }}">{{ tag }}</span>
+        <span class="post-tag">{{ tag }}</span>
         {% endfor %}
     </div>
     {{ caller() }}
 {% endmacro %}
 
 {% macro render_category(category) -%}
-    <span class="blog-category blog-category--{{ category }}">{{ category }}</span>
+    <span class="post-tag" style="border-color:var(--term-fg-bright)">{{ category | upper }}</span>
 {% endmacro %}
 
 {% if render_blog is not defined %}
@@ -38,30 +38,21 @@
 {% elif '/tutorials/' in src_path %}
     {% set category = 'tutorial' %}
 {% endif %}
-<a class="no-hover" href="{{ url }}">
-    <div class="blog-override-post">
-        {% if "image" in pg.meta %}
-            <div class="blog-logo">
-                <img src="{{ pg.meta.image }}" alt="{{ title }}" />
-            </div>
+<a class="bbs-post-card" href="{{ url }}">
+    <span class="post-number">#{{ loop.index if loop is defined else '' }}</span>
+    <span class="post-title">{{ title }}</span>
+    <div class="post-meta">
+        <span>From: Reed Sutliff</span>
+        <span>Date: {{ time.split(',')[0] }}</span>
+        {% if category %}
+        <span>Type: {{ category | upper }}</span>
         {% endif %}
-        <div>
-            <div class="blog-post-meta-row">
-                {% if category %}
-                    {{ render_category(category) }}
-                {% endif %}
-            </div>
-            <h3 class="blog-post-title">{{ title }}</h3>
-            {% if show_tags and "tags" in pg.meta %}
-                {% call render_tags(pg.meta["tags"], index_url, category) %}
-                {% endcall %}
-            {% endif %}
-            <p class="blog-post-description">{{ description }}</p>
-            <div class="blog-post-extra">
-                {{ ("Updated" if is_revision else "Published") + " on: " + time.split(',')[0] }}
-            </div>
-        </div>
     </div>
+    {% if show_tags and "tags" in pg.meta %}
+        {% call render_tags(pg.meta["tags"], index_url, category) %}
+        {% endcall %}
+    {% endif %}
+    <div class="post-desc">{{ description }}</div>
 </a>
 {{ caller() }}
 {%- endmacro %}

@@ -4,7 +4,7 @@ tags:
     - Engineering
 description: |
     Why attaching yourself to a single language is marketable but bad for your code — and how every tool constrains the products you build.
-image: https://i.stack.imgur.com/686wZ.png
+
 
 ---
 

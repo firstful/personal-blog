@@ -8,7 +8,7 @@ tags:
 description: |
     How to build a custom MkDocs theme with PostCSS for CSS and esbuild for
     TypeScript — complete with custom icons, dark mode, and a build pipeline.
-image: https://squidfunk.github.io/mkdocs-material/assets/logo.svg
+
 ---
 
 # Building a Personal MkDocs Theme with PostCSS + esbuild

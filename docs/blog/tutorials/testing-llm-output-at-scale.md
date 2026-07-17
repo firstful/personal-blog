@@ -7,7 +7,7 @@ tags:
 description: |
     A practical guide to systematically testing LLM outputs at scale — from simple
     assertion frameworks to semantic evaluation pipelines with regression tracking.
-image: https://blog.ffilt.us/assets/logo.png
+
 ---
 
 # Testing LLM Output at Scale

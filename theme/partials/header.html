@@ -1,0 +1,37 @@
+<!-- SUTLIFF BBS Header -->
+<header class="bbs-header" role="banner">
+  <div class="bbs-header-inner">
+    <div class="bbs-header-title">
+      SUTLIFF BBS v1.0
+    </div>
+    <div class="bbs-header-status">
+      <span class="online">●</span> ONLINE &nbsp;|&nbsp;
+      USER: REED [SYSOP] &nbsp;|&nbsp;
+      NODE: PICKERINGTON, OH
+    </div>
+  </div>
+</header>
+
+<nav class="bbs-menu" role="navigation" aria-label="BBS Menu">
+  <div class="bbs-menu-inner">
+    <a href="{{ base_url | default('.') }}/">
+      <span class="menu-key">R</span> Read
+    </a>
+    <a href="{{ base_url | default('.') }}/blog/opinions/">
+      <span class="menu-key">O</span> Opinions
+    </a>
+    <a href="{{ base_url | default('.') }}/blog/tutorials/">
+      <span class="menu-key">T</span> Tutorials
+    </a>
+    <a href="{{ base_url | default('.') }}/tags/">
+      <span class="menu-key">G</span> Tags
+    </a>
+    <a href="{{ base_url | default('.') }}/resume/">
+      <span class="menu-key">A</span> About
+    </a>
+    <span style="flex:1"></span>
+    <a href="/feed_rss_created.xml" style="color:var(--term-fg-dim) !important;font-size:12px">
+      <span class="menu-key">RSS</span> Feed
+    </a>
+  </div>
+</nav>

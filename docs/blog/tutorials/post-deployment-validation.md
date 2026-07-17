@@ -11,7 +11,7 @@ description: |
     What can go wrong between git push and live site — and how to catch it
     automatically. A practical guide to post-deployment validation for solo
     infrastructure engineers.
-image: https://blog.ffilt.us/assets/logo.png
+
 ---
 
 # Post-Deployment Validation: What I Check After Every Automated Deploy
