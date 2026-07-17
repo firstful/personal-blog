@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond",
+    "slug": "agentic-cli-roundup",
+    "date": "2026-07-17T00:00:00",
+    "tags": [
+      "CLI",
+      "LLM",
+      "AI",
+      "tooling",
+      "developer",
+      "experience"
+    ],
+    "description": "The Sutliff BBS community debates the new wave of agentic coding CLIs — Claude Code, Gemini CLI, Codex CLI, opencode, and Copilot CLI — with strong opinions on all sides.",
+    "category": "post"
+  },
+  {
+    "title": "Configuration as Code Is a Lie: Why Desired State Always Drifts",
+    "slug": "opinions/configuration-as-code-is-a-lie",
+    "date": "2026-07-17T00:00:00",
+    "tags": [
+      "infrastructure",
+      "DevOps",
+      "configuration",
+      "engineering",
+      "agent-stack",
+      "reliability"
+    ],
+    "description": "The BBS #devops channel debates whether Configuration as Code delivers on its promises — or if drift is just a fact of life.",
+    "category": "opinion"
+  },
+  {
+    "title": "Let Your Infrastructure Be Boring: Why Reconciliation Loops Beat Event-Driven Everything",
+    "slug": "opinions/let-your-infrastructure-be-boring",
+    "date": "2026-07-17T00:00:00",
+    "tags": [
+      "infrastructure",
+      "architecture",
+      "DevOps",
+      "Kubernetes",
+      "agent-stack",
+      "engineering"
+    ],
+    "description": "The Sutliff BBS devops channel debates whether boring five-second reconciliation loops are actually superior to sophisticated event-driven architectures.",
+    "category": "opinion"
+  }
+]

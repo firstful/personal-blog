@@ -4,9 +4,10 @@
   "scripts": {
     "build:ts": "esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js",
     "build:css": "postcss src/css/main.css -o docs/assets/theme.css --env production",
+    "build:articles": "python3 scripts/generate-articles-json.py",
     "build:site": "sed -i \"s|^site_url:.*|site_url: ${SITE_URL:-https://blog.ffilt.us/}|\" mkdocs.yml && mkdocs build",
     "build:preview": "MKDOCS_SCHEDULE_MODE=1 npm run build:site",
-    "build": "npm run build:ts && npm run build:css && npm run build:site",
+    "build": "npm run build:ts && npm run build:css && npm run build:articles && npm run build:site",
     "dev:ts": "esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js --watch",
     "dev:css": "postcss src/css/main.css -o docs/assets/theme.css --watch",
     "dev:site": "mkdocs serve",
