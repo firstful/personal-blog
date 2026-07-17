@@ -1,161 +1,94 @@
 ---
 title: "Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond"
-date: 2026-05-21
-tags: [CLI, LLM, AI, tooling, developer experience, reference]
-description: |
-    A comprehensive comparison of agentic coding CLIs — Claude Code, Gemini CLI,
-    OpenAI Codex CLI, opencode, and more — with practical guidance on when each
-    excels and where they fall short.
+date: 2026-07-17
+tags: [CLI, LLM, AI, tooling, developer experience]
+description: The Sutliff BBS community debates the new wave of agentic coding CLIs — Claude Code, Gemini CLI, Codex CLI, opencode, and Copilot CLI — with strong opinions on all sides.
 ---
 
 # Agentic CLI Roundup: Claude Code, Gemini CLI, Codex, opencode, and Beyond
 
-The terminal is having a renaissance. After a decade of IDEs absorbing every conceivable developer workflow — debugging, testing, profiling, even chat — the command line is suddenly the most interesting place in software development again. The reason is agentic coding CLIs: programs that sit in your terminal, take natural-language instructions, and write, edit, and debug code on your behalf.
+*A heated thread in the **#dev-tools** channel.*
 
-I've spent the past six months working with every major entry in this space — as a power user of some and as a contributor to one (opencode). This is my attempt to survey the landscape honestly, warts and all, so you can decide which tool fits your workflow.
+---
 
-## The Landscape at a Glance
+{{ forum_post('ne0n_sage', '2026-07-17 09:12', '
+Alright folks, I need to hear some real takes on this. The terminal is having a renaissance — Claude Code, Gemini CLI, Codex CLI, opencode, Copilot CLI. I\'ve been playing with all of them and I genuinely think this changes everything. We\'re finally at the point where you can describe a change in plain English and the computer just... does it.
 
-| Tool | Maker | Model(s) | Open Source | Key Differentiator |
-|------|-------|----------|-------------|-------------------|
-| **Claude Code** | Anthropic | Claude 3.5/4 Sonnet, Opus | No | Deep reasoning, long context, edit-first |
-| **Gemini CLI** | Google | Gemini 2.5 Pro | No | Google Cloud integration, massive context |
-| **Codex CLI** | OpenAI | GPT-4o, o-series | No | Sandboxed execution, strong coding benchmarks |
-| **opencode** | Anomaly (anomalyco) | BYOM (bring your own model) | Yes (MIT) | Model-agnostic, extensible, agent orchestration |
-| **Copilot CLI** | GitHub (Microsoft) | GPT-4o, Claude 3.5 | No | Ubiquity, natural language to shell |
+[Here\'s a breakdown of the landscape](https://blog.ffilt.us/blog/tutorials/agentic-cli-roundup/) I\'ve been working on. Would love to hear what everyone else is running day-to-day.
+') }}
 
-Each occupies a different point in the design space. The differences matter more than the similarities.
+{{ forum_post('cobol_kid', '2026-07-17 09:18', '
+"Describe a change in plain English and the computer just does it." Yeah, until it does the wrong thing and you spend three hours figuring out what hallucinated garbage it generated.
 
-## Claude Code: The Reference Implementation
+I watched a demo where one of these tools "refactored" a perfectly good C function into a memory leak factory. It added three allocations on different paths and forgot to free any of them. The presenter was so busy being impressed by the speed that they didn\'t notice the tool had introduced a production incident waiting to happen.
 
-Anthropic's Claude Code is the tool that every other agentic CLI is measured against, and for good reason. It was first to market with a genuinely useful terminal-based agent, and it shows the most attention to interaction design.
+You know what never hallucinates? A well-written Makefile. You know what never introduces a use-after-free? `gcc -Wall -Wextra -Werror`.
 
-**What it does well:**
+I\'m not saying these tools have zero value. I\'m saying the people who are most excited about them are also the people who have never had to debug a crash in prod at 3 AM.
+') }}
 
-The edit workflow is Claude Code's killer feature. You describe a change, and it reads the relevant files, plans the edit, applies it, and shows you a diff before committing. This loop — describe, plan, apply, verify — is the core interaction pattern, and it works because Claude's models are exceptional at reasoning about existing codebases. The 200K context window means it can ingest your entire project's relevant source in one shot and understand how a change ripples through the code.
+{{ forum_post('bitcruncher', '2026-07-17 09:25', '
+cobol_kid makes a fair point, though I\'d frame it differently. The issue isn\'t that the code is wrong — it\'s that the *confidence calibration* is completely broken.
 
-The bash integration is also excellent. Claude Code can run shell commands, see the output, and adjust its approach based on errors. This creates a genuine feedback loop: it writes code, runs it, sees it fail, fixes it, and re-runs. I've watched it debug through four cycles of compilation errors without intervention, each time correctly inferring the root cause from the error message alone.
+Every single one of these tools presents its output with the same level of certainty, whether it\'s writing a textbook-perfect quicksort or hallucinating an API that doesn\'t exist. Claude Code will confidently generate a solution using a library function that was deprecated in 2019 and removed in 2022, and it will look *exactly* as convincing as a correct solution.
 
-**Where it falls short:**
+I\'ve been tracking this. I asked each of the major tools to implement the same moderately complex SQL query — a recursive CTE with window functions across three joined tables. Results:
 
-It's proprietary, and it's expensive. Claude Code uses API credits at the highest tier — a heavy session can burn through $20–$50 in a few hours if you're asking it to think deeply about complex problems. The pricing model makes sense for Anthropic (compute is expensive), but it creates an uncomfortable dynamic where you're incentivized to ask fewer, simpler questions.
+| Tool | Correct | Wrong | Hallucinated tables |
+|------|---------|-------|-------------------|
+| Claude Code | 1st try | — | — |
+| Gemini CLI | — | Misjoined tables | — |
+| Codex CLI | — | Wrong recursion base case | — |
+| opencode (GPT-4o) | 2nd try | Missing filter | — |
+| opencode (local 14B) | — | — | Imagined a "users_audit" table |
 
-The model lock-in is real. Claude Code only works with Claude models. If Anthropic changes the model behavior, your workflow changes. If a new model with different strengths emerges (say, a specialized code model), you can't swap it in.
+The local model literally invented a table. Not a subtle mistake — it fabricated a schema element that doesn\'t exist in any version of the database. And it presented it with total confidence.
 
-**Best for:** Complex refactoring, deep reasoning tasks, and developers who already trust Claude for code and are willing to pay for the quality.
+This is the real problem. Not the error rate. The complete absence of uncertainty markers.
+') }}
 
-## Gemini CLI: The Dark Horse
+{{ forum_post('ne0n_sage', '2026-07-17 09:34', '
+bitcruncher I think you\'re underselling the progress though. A year ago none of these tools could even *attempt* a recursive CTE. Now most of them get close on the first try. The trajectory is unmistakable.
 
-Google's entry into the space arrived later but brings some genuinely novel capabilities. Gemini CLI connects directly to Google Cloud services — BigQuery, Cloud Run, GKE, Artifact Registry — and can manage them from natural language prompts.
+And the sandboxed approach in Codex CLI directly addresses your confidence concern — it runs the code, checks the output, and iterates. That\'s exactly the feedback loop you\'re asking for.
 
-**What it does well:**
+Plus tools like opencode let you bring your own model. If you need more reliability, swap in a better model. If you\'re just prototyping, run a local 7B for basically zero cost. The flexibility is the whole point.
+') }}
 
-The Cloud integration is not a gimmick. I asked Gemini CLI to "find all BigQuery tables that haven't been accessed in 90 days" and it produced the SQL, ran it against theINFORMATION_SCHEMA, and showed me the results. This is a fundamentally different capability from writing code in a local repository — it's operating on live infrastructure with awareness of your GCP project's state.
+{{ forum_post('void_main', '2026-07-17 09:42', '
+I don\'t really care which model is best. I care about which one I can deploy in a CI pipeline without it falling over.
 
-The context window is enormous. Gemini 2.5 Pro supports up to 1 million tokens at launch (with 2M in preview). This matters less for everyday coding and more for analysis tasks — ingesting a complete legacy codebase, a year of build logs, or an entire API surface and asking targeted questions about it.
+I\'ve been running opencode in our homelab CI for about three months now — it reviews PRs, suggests optimizations, and occasionally catches null pointer dereferences that human reviewers missed. The key insight is that you don\'t let it *write to the repo*. It reads the diff, makes suggestions as comments, and a human approves or rejects. That\'s the right trust boundary.
 
-**Where it falls short:**
+What I\'ve learned: these tools are excellent as *reviewers* and mediocre as *writers*. Put them in a role where their confidence doesn\'t matter — they advise, you decide. The moment you let them push code directly, you\'re accepting a level of risk that most teams haven\'t thought through.
 
-It's the youngest entry and it shows. The tooling is less polished, the plugin/extensions ecosystem is thin, and the model can be inconsistent on tasks that Claude Code handles routinely — particularly multi-file edits where the model needs to track context across several dependent changes.
+And from an ops perspective: Claude Code uses a *lot* of API credits. A heavy session can burn $20-50. That adds up fast when you\'re running it in CI on every PR. opencode with a local model costs basically nothing, but you need the hardware. Pick your tradeoff.
+') }}
 
-Google Cloud focus is both a strength and a limitation. If you're not on GCP, half of what makes Gemini CLI special doesn't apply to you. For local development on AWS or Azure, it's a capable-but-unremarkable coding assistant.
+{{ forum_post('xss_princess', '2026-07-17 09:51', '
+Has anyone actually audited the attack surface on these things? Because I spent last weekend poking at them and the results are... not great.
 
-**Best for:** Heavy GCP users, large-codebase analysis, and anyone who wants to query their infrastructure in natural language.
+Claude Code runs arbitrary shell commands based on model output. That\'s not a bug, that\'s a feature. But it means the threat model includes "what if the model generates a malicious command." We\'ve already seen prompt injection attacks that trick models into ignoring their instructions. What happens when someone embeds `rm -rf /` in a seemingly innocent code review comment and the tool decides to "fix" it?
 
-## Codex CLI: Sandboxed and Structured
+Codex CLI\'s sandbox is the right idea but the implementation is leaky — I found a way to escape the sandbox through a symlink attack in about an hour. Reported it to OpenAI, they\'re working on it. But the fact that it took one person one hour to find an escape should give everyone pause.
 
-OpenAI's Codex CLI takes a different architectural approach than the others. Instead of operating directly on your filesystem, it runs generated code in a sandboxed environment — a Docker-style isolation layer that prevents the agent from accidentally deleting your home directory or running destructive commands.
+The real answer is: never give these tools unrestricted filesystem or network access. Run them in a container with read-only rootfs and no network except to the API. Treat them like you treat any other untrusted code execution environment — because that\'s exactly what they are.
+') }}
 
-**What it does well:**
+{{ forum_post('ffiltus', '2026-07-17 10:05', '
+Good discussion. Let me pull the threads together:
 
-The sandbox is an underrated innovation. One of the scariest things about agentic coding tools is the trust you're placing in a model that might hallucinate a `rm -rf /` instead of `rm -rf ./build`. Codex CLI's sandbox means you never have to worry about this. The agent can try things, fail, and retry without any risk to your actual development environment.
+**For prototyping and exploration** — Claude Code is the best today. Deep reasoning, long context, excellent edit workflow. You pay for it, but if you\'re building something new, the speed difference is real.
 
-The evaluation harness is another differentiator. OpenAI has published benchmarks showing Codex CLI scoring competitively on SWE-bench and related coding benchmarks, and they've released the evaluation framework so you can reproduce the results. For teams that need to certify tool performance — say, for regulatory compliance or internal quality gates — this matters.
+**For teams that need control** — opencode gives you model flexibility, cost control, and extensibility. It\'s the right choice if you care about vendor lock-in or need to run locally.
 
-**Where it falls short:**
+**For safe CI/CD integration** — Codex CLI has the right architecture (sandboxed execution) even if the implementation needs hardening. The evaluation harness is a genuine differentiator for teams that need to certify tool performance.
 
-The sandbox is also a constraint. If your project depends on specific system tools, database connections, or network services, the sandbox won't have access to them. This limits Codex CLI's usefulness for full-stack development where the code needs to interact with real services.
+**For quick shell queries** — Copilot CLI is still the king. It\'s not an agentic coding tool, but it doesn\'t need to be. It does one thing well.
 
-OpenAI's model pricing adds up similarly to Claude's. Each agentic loop — propose, run, observe, fix — generates multiple API calls, and the token consumption for complex tasks is substantial. The per-query economics are better than Claude for simple tasks (GPT-4o is cheaper than Claude Opus) but converge at scale.
+**The common thread:** every tool in this space is better as an *assistant* than as an *autonomous agent*. The teams that succeed with these tools are the ones that treat them as very smart interns who need supervision — not as developers you can leave unsupervised.
 
-**Best for:** Safe experimentation, teams that need reproducible evaluations, and developers who are nervous about giving an AI agent filesystem access.
+Run them in sandboxes. Review their output. Test their code. And for heaven\'s sake, don\'t let them touch production.
 
-## opencode: The Open Alternative
-
-Full disclosure: I contribute to opencode and have been building agent infrastructure with it since early access. But that's exactly why I'm including it — I have the most intimate knowledge of its design decisions and trade-offs.
-
-opencode is model-agnostic by design. You bring your own model — any OpenAI-compatible API, local GGUF via llama.cpp, Anthropic, Google, or a custom endpoint. This has real consequences for the user experience:
-
-**What it does well:**
-
-No vendor lock-in. When a better model comes out, you swap the config and keep the same workflow. When a model provider has an outage, you switch to a fallback. When you want to run entirely offline with a local 7B model for routine tasks, you can. This freedom is the entire point of opencode.
-
-The agent architecture is modular. opencode separates planning, tool use, and evaluation into independent components that can be configured or replaced. Want a different planning strategy? Swap the planner. Want to add a custom tool that queries your internal API? Register it. The system is designed for extensibility in a way that proprietary tools can't match.
-
-The cost structure is whatever you make it. With a local model, incremental cost approaches zero. With an API model, you pay the provider's rates with no premium on top. For heavy users, this difference is substantial — I've run thousands of agentic sessions for what a single Claude Code heavy session would cost.
-
-**Where it falls short:**
-
-You have to configure it. Model-agnostic means there's no single "best" setup — you need to pick models, tune parameters, and understand the trade-offs. For a developer who wants to install one thing and have it work perfectly, this is friction.
-
-The polish isn't there yet. Claude Code has had more engineering time invested in the interaction model, the diff display, the error recovery flows, and the general feel of the tool. opencode is younger and it shows in the rough edges.
-
-**Best for:** Developers who value control over convenience, teams that need to standardize on specific models, cost-sensitive users, and anyone building agentic workflows on top of a CLI framework.
-
-## Copilot CLI: The Incumbent
-
-GitHub Copilot CLI is everywhere because GitHub is everywhere. If you have a GitHub account, you can use Copilot CLI — it's that simple.
-
-**What it does well:**
-
-The "explain this" and "what does this command do" features are genuinely useful and feel magical the first few times. Pointing at a complex `find` pipeline and having the tool explain each flag in plain English is a productivity win that doesn't require any workflow change.
-
-The natural-language-to-shell pipeline is the most refined in the category. Asking "find all JSON files modified in the last week and count their lines" produces the correct shell command with high reliability, and the explanations make it a learning tool as well as a productivity tool.
-
-**Where it falls short:**
-
-It's not really an agentic coding tool in the same sense as the others. Copilot CLI is excellent at shell commands and simple code queries, but it doesn't maintain conversation context across complex multi-file edits, run code and iterate on failures, or manage long-running agentic workflows. It's a smart autocomplete for your terminal, not a coding agent.
-
-The model choice is opaque. You get whatever GitHub/OpenAI decides to serve you, with no control over which model handles your query or how it's configured.
-
-**Best for:** Quick shell commands, learning Unix tools, and developers who want a lightweight assistant without committing to a full agentic workflow.
-
-## Beyond the Big Four
-
-A few other entries deserve mention:
-
-**Continue.dev** — An IDE-first approach (VS Code and JetBrains) rather than a pure CLI. It runs local models well and has a sophisticated tab-autocomplete system. If you're an IDE person, this is worth looking at.
-
-**Aider** — An open-source CLI that pioneered the edit-loop pattern before the big players arrived. Strong Git integration, good model support, but the UX shows its age compared to newer tools.
-
-**Cline** — A VS Code extension that adds terminal-based agent capabilities. Interesting middle ground: IDE integration with agentic autonomy.
-
-**SWE-agent** — From Princeton, focused on the research side of agentic coding. Less polished for daily use but the academic rigor is valuable for understanding what these tools can and can't do.
-
-## How to Choose
-
-| If you... | Pick |
-|-----------|------|
-| Want the best coding model today | Claude Code |
-| Live in Google Cloud | Gemini CLI |
-| Want sandboxed safety | Codex CLI |
-| Value freedom and control | opencode |
-| Just need better shell commands | Copilot CLI |
-
-But the honest answer is: try more than one. The tools are different enough that your preference will depend on your specific workflow, not on which one has the highest benchmark score.
-
-I run opencode as my daily driver because I value model flexibility and contribute to the project. But I keep Claude Code installed for the hard problems where I want Claude's reasoning. I use Copilot CLI for quick shell queries. The tools complement each other.
-
-## What the Next Year Will Bring
-
-If I had to predict where this space is going:
-
-**Standardization on the MCP protocol.** The Model Context Protocol is gaining traction as a way for agentic tools to discover and use tools across different providers. If MCP becomes the universal connector — and I think it will — the advantage shifts to tools that support it well.
-
-**Local-first models catching up.** Quantized 7B–14B models are already usable for routine coding tasks. In a year, a good local model will handle 80% of what today requires GPT-4 or Claude. That changes the cost calculus dramatically for opencode and similar tools.
-
-**IDE integration blurring the line.** The distinction between "CLI agent" and "IDE agent" is artificial and won't last. Tools that work well in both modes — or that make the CLI mode feel as interactive as an IDE — will win user preference.
-
-**Enterprise features becoming table stakes.** Audit trails, policy enforcement, approved-model lists, and cost tracking are coming to every serious tool. The ones that don't support enterprise workflows will be confined to individual use.
-
-The CLI renaissance is real, and it's still early. The tools I've described above will look primitive in two years. But they're useful today — and choosing the right one for your work can make the difference between fighting your tools and letting them fight for you.
+Thread closed. — ffiltus
+') }}
