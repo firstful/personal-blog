@@ -788,7 +788,7 @@
   }
   function markRead(slug) {
     const map = getReadMap2();
-    const path = `/${slug}`;
+    const path = `/blog/${slug}`;
     if (map[path]) return;
     map[path] = (/* @__PURE__ */ new Date()).toISOString();
     setReadMap2(map);
@@ -840,7 +840,7 @@
         const slug = el.dataset.slug;
         if (slug) {
           markRead(slug);
-          window.location.href = `/${slug}`;
+          window.location.href = `/blog/${slug}/`;
         }
       });
     });

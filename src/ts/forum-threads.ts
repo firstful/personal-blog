@@ -43,7 +43,7 @@ function setReadMap(map: ReadMap): void {
 
 function markRead(slug: string): void {
   const map = getReadMap();
-  const path = `/${slug}`;
+  const path = `/blog/${slug}`;
   if (map[path]) return;
   map[path] = new Date().toISOString();
   setReadMap(map);
@@ -115,7 +115,7 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
       if (slug) {
         markRead(slug);
         // Navigate to the article
-        window.location.href = `/${slug}`;
+        window.location.href = `/blog/${slug}/`;
       }
     });
   });
