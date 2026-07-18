@@ -44,6 +44,7 @@ def define_env(env):
     @env.macro
     def forum_post(handle: str, timestamp: str, body: str, sig: bool = True):
         """Render a forum post in classic two-column layout."""
+        import markdown as md_lib
         persona = PERSONAS.get(handle, {})
         display = persona.get("screen_name", handle)
         avatar = persona.get("avatar", "●")
@@ -53,7 +54,8 @@ def define_env(env):
         joined = persona.get("joined", "")
         pcount = persona.get("posts", 0)
 
-        body = body.strip().replace("\n", "\n    ")
+        body = body.strip()
+        body_html = md_lib.markdown(body, extensions=['fenced_code', 'tables', 'codehilite', 'nl2br'])
 
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
         pcount_html = f'    <div class="fp-stat">Posts: {pcount}</div>\n' if pcount else ""
@@ -71,7 +73,7 @@ def define_env(env):
             f'  </div>'
             f'  <div class="fp-right">'
             f'    <div class="fp-timestamp">{timestamp}</div>'
-            f'    <div class="fp-body">\n{body}\n  </div>'
+            f'    <div class="fp-body">\n{body_html}\n  </div>'
             f'{sig_html}'
             f'  </div>'
             f'</div>'
