@@ -119,12 +119,14 @@ Not every persona appears in every daily thread. The agent draws from a rotating
 | Topic | Add these |
 |---|---|
 | `ai` | ne0n_sage, wetware, pascal |
-| `security` | xss_princess, oldschool_phreak |
+| `security` | xss_princess, priv_esc, oldschool_phreak |
 | `devops` | kernel_panic, raid_zero, cobol_kid |
 | `open-source` | bus_factor, hype_cycle |
 | `languages` | cobol_kid, imposter_syndrome |
 | `tooling` | vibecoder, sudo_rm_rf, kernel_panic |
 | `career` | backlog_groomer, imposter_syndrome, bus_factor |
+| `data` | schema_drift, kernel_panic |
+| `mobile` | frag_android, vibecoder |
 | `general` | segfault_dad (if a joke fits), any available |
 
 ### Rotation rules

