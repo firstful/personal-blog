@@ -94,7 +94,6 @@ def define_env(env):
         tagline = persona.get("tagline", "")
         bio = persona.get("bio", "")
         catchphrase = persona.get("catchphrase", "")
-        pronouns = persona.get("pronouns", "")
         joined = persona.get("joined", "")
         signature = persona.get("signature", "")
         badge = persona.get("badge", "")
@@ -119,7 +118,6 @@ def define_env(env):
     <table style="font-size:13px;color:var(--term-fg-dim)">
       <tr><td style="padding-right:16px"><strong>Archetype</strong></td><td>{archetype}</td></tr>
       <tr><td><strong>Catchphrase</strong></td><td><em>"{catchphrase}"</em></td></tr>
-      {"<tr><td><strong>Pronouns</strong></td><td>" + pronouns + "</td></tr>" if pronouns else ""}
       <tr><td><strong>Joined</strong></td><td>{joined}</td></tr>
     </table>
   </div>
