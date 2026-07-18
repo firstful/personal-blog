@@ -6,7 +6,7 @@ This guide covers the **daily automated articles** — filler threads generated 
 
 ## What They Are
 
-Daily articles are lightweight forum threads generated automatically, once per day, by an LLM agent. They pick up the previous day's tech news and have the personas react to it. They are **not** deep dives or opinion pieces — they're the forum equivalent of "did you see this?" followed by a quick argument.
+Daily articles are lightweight forum threads generated automatically, 1-2 per day, by an LLM agent. They pick up the previous day's tech news and have the personas react to it. They are **not** deep dives or opinion pieces — they're the forum equivalent of "did you see this?" followed by a quick argument.
 
 The goal is **activity**, not depth. A site with one post a week looks dead. A site with a daily thread and occasional hand-crafted pieces looks like a real community.
 
@@ -16,10 +16,10 @@ The goal is **activity**, not depth. A site with one post a week looks dead. A s
 |---|---|---|
 | **Trigger** | You provide a topic + guidance | Cron agent picks from yesterday's news |
 | **Quality** | Polished, edited, authoritative | Good enough, natural, slightly rough |
-| **Length** | 6-12 posts, varied depth | 1-3 posts, quick takes |
+| **Length** | 6-12 posts, varied depth | 3-8 posts per article, quick takes |
 | **Personas** | Curated for the topic | Rotating subset from a pool |
 | **Thread arc** | Full debate → resolution → ffiltus closes | Quick reaction → one disagreement → moves on |
-| **Frequency** | Whenever you write one | Daily, automatically |
+| **Frequency** | Whenever you write one | Daily, 1-2 per day |
 | **Tag** | `hand-crafted` | `daily` |
 
 ## Topic Selection
@@ -87,7 +87,7 @@ description: "<1-2 sentence summary of the news item>"
 
 ### Key structural rules
 
-1. **1-3 posts total.** Short and punchy — a quick reaction, not a debate.
+1. **3-8 posts total per article.** Not 2 (too thin), not 9+ (too long for filler).
 2. **First post links to the news.** Include a URL to the source. The opener has an opinion.
 3. **At least one disagreement.** Every thread needs friction. Two personas should see it differently.
 4. **Use `quote` for direct replies.** When a persona is responding to a specific point, quote the excerpt they're replying to. This creates visual threading. 1-2 quotes per thread is enough — don't quote every post.
@@ -147,7 +147,7 @@ The agent should follow the same persona voice rules as hand-crafted articles (s
 
 - **Don't fabricate news.** If the agent can't find a suitable topic, it should skip the day. A missing daily thread is better than a fake one.
 - **Don't repeat topics within 7 days.** Track recent topics and avoid rehashing.
-- **Don't go beyond 3 posts.** Filler should be filler.
+- **Don't go beyond 8 posts per article.** Filler should be filler.
 - **Don't use ffiltus's admin badge.** Daily threads are casual. His summary should feel like a user post, not a moderator action.
 - **Don't break character.** Every post must sound like the persona, not like an AI generating content.
 - **Don't editorialize on sensitive topics.** Avoid politics, culture wars, anything that isn't clearly tech.
