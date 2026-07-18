@@ -44,6 +44,6 @@ description: |
   <div class="thread-empty">Loading threads...</div>
 </div>
 
-<div class="bbs-static-list" style="display:none">
+<div class="bbs-static-list">
 {{ blog_content }}
 </div>

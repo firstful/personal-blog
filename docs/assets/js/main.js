@@ -811,7 +811,7 @@
     const unread = [];
     const read = [];
     for (const a of articles) {
-      const path = `/${a.slug}`;
+      const path = `/blog/${a.slug}`;
       if (readMap[path]) {
         read.push(a);
       } else {
@@ -835,6 +835,8 @@
       html = '<div class="thread-empty">No threads found.</div>';
     }
     container.innerHTML = html;
+    const staticList = document.querySelector(".bbs-static-list");
+    if (staticList) staticList.style.display = "none";
     container.querySelectorAll(".forum-thread").forEach((el) => {
       el.addEventListener("click", (e) => {
         const slug = el.dataset.slug;

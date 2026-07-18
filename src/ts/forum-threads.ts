@@ -76,7 +76,7 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
   const read: Article[] = [];
 
   for (const a of articles) {
-    const path = `/${a.slug}`;
+    const path = `/blog/${a.slug}`;
     if (readMap[path]) {
       read.push(a);
     } else {
@@ -107,6 +107,10 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
   }
 
   container.innerHTML = html;
+
+  // Hide static fallback list
+  const staticList = document.querySelector('.bbs-static-list') as HTMLElement;
+  if (staticList) staticList.style.display = 'none';
 
   // Attach click-to-mark-read handlers
   container.querySelectorAll('.forum-thread').forEach(el => {
