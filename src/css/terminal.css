@@ -597,6 +597,19 @@ a:hover {
   overflow: auto;
   margin-bottom: 16px;
   font-family: var(--term-font);
+  filter: blur(0.3px);
+  animation: elephant-bloom 4s ease-in-out infinite;
+}
+
+@keyframes elephant-bloom {
+  0%, 100% {
+    filter: blur(0.3px);
+    text-shadow: 0 0 2px var(--term-glow), 0 0 4px rgba(0,255,65,0.3);
+  }
+  50% {
+    filter: blur(0.8px);
+    text-shadow: 0 0 4px var(--term-glow), 0 0 8px rgba(0,255,65,0.4), 0 0 12px rgba(0,255,65,0.2);
+  }
 }
 
 .bbs-hero .tagline {
