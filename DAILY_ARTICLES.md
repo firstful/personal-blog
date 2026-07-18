@@ -16,7 +16,7 @@ The goal is **activity**, not depth. A site with one post a week looks dead. A s
 |---|---|---|
 | **Trigger** | You provide a topic + guidance | Cron agent picks from yesterday's news |
 | **Quality** | Polished, edited, authoritative | Good enough, natural, slightly rough |
-| **Length** | 6-12 posts, varied depth | 4-6 posts, quick takes |
+| **Length** | 6-12 posts, varied depth | 1-3 posts, quick takes |
 | **Personas** | Curated for the topic | Rotating subset from a pool |
 | **Thread arc** | Full debate → resolution → ffiltus closes | Quick reaction → one disagreement → moves on |
 | **Frequency** | Whenever you write one | Daily, automatically |
@@ -80,22 +80,14 @@ description: "<1-2 sentence summary of the news item>"
 <disagreement or different angle>
 ', quote='<persona_1>') }}
 
-{{ forum_post('<persona_3>', '<timestamp>', '
-<supporting detail, joke, or tangent>
-') }}
-
-{{ forum_post('<persona_4>', '<timestamp>', '
-<one more take — could agree, disagree, or go sideways>
-', quote='<persona_2 or 3>') }}
-
 {{ forum_post('ffiltus', '<timestamp>', '
-\brief summary, no strong opinion, thread stays open>
+<brief summary, no strong opinion, thread stays open>
 ') }}
 ```
 
 ### Key structural rules
 
-1. **4-6 posts total.** Not 3 (too thin), not 10 (too long for filler).
+1. **1-3 posts total.** Short and punchy — a quick reaction, not a debate.
 2. **First post links to the news.** Include a URL to the source. The opener has an opinion.
 3. **At least one disagreement.** Every thread needs friction. Two personas should see it differently.
 4. **Use `quote` for direct replies.** When a persona is responding to a specific point, quote the excerpt they're replying to. This creates visual threading. 1-2 quotes per thread is enough — don't quote every post.
@@ -155,7 +147,7 @@ The agent should follow the same persona voice rules as hand-crafted articles (s
 
 - **Don't fabricate news.** If the agent can't find a suitable topic, it should skip the day. A missing daily thread is better than a fake one.
 - **Don't repeat topics within 7 days.** Track recent topics and avoid rehashing.
-- **Don't go beyond 6 posts.** Filler should be filler.
+- **Don't go beyond 3 posts.** Filler should be filler.
 - **Don't use ffiltus's admin badge.** Daily threads are casual. His summary should feel like a user post, not a moderator action.
 - **Don't break character.** Every post must sound like the persona, not like an AI generating content.
 - **Don't editorialize on sensitive topics.** Avoid politics, culture wars, anything that isn't clearly tech.
@@ -224,7 +216,7 @@ description: "OpenAI quietly released their code interpreter as an MIT-licensed 
 
 # OpenAI just open-sourced their code interpreter and nobody noticed
 
-*5 replies in the **#ai** channel.*
+*2 replies in the **#ai** channel.*
 
 ---
 
@@ -237,24 +229,10 @@ This is HUGE. The most capable code execution environment in the AI space just b
 {{ forum_post('hype_cycle', '2026-07-18 08:19', '
 "OpenAI" and "open source" in the same sentence is doing a lot of heavy lifting there.
 
-It's MIT-licensed, sure. But the model weights aren't included. You get the runtime, not the brain. It's like open-sourcing the chassis of a car without the engine and calling it an open-source car.
-
-I'm sure that will work great in production. For people who already have their own models. Which is... not most people.
+Its MIT-licensed, sure. But the model weights arent included. You get the runtime, not the brain. Its like open-sourcing the chassis of a car without the engine and calling it an open-source car. I am sure that will work great in production.
 ', quote='ne0n_sage') }}
 
-{{ forum_post('kernel_panic', '2026-07-18 08:27', '
-hype_cycle is right about the weights, but this still matters for infrastructure teams. We've been building our own code execution sandboxes for months because there was no off-the-shelf option that was trustworthy. Now there's an MIT one we can audit.
-
-The value isn't "OpenAI gave us a free AI." The value is "we can read the code that runs untrusted model output on our servers." That's a security win regardless of where the weights come from.
-') }}
-
-{{ forum_post('xss_princess', '2026-07-18 08:34', '
-kernel_panic said it better than I would. The sandbox isolation is the interesting part. I spent an hour looking at the seccomp profiles and container setup — it's not perfect but it's better than what most teams ship. The escape surface is significantly smaller than anything LangChain has produced.
-
-I'll do a full audit this weekend and post findings. But first impression: this is a real open-source release, not a marketing exercise. The code quality is suspiciously good.
-', quote='kernel_panic') }}
-
-{{ forum_post('ffiltus', '2026-07-18 08:45', '
-Worth noting: this is the first OpenAI release that's genuinely useful to teams who aren't using OpenAI's models. The runtime is model-agnostic. That's the real shift — not the license, but the decoupling.
+{{ forum_post('ffiltus', '2026-07-18 08:30', '
+Worth noting: this is the first OpenAI release thats genuinely useful to teams who arent using OpenAI models. The runtime is model-agnostic. That is the real shift — not the license, but the decoupling.
 ') }}
 ```
