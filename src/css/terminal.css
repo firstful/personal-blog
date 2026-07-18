@@ -1217,6 +1217,25 @@ a:hover {
   font-style: italic;
 }
 
+/* ── Reply / Quote Block ──────────────────────────────────── */
+.fp-reply {
+  background: var(--term-bg-alt);
+  border-left: 3px solid var(--term-fg-dark);
+  padding: 6px 12px;
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: var(--term-fg-dim);
+  font-style: italic;
+  line-height: 1.5;
+  position: relative;
+}
+.fp-reply-icon {
+  color: var(--term-fg-dark);
+  margin-right: 4px;
+  font-style: normal;
+  font-weight: 700;
+}
+
 /* ── Responsive ── stack on narrow screens */
 @media (max-width: 640px) {
   .forum-post {
@@ -1258,7 +1277,7 @@ a:hover {
   content: "💬 ";
 }
 .forum-joke::after {
-  content: " — dad_joker, probably";
+  content: " — segfault_dad, probably";
   font-size: 11px;
   color: var(--term-fg-dark);
 }

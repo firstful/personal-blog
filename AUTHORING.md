@@ -7,10 +7,11 @@ This document covers everything you need to know to write, publish, and maintain
 1. [Concept](#concept)
 2. [Personas](#personas)
 3. [Writing Articles as Forum Threads](#writing-articles-as-forum-threads)
-4. [Authoring Tips](#authoring-tips)
-5. [Site Features](#site-features)
-6. [Build Pipeline](#build-pipeline)
-7. [Content Organization](#content-organization)
+4. [Daily Automated Articles](#daily-automated-articles)
+5. [Authoring Tips](#authoring-tips)
+6. [Site Features](#site-features)
+7. [Build Pipeline](#build-pipeline)
+8. [Content Organization](#content-organization)
 
 ---
 
@@ -29,43 +30,29 @@ The site is a **retro BBS / forum** — not a blog. Everything is styled like a 
 
 ## Personas
 
-All articles are written as forum conversations between **fictional sock-puppet personas**. Each persona has a profile page at `/personas/<handle>/` with their bio, join date, and post count.
+All articles are written as forum conversations between **fictional sock-puppet personas**. The full roster is defined in `personas/personas.json` — handles, titles, bios, signatures, post rates, and usage roles. That file is the single source of truth.
 
-### Main Characters
-
-| Handle | Avatar | Role | Post Rate |
-|---|---|---|---|
-| `ffiltus` | ⚡ | Site Admin — intervenes to push narrative, close threads | 3.0/day |
-| `ne0n_sage` | 🟢 | AI Optimist — enthusiastic, forward-looking | 2.0/day |
-| `bitcruncher` | 🔴 | AI Skeptic — critical, demands evidence | 1.5/day |
-| `cobol_kid` | 🟡 | Old School Dev — C, SQL, FORTRAN, skeptical of new things | 1.0/day |
-| `void_main` | 🔵 | Systems Pragmatist — ops, deployments, practical | 1.0/day |
-| `xss_princess` | 🟣 | Security Engineer — attack surfaces, edge cases | 1.5/day |
-
-### Minor Characters
-
-| Handle | Avatar | Role | Post Rate |
-|---|---|---|---|
-| `oldschool_phreak` | 📞 | Phone Phreak — old school hacking, social engineering | 0.8/day |
-| `skiddie` | 💻 | Script Kiddie — novice, commits .env, posts bad issues | 2.0/day |
-| `vibecoder` | 🎧 | Vibe Coder — Dunning-Kruger, clones apps on Replit | 2.5/day |
-| `dad_joker` | 😬 | Dad Joke Guy — bad puns, dad energy, zero value | 1.2/day |
-| `selfhost_king` | 🖥️ | Homelabber — 200TB storage, 12 Xeons, self-host evangelist | 0.8/day |
+Each persona has a profile page at `/personas/<handle>/` with their bio, join date, and post count.
 
 ### Post Counts
 
-Post counts are **calculated dynamically** at build time as `rate × days_since(join_date)`. They climb naturally each day. Rates are defined in `scripts/generate-articles-json.py`.
+Post counts are **calculated dynamically** at build time as `post_rate × days_since(join_date)`. They climb naturally each day.
 
 ### Persona Usage Rules
 
 - Any persona can post **multiple times** in the same thread (rebuttals, clarifications, jokes)
-- Threads can use **as few personas as makes sense** — a heated debate between just ffiltus and bitcruncher is fine
-- Choose personas that fit the topic tone:
-  - Technical debates → bitcruncher, cobol_kid, void_main
+- Threads can use **as few personas as makes sense** — a heated debate between just ffiltus and hype_cycle is fine
+- Choose personas that fit the topic tone (see `role` field in personas.json):
+  - Technical debates → hype_cycle, cobol_kid, kernel_panic
   - Futurist takes → ne0n_sage
   - Security angles → xss_princess
-  - Comic relief → dad_joker, skiddie, vibecoder
-  - Infrastructure reality checks → selfhost_king
+  - Comic relief → segfault_dad, sudo_rm_rf, vibecoder
+  - Infrastructure reality checks → raid_zero
+  - Rationalist / EA → pascal
+  - Neuroscience / BCI → wetware
+  - OSS maintainer struggles → bus_factor
+  - Product / stakeholder perspective → backlog_groomer
+  - Junior dev perspective → imposter_syndrome
   - Narrative steering → ffiltus (use his admin badge sparingly — it loses impact if overused)
 
 ---
@@ -90,7 +77,7 @@ description: "Short summary shown in thread list and SEO."
 
 ---
 
-{{ forum_post('void_main', '2026-07-17 08:30', '
+{{ forum_post('kernel_panic', '2026-07-17 08:30', '
 Post body here. Keep it short — 2-4 paragraphs.
 Use **bold**, *italic*, `code`, and [links](url) normally.
 Use bullet lists for comparisons or lists.
@@ -99,6 +86,10 @@ Use bullet lists for comparisons or lists.
 {{ forum_post('cobol_kid', '2026-07-17 08:38', '
 Counterpoint here.
 ') }}
+
+{{ forum_post('kernel_panic', '2026-07-17 08:42', '
+Rebuttal with a reply quote from cobol_kid.
+', quote='cobol_kid') }}
 
 {{ forum_post('ffiltus', '2026-07-17 09:20', '
 Wrap up with a summary and close the thread.
@@ -109,13 +100,14 @@ Thread closed. — ffiltus
 ### Macro Reference
 
 ```
-{{ forum_post(handle, timestamp, body, sig=True) }}
+{{ forum_post(handle, timestamp, body, sig=True, quote='') }}
 ```
 
 - `handle` — persona handle from personas.json
 - `timestamp` — display string (use `2026-07-17 14:23` format)
-- `body` — post content (markdown — rendered via Python `markdown` library with fenced_code, tables, codehilite, nl2br extensions)
+- `body` — post content (markdown — rendered via Python `markdown` library with fenced_code, tables, codehilite, nl2br, footnotes extensions)
 - `sig` — optional, default True. Set `sig=False` to hide signature on a specific post
+- `quote` — optional, default empty. A persona handle to quote. The macro automatically extracts a snippet from that persona's post and renders it as a reply block (`>`) above the post body. Use `quote='handle'` to quote their most recent post, or `quote='handle:N'` to quote their Nth post (0-indexed) when they've posted multiple times in the thread.
 
 ### Writing Tips
 
@@ -126,6 +118,7 @@ Thread closed. — ffiltus
 - **Personas can post multiple times** — let them rebut, clarify, or joke
 - **ffiltus closes threads** — his admin interjection should summarize the discussion and add the author's intended takeaway. End with "Thread closed. — ffiltus"
 - **Markdown is supported** in post bodies: bold, italic, links, code, bullet lists, numbered lists, fenced code blocks, blockquotes. Everything gets rendered properly.
+- **Use `quote` for replies** — when a persona is directly responding to another's point, pass their handle as the `quote` parameter (e.g. `quote='cobol_kid'`). The macro extracts a snippet from that persona's most recent post automatically. This creates visual threading and enables parallel conversations where multiple personas argue different sub-threads simultaneously.
 
 ### Title Conventions
 
@@ -139,23 +132,39 @@ Article titles should sound like forum thread titles, not blog headlines. More c
 
 ### Persona Writing Styles
 
-Each persona has a distinct voice that should be reflected in their posts:
+Each persona has a distinct voice that should be reflected in their posts (see `tagline` and `catchphrase` fields in personas.json for quick reference). Key patterns:
 
 | Persona | Style Guide |
 |---|---|
-| **ne0n_sage** 🟢 | Enthusiastic!  Loves exclamation marks!  Uses words like "incredible," "amazing," "revolutionary."  Asks rhetorical questions.  Optimistic tone. |
-| **bitcruncher** 🔴 | Acerbic, sarcastic, cutting.  Dry humor.  "I'm sure that will work great in production."  Dismissive of hype.  Backs up skepticism with data. |
-| **cobol_kid** 🟡 | Boomer ellipsis everywhere...  Double space after every sentence.  RANDOM CAPITALIZATION for emphasis.  Misuses emojis like 👴💾💻.  References "his day."  Condescending but sometimes right. |
-| **void_main** 🔵 | Practical, no-nonsense, data-driven.  Uses concrete metrics and timeframes.  "I've been running X for Y months."  Explains things simply.  The voice of reason. |
-| **xss_princess** 🟣 | Sharp, technical, precise.  Focuses on edge cases and attack surfaces.  Uses technical jargon accurately.  "Let me audit that."  Blunt about security issues. |
-| **vibecoder** 🎧 | ALL LOWERCASE.  Misspells things (halucinates, completly).  Stream of consciousness.  Uses 🎧🚀✨.  Claims to build things fast but nothing works.  Dunning-Kruger personified. |
-| **oldschool_phreak** 📞 | Cryptic, philosophical.  References 80s/90s tech.  Zen-like aphorisms.  "The network has no authority."  Short, punchy, wise. |
-| **skiddie** 💻 | Random CAPITALIZATION.  Lots of question marks???  Confused rambling.  "wait so if I..."  "pls help."  Follows tutorials exactly and breaks everything.  Commits .env files. |
-| **dad_joker** 😬 | Dad jokes.  Punctuation that sets up the punchline.  Uses 😬.  No real technical contribution.  Replies are always groaners. |
-| **selfhost_king** 🖥️ | Overly detailed rambling about hardware specs.  Parenthetical asides about his basement rack.  "You could just self-host that (I have 24 Xeons but my wife made me move the rack to the garage)."  Always mentions the electricity bill. |
-| **ffiltus** ⚡ | Authoritative, concise, measured.  Short sentences.  No wasted words.  Summarizes the thread impartially then adds the author's intended takeaway.  Ends with "Thread closed. — ffiltus" |
+| **ne0n_sage** | Enthusiastic! Loves exclamation marks! Words like "incredible," "amazing," "revolutionary." Asks rhetorical questions. Optimistic tone. |
+| **hype_cycle** | Acerbic, sarcastic, cutting. Dry humor. "I'm sure that will work great in production." Dismissive of hype. Backs up skepticism with data. |
+| **cobol_kid** | Boomer ellipsis everywhere... Double space after every sentence. RANDOM CAPITALIZATION for emphasis. Misuses emojis. References "his day." Condescending but sometimes right. |
+| **kernel_panic** | Practical, no-nonsense, data-driven. Concrete metrics and timeframes. "I've been running X for Y months." Explains things simply. The voice of reason. |
+| **xss_princess** | Sharp, technical, precise. Focuses on edge cases and attack surfaces. Uses technical jargon accurately. "Let me audit that." Blunt about security issues. |
+| **vibecoder** | ALL LOWERCASE. Misspells things. Stream of consciousness. Uses emojis. Claims to build things fast but nothing works. Dunning-Kruger personified. |
+| **oldschool_phreak** | Cryptic, philosophical. References 80s/90s tech. Zen-like aphorisms. Short, punchy, wise. |
+| **sudo_rm_rf** | Random CAPITALIZATION. Lots of question marks??? Confused rambling. "wait so if I..." "pls help." Follows tutorials exactly and breaks everything. |
+| **segfault_dad** | Dad jokes. Punctuation that sets up the punchline. No real technical contribution. Replies are always groaners. |
+| **raid_zero** | Overly detailed rambling about hardware specs. Parenthetical asides about his basement rack. "You could just self-host that..." Always mentions the electricity bill. |
+| **pascal** | Calibrated, evidence-driven. "Let me steelman that." References expected utility, priors, Bayesian reasoning. Pedantic but rigorous. |
+| **wetware** | Technical depth on neuroscience. Corrects sloppy analogies. "Actually, the synapse is the better analog because..." Compares biological and artificial architectures. |
+| **bus_factor** | Exhausted, bitter, relatable. "That's not a bug, that's a feature request with entitlement." 300 open issues. Patreon makes $12/month. |
+| **backlog_groomer** | Corporate jargon deployed with self-awareness. "Can we take this offline and align on scope?" Translates between eng and business. |
+| **imposter_syndrome** | Eager, confused, trying hard. "Wait, you're not supposed to do it that way?" Googles basic concepts. Asks the questions everyone else is afraid to ask. |
+| **ffiltus** | Authoritative, concise, measured. Short sentences. No wasted words. Summarizes the thread impartially then adds the author's intended takeaway. Ends with "Thread closed. — ffiltus" |
 
 ### Writing Tips
+
+## Daily Automated Articles
+
+See `DAILY_ARTICLES.md` for the full guide. These are filler threads generated by a cron agent that react to the previous day's tech news. They keep the site feeling alive between hand-crafted articles.
+
+Key differences from hand-crafted articles:
+- Generated automatically, once per day, by an LLM agent
+- 4-6 posts, quick takes, no deep resolution
+- Tagged `daily`, live in `docs/blog/daily/`
+- ffiltus posts a brief neutral summary (no "Thread closed")
+- Topic sourced from HN, Reddit, tech publications
 
 ## Site Features
 
@@ -240,6 +249,7 @@ The homepage JS fetches this on load and renders the thread list.
 - `docs/blog/` — default blog posts (flat)
 - `docs/blog/opinions/` — opinion pieces
 - `docs/blog/tutorials/` — tutorials
+- `docs/blog/daily/` — automated daily current-events threads (see `DAILY_ARTICLES.md`)
 
 ### Drafts / Archive
 

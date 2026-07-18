@@ -42,10 +42,22 @@ def define_env(env):
         PERSONAS = {}
 
     @env.macro
-    def forum_post(handle: str, timestamp: str, body: str, sig: bool = True):
-        """Render a forum post in classic two-column layout."""
+    def forum_post(handle: str, timestamp: str, body: str, sig: bool = True, quote: str = ""):
+        """Render a forum post in classic two-column layout.
+
+        quote: persona handle to quote, optionally with :N for the Nth post
+               by that handle (0-indexed). e.g. quote='cobol_kid' quotes
+               their most recent post, quote='cobol_kid:0' quotes their first.
+        """
         import markdown as md_lib
         import textwrap
+        import re as _re
+
+        # ── track posts per page for auto-quoting ──
+        if "_forum_posts" not in env.variables:
+            env.variables["_forum_posts"] = []
+        _posts = env.variables["_forum_posts"]
+
         persona = PERSONAS.get(handle, {})
         display = persona.get("screen_name", handle)
         avatar = persona.get("avatar", "●")
@@ -55,12 +67,52 @@ def define_env(env):
         joined = persona.get("joined", "")
         pcount = persona.get("posts", 0)
 
-        body = textwrap.dedent(body).strip()
-        body_html = md_lib.markdown(body, extensions=['fenced_code', 'tables', 'codehilite', 'nl2br'])
+        raw_body = textwrap.dedent(body).strip()
+        body_html = md_lib.markdown(raw_body, extensions=['fenced_code', 'tables', 'codehilite', 'nl2br', 'footnotes'])
 
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
         pcount_html = f'    <div class="fp-stat">Posts: {pcount}</div>\n' if pcount else ""
         sig_html = f'\n  <div class="forum-signature">— {signature}</div>' if sig and signature else ""
+
+        # ── auto-quote: parse handle[:N] and find the target post ──
+        reply_html = ""
+        if quote:
+            snippet = ""
+            # parse "handle" or "handle:N"
+            q_handle = quote
+            q_index = -1  # -1 = most recent
+            if ":" in quote:
+                parts = quote.rsplit(":", 1)
+                q_handle = parts[0]
+                try:
+                    q_index = int(parts[1])
+                except ValueError:
+                    pass
+
+            # collect all posts by this handle
+            matches = [p for p in _posts if p["handle"] == q_handle]
+            if matches:
+                if q_index >= 0 and q_index < len(matches):
+                    target = matches[q_index]
+                else:
+                    target = matches[-1]  # most recent
+
+                # strip markdown, collapse whitespace, take first ~120 chars
+                clean = _re.sub(r'[*`>#\[\]()!_~]', '', target["body"])
+                clean = _re.sub(r'\s+', ' ', clean).strip()
+                # try to cut at a sentence boundary
+                cut = clean[:150]
+                for end in ['. ', '! ', '? ']:
+                    idx = cut.rfind(end)
+                    if idx > 40:
+                        cut = cut[:idx + 1]
+                        break
+                snippet = cut.strip()
+            if snippet:
+                reply_html = f'\n  <div class="fp-reply"><span class="fp-reply-icon">&gt;</span> {snippet}</div>'
+
+        # ── store this post for future quotes ──
+        _posts.append({"handle": handle, "body": raw_body})
 
         return (
             f'<div class="forum-post">'
@@ -74,7 +126,7 @@ def define_env(env):
             f'  </div>'
             f'  <div class="fp-right">'
             f'    <div class="fp-timestamp">{timestamp}</div>'
-            f'    <div class="fp-body">\n{body_html}\n  </div>'
+            f'    <div class="fp-body">{reply_html}\n{body_html}\n  </div>'
             f'{sig_html}'
             f'  </div>'
             f'</div>'
