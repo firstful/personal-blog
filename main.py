@@ -60,7 +60,6 @@ def define_env(env):
 
         persona = PERSONAS.get(handle, {})
         display = persona.get("screen_name", handle)
-        avatar = persona.get("avatar", "●")
         title = persona.get("title", "")
         signature = persona.get("signature", "")
         badge = persona.get("badge", "")
@@ -117,7 +116,6 @@ def define_env(env):
         return (
             f'<div class="forum-post">'
             f'  <div class="fp-left">'
-            f'    <div class="fp-avatar">{avatar}</div>'
             f'    <div class="fp-username">{display}</div>'
             f'    {badge_html}'
             f'    <div class="fp-usertitle">{title}</div>'
@@ -139,7 +137,6 @@ def define_env(env):
         if not persona:
             return f'<div class="forum-post-body">Persona "{handle}" not found.</div>'
 
-        avatar = persona.get("avatar", "●")
         color = persona.get("color", "#33ff33")
         display = persona.get("screen_name", handle)
         title = persona.get("title", "")
@@ -156,7 +153,6 @@ def define_env(env):
         return f'''
 <div class="forum-post" style="border-left-color:{color}">
   <div class="forum-post-header" style="border-bottom-color:{color}">
-    <span class="forum-avatar" style="font-size:48px;color:{color}">{avatar}</span>
     <div>
       <div style="font-size:20px;font-weight:700;color:{color}">{display} {badge_html}</div>
       <div style="font-size:13px;color:var(--term-fg-dim)">{title}</div>

@@ -1113,12 +1113,6 @@ a:hover {
   overflow: hidden;
 }
 
-.fp-avatar {
-  font-size: 32px;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
 .fp-username {
   font-weight: 700;
   font-size: 13px;
@@ -1251,10 +1245,6 @@ a:hover {
     gap: 4px 8px;
     text-align: left;
     padding: 8px 12px;
-  }
-  .fp-avatar {
-    font-size: 20px;
-    margin-bottom: 0;
   }
   .fp-usertitle {
     display: none;

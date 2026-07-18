@@ -109,6 +109,20 @@ Thread closed. — ffiltus
 - `sig` — optional, default True. Set `sig=False` to hide signature on a specific post
 - `quote` — optional, default empty. A persona handle to quote. The macro automatically extracts a snippet from that persona's post and renders it as a reply block (`>`) above the post body. Use `quote='handle'` to quote their most recent post, or `quote='handle:N'` to quote their Nth post (0-indexed) when they've posted multiple times in the thread.
 
+### Escaping Apostrophes
+
+The body text is passed as a single-quoted Jinja2 string. Any apostrophe inside the body **must** be escaped as `\'` or the build will fail with a macro syntax error.
+
+```markdown
+{{ forum_post('cobol_kid', '2026-07-17 10:22', '
+Don\'t get me started on YAML.  It\'s not configuration — it\'s a hostage negotiation with your indent level.
+') }}
+```
+
+Common contractions to watch for: `it's`, `don't`, `doesn't`, `isn't`, `can't`, `won't`, `that's`, `I'm`, `you're`, `we've`, `they're`, `let's`, `I've`, `you've`, `I'd`, `you'd`, `it'll`. Every one of these needs the backslash.
+
+This does **not** apply to the frontmatter title or description — only to text inside `forum_post()` body strings.
+
 ### Writing Tips
 
 - **Keep posts short** — 2-4 paragraphs max. Think forum comment, not blog post
