@@ -2,9 +2,6 @@
    SUTLIFF BBS — Retro Terminal Theme
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── Google Font ──────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..700;1,300..700&display=swap');
-
 /* ── CSS Custom Properties ────────────────────────────────── */
 :root {
   --term-bg: #0c0c0c;
@@ -256,6 +253,26 @@ a:hover {
   font-size: 11px;
   padding: 0 2px;
 }
+
+/* ── Theme Toggle ──────────────────────────────────────────── */
+.bbs-theme-toggle {
+  background: none;
+  border: 1px solid var(--term-border-dim);
+  color: var(--term-fg-dim);
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  font-family: var(--term-font);
+  transition: border-color 0.2s, color 0.2s;
+  line-height: 1;
+}
+.bbs-theme-toggle:hover {
+  border-color: var(--term-fg);
+  color: var(--term-fg);
+}
+[data-md-color-scheme="default"] .bbs-theme-icon-dark { display: none; }
+[data-md-color-scheme="slate"] .bbs-theme-icon-light { display: none; }
 
 /* ── BBS Board Header (post listing title) ────────────────── */
 .bbs-board-header {
@@ -1272,6 +1289,64 @@ a:hover {
   color: var(--term-fg-dark);
 }
 
+/* ── Persona Profile Cards ─────────────────────────────────── */
+.forum-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--term-border-dim);
+  background: var(--term-bg-alt);
+}
+.forum-post-header > div {
+  min-width: 0;
+}
+.forum-post-body {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.forum-post-body p {
+  margin: 0.6em 0;
+}
+.forum-post-body hr {
+  border: none;
+  border-top: 1px dashed var(--term-border-dim);
+  margin: 12px 0;
+}
+.forum-post-body table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.forum-post-body table td {
+  padding: 4px 16px 4px 0;
+  vertical-align: top;
+}
+.forum-post-body table td strong {
+  color: var(--term-fg);
+}
+
+/* ── Loading Skeleton ──────────────────────────────────────── */
+.thread-skeleton {
+  pointer-events: none;
+}
+.skeleton-icon {
+  opacity: 0.3;
+}
+.skeleton-bar {
+  display: inline-block;
+  height: 12px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--term-bg-alt) 25%, var(--term-border-dim) 50%, var(--term-bg-alt) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  vertical-align: middle;
+}
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* ── Forum Thread List ─────────────────────────────────────── */
 .forum-thread-list {
   font-family: var(--term-font);
@@ -1472,6 +1547,21 @@ a:hover {
 /* Bottom padding so content isn't hidden behind the tray */
 .md-content {
   padding-bottom: 170px;
+}
+
+/* ── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  body::after { display: none; }
+  body::before { display: none; }
+  #boot-screen { display: none !important; }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .md-typeset {
+    text-shadow: none !important;
+  }
 }
 
 /* ── Print Styles ─────────────────────────────────────────── */

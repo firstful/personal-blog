@@ -1,4 +1,4 @@
-import { initThemeTransitions } from './theme';
+import { initThemeTransitions, initThemeToggle } from './theme';
 import { initConfettiOnToggle } from './confetti';
 import { initClickRipple } from './ripple';
 import { initReadProgress } from './progress';
@@ -14,6 +14,7 @@ import { initForumThreads } from './forum-threads';
 
 // Initialize BBS boot sequence on every page
 initBootSequence();
+initThemeToggle();
 
 // Defer all interactions until boot completes
 document.addEventListener('boot:complete', () => {

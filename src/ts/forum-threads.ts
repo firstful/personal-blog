@@ -2,13 +2,13 @@
  * SUTLIFF BBS — Forum Thread List
  *
  * Renders the homepage article list as forum-style thread entries,
- * filtered by read/unread status (tracked via bbs_read cookie).
+ * filtered by read/unread status (tracked via localStorage).
  * Fetches articles.json generated at build time.
  */
 
+import { getReadMap, markRead } from './storage';
+
 const ARTICLE_JSON = '/assets/articles.json';
-const COOKIE_NAME = 'bbs_read';
-const COOKIE_EXPIRY_DAYS = 90;
 
 interface Article {
   title: string;
@@ -19,34 +19,6 @@ interface Article {
   starter: string;
   posts: number;
   category: string;
-}
-
-interface ReadMap {
-  [path: string]: string;
-}
-
-/* ── Cookie helpers ── */
-
-function getReadMap(): ReadMap {
-  const m = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`));
-  if (!m) return {};
-  try { return JSON.parse(decodeURIComponent(m[1])); }
-  catch { return {}; }
-}
-
-function setReadMap(map: ReadMap): void {
-  const encoded = encodeURIComponent(JSON.stringify(map));
-  const expires = new Date();
-  expires.setDate(expires.getDate() + COOKIE_EXPIRY_DAYS);
-  document.cookie = `${COOKIE_NAME}=${encoded}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
-}
-
-function markRead(slug: string): void {
-  const map = getReadMap();
-  const path = `/blog/${slug}`;
-  if (map[path]) return;
-  map[path] = new Date().toISOString();
-  setReadMap(map);
 }
 
 /* ── Render helpers ── */
@@ -68,7 +40,7 @@ function tagHtml(tag: string): string {
 
 /* ── Main renderer ── */
 
-function renderThreadList(articles: Article[], readMap: ReadMap): void {
+function renderThreadList(articles: Article[], readMap: ReturnType<typeof getReadMap>): void {
   const container = document.getElementById('forum-thread-list');
   if (!container) return;
 
@@ -86,7 +58,6 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
 
   let html = '';
 
-  // Unread section
   if (unread.length > 0) {
     html += `<div class="thread-section-header"><span>UNREAD MESSAGES (${unread.length})</span></div>`;
     for (const a of unread) {
@@ -94,7 +65,6 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
     }
   }
 
-  // Read section
   if (read.length > 0) {
     html += `<div class="thread-section-header"><span>READ MESSAGES (${read.length})</span></div>`;
     for (const a of read) {
@@ -108,17 +78,14 @@ function renderThreadList(articles: Article[], readMap: ReadMap): void {
 
   container.innerHTML = html;
 
-  // Hide static fallback list
   const staticList = document.querySelector('.bbs-static-list') as HTMLElement;
   if (staticList) staticList.style.display = 'none';
 
-  // Attach click-to-mark-read handlers
   container.querySelectorAll('.forum-thread').forEach(el => {
-    el.addEventListener('click', (e) => {
+    el.addEventListener('click', () => {
       const slug = (el as HTMLElement).dataset.slug;
       if (slug) {
-        markRead(slug);
-        // Navigate to the article
+        markRead(`/blog/${slug}`);
         window.location.href = `/blog/${slug}/`;
       }
     });
@@ -146,16 +113,36 @@ function renderThread(a: Article, isUnread: boolean): string {
   `;
 }
 
+/* ── Loading skeleton ── */
+
+function renderSkeleton(): string {
+  let html = '';
+  for (let i = 0; i < 4; i++) {
+    html += `
+      <div class="forum-thread thread-skeleton">
+        <div class="thread-icon skeleton-icon">●</div>
+        <div class="thread-body">
+          <div class="thread-title"><span class="skeleton-bar" style="width:${60 + Math.random() * 30}%"></span></div>
+          <div class="thread-meta"><span class="skeleton-bar" style="width:120px"></span></div>
+          <div class="thread-desc"><span class="skeleton-bar" style="width:${80 + Math.random() * 15}%"></span></div>
+        </div>
+      </div>
+    `;
+  }
+  return html;
+}
+
 /* ── Init ── */
 
 export function initForumThreads(): void {
   const container = document.getElementById('forum-thread-list');
   if (!container) return;
 
+  container.innerHTML = renderSkeleton();
+
   fetch(ARTICLE_JSON)
     .then(r => r.json())
     .then((articles: Article[]) => {
-      // Sort by date descending (newest first)
       articles.sort((a, b) => b.date.localeCompare(a.date));
       const readMap = getReadMap();
       renderThreadList(articles, readMap);

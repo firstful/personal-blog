@@ -58,7 +58,7 @@ export function initTypingAnimation(): void {
  * Animate a single element with typewriter effect.
  * Used for page titles on article pages.
  */
-export function typewriter(el: HTMLElement, text?: string, speed: number = 30): Promise<void> {
+function typewriter(el: HTMLElement, text?: string, speed: number = 30): Promise<void> {
   const target = text || el.textContent || '';
   el.textContent = '';
   el.style.display = 'inline';

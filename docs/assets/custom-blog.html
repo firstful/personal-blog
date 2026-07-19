@@ -37,6 +37,8 @@
     {% set category = 'opinion' %}
 {% elif '/tutorials/' in src_path %}
     {% set category = 'tutorial' %}
+{% elif '/daily/' in src_path %}
+    {% set category = 'daily' %}
 {% endif %}
 <a class="bbs-post-card" href="{{ url }}">
     <span class="post-number">#{{ loop.index if loop is defined else '' }}</span>

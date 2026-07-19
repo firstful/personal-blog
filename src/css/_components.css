@@ -47,7 +47,7 @@ img.round {
 }
 
 .card {
-    border: 2px solid #e7e7e7;
+    border: 2px solid var(--md-default-fg-color--lightest, #e7e7e7);
     border-radius: 10px;
     padding: .5rem;
     vertical-align: middle;
@@ -242,7 +242,6 @@ img.round {
 }
 
 [data-md-color-scheme="slate"] .card {
-    border-color: #3a3b3e;
     background-color: #222326;
 }
 

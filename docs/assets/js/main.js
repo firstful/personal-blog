@@ -13,6 +13,25 @@
       attributeFilter: ["data-md-color-scheme"]
     });
   }
+  function initThemeToggle() {
+    window.toggleTheme = function() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-md-color-scheme");
+      const next = current === "slate" ? "default" : "slate";
+      html.setAttribute("data-md-color-scheme", next);
+      try {
+        localStorage.setItem("bbs_scheme", next);
+      } catch {
+      }
+    };
+    try {
+      const saved = localStorage.getItem("bbs_scheme");
+      if (saved === "slate" || saved === "default") {
+        document.documentElement.setAttribute("data-md-color-scheme", saved);
+      }
+    } catch {
+    }
+  }
 
   // src/ts/confetti.ts
   var COLORS = ["#b8895a", "#c4b094", "#dbbc8c", "#e8dfd0", "#e8d5b5", "#f0e0c8", "#7a6b50", "#c4956a"];
@@ -530,31 +549,48 @@
     });
   }
 
-  // src/ts/read-tracker.ts
+  // src/ts/storage.ts
+  var STORAGE_KEY = "bbs_read";
   var COOKIE_NAME = "bbs_read";
-  var COOKIE_EXPIRY_DAYS = 90;
-  function getReadMap() {
-    const match = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`));
-    if (!match) return {};
+  function migrateCookieIfNeeded() {
     try {
-      return JSON.parse(decodeURIComponent(match[1]));
+      if (localStorage.getItem(STORAGE_KEY)) return;
+      const match = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME}=([^;]*)`));
+      if (!match) return;
+      const data = JSON.parse(decodeURIComponent(match[1]));
+      if (data && typeof data === "object") {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      }
+      document.cookie = `${COOKIE_NAME}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+    } catch {
+    }
+  }
+  function getReadMap() {
+    migrateCookieIfNeeded();
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
     } catch {
       return {};
     }
   }
   function setReadMap(map) {
-    const encoded = encodeURIComponent(JSON.stringify(map));
-    const expires = /* @__PURE__ */ new Date();
-    expires.setDate(expires.getDate() + COOKIE_EXPIRY_DAYS);
-    document.cookie = `${COOKIE_NAME}=${encoded}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(map));
+    } catch {
+    }
   }
-  function markArticleRead() {
-    const path = window.location.pathname;
-    if (!path.match(/\/blog\/.+|\/opinions\/.|\/tutorials\/./)) return;
+  function markRead(path) {
     const map = getReadMap();
     if (map[path]) return;
     map[path] = (/* @__PURE__ */ new Date()).toISOString();
     setReadMap(map);
+  }
+
+  // src/ts/read-tracker.ts
+  function markArticleRead() {
+    const path = window.location.pathname;
+    if (!path.match(/\/blog\/.+|\/opinions\/.|\/tutorials\/./)) return;
+    markRead(path);
     document.dispatchEvent(new CustomEvent("bbs:read-update", { detail: { path } }));
   }
   function applyNewBadges() {
@@ -689,6 +725,7 @@
     }
   }
   function handleLinkClick(e) {
+    if (!inputEl || document.activeElement !== inputEl) return;
     const link = e.target.closest("a");
     if (!link) return;
     const href = link.getAttribute("href");
@@ -769,30 +806,6 @@
 
   // src/ts/forum-threads.ts
   var ARTICLE_JSON = "/assets/articles.json";
-  var COOKIE_NAME2 = "bbs_read";
-  var COOKIE_EXPIRY_DAYS2 = 90;
-  function getReadMap2() {
-    const m = document.cookie.match(new RegExp(`(?:^|; )${COOKIE_NAME2}=([^;]*)`));
-    if (!m) return {};
-    try {
-      return JSON.parse(decodeURIComponent(m[1]));
-    } catch {
-      return {};
-    }
-  }
-  function setReadMap2(map) {
-    const encoded = encodeURIComponent(JSON.stringify(map));
-    const expires = /* @__PURE__ */ new Date();
-    expires.setDate(expires.getDate() + COOKIE_EXPIRY_DAYS2);
-    document.cookie = `${COOKIE_NAME2}=${encoded}; path=/; expires=${expires.toUTCString()}; SameSite=Lax`;
-  }
-  function markRead(slug) {
-    const map = getReadMap2();
-    const path = `/blog/${slug}`;
-    if (map[path]) return;
-    map[path] = (/* @__PURE__ */ new Date()).toISOString();
-    setReadMap2(map);
-  }
   function personaBadge(handle) {
     return `<span class="thread-author">${handle}</span>`;
   }
@@ -838,10 +851,10 @@
     const staticList = document.querySelector(".bbs-static-list");
     if (staticList) staticList.style.display = "none";
     container.querySelectorAll(".forum-thread").forEach((el) => {
-      el.addEventListener("click", (e) => {
+      el.addEventListener("click", () => {
         const slug = el.dataset.slug;
         if (slug) {
-          markRead(slug);
+          markRead(`/blog/${slug}`);
           window.location.href = `/blog/${slug}/`;
         }
       });
@@ -866,12 +879,29 @@
     </div>
   `;
   }
+  function renderSkeleton() {
+    let html = "";
+    for (let i = 0; i < 4; i++) {
+      html += `
+      <div class="forum-thread thread-skeleton">
+        <div class="thread-icon skeleton-icon">\u25CF</div>
+        <div class="thread-body">
+          <div class="thread-title"><span class="skeleton-bar" style="width:${60 + Math.random() * 30}%"></span></div>
+          <div class="thread-meta"><span class="skeleton-bar" style="width:120px"></span></div>
+          <div class="thread-desc"><span class="skeleton-bar" style="width:${80 + Math.random() * 15}%"></span></div>
+        </div>
+      </div>
+    `;
+    }
+    return html;
+  }
   function initForumThreads() {
     const container = document.getElementById("forum-thread-list");
     if (!container) return;
+    container.innerHTML = renderSkeleton();
     fetch(ARTICLE_JSON).then((r) => r.json()).then((articles) => {
       articles.sort((a, b) => b.date.localeCompare(a.date));
-      const readMap = getReadMap2();
+      const readMap = getReadMap();
       renderThreadList(articles, readMap);
     }).catch((err) => {
       console.error("Failed to load articles.json:", err);
@@ -881,6 +911,7 @@
 
   // src/ts/main.ts
   initBootSequence();
+  initThemeToggle();
   document.addEventListener("boot:complete", () => {
     initTypingAnimation();
     initArticleChat();

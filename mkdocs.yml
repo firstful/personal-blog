@@ -62,12 +62,19 @@ theme:
     - content.code.copy
     - navigation.top
   palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+      logo: assets/logo.svg
     - scheme: slate
       primary: custom
       accent: custom
       toggle:
-        icon: material/brightness-auto
-        name: Toggle theme
+        icon: material/brightness-7
+        name: Switch to light mode
       logo: assets/logo.svg
 plugins:
   macros: {}

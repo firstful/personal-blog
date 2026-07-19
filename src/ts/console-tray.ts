@@ -108,6 +108,9 @@ function executeCommand(cmd: string): void {
 // ── Link interception ──
 
 function handleLinkClick(e: MouseEvent): void {
+  // Only intercept if the console tray input is focused
+  if (!inputEl || document.activeElement !== inputEl) return;
+
   const link = (e.target as HTMLElement).closest<HTMLAnchorElement>('a');
   if (!link) return;
   const href = link.getAttribute('href');
