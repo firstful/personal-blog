@@ -44,9 +44,21 @@ def rename_asset(rel_path: str) -> str | None:
     return new_rel
 
 
-def update_html_references(old_path: str, new_path: str):
-    """Replace all references to the old asset path in site/*.html"""
+def update_html_references(old_rel: str, new_rel: str):
+    """Replace all references to the old asset path in site/*.html
+
+    Handles both relative references (assets/theme.css) and
+    absolute references (/assets/theme.css) found in HTML.
+    """
     count = 0
+    # MkDocs generates both relative refs (in href/src) and sometimes
+    # absolute refs (in extra_css/extra_js). Match both by searching
+    # for the bare relative path and the slash-prefixed version.
+    variants = set()
+    variants.add(old_rel)     # e.g. assets/theme.css
+    variants.add('/' + old_rel)  # e.g. /assets/theme.css
+    variants.add(old_rel.replace('assets/', './assets/', 1))  # e.g. ./assets/theme.css
+
     for root, _dirs, files in os.walk(SITE_DIR):
         for fn in files:
             if not fn.endswith('.html'):
@@ -54,10 +66,15 @@ def update_html_references(old_path: str, new_path: str):
             fp = os.path.join(root, fn)
             with open(fp, 'r') as f:
                 content = f.read()
-            if old_path in content:
-                updated = content.replace(old_path, new_path)
+            modified = False
+            for variant in variants:
+                new_variant = variant.replace(old_rel, new_rel, 1)
+                if variant in content:
+                    content = content.replace(variant, new_variant)
+                    modified = True
+            if modified:
                 with open(fp, 'w') as f:
-                    f.write(updated)
+                    f.write(content)
                 count += 1
                 rel = os.path.relpath(fp, SITE_DIR)
                 print(f"  Updated {rel}")
@@ -76,10 +93,9 @@ def main():
         old_path = asset_paths[0]
         new_path = rename_asset(old_path)
         if new_path:
-            # Update references from old relative path to new one
-            old_ref = '/' + old_path   # e.g. /assets/theme.css
-            new_ref = '/' + new_path   # e.g. /assets/theme.abc123.css
-            n = update_html_references(old_ref, new_ref)
+            # Update HTML references — the function handles both
+            # relative (assets/theme.css) and absolute (/assets/theme.css)
+            n = update_html_references(old_path, new_path)
             print(f"  → Updated {n} HTML files")
 
     print("Done.")
