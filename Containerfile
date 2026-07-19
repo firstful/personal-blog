@@ -14,7 +14,7 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN SITE_URL=$SITE_URL npm run build:preview
+RUN SITE_URL=$SITE_URL npm run build:preview && python3 scripts/hash-assets.py
 
 FROM docker.io/library/python:3.11-slim
 WORKDIR /app

@@ -44,10 +44,17 @@ function renderThreadList(articles: Article[], readMap: ReturnType<typeof getRea
   const container = document.getElementById('forum-thread-list');
   if (!container) return;
 
+  const todayStr = new Date().toISOString().slice(0, 10);
+
+  const todaysPosts: Article[] = [];
   const unread: Article[] = [];
   const read: Article[] = [];
 
   for (const a of articles) {
+    if (a.slug.startsWith('daily/') && a.date.startsWith(todayStr)) {
+      todaysPosts.push(a);
+      continue;
+    }
     const path = `/blog/${a.slug}`;
     if (readMap[path]) {
       read.push(a);
@@ -57,6 +64,14 @@ function renderThreadList(articles: Article[], readMap: ReturnType<typeof getRea
   }
 
   let html = '';
+
+  if (todaysPosts.length > 0) {
+    html += `<div class="thread-section-header today-header"><span>📰 TODAY'S DAILY POSTS (${todaysPosts.length})</span></div>`;
+    for (const a of todaysPosts) {
+      const isUnread = !readMap[`/blog/${a.slug}`];
+      html += renderThread(a, isUnread);
+    }
+  }
 
   if (unread.length > 0) {
     html += `<div class="thread-section-header"><span>UNREAD MESSAGES (${unread.length})</span></div>`;

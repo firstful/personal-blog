@@ -19,6 +19,10 @@
   <meta name="twitter:image" content="{{ page.meta.image }}" />
   {% endif %}
 
+  {% if page.meta.date and page.url.startswith("blog/") %}
+  <meta name="article:published_time" content="{{ page.meta.date }}" />
+  {% endif %}
+
   <link rel="canonical" href="{{ config.site_url }}{{ page.url }}" />
   {% endif %}
 

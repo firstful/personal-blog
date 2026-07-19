@@ -29,11 +29,15 @@ function pickSockPuppets(title: string): string[] {
   return names;
 }
 
-function generateTimestamp(index: number): string {
-  // Generate sequential timestamps within a session
-  const base = new Date();
-  base.setHours(20 + Math.floor(index / 20), (index * 3) % 60);
-  return base.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+function generateTimestamp(index: number, baseDate: Date, totalMessages: number): string {
+  const windowMs = 3 * 60 * 60 * 1000;
+  const jitter = (index * 997) % 60000;
+  const offset = Math.round((index / Math.max(totalMessages - 1, 1)) * windowMs) + jitter;
+  const ts = new Date(baseDate.getTime() + offset);
+  return ts.toLocaleString('en-US', {
+    month: 'short', day: 'numeric', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', hour12: false,
+  });
 }
 
 export function initArticleChat(): void {
@@ -79,6 +83,27 @@ export function initArticleChat(): void {
   let msgIndex = 0;
   const children = Array.from(content.children);
 
+  const publishedMeta = document.querySelector('meta[name="article:published_time"]');
+  const publishDate = publishedMeta ? new Date(publishedMeta.getAttribute('content')!) : new Date();
+
+  // First pass: count total messages to distribute timestamps evenly
+  let totalMessages = 0;
+  for (const el of children) {
+    if (el.tagName === 'H1') continue;
+    if (el.classList.contains('bbs-article-header')) continue;
+    if (el.tagName === 'STYLE') continue;
+    if (el.tagName === 'BLOCKQUOTE') { totalMessages++; continue; }
+    if (el.classList.contains('bbs-article-nav')) continue;
+    if (el.classList.contains('md-tags')) continue;
+    if (el.tagName === 'HR') continue;
+    if (el.tagName === 'P' || el.tagName === 'UL' || el.tagName === 'OL' ||
+        el.tagName === 'PRE' || el.tagName === 'TABLE' ||
+        el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4' ||
+        el.tagName === 'DIV' || el.tagName === 'DL') {
+      totalMessages++;
+    }
+  }
+
   for (let i = 0; i < children.length; i++) {
     const el = children[i];
 
@@ -90,7 +115,7 @@ export function initArticleChat(): void {
     // Process blockquotes as sock-puppet messages
     if (el.tagName === 'BLOCKQUOTE') {
       const currentSock = socks[msgIndex % socks.length];
-      const msg = createChatMessage(currentSock, el.innerHTML, msgIndex, 'sock');
+      const msg = createChatMessage(currentSock, el.innerHTML, msgIndex, 'sock', false, publishDate, totalMessages);
       chat.appendChild(msg);
       msgIndex++;
       continue;
@@ -117,14 +142,14 @@ export function initArticleChat(): void {
 
       // For headings inside chat, make them transitional messages
       if (el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4') {
-        const msg = createChatMessage('ffiltus', el.outerHTML, msgIndex, 'ffiltus', true);
+        const msg = createChatMessage('ffiltus', el.outerHTML, msgIndex, 'ffiltus', true, publishDate, totalMessages);
         chat.appendChild(msg);
         msgIndex++;
         continue;
       }
 
       // Regular content - create ffiltus message
-      const msg = createChatMessage('ffiltus', el.outerHTML, msgIndex, 'ffiltus');
+      const msg = createChatMessage('ffiltus', el.outerHTML, msgIndex, 'ffiltus', false, publishDate, totalMessages);
       chat.appendChild(msg);
       msgIndex++;
     }
@@ -152,7 +177,9 @@ function createChatMessage(
   innerHtml: string,
   index: number,
   side: 'ffiltus' | 'sock',
-  isHeading: boolean = false
+  isHeading: boolean = false,
+  publishDate?: Date,
+  totalMessages?: number
 ): HTMLDivElement {
   const container = document.createElement('div');
   container.className = `bbs-chat-msg from-${side}`;
@@ -181,7 +208,7 @@ function createChatMessage(
 
   const timeEl = document.createElement('div');
   timeEl.className = 'bbs-chat-time';
-  timeEl.textContent = generateTimestamp(index);
+  timeEl.textContent = generateTimestamp(index, publishDate ?? new Date(), totalMessages ?? 1);
 
   bubble.appendChild(nameEl);
   bubble.appendChild(textEl);

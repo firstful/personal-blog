@@ -1365,6 +1365,11 @@ a:hover {
 .thread-section-header:first-child {
   margin-top: 0;
 }
+.thread-section-header.today-header {
+  color: #daa520;
+  border-bottom-color: #daa520;
+  font-weight: 700;
+}
 
 .forum-thread {
   display: flex;
