@@ -3,6 +3,21 @@ function initHeroGradient(): void {
   if (hero) hero.classList.add('home-hero');
 }
 
+function initElephantGlitch(): void {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const banner = document.querySelector<HTMLElement>('.ascii-banner');
+  if (!banner || banner.querySelector('.glitch-layer')) return;
+
+  const art = banner.textContent ?? '';
+  for (const cls of ['layer-a', 'layer-b']) {
+    const layer = document.createElement('span');
+    layer.className = `glitch-layer ${cls}`;
+    layer.setAttribute('aria-hidden', 'true');
+    layer.textContent = art;
+    banner.appendChild(layer);
+  }
+}
+
 function initAccentBar(introPara: HTMLParagraphElement): void {
   const bar = document.createElement('div');
   bar.className = 'hero-accent-bar';
@@ -67,6 +82,7 @@ export function initHomePage(): void {
   if (!isHome) return;
 
   initHeroGradient();
+  initElephantGlitch();
 
   const introPara = document.querySelector<HTMLParagraphElement>('.md-content__inner > p');
   if (!introPara) return;

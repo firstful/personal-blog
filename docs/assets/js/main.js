@@ -76,19 +76,6 @@
     observer.observe(html, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
   }
 
-  // src/ts/ripple.ts
-  function initClickRipple() {
-    document.addEventListener("click", (e) => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-      const ripple = document.createElement("div");
-      ripple.className = "click-ripple";
-      ripple.style.left = `${e.clientX - 60}px`;
-      ripple.style.top = `${e.clientY - 60}px`;
-      document.body.appendChild(ripple);
-      ripple.addEventListener("animationend", () => ripple.remove());
-    });
-  }
-
   // src/ts/progress.ts
   function initReadProgress() {
     const bar = document.createElement("div");
@@ -109,6 +96,19 @@
   function initHeroGradient() {
     const hero = document.querySelector(".md-content__inner");
     if (hero) hero.classList.add("home-hero");
+  }
+  function initElephantGlitch() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const banner = document.querySelector(".ascii-banner");
+    if (!banner || banner.querySelector(".glitch-layer")) return;
+    const art = banner.textContent ?? "";
+    for (const cls of ["layer-a", "layer-b"]) {
+      const layer = document.createElement("span");
+      layer.className = `glitch-layer ${cls}`;
+      layer.setAttribute("aria-hidden", "true");
+      layer.textContent = art;
+      banner.appendChild(layer);
+    }
   }
   function initAccentBar(introPara) {
     const bar = document.createElement("div");
@@ -172,6 +172,7 @@
     const isHome = window.location.pathname === "/" || window.location.pathname === "";
     if (!isHome) return;
     initHeroGradient();
+    initElephantGlitch();
     const introPara = document.querySelector(".md-content__inner > p");
     if (!introPara) return;
     initAccentBar(introPara);
@@ -293,16 +294,16 @@
     const text = heroTagline.textContent || "";
     heroTagline.textContent = "";
     heroTagline.style.display = "inline";
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    cursor.style.display = "none";
-    heroTagline.after(cursor);
+    const cursor2 = document.createElement("span");
+    cursor2.className = "cursor";
+    cursor2.style.display = "none";
+    heroTagline.after(cursor2);
     let index = 0;
     const charsPerTick = 1;
     const baseDelay = 35;
     function typeTick() {
       if (index >= text.length) {
-        cursor.style.display = "inline-block";
+        cursor2.style.display = "inline-block";
         return;
       }
       const next = text.slice(index, index + charsPerTick);
@@ -314,7 +315,7 @@
     }
     const startTyping = () => {
       setTimeout(() => {
-        cursor.style.display = "inline-block";
+        cursor2.style.display = "inline-block";
         typeTick();
       }, 400);
     };
@@ -357,10 +358,19 @@
     }
     return names;
   }
-  function generateTimestamp(index) {
-    const base = /* @__PURE__ */ new Date();
-    base.setHours(20 + Math.floor(index / 20), index * 3 % 60);
-    return base.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false });
+  function generateTimestamp(index, baseDate, totalMessages) {
+    const windowMs = 3 * 60 * 60 * 1e3;
+    const jitter = index * 997 % 6e4;
+    const offset = Math.round(index / Math.max(totalMessages - 1, 1) * windowMs) + jitter;
+    const ts = new Date(baseDate.getTime() + offset);
+    return ts.toLocaleString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false
+    });
   }
   function initArticleChat() {
     const isArticle = window.location.pathname.match(/\/blog\/(opinions|tutorials)\/.+/) || window.location.pathname.match(/\/opinions\/(?!$)/) || window.location.pathname.match(/\/tutorials\/(?!$)/);
@@ -391,6 +401,24 @@
     chat.appendChild(header);
     let msgIndex = 0;
     const children = Array.from(content.children);
+    const publishedMeta = document.querySelector('meta[name="article:published_time"]');
+    const publishDate = publishedMeta ? new Date(publishedMeta.getAttribute("content")) : /* @__PURE__ */ new Date();
+    let totalMessages = 0;
+    for (const el of children) {
+      if (el.tagName === "H1") continue;
+      if (el.classList.contains("bbs-article-header")) continue;
+      if (el.tagName === "STYLE") continue;
+      if (el.tagName === "BLOCKQUOTE") {
+        totalMessages++;
+        continue;
+      }
+      if (el.classList.contains("bbs-article-nav")) continue;
+      if (el.classList.contains("md-tags")) continue;
+      if (el.tagName === "HR") continue;
+      if (el.tagName === "P" || el.tagName === "UL" || el.tagName === "OL" || el.tagName === "PRE" || el.tagName === "TABLE" || el.tagName === "H2" || el.tagName === "H3" || el.tagName === "H4" || el.tagName === "DIV" || el.tagName === "DL") {
+        totalMessages++;
+      }
+    }
     for (let i = 0; i < children.length; i++) {
       const el = children[i];
       if (el.tagName === "H1") continue;
@@ -398,7 +426,7 @@
       if (el.tagName === "STYLE") continue;
       if (el.tagName === "BLOCKQUOTE") {
         const currentSock = socks[msgIndex % socks.length];
-        const msg = createChatMessage(currentSock, el.innerHTML, msgIndex, "sock");
+        const msg = createChatMessage(currentSock, el.innerHTML, msgIndex, "sock", false, publishDate, totalMessages);
         chat.appendChild(msg);
         msgIndex++;
         continue;
@@ -413,12 +441,12 @@
           continue;
         }
         if (el.tagName === "H2" || el.tagName === "H3" || el.tagName === "H4") {
-          const msg2 = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus", true);
+          const msg2 = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus", true, publishDate, totalMessages);
           chat.appendChild(msg2);
           msgIndex++;
           continue;
         }
-        const msg = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus");
+        const msg = createChatMessage("ffiltus", el.outerHTML, msgIndex, "ffiltus", false, publishDate, totalMessages);
         chat.appendChild(msg);
         msgIndex++;
       }
@@ -434,7 +462,7 @@
     content.innerHTML = "";
     content.appendChild(chat);
   }
-  function createChatMessage(username, innerHtml, index, side, isHeading = false) {
+  function createChatMessage(username, innerHtml, index, side, isHeading = false, publishDate, totalMessages) {
     const container = document.createElement("div");
     container.className = `bbs-chat-msg from-${side}`;
     const avatar = document.createElement("div");
@@ -456,7 +484,7 @@
     }
     const timeEl = document.createElement("div");
     timeEl.className = "bbs-chat-time";
-    timeEl.textContent = generateTimestamp(index);
+    timeEl.textContent = generateTimestamp(index, publishDate ?? /* @__PURE__ */ new Date(), totalMessages ?? 1);
     bubble.appendChild(nameEl);
     bubble.appendChild(textEl);
     bubble.appendChild(timeEl);
@@ -637,173 +665,6 @@
     });
   }
 
-  // src/ts/console-tray.ts
-  var TYPING_SPEED = 30;
-  var outputEl = null;
-  var inputEl = null;
-  var trayEl = null;
-  var cmdHistory = [];
-  var historyIdx = -1;
-  function pathToSlug(href) {
-    try {
-      const url = new URL(href, window.location.origin);
-      let path = url.pathname.replace(/\/$/, "");
-      if (!path || path === "") return "home";
-      const parts = path.split("/").filter(Boolean);
-      return parts.join("/");
-    } catch {
-      return "?";
-    }
-  }
-  function writeln(text, cls = "") {
-    if (!outputEl) return;
-    const line = document.createElement("div");
-    line.className = `bbs-console-line${cls ? " " + cls : ""}`;
-    line.textContent = text;
-    outputEl.appendChild(line);
-    outputEl.scrollTop = outputEl.scrollHeight;
-  }
-  function typeToConsole(text, onDone) {
-    if (!outputEl) {
-      onDone();
-      return;
-    }
-    const line = document.createElement("div");
-    line.className = "bbs-console-line bbs-console-cmd";
-    outputEl.appendChild(line);
-    let i = 0;
-    function tick() {
-      if (i >= text.length) {
-        onDone();
-        return;
-      }
-      line.textContent += text[i];
-      i++;
-      outputEl.scrollTop = outputEl.scrollHeight;
-      setTimeout(tick, TYPING_SPEED + Math.random() * 15);
-    }
-    tick();
-  }
-  function executeCommand(cmd) {
-    const trimmed = cmd.trim();
-    if (!trimmed) return;
-    writeln(`ffilt.us:~$ ${trimmed}`, "bbs-console-input-line");
-    const parts = trimmed.split(/\s+/);
-    const verb = parts[0].toLowerCase();
-    const args = parts.slice(1);
-    switch (verb) {
-      case "/help":
-        writeln([
-          "Available commands:",
-          "  /help       \u2014 Show this help",
-          '  nav <path>  \u2014 Navigate to a page (e.g. "nav blog/opinions")',
-          "  clear       \u2014 Clear the console",
-          "  echo <text> \u2014 Echo text back"
-        ].join("\n"), "bbs-console-response");
-        break;
-      case "clear":
-      case "cls":
-        if (outputEl) outputEl.innerHTML = "";
-        break;
-      case "echo":
-        writeln(args.join(" "), "bbs-console-response");
-        break;
-      case "nav":
-        if (args.length === 0) {
-          writeln('Usage: nav <path> (e.g. "nav blog/opinions")', "bbs-console-error");
-          break;
-        }
-        const target = args[0];
-        writeln(`Navigating to /${target}...`, "bbs-console-response");
-        setTimeout(() => {
-          window.location.href = `/${target}`;
-        }, 300);
-        break;
-      default:
-        writeln(`Unknown command: ${verb}. Type /help for available commands.`, "bbs-console-error");
-        break;
-    }
-  }
-  function handleLinkClick(e) {
-    if (!inputEl || document.activeElement !== inputEl) return;
-    const link = e.target.closest("a");
-    if (!link) return;
-    const href = link.getAttribute("href");
-    if (!href) return;
-    const url = new URL(href, window.location.origin);
-    if (url.origin !== window.location.origin) return;
-    if (url.pathname === window.location.pathname && url.hash) return;
-    const skipPatterns = [/\.(xml|rss|pdf|zip|png|jpg|svg|ico)$/i, /\/feed_/];
-    if (skipPatterns.some((p) => p.test(href))) return;
-    if (href.includes("feed_rss")) return;
-    e.preventDefault();
-    const slug = pathToSlug(href);
-    typeToConsole(`nav ${slug}`, () => {
-      setTimeout(() => {
-        window.location.href = href;
-      }, 200);
-    });
-  }
-  function onInputKeydown(e) {
-    if (!inputEl) return;
-    if (e.key === "Enter") {
-      const cmd = inputEl.value;
-      inputEl.value = "";
-      historyIdx = -1;
-      if (cmd.trim()) {
-        cmdHistory.push(cmd.trim());
-        executeCommand(cmd);
-      }
-      return;
-    }
-    if (e.key === "ArrowUp") {
-      e.preventDefault();
-      if (cmdHistory.length === 0) return;
-      historyIdx = Math.min(historyIdx + 1, cmdHistory.length - 1);
-      inputEl.value = cmdHistory[cmdHistory.length - 1 - historyIdx];
-      return;
-    }
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      if (historyIdx <= 0) {
-        historyIdx = -1;
-        inputEl.value = "";
-        return;
-      }
-      historyIdx--;
-      inputEl.value = cmdHistory[cmdHistory.length - 1 - historyIdx];
-      return;
-    }
-  }
-  function createConsoleTray() {
-    trayEl = document.createElement("div");
-    trayEl.className = "bbs-console-tray";
-    trayEl.innerHTML = `
-    <div class="bbs-console-output" tabindex="-1"></div>
-    <div class="bbs-console-input-line">
-      <span class="bbs-console-prompt-text">ffilt.us:~$&nbsp;</span>
-      <input type="text" class="bbs-console-input" spellcheck="false" autocomplete="off" />
-    </div>
-  `;
-    document.body.appendChild(trayEl);
-    outputEl = trayEl.querySelector(".bbs-console-output");
-    inputEl = trayEl.querySelector(".bbs-console-input");
-    trayEl.addEventListener("click", () => inputEl?.focus());
-    inputEl.addEventListener("keydown", onInputKeydown);
-    writeln("SUTLIFF BBS v1.0 \u2014 Type /help for commands.", "bbs-console-welcome");
-  }
-  function initConsoleTray() {
-    createConsoleTray();
-    const attach = () => {
-      document.addEventListener("click", handleLinkClick);
-    };
-    if (document.querySelector("#boot-screen")) {
-      document.addEventListener("boot:complete", attach, { once: true });
-    } else {
-      attach();
-    }
-  }
-
   // src/ts/forum-threads.ts
   var ARTICLE_JSON = "/assets/articles.json";
   function personaBadge(handle) {
@@ -821,9 +682,15 @@
   function renderThreadList(articles, readMap) {
     const container = document.getElementById("forum-thread-list");
     if (!container) return;
+    const todayStr = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+    const todaysPosts = [];
     const unread = [];
     const read = [];
     for (const a of articles) {
+      if (a.slug.startsWith("daily/") && a.date.startsWith(todayStr)) {
+        todaysPosts.push(a);
+        continue;
+      }
       const path = `/blog/${a.slug}`;
       if (readMap[path]) {
         read.push(a);
@@ -832,6 +699,13 @@
       }
     }
     let html = "";
+    if (todaysPosts.length > 0) {
+      html += `<div class="thread-section-header today-header"><span>\u{1F4F0} TODAY'S DAILY POSTS (${todaysPosts.length})</span></div>`;
+      for (const a of todaysPosts) {
+        const isUnread = !readMap[`/blog/${a.slug}`];
+        html += renderThread(a, isUnread);
+      }
+    }
     if (unread.length > 0) {
       html += `<div class="thread-section-header"><span>UNREAD MESSAGES (${unread.length})</span></div>`;
       for (const a of unread) {
@@ -909,6 +783,252 @@
     });
   }
 
+  // src/ts/candidate-search.ts
+  var VARIANT_LABELS = {
+    "backend-developer": "Backend Developer",
+    "fullstack-developer": "Full-Stack Developer",
+    "agentic-engineer": "Agentic Engineer",
+    "forward-deployed-swe": "Forward-Deployed SWE",
+    base: "Software Engineer"
+  };
+  var VARIANT_MATCH = {
+    "backend-developer": "Backend depth: C#, SQL, .NET, event-driven systems. 15x latency wins on record.",
+    "fullstack-developer": "Ships end-to-end: Blazor + .NET + Node. Owns the feature from schema to CSS.",
+    "agentic-engineer": "Automation & LLM tooling. Kills toil, rebuilds crusty workflows into pipelines.",
+    "forward-deployed-swe": "Client-facing and fast. Drops into your team and delivers without hand-holding.",
+    base: "Full-stack generalist, comfortable across the stack and client-facing delivery."
+  };
+  var STEPS = {
+    start: {
+      lines: [
+        "Initialize candidate search? This will scan the local talent pool",
+        "for engineers matching your open role."
+      ],
+      options: [
+        { label: "Yes \u2014 run the search", next: "who" },
+        { label: "No \u2014 just browsing", next: "browsing" }
+      ]
+    },
+    browsing: {
+      lines: [
+        "No problem. For the record, the pool currently contains exactly",
+        "one (1) highly available candidate. Run the search anyway?"
+      ],
+      options: [
+        { label: "Yes, go on then", next: "who" },
+        { label: "No, I really am just looking", next: "who" }
+      ]
+    },
+    who: {
+      lines: ["Are you hiring on behalf of a company (recruiter)?"],
+      options: [
+        { label: "Yes \u2014 I recruit", next: "need", effect: "recruiter" },
+        { label: "No \u2014 hiring manager / tech lead", next: "need" }
+      ]
+    },
+    need: {
+      lines: ["Does your team currently need another engineer?"],
+      options: [
+        { label: "Yes", next: "role" },
+        { label: "No", next: "convince" }
+      ]
+    },
+    convince: {
+      lines: [
+        "Understood. But would you *want* one who ships finished features",
+        "you can hand off and forget about?"
+      ],
+      options: [
+        { label: "Yes, fair point", next: "role" },
+        { label: "No", next: "convince2" }
+      ]
+    },
+    convince2: {
+      lines: ["What if the search is already done and the match is a strong one?"],
+      options: [
+        { label: "Okay, you have my attention", next: "role" },
+        { label: "Fine, convince me", next: "role" }
+      ]
+    },
+    role: {
+      lines: ["What is your team missing? (select the closest match)"],
+      options: [
+        { label: "Backend that stops falling over", next: "match", effect: { variant: "backend-developer" } },
+        { label: "A whole feature built end-to-end", next: "match", effect: { variant: "fullstack-developer" } },
+        { label: "Automation / better dev workflows", next: "match", effect: { variant: "agentic-engineer" } },
+        { label: "Someone to embed & ship with the team", next: "match", effect: { variant: "forward-deployed-swe" } }
+      ]
+    }
+  };
+  var state = { isRecruiter: false, variant: "base", path: [] };
+  var screen;
+  var cursor = 0;
+  var currentOptions = [];
+  var busy = false;
+  var sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+  function appendLine(text = "", cls = "") {
+    const el = document.createElement("div");
+    el.className = `cs-line${cls ? " " + cls : ""}`;
+    el.textContent = text;
+    screen.appendChild(el);
+    screen.scrollTop = screen.scrollHeight;
+    return el;
+  }
+  async function typeLine(text, cls = "", speed = 12) {
+    const el = appendLine("", cls);
+    for (let i = 0; i < text.length; i++) {
+      el.textContent += text[i];
+      screen.scrollTop = screen.scrollHeight;
+      await sleep(speed);
+    }
+  }
+  function renderOptions() {
+    const old = screen.querySelector(".cs-options");
+    if (old) old.remove();
+    const wrap = document.createElement("div");
+    wrap.className = "cs-options";
+    wrap.setAttribute("role", "listbox");
+    wrap.setAttribute("tabindex", "0");
+    wrap.setAttribute("aria-label", "Answer options \u2014 use arrow keys and Enter, or click");
+    currentOptions.forEach((opt, i) => {
+      const row = document.createElement("div");
+      row.className = "cs-option";
+      row.setAttribute("role", "option");
+      row.dataset.idx = String(i);
+      row.innerHTML = `<span class="cs-caret">${i === cursor ? ">" : "\xA0"}</span><span class="cs-opt-label">${opt.label}</span>`;
+      row.addEventListener("mouseenter", () => setCursor(i));
+      row.addEventListener("click", () => choose(i));
+      wrap.appendChild(row);
+    });
+    const hint = document.createElement("div");
+    hint.className = "cs-hint";
+    hint.textContent = "[\u2191/\u2193] move   [enter] select   or click";
+    wrap.appendChild(hint);
+    screen.appendChild(wrap);
+    screen.scrollTop = screen.scrollHeight;
+    wrap.focus();
+  }
+  function setCursor(i) {
+    cursor = i;
+    const rows = screen.querySelectorAll(".cs-option");
+    rows.forEach((row, idx) => {
+      const caret = row.querySelector(".cs-caret");
+      if (caret) caret.textContent = idx === cursor ? ">" : "\xA0";
+      row.classList.toggle("active", idx === cursor);
+    });
+  }
+  async function choose(i) {
+    if (busy) return;
+    const opt = currentOptions[i];
+    if (!opt) return;
+    busy = true;
+    const opts = screen.querySelector(".cs-options");
+    if (opts) opts.remove();
+    await typeLine(`recruit@ffilt.us:~$ ${opt.label}`, "cs-echo", 6);
+    if (opt.effect === "recruiter") state.isRecruiter = true;
+    else if (opt.effect && typeof opt.effect === "object") state.variant = opt.effect.variant;
+    state.path.push(opt.label);
+    busy = false;
+    if (opt.next === "match") {
+      await runMatch();
+    } else {
+      await gotoStep(opt.next);
+    }
+  }
+  function onKey(e) {
+    if (!currentOptions.length || busy) return;
+    if (e.key === "ArrowDown" || e.key === "j") {
+      e.preventDefault();
+      setCursor((cursor + 1) % currentOptions.length);
+    } else if (e.key === "ArrowUp" || e.key === "k") {
+      e.preventDefault();
+      setCursor((cursor - 1 + currentOptions.length) % currentOptions.length);
+    } else if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      void choose(cursor);
+    }
+  }
+  async function gotoStep(id) {
+    const step = STEPS[id];
+    if (!step) return;
+    busy = true;
+    appendLine();
+    for (const line of step.lines) {
+      await typeLine(line, "cs-prompt");
+    }
+    currentOptions = step.options;
+    cursor = 0;
+    busy = false;
+    renderOptions();
+  }
+  async function runMatch() {
+    busy = true;
+    currentOptions = [];
+    const v = state.variant;
+    const label = VARIANT_LABELS[v] || "Software Engineer";
+    appendLine();
+    await typeLine(`> scanning talent pool for role: ${label}...`, "cs-sys", 8);
+    const bar = appendLine("  [                    ] 0%", "cs-sys");
+    for (let p = 0; p <= 20; p++) {
+      const filled = "=".repeat(p);
+      const pct = Math.round(p / 20 * 100);
+      bar.textContent = `  [${(filled + " ".repeat(20)).slice(0, 20)}] ${pct}%`;
+      await sleep(45);
+    }
+    await sleep(200);
+    await typeLine("> 1 candidate matched. compiling dossier...", "cs-sys", 8);
+    await sleep(300);
+    const card = document.createElement("div");
+    card.className = "cs-match";
+    card.style.setProperty("--persona-color", "var(--term-fg-bright)");
+    const anonBtn = state.isRecruiter ? `<a class="cs-btn ghost" href="/assets/resume/${v}-anon.pdf">[ download anonymized (for submission) ]</a>` : "";
+    const badge = state.isRecruiter ? '<span class="cs-badge">RECRUITER</span>' : "";
+    card.innerHTML = `
+    <div class="cs-match-head">*** MATCH FOUND *** ${badge}</div>
+    <pre class="cs-match-id">
+ name    : Reed Sutliff
+ role    : ${label}
+ status  : AVAILABLE
+ location: Columbus, OH
+ match   : 98%</pre>
+    <div class="cs-match-note">${VARIANT_MATCH[v] || VARIANT_MATCH.base}</div>
+    <div class="cs-actions">
+      <a class="cs-btn primary" href="/assets/resume/${v}.pdf">[ download resume ]</a>
+      ${anonBtn}
+      <a class="cs-btn" href="mailto:sutliff.reed@gmail.com">[ email me ]</a>
+      <button class="cs-btn ghost" type="button" id="cs-restart">[ run again ]</button>
+    </div>
+    <div class="cs-contact">
+      linkedin.com/in/reed-sutliff-21213b114 &nbsp;\xB7&nbsp; github.com/reedsutliff &nbsp;\xB7&nbsp; ffilt.us
+    </div>`;
+    screen.appendChild(card);
+    screen.scrollTop = screen.scrollHeight;
+    const restart = card.querySelector("#cs-restart");
+    restart?.addEventListener("click", () => void boot(true));
+    busy = false;
+  }
+  async function boot(restart = false) {
+    screen.innerHTML = "";
+    state.isRecruiter = false;
+    state.variant = "base";
+    state.path = [];
+    cursor = 0;
+    currentOptions = [];
+    await typeLine("SUTLIFF TALENT DB v1.0 \u2014 candidate-search", "cs-sys", 6);
+    await typeLine(restart ? "session reset. ready." : "connection established. ready.", "cs-sys", 6);
+    await gotoStep("start");
+  }
+  function initCandidateSearch() {
+    const el = document.getElementById("cs-screen");
+    if (!el) return;
+    screen = el;
+    document.addEventListener("keydown", (e) => {
+      if (!currentOptions.length) return;
+      if (screen.contains(document.activeElement)) onKey(e);
+    });
+    void boot();
+  }
+
   // src/ts/main.ts
   initBootSequence();
   initThemeToggle();
@@ -916,15 +1036,14 @@
     initTypingAnimation();
     initArticleChat();
     initGridNav();
-    initConsoleTray();
     initForumThreads();
     markArticleRead();
     applyNewBadges();
     initThemeTransitions();
     initConfettiOnToggle();
-    initClickRipple();
     initReadProgress();
     initHomePage();
     initConsoleEaster();
+    initCandidateSearch();
   }, { once: true });
 })();

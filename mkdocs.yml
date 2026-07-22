@@ -1,7 +1,11 @@
 site_name: Sutliff
 site_url: https://blog.ffilt.us/
+watch:
+  - theme
+  - docs/assets
 hooks:
   - hooks/scheduled_posts.py
+  - hooks/personas.py
 site_description: >-
   Personal blog of Reed Sutliff — a developer passionate about open source,
   API design, automation, and software engineering.
@@ -56,8 +60,7 @@ theme:
       typescript : simple/typescript
     repo: fontawesome/brands/git-alt 
   favicon: assets/logo.png
-  font:
-    text: JetBrains Mono
+  font: false
   features:
     - content.code.copy
     - navigation.top

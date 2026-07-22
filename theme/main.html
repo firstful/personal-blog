@@ -2,6 +2,9 @@
 
 {% block extrahead %}
   {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=JetBrains+Mono:wght@400;700&display=swap" />
   {% if page %}
   <meta property="og:site_name" content="{{ config.site_name }}" />
   <meta property="og:url" content="{{ config.site_url }}{{ page.url }}" />

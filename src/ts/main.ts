@@ -1,6 +1,5 @@
 import { initThemeTransitions, initThemeToggle } from './theme';
 import { initConfettiOnToggle } from './confetti';
-import { initClickRipple } from './ripple';
 import { initReadProgress } from './progress';
 import { initHomePage } from './hero';
 import { initConsoleEaster } from './console-easter';
@@ -9,8 +8,9 @@ import { initTypingAnimation } from './typing';
 import { initArticleChat } from './article';
 import { initGridNav } from './grid-nav';
 import { markArticleRead, applyNewBadges } from './read-tracker';
-import { initConsoleTray } from './console-tray';
+
 import { initForumThreads } from './forum-threads';
+import { initCandidateSearch } from './candidate-search';
 
 // Initialize BBS boot sequence on every page
 initBootSequence();
@@ -21,7 +21,7 @@ document.addEventListener('boot:complete', () => {
   initTypingAnimation();
   initArticleChat();
   initGridNav();
-  initConsoleTray();
+
   initForumThreads();
 
   // Read tracking
@@ -30,8 +30,8 @@ document.addEventListener('boot:complete', () => {
 
   initThemeTransitions();
   initConfettiOnToggle();
-  initClickRipple();
   initReadProgress();
   initHomePage();
   initConsoleEaster();
+  initCandidateSearch();
 }, { once: true });
