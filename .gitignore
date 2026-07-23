@@ -4,6 +4,9 @@ site
 *.pyc
 node_modules/
 
+# Preview build artifacts
+.preview-logs/
+
 # Resume build artifacts
 resume/build/
 resume/output/
