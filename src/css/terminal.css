@@ -1757,7 +1757,7 @@ a:hover {
   text-shadow: 0 0 6px var(--term-glow);
 }
 .cs-hint {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 11px;
   margin-top: 8px;
 }
@@ -1784,7 +1784,7 @@ a:hover {
   letter-spacing: 1px;
 }
 .cs-match-id {
-  color: var(--term-fg);
+  color: var(--term-fg) !important;
   font-family: var(--term-font-code);
   font-size: 13px;
   margin: 0 0 8px;
