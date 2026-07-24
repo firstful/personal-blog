@@ -2,7 +2,7 @@
   "name": "sutliff-blog",
   "private": true,
   "scripts": {
-    "build:ts": "esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js",
+    "build:ts": "python3 scripts/validate-ts-modules.py && esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js",
     "build:css": "postcss src/css/main.css -o docs/assets/theme.css --env production",
     "build:articles": "python3 scripts/generate-articles-json.py",
     "build:site": "sed -i \"s|^site_url:.*|site_url: ${SITE_URL:-https://blog.ffilt.us/}|\" mkdocs.yml && mkdocs build",

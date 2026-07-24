@@ -1016,7 +1016,7 @@
     currentOptions = [];
     await typeLine("SUTLIFF TALENT DB v1.0 \u2014 candidate-search", "cs-sys", 6);
     await typeLine(restart ? "session reset. ready." : "connection established. ready.", "cs-sys", 6);
-    await gotoStep("start");
+    await gotoStep("who");
   }
   function initCandidateSearch() {
     const el = document.getElementById("cs-screen");

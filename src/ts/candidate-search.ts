@@ -294,7 +294,7 @@ async function boot(restart = false): Promise<void> {
 
   await typeLine('SUTLIFF TALENT DB v1.0 — candidate-search', 'cs-sys', 6);
   await typeLine(restart ? 'session reset. ready.' : 'connection established. ready.', 'cs-sys', 6);
-  await gotoStep('start');
+  await gotoStep('who');
 }
 
 export function initCandidateSearch(): void {

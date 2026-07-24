@@ -12,6 +12,8 @@ import { markArticleRead, applyNewBadges } from './read-tracker';
 import { initForumThreads } from './forum-threads';
 import { initCandidateSearch } from './candidate-search';
 
+// skip: console-tray.ts — decoupled until UX is refined (ct had task commands removed)
+
 // Initialize BBS boot sequence on every page
 initBootSequence();
 initThemeToggle();

