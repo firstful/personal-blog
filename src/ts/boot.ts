@@ -49,7 +49,9 @@ const BOOT_LINES: Array<{ text: string; cls: string; delay: number }> = [
 export function initBootSequence(): void {
   // Skip animation if already shown this session
   if (getCookie(BOOT_COOKIE)) {
-    document.dispatchEvent(new CustomEvent('boot:complete'));
+    // Defer dispatch so the boot:complete listener (registered after this
+    // function returns, in the same script block) has a chance to attach.
+    setTimeout(() => document.dispatchEvent(new CustomEvent('boot:complete')), 0);
     return;
   }
 

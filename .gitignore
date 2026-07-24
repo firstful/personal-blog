@@ -11,3 +11,7 @@ node_modules/
 resume/build/
 resume/output/
 
+# Test artifacts
+test-results/
+playwright-report/
+

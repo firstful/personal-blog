@@ -235,7 +235,7 @@
   ];
   function initBootSequence() {
     if (getCookie(BOOT_COOKIE)) {
-      document.dispatchEvent(new CustomEvent("boot:complete"));
+      setTimeout(() => document.dispatchEvent(new CustomEvent("boot:complete")), 0);
       return;
     }
     const existing = document.getElementById("boot-screen");

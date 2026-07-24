@@ -11,12 +11,19 @@
     "dev:ts": "esbuild src/ts/main.ts --bundle --outfile=docs/assets/js/main.js --watch",
     "dev:css": "postcss src/css/main.css -o docs/assets/theme.css --watch",
     "dev:site": "mkdocs serve",
-    "validate": "npm run build && test -f docs/index.html && echo Validation passed"
+    "validate": "npm run build && test -f docs/index.html && echo Validation passed",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:local": "npm run build && (python3 -m http.server 8000 --directory site &) && sleep 2 && BASE_URL=http://localhost:8000 playwright test; kill %1 2>/dev/null",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
     "esbuild": "^0.28.0",
+    "playwright": "^1.61.1",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0"
