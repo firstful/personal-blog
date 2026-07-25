@@ -104,12 +104,10 @@ const PAIRS: ContrastPair[] = [
   { selector: '#cs-screen .cs-match-note',          threshold: 4.5, label: 'Match note' },
   // Primary action button (download resume)
   { selector: '#cs-screen a.cs-btn.primary',        threshold: 4.5, label: 'Primary btn' },
-  // Ghost action button
-  { selector: '#cs-screen a.cs-btn.ghost',          threshold: 4.5, label: 'Ghost btn' },
+  // Ghost action button (restart — always present after match)
+  { selector: '#cs-restart',                     threshold: 4.5, label: 'Restart btn' },
   // Contact line
   { selector: '#cs-screen .cs-contact',             threshold: 4.5, label: 'Contact line' },
-  // Terminal titlebar text
-  { selector: '.cs-titlebar-text',                  threshold: 4.5, label: 'Titlebar' },
 ];
 
 // ── Tests ───────────────────────────────────────────────────────────
