@@ -122,7 +122,8 @@ test.describe('Colour contrast', () => {
       const isPostMatch =
         pair.selector.includes('cs-match') ||
         pair.selector.includes('cs-btn') ||
-        pair.selector.includes('cs-contact');
+        pair.selector.includes('cs-contact') ||
+        pair.selector.includes('cs-restart');
 
       const needsEcho = pair.selector.includes('cs-echo');
       const needsActive = pair.selector.includes('.active');
