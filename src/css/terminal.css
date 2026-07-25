@@ -353,11 +353,11 @@ a:hover {
 }
 .bbs-post-card .post-tag::before {
   content: '[';
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
 }
 .bbs-post-card .post-tag::after {
   content: ']';
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
 }
 
 .bbs-post-card .post-desc {
@@ -829,7 +829,7 @@ a:hover {
 
 .bbs-chat-msg.from-sock .bbs-chat-avatar {
   color: var(--term-fg-dim);
-  border-color: var(--term-fg-dark);
+  border-color: var(--term-fg-dim);
 }
 
 .bbs-chat-bubble {
@@ -870,7 +870,7 @@ a:hover {
 }
 
 .bbs-chat-msg.from-sock .bbs-chat-text {
-  border-color: var(--term-fg-dark);
+  border-color: var(--term-fg-dim);
   font-style: italic;
   color: var(--term-fg-dim);
 }
@@ -897,7 +897,7 @@ a:hover {
 /* Chat timestamp */
 .bbs-chat-time {
   font-size: 10px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   margin-top: 2px;
 }
 
@@ -915,7 +915,7 @@ a:hover {
   padding-top: 8px;
   margin-top: 20px;
   font-size: 11px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   text-align: center;
 }
 
@@ -1052,7 +1052,7 @@ a:hover {
   padding-left: 36px;
 }
 .bbs-search .md-search__input::placeholder {
-  color: var(--term-fg-dark) !important;
+  color: var(--term-fg-dim) !important;
 }
 .bbs-search .md-search__input + .md-search__icon,
 .bbs-search .md-search__icon {
@@ -1244,7 +1244,7 @@ a:hover {
 }
 
 .fp-stat {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 10px;
   line-height: 1.6;
 }
@@ -1271,7 +1271,7 @@ a:hover {
 
 .fp-timestamp {
   font-size: 11px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   padding: 6px 12px;
   border-bottom: 1px solid var(--term-border-dim);
   background: var(--term-bg-alt);
@@ -1321,7 +1321,7 @@ a:hover {
 .forum-signature {
   padding: 6px 16px 8px;
   font-size: 11px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   border-top: 1px dashed var(--term-border-dim);
   margin-top: auto;
   font-style: italic;
@@ -1340,7 +1340,7 @@ a:hover {
   position: relative;
 }
 .fp-reply-icon {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   margin-right: 4px;
   font-style: normal;
   font-weight: 700;
@@ -1385,7 +1385,7 @@ a:hover {
 .forum-joke::after {
   content: " — segfault_dad, probably";
   font-size: 11px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
 }
 
 /* ── Persona Profile Cards ─────────────────────────────────── */
@@ -1415,7 +1415,7 @@ a:hover {
 
 /* ── Persona Index Grid ────────────────────────────────────── */
 .persona-section-label {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1552,7 +1552,7 @@ a:hover {
 }
 
 .thread-section-header {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1604,7 +1604,7 @@ a:hover {
   color: var(--term-fg);
 }
 .thread-icon-read {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
 }
 
 .thread-body {
@@ -1631,7 +1631,7 @@ a:hover {
 
 .thread-meta {
   font-size: 11px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   margin-bottom: 3px;
 }
 
@@ -1658,11 +1658,11 @@ a:hover {
 
 .thread-tag {
   font-size: 10px;
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
 }
 
 .thread-empty {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 13px;
   padding: 16px 8px;
   font-style: italic;
@@ -1825,9 +1825,9 @@ a:hover {
   border-color: var(--term-fg);
   color: var(--term-fg-bright) !important;
 }
-.cs-btn.ghost { color: var(--term-fg-dark) !important; }
+.cs-btn.ghost { color: var(--term-fg-dim) !important; }
 .cs-contact {
-  color: var(--term-fg-dark);
+  color: var(--term-fg-dim);
   font-size: 11px;
 }
 
