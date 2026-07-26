@@ -23,11 +23,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
       - name: Install CUE
-        env:
-          GOBIN: /usr/local/bin
-        run: |
-          go install cuelang.org/go/cmd/cue@latest
+        run: go install cuelang.org/go/cmd/cue@latest
 
       - name: Install Python deps
         run: pip install --quiet -r content-agents/requirements.txt
@@ -38,7 +39,7 @@ jobs:
 
       - name: Generate articles
         env:
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           LLM_MODEL: deepseek-v4-flash
           LLM_BASE_URL: https://api.deepseek.com/v1
           BLOG_BASE_DIR: ${{ github.workspace }}

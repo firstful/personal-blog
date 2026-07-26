@@ -7,15 +7,23 @@ package sutliff
 #User: {
     id:        #UserID
     display:   string
+    title:     string
     archetype: string
     tagline:   string
     bio:       string
     style:     string
+    catchphrase: string
     pronouns:  string
     joined:    string
     role:      string
     avatar:    string
+    color:     string
+    signature: string
+    posts:     int
+    post_rate: float
     expertise: [...string]
+    quirks:    [...string]
+    badge?:    string
 }
 
 // ── Posts ───────────────────────────────────────────────────────────────

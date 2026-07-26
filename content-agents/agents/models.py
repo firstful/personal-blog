@@ -106,28 +106,44 @@ class PersonaRegistry:
         self._load_all()
 
     def _load_all(self) -> None:
-        """Load personas from JSON file (personas.json in the agents root)
-        OR from individual YAML files in personas_dir."""
-        # First try: personas.json in the parent of personas_dir or cwd
-        json_paths = [
-            self.personas_dir.parent / "personas.json",
-            Path.cwd() / "personas.json",
-            self.personas_dir / "../personas.json",
-        ]
+        """Load personas from CUE (via cue package) or JSON fallback."""
         loaded = False
-        for jp in json_paths:
-            jp = jp.resolve()
-            if jp.exists():
-                import json
-                with open(jp) as f:
-                    data = json.load(f)
-                for entry in data:
-                    p = Persona.from_dict(entry)
-                    self.personas[p.name.lower()] = p
-                    self.personas[p.name] = p
-                loaded = True
-                print(f"  [registry] Loaded {len(data)} personas from {jp}")
-                break
+
+        # Try CUE first
+        try:
+            import sys
+            sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+            from cue import load_personas_list
+            data = load_personas_list()
+            for entry in data:
+                p = Persona.from_dict(entry)
+                self.personas[p.name.lower()] = p
+                self.personas[p.name] = p
+            loaded = True
+            print(f"  [registry] Loaded {len(data)} personas from CUE")
+        except Exception:
+            pass
+
+        if not loaded:
+            # Fallback: personas.json in the agent directory or cwd
+            json_paths = [
+                self.personas_dir.parent / "personas.json",
+                Path.cwd() / "personas.json",
+                self.personas_dir / "../personas.json",
+            ]
+            for jp in json_paths:
+                jp = jp.resolve()
+                if jp.exists():
+                    import json
+                    with open(jp) as f:
+                        data = json.load(f)
+                    for entry in data:
+                        p = Persona.from_dict(entry)
+                        self.personas[p.name.lower()] = p
+                        self.personas[p.name] = p
+                    loaded = True
+                    print(f"  [registry] Loaded {len(data)} personas from {jp}")
+                    break
 
         if not loaded:
             # Fallback: individual YAML files

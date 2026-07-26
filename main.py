@@ -1,9 +1,14 @@
 import os
 import shutil
 import subprocess
+import sys
 from dotenv import load_dotenv
 import glob
 import os.path
+
+_REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
 
 _RESUME_BUILT = False
 
@@ -32,13 +37,11 @@ def define_env(env):
     load_dotenv()
     _build_resume_assets()
 
-    # Load personas
-    import json
-    personas_path = os.path.join(os.getcwd(), "personas", "personas.json")
+    # Load personas from CUE source of truth
+    from cue import load_personas_dict
     try:
-        with open(personas_path) as f:
-            PERSONAS = json.load(f)
-    except:
+        PERSONAS = load_personas_dict()
+    except Exception:
         PERSONAS = {}
 
     @env.macro

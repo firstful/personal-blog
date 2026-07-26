@@ -1,7 +1,7 @@
 """Auto-generate persona profile pages and the persona index from
-`personas/personas.json`.
+`cue/users.cue` (via the `cue` package loader).
 
-Each entry in personas.json becomes:
+Each CUE user becomes:
   - /personas/<handle>/  — a full profile page (rendered via the
     `persona_profile` macro defined in main.py)
   - /personas/           — an index page with a styled card grid
@@ -10,15 +10,19 @@ Pages are created as in-memory generated files (MkDocs 1.6+ File.generated),
 so no stub markdown needs to live in docs/personas/.
 """
 
-import json
 import logging
 import os
+import sys
 
+# Ensure repo root is importable so `cue` package resolves
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
+
+from cue import load_personas_dict
 from mkdocs.structure.files import File
 
 log = logging.getLogger("mkdocs.hooks")
-
-_PERSONAS_PATH = os.path.join(os.getcwd(), "personas", "personas.json")
 
 # Groupings for the index, in display order. Handles not listed fall into
 # "Community". "public_domain" and any handle in _HIDDEN are skipped entirely.
@@ -31,15 +35,6 @@ _CORE = [
     "xss_princess",
 ]
 _HIDDEN = {"public_domain"}
-
-
-def _load_personas():
-    try:
-        with open(_PERSONAS_PATH) as f:
-            return json.load(f)
-    except Exception as e:  # noqa: BLE001
-        log.warning(f"[personas] could not load {_PERSONAS_PATH}: {e}")
-        return {}
 
 
 def _detail_markdown(handle, persona):
@@ -125,7 +120,11 @@ def _index_markdown(personas):
 
 
 def on_files(files, config):
-    personas = _load_personas()
+    try:
+        personas = load_personas_dict()
+    except Exception as e:  # noqa: BLE001
+        log.warning(f"[personas] could not load CUE users: {e}")
+        personas = {}
     if not personas:
         return files
 
