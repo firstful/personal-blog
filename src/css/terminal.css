@@ -1228,6 +1228,19 @@ a:hover {
   overflow: hidden;
 }
 
+.fp-avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border: 2px solid var(--term-fg-dim);
+  margin-bottom: 8px;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.2s;
+}
+.fp-avatar:hover {
+  filter: grayscale(0%) contrast(1);
+}
+
 .fp-username {
   font-weight: 700;
   font-size: 13px;
@@ -1453,6 +1466,18 @@ a:hover {
   line-height: 1.2;
   flex-shrink: 0;
   filter: saturate(1.2);
+}
+
+.persona-card-avatar-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid var(--persona-color);
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.2s;
+}
+.persona-card:hover .persona-card-avatar-img {
+  filter: grayscale(0%) contrast(1);
 }
 
 .persona-card-main {

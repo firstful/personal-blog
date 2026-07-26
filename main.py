@@ -75,6 +75,7 @@ def define_env(env):
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
         pcount_html = f'    <div class="fp-stat">Posts: {pcount}</div>\n' if pcount else ""
         sig_html = f'\n  <div class="forum-signature">— {signature}</div>' if sig and signature else ""
+        avatar_html = f'<img class="fp-avatar" src="/assets/avatars/{handle}.jpg" alt="{display}" onerror="this.style.display=\'none\'">'
 
         # ── auto-quote: parse handle[:N] and find the target post ──
         reply_html = ""
@@ -119,6 +120,7 @@ def define_env(env):
         return (
             f'<div class="forum-post">'
             f'  <div class="fp-left">'
+            f'    {avatar_html}'
             f'    <div class="fp-username">{display}</div>'
             f'    {badge_html}'
             f'    <div class="fp-usertitle">{title}</div>'
@@ -152,13 +154,17 @@ def define_env(env):
         archetype = persona.get("archetype", "")
 
         badge_html = f'<span class="forum-badge">{badge}</span>' if badge else ""
+        avatar_html = f'<img class="fp-avatar" src="/assets/avatars/{handle}.jpg" alt="{display}" onerror="this.style.display=\'none\'" style="width:48px;height:48px">'
 
         return f'''
 <div class="forum-post" style="border-left-color:{color}">
   <div class="forum-post-header" style="border-bottom-color:{color}">
-    <div>
-      <div style="font-size:20px;font-weight:700;color:{color}">{display} {badge_html}</div>
-      <div style="font-size:13px;color:var(--term-fg-dim)">{title}</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      {avatar_html}
+      <div>
+        <div style="font-size:20px;font-weight:700;color:{color}">{display} {badge_html}</div>
+        <div style="font-size:13px;color:var(--term-fg-dim)">{title}</div>
+      </div>
     </div>
   </div>
   <div class="forum-post-body">

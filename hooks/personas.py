@@ -68,9 +68,10 @@ def _index_card(handle, persona):
     badge_html = (
         f'<span class="persona-card-badge">{badge}</span>' if badge else ""
     )
+    avatar_html = f'<img class="persona-card-avatar-img" src="/assets/avatars/{handle}.jpg" alt="{display}" onerror="this.parentElement.innerHTML=\'{avatar}\'">'
     return (
         f'<a class="persona-card" href="{handle}/" style="--persona-color:{color}">'
-        f'<span class="persona-card-avatar">{avatar}</span>'
+        f'<span class="persona-card-avatar">{avatar_html}</span>'
         f'<span class="persona-card-main">'
         f'<span class="persona-card-name">{display}{badge_html}</span>'
         f'<span class="persona-card-title">{title}</span>'
