@@ -248,6 +248,7 @@ _ENV_OVERRIDES: dict[str, str] = {
     "personas_dir": "PERSONAS_DIR",
     "track_record": "TRACK_RECORD",
     "sessions_dir": "SESSIONS_DIR",
+    "cue_dir": "CUE_DIR",
     # LLM sub-keys
     "llm.base_url": "LLM_BASE_URL",
     "llm.api_key_env": "LLM_API_KEY_ENV",
@@ -291,6 +292,7 @@ class AppConfig(BaseModel):
     personas_dir: str = "personas"
     track_record: str = "track_record.json"
     sessions_dir: str = "sessions"
+    cue_dir: str = "cue"
 
     # Default defaults with env var overrides
     def __init__(self, **data):
@@ -343,6 +345,10 @@ class AppConfig(BaseModel):
     @property
     def sessions_path(self) -> Path:
         return self.agents_path / self.sessions_dir
+
+    @property
+    def cue_path(self) -> Path:
+        return self.blog_path / self.cue_dir
 
 
 def _set_nested(d: dict, key_path: str, val: Any) -> None:

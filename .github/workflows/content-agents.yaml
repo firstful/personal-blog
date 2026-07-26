@@ -2,7 +2,7 @@ name: Content Agents
 
 on:
   schedule:
-    # 9am, 1pm, 5pm, 9pm Eastern (EST = UTC-5)
+    # 9am, 1pm, 5pm, 9pm Eastern (EDT = UTC-4, EST = UTC-5 in winter)
     - cron: "0 14,18,22,2 * * *"
   workflow_dispatch:
 
@@ -30,9 +30,7 @@ jobs:
           go install cuelang.org/go/cmd/cue@latest
 
       - name: Install Python deps
-        run: |
-          pip install --quiet -r content-agents/requirements.txt 2>/dev/null || \
-          pip install --quiet langchain langchain-openai langgraph openai feedparser pyyaml httpx tiktoken
+        run: pip install --quiet -r content-agents/requirements.txt
 
       - name: Validate CUE data
         run: |

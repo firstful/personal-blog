@@ -69,7 +69,7 @@ Output: {{"action": "claim"|"pass", "headline": "..."(if claiming), "content": "
         try:
             result = await llm_json(llm_client, system, user, model, temperature=temp, max_tokens=4000)
         except Exception as e:
-            print(f"  [orchestrator] LLM error for {persona.name}: {e[:200]}")
+            print(f"  [orchestrator] LLM error for {persona.name}: {str(e)[:200]}")
             continue
 
         if result.get("action") == "claim":
