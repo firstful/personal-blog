@@ -6,12 +6,9 @@
 # Env: BLOG_BASE_DIR
 blog_base_dir: /srv/agent-stack/repos/personal-blog
 
-# RSS sources for news discovery
-# Env: RSS_SOURCES (comma-separated URLs)
+# RSS sources are now in rss_sources.yaml (with weighted scores)
+# Categories for topic classification
 sources:
-  rss:
-    - https://hnrss.org/frontpage
-    - https://feeds.arstechnica.com/arstechnica/index
   categories:
     opinion: ["technology", "culture", "AI", "open-source"]
     tutorial: ["programming", "devops", "tools", "infrastructure"]

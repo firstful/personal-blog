@@ -1,0 +1,76 @@
+# RSS Sources — weighted by interest score
+# Score is incremented each time a source produces an article that gets published.
+# Higher scores = more likely to be selected (weighted random).
+
+sources:
+  - url: https://news.ycombinator.com/rss
+    name: Hacker News
+    score: 10
+
+  - url: https://lobste.rs/rss
+    name: Lobste.rs
+    score: 10
+
+  - url: https://arxiv.org/rss/cs.AI
+    name: arXiv CS.AI
+    score: 5
+
+  - url: https://arxiv.org/rss/cs.LG
+    name: arXiv CS.LG
+    score: 5
+
+  - url: https://huggingface.co/blog/feed.xml
+    name: Hugging Face Blog
+    score: 8
+
+  - url: https://openai.com/news/rss.xml
+    name: OpenAI News
+    score: 8
+
+  - url: https://deepmind.google/discover/blog/rss.xml
+    name: Google DeepMind
+    score: 8
+
+  - url: https://github.blog/feed/
+    name: GitHub Blog
+    score: 7
+
+  - url: https://engineering.fb.com/feed/
+    name: Meta Engineering
+    score: 6
+
+  - url: https://netflixtechblog.com/feed
+    name: Netflix Tech Blog
+    score: 6
+
+  - url: https://blog.cloudflare.com/rss/
+    name: Cloudflare Blog
+    score: 7
+
+  - url: https://devblogs.microsoft.com/feed/
+    name: Microsoft Dev Blogs
+    score: 5
+
+  - url: https://martinfowler.com/feed.atom
+    name: Martin Fowler
+    score: 9
+
+  - url: https://simonwillison.net/atom/everything/
+    name: Simon Willison
+    score: 9
+
+  - url: https://blog.pragmaticengineer.com/rss/
+    name: Pragmatic Engineer
+    score: 8
+
+  - url: https://krebsonsecurity.com/feed/
+    name: Krebs on Security
+    score: 7
+
+  - url: https://www.reddit.com/r/LocalLLaMA/.rss
+    name: r/LocalLLaMA
+    score: 8
+
+  - url: https://www.reddit.com/r/programming/.rss
+    name: r/programming
+    score: 5

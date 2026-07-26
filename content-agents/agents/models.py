@@ -25,6 +25,7 @@ class NewsCandidate(BaseModel):
     title: str
     url: str
     source: str
+    source_url: str = ""  # RSS feed URL for score tracking
     summary: str
     category: str = "opinion"
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
