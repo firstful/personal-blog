@@ -84,10 +84,18 @@ jobs:
         run: BASE_URL="${{ steps.staging.outputs.url }}" npx playwright test
 
       - name: Deploy to production
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           swa deploy site \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
             --env production
+
+      - name: Enable auto-merge for PR
+        if: github.event_name == 'pull_request' && success()
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} --auto --squash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   close_pr:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
