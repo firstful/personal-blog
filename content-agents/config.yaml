@@ -39,9 +39,9 @@ llm:
 # Env: OUTPUT_DIR, ARTICLES_DIR, PERSONAS_DIR, TRACK_RECORD, SESSIONS_DIR
 output_dir: content-agents/output
 articles_dir: docs/blog
-personas_dir: content-agents/personas
-track_record: content-agents/track_record.json
-sessions_dir: content-agents/sessions
+personas_dir: personas
+track_record: track_record.json
+sessions_dir: sessions
 
 # ── CUE data directory (relative to blog_base_dir) ─────────────────────
 # Env: CUE_DIR
