@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   generate:
@@ -49,7 +50,7 @@ jobs:
         run: |
           python3 content-agents/run.py generate 2>&1
 
-      - name: Commit and push
+      - name: Create PR with changes
         run: |
           git config user.name "Content Agent"
           git config user.email "bot@ffilt.us"
@@ -57,6 +58,15 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            BRANCH="content-agents/$(date +%Y%m%d-%H%M%S)"
+            git checkout -b "$BRANCH"
             git commit -m "content-agents: auto-generated CUE articles"
-            git push
+            git push -u origin "$BRANCH"
+            gh pr create \
+              --title "content-agents: auto-generated articles $(date +%Y-%m-%d)" \
+              --body "Automated content generation from content-agents pipeline." \
+              --base main \
+              --head "$BRANCH"
           fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
