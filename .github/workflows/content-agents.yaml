@@ -1,0 +1,63 @@
+name: Content Agents
+
+on:
+  schedule:
+    # 9am, 1pm, 5pm, 9pm Eastern (EST = UTC-5)
+    - cron: "0 14,18,22,2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CUE
+        env:
+          GOBIN: /usr/local/bin
+        run: |
+          go install cuelang.org/go/cmd/cue@latest
+
+      - name: Install Python deps
+        run: |
+          pip install --quiet -r content-agents/requirements.txt 2>/dev/null || \
+          pip install --quiet langchain langchain-openai langgraph openai feedparser pyyaml httpx tiktoken
+
+      - name: Validate CUE data
+        run: |
+          cue vet ./...
+
+      - name: Generate articles
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_MODEL: deepseek-v4-flash
+          LLM_BASE_URL: https://api.deepseek.com/v1
+          BLOG_BASE_DIR: ${{ github.workspace }}
+          NUM_THREADS: 2
+          MAX_POSTS_PER_THREAD: 6
+          MIN_POSTS_PER_THREAD: 3
+        run: |
+          python3 content-agents/run.py generate 2>&1
+
+      - name: Commit and push
+        run: |
+          git config user.name "Content Agent"
+          git config user.email "bot@ffilt.us"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "content-agents: auto-generated articles [skip ci]"
+            git push
+          fi

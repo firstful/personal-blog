@@ -1,0 +1,48 @@
+# Content Agents — Configuration
+# Every value is overridable via env vars (uppercase key name).
+# Env vars always win when set.
+
+# ── Blog repo root ───────────────────────────────────────────────────────
+# Env: BLOG_BASE_DIR
+blog_base_dir: /srv/agent-stack/repos/personal-blog
+
+# RSS sources for news discovery
+# Env: RSS_SOURCES (comma-separated URLs)
+sources:
+  rss:
+    - https://hnrss.org/frontpage
+    - https://feeds.arstechnica.com/arstechnica/index
+  categories:
+    opinion: ["technology", "culture", "AI", "open-source"]
+    tutorial: ["programming", "devops", "tools", "infrastructure"]
+    reference: ["standards", "APIs", "protocols"]
+
+# ── Limits ──────────────────────────────────────────────────────────────
+# Env: MAX_POSTS_PER_THREAD, MIN_POSTS_PER_THREAD, NUM_THREADS,
+#       SEARCH_WINDOW_HOURS, MAX_CANDIDATES
+max_posts_per_thread: 8
+min_posts_per_thread: 3
+num_threads: 3
+search_window_hours: 6
+max_candidates: 10
+
+# ── LLM config (OpenAI-compatible — DeepSeek, OpenAI, etc.) ────────────
+# Env: LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, LLM_QA_MODEL, LLM_TEMPERATURE
+llm:
+  base_url: https://api.deepseek.com/v1
+  api_key_env: LLM_API_KEY
+  model: deepseek-v4-flash
+  qa_model: deepseek-v4-flash
+  temperature: 0.5
+
+# ── Output paths (relative to blog_base_dir, or absolute) ──────────────
+# Env: OUTPUT_DIR, ARTICLES_DIR, PERSONAS_DIR, TRACK_RECORD, SESSIONS_DIR
+output_dir: content-agents/output
+articles_dir: docs/blog
+personas_dir: content-agents/personas
+track_record: content-agents/track_record.json
+sessions_dir: content-agents/sessions
+
+# ── CUE data directory (relative to blog_base_dir) ─────────────────────
+# Env: CUE_DIR
+cue_dir: cue
