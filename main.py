@@ -118,7 +118,7 @@ def define_env(env):
         _posts.append({"handle": handle, "body": raw_body})
 
         return (
-            f'<div class="forum-post">'
+            f'<div class="forum-post" style="--persona-color:{color}">'
             f'  <div class="fp-left">'
             f'    {avatar_html}'
             f'    <div class="fp-username">{display}</div>'
@@ -157,13 +157,13 @@ def define_env(env):
         avatar_html = f'<img class="fp-avatar" src="/assets/avatars/{handle}.jpg" alt="{display}" onerror="this.style.display=\'none\'" style="width:48px;height:48px">'
 
         return f'''
-<div class="forum-post" style="border-left-color:{color}">
-  <div class="forum-post-header" style="border-bottom-color:{color}">
+<div class="forum-post persona-profile" style="--persona-color:{color}">
+  <div class="forum-post-header">
     <div style="display:flex;align-items:center;gap:12px">
       {avatar_html}
       <div>
-        <div style="font-size:20px;font-weight:700;color:{color}">{display} {badge_html}</div>
-        <div style="font-size:13px;color:var(--term-fg-dim)">{title}</div>
+        <div class="fp-username">{display} {badge_html}</div>
+        <div class="fp-usertitle">{title}</div>
       </div>
     </div>
   </div>

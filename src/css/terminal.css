@@ -1206,10 +1206,12 @@ a:hover {
 /* ── Console Tray ──────────────────────────────────────────── */
 
 /* ── Forum Posts ──────────────────────────────────────────── */
-/* Classic two-column vBulletin/phpBB style — monochrome */
+/* Classic two-column vBulletin/phpBB style — with persona color accents */
 .forum-post {
+  --persona-color: var(--term-fg);
   display: flex;
-  border: 1px solid var(--term-border-dim);
+  border: 1px solid color-mix(in srgb, var(--persona-color) 40%, var(--term-border-dim));
+  border-left: 3px solid var(--persona-color);
   margin: 1.2em 0;
   background: var(--term-bg);
   font-family: var(--term-font);
@@ -1221,8 +1223,8 @@ a:hover {
   flex-shrink: 0;
   padding: 12px 8px;
   text-align: center;
-  border-right: 1px solid var(--term-border-dim);
-  background: var(--term-bg-alt);
+  border-right: 1px solid color-mix(in srgb, var(--persona-color) 30%, var(--term-border-dim));
+  background: color-mix(in srgb, var(--persona-color) 5%, var(--term-bg-alt));
   font-size: 12px;
   line-height: 1.4;
   overflow: hidden;
@@ -1232,7 +1234,7 @@ a:hover {
   width: 64px;
   height: 64px;
   object-fit: cover;
-  border: 2px solid var(--term-fg-dim);
+  border: 2px solid var(--persona-color);
   margin-bottom: 8px;
   filter: grayscale(100%) contrast(1.1);
   transition: filter 0.2s;
@@ -1244,9 +1246,10 @@ a:hover {
 .fp-username {
   font-weight: 700;
   font-size: 13px;
-  color: var(--term-fg);
+  color: var(--persona-color);
   margin-bottom: 2px;
   word-break: break-all;
+  text-shadow: 0 0 4px color-mix(in srgb, var(--persona-color) 40%, transparent);
 }
 
 .fp-usertitle {
@@ -1265,8 +1268,8 @@ a:hover {
   display: inline-block;
   font-size: 9px;
   font-weight: 700;
-  color: var(--term-fg);
-  border: 1px solid var(--term-fg);
+  color: var(--persona-color);
+  border: 1px solid var(--persona-color);
   padding: 1px 4px;
   margin-bottom: 4px;
   text-transform: uppercase;
@@ -1285,8 +1288,8 @@ a:hover {
   font-size: 11px;
   color: var(--term-fg-dim);
   padding: 6px 12px;
-  border-bottom: 1px solid var(--term-border-dim);
-  background: var(--term-bg-alt);
+  border-bottom: 1px solid color-mix(in srgb, var(--persona-color) 30%, var(--term-border-dim));
+  background: color-mix(in srgb, var(--persona-color) 5%, var(--term-bg-alt));
   text-align: right;
 }
 
@@ -1333,8 +1336,8 @@ a:hover {
 .forum-signature {
   padding: 6px 16px 8px;
   font-size: 11px;
-  color: var(--term-fg-dim);
-  border-top: 1px dashed var(--term-border-dim);
+  color: color-mix(in srgb, var(--persona-color) 70%, var(--term-fg-dim));
+  border-top: 1px dashed color-mix(in srgb, var(--persona-color) 40%, var(--term-border-dim));
   margin-top: auto;
   font-style: italic;
 }
@@ -1421,8 +1424,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  border-bottom: 2px solid var(--term-fg-dark);
-  background: var(--term-bg-alt);
+  border-bottom: 2px solid color-mix(in srgb, var(--persona-color) 50%, var(--term-border-dim));
+  background: color-mix(in srgb, var(--persona-color) 8%, var(--term-bg-alt));
 }
 
 /* ── Persona Index Grid ────────────────────────────────────── */
