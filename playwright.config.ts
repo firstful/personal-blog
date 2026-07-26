@@ -4,10 +4,10 @@ const BASE_URL = process.env.BASE_URL || process.env.PLAYWRIGHT_BASE_URL || 'htt
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: 1,
+  workers: process.env.CI ? 2 : 4,
   reporter: [['html', { outputFolder: 'test-results/report' }], ['list']],
   timeout: 30_000,
   expect: {

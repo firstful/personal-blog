@@ -11,7 +11,7 @@ export const ABOUT_PATH = '/resume/';
 export const TYPE_WAIT = 2000;
 
 /** How long (ms) for the MATCH FOUND animation + progress bar */
-export const MATCH_ANIMATION_WAIT = 3000;
+export const MATCH_ANIMATION_WAIT = 1500;
 
 /**
  * Navigate to the candidate-search page and wait for it to be ready.
@@ -76,7 +76,6 @@ export async function getOptionLabels(page: Page): Promise<string[]> {
  */
 export async function selectOption(page: Page, label: string): Promise<void> {
   await page.waitForSelector('#cs-screen .cs-option', { timeout: 5000 });
-  await page.waitForTimeout(300);
 
   const ok = await page.evaluate((targetLabel: string) => {
     const rows = document.querySelectorAll<HTMLElement>(

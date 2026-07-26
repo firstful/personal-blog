@@ -12,16 +12,21 @@ hide:
 
 <div class="about-bio">
 
-I'm a software engineer in **Columbus, Ohio**. I build backends, automation
-platforms, and event-driven systems — and I care about the boring parts:
-observability, clean API contracts, and infrastructure that stays up without
-paging me at 3am.
+I'm a software engineer in **Columbus, Ohio** who builds backends, automation
+platforms, and event-driven systems. I care about the boring parts:
+**observability**, **clean API contracts**, and infrastructure that stays up
+without paging me at 3am.
 
-Over the years I've cut API latency by 15x, standardized SDKs across a fleet of
-services, and built automation that quietly does the work nobody wanted to do
-by hand. I'm just as comfortable talking to stakeholders as I am reading a flame
-graph. I like open source, small sharp tools, and shipping things that survive
-contact with production.
+**Hits include:**
+
+- Cut API latency **15x** across a fleet of services (yes, really)
+- Standardized SDKs so teams stop reinventing the wheel
+- Built automation that quietly does the work nobody wanted to do by hand
+- Shipped things that survived contact with production 🎉
+
+I like **open source**, **small sharp tools**, and talking to stakeholders as
+much as reading a flame graph. I'm equally comfortable in a design review or
+a postmortem — though I prefer the ones where nothing actually caught fire.
 
 When I'm not writing code I'm probably self-hosting something I definitely
 didn't need to, or arguing about it with the regulars on the

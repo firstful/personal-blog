@@ -132,15 +132,15 @@ a, .md-nav__link,
 
 /* ── Links ────────────────────────────────────────────────── */
 a {
-  color: var(--term-link) !important;
+  color: var(--term-fg-bright) !important;
   text-decoration: underline;
   text-decoration-color: var(--term-fg-dim);
   transition: text-decoration-color 0.2s, color 0.2s;
 }
 a:hover {
-  text-decoration-color: var(--term-cyan);
-  color: var(--term-cyan) !important;
-  text-shadow: 0 0 6px var(--term-cyan-glow);
+  text-decoration-color: var(--term-fg);
+  color: var(--term-fg) !important;
+  text-shadow: 0 0 6px var(--term-glow);
 }
 
 /* ── Material Override: Hide Default Header / Nav / Footer ── */
@@ -213,28 +213,28 @@ a:hover {
 }
 
 .bbs-menu .menu-key {
-  color: var(--term-cyan);
+  color: var(--term-fg-bright);
   font-weight: 700;
   display: inline-block;
   width: 18px;
   text-align: center;
-  border: 1px solid var(--term-cyan-dim);
+  border: 1px solid var(--term-fg-dim);
   margin-right: 4px;
   font-size: 11px;
   padding: 0 2px;
 }
 
 .bbs-brand {
-  color: var(--term-amber) !important;
+  color: var(--term-fg-bright) !important;
   font-weight: 700;
   letter-spacing: 1px;
   flex-shrink: 0;
   white-space: nowrap;
-  text-shadow: 0 0 6px var(--term-amber-glow);
+  text-shadow: 0 0 6px var(--term-glow);
 }
 .bbs-brand:hover {
   background: transparent !important;
-  color: var(--term-amber) !important;
+  color: var(--term-fg-bright) !important;
 }
 
 .bbs-about {
@@ -300,30 +300,30 @@ a:hover {
   position: relative;
 }
 .bbs-post-card:hover {
-  border-color: var(--term-amber-dim);
-  background: rgba(255, 182, 66, 0.03);
-  box-shadow: 0 0 10px -3px var(--term-amber-glow);
+  border-color: var(--term-fg-dim);
+  background: rgba(0, 255, 65, 0.03);
+  box-shadow: 0 0 10px -3px var(--term-glow);
 }
 
 .bbs-post-card .post-number {
-  color: var(--term-cyan-dim);
+  color: var(--term-fg-dim);
   font-size: 11px;
   margin-bottom: 2px;
   display: block;
 }
 
 .bbs-post-card .post-title {
-  color: var(--term-amber) !important;
+  color: var(--term-fg-bright) !important;
   font-size: 15px;
   font-weight: 700;
   margin: 0 0 4px;
   display: block;
   text-decoration: none;
-  text-shadow: 0 0 5px var(--term-amber-glow);
+  text-shadow: 0 0 5px var(--term-glow);
 }
 .bbs-post-card .post-title::before {
   content: '> ';
-  color: var(--term-amber-dim);
+  color: var(--term-fg-dim);
 }
 
 .bbs-post-card .post-meta {
@@ -403,41 +403,41 @@ a:hover {
 .md-typeset h1 {
   font-size: 22px;
   font-weight: 700;
-  color: var(--term-amber);
+  color: var(--term-fg-bright);
   border: none;
   margin: 24px 0 8px;
   letter-spacing: 0;
-  text-shadow: 0 0 5px var(--term-amber-glow);
+  text-shadow: 0 0 5px var(--term-glow);
 }
 .md-typeset h1::before {
   content: '> ';
-  color: var(--term-amber-dim);
+  color: var(--term-fg-dim);
 }
 
 .md-typeset h2 {
   font-size: 18px;
   font-weight: 700;
-  color: var(--term-cyan);
+  color: var(--term-fg-bright);
   margin: 28px 0 12px;
   border-top: 1px solid var(--term-fg-dark);
   padding-top: 16px;
-  text-shadow: 0 0 5px var(--term-cyan-glow);
+  text-shadow: 0 0 5px var(--term-glow);
 }
 .md-typeset h2::before {
   content: '── ';
-  color: var(--term-cyan-dim);
+  color: var(--term-fg-dim);
 }
 .md-typeset h2::after {
   content: ' ──';
-  color: var(--term-cyan-dim);
+  color: var(--term-fg-dim);
 }
 
 .md-typeset h3 {
   font-size: 16px;
   font-weight: 700;
-  color: var(--term-magenta);
+  color: var(--term-fg);
   margin: 20px 0 8px;
-  text-shadow: 0 0 5px var(--term-magenta-glow);
+  text-shadow: 0 0 4px var(--term-glow);
 }
 
 .md-typeset p {
@@ -456,15 +456,15 @@ a:hover {
 }
 
 .md-typeset strong {
-  color: var(--term-amber);
+  color: var(--term-fg-bright);
   font-weight: 700;
 }
 
 .md-typeset blockquote {
-  border-left: 3px solid var(--term-magenta-dim);
+  border-left: 3px solid var(--term-fg-dim);
   padding: 8px 16px;
   margin: 16px 0;
-  background: rgba(255, 95, 210, 0.04);
+  background: rgba(0, 255, 65, 0.02);
   color: var(--term-fg);
 }
 .md-typeset blockquote p {
@@ -520,7 +520,7 @@ a:hover {
 .md-typeset pre::before {
   content: '┌─ Code ──────────────────────────────────┐';
   display: block;
-  color: var(--term-amber-dim);
+  color: var(--term-fg-dim);
   font-size: 11px;
   padding: 4px 14px;
   background: var(--term-bg-alt);
@@ -540,8 +540,8 @@ a:hover {
 /* Inline code inside paragraphs */
 .md-typeset p code,
 .md-typeset li code {
-  border: 1px solid var(--term-cyan-dim);
-  color: var(--term-cyan) !important;
+  border: 1px solid var(--term-fg-dark);
+  color: var(--term-fg-bright) !important;
   padding: 1px 6px;
 }
 
@@ -553,7 +553,7 @@ a:hover {
 }
 .md-typeset table th {
   background: var(--term-bg-alt);
-  color: var(--term-amber);
+  color: var(--term-fg-bright);
   border: 1px solid var(--term-fg-dark);
   font-weight: 700;
   padding: 8px 12px;
@@ -568,23 +568,22 @@ a:hover {
 .md-tag {
   font-family: var(--term-font) !important;
   background: transparent !important;
-  color: var(--term-amber) !important;
-  border: 1px solid var(--term-amber-dim);
+  color: var(--term-fg) !important;
+  border: 1px solid var(--term-fg-dark);
   border-radius: 0;
   font-size: 12px;
   padding: 0 8px !important;
-  text-shadow: 0 0 5px var(--term-amber-glow);
 }
 .md-tag:hover {
-  background: rgba(255, 182, 66, 0.08) !important;
+  background: rgba(0, 255, 65, 0.08) !important;
 }
 .md-tag::before {
   content: '[';
-  color: var(--term-amber-dim);
+  color: var(--term-fg-dim);
 }
 .md-tag::after {
   content: ']';
-  color: var(--term-amber-dim);
+  color: var(--term-fg-dim);
 }
 
 /* ── Article Meta / Byline ────────────────────────────────── */
@@ -997,8 +996,8 @@ a:hover {
 .md-typeset .admonition .admonition-title {
   font-family: var(--term-font) !important;
   background: var(--term-bg-alt) !important;
-  color: var(--term-amber) !important;
-  border-bottom: 1px solid var(--term-amber-dim);
+  color: var(--term-fg-bright) !important;
+  border-bottom: 1px solid var(--term-fg-dark);
   font-weight: 700;
   font-size: 13px;
   padding: 6px 12px;
@@ -1409,7 +1408,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 12px 16px;
-  border-bottom: 2px solid var(--term-border-dim);
+  border-bottom: 2px solid var(--term-fg-dark);
   background: var(--term-bg-alt);
 }
 
@@ -1564,8 +1563,8 @@ a:hover {
   margin-top: 0;
 }
 .thread-section-header.today-header {
-  color: #daa520;
-  border-bottom-color: #daa520;
+  color: var(--term-fg-bright);
+  border-bottom-color: var(--term-fg-dim);
   font-weight: 700;
 }
 

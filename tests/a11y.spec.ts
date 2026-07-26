@@ -131,23 +131,23 @@ test.describe('Colour contrast', () => {
       if (needsActive) {
         await page.keyboard.press('ArrowDown');
         await page.keyboard.press('ArrowUp');
-        await page.waitForTimeout(100);
+        await expect(page.locator('#cs-screen .cs-option.active')).toBeVisible();
       }
 
       if (needsEcho) {
         // Click the first option to produce the echo line
         await selectOption(page, 'Yes — I recruit');
-        await page.waitForTimeout(600); // let echo typewriter finish
+        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
       }
 
       if (isPostMatch) {
         // Click through: hiring manager → Yes → Backend
         await selectOption(page, 'hiring manager');
-        await page.waitForTimeout(800);
+        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
         await selectOption(page, 'Yes');
-        await page.waitForTimeout(800);
+        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
         await selectOption(page, 'Backend');
-        await page.waitForTimeout(4000);
+        await expect(page.locator('#cs-screen .cs-match-head')).toBeVisible();
       }
 
       await expectContrast(page, pair.selector, pair.threshold);
