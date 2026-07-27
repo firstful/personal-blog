@@ -55,18 +55,24 @@ jobs:
         run: |
           git config user.name "Content Agent"
           git config user.email "bot@ffilt.us"
+          echo "=== Current branch ==="
+          git branch --show-current
+          echo "=== Working tree status ==="
+          git status --short
+          echo "=== Untracked files ==="
+          git ls-files --others --exclude-standard
           git add cue/opinions/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             echo "=== Staged files ==="
             git diff --staged --name-only
-            echo "=== Diff against main ==="
-            git diff main --name-only
             echo "=== Full staged diff ==="
             git diff --staged
             BRANCH="content-agents/$(date +%Y%m%d-%H%M%S)"
             git checkout -b "$BRANCH"
+            echo "=== Now on branch ==="
+            git branch --show-current
             git commit -m "content-agents: auto-generated CUE articles"
             git push -u origin "$BRANCH"
             gh pr create \
