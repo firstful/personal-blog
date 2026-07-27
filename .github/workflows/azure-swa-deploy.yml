@@ -61,7 +61,7 @@ jobs:
         if: success()
         run: gh pr merge ${{ github.event.pull_request.number }} --auto --squash
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
 
   deploy:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
