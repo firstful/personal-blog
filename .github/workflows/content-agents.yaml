@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -52,8 +52,8 @@ jobs:
 
       - name: Create PR with changes
         run: |
-          git config user.name "Content Agent"
-          git config user.email "bot@ffilt.us"
+          git config user.name "Reed Sutliff"
+          git config user.email "git@ffilt.us"
           echo "=== Current branch ==="
           git branch --show-current
           echo "=== Working tree status ==="
@@ -81,4 +81,4 @@ jobs:
               --head "$BRANCH"
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
