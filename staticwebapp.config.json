@@ -1,10 +1,6 @@
 {
     "routes": [
         {
-            "route": "/wip/*",
-            "allowedRoles": ["internal"]
-        },
-        {
             "route": "/login",
             "allowedRoles": ["anonymous"],
             "rewrite": "/.auth/login/google"
