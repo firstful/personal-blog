@@ -75,7 +75,11 @@ export async function getOptionLabels(page: Page): Promise<string[]> {
  * terminal's async typewriter and busy flag.
  */
 export async function selectOption(page: Page, label: string): Promise<void> {
+  // Wait for options to be visible and interactive
   await page.waitForSelector('#cs-screen .cs-option', { timeout: 5000 });
+  
+  // Small delay to ensure terminal is ready for interaction
+  await page.waitForTimeout(100);
 
   const ok = await page.evaluate((targetLabel: string) => {
     const rows = document.querySelectorAll<HTMLElement>(
@@ -94,6 +98,9 @@ export async function selectOption(page: Page, label: string): Promise<void> {
   }, label);
 
   if (!ok) throw new Error(`Option "${label}" not found`);
+  
+  // Wait for the typewriter animation to start
+  await page.waitForTimeout(200);
 }
 
 /**

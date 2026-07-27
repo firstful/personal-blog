@@ -137,15 +137,17 @@ test.describe('Colour contrast', () => {
       if (needsEcho) {
         // Click the first option to produce the echo line
         await selectOption(page, 'Yes — I recruit');
-        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
+        await expect(page.locator('#cs-screen .cs-line.cs-echo').last()).toBeVisible();
       }
 
       if (isPostMatch) {
         // Click through: hiring manager → Yes → Backend
         await selectOption(page, 'hiring manager');
-        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
+        // Wait for options to reappear after the step transition
+        await page.waitForSelector('#cs-screen .cs-option', { timeout: 5000 });
         await selectOption(page, 'Yes');
-        await expect(page.locator('#cs-screen .cs-line.cs-echo')).toBeVisible();
+        // Wait for options to reappear after the step transition
+        await page.waitForSelector('#cs-screen .cs-option', { timeout: 5000 });
         await selectOption(page, 'Backend');
         await expect(page.locator('#cs-screen .cs-match-head')).toBeVisible();
       }

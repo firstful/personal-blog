@@ -46,12 +46,22 @@ jobs:
       - name: Install SWA CLI
         run: npm install -g @azure/static-web-apps-cli
 
+      - name: Set staging environment name
+        id: env_name
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "name=pr-${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=staging" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Deploy to staging
         id: staging
         run: |
+          ENV_NAME="${{ steps.env_name.outputs.name }}"
           OUTPUT=$(swa deploy site \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
-            --env staging 2>&1)
+            --env "$ENV_NAME" 2>&1)
           echo "$OUTPUT"
           STAGING_URL=$(echo "$OUTPUT" | grep -oP 'https://[a-z0-9\-\.]+\.azurestaticapps\.net' | head -1)
           if [ -z "$STAGING_URL" ]; then
@@ -107,5 +117,5 @@ jobs:
           npm install -g @azure/static-web-apps-cli
           swa deploy site \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
-            --env production \
+            --env "pr-${{ github.event.pull_request.number }}" \
             --close

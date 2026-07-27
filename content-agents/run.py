@@ -196,6 +196,12 @@ async def run_single_thread(
         )
 
     registry.save_track_record(config.track_record_path)
+    
+    # Increment source score if we have a source URL
+    if hasattr(topic, 'source_url') and topic.source_url:
+        from agents.search_agent import increment_source_score
+        increment_source_score(topic.source_url)
+    
     print(f"  Published: {path}")
     return session
 
