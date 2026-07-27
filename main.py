@@ -63,6 +63,7 @@ def define_env(env):
 
         persona = PERSONAS.get(handle, {})
         display = persona.get("screen_name", handle)
+        color = persona.get("color", "#33ff33")
         title = persona.get("title", "")
         signature = persona.get("signature", "")
         badge = persona.get("badge", "")
