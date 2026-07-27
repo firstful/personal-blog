@@ -40,12 +40,9 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Copy SWA config
-        run: cp staticwebapp.config.json site/staticwebapp.config.json
-
       - name: Serve site
         run: |
-          npx swa start site --port 8000 --app-location site --api-location "" &
+          python3 -m http.server 8000 --directory site &
           for i in $(seq 1 30); do
             if curl -s -o /dev/null http://localhost:8000 2>/dev/null; then
               echo "Server ready"
