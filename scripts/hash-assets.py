@@ -19,6 +19,7 @@ SITE_DIR = sys.argv[1] if len(sys.argv) > 1 else 'site'
 ASSETS = [
     ('assets/theme.css',),
     ('assets/js/main.js',),
+    ('assets/articles.json',),
 ]
 
 
@@ -45,15 +46,12 @@ def rename_asset(rel_path: str) -> str | None:
 
 
 def update_html_references(old_rel: str, new_rel: str):
-    """Replace all references to the old asset path in site/*.html
+    """Replace all references to the old asset path in site/*.html and site/**/*.js
 
     Handles both relative references (assets/theme.css) and
-    absolute references (/assets/theme.css) found in HTML.
+    absolute references (/assets/theme.css) found in HTML/JS.
     """
     count = 0
-    # MkDocs generates both relative refs (in href/src) and sometimes
-    # absolute refs (in extra_css/extra_js). Match both by searching
-    # for the bare relative path and the slash-prefixed version.
     variants = set()
     variants.add(old_rel)     # e.g. assets/theme.css
     variants.add('/' + old_rel)  # e.g. /assets/theme.css
@@ -61,7 +59,7 @@ def update_html_references(old_rel: str, new_rel: str):
 
     for root, _dirs, files in os.walk(SITE_DIR):
         for fn in files:
-            if not fn.endswith('.html'):
+            if not (fn.endswith('.html') or fn.endswith('.js')):
                 continue
             fp = os.path.join(root, fn)
             with open(fp, 'r') as f:
