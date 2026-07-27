@@ -4,13 +4,67 @@ on:
   push:
     branches: [main]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
     branches: [main]
   workflow_dispatch:
 
 jobs:
-  build_test_deploy:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+  test_pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    name: PR Test
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Install CUE
+        run: go install cuelang.org/go/cmd/cue@latest
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          pip install -r requirements.txt
+
+      - name: Build site
+        run: npm run build
+
+      - name: Serve site
+        run: |
+          npx swa start site --port 8000 --app-location site --api-location "" &
+          for i in $(seq 1 30); do
+            if curl -s -o /dev/null http://localhost:8000 2>/dev/null; then
+              echo "Server ready"
+              break
+            fi
+            sleep 1
+          done
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright tests
+        run: BASE_URL=http://localhost:8000 npx playwright test
+
+      - name: Enable auto-merge
+        if: success()
+        run: gh pr merge ${{ github.event.pull_request.number }} --auto --squash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     name: Build, Test, Deploy
     steps:
@@ -46,22 +100,12 @@ jobs:
       - name: Install SWA CLI
         run: npm install -g @azure/static-web-apps-cli
 
-      - name: Set staging environment name
-        id: env_name
-        run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "name=pr-${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
-          else
-            echo "name=staging" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Deploy to staging
         id: staging
         run: |
-          ENV_NAME="${{ steps.env_name.outputs.name }}"
           OUTPUT=$(swa deploy site \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
-            --env "$ENV_NAME" 2>&1)
+            --env staging 2>&1)
           echo "$OUTPUT"
           STAGING_URL=$(echo "$OUTPUT" | grep -oP 'https://[a-z0-9\-\.]+\.azurestaticapps\.net' | head -1)
           if [ -z "$STAGING_URL" ]; then
@@ -94,28 +138,7 @@ jobs:
         run: BASE_URL="${{ steps.staging.outputs.url }}" npx playwright test
 
       - name: Deploy to production
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           swa deploy site \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
             --env production
-
-      - name: Enable auto-merge for PR
-        if: github.event_name == 'pull_request' && success()
-        run: |
-          gh pr merge ${{ github.event.pull_request.number }} --auto --squash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  close_pr:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close PR Staging
-    steps:
-      - name: Close staging environment
-        run: |
-          npm install -g @azure/static-web-apps-cli
-          swa deploy site \
-            --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
-            --env "pr-${{ github.event.pull_request.number }}" \
-            --close
