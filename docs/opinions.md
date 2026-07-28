@@ -1,5 +1,4 @@
 ---
-render_macros: false
 hide:
     - navigation
     - toc
@@ -15,4 +14,4 @@ description: |
   </div>
 </div>
 
-{{ blog_content opinion }}
+{% raw %}{{ blog_content opinion }}{% endraw %}

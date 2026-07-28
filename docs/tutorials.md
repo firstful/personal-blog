@@ -1,5 +1,4 @@
 ---
-render_macros: false
 hide:
     - navigation
     - toc
@@ -14,4 +13,4 @@ description: |
   </div>
 </div>
 
-{{ blog_content tutorial }}
+{% raw %}{{ blog_content tutorial }}{% endraw %}
