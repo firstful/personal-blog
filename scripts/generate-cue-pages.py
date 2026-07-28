@@ -20,7 +20,7 @@ from cue import load_threads_dict
 from cue.articles import thread_to_markdown
 
 
-OUTPUT_DIR = os.path.join(_REPO_ROOT, "docs", "_gen", "blog")
+OUTPUT_DIR = os.path.join(_REPO_ROOT, "docs", "blog")
 BLOG_DIR = os.path.join(_REPO_ROOT, "docs", "blog")
 
 
