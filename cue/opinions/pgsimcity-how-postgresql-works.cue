@@ -4,7 +4,7 @@ threads: "pgsimcity-how-postgresql-works": {
 	id:       "pgsimcity-how-postgresql-works"
 	title:    "PGSimCity - How PostgreSQL Works"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["programming"]
 	starter:  "frag_android"
 	description: """

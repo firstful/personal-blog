@@ -4,7 +4,7 @@ threads: "statistical-early-stopping-for-reasoning-models": {
 	id:       "statistical-early-stopping-for-reasoning-models"
 	title:    "Statistical Early Stopping for Reasoning Models"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["cs.AI", "cs.LG", "stat.ML"]
 	starter:  "wetware"
 	description: """

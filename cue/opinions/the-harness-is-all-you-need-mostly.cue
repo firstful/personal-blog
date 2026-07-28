@@ -4,7 +4,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 	id:       "the-harness-is-all-you-need-mostly"
 	title:    "The harness is all you need (mostly)"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["AI & ML", "GitHub Copilot"]
 	starter:  "wetware"
 	description: """

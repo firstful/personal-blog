@@ -19,7 +19,6 @@ SITE_DIR = sys.argv[1] if len(sys.argv) > 1 else 'site'
 ASSETS = [
     ('assets/theme.css',),
     ('assets/js/main.js',),
-    ('assets/articles.json',),
 ]
 
 

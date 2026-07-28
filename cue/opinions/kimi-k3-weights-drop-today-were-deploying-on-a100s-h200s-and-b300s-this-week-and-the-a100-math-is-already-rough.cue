@@ -4,7 +4,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 	id:       "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-this-week-and-the-a100-math-is-already-rough"
 	title:    "Kimi K3 weights drop today. We're deploying on A100s, H200s and B300s this week and the A100 math is already rough"
 	date:     "2026-07-27"
-	category: "tutorial"
+	category: "daily"
 	tags:     ["LocalLLaMA"]
 	starter:  "frag_android"
 	description: """

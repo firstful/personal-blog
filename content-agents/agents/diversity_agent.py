@@ -14,19 +14,32 @@ from .llm_helpers import llm_json
 from .models import AppConfig, NewsCandidate
 
 
-def list_published_articles(articles_dir: str | Path) -> List[dict]:
-    """List all published markdown articles with their title and tags."""
-    articles_dir = Path(articles_dir)
+def list_published_articles(config: AppConfig) -> List[dict]:
+    """List all published articles from CUE source of truth."""
+    import sys
+    _repo = str(config.blog_path.resolve())
+    if _repo not in sys.path:
+        sys.path.insert(0, _repo)
+    from cue import load_threads_dict
+    from cue.articles import thread_to_article_meta
+
     articles = []
-    for path in sorted(articles_dir.rglob("*.md")):
-        frontmatter = _parse_frontmatter(path)
-        if frontmatter:
+    try:
+        threads = load_threads_dict()
+    except Exception as e:
+        print(f"  [diversity] Warning: could not load CUE threads: {e}")
+        return articles
+
+    for tid, thread in threads.items():
+        meta = thread_to_article_meta(tid, thread)
+        if meta:
             articles.append({
-                "path": str(path),
-                "title": frontmatter.get("title", path.stem),
-                "tags": frontmatter.get("tags", []),
-                "description": frontmatter.get("description", ""),
+                "path": f"cue/opinions/{tid}.cue",
+                "title": meta["title"],
+                "tags": meta["tags"],
+                "description": meta["description"],
             })
+
     return articles
 
 
@@ -99,7 +112,7 @@ async def filter_candidates(
     llm_client,
     session_topics: Optional[List[NewsCandidate]] = None,
 ) -> List[NewsCandidate]:
-    published = list_published_articles(config.articles_path)
+    published = list_published_articles(config)
     session_titles = [t.title for t in (session_topics or [])]
 
     if not published and not session_titles:

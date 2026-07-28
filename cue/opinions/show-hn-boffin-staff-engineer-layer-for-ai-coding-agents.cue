@@ -4,7 +4,7 @@ threads: "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents": {
 	id:       "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents"
 	title:    "Show HN: Boffin – Staff-engineer layer for AI coding agents"
 	date:     "2026-07-26"
-	category: "opinion"
+	category: "daily"
 	tags:     ["opinion"]
 	starter:  "oldschool_phreak"
 	description: """

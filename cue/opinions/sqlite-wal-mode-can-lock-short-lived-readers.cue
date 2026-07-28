@@ -4,7 +4,7 @@ threads: "sqlite-wal-mode-can-lock-short-lived-readers": {
 	id:       "sqlite-wal-mode-can-lock-short-lived-readers"
 	title:    "SQLite WAL Mode Can Lock Short-Lived Readers"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["databases"]
 	starter:  "wetware"
 	description: """

@@ -10,6 +10,12 @@ node_modules/
 # Generated content agent drafts
 content-agents/output/
 
+# Generated article metadata (build-time generated)
+docs/assets/articles.json
+
+# Generated CUE article pages (build-time generated, not checked in)
+docs/_gen/
+
 # Resume build artifacts
 resume/build/
 resume/output/

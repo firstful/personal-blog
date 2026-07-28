@@ -101,10 +101,11 @@ def format_thread_cue(session: ThreadSession, meta: ArticleMeta) -> str:
     for post in session.thread:
         body_text = post.content.strip().replace("\\", "\\\\")
         indented_body = _cue_indent(body_text, 3)
+        ts_str = post.timestamp.strftime("%Y-%m-%d %H:%M")
         post_lines.append(
             f'\t\t{{\n'
             f'\t\t\tuser: "{post.persona_name}"\n'
-            f'\t\t\ttimestamp: "{meta.date} 09:00"\n'
+            f'\t\t\ttimestamp: "{ts_str}"\n'
             f'\t\t\tbody: """\n'
             f'{indented_body}\n'
             f'\t\t\t"""\n'

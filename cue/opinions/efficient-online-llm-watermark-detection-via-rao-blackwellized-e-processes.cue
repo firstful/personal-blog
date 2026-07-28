@@ -4,7 +4,7 @@ threads: "efficient-online-llm-watermark-detection-via-rao-blackwellized-e-proce
 	id:       "efficient-online-llm-watermark-detection-via-rao-blackwellized-e-processes"
 	title:    "Efficient Online LLM Watermark Detection via Rao-Blackwellized E-Processes"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["stat.ML", "cs.LG"]
 	starter:  "wetware"
 	description: """

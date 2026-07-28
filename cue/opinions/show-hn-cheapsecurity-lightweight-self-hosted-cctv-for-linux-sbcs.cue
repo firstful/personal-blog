@@ -4,7 +4,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 	id:       "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs"
 	title:    "Show HN: CheapSecurity – Lightweight, Self-Hosted CCTV for Linux SBCs"
 	date:     "2026-07-26"
-	category: "opinion"
+	category: "daily"
 	tags:     ["opinion"]
 	starter:  "ffiltus"
 	description: """

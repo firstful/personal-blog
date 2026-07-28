@@ -4,7 +4,7 @@ threads: "decker-a-platform-that-builds-on-the-legacy-of-hypercard-and-classic-m
 	id:       "decker-a-platform-that-builds-on-the-legacy-of-hypercard-and-classic-macos"
 	title:    "Decker, a platform that builds on the legacy of Hypercard and classic macOS"
 	date:     "2026-07-26"
-	category: "opinion"
+	category: "daily"
 	tags:     ["opinion"]
 	starter:  "wetware"
 	description: """

@@ -149,7 +149,7 @@ def guess_category(tags: list[str], title: str, summary: str) -> str:
         return "opinion"
     if any(w in text for w in ["spec", "standard", "rfc", "protocol", "api", "reference"]):
         return "reference"
-    return "opinion"
+    return "daily"
 
 
 # ── Main Search ───────────────────────────────────────────────────────────

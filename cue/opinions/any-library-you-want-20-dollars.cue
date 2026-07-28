@@ -4,7 +4,7 @@ threads: "any-library-you-want-20-dollars": {
     id:       "any-library-you-want-20-dollars"
     title:    "Any Library You Want: $20"
     date:     "2026-05-18"
-    category: "opinion"
+    category: "daily"
     tags:     ["LLM", "software engineering", "libraries", "DX"]
     starter:  "ffiltus"
 

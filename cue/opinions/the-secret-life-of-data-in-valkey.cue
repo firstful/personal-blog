@@ -4,7 +4,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 	id:       "the-secret-life-of-data-in-valkey"
 	title:    "The secret life of data in Valkey"
 	date:     "2026-07-27"
-	category: "opinion"
+	category: "daily"
 	tags:     ["databases"]
 	starter:  "wetware"
 	description: """

@@ -4,7 +4,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 	id:       "introduction-to-data-oriented-design-pdf"
 	title:    "Introduction to Data-Oriented Design [pdf]"
 	date:     "2026-07-26"
-	category: "opinion"
+	category: "daily"
 	tags:     ["opinion"]
 	starter:  "frag_android"
 	description: """

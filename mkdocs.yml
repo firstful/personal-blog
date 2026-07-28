@@ -94,14 +94,17 @@ plugins:
           tags: {}
         dirs:
           - blog/tutorials
+          - _gen/blog/tutorials
       - name: opinion
         template: docs/assets/custom-blog.html
         features:
           tags: {}
         dirs:
           - blog/opinions
+          - _gen/blog/opinions
     dirs:
       - blog
+      - _gen/blog
   search : {}
   exclude-search:
     exclude:
