@@ -80,17 +80,19 @@ class Persona(BaseModel):
         if len(self.topic_history) > 50:
             self.topic_history = self.topic_history[-50:]
 
+    def topic_fit(self, topic_tags: list[str]) -> float:
+        """Fraction of topic tags covered by this persona's expertise (0..1)."""
+        if not topic_tags or not self.expertise:
+            return 0.0
+        lower_expertise = {t.lower() for t in self.expertise}
+        lower_tags = {t.lower() for t in topic_tags}
+        match = lower_expertise & lower_tags
+        return len(match) / len(lower_tags)
+
     def rank_score(self, topic_tags: list[str]) -> float:
         qc_component = self.avg_qc_score * 0.4
         accept_component = self.acceptance_rate * 0.3
-        topic_fit = 0.0
-        if topic_tags and self.expertise:
-            lower_expertise = {t.lower() for t in self.expertise}
-            lower_tags = {t.lower() for t in topic_tags}
-            match = lower_expertise & lower_tags
-            if lower_tags:
-                topic_fit = len(match) / len(lower_tags)
-        fit_component = topic_fit * 0.3
+        fit_component = self.topic_fit(topic_tags) * 0.3
         return qc_component + accept_component + fit_component
 
     def diversity_priority(self) -> float:
@@ -164,6 +166,22 @@ class PersonaRegistry:
         return sorted(
             self.personas.values(),
             key=lambda p: (-p.diversity_priority(), -p.rank_score(topic_tags)),
+        )
+
+    def ordered_for_claim(self, topic_tags: list[str] | None = None) -> list[Persona]:
+        """Claim-phase ordering: topic fit first, diversity only as a tiebreak.
+
+        This is the key fix for inappropriate persona claims. The old
+        ordered_by_diversity put inverse post count first, so the least-published
+        persona got first refusal on every topic regardless of expertise. Here,
+        personas whose expertise covers the topic's tags go first; among equal
+        fit, the under-published persona still gets priority (diversity).
+        """
+        if topic_tags is None:
+            topic_tags = []
+        return sorted(
+            self.personas.values(),
+            key=lambda p: (-p.topic_fit(topic_tags), -p.diversity_priority()),
         )
 
     def ordered_by_rank(self, topic_tags: list[str] | None = None) -> list[Persona]:

@@ -40,19 +40,32 @@ async def run_persona_cycle(
     temp = config.llm.get("temperature", 0.7)
 
     # Order personas by inverse content count (diversity priority)
+    # Used for the response cycle — everyone gets a turn to converse.
     ordered = registry.ordered_by_diversity(topic.tags_guess)
     session.persona_order = [p.name for p in ordered]
     print(f"  [orchestrator] Persona order: {', '.join(session.persona_order)}")
 
     # ── PHASE 1: Claim ──
     claimer: Optional[Persona] = None
-    for persona in ordered:
+    # Claim phase orders by topic fit FIRST, so the best-matched persona gets
+    # first refusal instead of whoever has written the least. (ordered_for_claim)
+    claim_order = registry.ordered_for_claim(topic.tags_guess)
+    print(f"  [orchestrator] Claim order (fit-first): {', '.join(p.name for p in claim_order)}")
+
+    # Only enforce the expertise-overlap gate when the topic tags carry signal
+    # (i.e. at least one persona matches). Junk/generic tags (e.g. "Show HN")
+    # would otherwise block every claim.
+    tags_have_signal = any(p.topic_fit(topic.tags_guess) > 0 for p in claim_order)
+
+    for persona in claim_order:
         system = f"You are {persona.name}, a blog writer. Output ONLY valid JSON. No explanations."
         user = f"""You are {persona.name}.
 
 {bio_short(persona)}
 
 A topic is up for discussion. Would you like to claim it?
+
+Only claim if this topic falls within your areas of expertise. If it is outside your expertise, pass and let a more appropriate persona take it — do NOT claim a topic you know nothing about.
 
 ## Topic
 **Title:** {topic.title}
@@ -73,6 +86,12 @@ Output: {{"action": "claim"|"pass", "headline": "..."(if claiming), "content": "
             continue
 
         if result.get("action") == "claim":
+            # Fit gate: reject claims from personas with zero expertise overlap
+            # when the topic tags have signal. This is the programmatic backstop
+            # to the prompt instruction — inappropriate personas cannot take topics.
+            if tags_have_signal and topic.tags_guess and persona.topic_fit(topic.tags_guess) <= 0:
+                print(f"  [orchestrator] {persona.name} claimed but has NO expertise overlap with tags {topic.tags_guess} — rejecting claim")
+                continue
             content = result.get("content", "")
             headline = result.get("headline", topic.title)
             post = ThreadPost(
