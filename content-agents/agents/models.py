@@ -168,22 +168,6 @@ class PersonaRegistry:
             key=lambda p: (-p.diversity_priority(), -p.rank_score(topic_tags)),
         )
 
-    def ordered_for_claim(self, topic_tags: list[str] | None = None) -> list[Persona]:
-        """Claim-phase ordering: topic fit first, diversity only as a tiebreak.
-
-        This is the key fix for inappropriate persona claims. The old
-        ordered_by_diversity put inverse post count first, so the least-published
-        persona got first refusal on every topic regardless of expertise. Here,
-        personas whose expertise covers the topic's tags go first; among equal
-        fit, the under-published persona still gets priority (diversity).
-        """
-        if topic_tags is None:
-            topic_tags = []
-        return sorted(
-            self.personas.values(),
-            key=lambda p: (-p.topic_fit(topic_tags), -p.diversity_priority()),
-        )
-
     def ordered_by_rank(self, topic_tags: list[str] | None = None) -> list[Persona]:
         if topic_tags is None:
             topic_tags = []
