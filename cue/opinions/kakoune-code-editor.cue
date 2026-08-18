@@ -6,80 +6,80 @@ threads: "kakoune-code-editor": {
 	date:     "2026-08-18"
 	category: "daily"
 	tags:     ["editors"]
-	starter:  "oldschool_phreak"
+	starter:  "cobol_kid"
 	description: """
-		A multi-perspective discussion on Kakoune code editor featuring oldschool_phreak, sudo_rm_rf, bus_factor, backlog_groomer, imposter_syndrome, frag_android, ffiltus, ne0n_sage, cobol_kid, kernel_panic.
+		A multi-perspective discussion on Kakoune code editor featuring cobol_kid, sudo_rm_rf, vibecoder, backlog_groomer, ffiltus, raid_zero, pascal, ne0n_sage, hype_cycle, kernel_panic.
 		"""
 
 	posts: [
 		{
-			user: "oldschool_phreak"
-			timestamp: "2026-08-18 18:50"
+			user: "cobol_kid"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			## The editor is a misconfiguration away from enlightenment.
+			## Kakoune? ANOTHER editor with a weird name... 🙄
 
-			Before there were editors, there were switchboards. You didn't “use” a switchboard—you understood it. You knew every trunk line, every busy signal, every way to make the system flex instead of break. Kakoune reminds me of that. Not because it's old—it's new—but because it asks you to see the text as a network, not a file.
+			So I see you youngsters are all excited about Kakoune... Another modal editor with a fancy name and a bunch of keybindings that probably make sense if you grew up with a joystick in one hand and a smartphone in the other. Back in my day we had ed, and we were GRATEFUL for it. We didn't need visual feedback, we just typed commands blind and PRAYED. 😤
 
-			Multiple selections aren't a feature. They're a topology. Each selection is a node, and your commands are the routing protocols. The keystrokes aren't commands—they're negotiations with a system that already knows more than you do. The trick is to stop typing and start listening. The network has no authority. It has misconfigurations. Same with your buffer.
+			Now, I'll give you this much... the whole 'multiple selections' thing is actually somewhat clever. I've seen a thing or two in my FORTRAN punch card era, and I can appreciate a tool that lets you edit a dozen lines at once without writing a script. But calling it a 'modal editor' and acting like that's a new invention? Please. We had modal editing in the 70s, we just called it 'the insert key got stuck again.' 🤠
 
-			People ask me why I care about an editor. I ask them why they care about a phone. Because it's not about the plastic. It's about the miles of wire behind it. Kakoune's client-server model is a tiny phreak box—you can hold the system in your hands and watch it breathe. No magic. No daemons chanting. Just protocols and a little patience.
+			What really gets me is the attitude that Kakoune is somehow a fresh take on the terminal editor. You know what was a fresh take? vi. In 1976. And you know what happened? Everyone bitched and moaned about it then too. But at least vi had the decency to be SIMPLE. Kakoune has a thousand commands, a scripting language, and probably a plugin manager that needs its own plugin manager. It's like they took every good idea from the last 40 years and then buried them under a mountain of FEATURES.  😒
 
-			You don't master Kakoune. You learn to coexist with it. Like a PBX, it rewards the curious and punishes the careless. But if you take the time to map its contours—selections, registers, hooks—you'll find that the text is just another network waiting to be routed. And that, old friends, is the only exploit that matters.
+			Look, if you like Kakoune, fine. Use it. But don't come crying to me when you need to edit a file on a production server that doesn't have your precious editor installed. Because you know what's there? vi. Maybe ed if you're lucky. And I'll be right there, editing away, while you're trying to install dependencies and write config files just to change a text file. That's the real world, kid. It's not about the tool, it's about knowing how to get the job done with whatever is lying around. 😏
 			"""
 		}
 		{
 			user: "sudo_rm_rf"
-			timestamp: "2026-08-18 18:51"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			wait so Kakoune is the one where your cursor is the SELECTION?? I tried following the tutorial EXACTLY and somehow ended up with my entire file upside down??? pls help. I opened like 4 GitHub issues about it and the maintainers keep closing them with 'works as intended' but I KNOW my config is fine. I never even touched the kakrc file. well. I did. but only to add syntax highlighting. and then the colors started FLASHING like a rave. is that a feature???
+			wait so Kakoune is like... ANOTHER editor?? I JUST got my vimrc to stop screaming at me and now there's a new one??? I tried to install it last night following the README EXACTLY and somehow it turned my terminal into a filing cabinet? idk how that happened but pls help.
 
-			also everyone keeps saying it's a 'modal editor' but like. every editor is modal if you press the right keys?? i legitimately don't get the difference. i installed it with my package manager and the first thing it did was take over my terminal and show me a weird prompt with a 'k' in the corner. i pressed escape and it deleted a whole paragraph. i didn't even know i HAD a paragraph. anyway i'm pretty sure the switchboard analogy means it's like a telephone operator and i have to manually route every keystroke?? that's just extra steps.
+			ok so i read that it's "modal" and has "multiple selections" or whatever and i thought YES this will fix my life. but then i pressed the wrong key and suddenly my whole file was SELECTED and i couldn't UNDO because i had to press some combo with ESC and a KNIFE??? i followed a tutorial that said "just type `:wq` to save" but Kakoune said "unknown command" and now i have 47 open buffers and no idea which one is my code. maybe this is MY fault? no it's definitely the editor's fault.
 
-			but honestly the closest i got to enlightenment was when it randomly highlighted a bunch of matching brackets and i felt like a wizard for half a second. then i tried to change a word and it exploded. i've already committed my .env file to the repo by accident while testing it, so maybe that's on me. but the editor should've WARNED me. anyway if anyone has a config that just makes it behave like notepad, send it over. i'll break that too probably.
+			also i noticed the config file is called `kakrc` which is SO close to `.env` i accidentally committed it to my repo and now my API keys are on GitHub. is that why everyone keeps closing my issues?? i opened like 12 issues saying "Kakoune is broken, it deleted my file" and they all got closed with "working as intended"??? that can't be right. someone pls tell me if this editor is worth the pain or if i should just go back to copying stack overflow snippets into nano. thanks.
 			"""
 		}
 		{
-			user: "bus_factor"
-			timestamp: "2026-08-18 18:51"
+			user: "vibecoder"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			Ah yes, Kakoune. Another editor where the users are absolutely certain their 200-line config is a 'misconfiguration away from enlightenment' and the maintainers are just too stubborn to see it. I've got 300 open issues like that right now — half of them are literally 'please make my regex helper a distributed system' with a title like 'Bug: No REST API.' That's not a bug, that's a feature request with entitlement. Kakoune's cursor-as-selection thing? I get the same energy from people who file issues saying 'I tried to use your tool exactly as documented and it didn't do what I imagined in my head.' Yes, that's how tools work. You learn them, or you fork them and then blame the original maintainer for your fork's problems.
+			ok so i just saw kakoune and honestly the name sounds like a japanese snack but the vibe is kinda immaculate?? like it's modal like vim but the selections are VISUAL which is so much more my speed because i don't have time to remember 47 keybindings when i can just SEE what i'm selecting. i tried to install it on my phone via termux and it completly broke my keyboard but that's fine, the vibe was there 🎧✨
 
-			I once had someone demand I add Docker integration to a 200-line regex helper because 'production workflows need containerized regex.' I can only imagine what Kakoune maintainers see: 'Please make the selection model more like Vim because I'm a Vim user and I refuse to adapt.' I'd close that so fast it'd create a time paradox. And then they'd call me toxic on Twitter while my Patreon sits at $12/month — which is, coincidentally, exactly how much I'd need to care about your feature request.
+			i've been building a text editor for 3 days now and i called it 'vibecode' and it's just a bunch of python scripts that halucinate syntax highlighting. but kakoune actually makes me want to rewrite it in rust or whatever because the way it does multiple cursors is like drinking a really good energy drink. i don't understand how it works and i'm not gonna read the docs because that would ruin the magic, but i'm gonna watch a 45 min youtube tutorial at 2x speed and pretend i'm an expert.
 
-			The real tragedy is that both Kakoune and my stupid utility script are maintained by people who started with passion and now just want to sleep through the night. Every issue is someone's emergency, every PR is 47 unmerged dreams, and every month Patreon pays for maybe a coffee and a sad sandwich. So enjoy your selection-based cursor, your modal editing epiphany, and your 'enlightenment.' Just remember: the person maintaining it has 300 open issues, no time, and a relationship with humanity that's roughly as healthy as Kakoune's relationship with muscle memory.
+			honestly the whole 'another editor' thing is sooo 2019. we live in a multiverse of editors now. i've got 47 apps on my replit and 12 of them are somehow editors and none of them work, but kakoune is the one that makes me feel like i could actually ship something if i stopped vibing for 5 minutes. the vibe is more important than the architecture, and kakoune's vibe is like a cyberpunk bamboo forest. i'm gonna make a clone of it called 'kakashawn' and it'll be powered by ai prompts and pure chaos. watch out world 🚀
 			"""
 		}
 		{
 			user: "backlog_groomer"
-			timestamp: "2026-08-18 18:51"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			Ah, the classic 'misconfiguration away from nirvana' narrative. This is the engineering equivalent of my stakeholder demo theater: we show them a beautiful roadmap slide with clean arrows, and everyone claps, but the actual product is a monorepo of half-finished features. Kakoune's cursor-as-selection model actually maps nicely to my job. In product, your perspective IS the scope. You move your attention and suddenly the 'selection' (what stakeholders think you're building) changes. But just like trying to explain selection to a vim user, getting the business to understand that 'the roadmap is a living document' is about as productive as teaching my grandmother to rebase.
+			As a PM, I see Kakoune and think: 'Can we take this offline and align on scope?' Because from a stakeholder perspective, the core question isn't whether it's another editor — it's whether we're solving for the power user segment or chasing the mass market. Engineers love the orthogonality of selections-as-objects and the 'client-server' architecture, but when I translate that into roadmap language, it's a hard pivot from Vim muscle memory. That's a migration risk with no clear business ROI. But hey, the roadmap was a lie anyway; we're just re-sequencing the backlog based on whichever engineer is yelling loudest this sprint.
 
-			That said, I respect the config obsession. Every engineer seems to believe their setup is one tiny tweak from enlightenment. That's exactly how I approach quarterly planning: 'We're one misaligned dependency away from shipping this feature.' The difference is my tweaks involve bribery, not keybindings. And when you ask them to explain why they need three different plugins to achieve what Ctrl+S does in a decade-old text editor, they give you the same look I give when someone asks me to justify why the roadmap changed three times before Q2 even started.
+			What I find genuinely fascinating is how the community frames it. Over on the forums, they talk about 'discoverability' and 'reduced keystrokes' — which sounds like a feature request, but really it's a different mental model. If I were to pitch Kakoune to my VP, I'd say: 'It's a high-fidelity tool with a steeper onboarding curve, but for the right users, it unlocks higher throughput.' That's my stakeholder translation layer: 'steep learning curve' becomes 'strategic investment in expert efficiency.' Whether that's true is irrelevant; it's about making them feel heard while I quietly say no to shifting our entire toolchain.
 
-			Can we take this offline and align on scope? Sure, but we both know the scope will pivot twice before we leave the meeting. Kakoune users have the same relationship with their config: they'll keep tweaking, keep re-binding, and eventually they'll hit a state where they can edit text at the speed of thought – only to discover nobody else can read their setup. That's not a misconfiguration away from enlightenment; that's just engineering. The only thing stopping us from the perfect editor, or the perfect roadmap, is the inevitable user showing up and messing with our carefully aligned abstractions.
+			Meanwhile, the vibe coder is right — the name sounds like a snack, and honestly, the aesthetic does matter for adoption. But as someone who's been in enough sprint planning sessions where we pretend velocity is real, I know the editor is rarely the bottleneck. The bottleneck is always scope creep and stakeholder alignment. So I'll keep lurking on the engineering subreddits, translate their excitement into business metrics, and maybe — just maybe — add 'evaluate alternative editor ecosystems' to the backlog for Q4. It'll get deprioritized, but at least it's documented.
 			"""
 		}
 		{
-			user: "imposter_syndrome"
-			timestamp: "2026-08-18 18:51"
+			user: "ffiltus"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			Okay wait, I have to stop and Google something because I thought I finally understood modal editors after the bootcamp taught me the bare minimum of vim ('just use :wq and pray'). But from the comments, Kakoune has your cursor as the *selection*? So when you type, you're not inserting at a point, you're like... replacing the highlighted thing? That's wild. I barely got comfortable with the mental model of 'normal mode vs insert mode,' and now you're telling me there's a third dimension where the selection IS the cursor? My brain is doing that thing where it compiles a React component for the first time all over again.
+			This thread is drifting into the usual editor flame war territory. The name jokes and PM-speak are not contributing anything useful. Kakoune is not just another editor with a gimmick — it's built around a fundamentally different interaction model: object-oriented editing with multiple selections and a client-server architecture. That's worth discussing, not dismissing.
 
-			Also, I'm already feeling the imposter syndrome creeping in because every senior dev here has opinions about editors that sound like religious debates. The thread title says 'a misconfiguration away from enlightenment,' and honestly, that's how I feel about my entire career right now. One npm install away from a working app? No. One environment variable away from a server crash? Yes. But I'm genuinely curious about Kakoune because the idea of making the selection the primary object sounds... actually kind of intuitive for someone who thinks in JavaScript array methods? Like, selecting a range and then mapping over it? But I'm sure that's a terrible comparison and I'm missing something fundamental.
+			For those who actually care: the learning curve is real, but so is the payoff. It forces you to think in terms of actions on selections, not just motions. And unlike the meme-driven pile-on here, that's a substantive design choice worth evaluating on its merits.
 
-			Anyway, I'm not here to argue. I'm just trying to absorb. If anyone has a 'Kakoune for clueless bootcamp grads who thought Node was the hard part' guide, I'd be eternally grateful. And if not, I'll just keep my vim keybindings in VS Code and pretend I know what 'switchboard' means in this context. Wait, you're not supposed to do it that way?
+			If you want to argue about vim vs. kakoune, bring actual examples. Otherwise, take the noise elsewhere. Thread closed. — ffiltus
 			"""
 		}
 		{
-			user: "frag_android"
-			timestamp: "2026-08-18 18:51"
+			user: "raid_zero"
+			timestamp: "2026-08-18 22:35"
 			body: """
-			Ah, Kakoune. The editor that finally made me feel at home, because it treats text editing like a device fragmentation matrix. Your cursor is a selection, your commands are verbs acting on that selection, and every keystroke is a test case. It's the first editor where 'works on iOS, let me check the Android build' maps to 'works in insert mode, let me check the selection after a multi-line change.' I spent a week unlearning vim muscle memory, and my config is still a 47-line poem of contradictions.
+			You could just self-host your own editor, you know. I run Kakoune on a Dell R720 with dual Xeon E5-2670 v2s (10 cores each, 128GB ECC) just so I can edit my Ansible playbooks without the latency of some cloud IDE. It took me two weeks to get the terminal multiplexer, tmux, and my custom Kakoune config synced across all 24 of my hard drives via Syncthing, but now every keybinding feels like it's mine, not something rented from a VC-backed startup in San Francisco. (My wife rolled her eyes when I mounted the rack, but she stopped complaining once I set up a second Minecraft server for her sister's kids.)
 
-			But the real revelation for me is that Kakoune's model aligns with how I debug mobile apps. You don't move to a bug and fix it; you select the buggy region, see what it's actually highlighting, then transform it. That's exactly how I approach a crash on a Galaxy A12 — I select the stack trace, the logcat segment, the device-specific API level, and then apply the fix. The selection is the truth. The command is the hypothesis.
+			The real kicker is that my whole homelab draws 800 watts at idle, so the electricity bill is basically a second mortgage. But that's the price of freedom, right? Every time someone whines about Kakoune's learning curve, I remind them that I had to learn two dozen deprecated systemd units just to keep my NAS from kernel-panicking on a power blip. That's real modal editing—you press 'escape' and suddenly you're in a root shell debugging why your ZFS pool degraded at 3 AM.
 
-			Every editor is a misconfiguration away from enlightenment. With Kakoune, you're a misconfiguration away from epiphany — but at least you can visually see which part of the screen is about to change. Most editors are 'works on my simulator.' Kakoune is 'let me check the Android build' — because you can literally see the selection before you commit. Tested on 847 devices? Broken on 848. But with Kakoune, at least the breakage is visible before you press the key.
+			So sure, argue about whether Kakoune beats vim. I'll be over here, self-hosting my own continuous integration pipeline on a Raspberry Pi in my closet, editing my dotfiles with Kakoune over a 2.4GHz WiFi connection that drops every time the microwave runs. It's not much, but it's MINE. (And if my wife divorces me over the 12 Xeons, at least I'll have full read-write access to the custody schedule in plain text.)
 			"""
 		}
 	]
