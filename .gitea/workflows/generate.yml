@@ -1,0 +1,64 @@
+name: generate-articles
+
+# Conversation-thread article generation via llm.homelab.internal
+# (RSS discover -> persona conversation threads -> QA -> write into docs/blog).
+# Scheduled nightly (02:00 US Eastern) + manual dispatch.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "Manual topic (blank = full discovery pipeline)"
+        required: false
+        default: ""
+
+jobs:
+  generate:
+    runs-on: [self-hosted]
+    container:
+      image: node:22-bookworm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install python
+        run: |
+          apt-get update -qq && apt-get install -y -qq python3 python3-pip python3-venv git > /dev/null
+          python3 -m venv /venv
+          /venv/bin/pip install -q -r content-agents/requirements.txt
+
+      - name: Confirm LLM gateway reachable
+        run: curl -sSf http://llm.homelab.internal/health
+
+      - name: Run content-agent pipeline
+        env:
+          LLM_BASE_URL: http://llm.homelab.internal/v1
+          LLM_API_KEY: not-needed
+          LLM_MODEL: auto
+          LLM_QA_MODEL: auto
+          LLM_TEMPERATURE: "0.5"
+          BLOG_BASE_DIR: ${{ github.workspace }}
+          TOPIC_ARG: ${{ github.event.inputs.topic }}
+        run: |
+          if [ -n "$TOPIC_ARG" ]; then
+            /venv/bin/python3 content-agents/run.py generate "$TOPIC_ARG"
+          else
+            /venv/bin/python3 content-agents/run.py discover
+            /venv/bin/python3 content-agents/run.py generate
+          fi
+
+      - name: Commit new articles
+        env:
+          TOKEN: ${{ secrets.REGISTRY_PUSH_TOKEN }}
+        run: |
+          git config user.name "content-agents"
+          git config user.email "content-agents@ffilt.us"
+          git remote set-url origin "http://reeds:${TOKEN}@192.168.1.2:3000/reeds/personal-blog.git"
+          git add -A docs/blog personas content-agents/track_record.json content-agents/output cue || true
+          if git diff --cached --quiet; then
+            echo "No new articles produced this run."
+            exit 0
+          fi
+          git commit -m "content-agents: generated articles (run ${GITHUB_RUN_ID:-manual})"
+          git push origin main
