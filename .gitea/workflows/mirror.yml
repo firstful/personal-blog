@@ -1,0 +1,25 @@
+name: mirror-to-github
+
+# blog.ffilt.us is hosted on Azure Static Web Apps, which builds from the
+# GitHub repo (reedsutliff/personal-blog). Gitea is the dev/automation source
+# of truth — every push to main is mirrored to GitHub, which triggers the
+# GitHub-side Azure SWA deploy workflow.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: [self-hosted]
+    container:
+      image: node:22-bookworm
+    steps:
+      - name: Mirror to GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_MIRROR_TOKEN }}
+        run: |
+          git fetch --unshallow 2>/dev/null || git fetch --all --tags
+          git push --prune "https://reedsutliff:${GH_TOKEN}@github.com/reedsutliff/personal-blog.git" \
+            "refs/heads/main:refs/heads/main" "refs/tags/*:refs/tags/*"
