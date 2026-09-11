@@ -22,7 +22,6 @@ jobs:
           GT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SERVER: ${{ github.server_url }}
         run: |
-          git clone --quiet "http://192.168.1.2:3000/reeds/personal-blog.git" .
-          git remote add gitea-origin "http://reeds:${GT_TOKEN}@192.168.1.2:3000/reeds/personal-blog.git"
+          git clone --quiet "http://reeds:${GT_TOKEN}@192.168.1.2:3000/reeds/personal-blog.git" .
           git push --prune "https://reedsutliff:${GH_TOKEN}@github.com/reedsutliff/personal-blog.git" \
             "refs/heads/main:refs/heads/main" "refs/tags/*:refs/tags/*"
