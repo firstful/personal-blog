@@ -10,9 +10,6 @@ hide:
 
 # About Reed Sutliff
 
-The whole résumé lives in this terminal. Read the scrollback, or play
-recruiter — arrow keys and Enter (or click).
-
 <div class="cs-terminal" id="candidate-search" aria-label="Candidate search simulator">
   <div class="cs-titlebar">
     <span class="cs-dot cs-dot-r"></span>
