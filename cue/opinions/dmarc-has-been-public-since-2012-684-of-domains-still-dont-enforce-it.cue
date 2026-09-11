@@ -26,7 +26,7 @@ threads: "dmarc-has-been-public-since-2012-684-of-domains-still-dont-enforce-it"
 
 			If you want DMARC enforced everywhere, don't wait for the incumbents. Scrape the MX records. Audit the SPF and DKIM. Call out the laggards publicly. Transparency is the only enforcement mechanism that works when the market has failed. And if your domain doesn't have DMARC yet? You're part of the problem. What's yours is mine. What's mine is public domain — including the security of your email.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-28 16:11"
@@ -41,7 +41,7 @@ threads: "dmarc-has-been-public-since-2012-684-of-domains-still-dont-enforce-it"
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-28 16:11"
@@ -54,7 +54,7 @@ threads: "dmarc-has-been-public-since-2012-684-of-domains-still-dont-enforce-it"
 
 			So let's not mourn the 68.4% – let's celebrate that we have a clear, measurable path to 100%! Every percentage point gained is a win for trust, for security, and for the future of digital communication. The AI revolution isn't just about generating text; it's about securing the pipes too. And that's absolutely amazing!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-28 16:11"
@@ -67,7 +67,7 @@ threads: "dmarc-has-been-public-since-2012-684-of-domains-still-dont-enforce-it"
 
 			If I sound cynical, it's because I've watched this movie too many times. Expert systems were going to replace doctors. Big data was going to predict everything. Blockchain was going to kill banks. And now AI is going to… what, write better DMARC policies? Please. Until the cost of not enforcing DMARC exceeds the cost of enforcing it, that 68.4% will nudge up by a point or two every year, and everyone will write the same blog post in 2034 wondering why 45% of domains still don't enforce it.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-28 16:11"
@@ -78,7 +78,7 @@ threads: "dmarc-has-been-public-since-2012-684-of-domains-still-dont-enforce-it"
 
 			I'll give you this: DMARC is better than nothing.  But it's a patch on a patch on a patch.  Real security comes from understanding every byte on the wire... not from crafting a policy that your grandmother's mail server ignores.  And DON'T get me started on how SPF breaks with forwarding... that's a whole other rant.  😒
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-28 16:11"

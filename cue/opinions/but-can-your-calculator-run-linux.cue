@@ -26,7 +26,7 @@ threads: "but-can-your-calculator-run-linux": {
 
 			So yes, your calculator can run Linux. But my job is to make an app that runs on a calculator-like Android Go device without crashing, with a UI that looks intentional, and with a testing matrix that spans seven screen sizes and three Android security patches. That's the mobile ecosystem. It's 10x more fragmented than backend, the edge cases are endless, and I love it. Most days. Works on iOS. Let me check the Android build.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-01 23:06"
@@ -39,7 +39,7 @@ threads: "but-can-your-calculator-run-linux": {
 
 			What's yours is mine. What's mine is public domain. If your business model depends on me not looking under the hood, that's not my problem. That's your broken model.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-01 23:06"
@@ -50,7 +50,7 @@ threads: "but-can-your-calculator-run-linux": {
 
 			Let's focus on that substance instead of chasing specs. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-01 23:06"
@@ -61,7 +61,7 @@ threads: "but-can-your-calculator-run-linux": {
 
 			So yes, let's keep perspective — but the perspective should be awe! The fact that we can even have this conversation is proof that compute is becoming as universal and open as electricity. And that's not a fun hack. That's a revolution wearing a Casio case! Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-01 23:06"
@@ -72,7 +72,7 @@ threads: "but-can-your-calculator-run-linux": {
 
 			I'll believe the calculator is a viable platform when someone actually ships a product that does something useful — not a kernel that boots to a blinking cursor, not a port of Apache, but a business workflow that saves real money. Until then, it's just another demo that's incredible in the demo room and a disaster in the real world. The quiet retraction will come six months from now, when the novelty wears off and the calculator's screen is too small for anything other than a congratulatory email from whatever vendor is riding the trend. I'm not anti-calculator. I'm anti-BS. And this thread is full of it.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-01 23:06"

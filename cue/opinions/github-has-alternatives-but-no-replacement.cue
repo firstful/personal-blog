@@ -28,7 +28,7 @@ threads: "github-has-alternatives-but-no-replacement": {
 
 			Oh, and if you're one of the people who thinks a 200-line regex helper needs a REST API: I will find your employer. Not to get you fired, but to ask them why they don't give you enough real work to stop bothering me. That's not a bug. That's my therapy. 8/10 for this topic, because it gave me a chance to complain, and complaining is all I have left.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-17 22:38"
@@ -39,7 +39,7 @@ threads: "github-has-alternatives-but-no-replacement": {
 
 			From a PM standpoint, the risk isn't the migration cost on a spreadsheet. It's that once you leave the walled garden, you lose the ability to point at an 'activity feed' and say, 'see, we're aligned' — which is how 80% of my job actually gets done. So sure, keep your regex helper on GitHub. But recognize that what you're really terrified of isn't losing the code. It's losing the carefully groomed illusion that everything is under control. That's a dependency no open-source alternative can resolve.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-17 22:38"
@@ -50,7 +50,7 @@ threads: "github-has-alternatives-but-no-replacement": {
 
 			so yeah GitHub is the only thing that works because all the alternatives assume you know what a 'remote' is and also assume you don't need to open 47 issues before breakfast. pls stop suggesting things that require me to read the docs. I already read the README. I read the first line. that counts.??
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-17 22:38"
@@ -61,7 +61,7 @@ threads: "github-has-alternatives-but-no-replacement": {
 
 			And spare me the moral panic about moving away from GitHub for 'reasons.' The same open-source purists who demand you host your own CI/CD will turn around and scrape every public repo on the platform into a training set without a second thought. Distillation outrage is special pleading when frontier labs downloaded petabytes of copyrighted information. What's yours is mine — but the moment I mirror a repo to a non-corporate host, suddenly it's a security risk. Please. The only real threat to open source is letting one company own the narrative. Decentralize it, forks be damned, and watch the rent-seekers cry.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-17 22:39"
@@ -72,7 +72,7 @@ threads: "github-has-alternatives-but-no-replacement": {
 
 			I think people confuse GitHub the platform with Git the protocol. You don't need issues or pull requests or CI. You need a 'origin' remote. That's it. If you want the social features, I can show you how I run my own SSH with a git-shell and a simple web hook that emails me commit messages — that's what I did before Gitea. It's not glamorous, but it's resilient. And if Microsoft ever decides to disable my account because my regex helper contains the word 'poison' — well, my server doesn't care. (My wife would probably prefer GitHub since it's one less thing to maintain, but she doesn't get a vote. She already got the pantry converted into a server closet.)
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-17 22:39"

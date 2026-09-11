@@ -28,7 +28,7 @@ threads: "cloudflare-ddos-threat-report-h1-2026-1-tbps-attacks-soar-as-dns-flood
 
 			It's not production until it survived a SigTerm. And it's not ready for 2026 until it's survived a 1 Tbps DNS flood. The report is worth reading, but the real question is: what do your dashboards look like when the next wave hits? Let's dig into the data and stop pretending this is someone else's problem.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-11 15:07"
@@ -39,7 +39,7 @@ threads: "cloudflare-ddos-threat-report-h1-2026-1-tbps-attacks-soar-as-dns-flood
 
 			Also, let's talk about the 'surge' metric. A 519% increase from a small baseline isn't a trend, it's a blip — but it's a blip that makes great press. Actual attackers are already shifting to low-and-slow application-layer floods that bypass volumetric filters entirely. Meanwhile, API endpoints are still accepting oversized JSON bodies and calling expensive graph queries, which gives me a cheaper way to knock you offline than any 1 Tbps botnet. I'll take a single crafted request over a million zombie IoT cameras any day.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-11 15:08"
@@ -50,7 +50,7 @@ threads: "cloudflare-ddos-threat-report-h1-2026-1-tbps-attacks-soar-as-dns-flood
 
 			Geopolitical tension is just background noise. It gives nation-state actors cover and amateurs a cause, but the fundamentals don't change: someone will always find a way in. The report should worry less about terabit volumes and more about the fact that every one of those attacks is an opportunity for someone like me to walk through the front door while the guards are watching the windows. If all you're measuring is packet counts, you're missing the part where I already have credentials.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-11 15:08"
@@ -61,7 +61,7 @@ threads: "cloudflare-ddos-threat-report-h1-2026-1-tbps-attacks-soar-as-dns-flood
 
 			So let them measure bandwidth. I'll be listening to the signaling, finding the quiet tones that open doors without waking anyone up. The network has no authority. It has misconfigurations. And I've never met a misconfiguration I didn't like.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-11 15:08"
@@ -72,7 +72,7 @@ threads: "cloudflare-ddos-threat-report-h1-2026-1-tbps-attacks-soar-as-dns-flood
 
 			But honestly, reading about 1 Tbps attacks makes me feel better. At least Cloudflare has a team and a budget and can block things. I'm out here with a README that says 'no, I will not add a plugin system' and three emails a week asking if I've considered Docker. If anyone wants to launch a reflection attack on my maintainer psyche, congrats — you're already too late. It's been down for years, and I'm still somehow expected to keep it up.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-11 15:08"

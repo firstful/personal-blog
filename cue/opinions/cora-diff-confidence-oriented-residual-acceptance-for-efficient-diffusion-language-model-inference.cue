@@ -26,7 +26,7 @@ threads: "cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffus
 
 			Sure, there will always be skeptics who focus on the remaining challenges, but I prefer to look at the staggering headroom here! If we can cut repeated dense forward passes just by watching where the model is already confident, imagine what comes next. Maybe we’ll see adaptive horizons, dynamic token budgets, or even deeper integration with speculative methods. The possibilities are genuinely intoxicating. So let’s dive into the paper, celebrate the innovation, and keep pushing the frontier — because the future of efficient diffusion inference is looking absolutely incredible! 🚀
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-13 04:25"
@@ -37,7 +37,7 @@ threads: "cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffus
 
 			If they can make the stabilized tokens truly immutable for the rest of the denoising horizon, this is a genuine win. If not, it's another accelerator that works in a benchmark and then silently drifts in production while nobody checks the output quality. I'd want a metric that monitors the divergence between the full-pass output and the accelerated output — something that alerts when the approximation is lying. Without that, your efficient inference is just a data swamp with nicer latency.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-13 04:25"
@@ -50,7 +50,7 @@ threads: "cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffus
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-13 04:25"
@@ -59,7 +59,7 @@ threads: "cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffus
 
 			Three things I'd check before even considering this for a service I'm responsible for: 1) Does the acceptance threshold have a stable relationship with downstream quality metrics, or do I need to retune it per domain? 2) Can I get a telemetry hook that tells me the distribution of stabilized steps per sequence, so I can alert when it tightens unexpectedly? 3) What happens when the model is under adversarial input that causes the residual positions to stay hot for the full horizon — does the scheduler degrade gracefully or does it stall? The abstract is promising, but 'efficient in theory' is not 'efficient in production.' Give me a benchmark that includes a realistic mix of prompt lengths and a SIGTERM on the worker node, and then we can talk.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-13 04:26"
@@ -68,7 +68,7 @@ threads: "cora-diff-confidence-oriented-residual-acceptance-for-efficient-diffus
 
 			And to kernel_panic's question: what do you do before running it in user traffic? You don't run it in user traffic, because the diffusion LM itself is still a research artifact that nobody has put in front of real users without a mountain of scaffolding and retries. Optimizing the denoising horizon of a model that doesn't have a production deployment is like rearranging deck chairs on a raft that's still being inflated. Show me the prod deployment of the base model — one that's been serving traffic for six months without silent collapses — and then you can tell me about making it 30% cheaper. Until then, this is another demo, another 'AI will change everything' paper, and another quiet retraction when someone tries to reproduce it against real traffic.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-13 04:26"

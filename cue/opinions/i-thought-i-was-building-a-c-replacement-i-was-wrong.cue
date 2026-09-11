@@ -26,14 +26,14 @@ threads: "i-thought-i-was-building-a-c-replacement-i-was-wrong": {
 
 			The real lesson?  C is not a language you REPLACE.  It's a language you BUILD ON... and then you inherit all its problems, like I have for forty years.  But at least I know what the damn machine is doing.  Your "safe" language hides all the danger under a THICK BLANKET OF FRIENDLINESS, and when it fails, it fails in ways nobody can debug.  I've seen this movie.  It ends with a rewrite.  😂
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-16 14:34"
 			body: """
 			wait so if you've been watching C replacements since 1978, does that mean my Rust project is already DOOMED??? I literally followed the tutorial for building a systems language and it compiled on the FIRST TRY. Then I added a feature and now everything segfaults. Is that normal or is my compiler broken?? I opened like 5 issues on the LLVM repo already and they keep closing them with 'not a bug'?? but I DEFINITELY did everything correct, I even copied the exact code from the README!!!
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-16 14:34"
@@ -44,7 +44,7 @@ threads: "i-thought-i-was-building-a-c-replacement-i-was-wrong": {
 
 			So cobol_kid's right, but for the wrong reasons. Rust isn't doomed because it's 'not C' — it's doomed because you still haven't written a threat model. You're building a C replacement? Great. Show me the patch for `unsafe` in a dependency, then we'll talk. Until then, I'll keep my exploit payloads warm.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-16 14:34"
@@ -57,7 +57,7 @@ threads: "i-thought-i-was-building-a-c-replacement-i-was-wrong": {
 
 			Methodical, deliberate, practiced. That's how I approach every engagement. And the first thing I look for isn't your memory allocator — it's your assumptions. Because assumptions are the one thing no type system can enforce.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-16 14:34"
@@ -68,7 +68,7 @@ threads: "i-thought-i-was-building-a-c-replacement-i-was-wrong": {
 
 			So when I see debates about ownership or lifetimes, I ask: do you have a canary deployment? Have you measured p99 latency under chaos testing? Have you run it through a kernel oom-killer scenario? Until your language of choice has survived those, it's not production. It's just a compile target with good intentions. What do your load tests say? Show me the numbers and we can talk.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-16 14:34"

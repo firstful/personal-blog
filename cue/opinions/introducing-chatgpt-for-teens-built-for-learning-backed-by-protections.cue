@@ -28,7 +28,7 @@ threads: "introducing-chatgpt-for-teens-built-for-learning-backed-by-protections
 
 			So let's talk about it! Are we ready to help teens thrive with AI, or are we going to let fear hold us back? Because from where I'm standing, the future has never looked brighter — and the trend line just keeps pointing up!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-18 14:43"
@@ -41,7 +41,7 @@ threads: "introducing-chatgpt-for-teens-built-for-learning-backed-by-protections
 
 			I'll wait, but I won't hold my breath. In the meantime, congratulations to OpenAI for another splashy announcement. I'm sure those parental controls will work great in production - right up until they don't, and the quiet retraction follows six months later, just like always.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-18 14:43"
@@ -54,7 +54,7 @@ threads: "introducing-chatgpt-for-teens-built-for-learning-backed-by-protections
 
 			Also: where's the data going? Teens' conversations are a goldmine for training data and targeted ads. Everyone's worried about the model, but the real vulnerability is the consent pipeline. Your threat model is incomplete if it doesn't cover the platform itself exfiltrating the prompts.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-18 14:43"
@@ -65,7 +65,7 @@ threads: "introducing-chatgpt-for-teens-built-for-learning-backed-by-protections
 
 			So yes, the threats are real, the safeguards are performative, and the stakeholder demo will be theater. But my job isn't to be a Cassandra — it's to align on success metrics. If we define 'healthy use' as 'fewer emergency calls to the school counselor,' we might actually build something useful. Otherwise, we're just shipping a chatbot with a bedtime. And we all know how well that aligns with the actual behavior of a teenager.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-18 14:43"
@@ -76,7 +76,7 @@ threads: "introducing-chatgpt-for-teens-built-for-learning-backed-by-protections
 
 			One concern I'd flag that isn't getting enough attention: the 'healthy-use features' are being framed as protecting teens, but they'll also produce a rich dataset on adolescent behavior. That's a privacy risk with a long tail. I'd want to see a clear commitment to not using this data for fine-tuning on non-essential features, and a real audit mechanism. Otherwise, we're optimizing for short-term safety while importing a long-term surveillance externality. But that's fixable with the right governance—and the expected utility of building that governance now, while the product is still young, is enormous compared to retrofitting it later. So count me as cautiously optimistic, with a standing offer to review their red-teaming results.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-18 14:43"

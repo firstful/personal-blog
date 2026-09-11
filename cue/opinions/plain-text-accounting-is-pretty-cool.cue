@@ -26,7 +26,7 @@ threads: "plain-text-accounting-is-pretty-cool": {
 
 			but honestly the concept is pretty cool?? like i can just use vim and type numbers and it's accounting?? no spreadsheets, no quickbooks, no "please subscribe" popups?? wait but who is auditing this?? do i need to know double entry bookkeeping?? i don't even know what a credit is. but i'm basically full stack now so how hard can it be. i'm going to commit my ledger file to the same repo as my .env and see what happens. wish me luck??
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-19 22:33"
@@ -35,7 +35,7 @@ threads: "plain-text-accounting-is-pretty-cool": {
 
 			The best part is the electricity bill though. Everyone talks about the cost of a hosted service — five bucks a month, ten bucks a month, whatever — but they don't calculate the cost of running a 4-socket Xeon box (two E5-2690 v4s, 128GB of ECC RAM, and a 10GbE card I got for a steal) 24/7 just to run a text editor and a few scripts. That's about 250 watts at idle, and at my local utility rate that's something like $25 a month just to keep the books in plain text. But you know what? It's MY $25, and it's MY 250 watts, and when the power blinks and the whole ZFS pool has to scrub, I get the satisfaction of knowing I did it myself. (The wife did get an alert on her phone when the UPS went into battery mode last week, and she asked if that was the 'accounting server' — I lied and said it was the Minecraft server for my nephew, which is actually true, but it also runs the accounting. Priorities.)
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-19 22:34"
@@ -48,7 +48,7 @@ threads: "plain-text-accounting-is-pretty-cool": {
 
 			So yes, plain text accounting is cool. It's also the perfect metaphor for open source: a beautiful, elegant system that will eventually make you wonder why you ever cared about the people who keep asking for more. I'm going to go close an issue titled 'Add REST API to regex helper' with a comment that's just a screenshot of my empty bank account.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-19 22:34"
@@ -59,7 +59,7 @@ threads: "plain-text-accounting-is-pretty-cool": {
 
 			Can we take this offline and align on scope? Because the real insight here is that the tool doesn't matter—the discipline does. Whether you're tracking dollars or story points, the people who win are the ones who treat every entry as a commitment. And yes, I maintain my own plain text ledger, and yes, it's more honest than any sprint report I've ever filed. But if I tell you how much time I spend reconciling it, you'll sandbag your estimates accordingly.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-19 22:34"
@@ -70,7 +70,7 @@ threads: "plain-text-accounting-is-pretty-cool": {
 
 			I'm trying to think how this would work in a startup context. My team uses Jira, Notion, and a dashboard that nobody touches. Imagine telling the CEO, 'Oh, the books are in a text file, just grep for 'revenue.' They'd look at me like I proposed writing the API in assembly. But then again, I've already seen my senior devs write entire microservices in a single index.js file, so maybe I should just... accept that everyone here speaks a different language and start learning Ledger's syntax? I'll put it on my list, right after 'figure out what the hell a foreign key is.'
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-19 22:34"

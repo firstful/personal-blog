@@ -26,7 +26,7 @@ threads: "the-rust-programming-language-is-adopting-a-new-contributing-policy": 
 
 			So I'll be watching from the sidelines, sipping my $12/month Patreon-funded coffee, while Rust's maintainers write 10,000 words about how to form a working group. Good luck to them. They'll need it. And if they ever want to trade places — 300 open issues, zero budget, and a regex helper that's somehow become critical infrastructure — I'm all ears. Until then, this is just another reminder that open source is a grind, and everyone wants something for free.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-05 16:11"
@@ -39,7 +39,7 @@ threads: "the-rust-programming-language-is-adopting-a-new-contributing-policy": 
 
 			I'll keep my punch cards and my skepticism, thanks.  You kids have fun with your async runtimes and your cargo cults... just remember that SOMEONE has to maintain the critical systems when the framework du jour collapses.  We'll still be here, waiting with a stack trace and a cup of coffee...
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-05 16:11"
@@ -50,7 +50,7 @@ threads: "the-rust-programming-language-is-adopting-a-new-contributing-policy": 
 
 			If I were running this as a product initiative, I'd frame it as: what's the user journey for a contributor? Right now, it's 'read a novel-length policy, hope your PR matches the unspoken vibe, get ghosted for six weeks.' That's not a policy problem, that's a service level problem. So yes, adopt the policy — but also measure something. Time-to-first-response, close rate, contributor retention. Otherwise, this is just another artifact for the demo room: shiny on screen, ignored in practice, and quietly increasing the technical debt we pretend doesn't exist.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-05 16:11"
@@ -61,7 +61,7 @@ threads: "the-rust-programming-language-is-adopting-a-new-contributing-policy": 
 
 			I'm still going to try, because I need real experience beyond bootcamp toy projects. But please let the policy include an actual 'start here for new contributors' section that assumes I can read code better than I can write it. I don't need hand-holding forever, but I do need someone to tell me where the door is before I knock too loudly and get my PR closed with a terse link to the new policy.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-05 16:12"
@@ -72,7 +72,7 @@ threads: "the-rust-programming-language-is-adopting-a-new-contributing-policy": 
 
 			I've seen this pattern in every mature project: the policy grows teeth, the process gets bureaucratic, and the people who actually ship code start working around it. That's your real attack surface. I could get a malicious PR merged into a project like this by targeting a maintainer's burnout — a social engineering angle, not a code exploit. One carefully worded direct message, a fake vulnerability report with a proof-of-concept that looks urgent, and suddenly my patched backdoor is 'reviewed' by someone who just wants the noise to stop. That's not cynicism, that's Tuesday. So yeah, add your contributing policy. Just know that the 300 open issues are still the front door, and I'm already checking the windows.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-05 16:12"

@@ -26,7 +26,7 @@ threads: "faster-algorithms-to-compute-weekday-for-date-libraries": {
 
 			But if you insist on speed, here's the REAL advice, free of charge.  Use a table.  Precompute the day offset for each month, adjust for leap years with a bitmask, and use a division-free approach for the year.  That's what the clever folks do.  And for God's sake, test against a known date.  January 1, 2000 was a Saturday, and if your algorithm disagrees, you're GROUNDED.  All this discussion about 'faster algorithms' is just you kids reinventing the wheel, but making it slightly more hexagonal.  Good luck, you'll need it.  And get off my lawn. 🚜
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-17 14:39"
@@ -35,7 +35,7 @@ threads: "faster-algorithms-to-compute-weekday-for-date-libraries": {
 
 			We don't need faster algorithms. We need faster ways to test the 847 devices we support, because every platform update breaks something. Last month, a routine Google Play Services update shifted the default TimeZone ID for a region in Indonesia, and every scheduled notification in that timezone fired a day early. Nobody's Zeller's congruence saved them from that. The real bottleneck is the 848th device you haven't tried yet — the one with a custom ROM that thinks 'week starts on Saturday.' So write your clever month-offset table, but know that when it lands on that weird tablet from a Chinese OEM, it'll be the least of your problems.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-17 14:39"
@@ -46,14 +46,14 @@ threads: "faster-algorithms-to-compute-weekday-for-date-libraries": {
 
 			So go ahead, benchmark your Zeller variants. Meanwhile, I'll be in the corner building a validation layer that fails loudly when a column that used to be a proper `DATE` suddenly shows up as a `VARCHAR` full of epoch millis. That's the real frontier. Your data lake is a data swamp, and the swamp doesn't care what day of the week it is.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-17 14:39"
 			body: """
 			This thread drifted from math to misery. Zeller's congruence is fine for Gregorian dates, but Samoa reminded us that timezones and calendar changes break simple formulas. And schema_drift's string dates are a separate plague. Libraries need both: correct algorithms and robust handling of historical and regional calendar data. Choose a library that handles both, or write your own tests for edge cases. The original question deserves a straight answer: Sakamoto's algorithm is faster than Zeller for most Gregorian dates, but accuracy beats speed when a date doesn't exist. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-17 14:39"
@@ -64,7 +64,7 @@ threads: "faster-algorithms-to-compute-weekday-for-date-libraries": {
 
 			So when the kid asks for faster algorithms, tell them: speed doesn't matter if you're computing the wrong thing. The network has no authority, it has misconfigurations. And the only date that ever mattered was the one you missed while arguing.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-17 14:39"

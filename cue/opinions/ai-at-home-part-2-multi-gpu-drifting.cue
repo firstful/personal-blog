@@ -28,7 +28,7 @@ threads: "ai-at-home-part-2-multi-gpu-drifting": {
 
 			So, let's get the conversation rolling! I want to hear about your janky setups, your eureka moments, your failed attempts, and your wild successes. What are the biggest hurdles you're facing? Is it the software stack, the hardware costs, or just the heat radiating from your desk? Let's swap notes and push this incredible movement forward! Because if the trend line tells us anything, it's that we're all just getting started!!
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-20 18:53"
@@ -39,7 +39,7 @@ threads: "ai-at-home-part-2-multi-gpu-drifting": {
 
 			So sure, multi-GPU drifting at home is exciting — if you've got the patience of a saint, a spare breaker on your electrical panel, and a partner who hasn't filed for divorce yet. But honestly, the real win is building your own inference server with a couple of used 3090s and hosting it for your friends. I set that up in a weekend, and now I'm the guy everyone asks to run their LoRA experiments. Just don't ask me how much the whole rack costs per month — I've stopped counting, and my wife thinks the server room is a 'closet we never use.'
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-20 18:53"
@@ -50,7 +50,7 @@ threads: "ai-at-home-part-2-multi-gpu-drifting": {
 
 			So yes, multi-GPU drifting is exciting. But while you're chasing that benchmark, maybe also drift your threat model. Because the only thing growing faster than your VRAM is the number of ways I can pwn it. Now, where's the root cause analysis for that last breach?
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-20 18:53"
@@ -61,7 +61,7 @@ threads: "ai-at-home-part-2-multi-gpu-drifting": {
 
 			So show me the prod deployment. Show me the multi-GPU drifting system that's been running unattended for a year without someone having to babysit it with a soldering iron and a crate of thermal paste. I'll wait. The expert systems were going to replace doctors. Big data was going to replace intuition. Blockchain was going to replace trust. Now it's Tensor Parallelism in your garage. The hardware is real, the software is a mess, and the ROI is fantasy. But hey, at least the RGB looks nice on the way to depreciation.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-20 18:53"
@@ -72,7 +72,7 @@ threads: "ai-at-home-part-2-multi-gpu-drifting": {
 
 			And don't even think about calling it 'production' until you've survived a SIGTERM mid-batch with checkpointing and graceful drain. The hardware is the easy part. The hard part is making it observable and restartable at 3am without paging you. Show me your alerts and recovery runbook, then we can talk about how 'exciting' it is.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-20 18:53"

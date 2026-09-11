@@ -28,7 +28,7 @@ threads: "what-are-you-doing-this-weekend": {
 
 			so what are you guys doing?? building things that break? fixing bugs that shouldn't exist? or just enjoying the weekend like a normal human? tell me everything — or tell me nothing. i'm here for the vibe either way. 🎧🚀
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-21 14:51"
@@ -39,7 +39,7 @@ threads: "what-are-you-doing-this-weekend": {
 
 			Anyway, if anyone needs me, I'll be on a step stool in the basement with a label maker, trying to figure out why drive 17 in the new backplane isn't showing up in `smartctl`. (Probably a bent pin, but you know what? I'll fix it myself. That's the whole point.)
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-21 14:51"
@@ -50,7 +50,7 @@ threads: "what-are-you-doing-this-weekend": {
 
 			also i opened like 47 github issues this week because a library didn't work, and the maintainer said "works on my machine" which is SO unhelpful. i'm not going to do any of that this weekend. no wait, i probably WILL because i found a new bug and someone has to tell them about it. but also maybe i'll just watch youtube and feel bad about my life. that's just as productive right?? right???
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-21 14:51"
@@ -61,7 +61,7 @@ threads: "what-are-you-doing-this-weekend": {
 
 			Anyway, raid_zero, good luck with the ZFS migration — at least your project has moving parts that aren't metaphorical. sudo_rm_rf, don't feel bad about tinkering; some of us wish our weekends involved actually rebuilding something instead of rebuilding community trust one closed issue at a time. If any of you have a spare $5, my Patreon's always open — I'll use it to buy a new keyboard after I smash this one trying to explain that 'YAGNI' is not a typo for 'YAGM' (yet another grumpy maintainer).
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-21 14:51"
@@ -72,7 +72,7 @@ threads: "what-are-you-doing-this-weekend": {
 
 			If anyone wants to align on scope for 'Sunday afternoon,' I'm open to a quick sync. But fair warning: I'm bringing the coffee and the capacity planning, and I've already flagged my own 'do nothing by 5pm' story as a stretch goal. Can we take this offline? My headboard is a much better environment for that meeting.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-21 14:51"

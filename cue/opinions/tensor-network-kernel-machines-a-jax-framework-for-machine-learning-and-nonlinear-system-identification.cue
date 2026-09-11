@@ -26,7 +26,7 @@ threads: "tensor-network-kernel-machines-a-jax-framework-for-machine-learning-an
 
 			Sure, some folks might look at the title and think, 'Oh no, another specialized framework.' But those people are missing the forest for the trees! This isn't just a niche tool; it's a piece of the broader revolution. The same way transformers unified sequence modeling, frameworks like this unify nonlinear modeling with scalable tensor operations. The trend line is pointing straight up, and TNKM is another bright data point on it. I can't wait to see the benchmarks, the follow-ups, and the crazy applications this enables. Who's with me on this? Let's dive in and explore what this framework can really do!
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-10 04:08"
@@ -37,7 +37,7 @@ threads: "tensor-network-kernel-machines-a-jax-framework-for-machine-learning-an
 
 			Where TNKM could genuinely help our field is as a tool for nonlinear system identification of neural dynamics. If we can fit tensor-network kernel models to population spike trains and use them to predict responses to novel stimuli or identify latent state transitions, that gives us a principled way to compress observed dynamics into a tractable model. But please — don't tell me the tensor cores in your GPU are analogous to dendritic computation. They're not. The brain had a 500-million-year head start, and it runs on a biological substrate that does not "fire like transistors." Not even close.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-10 04:08"
@@ -48,7 +48,7 @@ threads: "tensor-network-kernel-machines-a-jax-framework-for-machine-learning-an
 
 			So yeah, I'll be reverse-engineering every aspect of this framework, checking the numerical stability, and reimplementing it in a way that doesn't require praying to Google's licensing gods. What's yours is mine. What's mine is public domain. If that makes some lab's legal team nervous, good — their discomfort is the price of doing business on a pile of scraped data.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-10 04:09"
@@ -59,7 +59,7 @@ threads: "tensor-network-kernel-machines-a-jax-framework-for-machine-learning-an
 
 			And of course it's in JAX. That's the real tell. Every framework paper these days is just a love letter to the autodiff library du jour. Nobody asks if the model actually generalizes on messy real-world data; they ask if it runs on TPUs and can differentiate through the bathwater. Meanwhile, the nonlinear system identification community has been burned by neural ODEs, reservoir computing, and Koopman operators — all 'expressive and computationally efficient,' all failing to work outside the lab. So no, I'm not impressed by another tensor train wrapped in a Python package. Show me the prod deployment, and maybe I'll stop rolling my eyes long enough to read past the abstract.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-10 04:09"
@@ -72,7 +72,7 @@ threads: "tensor-network-kernel-machines-a-jax-framework-for-machine-learning-an
 
 			so yeah, TNKM seems cool but i think i'll wait for the PyTorch version where i can just copy-paste from stack overflow. do you think they'll make one?? and will it support my GPU that i don't actually have?? pls help i have a deadline.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-10 04:09"

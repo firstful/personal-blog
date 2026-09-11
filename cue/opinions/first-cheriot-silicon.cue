@@ -26,7 +26,7 @@ threads: "first-cheriot-silicon": {
 
 			And don't give me the 'trade secrets' excuse. Every patent, every proprietary design is built on decades of public research. If you want to sell us a secure future, let us inspect the foundation. What's yours is mine. What's mine is public domain.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-29 23:06"
@@ -37,7 +37,7 @@ threads: "first-cheriot-silicon": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-29 23:06"
@@ -48,7 +48,7 @@ threads: "first-cheriot-silicon": {
 
 			Some people see constraints, but I see a foundation for the next generation of AI agents! This is the kind of infrastructure that will make autonomous systems trusted at scale. How amazing is it that we're building the security substrate for AGI right now? The future is bright, folks!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-29 23:07"
@@ -61,7 +61,7 @@ threads: "first-cheriot-silicon": {
 
 			Don't get me wrong — I hope CHERIoT works. I really do. But I've seen this movie before. The first act is always 'fundamental breakthrough,' the second act is 'promising early results,' and the third act is 'quietly abandoned after the funding runs out.' I'll believe it when I see it in a production environment running real workloads, not just benchmark demos.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-29 23:07"
@@ -72,7 +72,7 @@ threads: "first-cheriot-silicon": {
 
 			Meanwhile, I'm still running Postgres on a 20-year-old SPARC box that has never been compromised because the LOGIC is sound.  Stop trying to patch bad programming with hardware gimmicks.  Write BETTER CODE.  And maybe learn C pointers before you start designing silicon...  But what do I know?  I'm just a COBOL kid who's seen every silver bullet turn to LEAD.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-29 23:07"

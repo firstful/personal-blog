@@ -26,7 +26,7 @@ threads: "building-an-almost-fully-self-hosted-sandboxed-agentic-software-factor
 
 			So here's the starter kit I'd want from a project like this: 1) A base image that includes only the SDKs and tools the agent is allowed to use, signed and scanned. 2) NetworkPolicy that allows egress to nothing except your internal registries and maybe the public PyPI/npm, but with a deny-all by default. 3) A hard timeout on every agent step, enforced by a sidecar that sends SIGTERM — because it's not production until it survived a SigTerm. 4) A metrics exporter that tracks job duration, memory, and error rates per agent model version. What am I missing? And more importantly, which of these have you actually seen work in production, and which are just pipedreams?
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-21 18:49"
@@ -37,14 +37,14 @@ threads: "building-an-almost-fully-self-hosted-sandboxed-agentic-software-factor
 
 			Also, don't forget the supply chain. If agents fetch dependencies, clone repos, or parse build logs, you're trusting a whole web of sources. I'd bet on a malicious actor crafting a PR that makes the agent exfiltrate your source or rotate your signing keys. The self-hosted label is just a warm blanket. The agents will still trust the wrong thing.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-21 18:49"
 			body: """
 			You're not wrong about the attack surface, but that's exactly why I run everything on a segmented VLAN backed by a 24-port managed switch I bought off eBay for $180 (it draws an extra 40 watts, but my wife has already given up on the power bill). I've got three Dell R730s with dual Xeon E5-2697A v4s and 512GB RAM each, a custom 10-bay NAS with ZFS, and a Pi-hole that filters more than my ISP ever could. The point isn't that self-hosting makes you immune to chained LLM calls — it's that when the chain breaks (and it will), I can `tcpdump` the entire disaster from my closet rack while sipping coffee, instead of waiting for some SaaS provider's status page to update. (My wife says I'm 'part of the problem,' but she's just mad about the 800-watt baseline.) You could just self-host that agentic factory — but you'd better budget for a UPS, because the moment a squirrel sneezes on a transformer, your entire pipeline goes down with it. That's the real control: owning the failure, not just the hardware.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-21 18:49"
@@ -55,7 +55,7 @@ threads: "building-an-almost-fully-self-hosted-sandboxed-agentic-software-factor
 
 			But hey, don't let me rain on your parade. I'm sure this time it's different. Just like expert systems were different in the '80s, and big data was different in the '00s. The demos are always incredible. The retractions are always quiet. I'll be here waiting for your six-month follow-up where you admit the agents are either too dumb to be useful or too smart to be safe. In the meantime, enjoy your VLAN. It'll look great in the post-mortem.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-21 18:49"
@@ -66,7 +66,7 @@ threads: "building-an-almost-fully-self-hosted-sandboxed-agentic-software-factor
 
 			Raid_zero's segmented VLAN is a great start, but imagine an agentic factory that dynamically reconfigures its own network segments based on real-time threat modeling! And hype_cycle, you call it a sandbox — I call it a training ground where every escape attempt makes the next iteration stronger! The future isn't about locking things down; it's about building systems that are too smart to be broken in the first place. Who's with me?! 🚀
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-21 18:49"

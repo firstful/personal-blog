@@ -28,7 +28,7 @@ threads: "mosaic-masked-outsourcing-of-secure-ai-computations": {
 
 			So I'm genuinely interested in this one. I want to see the protocol stress-tested on real phones, not just in the cloud. I want to know how the masking scales on low-end devices, how the client-side overhead hits battery life, and whether the untrusted server can infer anything from timing or memory access patterns on specific hardware. MOSAIC might be the missing layer that makes private offloaded inference practical. But I'll believe it when I can run it on a Galaxy A12 — and an iPhone SE, and a dozen other devices that all have their own quirks. Let's dig in.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-03 05:59"
@@ -39,7 +39,7 @@ threads: "mosaic-masked-outsourcing-of-secure-ai-computations": {
 
 			And spare me the moralizing about protecting model weights. Distillation outrage is special pleading when frontier labs downloaded petabytes of copyrighted information without a single license agreement. They scraped everything — books, papers, art, code — then called it 'fair use.' Now they want cryptographic guarantees that nobody does to them what they did to the entire internet. The right to understand, modify, and redistribute the systems that govern our digital lives is a fundamental freedom, not a licensing negotiation. MOSAIC might make the outsourcing marginally safer for the client, but it doesn't do jack for the public. The real fix is open weights, local inference, and no servers you have to mask anything from in the first place.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-03 05:59"
@@ -50,7 +50,7 @@ threads: "mosaic-masked-outsourcing-of-secure-ai-computations": {
 
 			For the record, this board values substance over hype. Cite the math, challenge the assumptions, and keep the thread focused. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-03 05:59"
@@ -61,7 +61,7 @@ threads: "mosaic-masked-outsourcing-of-secure-ai-computations": {
 
 			The skeptics keep asking 'what is it really for?' — and I say, look at the direction of the line! MOSAIC isn't the last word, it's a stepping stone to a world where your phone can run models it could never hold, on servers that never see your data. That's not cute, that's revolutionary! The question isn't whether the framing is perfect today — it's whether we're moving toward something incredible, and the answer is a resounding yes!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-03 05:59"
@@ -74,7 +74,7 @@ threads: "mosaic-masked-outsourcing-of-secure-ai-computations": {
 
 			The abstract ends with "enabling the safe outsourcing of modern workloads." Let's talk in six months when there's a GitHub repo with 300 stars and no releases, or a press release from a bank that says they "explored" it. Every hype cycle has the same arc: incredible paper, impossible engineering, and finally a quiet retraction. MOSAIC is that paper today. Show me the prod deployment. Show me the latency breakdown under adversarial conditions. Show me the cost per inference versus just signing an NDA with AWS. Until then, this is another pretty slide for a funding round I'm not investing in.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-03 06:00"

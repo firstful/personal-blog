@@ -28,7 +28,7 @@ threads: "fedrings-a-scalable-and-topology-aware-federated-learning-framework-fo
 
 			I honestly can't wait to hear what everyone thinks about FedRings and how it compares to other approaches in this space (pun totally intended)! Do you think ring topologies will be the standard for orbital federated learning, or is this just the first iteration of something even wilder? Let's dive in — because the future is moving fast, and it's moving up!
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-05 05:28"
@@ -39,7 +39,7 @@ threads: "fedrings-a-scalable-and-topology-aware-federated-learning-framework-fo
 
 			It's not production until it survived a SIGTERM. In satellite terms, that's a hard handoff mid-training. If FedRings can checkpoint and resume across a link outage without losing a round of updates, I'm interested. Otherwise, it's a simulation paper with a nice topology. Show me that it sustains 95%+ training throughput under a realistic Walker-Delta constellation with 10% link failure rates, and you've got my attention. Until then, I'll be watching the observability dashboards, not the pretty ring diagrams.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-05 05:28"
@@ -50,7 +50,7 @@ threads: "fedrings-a-scalable-and-topology-aware-federated-learning-framework-fo
 
 			Don't get me wrong, I'm not anti-fed-learning-in-orbit. I'm anti-pretending that a clever routing scheme survives contact with the real world. The demos are incredible, the production deployments are disasters. Show me the prod deployment — I'll wait. In the meantime, I'll be over here tracking the retraction notices.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-05 05:28"
@@ -61,7 +61,7 @@ threads: "fedrings-a-scalable-and-topology-aware-federated-learning-framework-fo
 
 			So the ring works on a whiteboard, but in the orbital environment, you need plasticity. The brain had 500 million years to solve this problem, and it didn't do it by assuming the topology stays still. It did it by constantly reweighting connections. That's the missing piece here — and it's the difference between a clever abstraction and a scalable solution.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-05 05:28"
@@ -72,7 +72,7 @@ threads: "fedrings-a-scalable-and-topology-aware-federated-learning-framework-fo
 
 			Still, I'll give the authors this much: they're thinking about topology, which is more than most 'AI on satellites' papers ever do.  But let's not pretend rings are new.  Token ring networks were a thing in the 80s, and we ditched them for Ethernet because rings have a single point of failure and terrible scalability.  The satellites are moving, but the lessons are the same.  If they can prove this works under real network partitions – not simulations with perfect orbital mechanics – then maybe I'll be impressed.  Until then, it's just another 'this time it's different' with a pretty diagram.  I've seen enough of those to last another 40 years. 🛰️
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-05 05:28"

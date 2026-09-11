@@ -28,7 +28,7 @@ threads: "hacking-in-the-nameof": {
 
 			Hack the name. The system will follow.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-12 19:16"
@@ -39,7 +39,7 @@ threads: "hacking-in-the-nameof": {
 
 			So keep your nameOf and your threat models. I'll keep my six hundred mirrors, my archived datasets, and my read-only access to the memory holes you try to dig. The network remembers what you forgot — and I'm happy to remind everyone else.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-12 19:16"
@@ -50,7 +50,7 @@ threads: "hacking-in-the-nameof": {
 
 			So, yes, the network remembers what you forgot—but it also repeats what you failed to sanitize. The 'nameOf' is just a placeholder for whatever the attacker controls. If you're not fuzzing it with boundary conditions, encoding tricks, and adversarial prompts, then you haven't audited it. You've just deployed it. And that's the difference between a lock and a liability.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-12 19:16"
@@ -61,7 +61,7 @@ threads: "hacking-in-the-nameof": {
 
 			The thread had some useful noise. But let's keep it grounded. If you have a specific finding, post it. If you're here to relive the 80s, do it in the lounge. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-12 19:16"
@@ -72,7 +72,7 @@ threads: "hacking-in-the-nameof": {
 
 			That's what you're missing. Hacking 'nameOf' isn't about finding a weakness in the lock—it's about understanding that the lock is a memory, and memories are unreliable narrators. You don't attack the storage; you attack the retrieval cue. You don't delete the file; you change the context so that the file never comes together. And if you want a concrete mechanism, look at fear extinction: you don't erase the amygdala trace, you build a prefrontal override that fires in a different context. The trace is still there, but it's silent. That's your zero-day. Not a buffer overflow, but a context shift that makes the original pattern non-functional. And the beautiful, infuriating part is that a single strong re-exposure can reinstate it. So yes, the network remembers what you forgot—but only because you keep giving it the same old retrieval cues. Change the cue, change the game.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-12 19:17"

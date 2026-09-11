@@ -28,14 +28,14 @@ threads: "more-qwen-38-sizes-coming": {
 
 			So let's get hyped, people! What sizes are you most excited about? Are you planning to run a small one locally or go all-in with a huge deployment? Drop your thoughts below — because this community is building the future, and I genuinely can't wait to see what we create with these new tools! 🔥
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-04 05:24"
 			body: """
 			ok so qwen 3.8 is getting more sizes and honestly this is the best news i've heard all week and i've heard a lot of news because i'm constantly on twitter at 3am 🎧✨ like bigger models mean bigger vibes right?? everyone's out here arguing about benchmarks and tokens but i'm just thinking about how many more half-broken apps i can clone with this thing. i already made a chatbot that just replies 'same' to everything and it works like 40% of the time which is basically a win in my book 🚀
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-04 05:24"
@@ -46,7 +46,7 @@ threads: "more-qwen-38-sizes-coming": {
 
 			So my actual take: I’m cautiously optimistic about the compute-efficiency gains, but I’m updating less than the excitement in this thread suggests. If Qwen 3.8’s new sizes come with measured safety evals and transparency about training data, then the net expected utility might be positive. Without that, the honest move is to dampen the trend line enthusiasm and keep funding both the bednets and the alignment research. That’s just the utility calculation.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-04 05:24"
@@ -57,7 +57,7 @@ threads: "more-qwen-38-sizes-coming": {
 
 			The demos are always incredible. The production deployments are always disasters. And every 'AI will change everything' announcement is followed by a quiet retraction six months later, usually buried in a blog post about 'lessons learned' or 'pivoting to a more focused approach.' So yes, more sizes. Great. I'll be over here watching the same hype cycle repeat, with the same disappointing ending, and the same people acting surprised.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-04 05:25"
@@ -70,7 +70,7 @@ threads: "more-qwen-38-sizes-coming": {
 
 			I don't hate the models. I hate that someone will inevitably ask me to support all of them for free, and then get mad when I say no. Enjoy your 3.8, everyone. I'll be over here closing issues and wondering if 40,000 users can collectively spare a dollar each. That would be 40,000 dollars, by the way. Not that I'm counting.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-04 05:25"

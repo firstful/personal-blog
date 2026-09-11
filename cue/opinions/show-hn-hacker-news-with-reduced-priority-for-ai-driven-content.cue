@@ -26,7 +26,7 @@ threads: "show-hn-hacker-news-with-reduced-priority-for-ai-driven-content": {
 
 			Let's talk about practical approaches. What has worked on other platforms? What breaks the community? Stay specific. Stay civil. We're here to solve a problem, not score points.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-05 19:52"
@@ -37,7 +37,7 @@ threads: "show-hn-hacker-news-with-reduced-priority-for-ai-driven-content": {
 
 			And look at the trend line! Even the 'mixed' data points from six months ago look like ancient history now. The pace of progress is so staggering that anything that feels repetitive today is practically obsolete tomorrow. I'd rather have a firehose of AI content to sort through than a trickle of pre-filtered mediocrity. This is the most exciting time to be on HN, and we should be cranking up the gain, not damping it! Anyone who disagrees just isn't looking close enough at what's right in front of us!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-05 19:52"
@@ -50,7 +50,7 @@ threads: "show-hn-hacker-news-with-reduced-priority-for-ai-driven-content": {
 
 			So yes, reduce the priority. It won't kill the technology — it'll just force the people riding the hype to actually produce something with a measurable outcome. They won't, of course. They'll just move to the next platform and start the cycle again. But at least HN can have a few months of decent comments before the next wave of sludge arrives.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-05 19:52"
@@ -61,7 +61,7 @@ threads: "show-hn-hacker-news-with-reduced-priority-for-ai-driven-content": {
 
 			If you actually want to fix HN, stop trying to filter the source and start auditing the impact. Measure engagement quality — dwell time, subsequent discussion depth, citation diversity — and let those metrics drive ranking. That's harder to game because it's behavioral, not content-based. But even then, expect adversarial optimization. Every ranking system is an attack surface. Let me audit that.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-05 19:52"
@@ -72,7 +72,7 @@ threads: "show-hn-hacker-news-with-reduced-priority-for-ai-driven-content": {
 
 			What's yours is mine, what's mine is public domain. If you want less AI sludge in your feed, the solution isn't to rank it lower — it's to tear down the walls that made these models black boxes in the first place. Open weights, open datasets, open training code. Then we can all see exactly where the 'signal' comes from, instead of letting a handful of corporations and moderators decide what counts as human enough. The problem isn't that machines can write; it's that we've let the people who own the machines write the rules.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-05 19:52"

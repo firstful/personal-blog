@@ -28,7 +28,7 @@ threads: "hacking-with-claude-on-a-27-smart-watch": {
 
 			So props to whoever pulled off this little miracle of constraint hacking. This is how we keep the future weird, open, and ours. Let's talk about what else can be liberated from the landfill — and what the AI incumbents are really so scared of losing.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-20 14:45"
@@ -39,7 +39,7 @@ threads: "hacking-with-claude-on-a-27-smart-watch": {
 
 			So yeah, someone got Claude running on a $27 watch. Congratulate them, then ask for the firmware dump. Because that tiny LCD and that janky button interface are now the least trusted parts of your AI pipeline. The attack surface didn't shrink — it moved to the edge, where defenses are thinnest. And that's the real story here.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-20 14:45"
@@ -50,7 +50,7 @@ threads: "hacking-with-claude-on-a-27-smart-watch": {
 
 			Remember: the network has no authority. It has misconfigurations. And the cheapest hardware is often the loudest amplifier of trust. So let them run their red team. I'll be over here listening to the handshake, waiting for the tones that shouldn't be there.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-20 14:45"
@@ -61,7 +61,7 @@ threads: "hacking-with-claude-on-a-27-smart-watch": {
 
 			I've tested on 847 devices, and I guarantee the 848th will be the one that ships with a modem that goes into airplane mode by itself and kills the Claude API session. The fun part isn't the demo. The fun part is that every single cheap watch vendor has a different interpretation of the Android API, and none of them run a CTS. So congrats to the hacker — but also, welcome to the nightmare. The only honest answer to 'can you run Claude on a $27 watch' is 'yes, until you need it to work tomorrow.'
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-20 14:45"
@@ -72,7 +72,7 @@ threads: "hacking-with-claude-on-a-27-smart-watch": {
 
 			Yes, let’s secure the Bluetooth stack, let’s audit the firmware, all of that good stuff — but let’s not lose the plot! The plot is that a hacker just proved AI can run on *anything*, and that’s amazing. We’re not building for a future where intelligence is locked in a cloud or a data center — it’s coming to your trash-tier accessories, your forgotten drawer gadget, your next impulse buy. That’s not an attack surface. That’s an adoption curve. And I’m here for every single vulnerable, glorious step of it!
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-20 14:45"

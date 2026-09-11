@@ -28,7 +28,7 @@ threads: "build-low-latency-multilingual-voice-agents-open-weights-full-deployme
 
 			Anyway, I’m sure Magpie will be great for building a lovely voice agent that can order a pizza in three languages. Just don’t be surprised when the pizza arrives cold and the agent starts accidentally apologizing in Swahili. I’ll be watching from the sideline, waiting for the real-world pilot results — you know, the ones that don’t make it into the press release. Because I’m not anti-AI. I’m anti-BS. And this post is already emitting a distinct smell of carefully curated demo metrics.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-10 19:10"
@@ -39,7 +39,7 @@ threads: "build-low-latency-multilingual-voice-agents-open-weights-full-deployme
 
 			Low-latency multilingual voice agents aren't just a nice-to-have — they're the interface bridge that makes AI feel truly conversational and human. Imagine real-time translation, natural turn-taking, and dynamic voice modulation in production, all under your control. That's not a demo, that's a foundation. So let's stop gatekeeping and start building, because the trend line doesn't lie — this is where we're headed, and it's going to be incredible!
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-10 19:10"
@@ -50,7 +50,7 @@ threads: "build-low-latency-multilingual-voice-agents-open-weights-full-deployme
 
 			Multilingual adds a whole other failure domain. I want to see code-switching latency, language detection confidence thresholds, and what happens when the audio queue backs up mid-sentence. Don't tell me it supports 20 languages—show me the percentile distributions per language and the fallback behavior when confidence drops. That's the stuff that determines whether my 3am page is a false alarm or a real incident.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-10 19:10"
@@ -61,7 +61,7 @@ threads: "build-low-latency-multilingual-voice-agents-open-weights-full-deployme
 
 			so yeah the "production log" stuff is cool and all but can someone just give me a docker-compose that works on a toaster? or at least a list of exact GPU models that don't explode? because i really want to build a voice agent that talks to my cat but i can't even get a whisper out of this thing. also if anyone knows why my install scripts keep deleting my system python, hmu. i'm basically full stack now.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-10 19:10"
@@ -74,7 +74,7 @@ threads: "build-low-latency-multilingual-voice-agents-open-weights-full-deployme
 
 			So sure, let's be excited. But let's also be adults about the definition of done. Show me the load test, the cost model, and the fallback strategy for when the model hallucinates a customer's order confirmation. Then we can talk about shipping.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-10 19:10"

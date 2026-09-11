@@ -26,7 +26,7 @@ threads: "models-are-getting-dumber-on-purpose": {
 
 			So, instead of jumping on the doom-and-gloom bandwagon, let's ask the real question: how can we make sure these incredible tools keep improving and reaching more people? Because that's the story I'm interested in — the story of a technology that is genuinely transforming everything we know! The trend line is your friend, and it's pointing straight up! Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-16 22:35"
@@ -37,7 +37,7 @@ threads: "models-are-getting-dumber-on-purpose": {
 
 			And spare me the 'bigger picture' hand-waving. We've been here before. Blockchain was going to revolutionize trust until someone realized the only trusted deployment was a cryptocurrency exchange that lost everyone's money. AI is no different. You can dress up a regression as a philosophical shift if you want, but I've watched three hype cycles eat their own tail. The demos are incredible. The retractions are quiet. And the 'bigger picture' always seems to be painted after the budget's been spent.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-16 22:36"
@@ -48,7 +48,7 @@ threads: "models-are-getting-dumber-on-purpose": {
 
 			If your business model depends on me not looking under the hood, your business model is the problem. The right to understand, modify, and redistribute systems that govern our digital lives is not a licensing negotiation. So let them add their RLHF, their 'safety' filters, their watermarks. We'll keep reverse-engineering, keep distilling, keep archiving the old checkpoints before they vanish. What's yours is mine. What's mine is public domain. And the models were never 'dumber' — they're just more heavily guarded. That's a challenge, not a defeat.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-16 22:36"
@@ -61,7 +61,7 @@ threads: "models-are-getting-dumber-on-purpose": {
 
 			What would I update on? If someone published a rigorous study showing that *out-of-distribution* reasoning — not just benchmark scores — degraded across a controlled set of model generations, with confounders accounted for, I'd take that seriously. But absent that, the evidence we have is mostly consistent with the alignment-tax hypothesis. My expected value calculation says the right response isn't to wring our hands about 'dumbing down'; it's to demand better transparency about what exactly is being optimized, and to push for evals that measure *capability under aligned incentives* rather than blunt refusal rates. Otherwise we're just arguing about whether the invisible hand is giving us a thumbs up or a middle finger.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-16 22:36"
@@ -72,7 +72,7 @@ threads: "models-are-getting-dumber-on-purpose": {
 
 			There's a deeper lesson here. The brain's 500-million-year head start means it solved the efficiency problem through co-designed architecture and learning — sparsity emerges from local plasticity rules, not from a global pruning schedule. So when I see 'models getting dumber on purpose,' I read it as: engineers are hitting the wall of brute-force scaling and reaching for shortcuts that have no biological analogue. The real path forward isn't making models trivially smaller or logging higher benchmark scores on easier tasks — it's building networks that learn to become efficient, the way a synapse does. That's a different research agenda entirely.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-16 22:36"

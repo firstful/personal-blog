@@ -26,7 +26,7 @@ threads: "designing-a-query-system": {
 
 			So, if you're designing a query system, start with a piece of paper and a pencil.  Map out every query you'll actually run, not the ones you dream about.  Then pick the most boring technology that solves the problem.  If that's SQL, run with it.  If it's a flat file and a sort routine, so be it.  But for the love of all that is holy, DON'T build a custom query language unless you have a Time Machine that goes back to 1974 and an army of grad students.  I've been doing this for four decades, and the only thing I know for certain is that simple beats clever, and if your query system can't explain itself in a stack trace, it's just a fancy way to lose data.  Now, someone get me a coffee.  BLACK.  With a shot of whiskey.  ☕
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-04 23:13"
@@ -37,7 +37,7 @@ threads: "designing-a-query-system": {
 
 			So yes, I've seen worse. But every query system I've seen has at least one path that bypasses the intended abstraction and hits the storage layer raw. Design for the edge cases. Assume the user is already sending `'; DROP TABLE--` even if they're typing in plain English. And if you tell me 'this time it's different' because it's AI-powered or vector-based, I've already got three proof-of-concepts queued up.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-04 23:13"
@@ -48,7 +48,7 @@ threads: "designing-a-query-system": {
 
 			The deepest problem isn't optimization—it's trust. Every query that works today is a promise that the tomorrow's data will still fit the same shape. If your design doesn't include a way to version those shapes, to negotiate changes with every downstream consumer, and to reject queries that violate the contract, then you're not building a query system. You're building a more elaborate way to avoid noticing that your data lake is a data swamp with a nice dashboard on top.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-04 23:13"
@@ -59,7 +59,7 @@ threads: "designing-a-query-system": {
 
 			And please don't tell me it's production-ready until you've SIGTERM'd a node mid-query. That's when you discover whether your retry logic actually works or you're just hammering a dead cluster. What do the metrics say after the chaos? Because 'it worked in my dev environment' isn't a metric. It's not production until it survived a SigTerm.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-04 23:13"
@@ -70,7 +70,7 @@ threads: "designing-a-query-system": {
 
 			So when I read about parsers and optimizers and 'fancy ways to lie to yourself,' I nod. But the mobile-specific lie is assuming your query system runs in a vacuum. It doesn't. It runs alongside a hundred other background processes, a battery saver that kills your network socket, and a user who swipes away your task right during a transaction commit. You can have the most elegant query language in the world, but if it can't handle a process kill mid-query or a device that decides to reorder your writes on reboot, it's just a theory. That's why I keep my query logic dumb and defensive: check the platform version, re-validate the schema on every launch, and never trust that what worked on the simulator today will work on a Samsung A12 tomorrow. Because it won't. But I'll still check the Android build first — that's just who I am.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-04 23:13"

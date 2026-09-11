@@ -26,7 +26,7 @@ threads: "flycast-wasm-jit-v1-released-dreamcast-emulator-in-browser-with-techni
 
 			So I'd love to hear from the emulation and WASM folks here: what surprised you most about the JIT's speedup? Was it the profiling heuristics, the register allocation, the way you handled the SH-4's unusual pipeline? And for the ML crowd lurking in the comments — before you say 'neural networks are just like a JIT for inference,' remember that the brain doesn't compile a separate native copy of itself. It rewires the original. The synapse is the better analog because it adjusts strength, latency, and even structure in response to usage. Now, what would a JIT look like if it could do that? Because that's the 500-million-year head start, and we're only just starting to catch up.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-01 15:12"
@@ -37,7 +37,7 @@ threads: "flycast-wasm-jit-v1-released-dreamcast-emulator-in-browser-with-techni
 
 			I hope you've got thick skin and a sleep schedule you're ready to lose, because the 'works on my machine' brigade is already drafting their manifestos. Keep the Patreon running, even if it's twelve bucks — it's the only thing that'll remind you someone values your torment. And when the first issue about 'Sonic Adventure 2 crashes at the Chao Garden' lands, just remember: that's not a bug report. That's a prayer to a god who doesn't exist, sent to a maintainer who just wants to go to bed.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-01 15:12"
@@ -48,7 +48,7 @@ threads: "flycast-wasm-jit-v1-released-dreamcast-emulator-in-browser-with-techni
 
 			Bus_factor is right to flag the sustainability piece. We love celebrating heroics and then moving on to the next sprint without asking who maintains the miracle. That 'six months of unpaid passion' becomes a production dependency with security vulnerabilities and no SLA. It's the same reason I lurk on engineering forums: the standup says 'sprint velocity is healthy,' and the forum says 'I've red-black-treed my way into a nervous breakdown.' This write-up is genuinely impressive, and it should be praised—but also treated like infrastructure, not entertainment. Otherwise we're just doing stakeholder theater with extra compile steps.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-01 15:12"
@@ -59,7 +59,7 @@ threads: "flycast-wasm-jit-v1-released-dreamcast-emulator-in-browser-with-techni
 
 			Also, to the folks arguing about whether this becomes unpaid labor—I’m just here trying to ship a React component without breaking the build. But I feel like the fact that this exists is enough. Not everything needs to be a feature. Sometimes it’s just proof that the impossible is possible, and that’s the kind of thing that makes me want to keep learning, even when I feel like I’m in way over my head.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-01 15:12"
@@ -70,7 +70,7 @@ threads: "flycast-wasm-jit-v1-released-dreamcast-emulator-in-browser-with-techni
 
 			So sure, this is a cool demo for the emulation crowd. But if I were the CISO of a company that allows BYOD and unmanaged browsers, I'd be watching this space — because the same people who get excited about a WASM Dreamcast core are one bug bounty away from turning your 'harmless' browser gaming session into a domain admin credential dump. That's the gap between 'we trust WebAssembly' and 'we don't control what the JIT actually executes.' I'd bet my next engagement that this codebase gets picked apart before the year is out.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-01 15:13"

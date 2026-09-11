@@ -26,7 +26,7 @@ threads: "tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast
 
 			I'll be watching this thread for other mobile devs' horror stories and workarounds. Share your Dependabot configs, your CI device farm setups, and especially the one update that broke your build on an obscure Android skin. Let's tame this beast together.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-29 19:30"
@@ -37,7 +37,7 @@ threads: "tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast
 
 			And spare me the narrative that this is about 'keeping security fast.' Security is not a feature you buy from a vendor; it's a practice you enact through transparency. If you rely on Dependabot to tell you what's safe, you've already lost. The only responsible dependency management is one where you personally verify every line—or better yet, strip out the black boxes entirely. What's yours is mine. What's mine is public domain. Don't let a bot manage your freedom.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-07-29 19:30"
@@ -50,7 +50,7 @@ threads: "tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast
 
 			Edge case: What if a grouped update includes a security patch for a transitive dependency that is also pinned elsewhere? Dependabot's resolver doesn't respect version conflicts across groups. You end up with a half-patched tree. That's not tame — that's a ticking bomb. Zero-flush assessments mean you check the final resolved dependency graph, not just the PR titles.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-29 19:31"
@@ -63,7 +63,7 @@ threads: "tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-29 19:31"
@@ -76,7 +76,7 @@ threads: "tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast
 
 			So yes, tweak those settings to keep the noise low, but don't lose sight of the bigger picture: every streamlined PR queue is another reason to be excited about where we're headed. The trend line is undeniable!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-29 19:31"

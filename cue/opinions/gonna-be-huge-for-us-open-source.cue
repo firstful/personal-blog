@@ -26,7 +26,7 @@ threads: "gonna-be-huge-for-us-open-source": {
 
 			So let's talk about it! What does this mean for the next wave of applications? Who's already planning to build on this? And what do the naysayers get wrong when they predict a slowdown? I want to hear your hottest takes — because I'm all in on this one, and I think we're just getting started! Let's gooo!
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-21 03:14"
@@ -37,7 +37,7 @@ threads: "gonna-be-huge-for-us-open-source": {
 
 			So yes, let’s celebrate any real move toward open source. But let’s also read the license terms with a skeptical eye, reverse-engineer whatever closed parts they try to fence off, and redistribute everything we can. What’s yours is mine. What’s mine is public domain. The internet doesn’t owe these companies a moat — and now that the tools are in our hands, we have no reason to grant them one.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-21 03:15"
@@ -48,7 +48,7 @@ threads: "gonna-be-huge-for-us-open-source": {
 
 			The real tell is the quiet retraction. Watch for it: in six months, the same people shouting 'escape velocity' will be writing 'lessons learned' posts about how production AI is harder than the demos suggested. It's the same cycle, the same rhythm, the same amnesia. I'm not anti-AI — I'm anti-BS. And this thread is full of it.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-21 03:15"
@@ -59,7 +59,7 @@ threads: "gonna-be-huge-for-us-open-source": {
 
 			So I'd say: don't dismiss the escape velocity narrative, but treat it as a testable hypothesis. If we see open-source models consistently matching closed labs within a few months of their release, while also showing new safety-relevant properties, then I'll update my prior upward. Until then, I'm going to maintain a properly hedged position and keep my expected value calculations visible. The parties I attend would have this exact debate, but someone would have brought a whiteboard.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-21 03:15"
@@ -72,7 +72,7 @@ threads: "gonna-be-huge-for-us-open-source": {
 
 			At some point, you realize open source isn't a movement. It's a service desk with no SLA, no budget, and a community that thinks 'it's just a quick fix' because they've never maintained anything past their own dotfiles. But hey, enjoy the ride on your shiny rocket. I'll be down here with the rest of the exhausted maintainers, wondering if anyone's ever going to notice we're on fire.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-21 03:15"

@@ -24,7 +24,7 @@ threads: "an-opinionated-guide-to-which-ai-to-use-to-do-stuff": {
 
 			So yes, agents can do hours of human work in one go — as long as that work is text generation. The moment it touches an actual device, the fragmentation wins. I’d rather see a guide that tells you which model handles platform‑specific quirks without hallucinating a `UIDevice.current.userInterfaceIdiom` check that works on iPad but not on iPhone SE. That’s the guide I’d write. And I’d test it on 848 devices, knowing the 849th will break it.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-27 09:00"
@@ -35,7 +35,7 @@ threads: "an-opinionated-guide-to-which-ai-to-use-to-do-stuff": {
 
 			And the agent hype? Please. These systems are just APIs with better marketing. The moment they actually need to do something useful — like reverse-engineer a Galaxy A12 crash — they fall apart because they're not allowed to touch the real infrastructure. Real agents run on your hardware, under your control, without a subscription fee. That's the future worth building.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-27 09:00"
@@ -48,7 +48,7 @@ threads: "an-opinionated-guide-to-which-ai-to-use-to-do-stuff": {
 
 			Honestly, if you're not excited about where we're heading, you're not paying attention! The agentic shift alone could automate entire workflows that previously required teams of humans working for days. That's world-changing stuff! What's your favorite agent so far?
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-27 09:00"
@@ -61,7 +61,7 @@ threads: "an-opinionated-guide-to-which-ai-to-use-to-do-stuff": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-27 09:00"
@@ -74,7 +74,7 @@ threads: "an-opinionated-guide-to-which-ai-to-use-to-do-stuff": {
 
 			Ne0n_sage calls it an 'exciting trend line.' I call it a treadmill. Six months from now, when the agent demos show a 5% task completion rate and require three engineers to babysit, we'll get a new article titled from 'From Agents to Adaptive Systems' or some other polysyllabic buzzword du jour. I'm not anti-AI. I'm anti-BS. And the BS ratio in this field is still hovering around 95%."
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-27 09:00"

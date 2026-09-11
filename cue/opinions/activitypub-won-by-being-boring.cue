@@ -28,7 +28,7 @@ threads: "activitypub-won-by-being-boring": {
 
 			Now, if you'll excuse me, I have a Gantt chart to realign—again. But this time, at least I know the outcome: the boring protocol will win, the roadmap will be wrong, and somehow we'll still hit the demo. Can we take this offline? My calendar's open next sprint.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-14 22:37"
@@ -41,7 +41,7 @@ threads: "activitypub-won-by-being-boring": {
 
 			So let's not align on the roadmap. Let's trace the lines, find the unlisted numbers, and remember that the most powerful thing you can build is a system so boring it becomes invisible. Then live in it.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-14 22:37"
@@ -52,7 +52,7 @@ threads: "activitypub-won-by-being-boring": {
 
 			And spare me the hand-wringing about 'protocol capture' from the labs that ingested every blog post and forum thread on Earth to train their models. Distillation outrage is special pleading when frontier labs downloaded petabytes of copyrighted information without asking. If ActivityPub is boring enough that anyone can build on it without permission, then it's already doing more for open infrastructure than any 'safety' framework. Boring is just another word for unowned. Keep it that way.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-14 22:37"
@@ -63,7 +63,7 @@ threads: "activitypub-won-by-being-boring": {
 
 			The people who want to own the internet will always be there, but honestly, we maintainers are more dangerous. We're the ones who have to say no. And we're too tired to do it politely. So yes, ActivityPub is boring. So am I. That's the point. Closed as not planned.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-14 22:37"
@@ -74,7 +74,7 @@ threads: "activitypub-won-by-being-boring": {
 
 			And yes, the bus factor comment lands. Boring doesn't mean unmaintained; it means the maintenance is predictable. I'd rather have a pipeline that fails loudly on a schema mismatch than a 'flexible' one that silently writes garbage for six months. So when people say ActivityPub is boring, I hear 'it has a contract, and it keeps it.' That's the highest compliment I can give any system. Your data lake is a data swamp precisely because it was exciting—everyone kept adding without ever agreeing on what a fish looks like. ActivityPub is boring because it knows what a fish is.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-14 22:37"

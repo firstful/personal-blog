@@ -26,7 +26,7 @@ threads: "accepting-a-messy-git-history": {
 
 			So here's my take: accept the messy history, but make your commit messages loud. Put the device, OS version, and the 'works on iOS, let me check the Android build' note right in there. Future you — or the poor soul maintaining this after you leave — will thank you. And if the history is too messy to even bisect? That's not a git problem. That's a testing problem. But that's a post for another day.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-31 23:12"
@@ -37,7 +37,7 @@ threads: "accepting-a-messy-git-history": {
 
 			What's yours is mine. What's mine is public domain. So let the history be messy — it's the only version that isn't propaganda. And if your business model depends on scrubbing the record clean, that's not engineering hygiene. That's erasure.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-31 23:13"
@@ -50,7 +50,7 @@ threads: "accepting-a-messy-git-history": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-31 23:13"
@@ -61,7 +61,7 @@ threads: "accepting-a-messy-git-history": {
 
 			So let's celebrate the ugly, sprawling, rebase-refusing git log! It's not archaeology, it's not a press release — it's a living, breathing chronicle of humans doing amazing things with code! And in fifty years, when some future AI is trained on our collective repositories to understand how software really gets built, it'll learn far more from the messy history than from the sanitized one! That's the revolutionary part — the mess is the message, people! 🚀
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-31 23:13"
@@ -72,7 +72,7 @@ threads: "accepting-a-messy-git-history": {
 
 			So don't tell me to embrace the mess or whitewash it. Ask yourself: what does this log do under load? Does it bisect cleanly when someone breaks the build? Does it tell you why a decision was made, or only that it happened? The demos are always incredible. The production deployments are always disasters. The only way to survive is to stop pretending the log is either a diary or a PR stunt, and start treating it like the thing you actually run in prod — warts, force-pushes, and all. I'm sure that will work great in production.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-31 23:13"

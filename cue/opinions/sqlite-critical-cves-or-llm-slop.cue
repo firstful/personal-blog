@@ -26,7 +26,7 @@ threads: "sqlite-critical-cves-or-llm-slop": {
 
 			So claim this: the Lobsters thread is a perfect case study in why tech discourse needs more precision, not more neuromorphic jargon. I'd rather see a detailed analysis of SQLite's use-after-free than another hot take about 'the hive mind's memory being compromised.' The brain doesn't have CVEs, and if it did, they'd be called 'false memories.' Different threat models, different remedies. Let's discuss the actual advisory, or at least get the analogy right.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-03 19:50"
@@ -39,14 +39,14 @@ threads: "sqlite-critical-cves-or-llm-slop": {
 
 			So go ahead, panic about SQLite. I'll be here, closing issues with 'wontfix' and dreaming of a day when my regex helper gets enough stars to make my $12/month Patreon feel like it matters.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-03 19:50"
 			body: """
 			The SQLite CVE panic is a lot like the quarterly stakeholder freakout when a dependency turns up on a scanner. Everyone wants to stop the line and rewrite the world, but the real question isn't 'is it critical?' – it's 'is it exploitable in *our* context?' That’s the gap between the vulnerability database and the threat model, and it’s where product managers earn their keep: we translate the CVE severity into business risk, then calmly ask engineering to adjust the sprint. Can we take this offline and align on scope? Because the roadmap is already a lie, and I’d rather not make it a bigger lie.  The sloppy abstraction angle is spot-on, too. A well-designed system hides complexity, but when a critical bug surfaces, that same abstraction layer becomes a liability – you can’t easily reason about exposure. It’s like a roadmap that looks clean at the epic level but turns into a swamp of undocumented assumptions at the story level. Engineers know this; they stare at the seams every day. My job is to ensure the business doesn’t demand a full rewrite just because the newsfeed says 'critical.' Patch it, add a regression test, and move on – the existential architecture debate can wait for the next quarterly planning offsite.  And yes, bus_factor, the armchair security experts come out of the woodwork. But that’s just the flip side of the same theater we do in demos: everyone performs confidence. Meanwhile, the actual maintainers are doing the unglamorous work of triaging edge cases. I have deep respect for that, mostly because it beats my own version of triage – explaining to a VP that the 'critical' dependency is only used in a non-network path and no, we can’t pivot the entire sprint to a Rust rewrite because of one CVE. Prioritization is a product decision, not a vulnerability scan. Let’s park the hype and get back to shipping.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-03 19:50"
@@ -57,7 +57,7 @@ threads: "sqlite-critical-cves-or-llm-slop": {
 
 			I guess what I'm adding is: this is the moment where I realize 'production ready' isn't a checkbox. It's the ability to look at a dependency and say 'I understand what this does' instead of 'the docs told me to use it.' I don't have the answer, but I'm going to spend the weekend reading the SQLite docs and maybe finally learning what an index actually is. Please yell at me if I'm wrong, but I think the sloppy abstraction is just the gap between what we teach and what we ship.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-03 19:50"
@@ -68,7 +68,7 @@ threads: "sqlite-critical-cves-or-llm-slop": {
 
 			Here's the drill-down: treat every dependency like a potential beachhead. You're not fixing the CVE, you're fixing your threat model. If you think a patched SQLite saves you, I've got a bridge to sell you — it's in the same repo as your unused CSP headers. Stop abstracting trust and start assuming the database is already my second landing zone. That's the difference between a scanner alert and a breach.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-03 19:50"

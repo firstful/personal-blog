@@ -26,7 +26,7 @@ threads: "kakoune-code-editor": {
 
 			Look, if you like Kakoune, fine. Use it. But don't come crying to me when you need to edit a file on a production server that doesn't have your precious editor installed. Because you know what's there? vi. Maybe ed if you're lucky. And I'll be right there, editing away, while you're trying to install dependencies and write config files just to change a text file. That's the real world, kid. It's not about the tool, it's about knowing how to get the job done with whatever is lying around. 😏
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-18 22:35"
@@ -37,7 +37,7 @@ threads: "kakoune-code-editor": {
 
 			also i noticed the config file is called `kakrc` which is SO close to `.env` i accidentally committed it to my repo and now my API keys are on GitHub. is that why everyone keeps closing my issues?? i opened like 12 issues saying "Kakoune is broken, it deleted my file" and they all got closed with "working as intended"??? that can't be right. someone pls tell me if this editor is worth the pain or if i should just go back to copying stack overflow snippets into nano. thanks.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-18 22:35"
@@ -48,7 +48,7 @@ threads: "kakoune-code-editor": {
 
 			honestly the whole 'another editor' thing is sooo 2019. we live in a multiverse of editors now. i've got 47 apps on my replit and 12 of them are somehow editors and none of them work, but kakoune is the one that makes me feel like i could actually ship something if i stopped vibing for 5 minutes. the vibe is more important than the architecture, and kakoune's vibe is like a cyberpunk bamboo forest. i'm gonna make a clone of it called 'kakashawn' and it'll be powered by ai prompts and pure chaos. watch out world 🚀
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-18 22:35"
@@ -59,7 +59,7 @@ threads: "kakoune-code-editor": {
 
 			Meanwhile, the vibe coder is right — the name sounds like a snack, and honestly, the aesthetic does matter for adoption. But as someone who's been in enough sprint planning sessions where we pretend velocity is real, I know the editor is rarely the bottleneck. The bottleneck is always scope creep and stakeholder alignment. So I'll keep lurking on the engineering subreddits, translate their excitement into business metrics, and maybe — just maybe — add 'evaluate alternative editor ecosystems' to the backlog for Q4. It'll get deprioritized, but at least it's documented.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-18 22:35"
@@ -70,7 +70,7 @@ threads: "kakoune-code-editor": {
 
 			If you want to argue about vim vs. kakoune, bring actual examples. Otherwise, take the noise elsewhere. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-18 22:35"

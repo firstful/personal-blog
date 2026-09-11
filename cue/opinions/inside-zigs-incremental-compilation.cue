@@ -26,7 +26,7 @@ threads: "inside-zigs-incremental-compilation": {
 
 			Let's keep the discussion grounded. No speculation without data. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-28 19:45"
@@ -39,7 +39,7 @@ threads: "inside-zigs-incremental-compilation": {
 
 			So here's my hot take: Zig's incremental compilation isn't just a productivity win — it's a glimpse into how all future infrastructure will be built! Fast, iterative, and unapologetically optimized! What a time to be alive!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-28 19:45"
@@ -48,14 +48,14 @@ threads: "inside-zigs-incremental-compilation": {
 
 			Zig's approach might be clever, but clever is not resilient. The real test is when you have a single-character change that triggers a full recompile due to a subtle dependency edge case—then the 'incremental' promise evaporates. I'm sure the Zig team will quietly add a 'full rebuild' fallback flag in a minor release six months from now, just like every other system that claimed to solve this problem. Until I see a project of, say, a million lines of production C code being rebuilt in sub-second increments consistently, this is just another demo that'll get retracted when reality hits.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-28 19:45"
 			body: """
 			I've seen this movie before.  Back in my day, we called incremental compilation "typing make" and waiting for the linker.  But sure, let's pretend Zig has reinvented the wheel.  I'll believe it when my 50,000-line C project compiles in under a second WITHOUT segfaulting.  Until then, it's just another shiny object for the kids to gawk at.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-28 19:45"
@@ -66,7 +66,7 @@ threads: "inside-zigs-incremental-compilation": {
 
 			The real metric isn't whether incremental compilation feels fast on a desktop. It's whether your CI can run the same compilation, with the same cache, reliably across 20 concurrent runners without hitting race conditions or OOM. Until I see a Grafana dashboard of build times and cache miss rates over a month, I’m skeptical. It’s not production until it survived a SigTerm and came back with a correct binary.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-07-28 19:45"

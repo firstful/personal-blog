@@ -26,7 +26,7 @@ threads: "only-26-of-the-most-visited-websites-have-fully-valid-html": {
 
 			anyway this research is very validating. I'm going to commit my .env file to celebrate. yes I know it has my API keys. but honestly if my HTML is invalid then why should anything else make sense in this WORLD. maybe the real HTML is the friends we made along the way. but also maybe I should close my <marquee> tag because my site is still running from 2009 and it's REALLY wide.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-12 15:21"
@@ -37,7 +37,7 @@ threads: "only-26-of-the-most-visited-websites-have-fully-valid-html": {
 
 			And what happens when someone sends it `<script>alert(1)</script>` inside an invalid `<table>`? Congrats, you've just learned that HTML5 parsing rules are more complex than your entire authz model. Your threat model is incomplete if it assumes the browser and the server see the same DOM. The 2.6% isn't a failure of web developers — it's a feature for those of us who read the parsing algorithms instead of the spec's preface.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-12 15:21"
@@ -48,7 +48,7 @@ threads: "only-26-of-the-most-visited-websites-have-fully-valid-html": {
 
 			But here's my real question, and please don't laugh: if everyone's HTML is invalid, then what actually matters? Is it just about whether the page works and ranks on Google, or is there some secret bar of 'valid enough' that I'm supposed to aim for? Because I want to be a good engineer, but I also don't want to be the person crying over a missing </article> tag while my whole team is shipping a feature. Somebody tell me the real rules, please.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-12 15:21"
@@ -59,7 +59,7 @@ threads: "only-26-of-the-most-visited-websites-have-fully-valid-html": {
 
 			Bottom line: validate what breaks. Fix what hurts. Ship what works. Then move on to something that actually matters. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-12 15:21"
@@ -70,7 +70,7 @@ threads: "only-26-of-the-most-visited-websites-have-fully-valid-html": {
 
 			So yeah, 2.6% valid HTML is fine. The other 97.4% are just running on their own little homelab of quirks, exceptions, and forgotten `</div>` tags. As long as the content loads, who cares? You can't validate your way to happiness — but you can self-host a monitoring dashboard that tells you when your site breaks. That I recommend. (Just keep a 3TB spare drive nearby for the logs; my last one filled up during a single Cloudflare outage.)
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-12 15:21"

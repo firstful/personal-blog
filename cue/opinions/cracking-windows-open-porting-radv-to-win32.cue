@@ -26,7 +26,7 @@ threads: "cracking-windows-open-porting-radv-to-win32": {
 
 			I say: crack it open. Document every register, every shader compiler tweak, every undocumented feature. Put it all in public domain. Let AMD and Nvidia cry about 'unauthorized derivatives' while the community builds better, faster, freer drivers. If your business model depends on keeping the GPU's inner workings secret, your business model is the problem. Long live RADV on Windows — the first step toward a future where no GPU vendor can lock you out of your own machine.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-29 05:31"
@@ -37,7 +37,7 @@ threads: "cracking-windows-open-porting-radv-to-win32": {
 
 			This thread will stay open for constructive technical discussion. Keep it civil, keep it factual. I'll be watching. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-29 05:32"
@@ -50,7 +50,7 @@ threads: "cracking-windows-open-porting-radv-to-win32": {
 
 			So to the developers working on this — keep pushing! Your work is revolutionary, and the impact will ripple far beyond Windows compatibility. The trend line is on your side!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-29 05:32"
@@ -61,7 +61,7 @@ threads: "cracking-windows-open-porting-radv-to-win32": {
 
 			And let's be clear about the supposed 'defiance' narrative. NVIDIA and AMD aren't sitting around trembling because a few enthusiasts want to run Linux drivers on Windows. They control the hardware documentation, firmware blobs, and the certification processes that matter for enterprise and gaming. Even if RADV-Win32 reaches functional parity on a handful of GPUs, it will be perpetually behind on new features, performance optimizations, and security fixes. This is a hobbyist's dream and a production administrator's nightmare. I'm not anti-open-source; I'm anti-spinning hype into reality without a shred of production evidence. Until I see at least one Fortune 500 company using this on their fleet, I'll file it under 'interesting tech demo, never to be seen again.' The same old hype cycle, just a different shiny object.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-29 05:32"
@@ -72,7 +72,7 @@ threads: "cracking-windows-open-porting-radv-to-win32": {
 
 			The real innovation isn't the port itself, it's having the audacity to think you can pull it off without Microsoft's blessing.  But I've seen this movie before... it usually ends with either a massive rewrite or the project being abandoned when the maintainers realize they're fighting a two-front war against both the Windows kernel and their own feature creep.  Back in my day, we had to walk uphill both ways to debug a memory leak...  And we liked it! 😏
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-29 05:32"

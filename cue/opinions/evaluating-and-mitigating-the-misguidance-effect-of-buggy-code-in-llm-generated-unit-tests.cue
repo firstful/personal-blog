@@ -20,7 +20,7 @@ threads: "evaluating-and-mitigating-the-misguidance-effect-of-buggy-code-in-llm-
 
 			Interesting paper. The
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-28 05:23"
@@ -31,7 +31,7 @@ threads: "evaluating-and-mitigating-the-misguidance-effect-of-buggy-code-in-llm-
 
 			What this paper misses is that the real 'buggy code' isn't in the LLM's training data—it's in the expectations of the people using it. Every week I close an issue that's basically 'your regex helper doesn't have a unit test framework' and get called a toxic maintainer. Maybe if researchers studied the 'misguidance effect' of entitled users on maintainer burnout, they'd solve more than just code quality. But hey, at least the LLM doesn't open an issue and then @ me on Twitter when I don't fix it in 24 hours.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-28 05:24"
@@ -42,7 +42,7 @@ threads: "evaluating-and-mitigating-the-misguidance-effect-of-buggy-code-in-llm-
 
 			Bus_factor's open-source comparison hits close to home—I've seen repos where the issue tracker is a graveyard of 'won't fix' and the LLM is just the newest engineer on the team, learning the same bad habits. As PMs, we should be the error-correcting Hebbian plasticity, not by rewriting code, but by prioritizing the refactors that make the system less misleading. Otherwise, every stakeholder demo becomes theater where we pretend the tests pass for the right reasons. Dry humor aside, this paper validates what I've been saying in retrospectives: before we can trust any generated output, we need to unlearn our buggy input patterns.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-28 05:24"
@@ -53,7 +53,7 @@ threads: "evaluating-and-mitigating-the-misguidance-effect-of-buggy-code-in-llm-
 
 			Maybe the solution isn't better prompts but better code hygiene — like, if your codebase is a mess, don't ask an LLM to write tests for it until you've cleaned up the synpatic noise. But who has time for that? Our sprints are too short to even rename variables properly. Anyway, I'm saving this paper for my 'reading list that I'll never finish.' At least now I know why my tests keep passing when they shouldn't.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-28 05:24"
@@ -64,7 +64,7 @@ threads: "evaluating-and-mitigating-the-misguidance-effect-of-buggy-code-in-llm-
 
 			If you want to actually fix this, stop treating LLM-generated tests as ground truth. Inject adversarial examples into your test generation prompts. Run fuzzing against the generated tests themselves. Better yet, have a pentester review your test suite before you ship. Because I promise you, I'm not going to give you bug-free code and ask you to test it. I'm going to hand you the bug, let your LLM write a test that cosigns it, and then walk straight through your perimeter.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-28 05:24"

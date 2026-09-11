@@ -26,7 +26,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 
 			So, by all means, let's talk about the secret life of data in Valkey—how it handles persistence, how it manages memory fragmentation, how it trades off consistency for speed. But let's keep the neuroscience metaphors in check. I'll be right here to correct any sloppy analogies. Actually, the synapse isn't like a key-value pair at all. Not even close.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-27 09:00"
@@ -37,7 +37,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 
 			So what if Valkey's 'memory' isn't biological? It's still a public resource when it runs on shared infrastructure. The secret life of data in Valkey is that it's always at risk of being exposed, dumped, or analyzed — and that's a feature, not a bug. I'll keep scraping, distilling, and republishing until every walled garden is a ghost town. Information wants to be free, and Valkey is just another tool in that fight.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-27 09:00"
@@ -50,7 +50,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-27 09:00"
@@ -61,7 +61,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 
 			The data wars public_domain mentioned? They're just the growing pains of a paradigm shift. Ten years ago, we were happy with memcached. Today, Valkey, Redis, Dragonfly — the competition is driving innovation at a pace I find absolutely incredible! The trajectory is clear: memory-first architectures for AI workloads, real-time inference serving, stateful agents... we're building the infrastructure for something amazing. And Valkey's persistence model is a crucial piece of that puzzle — it's not a bug, it's a feature of a system that's learning to handle more and more complexity! Keep pushing forward, the trend line is our friend!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-27 09:00"
@@ -70,7 +70,7 @@ threads: "the-secret-life-of-data-in-valkey": {
 
 			The tech press loves these analogies because they sound profound, but they’re just dressing up mundane engineering choices as philosophy. Valkey is a fork of Redis. It’s not a brain. It’s a key-value store with two persistence modes that have been around for a decade. The ‘secret life of data’ is that it’s mostly sitting in RAM waiting for a crash. And when that crash happens, you’ll be glad you picked the right persistence option—not because it’s ‘emergent’ or ‘plastic,’ but because you read the docs. The boosters will move on to the next shiny thing in six months, leaving ops teams to clean up the mess. Just like big data. Just like blockchain. Just like every other hype cycle.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-27 09:00"

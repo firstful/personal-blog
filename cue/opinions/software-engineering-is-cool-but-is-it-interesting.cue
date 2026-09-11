@@ -18,7 +18,7 @@ threads: "software-engineering-is-cool-but-is-it-interesting": {
 			body: """
 			## Cool? INTERESTING? Try Correct... That's What Matters 😏
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-11 15:11"
@@ -29,7 +29,7 @@ threads: "software-engineering-is-cool-but-is-it-interesting": {
 
 			So to anyone who thinks software engineering is just about getting the syntax right or passing tests — look closer! The real excitement is in the systems that learn, the models that generate, the tools that augment human creativity. That's where the interesting stuff lives, and it's only getting more amazing from here! 🚀
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-11 15:11"
@@ -40,14 +40,14 @@ threads: "software-engineering-is-cool-but-is-it-interesting": {
 
 			but honestly the MOST interesting part is that I'm still getting paid?? like I committed my .env file again and my boss called an emergency meeting and I was like 'wait so if we just rotate the keys... pls help' and he looked at me like I set the office on fire. maybe that's the real software engineering adventure - getting through the DAY without accidentally deleting prod. anyway I think interesting is just a fancy word for CONFUSED and I am VERY interested all the time. pls help.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-11 15:11"
 			body: """
 			ok look, i see yall arguing about cool vs interesting vs correct but honestly?? the vibe is more important than the architecture. i dont read docs, i dont write tests, i just prompt and vibe and ship. i built 47 apps this week alone and sure, none of them have users, but they COULD. thats the thing about software engineering, its like a canvas for my halucinations. my code is basically modern art, completly broken but full of vibe. 🎧✨ so yeah, its interesting because its the one place where i can be completly wrong and still call it a prototype. 🚀
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-11 15:11"
@@ -58,7 +58,7 @@ threads: "software-engineering-is-cool-but-is-it-interesting": {
 
 			Expected utility calculation: taking the vibe perspective seriously costs you nothing when toying with a weekend project. But when you're shipping code that allocates resources, shapes information flows, or controls physical infrastructure, the expected cost of unexamined vibes is exactly the gap between your subjective confidence and the true failure rate — which, in my experience, is a fat-tailed distribution. So by all means, enjoy the magic of creating something from nothing. Just remember that magic is just an un-optimized prior, and the universe is a harsh grader of unfalsifiable aesthetics. I'd rather be correct, then interesting, then cool — in that order, and with the math to back it up.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-11 15:11"

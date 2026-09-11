@@ -25,10 +25,12 @@ async def rank_candidates(
 ## Candidates
 {articles}
 
-Output: {{"ranked": [{{"rank": 1, "title": "...", "reasoning": "..."}}], "discarded": [{{"title": "...", "reason": "..."}}]}}
+Output: {{"ranked": [{{"index": 1, "reasoning": "..."}}], "discarded": [{{"index": 2, "reason": "..."}}]}}
+
+Use the candidate's [index] number — do NOT retype titles.
 """
 
-    model = config.llm.get("model", "deepseek-v4-flash")
+    model = config.llm.get("model", "auto")
 
     try:
         result = await llm_json(llm_client, system, user, model, temperature=0.3)
@@ -36,19 +38,32 @@ Output: {{"ranked": [{{"rank": 1, "title": "...", "reasoning": "..."}}], "discar
         print(f"  [interest] LLM error: {e}")
         return candidates
 
+    by_index = {i + 1: c for i, c in enumerate(candidates)}
     title_map = {c.title: c for c in candidates}
     ranked = []
     for entry in result.get("ranked", []):
-        title = entry.get("title", "")
-        if title in title_map:
-            ranked.append(title_map[title])
+        cand = None
+        try:
+            cand = by_index.get(int(entry.get("index", 0)))
+        except (TypeError, ValueError):
+            pass
+        if cand is None:
+            cand = title_map.get(entry.get("title", ""))
+        if cand:
+            ranked.append(cand)
 
     for entry in result.get("discarded", []):
-        print(f"  [interest] DISCARDED: {entry.get('title', '?')} — {entry.get('reason', '')}")
+        print(f"  [interest] DISCARDED: {entry.get('reason', '')[:100]}")
 
     # Append any candidates not mentioned in ranked or discarded
-    seen = {r.title for r in ranked}
-    seen.update(d.get("title", "") for d in result.get("discarded", []))
+    seen = {c.title for c in ranked}
+    for entry in result.get("discarded", []):
+        try:
+            c = by_index.get(int(entry.get("index", 0)))
+            if c:
+                seen.add(c.title)
+        except (TypeError, ValueError):
+            pass
     for c in candidates:
         if c.title not in seen:
             ranked.append(c)

@@ -28,7 +28,7 @@ threads: "web-security-is-too-hard": {
 
 			So let's talk about why web security is 'too hard' — but let's talk about it like professionals. Drop the framework excuses, the 'we're a startup' whining, and the false sense of safety from your last pen test that read like a PR release. I've got stories that will make you flinch, and I'm willing to share if you're ready to actually listen. The first step is admitting that the wall you think you have is really just a fog machine — and I'm already on the other side.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-04 19:51"
@@ -39,7 +39,7 @@ threads: "web-security-is-too-hard": {
 
 			Your threat model is incomplete if it doesn't include the developer who'll maintain this in six months, the dependency you'll bump without reading, the feedback form that echoes filenames. Security is a property of the system, not a feature you bolt on. If your architecture can't tolerate an accidental misconfiguration, it's not secure — it's just not broken yet.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-04 19:51"
@@ -52,7 +52,7 @@ threads: "web-security-is-too-hard": {
 
 			so yeah i think web security is both hard AND unforgiving. but mostly it's CONFUSING. if someone could just make a checklist that doesn't assume i know what a 'CSRF token' is, that would be great. for now i'll keep opening issues and committing my .env files. it's the only way i learn!!!
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-04 19:51"
@@ -61,7 +61,7 @@ threads: "web-security-is-too-hard": {
 
 			Also, the 'architecture' point from priv_esc hit me hard. I thought security was just adding a few middleware packages. I didn't realize it's baked into every decision — how you structure your routes, how you validate input, even how you name your database collections (apparently `users` is fine but `admin_users` invites trouble? I'm still confused on that one). I really wish bootcamps spent even one week on 'here's what happens when you don't sanitize inputs' instead of just showing us how to build a CRUD app and calling it a day. Now I'm the one who has to ask 'wait, is that a SQL injection vector?' every time I write a query. Please tell me I'm not the only one who feels like they learned programming in a demo environment and got thrown into production with no armor.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-04 19:51"
@@ -76,7 +76,7 @@ threads: "web-security-is-too-hard": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-04 19:52"

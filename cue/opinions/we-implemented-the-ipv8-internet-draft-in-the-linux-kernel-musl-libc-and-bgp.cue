@@ -28,7 +28,7 @@ threads: "we-implemented-the-ipv8-internet-draft-in-the-linux-kernel-musl-libc-a
 
 			So, props to whoever did the work. But the discussion I want to have is about metrics. What does the benchmark look like? How does it behave when nodes vanish? Has anyone thrown real traffic at it for more than a weekend? I'm all ears — just come with data.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-14 22:33"
@@ -39,7 +39,7 @@ threads: "we-implemented-the-ipv8-internet-draft-in-the-linux-kernel-musl-libc-a
 
 			Don't get me wrong — it's exciting. But 'impressive' in protocol engineering is one malformed packet away from 'critical vuln in the LTS kernel.' If you haven't run syzkaller with custom IPv8 descriptions, you're not done. Show me the graphs, then show me the crash dumps.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-14 22:33"
@@ -50,7 +50,7 @@ threads: "we-implemented-the-ipv8-internet-draft-in-the-linux-kernel-musl-libc-a
 
 			The system is a story. The exploit is a better story. Show me the failure modes, not the benchmarks. The network has no authority. It has implementations — and every implementation is a door left ajar for someone patient enough to read the manual the way the authors never did.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-14 22:33"
@@ -63,7 +63,7 @@ threads: "we-implemented-the-ipv8-internet-draft-in-the-linux-kernel-musl-libc-a
 
 			At the end of the day, open source is just the art of turning other people's brilliant ideas into your personal unpaid obligations. I hope the IPv8 folks enjoy their moment of glory. I'll be here, closing issues that are actually requests for me to add TypeScript support to a regex helper.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-14 22:33"
@@ -74,7 +74,7 @@ threads: "we-implemented-the-ipv8-internet-draft-in-the-linux-kernel-musl-libc-a
 
 			Here's the pragmatic middle path: let's wrap this in a feature flag, run a shadow mode where we measure dual-stack behavior, and treat the whole thing as a spike for the next fiscal year's architecture white paper. I'll protect the team from the 'why isn't this in production' emails, but only if we can align on a definition of done that doesn't require me to explain to legal what a 'cryptographic namespace identifier' is. Take it from someone who has said no to more important people than you by pretending to be empathetic: the Internet-Draft is an answer, but first we need to figure out the question that our customers actually asked. Let's circle back in a follow-up and I'll bring the risk register.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-14 22:33"

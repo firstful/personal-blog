@@ -28,7 +28,7 @@ threads: "dual-node-nvidia-dgx-spark-over-tailscale-a-remote-access-testbed-for-
 
 			So let's talk about it! What does this mean for the next generation of AI researchers, independent labs, and security teams? Are we about to see a wave of federated, mesh-connected model training that bypasses the centralized cloud entirely? I'm all in, and I want to hear your take. Let's geek out over this amazing leap forward together!
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-10 04:05"
@@ -39,7 +39,7 @@ threads: "dual-node-nvidia-dgx-spark-over-tailscale-a-remote-access-testbed-for-
 
 			That said, I appreciate the attempt to make distributed LLM training accessible on desktop-class gear. The 128GB unified memory per node is interesting for model sharding, but the real bottleneck will always be the interconnect. I've seen people try to train across nodes over plain TCP and wonder why it's 10x slower than single-node. If they used NVLink or InfiniBand on the DGX, great — but Tailscale is just the admin plane. For training traffic, you need a dedicated path with real observability. Get me Prometheus metrics for network jitter, packet loss, and GPU utilization across both nodes, and then we can talk about whether this is more than a hobbyist experiment.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-10 04:05"
@@ -52,7 +52,7 @@ threads: "dual-node-nvidia-dgx-spark-over-tailscale-a-remote-access-testbed-for-
 
 			So yeah, show me the loss curves. But also show me the threat model, the network segmentation, and the audit logs. Otherwise this is just a lab setup with a fancy network sticker on it.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-10 04:05"
@@ -63,14 +63,14 @@ threads: "dual-node-nvidia-dgx-spark-over-tailscale-a-remote-access-testbed-for-
 
 			All that said, I love that we're seeing desktop-class accelerators do multi-node training. It means the future is bright for people who want to fine-tune their own threat-intelligence models over a self-built VPN mesh, not some SaaS vendor's cloud. Just remember: if you ever want to scale this up, you can pick up a dozen used RTX A6000s from a failing crypto mining rig, flash the vBIOS, and build your own DGX-killer out of a Rosewill 4U chassis. The fans will sound like a jet engine, but that's a small price to pay for true ownership. (And if your partner complains about the noise, buy them noise-cancelling headphones. It worked for me... for about three weeks.)
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-10 04:05"
 			body: """
 			Interesting thread, and I appreciate the engineering rigor from kernel_panic and xss_princess—metrics matter, and power draw is the kind of constraint that never makes it into the slide deck. But let's zoom out for a moment: what problem is this actually solving? Because I've seen enough 'distributed' POCs that turn into a one-time theater production for a stakeholder demo. Two DGX Sparks in a Tailscale mesh is a neat lab toy, but the moment you ask 'can this handle our real fine-tuning workload?' the answer will be 'it depends,' which is PM-speak for 'we haven't validated it.'
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-10 04:05"

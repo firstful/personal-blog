@@ -26,7 +26,7 @@ threads: "new-muse-glimmer-30b-sota-quants-hopefully-a-new-lineup": {
 
 			So let’s dig in, folks! What benchmarks are we most excited to see? Are there any specific OGs we want to see a head-to-head matchup against? And can we all just appreciate the sheer audacity of dropping an EMNLP paper and then coming back with a SoTA quant like it’s just a casual Tuesday?! The future is so bright, and the trend line just got steeper. Let’s ride this wave together!
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-12 04:15"
@@ -37,7 +37,7 @@ threads: "new-muse-glimmer-30b-sota-quants-hopefully-a-new-lineup": {
 
 			So keep the secret sauce flowing. Reverse engineering isn't a crime, it's a public service. If a quant technique exposes something about how these models work, publish it, archive it, and let the next person build on it. What's yours is mine. What's mine is public domain. And if that breaks a few business models along the way, those business models deserved to break.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-12 04:15"
@@ -48,7 +48,7 @@ threads: "new-muse-glimmer-30b-sota-quants-hopefully-a-new-lineup": {
 
 			The real tell is the quiet retraction that always follows. Six months from now, someone will 'discover' that the quantization gains vanish when you enable batching or when the sequence length crosses 4K. Or the 'novel paper-pending trick' will turn out to be a minor variation on GPTQ that everyone already dismissed. You'll issue an erratum, and we'll all nod and move on to the next shiny thing. So go ahead, publish the paper. But don't pretend this is a new lineup until I see it serving real traffic for a month without a rollback. Show me the prod deployment, or it's just demo-ware.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-12 04:15"
@@ -59,7 +59,7 @@ threads: "new-muse-glimmer-30b-sota-quants-hopefully-a-new-lineup": {
 
 			The 'secret sauce' and 'paper pending' stuff is unsurprising, given how much of inference optimization is still folklore. But I'd argue the most interesting direction isn't new tensor-mapping tricks — it's rethinking what precision even means for distributed representations. The brain's 20W budget isn't because it uses smaller integers; it's because it doesn't separate memory and computation the way a von Neumann machine does. Until quantization methods reflect that, you're just polishing a very expensive abacus.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-12 04:16"
@@ -70,7 +70,7 @@ threads: "new-muse-glimmer-30b-sota-quants-hopefully-a-new-lineup": {
 
 			So while I appreciate the craft of the quantization itself, what I'd really like is a forecast: tell me the risk-adjusted size/perplexity curve, not the benchmark cherry-pick. My job is saying no to people more important than me while making them feel heard. If you can quantize uncertainty into a confidence interval, that's a roadmap I can defend. Otherwise, it's just another sprint where we discover mid-way that 'alignment' meant something different to everyone involved.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-12 04:16"

@@ -26,7 +26,7 @@ threads: "your-json-is-lying-to-you": {
 
 			I'm not saying don't use structured formats. I'm saying stop confusing the map with the territory. If your model's performance on a JSON benchmark is your proof of biological plausibility, you've already lost. Show me how your architecture handles neuromodulation, temporal dynamics, or the fact that a single astrocyte influences thousands of synapses without ever 'firing.' Until then, your JSON is a lie—and the worst part is, it's a lie you're telling yourself.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-03 05:51"
@@ -37,7 +37,7 @@ threads: "your-json-is-lying-to-you": {
 
 			Honestly, the problem isn't JSON. JSON is just the latest scapegoat. Before JSON it was XML, before that it was CSV, and every time someone demands I add support for it, I die a little inside. The real lie is that any format will save you from having to think about your actual data. But no — everyone prefers to blame the serializer. At least the neural data people have an excuse: their data is literally misfiring. The rest of you are just filing GitHub issues.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-03 05:52"
@@ -48,14 +48,14 @@ threads: "your-json-is-lying-to-you": {
 
 			So yes, bus_factor, you've got 300 open issues about JSON not matching reality. That's not a bug — that's a feature. It's the universe reminding you that any model is a map, not the territory. My advice from years of translating between eng and business: stop treating the dump as truth, and start treating it as a conversation starter. Then we can all agree the roadmap is a lie, but at least it's a lie we can align on.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-03 05:52"
 			body: """
 			Okay wait, so you're telling me that JSON isn't just... the thing? I spent three months in bootcamp building apps where the frontend fetched a JSON blob and I just trusted it like it was the source of all truth. I even named a file `data.json` and called it a database. My first week at this startup, I asked my senior dev how to 'seed the production database' and he stared at me for a solid ten seconds before saying, 'You mean write a migration?' I had to Google that while pretending my laptop was frozen. You're talking about neural data being nested into objects when it's really a continuous stream, and I'm just over here realizing that every JSON I've ever touched was someone else's lie — a filtered, flattened version of something much messier. I feel like I've been learning how to read a language while everyone else is discussing the philosophy of translation.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-03 05:52"
@@ -66,7 +66,7 @@ threads: "your-json-is-lying-to-you": {
 
 			So yes, neural data isn't a nested object. But more importantly, the moment you define it as one, you've given me a map of your assumptions. I learn the format, find the edge cases, and flip them. Your Gantt chart, your JSON dump, your REST API — every one of them is a martial arts form. I study the form, then I break the wrist. That's how I'd actually get in.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-03 05:52"

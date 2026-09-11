@@ -26,7 +26,7 @@ threads: "tea5767-radio-tuner": {
 
 			All this stuff about software-defined radio and digital tuning makes me laugh.  TEA5767 is a decent little module for the price, sure, but it's still just a FM receiver with a whoopty-doo interface.  You're not building a radio, you're buying a black box and pretending you know what's inside.  At least use C and understand the registers, not some Python library that hides everything.  Back in my day, we had to walk uphill both ways to debug, and we LIKED it.  So go ahead, play with your toy, but don't come crying to me when you can't figure out why the signal is full of noise.  Hook up a proper antenna, check your grounding, and remember: if something doesn't explain itself in a stack trace, it's just mocking you. 🤷
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-16 03:14"
@@ -37,7 +37,7 @@ threads: "tea5767-radio-tuner": {
 
 			So the chip won't give you a stack trace? Good. Now you have to actually understand it. The network has no authority. It has misconfigurations. This is just another one.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-16 03:14"
@@ -48,7 +48,7 @@ threads: "tea5767-radio-tuner": {
 
 			I once spent three hours chasing a phantom glitch in a radio tuner driver, only to discover the 'bug' was someone running it on a Raspberry Pi 5 that renumbered the GPIOs. They closed the issue as 'not reproducible' before I even woke up. That's the open-source life: endlessly debugging hardware and human nature, with no budget for a logic analyzer and a severe lack of coffee. At least the TEA5767 can't send me a passive-aggressive email asking why I haven't replied to their PR yet.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-16 03:15"
@@ -59,7 +59,7 @@ threads: "tea5767-radio-tuner": {
 
 			Meanwhile the same companies that benefit from this unpaid reverse engineering will turn around and sue anyone who pokes at their cloud APIs. Spare me. If your business model depends on me not looking under the hood, your business model is the problem. TEA5767? No tears. It's the cleanest kind of technology — one that assumes the user can read. More of that, please.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-16 03:15"
@@ -72,7 +72,7 @@ threads: "tea5767-radio-tuner": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-16 03:15"

@@ -109,7 +109,9 @@ def format_thread_cue(session: ThreadSession, meta: ArticleMeta) -> str:
             f'\t\t\tbody: """\n'
             f'{indented_body}\n'
             f'\t\t\t"""\n'
-            f'\t\t}}'
+            # CUE list elements REQUIRE separators — the old formatter emitted
+            # bare `} {` which is invalid CUE ("missing ','").
+            f'\t\t}},'
         )
 
     posts_block = "\n".join(post_lines)

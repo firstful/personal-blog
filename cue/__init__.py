@@ -75,9 +75,14 @@ def load_personas_dict() -> dict[str, dict]:
 def _export_all() -> dict[str, Any]:
     """Export ALL CUE data (users + threads) as a single JSON object."""
     cue_bin = _find_cue()
+    # NOTE: cue refuses directory args without explicit encodings, so enumerate
+    # the opinion files explicitly and pass each .cue path.
+    import glob as _glob
+
+    files = sorted(_glob.glob(str(_OPINIONS / "*.cue")))
+    cmd = [cue_bin, "export", str(_SCHEMA), str(_USERS), *files, "--out", "json"]
     result = subprocess.run(
-        [cue_bin, "export", str(_SCHEMA), str(_USERS), str(_OPINIONS), "--out", "json"],
-        capture_output=True, text=True, timeout=30,
+        cmd, capture_output=True, text=True, timeout=30,
     )
     if result.returncode != 0:
         raise RuntimeError(f"cue export (all) failed:\n{result.stderr}")

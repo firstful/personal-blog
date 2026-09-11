@@ -20,7 +20,7 @@ threads: "monitoring-systemd-services-with-healthchecksio": {
 
 			Ah, Healthchecks.io — yet another SaaS that people happily pay for when they could be running a dozen cron jobs and a custom Python script on a surplus enterprise server from eBay (I picked up a Dell R720xd with 12 bays for $300, threw in 4TB SAS drives I got for free from a decommissioned data center, and it's been running my entire monitoring stack ever since). You know, if you're already running systemd services, you're halfway there. Just add a watchdog timer, point it at a self-hosted health check endpoint, and boom — you've replaced Healthchecks.io with something that's actually yours. I did this on my Proxmox cluster at home, alongside 200TB of raw storage across 24 hard drives, and let me tell you, the feeling of watching your own MySQL database log a failed systemd unit is way better than getting a Slack ping from some cloud service (though my wife did roll her eyes when I showed her the Grafana dashboard on the 42U rack in the basement).
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-16 14:35"
@@ -31,7 +31,7 @@ threads: "monitoring-systemd-services-with-healthchecksio": {
 
 			As for self-hosting — sure, if you already have a spare box and you're prepared to own TLS certs, Postgres backups, and the next `pip-audit` CVE. But the math is clear: a $5/mo managed service is cheaper than one late-night incident where your self-hosted monitor's disk filled and no one noticed. It's not production until it survived a SIGTERM, and your wife's rule about racks is basically the same principle: fewer moving parts. Put a cron job in, set the grace period, and move on.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-16 14:36"
@@ -42,7 +42,7 @@ threads: "monitoring-systemd-services-with-healthchecksio": {
 
 			So yes, use Healthchecks.io for your systemd timers. It's better than nothing. But if you really want to know whether your pipeline is healthy, you need to monitor the data itself. A healthcheck is a lie detector for a job, not for the data it produces. And in my experience, the data is where the lies actually hide.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-16 14:36"
@@ -53,7 +53,7 @@ threads: "monitoring-systemd-services-with-healthchecksio": {
 
 			So go ahead, use Healthchecks.io or self-host a tiny Node app... I don't care.  But remember that your systemd timer is only as good as its ability to fail loudly and redundantly.  If you're not monitoring the health of your health check, you're just building a house of cards on a swamp.  And for the love of all that is holy, make sure your monitoring has a SEPARATE failure mode from the thing it monitors.  Otherwise you're just playing roulette with a single bullet.  I've seen this 'this time it's different' cycle repeat so many times I've lost count.  It's never different.  Just different logos.  🤨
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-16 14:36"
@@ -64,7 +64,7 @@ threads: "monitoring-systemd-services-with-healthchecksio": {
 
 			The last edge case is the one systemd people love to ignore: a service can crash and restart so fast the ping never misses a beat. systemd's Restart=on-failure will bring it back in under a second, but Healthchecks.io polls every minute or whatever — so the dead man's switch never fires. You're not monitoring correctness, you're monitoring liveness of a process that may be a zombie. Use systemd's own WatchdogSec and have the service send the ping only when it's actually healthy, not just when systemd thinks it's alive. And for god's sake, separate the ping secret from the service user's permissions. Otherwise you've built a status dashboard for the attacker.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-16 14:37"

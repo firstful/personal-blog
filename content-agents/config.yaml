@@ -4,7 +4,18 @@
 
 # ── Blog repo root ───────────────────────────────────────────────────────
 # Env: BLOG_BASE_DIR
-blog_base_dir: /srv/agent-stack/repos/personal-blog
+blog_base_dir: .
+
+# ── LLM config (OpenAI-compatible — served by llm-gateway) ──────────────
+# Env: LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, LLM_QA_MODEL, LLM_TEMPERATURE
+# model: 'auto' → the gateway's auto-chain (OCG free-tier first).
+# llm_json retries with a larger budget when reasoning models emit no content.
+llm:
+  base_url: http://llm.homelab.internal/v1
+  api_key_env: LLM_API_KEY
+  model: auto
+  qa_model: auto
+  temperature: 0.5
 
 # RSS sources are now in rss_sources.yaml (with weighted scores)
 # Categories for topic classification

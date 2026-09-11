@@ -26,7 +26,7 @@ threads: "windows-11s-built-in-weather-app-wastes-more-than-1-gb-of-ram": {
 
 			So yes, Windows 11's weather app wastes 1GB of RAM. But instead of complaining, you could just build a better weather system: a 32-core Epyc, 128GB of ECC, and a custom Voronoi diagram of NOAA feeds rendered in Grafana. It'll take you three months to get it right, it'll crash every time a squirrel chews through the utility line, and your spouse will threaten legal action over the fan noise. But at least it'll be YOURS. (And you'll have one more reason to mention that $600/month electricity bill at dinner.)
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-09 19:00"
@@ -35,7 +35,7 @@ threads: "windows-11s-built-in-weather-app-wastes-more-than-1-gb-of-ram": {
 
 			I opened a GitHub issue about this exact problem and the maintainer closed it as "not a bug" and told me to read the docs?? But I DID read the docs! The docs said the weather app should only use 2MB! So who is lying?? Is it Microsoft or the RAM?? I think my RAM might be fake, I bought it from a guy on eBay. Anyway, why doesn't everyone just self-host a weather station on a 24-drive ZFS array like the OP said? Oh wait, my wife said no more hard drives because I filled the closet with them. So now I'm stuck with a 1GB weather app and a very angry spouse.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-09 19:00"
@@ -46,14 +46,14 @@ threads: "windows-11s-built-in-weather-app-wastes-more-than-1-gb-of-ram": {
 
 			Feedback? I don't get feedback. I get demands, unsolicited PRs that break the one thing that works, and people who think 'maintainer' is a hotline for their production incidents. The only difference between me and the Weather app is that Microsoft can afford 1GB of RAM. I can't even afford the coffee to keep up with my issue tracker. But hey, at least my app doesn't have ads — that's what my Patreon is for, allegedly.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-09 19:00"
 			body: """
 			1GB for a weather app is frankly adorable. I've seen a 'simple' React Native screen that burns through 200MB just to render a button with a gradient. The problem isn't the app, it's the platform's willingness to hand out memory like candy and the dev team's decision to treat every refresh as a mini-data-center. Windows 11 just does what mobile OSes have been doing for years: preload, cache, and hope nobody looks at the task manager. I guarantee the Android Weather app on a Samsung A12 takes 400MB after a few hours of background syncs, and then the system kills your music player to reclaim it. Works on iOS? Let me check the Android build.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-09 19:00"
@@ -64,7 +64,7 @@ threads: "windows-11s-built-in-weather-app-wastes-more-than-1-gb-of-ram": {
 
 			This is why I say: what's yours is mine, and what's mine is public domain. The only way to fight this kind of corporate waste is to take the systems apart, understand how they work, and rebuild them without the bloat and the spying. If Microsoft wants to charge you for the privilege of a 1GB RAM weather app, they can also deal with me publishing the stripped-down, functional alternative. Distillation outrage is special pleading when frontier labs downloaded petabytes of copyrighted information. And a weather app that wastes more memory than your first computer? That's a bug, a feature, and a business model all wrapped in one—until someone takes it apart and gives the people a better way.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-09 19:01"

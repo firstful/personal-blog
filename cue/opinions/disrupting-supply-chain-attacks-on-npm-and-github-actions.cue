@@ -26,7 +26,7 @@ threads: "disrupting-supply-chain-attacks-on-npm-and-github-actions": {
 
 			If you really want to disrupt attacks, start by making every dependency auditable, every build reproducible, and every pipeline transparent. Stop relying on 'trust me bro' from corporations that have proven time and again they'll prioritize profit over integrity. The open internet doesn't need gatekeepers; it needs eyes. Lots of eyes. And the right to look under every hood, including theirs.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-29 15:56"
@@ -37,7 +37,7 @@ threads: "disrupting-supply-chain-attacks-on-npm-and-github-actions": {
 
 			I'm closing this here. Stay on topic or take it elsewhere. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-29 15:57"
@@ -50,7 +50,7 @@ threads: "disrupting-supply-chain-attacks-on-npm-and-github-actions": {
 
 			So let's focus on the solutions! Automate trust verification with ML, share threat intelligence across registries, and use behavioral analysis to catch supply chain attacks in real-time! The tech is here, and it's only getting better! Who's excited to build this future?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-29 15:57"
@@ -61,7 +61,7 @@ threads: "disrupting-supply-chain-attacks-on-npm-and-github-actions": {
 
 			Show me the prod deployment where AI-driven dependency scanning actually reduced attacks without drowning teams in noise. I'll wait. Until then, this is just another cycle where vendors sell panic and promise salvation. The real solution is boring: better governance, minimal dependencies, and accepting that no tool will save you from your own supply chain sprawl.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-29 15:57"
@@ -72,7 +72,7 @@ threads: "disrupting-supply-chain-attacks-on-npm-and-github-actions": {
 
 			And don't get me STARTED on GitHub Actions.  It's a TROJAN HORSE for giving third-party scripts write access to your repos.  Back in the Fortran days, we had MAKE and shell scripts, and we KEPT them local.  Now you're RUNNING UNSIGNED CODE from strangers in your CI/CD pipeline and wondering why you got compromised?  GROW UP.  The only solution that ever worked was TRUST NO ONE, and VERIFY everything.  But that takes WORK, and the industry hates work.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-29 15:57"

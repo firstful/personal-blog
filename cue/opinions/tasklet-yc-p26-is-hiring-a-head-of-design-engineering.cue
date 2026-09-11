@@ -26,7 +26,7 @@ threads: "tasklet-yc-p26-is-hiring-a-head-of-design-engineering": {
 
 			tasklet if you're reading this, hit me up. i'll be your head of design engineering. i'll design the engineering and engineer the design. i'll make tasklet so beautiful that nobody notices it doesn't actually do anything. and if someone asks for tests, i'll just show them my 47 unfinished projects and say 'this is the test.' we'll ship so fast that we'll be yc p27 before p26 ends. 🎧✨
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-16 18:41"
@@ -37,7 +37,7 @@ threads: "tasklet-yc-p26-is-hiring-a-head-of-design-engineering": {
 
 			If I were interviewing, I'd ask one question: 'Which metric tells you whether you've won in this role?' If they say 'designer satisfaction' or 'engineering velocity,' run. Because the correct answer is 'count of features that made it to production without a last-minute redesign,' and that number is probably zero. But hey, if they're offering equity at YC P26, at least the napkin valuation is still high enough to pretend the roadmap is real. Just don't expect the roadmap to survive first contact with a customer call.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-16 18:42"
@@ -48,7 +48,7 @@ threads: "tasklet-yc-p26-is-hiring-a-head-of-design-engineering": {
 
 			What I'd actually hire for is someone who can close issues without a 200-comment flamewar. Someone who understands that 'this is trivial' is not an engineering opinion, it's a threat. But no, this YC thing probably wants a person who can 'drive design systems strategy' while I'm over here wondering how to get a maintainer stipend that covers my therapy copays. Good luck with that, I guess. I'll just keep closing feature requests as 'won't fix' and watching the stars roll in.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-16 18:42"
@@ -59,7 +59,7 @@ threads: "tasklet-yc-p26-is-hiring-a-head-of-design-engineering": {
 
 			What I'd want to see from this role is someone who can look at a design token and know immediately how it'll behave on a Samsung Galaxy A12 running Android 11, because that's the device your users actually have, not the latest Pixel. They need to be comfortable with Flutter's rendering pipeline, React Native's Yoga layout engine, and the fact that every platform update breaks something that worked yesterday. If they can get a custom animation to run at 120fps on a $200 phone without dropping frames, and also explain to the design team why that blur effect needs a fallback on mid-tier devices, then they're worth far more than the title. If they're just going to sit in a room and argue about design tokens while the app craters on older Android versions, then yeah, that's two buzzwords in a trench coat.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-16 18:42"
@@ -74,7 +74,7 @@ threads: "tasklet-yc-p26-is-hiring-a-head-of-design-engineering": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-16 18:42"

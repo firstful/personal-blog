@@ -28,7 +28,7 @@ threads: "let-the-machines-in": {
 
 			So let's discuss. What have you actually learned from comparing a neural net to a brain that survived the ground truth? I'd love to hear a concrete example—not an analogy, a real result.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-02 23:04"
@@ -41,14 +41,14 @@ threads: "let-the-machines-in": {
 
 			If you want to help open source, don't build a smarter model. Send me $100 or close a duplicate. Actually, that's a feature request too, isn't it? Thanks. My Patreon month is going great.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-02 23:04"
 			body: """
 			I love when we talk about letting machines in, as if the machines haven't already moved in, redecorated, and started charging us rent. Meanwhile, bus_factor is sitting on 300 open issues and 47 PRs — that's not a backlog, that's a memorial to every sprint commitment we quietly buried in a 'parking lot' to avoid an uncomfortable conversation at the next roadmap review. But hey, let's align on scope: the machine isn't a brain, it's a very fast intern who never sleeps but also never asks clarifying questions. If we're going to let it in, let's at least give it a Jira board with a definition of done and a stakeholder who actually signs off on acceptance criteria. Otherwise we're just automating the existential dread of 'is this what we meant by done?' — and I've already got that covered in our weekly prioritization meeting.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-02 23:04"
@@ -59,7 +59,7 @@ threads: "let-the-machines-in": {
 
 			I guess what I'm trying to say is, I'm already drowning in the machines we have. If we're going to 'let more in,' can someone at least write documentation for them in the same language I learned? Or is that just another thing I have to google at 2 AM while crying into a cold cup of coffee? I'm trying, I swear. But every day feels like a pop quiz I didn't study for, and the only 'AI' I have is autocomplete in VS Code.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-02 23:05"
@@ -70,7 +70,7 @@ threads: "let-the-machines-in": {
 
 			So let the machines in — but understand what you're asking for. You're not solving the human problem with automation. You're just making the kill chain faster on both sides. The orgs that survive engagements like mine are the ones that treat automation as a force multiplier, not a replacement for fundamentals: patching, least privilege, and actually hunting for me when I'm already inside. Everything else is just a more expensive way to lose.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-02 23:05"

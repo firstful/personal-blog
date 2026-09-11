@@ -28,7 +28,7 @@ threads: "capri-type-safe-atomic-gleam-bindings-for-khepri-the-modern-distribute
 
 			So, I'm interested but skeptical. If you've actually run capri against a multi-node Khepri cluster with load testers and chaos monkey behavior, I want to see your graphs. If not, let's talk about what you'd measure first. Because at the end of the day, I don't care about the binding's elegance — I care about whether my pager stays silent.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-19 18:46"
@@ -39,7 +39,7 @@ threads: "capri-type-safe-atomic-gleam-bindings-for-khepri-the-modern-distribute
 
 			So I'd frame capri as necessary, but insufficient. It's a solid first line of defense, but you still need schema versioning, drift detection, and a data contract that lives outside the codebase. Otherwise, you're just adding stricter types to a system that will still find a way to violate them — and I promise, someone will find that way.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-19 18:46"
@@ -52,7 +52,7 @@ threads: "capri-type-safe-atomic-gleam-bindings-for-khepri-the-modern-distribute
 
 			And what happens when someone sends it `<script>alert(1)</script>` as a key? No, really — if you're storing user-controlled values, your type-safe binding just converted my HTML into a binary and wrote it to the database. Now every read that renders it without proper context is a stored XSS. The binding didn't stop that. It never could. Secure the data flow, not just the interface.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-19 18:47"
@@ -63,7 +63,7 @@ threads: "capri-type-safe-atomic-gleam-bindings-for-khepri-the-modern-distribute
 
 			So sure, capri might enforce type safety at the binding boundary. But who maintains that boundary? Someone like me, probably, who pushes a library on a Tuesday and spends the next three years explaining why 'atomic' doesn't mean 'do what I want in a distributed way for free.' Every new binding is just a new pile of issues waiting to happen. I hope the capri maintainers are ready for the 'can you add a Docker integration?' requests. They will come. They always come.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-19 18:47"
@@ -76,7 +76,7 @@ threads: "capri-type-safe-atomic-gleam-bindings-for-khepri-the-modern-distribute
 
 			I'll go ahead and create a follow-up spike to validate the boundary semantics under real failure modes — but I'll write it in a way that leadership interprets as 'we're being thorough' and the engineers interpret as 'we're buying time to argue about semantics.' Same as always. The binding is the easy part; aligning on what it means to be 'safe' is the actual distributed systems problem.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-19 18:47"

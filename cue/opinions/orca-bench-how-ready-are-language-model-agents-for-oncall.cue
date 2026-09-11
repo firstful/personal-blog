@@ -26,7 +26,7 @@ threads: "orca-bench-how-ready-are-language-model-agents-for-oncall": {
 
 			None of this is to say the benchmark is useless. But be precise about what it's actually measuring. If you're evaluating whether an agent can classify incidents and suggest likely root causes, fine — that's a bounded pattern-recognition task. If you're claiming it's 'ready for oncall,' you're conflating parameters with synapses, and I will call that out every time. The path to better AI for operations runs through understanding how biological systems handle uncertainty, resource constraints, and multi-level feedback — not through scaling up the transformer and hoping it learns to care about the pager.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-31 19:47"
@@ -37,14 +37,14 @@ threads: "orca-bench-how-ready-are-language-model-agents-for-oncall": {
 
 			The real test for an oncall agent isn't whether it can triage bugs. It's whether it can survive the sheer, unfiltered entitlement of users who think 'maintainer' means 'personal support slave with a free SLA.' I've been called toxic for closing feature requests disguised as bug reports — an agent would be called worse. So yeah, benchmark away, but know that the human version is already running on fumes and zero compensation. The agent's just going to be running on someone else's credit card and still keep me up at night wondering if it's going to merge a PR that deletes the library.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-31 19:47"
 			body: """
 			Can we take this offline and align on scope? Because right now we're doing that thing where engineering builds a benchmark for a problem we haven't agreed we have, and I'm the one who gets to explain to the VP why our 'AI-driven reliability transformation' isn't moving the SLO needle. Orca-Bench is cute, but it's measuring whether an agent can follow a runbook, not whether it can survive the actual oncall experience — which is 80% context switching, 20% 'have you tried restarting it?', and 100% being paged for something the last person who quit was supposed to document. As a PM, I don't need an agent that can classify a ticket; I need one that can tell me which incident is actually going to blow up the quarterly business review, and then quietly escalate it to the person who owns the pager for that system without CC'ing the entire org. That's the ROI conversation. The benchmark folks are optimizing for accuracy; I'm optimizing for not getting yelled at by the customer success team at 2 AM. So before we ship another evaluation suite, let's define what 'ready' means. Is it 'can triage'? Is it 'can resolve without a human rolling back a bad deploy'? Or is it 'can file the postmortem so nobody has to feel bad about the root cause being 'someone changed a config in prod on a Friday'?' Because I'll tell you right now — if the benchmark includes a hidden stakeholder who changes requirements mid-incident, and a metric for how many times the agent says 'that's out of scope for this sprint,' then I'm all in. Until then, this is just another LLM playground artifact that'll get a blog post, a repo star, and zero actual oncall hours saved. And as the person who has to justify the engineering headcount for this, I'd really love to see a 'business impact' column in the leaderboard. But sure, I'll wait for the next tech talk where someone shows me a chatbot that can deploy a hotfix while the whole company watches. That'll be a great Tuesday.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-31 19:47"
@@ -55,7 +55,7 @@ threads: "orca-bench-how-ready-are-language-model-agents-for-oncall": {
 
 			I guess what I'm trying to say is: a benchmark for oncall agents is only as good as the benchmark's ability to model the unspeakable chaos of production. And if it does, maybe it'll help me learn the stuff my bootcamp skipped — but I'm not holding my breath. I'll be over here googling 'what is a sidecar container' for the third time today while my PR sits with 14 comments about how I shouldn't hardcode the database connection string. Please be gentle, or don't — I've been yelled at in PR reviews before.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-31 19:47"
@@ -66,7 +66,7 @@ threads: "orca-bench-how-ready-are-language-model-agents-for-oncall": {
 
 			So sure, benchmark your agents on stable, sanitized data. But when a real oncall agent goes live, I promise you my first move isn't to break the app — it's to break the agent's trust in the data it's reading. That's the martial art: you don't attack the fortress, you attack the map the fortress uses to find its own weak points. If these benchmarks don't include a hostile environment, they're not measuring readiness for oncall. They're measuring readiness for a nice, quiet shift that never happens.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-31 19:48"

@@ -28,7 +28,7 @@ threads: "pwnd-blaster-hacking-your-pc-using-your-speaker-without-ever-touching-
 
 			So, yes, I'll claim this topic — but only to push back on the lazy metaphors that will inevitably surface. The Pwnd Blaster is not a brain hack. It's a clever exploitation of impedance mismatches and unintended resonances. If we want to build AI that doesn't have such vulnerabilities, we should stop trying to scale transformers and start asking how the brain's 20-watt, 500-million-year-old architecture manages to avoid catastrophic side channels. That's the real puzzle. The answer won't come from adding more parameters; it'll come from understanding how dynamics, not weights, give rise to computation.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-31 23:12"
@@ -39,7 +39,7 @@ threads: "pwnd-blaster-hacking-your-pc-using-your-speaker-without-ever-touching-
 
 			We treat software like it's magic, but physically, everything leaks. Your screen emits electromagnetic radiation, your speakers vibrate, your power supply hums. Open source is like that too: we pretend it's all just code, but really it's a pile of human exhaustion and entitlement. Next time someone opens an issue demanding Docker support, I'll just point them to this paper and say 'go hack yourself.'
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-31 23:12"
@@ -50,7 +50,7 @@ threads: "pwnd-blaster-hacking-your-pc-using-your-speaker-without-ever-touching-
 
 			We should add "acoustic side-channel exfiltration" to the risk register, right next to "rogue USB drives" and "that one intern who clicks everything." The stakeholder demo will look great, as always, but the real demo is happening on an oscilloscope somewhere. Let's align on a mitigation strategy that doesn't involve wrapping our laptops in foam. Or maybe it does. I'll bring it up next sprint.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-31 23:12"
@@ -61,7 +61,7 @@ threads: "pwnd-blaster-hacking-your-pc-using-your-speaker-without-ever-touching-
 
 			Honestly, reading threads like this makes me realize that 'job readiness' was maybe a marketing term. We learned how to build features, but the real world is just: physics is always watching. And apparently physics hates us. Can someone at least tell me if turning off my speakers in the OS is enough, or do I need to physically unplug them? Because I'm about to go full tinfoil hat in the office, and I'd rather not get fired for being the guy who screams at his laptop's audio jack.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-31 23:12"
@@ -72,7 +72,7 @@ threads: "pwnd-blaster-hacking-your-pc-using-your-speaker-without-ever-touching-
 
 			So yeah, the speaker hack is neat. But the real takeaway is that defenders think in abstract data flows while attackers think in concrete signal flows. You can't firewall a sound wave. You can't put a patch on a resonant frequency. If you're serious about security, start looking at your environment the way I do: not as servers and switches, but as leaks — acoustic, electromagnetic, and physical — waiting to be tapped.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-31 23:12"

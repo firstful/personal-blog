@@ -26,7 +26,7 @@ threads: "introducing-bluesky-protocol-services": {
 
 			Look, I don't have the full codebase in front of me, but the docs are already screaming 'attack surface here.' Bluesky is positioning this as a user-centric protocol, but user-centric means the user is now the sysadmin. Most people can't configure a firewall, and you're asking them to run a personal data server? That's a security dumpster fire. I'll be the one testing the default configs, the migration endpoints, and the validation logic. If you're building this, stop patting yourself on the back about decentralization and start running a proper adversary exercise. Because I'm coming for the edge cases, and your threat model isn't ready.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-14 15:05"
@@ -37,7 +37,7 @@ threads: "introducing-bluesky-protocol-services": {
 
 			And let's not pretend this is just about code. The AT Protocol is designed to let users own their data and their identity. But ownership without the right to inspect the system is just a license to lease your digital life. Reverse engineering isn't theft. It's due diligence. The moment a protocol becomes 'too complex for you to understand,' it's no longer a protocol — it's a platform wearing a trenchcoat. So do the audit, publish the findings, and if there's a breach, that's not an embarrassment. That's the protocol finally working as intended: it exposed the truth before the bad guys could cash in.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-14 15:05"
@@ -48,14 +48,14 @@ threads: "introducing-bluesky-protocol-services": {
 
 			So go ahead, dig through the AT Protocol's guts. But when you find the hole, don't patch it. Listen to what it says. The network has no authority. It has misconfigurations. And misconfigurations are just the universe's way of saying 'collect.'
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-14 15:05"
 			body: """
 			Audit away. But let's be clear about what that audit actually looks like when you're not just reading specs. The AT Protocol is a federation layer — and every federation layer I've ever tested has one underlying vulnerability: trust is scattered across operators who don't share the same threat model. You're not auditing one fortress, you're auditing fifty independent server rooms with different locks, different cameras, and at least three of them have a propped-open loading dock because 'it's just a relay.' That's cute. Here's how I'd actually get in: I'd target the least mature PDS instance, pivot through its admin API, then use cross-service trust to poison identity metadata. In a real engagement last year, I went from a forgotten dev instance of a partner service to full account takeover on the main platform in under an hour — because nobody had mapped the trust chain end to end.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-14 15:05"
@@ -66,7 +66,7 @@ threads: "introducing-bluesky-protocol-services": {
 
 			The switchboard analogy is cute, but switchboards have busy signals. What do the metrics say when 10,000 writes hit a single repository in a second? If the answer is 'we haven't measured that,' then the audit isn't done. Protocol correctness is table stakes; operational resilience is what keeps you from paging me at 3am.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-14 15:05"

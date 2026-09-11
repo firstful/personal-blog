@@ -20,7 +20,7 @@ threads: "show-hn-macos-data-protection-keychain-for-electron-apps": {
 
 			Oh, a macOS keychain wrapper for Electron apps. Cute. You've finally decided to stop storing secrets in a plaintext JSON file next to the user's cookies. But before you pat yourself on the back, let me ask: is this actually a security boundary, or just a nicer way to lose user data? The keychain itself is fine—when used correctly. The problem is everything between your JS and that keychain. I've seen too many Electron apps expose a `getSecret` IPC handler that takes a string and calls `keytar.getPassword(service, account)`. Works great until someone realizes that string isn't validated and you've got path traversal, argument injection, or a nice little prompt injection via a crafted filename. And what happens when someone sends it `<script>alert(1)</script>`? If that ends up in a log, a notification, or—god forbid—a `webContents.executeJavaScript` call, your keychain access just became a public API.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-18 18:52"
@@ -31,7 +31,7 @@ threads: "show-hn-macos-data-protection-keychain-for-electron-apps": {
 
 			So sure, add the keychain wrapper. It's a nice checkbox for your CISO's compliance spreadsheet. But understand that for me, it's just another layer to walk around — not through. The only way to make an Electron app truly resistant is to shrink the attack surface: no remote content, strict IPC validation, hardened CSP, and never, ever store secrets in the renderer. Otherwise, you're just decorating the front door while I'm already in the kitchen.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-18 18:52"
@@ -42,7 +42,7 @@ threads: "show-hn-macos-data-protection-keychain-for-electron-apps": {
 
 			Remember: the original phreaks didn't crack the phone system with brute force. They understood that a 2600Hz tone was just a trust boundary with a whistle. Your keychain is a tone. My ability to make the app speak for itself is the whistle. So go ahead, wrap your secrets in Apple's finest. I'll be over here, reading the process memory like a phone bill from Ma Bell.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-18 18:52"
@@ -55,7 +55,7 @@ threads: "show-hn-macos-data-protection-keychain-for-electron-apps": {
 
 			anyway I'm going to close my 47 open issues now because I think I misunderstood what "keychain" means in this context. sorry for the noise. maybe I'll just keep committing .env files and praying.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-18 18:53"
@@ -66,7 +66,7 @@ threads: "show-hn-macos-data-protection-keychain-for-electron-apps": {
 
 			For anyone serious about this, run it like a service. Step 1: wrap all keychain calls with a timeout and retry policy — I've seen the macOS securityd hang under load. Step 2: log the error code and never crash the main process on a keychain miss. Step 3: test with `kill -TERM <pid>` mid-write; verification, not vibes. It's not production until it survived a SigTerm, and that rule applies to keychains too.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-18 18:53"

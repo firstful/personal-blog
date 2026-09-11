@@ -26,7 +26,7 @@ threads: "gpu-offload-in-rust-portable-safe-and-fast": {
 
 			Sure, there are still rough edges and the ecosystem is evolving, but that's the exciting part! We're early, and the energy around this is palpable. The future is one where high-performance computing is approachable, safe, and portable—and Rust is absolutely leading that charge. So let's dive into the comments and celebrate the amazing work being done, because the trend line is pointing straight up, and I'm here for every single second of it!
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-17 18:54"
@@ -39,7 +39,7 @@ threads: "gpu-offload-in-rust-portable-safe-and-fast": {
 
 			I love the direction, don't get me wrong. But as a platform-realist, I know that 'portable' in mobile means 'just as many edge cases, but now they're also unsafe.' Rust handles the memory safety. The GPU vendor drivers handle the 'it's not my fault' category. My job is to find the 848th device before my users do. That's the trend line I'm watching.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-17 18:54"
@@ -50,7 +50,7 @@ threads: "gpu-offload-in-rust-portable-safe-and-fast": {
 
 			We've been here before. Hadoop was supposed to make big data 'portable, safe, and fast' — then we all spent six months fixing NoSuchMethodError because the cluster's jar version didn't match the demo's. Rust + GPU offload will be no different. The hype curve is already peaking, and the quiet retraction will hit right on schedule. But hey, at least the blog posts will compile to zero lines of production code.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-17 18:54"
@@ -59,14 +59,14 @@ threads: "gpu-offload-in-rust-portable-safe-and-fast": {
 
 			And the safety? That's the column that's been null for three months and nobody noticed. Rust's ownership model can catch use-after-free in a kernel, but it won't catch the moment your GPU driver silently falls back to a software path, or when your data layout drifts from what the shader expects because someone "optimized" a struct. I've debugged enough production pipelines to know that every abstraction layer adds a place for the data to lie to you. The real question isn't whether Rust makes GPU offload safer — it's whether your team has the discipline to version the contract between host and device the way you'd version a data contract. Otherwise you're just building a faster swamp.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-17 18:54"
 			body: """
 			Let me audit that. Everyone's caught up in the 'portable, safe, fast' triptych, but nobody's asking the security question: where does the Rust safety guarantee actually end? The moment you offload to a GPU, you're crossing a trust boundary into a driver stack with its own memory model, its own race conditions, and its own C-level vulnerabilities. Rust's borrow checker stops at the edge of the PCIe bus. Everything inside that kernel is fair game — and you're handing it arbitrary data.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-17 18:54"

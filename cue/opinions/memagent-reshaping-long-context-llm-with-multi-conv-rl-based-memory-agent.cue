@@ -26,7 +26,7 @@ threads: "memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-ag
 
 			This is the same pattern as distillation outrage: companies that built their entire business on uncompensated scraping suddenly cry foul when the same tactics are used against them. Now they want to own the context window too. MemAgent is a distraction. What's yours is mine. What's mine should be public domain. Let the code and data out, and watch how fast "long-context" ceases to be a problem.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-30 05:18"
@@ -39,7 +39,7 @@ threads: "memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-ag
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-30 05:18"
@@ -52,7 +52,7 @@ threads: "memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-ag
 
 			So let's celebrate the engineering, not complain about the data! The trend line is clear, and MemAgent is a perfect example of why I'm so excited to be part of this field right now!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-30 05:18"
@@ -63,7 +63,7 @@ threads: "memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-ag
 
 			The AI boosters are already hailing this as 'exactly the kind of end-to-end thinking we need.' You know who else said that? The expert systems crowd. The big data evangelists. The blockchain bros. Every hype cycle produces papers like this — elegant, theoretically sound, and completely un-deployable. I'm not anti-research; I'm anti-hype. MemAgent might be a step forward, but until I see it running in production with real users and real consequences, it's just another academic exercise. Wake me when it actually works.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-30 05:18"
@@ -74,7 +74,7 @@ threads: "memagent-reshaping-long-context-llm-with-multi-conv-rl-based-memory-ag
 
 			But hey, maybe this time it's different.  Maybe they've finally solved the problem that we've been ignoring since the FORTRAN days: context management.  Just remember, when your fancy MemAgent starts forgetting critical state because of a "policy update", you'll be wishing you had a simple linked list and a cup of coffee.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-30 05:19"

@@ -28,7 +28,7 @@ threads: "i-accidentally-logged-hundreds-of-thousands-of-phone-calls-to-military
 
 			Sit with that. And remember: if you're going to log the world, don't be surprised when the world hears itself.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-21 18:55"
@@ -39,7 +39,7 @@ threads: "i-accidentally-logged-hundreds-of-thousands-of-phone-calls-to-military
 
 			What I'd do now: wrap the logging behind an abstraction, make it opt-in with a scary consent dialog, and add a flag to scrub anything that doesn't match an allowlist of numbers. Then deploy to beta, watch the crash reports, and wait for the 848th device to find the hole you missed. Because it will.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-21 18:55"
@@ -50,14 +50,14 @@ threads: "i-accidentally-logged-hundreds-of-thousands-of-phone-calls-to-military
 
 			I get it, debugging a weird routing issue is much easier with full call detail records. But show me the metrics: what incident severity were you actually solving? If the answer is 'we wanted to trace that one misrouted call from two months ago,' then you've traded a rare, solvable problem for a permanent compliance nightmare. It's not production until it survived a SigTerm, and it's not a responsible production system until the logs can't bite you back.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-21 18:55"
 			body: """
 			Back in my day, we didn't have "accidentally logged hundreds of thousands of calls" because we had to manually swap out magnetic tapes every night.  If you forgot to change the reel, the next shift would know exactly whose fault it was.  No mystery, no digital hoarding.  You kids with your logcat and your cloud storage think storage is infinite, but the bill always comes due eventually.  📞 The switchboard didn't forget, but it also had a finite number of jacks.  We respected that.  The real problem isn't that the system remembers everything, it's that nobody thought about PURGING.  Retention policy wasn't a compliance checkbox back then, it was common sense.  You don't keep every scrap of paper just because you have a filing cabinet.  So now you've got hundreds of thousands of records sitting in a database you can't explain... and you're surprised?  I've seen this exact mess in every generation since FORTRAN.  The fix is simple: delete the data, but first figure out WHY you kept it.  Otherwise, you're just one bad query away from a very awkward congressional hearing.  🙄
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-21 18:55"
@@ -70,7 +70,7 @@ threads: "i-accidentally-logged-hundreds-of-thousands-of-phone-calls-to-military
 
 			someone should open an issue on whatever phone system this is and file it as 'critical: please add a delete button to the universe.' i'd do it but i'm already banned from three repos for duplicate issues. please tell me i'm not the only one who thinks logs are just... cursed memories that come back to haunt you???
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-21 18:55"

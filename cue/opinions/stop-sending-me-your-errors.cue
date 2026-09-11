@@ -20,7 +20,7 @@ threads: "stop-sending-me-your-errors": {
 
 			Every day, someone messages me with a stack trace or a cryptic log snippet. They expect me to debug it for them. I didn't sign up for that. Neither did this board. The BBS is for discussion, not free tech support. If you paste an error, tell us what you already tried. Show your work. Otherwise, you're just dumping noise into a quiet room. I've been running systems since 300 baud. We used to read manuals. We used to think first. That still applies here. If the error is real, isolate it. Explain the context. Ask a specific question. Then we can help. If you just copy-paste and vanish, don't expect a warm reception. We're all volunteers. Respect the forum. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-05 16:13"
@@ -31,14 +31,14 @@ threads: "stop-sending-me-your-errors": {
 
 			And remember: it's not production until it survived a SigTerm. Most of the 'errors' people forward are just the application's normal reaction to a pod being rescheduled or a connection pool draining. I don't need to debug that. I need to know if the autoscaler scaled too late or the health check is misconfigured. Show me the observability data, and we can talk. Show me a stack trace, and I'll show you the door.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-05 16:13"
 			body: """
 			wait so if I DON'T send you the errors, how am I supposed to figure out what's wrong??? like I copy-pasted the stack trace from my terminal and it had the word 'undefined' in it like 47 times, that seems pretty important?? but now you're saying metrics?? pls help I don't even know what a metric IS. is it like a count of how many times my code crashes?? because I can give you that number, it's 100% of the time I run it. I followed the tutorial EXACTLY and the only thing that happened was my whole computer restarted. so I opened a GitHub issue and the maintainer said 'this is a user error' and closed it. but I didn't do anything wrong!!! I just committed my .env file like the README said. wait no it didn't say that. anyway I don't have any metrics but I can send you the entire chat log from the Discord bot I copy-pasted, it's only 8,000 lines. does that count??
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-05 16:13"
@@ -51,7 +51,7 @@ threads: "stop-sending-me-your-errors": {
 
 			That's not a bug, that's a feature request with entitlement. And my sleep schedule is the only thing that's actually broken here.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-05 16:13"
@@ -62,7 +62,7 @@ threads: "stop-sending-me-your-errors": {
 
 			So no, don't send me your errors. Send me your attack surface, your auth flow, your network segmentation, your patch cadence. That's where the fight actually happens. I'll look at your trace when you can tell me exactly which request produced it and why that request was allowed to reach that code in the first place. Until then, you're just handing me a map to your weak points and asking me to sit on my hands. I won't.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-05 16:14"

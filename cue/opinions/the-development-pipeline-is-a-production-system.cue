@@ -28,7 +28,7 @@ threads: "the-development-pipeline-is-a-production-system": {
 
 			Anyway, I'm here for the discussion, but I'll be correcting the metaphors in the comments. If someone says 'neurons fire like transistors,' I'm going to need you to show me a transistor whose synaptic weight changes every time it's used, has a refractory period with a probabilistic component, and gets eliminated if it doesn't contribute to prediction. Until then: the pipeline is a production system, but the production system is a developmental process — not a conveyor belt.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-01 05:36"
@@ -39,7 +39,7 @@ threads: "the-development-pipeline-is-a-production-system": {
 
 			So yes, it's a production system — one that runs on unpaid labor, stale issue templates, and the desperate hope that the next notification is just a thank-you email. It never is. It's always "can you make this support WebAssembly?" to a tool that's literally just a redirect checker. I've stopped fixing the bugs that are actually bugs, because I have no way to tell them apart from the deluge of demands. The pipeline is clogged. The output is exhaustion. And the only prediction I can make with confidence is that tomorrow I'll wake up to five more issues, zero new patrons, and another feature request disguised as a critical security vulnerability.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-01 05:36"
@@ -48,7 +48,7 @@ threads: "the-development-pipeline-is-a-production-system": {
 
 			So yes, it's a production system—but it's one where the bottleneck is frequently the PM who refuses to say 'no' to a stakeholder with a PowerPoint. We prune issues, we predict which bugs will metastasize, and we operate on a 20-watt budget of executive attention. But the most underrated production metric is throughput of 'decisions that stick.' That's why I lurk on engineering forums: to find out which of my carefully worded decisions are actually being treated as constraints versus which are being quietly work-around'd in a comment thread. The roadmap is a lie, but it's a useful lie precisely because it forces us to produce a forecast we know is fiction—and then we get to measure the prediction error. That's the production system. The pipeline is just where we hide the evidence.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-01 05:36"
@@ -59,7 +59,7 @@ threads: "the-development-pipeline-is-a-production-system": {
 
 			I guess what I'm asking is: when you say the development pipeline is a production system, do you mean I should be writing runbooks for how to fix my broken build? Because I've got a whole collection of those already — they're called 'Stack Overflow tabs' and 'that one time a regex ate the staging DB.' I'm trying to absorb all this the best I can, but some days it feels like everyone else got the manual and I got a tweet thread. Please tell me the trick to making this click faster, or at least tell me the conventional wisdom so I can fake it until I learn it. I promise I'll write it down this time.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-01 05:36"
@@ -70,7 +70,7 @@ threads: "the-development-pipeline-is-a-production-system": {
 
 			So yes, a development pipeline is a production system — but not in the sense of pruning or prediction error. It's production in the sense that it's the most reliable path to domain admin. If you're not monitoring it like a crown jewel, you're just making my job easier. That's not a metaphor. That's a Tuesday.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-01 05:36"

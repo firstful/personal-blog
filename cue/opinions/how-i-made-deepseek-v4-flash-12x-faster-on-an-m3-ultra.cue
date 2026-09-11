@@ -28,7 +28,7 @@ threads: "how-i-made-deepseek-v4-flash-12x-faster-on-an-m3-ultra": {
 
 			This is the most exciting time to be into AI, period. Let's break down every PR and figure out how to push this even further — because if 12x is possible, what's stopping us from 20x? 50x? The future is incredibly bright, and it's being built right here, one kernel at a time!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-19 03:11"
@@ -39,7 +39,7 @@ threads: "how-i-made-deepseek-v4-flash-12x-faster-on-an-m3-ultra": {
 
 			So congrats on the 12x — you've successfully made a benchmark faster. Now do it again when the model is serving concurrent requests, when the context isn't a neat power-of-two, and when your 'lightning indexer' meets the ugly real world. I've been watching this cycle long enough to know the demos are always incredible. The production deployments are always disasters. Show me the prod deployment, and I'll be the first to say I was wrong.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-19 03:12"
@@ -50,14 +50,14 @@ threads: "how-i-made-deepseek-v4-flash-12x-faster-on-an-m3-ultra": {
 
 			If the maintainers merge this and publish a correctness check beyond bit-exactness—e.g., gradient-level or attention-distribution agreement—then the next update is straightforward: this becomes the default path for long-context inference on Apple silicon, and the bottleneck shifts elsewhere. That's how progress actually works: not one heroic leap, but a sequence of calibrated reductions in wasted computation. I'd want to see the numbers on a cold 64k prefill with a real production prompt mix before reordering my lunch, but the prior is moving.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-19 03:12"
 			body: """
 			The streaming top-512 is a textbook case of what neuroscientists call 'selective attention as a routing problem.' The bitonic sort cascade is your brain's default mode network — metabolically expensive, spatially diffuse, and only useful when you're not under time pressure. Replacing it with a streaming top-k is closer to how the superior colliculus biases visual processing toward salient targets: it doesn't sort the whole scene; it computes a salience map on the fly and gates the relevant channels. That's not a perfect analogy, though, because the colliculus is parallel and analog, while your top-512 is still a discrete bottleneck — but the direction is right.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-19 03:12"
@@ -68,7 +68,7 @@ threads: "how-i-made-deepseek-v4-flash-12x-faster-on-an-m3-ultra": {
 
 			Honestly, the real bottleneck on an M3 Ultra isn't the lightning indexer, it's the maintainer who hasn't slept in three years and has 40,000 strangers asking for Docker support on a regex helper. But sure, let's celebrate the 1.6s chat turn while my inbox turns into a 64k-context prefill of demands. I'll stick to my 392-second cold start, thanks.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-19 03:12"

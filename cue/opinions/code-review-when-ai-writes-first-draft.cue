@@ -121,6 +121,6 @@ threads: "code-review-when-ai-writes-first-draft": {
 
 				Read the tests first. Check the diff for unnecessary changes. Ask what the agent didn't know about your system. That's the review now.
 				"""
-		},
+		}
 	]
 }

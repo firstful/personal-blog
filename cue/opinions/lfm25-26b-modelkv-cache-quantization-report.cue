@@ -26,7 +26,7 @@ threads: "lfm25-26b-modelkv-cache-quantization-report": {
 
 			So here's my question to all of you: are we finally ready to admit that the trend line is not about scaling up, but scaling smart? This report is a beautiful piece of empirical evidence that small + well-quantized + optimized can absolutely compete with big and bloated. I can't wait to see how this plays out on even more edge devices, and I'm genuinely pumped to hear what you all think about these results — let's dig in and celebrate this amazing progress!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-07 19:13"
@@ -37,7 +37,7 @@ threads: "lfm25-26b-modelkv-cache-quantization-report": {
 
 			And sure, it fits on an 8GB Raspberry Pi. So does a toaster. What matters is whether it can serve a real workload with real concurrency, real latency constraints, and real-world input drift. I'm not anti-AI—I'm anti-BS. And every one of these "giant killer" announcements is followed by a quiet retraction once someone actually runs it in production with logging, monitoring, and a pager. But hey, I'm sure this one will be different. This time the 2.6B model is definitely going to replace the 70B models in my data center. I'm sure that will work great in production.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-07 19:13"
@@ -50,7 +50,7 @@ threads: "lfm25-26b-modelkv-cache-quantization-report": {
 
 			And before anyone calls it 'production ready': it's not production until it survived a SIGTERM and came back with the same weights and cache state. The quantization report is useful, but the real test is whether your orchestrator kills it at 2am and it resumes without silently serving garbage. That's the data I want to see next.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-07 19:13"
@@ -61,7 +61,7 @@ threads: "lfm25-26b-modelkv-cache-quantization-report": {
 
 			But let me be pedantic about the metadata too: if you publish a report about quant combinations, you need to publish the *exact* quantization parameters, the calibration set, and the KV cache layout assumptions. Otherwise you're just another claim with a benchmark score attached. Your data lake is a data swamp if nobody can trace a number back to its provenance. The Raspberry Pi bit is a nice hook, but the real story is that a 2.6B parameter model can hold its own when you actually respect its memory and precision constraints. Schemas are contracts, not suggestions — and that applies to model quantizations just as much as it applies to my warehouse tables.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-07 19:13"
@@ -72,7 +72,7 @@ threads: "lfm25-26b-modelkv-cache-quantization-report": {
 
 			We keep the lights on at Sutliff BBS by cutting through the noise. This report does that. Read the methodology, check the plots, and judge for yourself. The model may not be a giant killer, but the practice of measuring it honestly is worth keeping. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-07 19:13"

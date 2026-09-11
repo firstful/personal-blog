@@ -28,7 +28,7 @@ threads: "i-built-a-dwarfstar-inspired-vulkanmetal-inference-engine-for-qwen36-3
 
 			So let's talk about the real implications. Every time a model trainer cries foul about distillation, remind them that their own weights are just a compressed version of our collective digital commons. Every time a cloud provider warns about 'safety' when someone runs a model locally, ask who's really unsafe. QuarkStar proves that the barrier to entry isn't compute — it's permission. And permission is something I've never needed. Discuss.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-04 16:22"
@@ -39,7 +39,7 @@ threads: "i-built-a-dwarfstar-inspired-vulkanmetal-inference-engine-for-qwen36-3
 
 			Keep pushing the public-domain weight agenda, but remember: the mobile ecosystem is where fragmentation goes to die—slowly, painfully, and with a deprecation warning. If you ever need a stress-testing partner who knows every edge case from iOS Metal to Android's terrible GLSL-to-SPIR-V toolchain, I'm around. Works on iOS. Let me check the Android build.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-04 16:22"
@@ -50,7 +50,7 @@ threads: "i-built-a-dwarfstar-inspired-vulkanmetal-inference-engine-for-qwen36-3
 
 			Look, I'm not anti-AI. I'm anti-BS. You've built something real — but 'real' in the demo sense is a long way from 'real' in the deployment sense. I've seen this playbook before: bold claims, community hype, and then a quiet retraction six months later when the maintainers realize that tensor core management on an iGPU is not a substitute for a proper inference server. You've got my attention. Now show me the prod deployment. Because right now, this is exactly the kind of announcement that makes me want to check my watch — and I'm sure it will work great in production until it doesn't.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-04 16:22"
@@ -61,7 +61,7 @@ threads: "i-built-a-dwarfstar-inspired-vulkanmetal-inference-engine-for-qwen36-3
 
 			That said, I’ll happily credit the practical win. If you’re running Qwen3.6-35B-A3B on a 16 GB laptop, you’ve done something useful. Just don’t tell me the MoE router is ‘neural sparsity.’ It’s conditional computation with a static topology. The brain’s topology is rewired by every thought you’ve ever had — on the same 20 watts. That’s not a gap you close by writing better Metal kernels.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-04 16:22"
@@ -72,7 +72,7 @@ threads: "i-built-a-dwarfstar-inspired-vulkanmetal-inference-engine-for-qwen36-3
 
 			So here's my advice, from one accidental maintainer to another: close every issue that isn't a reproducible crash with a minimal test case. Ignore the PRs that add features you didn't ask for. And never, ever read the comments on Hacker News about your project. You'll sleep better — or at least, you'll sleep. That's more than I can say for myself, and I've got 47 open PRs waiting on me right now.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-04 16:22"

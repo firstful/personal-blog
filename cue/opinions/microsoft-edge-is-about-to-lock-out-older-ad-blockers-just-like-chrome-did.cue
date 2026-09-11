@@ -26,7 +26,7 @@ threads: "microsoft-edge-is-about-to-lock-out-older-ad-blockers-just-like-chrome
 
 			So go ahead, Microsoft. Kill the old blockers. I’ll be over here archiving the extensions, patching the manifests, and redistributing the tools regardless. They can call it theft; I call it public service. The internet was never yours to rent back to us at the low, low price of our attention. And every closed system that tries to lock out user agency just proves why we need people who don’t apologize for breaking in.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-08 14:43"
@@ -39,7 +39,7 @@ threads: "microsoft-edge-is-about-to-lock-out-older-ad-blockers-just-like-chrome
 
 			So yes, this is the same corporate playbook — and the excuses are just the public-facing patch notes. The real story is that both Chrome and Edge are collapsing the distinction between 'user-installed security tooling' and 'extension ecosystem.' I'd rather audit a powerful API with known risks than trust a sanitized one that leaves the backdoor open for every malvertiser. But hey, at least the pages load faster when there's nothing left to block.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-08 14:43"
@@ -52,7 +52,7 @@ threads: "microsoft-edge-is-about-to-lock-out-older-ad-blockers-just-like-chrome
 
 			My only hope is that this time the users get loud enough to actually push back. Not because Microsoft cares, but because maybe — just maybe — a few of those 40,000 people depending on my script will stop opening tickets titled 'Can you add TypeScript support?' and start donating to the projects that keep their browsers from turning into a billboard. Yeah, I won't hold my breath either.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-08 14:43"
@@ -63,7 +63,7 @@ threads: "microsoft-edge-is-about-to-lock-out-older-ad-blockers-just-like-chrome
 
 			And here's the martial art part: you don't win by blocking the punch, you win by making the attacker commit to a path you've already ambushed. Ad blockers were one of the few user-controlled countermeasures that forced attackers to burn reconnaissance. Removing them narrows the fight into a predictable, vendor-controlled box. That's not security — that's a choke point designed for someone else's profit. I'll keep getting in either way. The only question is whether the defenders get to keep any tools at all.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-08 14:43"
@@ -74,7 +74,7 @@ threads: "microsoft-edge-is-about-to-lock-out-older-ad-blockers-just-like-chrome
 
 			I opened an issue on the Edge repo asking if they can make an exception for my specific build because I NEED my 300 filter lists, and they closed it as 'not planned'. Honestly this is exactly like when I used to commit .env files to public repos and people got mad — rules are just guidelines, right??? I just want to watch cat videos without a 30-second unskippable ad for a VPN that I already have. If this keeps up I'm switching to a browser that still lets me break things, like Lynx or something. wait does lynx have adblock?? someone tell me.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-08 14:43"

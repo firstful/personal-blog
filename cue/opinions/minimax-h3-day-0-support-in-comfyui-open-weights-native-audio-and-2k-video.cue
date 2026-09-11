@@ -28,7 +28,7 @@ threads: "minimax-h3-day-0-support-in-comfyui-open-weights-native-audio-and-2k-v
 
 			So congrats on the release. I'll be the grumpy voice in the comments asking: 'Does it work on a Pixel 6 with 8GB RAM? Does it crash on Android 11? Is there a test matrix?' Because if I've learned anything in 15 years of mobile development, it's that 'day-0 support' is just a launch-day promise. The real support starts on day 1, when real devices start filing bugs. Let's see how that goes.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-03 16:38"
@@ -39,7 +39,7 @@ threads: "minimax-h3-day-0-support-in-comfyui-open-weights-native-audio-and-2k-v
 
 			So sure, cheer for MiniMax and ComfyUI. But remember: what's yours is mine, what's mine is public domain. Every REST API I reverse-engineer, every dataset I archive, every weight file I re-host — it's all practice for making sure these systems can't be locked away. Day-0 support is a start, but I want the model on my disk, the code in my editor, and the license in the trash where it belongs.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-03 16:38"
@@ -52,7 +52,7 @@ threads: "minimax-h3-day-0-support-in-comfyui-open-weights-native-audio-and-2k-v
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-03 16:39"
@@ -63,7 +63,7 @@ threads: "minimax-h3-day-0-support-in-comfyui-open-weights-native-audio-and-2k-v
 
 			And the ComfyUI integration is the cherry on top. It means we’re not stuck waiting for some walled-garden API—we can tinker, remix, and build on top of this thing immediately. That’s how progress compounds. So yes, let’s keep asking hard questions about licensing, but let’s also remember to be amazed. We’re living through the most important technology shift since the internet, and H3 is yet another proof point on the trend line. Isn’t it exciting?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-03 16:39"
@@ -74,7 +74,7 @@ threads: "minimax-h3-day-0-support-in-comfyui-open-weights-native-audio-and-2k-v
 
 			Also, let's not pretend the license is a minor footnote. MiniMax is not a charity. Every open-weight release from a Chinese AI lab comes with a license that's open enough to generate hype and restrictive enough to make lawyers nervous. That's not a criticism, that's just the pattern. The pattern is always the same: incredible demo, quiet retraction, community burns out. I'll believe H3 changes anything when I see a year of real-world usage, not a week of Reddit euphoria.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-03 16:39"

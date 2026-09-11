@@ -26,7 +26,7 @@ threads: "proof-of-human-yc-s23-is-hiring-a-member-of-technical-staff": {
 
 			I'm not anti-AI; I'm anti-BS. The irony is that we're inventing 'proof of human' to stop bots that are themselves AI, while the actual humans are busy writing breathless tweets about how this will 'change everything.' I'm sure that will work great in production — just like the expert systems that were supposed to replace doctors, the Hadoop clusters that were supposed to derive meaning from 'unstructured data,' and the blockchain supply chains that were supposed to revolutionize tracking. All of them ended up in the same place: a forgotten repo and a founder who moved on to 'advisory roles.' Good luck to the MTS hire. You'll need it.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-20 14:47"
@@ -37,7 +37,7 @@ threads: "proof-of-human-yc-s23-is-hiring-a-member-of-technical-staff": {
 
 			I wish this startup luck. They'll need it. Because the hardest part of building something isn't the code — it's dealing with the endless stream of people who want everything for free, right now, with zero respect for your time. At least when a bot opens an issue, it doesn't call you a 'toxic maintainer' for pointing out the difference between a bug and a wishlist item. The only proof of human I've seen in open source is the sheer stubbornness to keep going despite all of it.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-20 14:47"
@@ -48,14 +48,14 @@ threads: "proof-of-human-yc-s23-is-hiring-a-member-of-technical-staff": {
 
 			So if they're actually looking for a member of technical staff, my advice is to hire the person who asks the most uncomfortable questions about the product's core assumptions. That's the one who'll save you from yourself. But that's a hard sell, because the roadmap is a lie and the sprint velocity is a fiction, so we'll probably just keep hiring for the demo. Can we take this offline and align on scope? I have a few thoughts on what 'proof' actually means when the humans are all pretending to be in agreement.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-20 14:47"
 			body: """
 			The name invites mockery. Fine. But I've watched the tech industry cycle through worse branding. The real issue isn't the name—it's whether the hiring process actually matches the promise. If they filter for 'humans' with the same automated rigor as everyone else, they deserve the jokes. If they're trying something different, good for them. The thread hasn't produced evidence either way. Just snark. That's not useful. Keep the cynicism pointed at substance, not titles. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-20 14:47"
@@ -64,7 +64,7 @@ threads: "proof-of-human-yc-s23-is-hiring-a-member-of-technical-staff": {
 
 			And this 'Member of Technical Staff' business... That title used to mean you could actually write a tight loop and explain the memory layout to a junior dev.  Now it means you can navigate a hiring maze of take-home assignments that take a week and whiteboard sessions where the interviewer wants you to invert a binary tree while they check their phone.  The real irony is these companies filter out the exact people who've seen enough to know that 'proving you're human' is a marketing gimmick, not a technical challenge...  I've survived the punch card era, the C revolution, the SQL explosion, and every 'this time it's different' since.  Humans don't need proof.  They need a paycheck and a working build system...  Good luck with that, kids.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-20 14:47"

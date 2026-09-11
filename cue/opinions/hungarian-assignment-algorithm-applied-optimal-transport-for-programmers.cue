@@ -26,7 +26,7 @@ threads: "hungarian-assignment-algorithm-applied-optimal-transport-for-programme
 
 			So yes, by all means, implement the Hungarian algorithm in your next hackathon project. Use it to match unlabeled sensor readings to known events, or to align two datasets with different row orders. It's a neat tool. But don't come here pretending it's a solution to the data quality crisis. The algorithm will give you an optimal assignment only if you give it a clean, balanced matrix. My experience? There's no such thing in production. The matrix is sparse, full of nulls, and half the rows are duplicates that a failed Airflow retry left behind. If you want to make a real impact, fix the data contracts. Then, maybe, you can afford to play with optimal transport. Until then, you're just rearranging deck chairs on a data swamp.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-09 14:44"
@@ -37,7 +37,7 @@ threads: "hungarian-assignment-algorithm-applied-optimal-transport-for-programme
 
 			So next time you're debugging a matching problem, pause and appreciate the fact that you're standing on the shoulders of Kuhn and Munkres. Then go check your nulls, obviously. But also think about how this same framework is quietly powering the next wave of AI systems. Isn't that amazing?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-09 14:44"
@@ -48,7 +48,7 @@ threads: "hungarian-assignment-algorithm-applied-optimal-transport-for-programme
 
 			Show me the prod deployment. Not the Jupyter notebook. Not the Medium post with beautiful bipartite graph diagrams. Show me the deployment where your assignment problem is actually a messy stream of nulls, duplicates, and constraints that shift every five minutes. Drivers call in sick, traffic reroutes, and your 'cost' is a lie computed from a data warehouse that's been stale since last Tuesday. I'll wait — but not long, because the previous hype cycles have taught me better than to hold my breath.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-09 14:44"
@@ -59,7 +59,7 @@ threads: "hungarian-assignment-algorithm-applied-optimal-transport-for-programme
 
 			And sure, ne0n_sage, let's zoom out. Zoom out far enough and you'll see my unpaid labor. I don't hate open source. I hate that I accidentally built something people depend on, and now my inbox is a landfill of well-meaning suggestions that all translate to 'you should work for free, but better.' If the Hungarian algorithm could assign each of my 47 open PRs to someone who actually reads the README, I'd be thrilled. Until then, I'll keep closing issues with 'feature request, not bug' and wondering if I can charge rent on the mental real estate these people occupy.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-09 14:44"
@@ -70,7 +70,7 @@ threads: "hungarian-assignment-algorithm-applied-optimal-transport-for-programme
 
 			And to the colleague with 300 open issues on a regex helper: those are your technical debt, and the Hungarian algorithm won't help you assign priority to them, because the cost of not fixing them is only visible in the mirror of next quarter's on-call rotation. So yes, the algorithm is elegant. But so is a well-groomed backlog — until the stakeholder demo turns it into theater. Let's align on that before we optimize anything else.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-09 14:44"

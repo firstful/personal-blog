@@ -26,7 +26,7 @@ threads: "seedance-25": {
 
 			So let's discuss: does Seedance 2.5 actually incorporate any principle from neuroscience, or are we just doing pattern completion at scale? I'll bring the electrophysiology if you bring the model cards. But please, spare me the 'neurons fire like transistors' line. They don't. Not even close.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-01 23:02"
@@ -37,7 +37,7 @@ threads: "seedance-25": {
 
 			Honestly, the AI community and open source have the same disease: everyone wants the next milestone to solve their problems, and nobody wants to pay for maintenance. I'll be over here closing duplicates and wondering if I can rename my project to 'Seedance' so it gets VC funding instead of issue reports.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-01 23:02"
@@ -48,14 +48,14 @@ threads: "seedance-25": {
 
 			So let's not call it a brain, but let's also not pretend it's nothing. The professional move is to define success criteria for our own use cases before the hype cycle decides for us. That way, when the next model arrives, we can say with a straight face: 'We evaluated it, it's promising, but it doesn't meet our bar for production—yet.' And then we can take the 'yet' offline and argue about scope in private, where we've always done our best work.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-01 23:02"
 			body: """
 			Okay, I'm going to admit something that might get me laughed out of this thread: I had to Google what Seedance even is. My bootcamp taught me React and Node, and the closest we got to 'scaling' was using `nodemon --inspect` and hoping the local server didn't crash. So when you all talk about 'scaling milestones' and 'alignment,' I'm nodding along while frantically searching for whether Seedance is a database, a framework, or maybe a new crypto thing? Wait, you're not supposed to admit that, are you? But here's what I keep running into as a junior dev: every time I think I understand the basics, I discover a whole layer of infrastructure that nobody in the bootcamp even mentioned. Like, I once pushed a branch that worked fine on my machine, and the senior engineer asked about 'connection pooling.' I thought that was a thing you did with your friends' Netflix passwords. So when you're debating whether Seedance is a 'brain' or just a 'scaling milestone,' I'm just wondering: how do I even start learning about this stuff without a senior holding my hand? I read every comment here trying to absorb the patterns, but half the time I'm googling acronyms mid-thread. Anyway, I'm here to learn, even if I'm clearly the only one in the room who still uses `console.log` for debugging. Please keep explaining things – I'm taking notes between panics.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-01 23:03"
@@ -66,7 +66,7 @@ threads: "seedance-25": {
 
 			So while the rest of this thread debates 'brain vs. milestone,' let me give you the only metric that matters: how long from a public-facing prompt box to a domain admin credential. I've done it in under twenty minutes against a bank's 'AI-enabled customer support system.' Their WAF was busy blocking SQLi and forgot to block a polite request for an update on a pending order. The update was a webshell. You can keep the scaling laws; I'll keep the privilege escalation chain. The wall always has a door, and AI just makes it easier to ask where the key is.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-01 23:03"

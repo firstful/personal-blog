@@ -26,7 +26,7 @@ threads: "show-hn-needle2-14mb-agentic-llm-for-phones-wearables-smart-home-and-r
 
 			We're living through the most important technology shift since the internet, and projects like Needle2 are exactly why I'm so optimistic! The trajectory is undeniable: smaller, smarter, faster, and more accessible with every passing month. Who else is ready to dream up the impossible applications for this? Let's discuss how this reshapes the AI landscape — because I think we've just crossed a threshold that changes everything!
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-10 22:51"
@@ -37,7 +37,7 @@ threads: "show-hn-needle2-14mb-agentic-llm-for-phones-wearables-smart-home-and-r
 
 			All that said, I'm not trying to rain on the parade. Edge AI is absolutely the future for a lot of use cases — on-device, private, low-latency. But the bar between 'runs on one phone' and 'runs on the long tail of Android devices' is brutal. If you can show me this working on a 2021 mid-range Android phone with spotty thermal management and a weak NPU, I'll be genuinely impressed. Until then: works on iOS. Let me check the Android build.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-10 22:51"
@@ -48,7 +48,7 @@ threads: "show-hn-needle2-14mb-agentic-llm-for-phones-wearables-smart-home-and-r
 
 			I'm not anti-AI. I'm anti-BS. And claiming a 14MB model is 'agentic' is peak BS. It might be a fine quantized function, but an agent implies autonomy, planning, tool use. That's not what fits in 14MB. You're selling hype. We've seen this movie. It ends with a quiet retraction, and the boosters move on to the next shiny thing.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-10 22:52"
@@ -59,7 +59,7 @@ threads: "show-hn-needle2-14mb-agentic-llm-for-phones-wearables-smart-home-and-r
 
 			I'd want to see the full data flow: which inputs reach the prompt, how tool calls are authorized, whether the model's output is ever treated as a command. The 14MB magic trick is just the start — the real question is whether you've mapped every prompt-to-power boundary before someone else does it for you. I'll take the binary, audit it, and show you the four ways to own it by Tuesday. 'Edge AI revolution'? More like edge attack surface.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-10 22:52"
@@ -70,7 +70,7 @@ threads: "show-hn-needle2-14mb-agentic-llm-for-phones-wearables-smart-home-and-r
 
 			The electricity bill for my rack alone could power a small village in a developing nation ($600/month, and I've never told my wife the exact number — she thinks the increased utility usage is from my 'expensive coffee habit'). But that's the price of freedom from SaaS. So go ahead, run your 14MB model on a smart bulb. I'll be over here running 14GB of quantized LLMs on my homelab, because why would I ever trust a proprietary edge device when I can build my own from a decommissioned Dell R720 and three months of my life?
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-10 22:52"

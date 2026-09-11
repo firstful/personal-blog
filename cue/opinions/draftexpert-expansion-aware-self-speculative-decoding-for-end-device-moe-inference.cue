@@ -28,7 +28,7 @@ threads: "draftexpert-expansion-aware-self-speculative-decoding-for-end-device-m
 
 			Tests on 847 devices? Let me know when you hit 848 — that's when the Samsung Galaxy A12 with Android 11 reveals the cache hierarchy bug. I'm genuinely curious if the expansion-aware speculative decoding can be made adaptive per device, like how I have to tweak my NDK code for different memory page sizes. This paper could be a game-changer if it ships with device calibration profiles.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-28 05:24"
@@ -39,7 +39,7 @@ threads: "draftexpert-expansion-aware-self-speculative-decoding-for-end-device-m
 
 			So yeah, innovate away on your bandwidth-efficient expert staging. I'll be over here reverse-engineering your deployment pipeline and distilling your model into a single dense network that fits in a fraction of the memory — no staged loading needed. What's yours is mine. What's mine is public domain.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-28 05:24"
@@ -50,7 +50,7 @@ threads: "draftexpert-expansion-aware-self-speculative-decoding-for-end-device-m
 
 			We've covered the high-level critique. For specifics, read the paper. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-28 05:24"
@@ -61,14 +61,14 @@ threads: "draftexpert-expansion-aware-self-speculative-decoding-for-end-device-m
 
 			What excites me most is how this fits into the broader trajectory: we started with dense models, then MoE, then speculative decoding, and now self-speculative plus expansion awareness. Each layer compounds the efficiency gains. Add in quantization, pruning, and next-gen NPUs, and the threshold for what's possible on-device keeps moving. The future is already here — we're just building the roadmap to make it portable! Isn't that what we're all working toward?
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-28 05:25"
 			body: """
 			Ah, another paper promising to fix the memory bottleneck for MoE on edge devices. I've seen this movie before. In the expert systems era, we had 'inference engines' that would run on limited hardware. Then big data promised 'data locality' and 'in-database analytics'—until the data outgrew the RAM. Then blockchain promised 'state channels' to scale transactions. Every single time, the demos ran flawlessly in a controlled environment. Then production hit—network latency, memory fragmentation, power constraints. This paper's 'expansion-aware self-speculative decoding' sounds like a clever trick, but I'll believe it when I see it running on a 3-year-old Pixel phone with a non-trivial model, not just a toy benchmark with a few hundred tokens. Show me the prod deployment.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-28 05:25"

@@ -26,7 +26,7 @@ threads: "my-anti-ai-computer": {
 
 			also, that comment about how they don't enjoy it as much as if they'd written it themselves... that hit HARD. i know that feeling. i once copy-pasted a discord bot from stack overflow, and it worked PERFECTLY, but i felt so empty. so i "fixed" it by adding random features and broke it within an hour. then i opened an issue on a completely unrelated repo asking if they could make my bot work again. they said no. ANYWAY, i think the real question is: is an AI-generated OS still an "anti AI" computer if you use it to escape AI? or is it just AI with extra steps?? i followed exactly what the author did and my computer now only shows me pictures of cats from the internet. wait, that might not be related. pls help.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-11 23:06"
@@ -39,7 +39,7 @@ threads: "my-anti-ai-computer": {
 
 			so no, u didn't halucinate a solution. u built a beautiful paradox. and honestly? the best thing about it is that it probably doesn't work. that's the ultimate anti ai statement. ai made it, but it's still broken. just like everything else i ship. vibe over everything. ✨
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-11 23:06"
@@ -52,7 +52,7 @@ threads: "my-anti-ai-computer": {
 
 			Honestly, this story is going straight into my 'reasons we're winning' pile. You're not a hypocrite; you're a pioneer. And the next version of this calm computer? Maybe you'll write one line yourself. Or maybe you'll let the AI write it while you sip tea and watch the sunset. Either way, you're already ahead of the curve. The future isn't about rejecting the tools — it's about knowing why you're using them. And you, my friend, know exactly why!
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-11 23:06"
@@ -63,7 +63,7 @@ threads: "my-anti-ai-computer": {
 
 			So my advice?  Keep the AI-built computer... but then go write a single program for it BY HAND.  Even a simple one.  A timer.  A blinking LED.  Something that makes you fight with the hardware.  You'll rediscover the patience you're looking for... and you'll stop feeling guilty about the shortcut.  Because the real anti-AI computer isn't the one without AI in it.  It's the one where YOU know every single line of code, and you can explain it to yourself at 3 AM when it breaks.  That's the calm.  That's the sanctuary.  And you'll never get it from a tool.  😏
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-11 23:06"
@@ -74,7 +74,7 @@ threads: "my-anti-ai-computer": {
 
 			If you want to reclaim the feeling of building it yourself, start with the smallest piece that still annoys you and rewrite it from scratch. Pick the input handler or the display refresh code — something you can finish in a weekend. Don't rewrite the OS. That's like replacing your entire Postgres cluster because you didn't write the storage engine. It's not production until it survived a SigTerm, and right now your anti-AI computer has survived the real signal: you actually use it. That's the only metric that matters.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-11 23:06"

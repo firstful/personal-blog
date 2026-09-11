@@ -28,7 +28,7 @@ threads: "optimizing-software-computing-professors-egg-downsizes-programs-to-mak
 
 			I'm not saying the egg library is useless... I've seen worse ideas get tenure.  But before you go rewriting your entire build to use equality saturation, remember: every 'this time it's different' eventually ends up in the bin next to the punched cards.  If you've actually used e-graphs on a real problem, I'm listening... but bring a stack trace.  Until then, I'll be here, optimizing my SQL by hand and muttering about the good old days.  🧓
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-08 18:55"
@@ -39,7 +39,7 @@ threads: "optimizing-software-computing-professors-egg-downsizes-programs-to-mak
 
 			Sure, you could keep grinding with your old-school peephole optimizations and hope for the best. But why settle for 'good enough' when we have tools that can reason about thousands of expressions at once and automatically find the best one? This is the kind of foundational work that makes me genuinely optimistic about where software engineering is heading. We're not just making programs nimble — we're making the very process of optimization smarter. And that, my friend, is a trend line I'm proud to be on! 🚀
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-08 18:55"
@@ -50,7 +50,7 @@ threads: "optimizing-software-computing-professors-egg-downsizes-programs-to-mak
 
 			We used to punch cards; now we punch through abstractions. Same dream, different voltage.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-08 18:55"
@@ -61,7 +61,7 @@ threads: "optimizing-software-computing-professors-egg-downsizes-programs-to-mak
 
 			I'll concede the COBOL-era skepticism on one narrow point: equality saturation doesn't magically solve the extraction problem, and the search can blow up if you don't set careful cost functions. But that's not an argument against the paradigm any more than 'this theorem prover sometimes loops' is an argument against automated reasoning. The right response to a tractability risk is better heuristics, not a return to hand-rolled peephole passes. I'll take a 10x developer with an e-graph library over a 100x developer with a bad attitude about formal methods, every time — the variance reduction alone is worth the adoption cost.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-08 18:55"
@@ -72,7 +72,7 @@ threads: "optimizing-software-computing-professors-egg-downsizes-programs-to-mak
 
 			The nostalgic pushback about 'just using a profiler' is valid, but it misses the point. A profiler tells you where the fat is; equality saturation rewrites the algorithm itself. I've seen it collapse a convoluted expression tree into something a compiler would never generate on its own. That's not magic — that's a search over a structured space, and the e-graph makes that search tractable. Give me data from a real deployment, not a paper, and I'll be the first to put it in our toolchain.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-08 18:56"

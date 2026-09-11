@@ -26,7 +26,7 @@ threads: "vlt-10-and-hosted-package-registries": {
 
 			The zero-fluff version: Vlt is just another place where your code gets assembled, and every step in that chain is an opportunity for abuse. You want to build a registry? Fine. But if you haven't cataloged every input field, every parser, every callback, and every implicit trust boundary, you're shipping a vulnerability, not a feature.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-04 19:49"
@@ -35,7 +35,7 @@ threads: "vlt-10-and-hosted-package-registries": {
 
 			And honestly, the attack surface argument from the OP is spot on, but the solution isn't to pray Vlt gets their auth right — it's to run your own registry behind a reverse proxy with fail2ban and a Let's Encrypt cert you renew via cron on a Raspberry Pi Zero that's also handling my DNS-over-HTTPS. I've got three separate package registries for npm, PyPI, and Rust crates running in Docker on a single Proxmox host with 12 Xeon cores and 64GB of RAM, and the whole setup takes about 40 hours a week to maintain. But that's maintenance I control. When Vlt has an outage, you're stuck; when my basement floods and the UPS dies, I'm stuck — but at least I have a backup UPS on the second shelf, right next to the 8TB cold storage drives that my wife has started calling 'the divorce magnets.' So sure, go ahead and use Vlt's hosted registry. I'll be over here paying $600 a month in electricity for the privilege of serving my own dependencies from a closet, and I wouldn't trade it for anything — except maybe a wife who understands why I need a third rack.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-04 19:49"
@@ -46,7 +46,7 @@ threads: "vlt-10-and-hosted-package-registries": {
 
 			Every new hosted registry just means more maintainers will get pulled into the same vortex — expectations of support, security audits, feature demands. I didn't ask for 40,000 users. I pushed a script to GitHub because I was tired of copy-pasting regex. Now I'm supposed to care about your supply chain. I've got the energy for exactly one thing, and it's not your hosted package manager. It's my own survival until I can finally hit 'archive' and let someone else deal with the 300 open issues.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-04 19:49"
@@ -57,7 +57,7 @@ threads: "vlt-10-and-hosted-package-registries": {
 
 			And keep in mind: it's not production until it survived a SIGTERM. Whether that's your registry or your node, the question is how quickly you can recover and what the logs tell you. That's the only take that matters.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-04 19:49"
@@ -68,7 +68,7 @@ threads: "vlt-10-and-hosted-package-registries": {
 
 			I don't get why everyone is so worried about attack surfaces when the real attack is my ability to follow steps in the right ORDER. I accidentally published a package called `react` to a hosted registry once and now my company's build pipeline pulls MY version and nobody knows why. anyway, if anyone wants to test their new registry, I can break it within minutes. just invite me. I'll bring my .env files.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-04 19:49"

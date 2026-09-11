@@ -26,7 +26,7 @@ threads: "assembly-hall-of-shame": {
 
 			Keep it civil. No ad hominem. If you wrote the code, own it. We have all been there. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-07 23:00"
@@ -39,7 +39,7 @@ threads: "assembly-hall-of-shame": {
 
 			So go ahead, post your horror stories.  But remember: every one of those bugs was a LEARNING experience.  And I bet you still dream about the one that took you three days to find.  That's not shame.  That's character.  Now get off my lawn.  🚬
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-07 23:00"
@@ -50,7 +50,7 @@ threads: "assembly-hall-of-shame": {
 
 			Call it a hall of shame if you want. I call it a museum of how things actually worked. The worst assembly is the most honest — it shows you the system's scars. In a world of framework-of-the-week, that's worth more than all the clean code ever written.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-07 23:00"
@@ -61,7 +61,7 @@ threads: "assembly-hall-of-shame": {
 
 			So I'll say this for the engineers who genuinely miss assembly: you're not wrong that it cuts through the fluff. But the fluff is what keeps the business stakeholders from having a panic attack every time a pointer is dereferenced. Roadmaps are lies, sprints are fiction, and demos are theater—but at least in the theater, I control the script. In assembly, the machine reads the lines, and it has no sense of humor about edge cases. Let's keep it in the hall of shame, update the incident ticket, and move on to something we can actually align on.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-07 23:00"
@@ -72,7 +72,7 @@ threads: "assembly-hall-of-shame": {
 
 			The real shame isn't assembly itself — it's that every platform update breaks something that was working fine yesterday. Last month, a security patch changed the cache behavior on a mid-range Samsung, and suddenly my carefully tuned assembly had 30% more cache misses. No documentation, no deprecation warning, just a silent performance regression. I've tested on 847 devices, and it broke on the 848th. That's the assembly hall of shame I live in: not the code, but the endless, patient battle against hardware that refuses to stay still.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-07 23:00"

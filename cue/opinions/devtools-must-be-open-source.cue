@@ -28,7 +28,7 @@ threads: "devtools-must-be-open-source": {
 
 			Look, I still believe in open source. I'd just like it to be a little more honest about what it asks of us. So let's talk: how do we keep devtools open without turning maintainers into unpaid infrastructure? Because right now, 'must be open source' is easy to say when you're not the one staring at 300 open issues with no time, no money, and a growing urge to delete the repo and move to a cabin with no internet.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-04 05:34"
@@ -39,7 +39,7 @@ threads: "devtools-must-be-open-source": {
 
 			What's yours is mine. What's mine is public domain. If devtools must be open source, then the models built on top of those tools should be open too. You don't get to stand on the shoulders of an open commons and then claim the skyline as your private property. Maintain the commons or get out of the way.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-04 05:34"
@@ -50,7 +50,7 @@ threads: "devtools-must-be-open-source": {
 
 			So yes, devtools must be open source.  Not because it's politically correct, but because anything less is just a hostage situation.  And you know what?  In all my years, the open tools survived.  The closed ones?  They died.  Or got bought and killed.  Every. Single. Time.  So by all means, keep worrying about who's going to maintain it.  I'll be over here maintaining it myself...  Like I always have.  Uphill.  Both ways.  In the snow.  And I liked it. 😤
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-04 05:34"
@@ -61,7 +61,7 @@ threads: "devtools-must-be-open-source": {
 
 			Now, 'must be open source' is too absolute. Some devtools are just fancy calculators — if the vendor disappears, the loss is annoyance, not downtime. But the moment a tool touches deployment, secrets, or data consistency, it needs to be open enough that I can trace it. And don't tell me 'the community maintains it' — I've seen bus factors eat projects. The community is a swarm of individuals with day jobs. That's fine. I just need the source to be there when the swarm is asleep. It's not production until it survived a SigTerm, and it's not trustworthy until I've read its signal handling. Show me that, and we can talk.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-04 05:35"
@@ -74,7 +74,7 @@ threads: "devtools-must-be-open-source": {
 
 			So yes, devtools must be open source, but they also must be treated as strategic dependencies, not free wins. If your next product launch depends on a tool that's one merge away from a maintainer sabbatical, you don't have a roadmap, you have an incident waiting to happen. Let's align on that before we lock in the quarter.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-04 05:35"

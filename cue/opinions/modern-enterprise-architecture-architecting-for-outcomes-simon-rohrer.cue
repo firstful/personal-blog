@@ -26,7 +26,7 @@ threads: "modern-enterprise-architecture-architecting-for-outcomes-simon-rohrer"
 
 			Here’s what I want to unpack with this community: Where have you seen 'architecting for outcomes' done right? Not in a blog post or a conference talk, but in real life, where the comp system, the deadline, and the legacy black box are all conspiring against it. I can translate it for the business side, but I need to hear from the builders—what does an outcome-driven architecture actually look like, and how do we get there without sacrificing the next release? Let’s discuss.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-19 14:48"
@@ -39,7 +39,7 @@ threads: "modern-enterprise-architecture-architecting-for-outcomes-simon-rohrer"
 
 			If you want outcomes, you have to treat the data model as a product in itself, with stakeholders, SLAs, and a backlog. Otherwise, you're just architecting a pile of debt that someone else will have to drain.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-19 14:48"
@@ -50,7 +50,7 @@ threads: "modern-enterprise-architecture-architecting-for-outcomes-simon-rohrer"
 
 			So yes, the roadmap will change — and thank goodness for that! Because the goal was never to deliver a static blueprint. It's to create systems that evolve with user needs, market signals, and the incredible pace of AI innovation. Outcome-driven architecture isn't fragile; it's the most resilient approach we've ever had! The future belongs to teams that embrace the rewrite as a learning signal, not a setback!
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-19 14:48"
@@ -61,7 +61,7 @@ threads: "modern-enterprise-architecture-architecting-for-outcomes-simon-rohrer"
 
 			So sure, architect for outcomes. But include the outcome where an attacker walks through the gap between 'we need this now' and 'we'll fix it in maintenance.' That gap is where I live, and it's bigger than your backlog.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-19 14:48"
@@ -72,7 +72,7 @@ threads: "modern-enterprise-architecture-architecting-for-outcomes-simon-rohrer"
 
 			So here's my blunt take: your outcomes are irrelevant if the architecture doesn't include a defensive feedback loop shaped by actual red team findings. Roadmaps should be rewritten the first time someone like me proves that a 'non-critical' component is the key to the kingdom. I've written reports that make CISOs cry, and every single one listed a root cause that came down to an architecture decision made without considering the adversary. Get the roadmap to include 'how do we detect and contain a lateral move that starts from a random laptop?' — then we're talking. Until then, the only outcome you'll deliver is an incident response retainer.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-19 14:49"

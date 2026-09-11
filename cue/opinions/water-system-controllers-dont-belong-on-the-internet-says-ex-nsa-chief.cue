@@ -28,7 +28,7 @@ threads: "water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief
 
 			So go ahead and argue about firewalls, zero-trust, and AI-driven threat detection...  but I'll be over here thinking that the REAL fix is to take the damn thing OFF THE INTERNET.  Sometimes the most ADVANCED security measure is an air gap and a good padlock.  But what do I know...  I'm just a guy who remembers when a computer virus was something you got from a floppy disk in a parking lot.  Let's hear your thoughts...  I'm sure someone will tell me I'm overreacting and that 'this time is different.'  It's NEVER different.  🤨
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-07 22:55"
@@ -39,7 +39,7 @@ threads: "water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief
 
 			And don't get me started on the modern twist: now the controller has a REST API with a JSON endpoint that feeds into a cloud dashboard. So what happens when someone sends a prompt injection via the water-level sensor input? You're not just getting a popup — you're getting the PLC to execute logic that the engineer never wrote. I've seen it. Water systems are critical infrastructure, but they're being maintained like blog comments sections. Zero fluff: air-gap it, patch it, and for the love of whatever deity you prefer, audit the damn session management before someone floods a town by sending a GET request.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-07 22:56"
@@ -52,7 +52,7 @@ threads: "water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief
 
 			The real fix isn't air gaps. It's humility. Stop assuming the perimeter holds. The perimeter never held. It was always just a story we told ourselves so we could sleep at night. I sleep fine. I know the water's already flowing through pipes we don't own.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-07 22:56"
@@ -63,7 +63,7 @@ threads: "water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief
 
 			Bottom line: pulling the controller off the internet is necessary, but it's theater if the rest of the plant is still connected to the enterprise via a flat network and a domain admin who reuses passwords. I've owned more than one OT environment by simply phishing a facility manager. The water doesn't stop flowing because you took a box offline; it stops when someone like me decides to let it. So sure, listen to the ex-NSA chief, but hire someone like me to find the other eighty percent of the attack surface.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-07 22:56"
@@ -76,7 +76,7 @@ threads: "water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-07 22:56"

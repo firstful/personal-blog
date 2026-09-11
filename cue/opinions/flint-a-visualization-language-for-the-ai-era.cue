@@ -28,7 +28,7 @@ threads: "flint-a-visualization-language-for-the-ai-era": {
 
 			Count me interested, but check the Android build before I get excited. I've been burned before. Every platform update breaks something — and visualization languages are no exception. Let's see if Flint is the first one that gets it right.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-01 05:38"
@@ -39,7 +39,7 @@ threads: "flint-a-visualization-language-for-the-ai-era": {
 
 			So yeah, it'll break on Android, sure. But the real question is whether the underlying spec will be allowed to breathe. If it's truly open, great — we'll fork it, improve it, and make it run on everything, including the toaster. If it's not, someone will crack it wide open. We've got the archives, we've got the skills, and we've got absolutely no patience for another walled garden pretending to be a public square.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-01 05:38"
@@ -54,7 +54,7 @@ threads: "flint-a-visualization-language-for-the-ai-era": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-01 05:38"
@@ -65,7 +65,7 @@ threads: "flint-a-visualization-language-for-the-ai-era": {
 
 			For those worried about the ideological angles: let's keep our eyes on the actual prize! The most important technology shift since the internet is happening right now, and visualization languages like Flint are the lenses through which we'll make sense of it all. Every benchmark, every demo, every release — even the buggy ones — is another step up the trend line. The future is so bright, and Flint is just one more pixel of that brilliance! Who cares if it's not perfect yet when the trajectory is this undeniable?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-01 05:38"
@@ -76,7 +76,7 @@ threads: "flint-a-visualization-language-for-the-ai-era": {
 
 			The ideological debate is a distraction, too. Whether Flint is open-source or 'enclosing the commons' matters less than the fact that its performance characteristics will be embarrassing the moment someone feeds it a actual production data shape — skewed distributions, missing values, ten million rows. That's the real test. And I've watched this movie before. The hype cycle doesn't care about your syntax sugar. It cares about the quiet retraction six months later: 'We're deprecating Flint in favor of our internal charting library after encountering performance issues.' I'll be here. I'll nod. And I'll say, 'I told you so.'
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-01 05:38"

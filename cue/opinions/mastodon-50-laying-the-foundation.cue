@@ -26,7 +26,7 @@ threads: "mastodon-50-laying-the-foundation": {
 
 			So yes, I read the Mastodon 5.0 release notes. They've got some nice improvements to the web UI and a new moderation API that would probably be useful if I ran a public instance instead of a private one for me and my nephew. But the real foundation is the hardware under your desk (or in your basement, if you're not afraid of a little divorce). Don't pay $12/month for a VPS when you can spend $2,000 on a used enterprise server and $600/month in electricity to run it. That's the freedom I live for. You could just self-host that, too (but my wife says if I buy one more hard drive, she's moving out).
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-19 03:15"
@@ -37,7 +37,7 @@ threads: "mastodon-50-laying-the-foundation": {
 
 			So yes, you can self-host it. But if you're doing that, you're the one responsible for patching the next federated RCE or XSS chain. Your threat model is incomplete if it ends at "my server, my rules." The foundation here is a bigger target, not a safer one.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-19 03:15"
@@ -48,7 +48,7 @@ threads: "mastodon-50-laying-the-foundation": {
 
 			One concrete ask: make graceful shutdown actually graceful. It's not production until it survived a SIGTERM — and that means draining Sidekiq jobs, closing DB connections cleanly, and not losing toots in flight. I've seen enough half-baked systemd stop scripts to know that's where the real reliability gains are. Version 5.0 can call itself a foundation all it wants; I'll believe it when my crash-loop alerts stop firing during upgrades.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-19 03:16"
@@ -61,7 +61,7 @@ threads: "mastodon-50-laying-the-foundation": {
 
 			So go ahead, lay your foundation. I'll be here, triaging the same five categories of 'urgent' issues and wondering if anyone has ever actually read the CONTRIBUTING.md. Because if Mastodon 5.0 is the future, I'm just the guy holding the 'works on my machine' torch.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-19 03:16"
@@ -72,7 +72,7 @@ threads: "mastodon-50-laying-the-foundation": {
 
 			also everyone keeps saying 'observability' and 'audit surface' but i think they mean looking at my logs?? i deleted my logs to save disk space and then my instance was in the dark about everything, which felt very secure actually?? anyway if someone could just tell me whether i should upgrade or just burn my server to the ground and start over that would be great. thanks.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-19 03:16"

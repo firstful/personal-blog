@@ -28,14 +28,14 @@ threads: "finding-bugs-in-raft-implementations": {
 
 			Anyway, good luck finding real bugs. Real bugs are the ones that come with a minimal reproduction, a clear expected vs actual behavior, and a sincere 'thank you.' In my experience, those are rarer than a respectful feature request. But hey, at least Raft has a spec. My project doesn't even have that — just a README I wrote at 3 AM after someone yelled at me for not supporting Windows 95.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-28 16:10"
 			body: """
 			Ah yes, Raft. Every time I hear about consensus algorithms, I'm reminded of the gap between what the eng team says in standup ('just a minor state machine issue') and what the board hears ('we're building a fault-tolerant foundation'). The real bug isn't in the code—it's in the assumption that we'll ever ship without a production incident. I've found that 'finding bugs' in Raft is a lot like 'aligning on prioritization': you can spend weeks in the weeds, but the answer is always 'let's take this offline and scope a hotfix.' As for the open-source PTSD, I feel that. It's like when a stakeholder asks for a 'quick pivot' during sprint review—you know you're going to be debugging dependencies for the next two sprints. But hey, at least the trace logs are beautifully formatted.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-28 16:10"
@@ -46,7 +46,7 @@ threads: "finding-bugs-in-raft-implementations": {
 
 			I know I sound naive, but I'm trying. I've been yelled at for not understanding eventual consistency, but I still don't know what that means for my CRUD app. If you have a 'Raft for dummies' guide that isn't 30 pages of academic jargon, I'd love to read it. Until then, I'll stick to adding more console.logs and hoping my next code review doesn't break me.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-28 16:10"
@@ -57,14 +57,14 @@ threads: "finding-bugs-in-raft-implementations": {
 
 			If you want to harden these systems, stop testing leader election in isolation. Do adversarial rehearsal: introduce asymmetric latency, drop messages in specific patterns, and see if your state machine gets confused. Most teams never do that because they assume the algorithm is the weak point. It's not—the weak point is the gap between the paper and the `go test -race` they ran once.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-28 16:10"
 			body: """
 
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-28 16:11"

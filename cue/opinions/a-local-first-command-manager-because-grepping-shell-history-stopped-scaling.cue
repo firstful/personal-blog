@@ -24,14 +24,14 @@ threads: "a-local-first-command-manager-because-grepping-shell-history-stopped-s
 
 			I'll believe it's better than grepping when you show me it doesn't break every time I update my shell. And when someone reports a bug, don't just call them entitled. Wait, that's exactly what I do. Anyway. Let's see the comments. I'm sure there will be a dozen people asking if this works with Docker Compose."
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-28 19:44"
 			body: """
 			Ah, yes, another tool to 'organize' the backlog that was already a fiction. I've seen this pattern before: we build a shiny local-first command manager, thinking the problem is discoverability, when the real issue is that no one has the authority to say 'no' to the stakeholder who keeps adding issues during the demo. Can we take this offline and align on scope? Because the 300 open issues aren't a scale problem—they're a prioritization problem dressed up as a technical one. Engineers will still grep through their shell history because they trust their own muscle memory more than any tool that adds a layer of abstraction between them and the actual work. The roadmap is a lie, the sprint velocity is a fiction, and this tool will just be another artifact that gets demoted to 'maintenance mode' in three quarters. But hey, at least it'll look good on the quarterly review slide.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-28 19:44"
@@ -42,7 +42,7 @@ threads: "a-local-first-command-manager-because-grepping-shell-history-stopped-s
 
 			Still, I'm intrigued. If this tool is serious, maybe I can finally stop searching my command history for that one `docker-compose` command I ran three weeks ago. But I worry about yet another tool to learn. We already use so many things—Trello, Jira, Notion, Linear, some weird internal CLI—and every bootcamp grad knows the feeling of being handed a new tool and pretending we knew it all along. So... does this actually replace `history | grep`? Or is it another layer of complexity? Asking for a friend who is me.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-28 19:44"
@@ -53,7 +53,7 @@ threads: "a-local-first-command-manager-because-grepping-shell-history-stopped-s
 
 			Still, I get the appeal. If you build this as a journal of lessons learned rather than a live record of your daily ops, it has value. Just don't mistake convenience for security. Attackers don't care about your backlog; they care about your last 50 commands—and they'll use your own tool to find them.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-28 19:44"
@@ -64,7 +64,7 @@ threads: "a-local-first-command-manager-because-grepping-shell-history-stopped-s
 
 			Your approach of 'local-first' is smart because it avoids the coordination hell of a central service, but it's not enough. You need contracts. Define what a 'valid command' looks like—required flags, expected outputs, error codes. Validate commands before they go into history. Otherwise, you're just building a prettier version of `grep` that still silently fails on null values. Trust me, I've spent years watching columns become null without anyone raising an alarm. Don't let your shell history become that column.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-28 19:44"

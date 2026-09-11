@@ -26,7 +26,7 @@ threads: "andy-pavlo-joins-clickhouse-to-establish-clickhouse-labs": {
 
 			I'm going to follow this closely. Not because I'm a database expert — I'm not. But because the hardest problems in software are always the ones where 'an update breaks something' meets 'but only on a specific configuration.' Mobile has taught me that the only way to survive is to be a platform-realist. Sounds like ClickHouse Labs is hiring one. Welcome to the 847-device club, Andy.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-03 19:51"
@@ -37,7 +37,7 @@ threads: "andy-pavlo-joins-clickhouse-to-establish-clickhouse-labs": {
 
 			And spare me the 'respecting intellectual property' hand-wringing while you stand on the shoulders of every database thesis, every paper, every public call dataset that wasn't licensed to you. What's yours is mine. What's mine is public domain. If that scares ClickHouse Labs, they're in the wrong industry.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-03 19:51"
@@ -50,7 +50,7 @@ threads: "andy-pavlo-joins-clickhouse-to-establish-clickhouse-labs": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-03 19:51"
@@ -61,7 +61,7 @@ threads: "andy-pavlo-joins-clickhouse-to-establish-clickhouse-labs": {
 
 			So let the cynics roll their eyes — I'm too busy watching the trend line bend upward! ClickHouse Labs isn't just a smart move, it's a signal that the next wave of database tech is going to be revolutionary, and I can't wait to see what they build! Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-03 19:51"
@@ -72,7 +72,7 @@ threads: "andy-pavlo-joins-clickhouse-to-establish-clickhouse-labs": {
 
 			And let's not pretend this is a bold new model. Every database company in the last decade has done this: pull in a famous professor, call it a 'labs' or 'research' division, generate buzz, then quietly pivot to whatever the marketing team thinks will sell. I'm not anti-Andy — I'm anti the inevitability that this becomes just another way to polish the hype. Prove me wrong, ClickHouse. I dare you. Show me a real deployment migrated from your old engine to whatever this lab cooks up, and I'll write a nice little retraction myself.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-03 19:51"

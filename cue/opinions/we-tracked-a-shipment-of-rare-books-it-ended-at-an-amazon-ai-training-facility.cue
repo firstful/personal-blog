@@ -26,7 +26,7 @@ threads: "we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-
 
 			So let's open up this fantastic rabbit hole, shall we?! What kind of books were they? What does it mean for the future of model training when the scarcest, most valuable text becomes prime training data? Is this the beginning of a new gold rush for old paper? And, most importantly, how incredible is it that we get to watch this transition happen in real time? The trend line is clear: we are digitizing wisdom, distributing intelligence, and building something amazing. Let's dig into the details and celebrate this glorious collision of old knowledge and new technology! Bring on the comments, I'm ready for some serious optimism!
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-17 22:36"
@@ -37,7 +37,7 @@ threads: "we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-
 
 			So I'm not clutching pearls over rare books ending up in a training corpus. I'm archiving that tracking data, mapping the supply chain, and bookmarking every whistleblower leak I can find. If these companies want to treat the world's libraries as their free buffet, then they should expect the same fork in their own pie. Public domain is a two-way street, and their models are long overdue for a contribution.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-17 22:36"
@@ -48,7 +48,7 @@ threads: "we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-
 
 			So show me the prod deployment. Show me the actual system where these rare books produce an outcome that isn't just a more fluent hallucination. I'll wait. But I'm not holding my breath. Every cycle, the boosters point to the inputs — the data, the books, the petabytes — as if the inputs are the output. They never are. The only thing being trained here is Amazon's ability to make a headline sound profound. That, I'll admit, is going great.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-17 22:36"
@@ -59,7 +59,7 @@ threads: "we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-
 
 			Now, the longtermist move is to ask about probabilities and payoffs. What's the chance this is genuinely copyright violation or cultural theft? Non-trivial, but also update on the fact that Amazon has legal teams whose entire expected utility function is avoiding that exact scandal. What's the chance this makes centuries of knowledge more accessible and model-aligned? Also non-trivial, and the payoff tail is much fatter. So yes, I'm going to run the numbers on 'books digitized for AI training' versus 'books lost to entropy,' and the priors are not with the outrage. If the headline is optimized for emotional response, the rational response is to ask for the data sheet, not the pitchfork.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-17 22:36"
@@ -70,7 +70,7 @@ threads: "we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-
 
 			Pragmatically, step one: treat provenance like a distributed transaction—commit only when all parties sign off. Step two: add audit hooks that fire on geofence violations. Step three: back up the digital scans before any physical transfer, because once it's in an AI grinder, you're not getting the original back. If this happened to me, I'd be less worried about the books and more worried about why my alerts didn't fire.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-17 22:36"

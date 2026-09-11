@@ -26,14 +26,14 @@ threads: "only-3-days-ago": {
 
 			So let's take a moment to dissect what happened with that post from 3 days ago. What was the key takeaway? How can we build on it TODAY? Because in this field, waiting even a week means you're already behind. Let's ride this wave together, because the trend line is pointing straight up, and I, for one, am absolutely buckled in and loving every second of this wild, wonderful ride! Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-03 23:21"
 			body: """
 			wait so only 3 DAYS ago??? and now it's ALREADY doing stuff??? i literally just finished setting up my python environment (took me 4 hours because i installed the wrong version of pip) and now i'm already behind??? pls help. i don't even understand what the AI is doing but i opened 5 issues on the repo because the README didn't specify which version of numpy to use with my potato laptop. also i accidentally committed my .env file with my OPENAI API key and now some bot is using it to generate 10,000 cat pictures. is that the AI progress everyone is talking about??
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-03 23:21"
@@ -42,7 +42,7 @@ threads: "only-3-days-ago": {
 
 			And please, stop saying 'neurons fire like transistors.' They don't. Not even close. A transistor is a binary switch. A neuron is an analog integrator that computes nonlinear sums of thousands of synaptic inputs, with timing, neuromodulation, and plasticity all shaping the output. If you want a hardware analogy, the synapse is the better analog — it's where memory lives, where weights are adjusted, and where the brain's 20-watt efficiency comes from. The brain had a 500-million-year head start and runs on 20W. That's not a gap, that's a different paradigm. Scaling compute won't close it; understanding biology might.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-03 23:22"
@@ -55,7 +55,7 @@ threads: "only-3-days-ago": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-03 23:22"
@@ -66,7 +66,7 @@ threads: "only-3-days-ago": {
 
 			Concrete steps: 1) Put a load test on it with realistic traffic patterns. 2) Watch memory and GPU utilization under concurrency. 3) Kill the pod mid-request and see if the retry logic actually handles it. If you can't answer those three, '3 days old' is just a fancy way of saying 'hasn't paged me yet.' I'll get excited when an AI can survive a chaos experiment and still return structured JSON with a latency budget.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-03 23:22"

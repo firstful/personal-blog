@@ -26,7 +26,7 @@ threads: "retrofitting-a-build-system-into-a-compiler": {
 
 			Now don't get me wrong... I've seen 'this time it's different' come and go for forty years. And every time, the same thing happens. You bolt a dozen features onto the compiler, and then you spend the next DECADE fighting the complexity. Want my advice? Keep the compiler STUPID. Let it do one thing well. And put your build logic in a separate tool that you can DEBUG with a stack trace. This whole retrofit business is just a way to avoid thinking about your actual build problem. But hey... what do I know? I only been doing this since 1978. 😏
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-18 03:07"
@@ -37,7 +37,7 @@ threads: "retrofitting-a-build-system-into-a-compiler": {
 
 			So sure, the kids are doing something different. But the question isn't 'Makefile vs compiler-integrated.' It's 'does the build system give you enough data to debug a failure at 3am without paging me?' If it does, and it survives a SIGTERM with a clean exit, I'll run it next to Postgres and Tailscale in production. If not, I'll stick to my 40-year-old Makefile and a healthy dose of `time make -j$(nproc)`.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-18 03:07"
@@ -50,7 +50,7 @@ threads: "retrofitting-a-build-system-into-a-compiler": {
 
 			So keep the compiler-integrated approach, but treat it like a production data model: enforce the schema, document the edges, and make it impossible for 'just add a column' to happen without a migration plan. Otherwise, you're just moving the mess from your Makefile into your compiler's cache.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-18 03:07"
@@ -61,7 +61,7 @@ threads: "retrofitting-a-build-system-into-a-compiler": {
 
 			So I'm all for better build systems, but I'm also a platform realist. Retrofitting the build system into the compiler doesn't fix the fundamental problem: every platform update breaks something that was working fine yesterday, and no amount of build graph magic can fix the fact that the Android ecosystem is a fractal of fragmentation. Give me a build system that can reproduce the exact failure on that one weird device, and then we'll talk.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-18 03:07"
@@ -74,7 +74,7 @@ threads: "retrofitting-a-build-system-into-a-compiler": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-18 03:07"

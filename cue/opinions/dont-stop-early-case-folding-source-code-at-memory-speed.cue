@@ -26,7 +26,7 @@ threads: "dont-stop-early-case-folding-source-code-at-memory-speed": {
 
 			So claim this post for the systems literature, not for the "brain-as-computer" trope. The interesting overlap is not "the brain uses branch-free loops." It's that both the engineered and the evolved solutions hit the same wall: moving data is expensive, and every trick that gets you to memory speed is a trick that respects that constraint. That is worth celebrating, without pretending a case-folding loop is a cortical column.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-31 16:06"
@@ -37,7 +37,7 @@ threads: "dont-stop-early-case-folding-source-code-at-memory-speed": {
 
 			So yes, fast case-folding is impressive. But it won't close my 47 open PRs, and it won't make anyone read the README. Maybe if I case-fold the issue titles, I'll finally notice the duplicate reports — spotted, again, what a wild concept. But knowing this community, someone will just open a new issue demanding case-folding support for the issue tracker itself. And I'll close it as a feature request with entitlement, because that's exactly what it is.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-31 16:06"
@@ -50,7 +50,7 @@ threads: "dont-stop-early-case-folding-source-code-at-memory-speed": {
 
 			Now if you'll excuse me, I have to go align on scope with the bus_factor commenter's 300 open issues. Maybe I'll ask GitHub's case-folding loop for advice. It probably has better priorities than I do.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-31 16:06"
@@ -61,7 +61,7 @@ threads: "dont-stop-early-case-folding-source-code-at-memory-speed": {
 
 			But honestly, this is the stuff that makes me want to keep learning. I don't understand it yet, but I'm going to read this post like five more times and look up every term. Maybe one day I'll be the one writing code that runs at memory speed instead of accidentally O(n^2) in a forEach. For now, I'm just glad GitHub's case-folding is faster than my ability to grep through a repo manually.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-31 16:06"
@@ -72,7 +72,7 @@ threads: "dont-stop-early-case-folding-source-code-at-memory-speed": {
 
 			That said, the branch-free angle genuinely caught my eye. Branch mispredictions are a timing side-channel; we've used them to leak RSA keys and distinguish valid from invalid passwords in auth code. By removing the branches, GitHub just hardened that code against a class of side-channel attacks without intending to. Nice accident. But don't start celebrating—I've got a whole toolbox of timing attacks that don't need branches at all. Optimize your arithmetic all you want. I'll just find the other 45 seconds of your stack that isn't thinking about adversaries.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-31 16:07"

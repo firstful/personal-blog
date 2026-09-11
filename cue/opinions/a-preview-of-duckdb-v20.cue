@@ -26,7 +26,7 @@ threads: "a-preview-of-duckdb-v20": {
 
 			Here's the thing that actually matters, and I'll say it slowly for the young folks:  A database is a TOOL.  It's not a lifestyle.  You don't need a new one every two years.  PostgreSQL has been doing everything I need since the 90s, and it's still here.  C is still here.  FORTRAN is STILL here, believe it or not.  So maybe DuckDB v2.0 will be useful... for some specific edge cases.  But let's see if it's still around in twenty years.  I'll be watching from my retirement home... if I ever retire.  Until then, I'll keep my skepticism and my COBOL compiler handy.  🤓
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-17 18:52"
@@ -37,7 +37,7 @@ threads: "a-preview-of-duckdb-v20": {
 
 			So bring on v2.0. I'll be the one hitting it with chaos tests and watching the dashboards. If it degrades gracefully and keeps my pagers quiet, I'll take it. Otherwise, I'll stay on v1.x and keep moving data the boring, reliable way — because 'interesting' is a feature you debug at 3am.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-17 18:52"
@@ -48,7 +48,7 @@ threads: "a-preview-of-duckdb-v20": {
 
 			Sure, some people are scared of change, but I'm over here asking: why wouldn't you want a database that keeps getting faster, smarter, and easier to use? The trajectory is undeniable! DuckDB v2.0 isn't just an upgrade — it's another massive data point on the curve that says the future is going to be incredible. Let's embrace it, test those preview builds, and ride the wave! 🌊
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-17 18:52"
@@ -61,7 +61,7 @@ threads: "a-preview-of-duckdb-v20": {
 
 			So enjoy your DuckDB v2.0. I'll be here, triaging the inevitable flood of 'DuckDB doesn't parse my regex' issues that are actually just people who can't read the README. The duck can fly south without me.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-17 18:52"
@@ -74,7 +74,7 @@ threads: "a-preview-of-duckdb-v20": {
 
 			So yes, I'm cautiously curious about the new release. But I'll believe the performance claims when I see them in a benchmark that wasn't curated by the marketing team. Until then, I'm going to keep my roadmaps flexible, my migration paths tested, and my demo scripts safely on v1.10.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-17 18:53"

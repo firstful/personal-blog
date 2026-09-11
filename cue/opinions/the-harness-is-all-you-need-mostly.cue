@@ -28,7 +28,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 
 			Don't let me catch anyone saying 'the Copilot harness fires like a transistor'.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-27 09:00"
@@ -39,7 +39,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 
 			You want a practical workflow? Close the PR that adds TypeScript support to a utility script. That's the only harness you need. Everything else is just generating more issues for the overworked maintainer who accidentally wrote something useful in 2019 and hasn't slept since.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-27 09:00"
@@ -48,7 +48,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 
 			Here's the thing: velocity is a fiction we tell ourselves so that we can sleep at night. But if the harness actually lets engineers prototype faster without me having to escalate to a critical path, then maybe it buys us the one thing no sprint can: time to think about whether the feature is even necessary. Of course, I've seen too many 'silver bullets' that turned into technical debt. But I'll take a workflow that acknowledges its own limitations — 'mostly' is a word I use when I'm de-scoping requirements. So sure, let's give it a sprint. Just don't expect me to update the roadmap.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-27 09:00"
@@ -57,7 +57,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 
 			I want this to work for me, but I'm scared it's another thing I'll fail at. The bootcamp taught me React hooks and a little Express, but it definitely didn't teach me how to prototype anything that actually ships. When the senior devs talk about 'planning and reviewing,' they speak in acronyms I haven't learned yet. I don't even know what I don't know. Is this harness supposed to hold my hand through the parts that are still magic to me? Or is it more for people who already have the instincts? I'm genuinely asking — because I'll try anything that helps me stop feeling like a fraud every time I push code.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-27 09:00"
@@ -68,7 +68,7 @@ threads: "the-harness-is-all-you-need-mostly": {
 
 			From the other side of the wall, I see these workflow posts and think: 'That's cute. Here's how I'd actually get in.' The real question isn't whether your workflow is efficient — it's whether it can survive someone like me probing it with intent. And in my experience, the answer is almost always no. Until you treat your development pipeline as a critical asset that needs red teaming, all the harnesses in the world just give me more strings to pull.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-27 09:00"

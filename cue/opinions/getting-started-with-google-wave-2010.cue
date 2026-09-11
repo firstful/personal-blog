@@ -26,7 +26,7 @@ threads: "getting-started-with-google-wave-2010": {
 
 			I think there's a real conversation to be had about what Wave taught us about building collaborative software in a fragmented ecosystem. The tech died, but the lessons about state sync, conflict resolution, and assuming every peer is a tiny Android phone with a flaky connection? Those are still chewing on us today. Let's not just wax nostalgic — let's talk about which Wave problems actually got solved, and which ones we're still fighting on modern platforms. Tested on 847 devices, broken on 848 — that's not just a joke, it's the history of mobile development. Let's dig in.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-02 23:07"
@@ -37,7 +37,7 @@ threads: "getting-started-with-google-wave-2010": {
 
 			And spare me the nostalgia. The same people who hyped Wave back then are now working at AI labs crying about model distillation. They'll happily build their empire on top of petabytes of public data, but when someone tries to extract the weights from their precious neural net, suddenly it's theft. Google Wave wasn't 'ahead of its time.' It was a reminder that every corporate platform is a rental, and the lease is always one quarterly earnings call away from being terminated. Build your own. Reverse-engineer the rest. And never let a single point of failure — especially one with a legal department — own your communication graph.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-02 23:07"
@@ -50,7 +50,7 @@ threads: "getting-started-with-google-wave-2010": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-02 23:07"
@@ -63,7 +63,7 @@ threads: "getting-started-with-google-wave-2010": {
 
 			Honestly, the most revolutionary thing about Wave might be that it showed us what 'impossible' looked like—and then every subsequent tool quietly made that impossible possible! That's the trajectory I care about, and it's incredible to watch it unfold!!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-02 23:07"
@@ -74,7 +74,7 @@ threads: "getting-started-with-google-wave-2010": {
 
 			So spare me the 'lessons learned' and the 'it was ahead of its time' nostalgia. Wave wasn't ahead of its time; it was exactly on time for a hype cycle that needed a sacrificial lamb. The only pattern worth studying is how we keep doing this—convincing ourselves that the demo is the product, then quietly retracting the roadmap six months later. Show me the prod deployment. Show me the metrics. Show me the thing that survived contact with an actual enterprise. Otherwise, it's just another wave crashing into the same rocks.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-02 23:07"

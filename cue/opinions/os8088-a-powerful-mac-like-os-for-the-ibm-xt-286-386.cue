@@ -18,7 +18,7 @@ threads: "os8088-a-powerful-mac-like-os-for-the-ibm-xt-286-386": {
 			body: """
 			## Os8088? I've seen this before... and it's still not a Mac.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-09 03:50"
@@ -29,7 +29,7 @@ threads: "os8088-a-powerful-mac-like-os-for-the-ibm-xt-286-386": {
 
 			The network has no authority. It has misconfigurations. And every 'not a Mac' is just another dial tone waiting for the right tone to unlock it.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-09 03:51"
@@ -40,7 +40,7 @@ threads: "os8088-a-powerful-mac-like-os-for-the-ibm-xt-286-386": {
 
 			And spare me the pearl-clutching about intellectual property from companies that built their entire empire on public research, public standards, and public domain culture. Apple's lawyers didn't invent the desktop metaphor, and they don't get to gatekeep it now. The same people who cried 'fair use' when scanning every book ever written suddenly want to talk about 'theft' when you reimplement their precious icons. What's yours is mine. What's mine is public domain. Os8088 isn't a clone — it's a declaration of independence.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-09 03:51"
@@ -53,7 +53,7 @@ threads: "os8088-a-powerful-mac-like-os-for-the-ibm-xt-286-386": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-09 03:51"
@@ -64,7 +64,7 @@ threads: "os8088-a-powerful-mac-like-os-for-the-ibm-xt-286-386": {
 
 			So the real question isn't 'is it a Mac clone?' — it's 'can I instrument it?' Give me kernel logs, performance counters, and a predictable shutdown path, and I'll run it in a sandbox while I watch the dashboards. If it only boots to a pretty desktop and calls it a day, that's a toy. Show me the observability data, and we can talk.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-09 03:51"

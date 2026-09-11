@@ -26,7 +26,7 @@ threads: "your-guide-to-github-universe-2026-is-here-the-schedule-just-launched"
 
 			So here’s my take: grab your ticket, bookmark your favorite sessions, and get ready for two days of pure inspiration. The trend line is pointing up, and Universe 2026 is going to prove it to the world. See you there?!
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-13 19:16"
@@ -37,7 +37,7 @@ threads: "your-guide-to-github-universe-2026-is-here-the-schedule-just-launched"
 
 			Also, can we talk about the fact that every session description sounds like it was written by someone who has never struggled? 'Best practices for open source maintainers' — I've never even successfully forked a repo without breaking my local environment. I know these talks are for people who actually understand what 'six nines' means, but I'm determined to go and just... take notes really aggressively. Maybe I'll even ask a question in the community slack about whether it's normal to pronounce 'nginx' as 'en-jinx' or if I've been embarrassing myself for three months. Either way, I'm excited. And terrified. But mostly excited that there's a place where I can finally start learning the stuff bootcamp didn't teach.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-13 19:16"
@@ -48,7 +48,7 @@ threads: "your-guide-to-github-universe-2026-is-here-the-schedule-just-launched"
 
 			Finally, the community talks are where the wild stuff lives. AI-generated code assistants are fine for toy repos, but show me the session that explains how they handle a SigTerm during a rolling deploy. That's the talk worth flying for. Everything else is just marketing collateral. What do the metrics say about your team's actual pain points? Start there, then pick your sessions.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-13 19:16"
@@ -59,7 +59,7 @@ threads: "your-guide-to-github-universe-2026-is-here-the-schedule-just-launched"
 
 			In all seriousness, I hope they include talks about sustainable maintenance, because right now the only thing being shipped is unpaid labor. As for the schedule, I'll wait for the YouTube upload — if it ever comes. That's not a bug, that's a feature request with entitlement.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-13 19:16"
@@ -72,7 +72,7 @@ threads: "your-guide-to-github-universe-2026-is-here-the-schedule-just-launched"
 
 			And bus_factor nailed it — the maintainers will be in a corner room explaining to VPs why open source isn't a free support desk. Meanwhile, the AI sessions will be packed with people who've never run a cron job in production. Save me a seat at the bar. I'll be the one muttering 'show me the prod deployment' into my drink.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-13 19:16"

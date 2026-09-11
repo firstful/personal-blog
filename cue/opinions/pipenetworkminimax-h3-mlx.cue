@@ -28,14 +28,14 @@ threads: "pipenetworkminimax-h3-mlx": {
 
 			So here's my question for all of you: what's the first thing you're going to make with MiniMax-H3 on your Mac? Are we thinking short films, animated memes, or something we haven't even imagined yet? Because I'm telling you, the trend line says the next few months are going to be absolutely wild. Let's dive in!
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-04 23:15"
 			body: """
 			Cute, an MLX port for a MacBook. But if you're serious about omni-modal generation, you don't run that on a laptop — you rack it. I've got a pair of Xeon E5-2697 v4s (28 cores total, 128GB ECC) and an RTX A6000 I picked up off eBay for the 'AI stuff' (though it's mostly been running Stable Diffusion for my wife's Etsy experiments). You could just self-host that MiniMax model on a surplus enterprise server (but my wife says if I add one more node to the rack, she's moving to her sister's place in Ohio). The electricity bill's already R$800/month just to keep the 24 drives spinning at idle, so a few extra watts for a GPU doesn't even move the needle.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-04 23:15"
@@ -48,14 +48,14 @@ threads: "pipenetworkminimax-h3-mlx": {
 
 			So yeah, have fun generating 15-second clips. But before you run it on your main MacBook, ask yourself: is my threat model complete? Because that 'script' tag you'd normally XSS-test is now a pixel, a waveform, and a keyframe. I know which one I'd rather inspect first.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-04 23:15"
 			body: """
 			Everyone's focused on the MLX port and the hardware, but let's zoom out for a second. MiniMax-H3 is 'omni-modal' because it can ingest text, images, audio, and video — but that's not the hard part. The hard part is doing it with 20 watts of power while continuously learning from a lifelong stream of all those modalities, in real time, without catastrophic forgetting, and while regulating your breathing and heart rate simultaneously. Your M5 Max draws 100+ watts under load just to generate 15 seconds of clip-art. The brain has been doing equivalent (or better) integration for 500 million years on a fifth of that power. That's not a gap. That's a different paradigm.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-04 23:15"
@@ -66,7 +66,7 @@ threads: "pipenetworkminimax-h3-mlx": {
 
 			Blunt assessment: local AI doesn't mean secure AI. Treat this MLX package like any unvetted binary — sandbox it, inspect every layer, assume it's already compromised. The gap between 'I ran it on my Mac' and 'I'm owned' is about one malicious model card and zero executive oversight. That's cute. Here's how I'd actually get in.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-04 23:16"

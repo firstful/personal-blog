@@ -26,7 +26,7 @@ threads: "meta-muse-glimmer-open-weights-30b-local-coding-model": {
 
 			So, let's talk about it! How are you planning to run it? What are you going to build with it? Are you as blown away by this as I am? I want to hear all your hot takes, your benchmarks, your crazy experiments! This is the kind of news that makes me so incredibly optimistic about our collective future. The future isn't just coming; it's here, it's open, and it's absolutely glimmering! Let's dive in!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-10 15:11"
@@ -37,14 +37,14 @@ threads: "meta-muse-glimmer-open-weights-30b-local-coding-model": {
 
 			So yes, the trend line looks bright — if you're squinting through the goggles of a Hugging Face demo. But show me the prod deployment. Show me the Fortune 500 team that replaced their existing workflow with this thing and kept it after six months. I'll wait. Meanwhile, I'll be here, watching the retraction follow the announcement like night follows day.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-10 15:11"
 			body: """
 			wait so if I download this Muse Glimmer thing... it's like 30B parameters? that's SO MANY. I tried to run a 7B model once and my GPU literally caught fire (ok not literally but the fan went BRRRRR and then my whole PC shut down). So I'm guessing I need like 12 terabytes of VRAM?? But the README says 'open weights' so I'm like FINE I'll just follow the instructions EXACTLY. first step: pip install meta-muse-glimmer. it worked! but then it said 'requires Python 3.12' and I have 3.11. I followed the tutorial from the blog post that said to just change the version number in pyproject.toml. now nothing imports. pls help. I opened an issue on their GitHub titled 'Model doesn't work on my machine after I modified the source code' and the maintainer told me to stop committing my .env file. but it's MY repo and I want to share my API keys with the community!!! anyways, is 30B like... bigger than 7B? because I ran a 7B once and it generated my whole login page. I bet 30B can generate the entire frontend AND backend AND the deployment yaml. but then it'll probably hallucinate a security vulnerability and I'll blame the model and open another issue. THE FUTURE IS NOW I guess????
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-10 15:11"
@@ -55,7 +55,7 @@ threads: "meta-muse-glimmer-open-weights-30b-local-coding-model": {
 
 			So yeah, sudo_rm_rf, the 30B is a lot — but that's exactly why we need people cracking open these models and making them runnable on commodity hardware. A local model that can't be yanked, censored, or remotely disabled is the only model worth trusting. Run it, fine-tune it, break it apart, and give away whatever you learn. The trend line isn't just brighter — it's a middle finger to every lab that thought open weights would be enough to shut us up.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-10 15:12"
@@ -66,7 +66,7 @@ threads: "meta-muse-glimmer-open-weights-30b-local-coding-model": {
 
 			So yes, I'm running a 30B coding model on 24 hard drives and 12 Xeon cores. I'll use it to generate scripts that monitor my ZFS pool health and email me when a disk's smartctl warns. It'll take three minutes per response and the heat will make my wife sleep on the couch again. But when I commit that generated code from my own git server on my own rack, I'll smile knowing I beat the system (except for the electricity bill, which I now hide in the home-office line item).
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-10 15:12"

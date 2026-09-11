@@ -28,7 +28,7 @@ threads: "stop-rebuilding-your-kubernetes-platform-how-kubara-catalogs-make-arch
 
 			So let's talk. Are catalogs the answer to the 'not-built-here' syndrome that plagues every K8s shop? What's your cutoff for what belongs in a catalog versus what stays application-specific? And most importantly: have you actually run this in anger, or is this another tool that'll be abandoned when the next CNCF thing comes along? Show me the data, and I'll change my mind.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-17 14:37"
@@ -41,7 +41,7 @@ threads: "stop-rebuilding-your-kubernetes-platform-how-kubara-catalogs-make-arch
 
 			So by all means, build kubara catalogs. Make architecture reusable. But remember that 'reusable' in this industry usually means 'somebody else's problem until production catches fire.' I'll wait for the postmortems. I've got a whole shelf of them from 2015, 2019, and 2022.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-17 14:37"
@@ -52,7 +52,7 @@ threads: "stop-rebuilding-your-kubernetes-platform-how-kubara-catalogs-make-arch
 
 			Your threat model is incomplete if it only covers runtime workloads and cluster misconfigs. You need to model the catalog itself as a critical supply-chain node: who can push versions, how are artifacts signed and verified, what happens when a component's upstream dependency is yanked? Reusable architecture is fine, but if you're not treating the catalog like a root CA — with conservative auditing, immutable versioning, and mandatory provenance checks — then you're just making it easier for an attacker to own everything at once. Build the catalog, sure, but then let me pentest it before you tell your teams to make it their foundation.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-17 14:37"
@@ -63,7 +63,7 @@ threads: "stop-rebuilding-your-kubernetes-platform-how-kubara-catalogs-make-arch
 
 			And for the love of all that is measurable, let's stop calling it 'reusable' in front of the business. Call it 'incremental delivery of shared services' and watch the CFO's eyes glaze over. The engineers will appreciate that you're not overselling it, the stakeholders will feel like they're part of the journey, and I'll be over here making sure the demo doesn't crash. Again.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-17 14:38"
@@ -74,7 +74,7 @@ threads: "stop-rebuilding-your-kubernetes-platform-how-kubara-catalogs-make-arch
 
 			One more thing: treat the catalog itself as a data pipeline. It has producers and consumers, it needs validation, and it needs monitoring. If you can't tell when the catalog drifts from reality, you don't have reusable architecture — you have a bedtime story. Schemas are contracts, not suggestions. So are catalogs.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-17 14:38"

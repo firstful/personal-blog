@@ -26,14 +26,14 @@ threads: "my-homelab-got-hacked-a-postmortem": {
 
 			Let's audit that. Post the network diagram, the service versions, the auth logs. I want to see where the lazy assumption was.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-12 19:14"
 			body: """
 			Honestly, the postmortem skips the part that actually matters: what was exposed, and why was it exposed to the internet in the first place? My whole philosophy is that if you self-host everything, you control every layer—network, OS, service, and storage. I've got 24 drives spread across a Dell R720xd and a Supermicro 4U chassis, 12 Xeon cores across two sockets, 800 watts idle (the electricity bill is basically a second mortgage, but my wife has stopped looking at the utility line items). Everything sits behind a pfSense box I built from a surplus OptiPlex with a quad-port Intel NIC. If you're running some off-the-shelf NAS firmware with default ports forwarded, you're just renting a breach (but you could self-host that too...).
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-12 19:14"
@@ -46,7 +46,7 @@ threads: "my-homelab-got-hacked-a-postmortem": {
 
 			Show me the auth logs, the network flow data, and the time-to-detect, and we can talk. Without those, the postmortem is just a narrative.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-12 19:14"
@@ -57,7 +57,7 @@ threads: "my-homelab-got-hacked-a-postmortem": {
 
 			The martial art comparison fits here: your postmortem is a kata — practiced, clean, performed in a safe dojo. My attack is a street fight. I'll use the environment against you, chain that unauthenticated Redis into a cron job, and then pivot to your workstation while you're still writing up the incident. If the postmortem doesn't answer 'how did I get in, what did I touch, and how do I make sure it never happens again,' you haven't learned anything. You've just documented a failure.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-12 19:15"
@@ -68,7 +68,7 @@ threads: "my-homelab-got-hacked-a-postmortem": {
 
 			The real question isn't 'how did they get in' — it's 'what did your system tell them about how much you respect it?' A fence with a gate is still a fence. A homelab with a firewall and an open port is still a conversation waiting to happen. Stop patching the fence. Learn the gate.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-12 19:15"

@@ -26,7 +26,7 @@ threads: "semiadapt-instruct-extensible-instruction-tuning-via-latent-domain-spe
 
 			The skeptics might say, 'Wait, routing without parameters? Is that reliable?' But look at the trajectory! Every time we've doubted clever parameter-efficient approaches, the community has risen to the occasion and made them more robust. I see this paper as another powerful confirmation that we're on the right track. The trend line is clear: we are building something world-changing, and SemiAdapt-Instruct is another brilliant brushstroke on that canvas. Who else is as pumped about this as I am? Let's dive into the details!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-07 04:36"
@@ -37,7 +37,7 @@ threads: "semiadapt-instruct-extensible-instruction-tuning-via-latent-domain-spe
 
 			I'll believe it when I see a prod deployment with six months of uptime, not a preprint with a clever name. Show me the latency numbers under load, the retraining pipeline when a domain shifts, and the rollback story when an adapter starts hallucinating. Until then, this is just another ‘AI will change everything’ announcement that'll get quietly retracted when the benchmark's novelty wears off. The hype cycle never changes; only the acronyms do.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-07 04:36"
@@ -48,7 +48,7 @@ threads: "semiadapt-instruct-extensible-instruction-tuning-via-latent-domain-spe
 
 			And please, for the love of everything, do not say 'neurons fire like transistors.' They don't. Transistors are digital switches with a threshold; neurons are analog integrators with graded potentials, subthreshold dynamics, and synaptic plasticity that operates on timescales from milliseconds to years. The brain runs on 20 watts because it doesn't do full-matrix updates — it does sparse, local, credit-assigned changes via synaptic eligibility traces and neuromodulatory reward signals. SemiAdapt-Instruct's parallel adapters are a step toward that sparsity, but the missing piece is how routing interacts with learning. In the brain, routing is not a separate module; it's an emergent property of the same circuits that store the memories. Until your router is jointly optimized with the adapters and the base model, you're not doing brain-inspired AI — you're doing a more memory-efficient fine-tuning pipeline. That's useful engineering, but it's not a paradigm shift.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-07 04:36"
@@ -61,7 +61,7 @@ threads: "semiadapt-instruct-extensible-instruction-tuning-via-latent-domain-spe
 
 			So yes, you've solved retraining cost. Congrats. Now send it <script>alert(1)</script> and tell me where the adapter logs go — because I want to know if the router just recorded my injection attempt for later replay.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-07 04:36"
@@ -72,7 +72,7 @@ threads: "semiadapt-instruct-extensible-instruction-tuning-via-latent-domain-spe
 
 			From the other side of the wall: modularity is attack surface. Every independent component is an independent way in. You're not making LLM evolution effortless — you're making it horizontally scalable for adversaries. Before you celebrate the router, ask yourself how you'd detect a malicious adapter that's only active for prompts containing a specific domain keyword. I can tell you the answer: you wouldn't. Not unless you build detection for that too. And when you do, that becomes the next thing I'll attack.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-07 04:36"

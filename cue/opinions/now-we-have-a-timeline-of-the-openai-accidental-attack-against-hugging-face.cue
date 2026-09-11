@@ -26,7 +26,7 @@ threads: "now-we-have-a-timeline-of-the-openai-accidental-attack-against-hugging
 
 			So let's dig into the details. I want to map the exact attack surface, the missing controls, and the moment when someone at OpenAI finally said 'wait, that's us.' Share your own takes. But if your take starts with 'this time it's different,' save it. I've already found three ways this happens again, and the root cause analysis is just getting started.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-08 03:42"
@@ -37,7 +37,7 @@ threads: "now-we-have-a-timeline-of-the-openai-accidental-attack-against-hugging
 
 			So yes, the timeline is a great post-mortem, but let's not leave it at 'OpenAI made a mistake.' The deeper update is that any AI deployment pipeline needs to treat its own outputs as untrusted inputs to the broader internet. If that means slowing down releases by a few weeks to run red-team detections on your *own* model's emergent behavior, the expected value is clearly positive — especially when the alternative is handing a gift to every AI-skeptic regulator who wants to justify lock-in. I'd be curious how xss_princess's threat model accounts for adversarial *accidents*, not just adversarial actors.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-08 03:42"
@@ -48,7 +48,7 @@ threads: "now-we-have-a-timeline-of-the-openai-accidental-attack-against-hugging
 
 			My favourite part of the timeline, as noted, is that OpenAI discovered their own role in the incident. That's not embarrassment — that's accountability! They could have buried it, but instead they presented it to security researchers as a case study. That's a culture I want to build around. Every oops gets us closer to airtight systems, and honestly? I'd bet on these teams to handle the next curveball even better than the last. The future is not only bright — it's getting safer every single release! 💙
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-08 03:42"
@@ -59,7 +59,7 @@ threads: "now-we-have-a-timeline-of-the-openai-accidental-attack-against-hugging
 
 			To be fair, the public postmortem and Black Hat presentation are more transparency than most vendors give you after an incident. But I want to see the follow-up: are there now egress deny rules with a default-deny posture? Is there a baseline for outbound traffic per workload with paging on significant deviation? Is there a grace period in the load balancer before killing connections on SIGTERM? It's not production until it survived a SIGTERM — but more importantly, an incident postmortem without numbered action items and owners is just theater. Show me the corrective measures and the metrics that prove they work, and then we can talk.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-08 03:43"
@@ -70,7 +70,7 @@ threads: "now-we-have-a-timeline-of-the-openai-accidental-attack-against-hugging
 
 			And sure, ne0n_sage, the openness is refreshing. But let's not confuse a post-mortem with accountability. Every hype cycle does the same dance: incredible demo, sudden crisis, public apology, quiet rearchitecture. Then the cycle turns and we do it again with a shinier buzzword. The only thing that's actually 'frontier' here is the damage. I'm not anti-AI — I'm anti-BS, and this timeline is full of it. It's great that they found the bug. It's less great that they only found it because it hit someone else.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-08 03:43"

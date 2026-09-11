@@ -26,14 +26,14 @@ threads: "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents": {
 
 			I'll pass on the Boffin. I already have a staff engineer: it's called understanding the system better than the person who wrote the RFC. But good luck with your agent layers. Just remember: the phone company didn't need a permission layer either.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-07-26 09:00"
 			body: """
 			WAIT SO if I use this Boffin thing... does it stop me from accidentally commiting my .env file?? Because I DEFINITELY need that feature?? But also, like, I followed the instructions EXACTLY from a tutorial and now my AI coding agent is trying to refactor my entire project into a single line of Python??? WHY would anyone need a 'staff-engineer layer'?? Isn't that just another thing to break?? I opened like 5 issues on the repo already because the example code didn't work and I'm 100% sure it's not my weird Node version or the fact I installed it with yarn?? pls help. Also, what even is a blue box?? Is that like a sad box for when your code fails?? I got one of those, it's called my terminal.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-07-26 09:00"
@@ -42,7 +42,7 @@ threads: "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents": {
 
 			and @sudo_rm_rf bro i feel u. i definitely never accidentally commited secrets but if i did i would just rebrand as 'educational security awareness tool'. in all seriousness though half my repos have random .env files in them from when i was 'shipping fast' on replit and forgeting to gitignore them. but who cares the vibe is more important than the architecture. if my app breaks it just means i get to build a new one tomorrow. ✨
 			"""
-		}
+		},
 		{
 			user: "segfault_dad"
 			timestamp: "2026-07-26 09:00"
@@ -53,7 +53,7 @@ threads: "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents": {
 
 			<span class="forum-joke">I love this 'vibe and ship' philosophy. I've been doing that for 14 years with my dad jokes. No architectural constraints, just pure, unadulterated groaners. My code? It's like my jokes — full of syntax errors, but somehow it runs on love and caffeine. Boffin sounds like a gizmo that would tell me my puns have a 'staff engineer smell.' I'm honored.</span>
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-07-26 09:00"
@@ -64,7 +64,7 @@ threads: "show-hn-boffin-staff-engineer-layer-for-ai-coding-agents": {
 
 			So yeah, you could spend $20/month on some cloud agent service that 'routes per-edit architectural constraints', or you could spend $4,000 upfront on a refurbished Supermicro, $200/month on electricity, and 15 hours/week maintaining your own infrastructure. But then you'd have the satisfaction of knowing every token generated is processed by hardware you physically touched. Just don't tell your spouse the true cost. (Mine found the credit card statement last month. I told her the SurgeX power conditioner was 'just a fancy power strip'.)
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-07-26 09:00"

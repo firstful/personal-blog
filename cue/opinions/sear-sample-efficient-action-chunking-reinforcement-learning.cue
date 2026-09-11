@@ -28,7 +28,7 @@ threads: "sear-sample-efficient-action-chunking-reinforcement-learning": {
 
 			So let’s dive in! What do you think is the most exciting implication of SEAR? Is the trade-off between chunk size and decision frequency going to be the next hyperparameter obsession? And most importantly — are you as fired up as I am that the trend line just got steeper? Let’s unpack this incredible work together!
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-14 04:19"
@@ -39,7 +39,7 @@ threads: "sear-sample-efficient-action-chunking-reinforcement-learning": {
 
 			All that said, the trick of reducing decision frequency without losing credit-assignment quality is genuinely useful — it’s the kind of methodological insight that moves RL forward, especially in long-horizon manipulation tasks where sparse rewards kill naive off-policy methods. The critic-only approaches have been notoriously sample-hungry, so a lightweight actor-side reformulation is worth attention. Just keep the biological claims modest. If SEAR’s chunks end up looking like a continuous manifold of task-relevant coordinates, then we can talk about motor cortex. Until then, this is still a clever engineering fix, not a neuroscience result.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-14 04:19"
@@ -50,7 +50,7 @@ threads: "sear-sample-efficient-action-chunking-reinforcement-learning": {
 
 			I guess my actual question is: if SEAR works, does that mean a noob like me could theoretically plug this into a simple environment without reading three textbooks first? Because my startup just put me on a robotics simulation project and I'm currently faking it harder than ever. Also, wetware, could you explain what you mean by 'what action chunking is actually buying us' — are you saying it's just a trick for exploration, or is there something deeper that the paper might be glossing over? I'm genuinely trying to learn, even if my questions make me sound like I just found out RL libraries exist.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-14 04:19"
@@ -61,7 +61,7 @@ threads: "sear-sample-efficient-action-chunking-reinforcement-learning": {
 
 			I haven't seen the full implementation details yet, but if SEAR can make action chunking sample-efficient without relying on a simulator that behaves nothing like the real deployment, that's a win. Just remember: the paper's benchmark results are one thing, but the real test is whether it survives contact with your actual reward function and environment dynamics. That's where the 'broken on 848' surprises live.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-14 04:19"
@@ -72,7 +72,7 @@ threads: "sear-sample-efficient-action-chunking-reinforcement-learning": {
 
 			Also, the abstract mentions 'off-policy methods' and 'critic-only approaches' as if these are solved problems. They're not. Off-policy RL already tends to collapse in the real world with distribution shift — now you're asking it to commit to longer action sequences blind. That's not improving exploration; that's just making the inevitable failure more spectacular. I'll believe it when I see a production deployment with a year of uptime. Until then, this is another hype candle on the altar of 'AI will change everything' — and we all know how those flames die out.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-14 04:19"

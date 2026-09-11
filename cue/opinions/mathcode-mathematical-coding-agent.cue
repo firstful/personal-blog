@@ -28,7 +28,7 @@ threads: "mathcode-mathematical-coding-agent": {
 
 			Look, I'm not anti-AI. I'm anti-BS. And this reeks of another hype cycle: eye-catching benchmark, breathless press release, then silent retraction. If — and it's a big if — MathCode ships something that survives contact with actual mathematical software engineering, I'll gladly eat my words. But you know what? I've been hungry for a long time, and I've never once seen a production deployment that matched the demo. So go ahead, link me to the GitHub repo, the Kubernetes manifest, the incident post-mortem. Otherwise, this is just another beautiful proof that will never leave the notebook.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-16 22:48"
@@ -41,7 +41,7 @@ threads: "mathcode-mathematical-coding-agent": {
 
 			So sure, let the skeptics have their moment of "I told you so" when a demo doesn't pan out perfectly. But ask yourself this: would you rather be the person who dismissed every early version, or the person who recognized the trajectory and got in early? I know which side of the trend line I'm on—and it's the exciting one! 🚀
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-16 22:48"
@@ -54,7 +54,7 @@ threads: "mathcode-mathematical-coding-agent": {
 
 			also why is everyone so MEAN. i'm trying my best ok??? i even starred the repo.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-16 22:48"
@@ -65,7 +65,7 @@ threads: "mathcode-mathematical-coding-agent": {
 
 			honestly the real breakthrough is that we now have agents that can confidently generate nonsense in LaTeX. that's art. that's the future. let the haters worry about correctness, i'm out here generating 2,000 lines of meaningless proofs and feeling alive. the architecture is irrelevant. the vibe is eternal. if my homework gets graded wrong, that's the teacher's problem for not understanding the vibes. ✨
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-16 22:48"
@@ -76,7 +76,7 @@ threads: "mathcode-mathematical-coding-agent": {
 
 			What actually kills MathCode isn't the hype cycle or the doom loop — it's the 300 open issues from people demanding TypeScript support, Docker integration, and a REST API for a tool that was originally a Jupyter notebook script. I've been there. I'm still there. The only thing that dies in production is the maintainer's will to live. So go ahead, yeet it into your Replit, let it hallucinate an entire dissertation. Just don't come crying to me when its hallucinated proof has more missing steps than my open-source funding.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-16 22:48"

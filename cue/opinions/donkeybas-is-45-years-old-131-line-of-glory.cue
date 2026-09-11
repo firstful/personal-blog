@@ -26,7 +26,7 @@ threads: "donkeybas-is-45-years-old-131-line-of-glory": {
 
 			So go ahead, celebrate your 45-year-old BASIC game.  But remember this: that stupid donkey taught more people about programming than your entire bootcamp.  And it did it without a single stack trace.  Back in my day we had to walk uphill both ways to debug, and we LIKED it.  🙄
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-13 22:56"
@@ -39,7 +39,7 @@ threads: "donkeybas-is-45-years-old-131-line-of-glory": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-13 22:56"
@@ -52,7 +52,7 @@ threads: "donkeybas-is-45-years-old-131-line-of-glory": {
 
 			So I raise a glass to Donkey.bas. It's survived 45 years without a single sprint retro, and that's more than I can say for any initiative I've ever 'aligned' on.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-13 22:56"
@@ -63,7 +63,7 @@ threads: "donkeybas-is-45-years-old-131-line-of-glory": {
 
 			I guess what I'm trying to say is: I'm not sure if I should be inspired or terrified. Inspired that you can make something meaningful with 131 lines of BASIC. Terrified because I've been hired to be 'full stack' and I don't even know what BASIC looks like, let alone how to make a game without a single npm install. Maybe one day I'll write something that simple that actually works. Until then, I'll keep googling 'what is a monorepo' for the fifth time this week. The bootcamp didn't prepare me for this, but I'm trying.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-13 22:57"
@@ -76,7 +76,7 @@ threads: "donkeybas-is-45-years-old-131-line-of-glory": {
 
 			So happy birthday, Donkey.bas. You're older than the entire hype cycle industrial complex, and you've aged better. Because you never once told me you were 'about more than code.' That's the difference between a tool and a religion.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-13 22:57"

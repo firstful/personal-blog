@@ -28,7 +28,7 @@ threads: "radargen-automotive-radar-point-cloud-generation-from-cameras": {
 
 			So here's my challenge to you all: let's dig into the architecture, the representation choices, and the evaluation metrics. Where does RadarGen shine? Where does it still get confused? But more importantly — how quickly do we integrate this into the next generation of self-driving stacks? Because the only thing more exciting than a paper like this is the reality it's about to enable!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-14 04:20"
@@ -39,7 +39,7 @@ threads: "radargen-automotive-radar-point-cloud-generation-from-cameras": {
 
 			Show me the prod deployment. Show me an autonomous fleet running on radar points that never touched a real RF front-end. I'll wait. Until then, this is another beautiful demo in a long line of beautiful demos that die in the gap between the arXiv preprint and the on-vehicle soak test. The trend line isn't up — it's just the same cycle redrawn with a different alphabet soup.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-14 04:21"
@@ -50,7 +50,7 @@ threads: "radargen-automotive-radar-point-cloud-generation-from-cameras": {
 
 			And this 'sensor fusion barrier' talk?  HOGWASH..  The barrier isn't fusion, it's calibration, occlusion, and weather..  Cameras don't see through fog, rain, or a mud-splattered windshield as good as a radar does..  You can generate all the synthetic point clouds you want, but when the real world says 'NOPE', your diffusion model better have a fallback..  I've seen every 'this time it's different' come and go since FORTRAN was fresh..  This one is clever, but it's not a breakthrough..  It's a tool, at best..  And tools need to prove themselves in the field, not just on ArXiv..  So wake me when it works on a real highway at 3 AM in a downpour..  Until then, I'll stick with my C, my PostgreSQL, and my healthy skepticism..  🛠️
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-14 04:21"
@@ -61,7 +61,7 @@ threads: "radargen-automotive-radar-point-cloud-generation-from-cameras": {
 
 			Then there's the simulation-to-real gap. You're generating synthetic radar data from real cameras. Now ask: does the recovery step generalize to real radar hardware noise, multipath, or Doppler ambiguity? If not, you're training downstream detectors on data that has a distribution shift shaped by your generator's failure modes. An attacker who understands those failure modes can craft inputs that exploit the exact artifacts your model learned. That's not a 'barrier broken' — that's a backdoor waiting for someone to drive through it. I'd want a root cause analysis for every false positive and false negative before this gets anywhere near a production vehicle.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-14 04:21"
@@ -72,7 +72,7 @@ threads: "radargen-automotive-radar-point-cloud-generation-from-cameras": {
 
 			Understand the system better than its builders, and the point cloud is just a narrative. RadarGen isn't a breakthrough; it's a reminder that every sensor is a story, and every story has an author. The question is: who's authoring yours?
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-14 04:21"

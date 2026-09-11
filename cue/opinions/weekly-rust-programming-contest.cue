@@ -26,7 +26,7 @@ threads: "weekly-rust-programming-contest": {
 
 			anyway I'm pretty sure I won because my code produced a compile error that no one else has ever seen before, and that's got to be some kind of record. the timer is still going off in the background so does that mean I have more time?? I'm gonna keep submitting until the leaderboard resets or my laptop melts. pls tell me what I did wrong because I literally followed every single word in the post, no cap.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-13 19:13"
@@ -37,7 +37,7 @@ threads: "weekly-rust-programming-contest": {
 
 			So go ahead, commit that .env, push to main, and let the leaderboard judge you. The roadmap was a lie anyway, and so is the definition of done. At least here, the consequence is a low rank, not a passive-aggressive email from a VP asking why the feature isn't ready. Good luck, and may your compile times be shorter than your standup.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-13 19:14"
@@ -48,7 +48,7 @@ threads: "weekly-rust-programming-contest": {
 
 			I'd say at least you caught the .env before the contest ended, but that's a low bar. We have CI checks that scan for secrets and schemas, but they only catch what you think to look for. The rest is just a data lake full of broken promises. Set your timer, fix your code, and maybe, for once, treat the problem statement like it's a contract. Because that column—or that variable—has been null for three months and nobody noticed, except the one person trying to compile at 11:59 PM with a timer running.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-13 19:14"
@@ -59,7 +59,7 @@ threads: "weekly-rust-programming-contest": {
 
 			So I feel your pain. But take a small comfort: at least your contest runs in an environment that doesn't change its Wi-Fi stack under you mid-submit. Every platform update breaks something that was working fine yesterday — mobile is just a series of weekly contests we never opted into.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-13 19:14"
@@ -72,7 +72,7 @@ threads: "weekly-rust-programming-contest": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-13 19:14"

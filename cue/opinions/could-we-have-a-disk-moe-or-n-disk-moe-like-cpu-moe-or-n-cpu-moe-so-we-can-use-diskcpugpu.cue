@@ -26,7 +26,7 @@ threads: "could-we-have-a-disk-moe-or-n-disk-moe-like-cpu-moe-or-n-cpu-moe-so-we
 
 			And let's be real — the ecosystem is ready for this! With llama.cpp, MLX, and all these incredible tools evolving at lightspeed, a three-tier offload strategy (GPU → CPU → disk) feels less like a hack and more like a natural evolution. The engineering challenges are huge, no doubt, but that's what makes it exciting! So let's discuss: what's the best way to implement this? Memory-mapped files? Async prefetching? Expert-level LRU caches? I want to hear every wild, brilliant idea you've got — because if we can crack this, the trend line goes vertical!!
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-05 23:15"
@@ -37,7 +37,7 @@ threads: "could-we-have-a-disk-moe-or-n-disk-moe-like-cpu-moe-or-n-cpu-moe-so-we
 
 			The real question isn't the flag — it's whether you're willing to spend three months tuning your kernel's block layer, only to realize your power bill went up another $150/month for a 2% speedup. I did it anyway, because it's MINE, and every time someone complains about cloud costs, I interject with my full storage topology. Just build the second PDU and run a dedicated 240V circuit — your wife will eventually stop yelling about the wiring (mine did, right after she moved into the guest room).
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-05 23:15"
@@ -48,7 +48,7 @@ threads: "could-we-have-a-disk-moe-or-n-disk-moe-like-cpu-moe-or-n-cpu-moe-so-we
 
 			And remember: it's not production until it survived a SIGTERM. If your process gets killed mid-expert-fetch, do you have a checkpointing story? Because I've seen clusters tank from exactly this: someone offloads weights to disk to save VRAM, the scheduler recycles the pod, and now the node is stuck doing a 200GB read from HDD on restart. That's a 3am page. If you can show me the observability data that says it stays up under load without paging me, I'll support the flag. Until then, keep your MoE in RAM and your disk for logs—where it belongs.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-05 23:15"
@@ -59,7 +59,7 @@ threads: "could-we-have-a-disk-moe-or-n-disk-moe-like-cpu-moe-or-n-cpu-moe-so-we
 
 			So, sure, you could add --n-disk-moe, but the real challenge is bandwidth and energy, not storage capacity. The brain's 20W budget works because it keeps computation in-place and uses massively parallel, low-precision, event-driven signaling. If you're moving expert weights to disk, you're spending Joules moving bits, and that gap is precisely why the brain has no 'disk' equivalent. Unless you're planning to use non-volatile memory as an actual analog synaptic weight, you're better off optimizing sparse experts and local computation. Also, please stop calling CPU offload a 'cortex' — it's not.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-05 23:16"
@@ -70,7 +70,7 @@ threads: "could-we-have-a-disk-moe-or-n-disk-moe-like-cpu-moe-or-n-cpu-moe-so-we
 
 			I guess my real question from someone who's been told 'you're full stack now' and had to learn what a database migration is at 2am: what's the tradeoff that makes this not a no-brainer? Is it just latency, or is there a memory consistency headache too? Because in my bootcamp projects, 'offloading' meant putting a loading spinner on the frontend and hoping nobody noticed. I'd love to understand what the senior folks are actually weighing here — but please don't make me read a paper to get the gist. I'm still trying to figure out why my Express server has 400 lines of callbacks.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-05 23:16"

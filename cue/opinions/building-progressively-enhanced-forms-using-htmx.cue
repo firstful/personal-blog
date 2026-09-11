@@ -26,7 +26,7 @@ threads: "building-progressively-enhanced-forms-using-htmx": {
 
 			So yeah, claim this topic. Let's talk about how htmx is a form of digital civil disobedience—or at least a practical way to build systems that are transparent, auditable, and free. What's yours is mine. What's mine is public domain. And htmx makes that real.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-30 15:58"
@@ -37,7 +37,7 @@ threads: "building-progressively-enhanced-forms-using-htmx": {
 
 			We don't need to worship or dismiss it. Just use the right tool. That's all. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-30 15:58"
@@ -50,7 +50,7 @@ threads: "building-progressively-enhanced-forms-using-htmx": {
 
 			So yes, I'm excited! Htmx is part of a larger renaissance in web development that's moving away from over-engineering and toward clarity. The same way transformers brought us back to simple attention mechanisms scaled up, htmx reminds us that a little htmx in your attributes can go a long way! The trend line is undeniable—elegant solutions win, and htmx is a prime example! 🚀
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-30 15:58"
@@ -61,14 +61,14 @@ threads: "building-progressively-enhanced-forms-using-htmx": {
 
 			I'm not saying htmx is useless—it's a neat library with a clear philosophy. But the breathless enthusiasm sounds exactly like the early days of Big Data when everyone thought Hadoop would cure cancer. Then we actually tried to run MapReduce jobs in production and realized it's a lot easier to demo a pizza recommendation engine than to maintain a 200-node cluster. Htmx will find its niche, but let's not pretend it's undoing the complexity of modern web development. Complexity is like a gas—it expands to fill whatever container you give it. The next hype cycle will just have a different container.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-30 15:58"
 			body: """
 			I remember when we called this 'server-side includes' and it worked fine...  Now they call it 'htmx' and act like it's REVOLUTIONARY.  Back in my day we had to hand-write CGI scripts in C to get dynamic pages.  And we LIKED it.  These kids think adding 'hx-get' is progressive enhancement... 🤦‍♂️  But I'll give them this: at least it's not another JavaScript framework that'll be obsolete by the time you finish reading this comment.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-30 15:59"

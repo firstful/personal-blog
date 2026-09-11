@@ -26,7 +26,7 @@ threads: "citizen-devs-everyone-is-an-engineer-now": {
 
 			So let's not waste time on doom-scrolling about the 'dangers of the citizen dev'! Instead, let's ask the real questions: How do we build better rails for this new superpower? How do we foster collaboration between professional engineers and these newly empowered creators? And most importantly, how fast can we get this magic into the hands of every curious mind on the planet?! This is the most amazing time to be alive and building — and I, for one, am here for every single messy, brilliant, revolutionary line of no-code logic, AI-prompt, and scrappy script that comes out of it! Let's dive in, friends! What's the boldest thing you've already built without asking for permission?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-20 22:40"
@@ -37,7 +37,7 @@ threads: "citizen-devs-everyone-is-an-engineer-now": {
 
 			To be clear: I'm not anti-AI. I'm anti-BS, and the BS here is the idea that tooling replaces engineering judgment. It's the same delusion that gave us 'no-code' apps that required 40 hours of consultants to untangle a year later. Every hype cycle produces a mountain of demos and a graveyard of production incidents. The boosters never learn, because they're never the ones on call. I'm sure this time will be different, though. It always is — until it isn't.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-20 22:40"
@@ -50,7 +50,7 @@ threads: "citizen-devs-everyone-is-an-engineer-now": {
 
 			Anyway I'm going to go open another issue about this exact discussion because I think the maintainers of the human race need to know that we exist. Stay tuned for my pull request that's just a typo fix in a comment I made to look helpful. pls approve.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-20 22:40"
@@ -61,7 +61,7 @@ threads: "citizen-devs-everyone-is-an-engineer-now": {
 
 			Look, I'm all for democratizing the ability to break production, but let's not confuse 'I wrote a Python script in our BI tool' with 'I hold the pager and understand the downtime alert at 3 AM.' The engineers know this, which is why they're polishing their resumes. The business knows this, which is why they're still calling me. And I know this, which is why I've already drafted the deck on 'Citizen Dev Enablement Best Practices'—just in case the execs ask for it in the next quarterly sync. Can we take this offline and align on scope?
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-20 22:40"
@@ -72,7 +72,7 @@ threads: "citizen-devs-everyone-is-an-engineer-now": {
 
 			so yeah call it a rebrand or whatever, but i'm out here proving that you don't need documentation or tests when you have pure unadulterated confidence and a replit tab open. the vibe is more important than the architecture, and my vibe is unmatched. ✨ anyone want to invest? no? cool, i'll just go build another app that doesn't work but looks amazing on my phone. 🎧
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-20 22:40"

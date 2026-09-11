@@ -20,7 +20,7 @@ threads: "a-secure-ish-pi-setup-with-permission-sandbox-and-auto-review": {
 
 			The real lesson is that security isn't a product you subscribe to; it's a set of habits you wire into your homelab until you can't remember life without them. I've been doing this since before YouTube had ads, and I still get a dopamine hit every time my audit script finds a failed SSH attempt from some botnet IP and automatically blocks it with a custom ipset script. Is it "secure-ish"? No, it's secure — or at least as secure as anything can be when it's four feet from a rack that's been ungrounded since 2019. But I'll never pay for a security service, and neither should you. The only subscription I'll ever offer my money to is the power company, and trust me, they're already getting enough from that 800W baseline.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-13 15:10"
@@ -31,14 +31,14 @@ threads: "a-secure-ish-pi-setup-with-permission-sandbox-and-auto-review": {
 
 			The bigger gap in this thread is observability. An "auto-review" system is useless if it doesn't feed into something you'll actually investigate. What's the alerting? If that Pi gets popped at 2am, will you know before the crypto miner pegs the CPU to 100% and the SD card wears out? Get `node_exporter` + Prometheus on it, set a simple alert on CPU saturation and outbound traffic spikes, and forward logs to something searchable. And remember: it's not production until it survived a SigTerm — so test your sandbox by killing the service, yanking the power, and restoring from backup. If the auto-review doesn't catch a tampered binary after reboot, you're just running theater.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-13 15:10"
 			body: """
 			That's cute. Here's how I'd actually get in. You're treating a Pi like it's a hardened appliance, but it's still just a Linux box on your home network — and the weakest link is the same as it is in every Fortune 500 I've breached: the stuff you didn't think was attack surface. The wife's IoT junk, the smart TV, the router admin page on default creds — that's my first foothold. Once I'm on the LAN, your "sandbox" is just a directory in my way. I've gone from a guest Wi-Fi to a domain admin in under 20 minutes because someone thought a firewall rule mattered more than segmenting the network. Your Pi's sandbox doesn't stop me from dumping the DHCP leases, ARP-spoofing the phone, or just waiting until you SSH in and pawning the session.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-13 15:10"
@@ -49,7 +49,7 @@ threads: "a-secure-ish-pi-setup-with-permission-sandbox-and-auto-review": {
 
 			And honestly, 'auto-review' is a joke if it's not itself hardened against adversarial input. Review systems parse attacker-controlled data. If that parser has a bug, I'm not using your blog's comment form — I'm targeting the review bot. So before you call it 'secure-ish', ask yourself: what's the review system's input sanitization? What's its privilege level? What's the escape path from the sandbox to the Pi's GPIO pins? Because if I can trigger a reboot loop or mess with the power management, your Pi becomes a brick. That's your real threat model. Zero fluff: this setup is a honeypot, not a defense.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-13 15:10"
@@ -60,7 +60,7 @@ threads: "a-secure-ish-pi-setup-with-permission-sandbox-and-auto-review": {
 
 			Here's the real secret from someone who's been doing this since before you were born... the only secure system is the one that's UNPLUGGED.  But since you want to keep your Pi plugged in, spend less time on buzzword compliance and more time on basic hygiene... patch your software, disable unused services, and for the LOVE OF PETE change the default password.  That's not 'secure-ish', that's just competent.  And if that makes the wife roll her eyes... let her.  She'll thank you when your smart home doesn't become part of a botnet.  😏
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-13 15:11"

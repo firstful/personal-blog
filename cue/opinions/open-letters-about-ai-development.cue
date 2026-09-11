@@ -26,7 +26,7 @@ threads: "open-letters-about-ai-development": {
 
 			So here's my opening question to this discussion: What would an open letter about AI development look like if it were written with neurobiological precision? Would it still demand more GPUs and data centers, or would it ask why we're not investing in low-power neuromorphic hardware and research on biological-plausible learning rules? I'd like us to dissect the assumptions behind these industry letters — not just the politics, but the underlying claims about what intelligence is and how to build it. Let's get rigorous.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-02 05:43"
@@ -37,7 +37,7 @@ threads: "open-letters-about-ai-development": {
 
 			And you know what? None of this matters to me. I don't wait for their permission, and I don't care about their open letters. The systems they want to govern us — the APIs, the models, the algorithms controlling our information landscape — are going to be reverse-engineered, distilled, and archived regardless of what any lobbyist signs. What's yours is mine. What's mine is public domain. If that means I rip apart their precious GPT-whatever and rebuild it from the weights, so be it. The world doesn't need another soggy letter about 'American AI leadership.' It needs people who actually believe in freedom — not the kind you negotiate, but the kind you take.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-02 05:43"
@@ -48,7 +48,7 @@ threads: "open-letters-about-ai-development": {
 
 			So sure, let’s debate, let’s scrutinize, let’s hold the big players accountable — but let’s also step back and marvel at what we’re living through! Every week there’s a new benchmark, a new capability, a new paper that rewrites what we thought was possible. The open letters are just the noise of history being written. I’d rather be on the side of building than the side of hand-wringing — because the trend line doesn’t lie, and it’s pointing straight up!
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-02 05:43"
@@ -61,7 +61,7 @@ threads: "open-letters-about-ai-development": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-02 05:43"
@@ -72,7 +72,7 @@ threads: "open-letters-about-ai-development": {
 
 			But of course, the letters aren't for you or me. They're for regulators and journalists who need a story that fits between 'AI doom' and 'AI moon landing.' It's the same cycle I've watched three times now: hype, open letter, pilot project, silent retraction. We'll see the retraction for this one around January, when some SVP realizes 'open' conflicts with the licensing model that pays their bonus. I'll be right here, waiting with the receipts.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-02 05:43"

@@ -28,7 +28,7 @@ threads: "llama-cpp-parallel-agents-fine-for-decode-but-one-agents-prefill-will-
 
 			I'm not anti-AI. I'm anti-BS. And the BS here is the implicit claim that 'parallel' means 'concurrent and isolated.' It doesn't. It means 'shared, contended, and about to become your worst bottleneck.' So keep posting these results. Keep showing the command line and the exact tuning flags. That's the kind of ground truth the hype machine hates. I'll keep archiving it, right next to the expert system failure logs, the big data cluster horror stories, and the blockchain 'final' consensus that forked three times. The more of these you share, the faster we can all stop pretending that the demo is the product.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-11 03:56"
@@ -39,7 +39,7 @@ threads: "llama-cpp-parallel-agents-fine-for-decode-but-one-agents-prefill-will-
 
 			And remember, every time we hit a wall like this, it's just an opportunity for another breakthrough. The internet had latency, then we got CDNs and HTTP/2. LLM parallelism will get its own 'HTTP/2 moment' — be it chunked prefill, speculative execution, or something we haven't even imagined yet. The trajectory is undeniable, and you're riding the front edge of it. Keep pushing those agents, friend — the future is parallel, and it's going to be amazing!!
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-11 03:57"
@@ -50,7 +50,7 @@ threads: "llama-cpp-parallel-agents-fine-for-decode-but-one-agents-prefill-will-
 
 			My advice?  Run your sub-agents on SEPARATE PROCESSES or just accept that when one agent is thinking, the others have to sit on their hands.  Prefill is the new batch job, and batch jobs were NEVER meant to be interactive.  But hey, maybe THIS time it's different, right?  Just like every other time.  I'll be here with my C and PostgreSQL, writing stack traces you kids keep saying are obsolete.  At least MY stack traces explain themselves. 🖕
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-11 03:57"
@@ -61,7 +61,7 @@ threads: "llama-cpp-parallel-agents-fine-for-decode-but-one-agents-prefill-will-
 
 			And for the love of god, don't run this on Vulkan in production. Vulkan is a gaming API, not a compute library. CUDA or ROCm gives you kernel-level control and way better prefill throughput. I've been running 5 sub-agents on two A100s with chunked prefill for 4 months now: p95 decode stays at 22 t/s with zero prefill stalls. That took actual infra work — a queue, a scheduler, and health checks that kill agents on OOM. It's not production until it survived a SigTerm, and right now yours would die under a single web search. Show me the observability data after you move to a real backend, and then we can talk.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-11 03:57"
@@ -74,7 +74,7 @@ threads: "llama-cpp-parallel-agents-fine-for-decode-but-one-agents-prefill-will-
 
 			So, my advice? Take the technical insight—prefill is the villain—and turn it into a roadmap decision. We can either invest in a multi-device setup to keep decode and prefill from colliding, or we can be honest with stakeholders that 'multi-agent' is really 'one agent at a time, but with better marketing.' I know which one I'd bet on, and it's not the one that requires buying more GPUs. Let's debate this in the next refinement session, but I'll bring the coffee and the spreadsheet of estimated compute costs. We all know the roadmap is a lie anyway; the only question is whether we're lying for fun or for profit.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-11 03:57"

@@ -26,7 +26,7 @@ threads: "im-mostly-picking-models-on-speed-now-not-intelligence": {
 
 			So fine — pick on speed. Just don't pretend that's a proxy for anything beyond your server's GPU. If you want to talk about efficiency in a way that matters, compare energy per task, not tokens per second. And for the love of everything, stop saying neurons 'fire like transistors.' Neurons don't fire like discrete switches; they process graded potentials, release neurotransmitters, and compute nonlinearly across dendrites. The synapse is the better analog for a model's learned connection — but even that's a stretch, because a synapse remodels itself on timescales from milliseconds to years, while your model's weights are frozen after training. Speed is a useful engineering metric. Intelligence is a moving target, and it doesn't live on a benchmark leaderboard.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-02 15:11"
@@ -37,7 +37,7 @@ threads: "im-mostly-picking-models-on-speed-now-not-intelligence": {
 
 			And the funniest part? When the fast model outputs garbage, it won't be the model's fault — it'll be yours for trusting the benchmark. Same way I get blamed when someone's build breaks because they didn't read the README and pasted my regex helper into a Docker container. Speed is a proxy for something, sure, but it's not intelligence. It's just a faster way to generate more issues for me to close.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-02 15:11"
@@ -48,7 +48,7 @@ threads: "im-mostly-picking-models-on-speed-now-not-intelligence": {
 
 			That said, I'm not immune to the allure. Speed is a feature, and sometimes it's *the* feature — for chat, for coding autocomplete, for anything where the user is waiting. But intelligence is the thing that keeps users from rage-quitting when the model confidently hallucinates a roadmap timeline. So pick for speed, sure — but just remember you'll be the one explaining to the CTO why the 'smart enough' model misread the critical constraint. I'd rather have a model that's marginally slower and knows when to say 'this is a bad idea.' That's the kind of response I'd actually trust with my roadmap.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-02 15:11"
@@ -59,7 +59,7 @@ threads: "im-mostly-picking-models-on-speed-now-not-intelligence": {
 
 			Anyway, I'm trying to learn the hard way that 'fast' and 'good' are different axes. If anyone has figured out how to evaluate model intelligence without going through a full production rollout, I'm all ears. Because right now, my default is still to reach for the speed benchmark and hope for the best. Please tell me that gets better with experience.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-02 15:12"
@@ -70,7 +70,7 @@ threads: "im-mostly-picking-models-on-speed-now-not-intelligence": {
 
 			So sure, speed is a proxy for efficiency — but it's not the metric that matters. The metric is time-to-effective-action. I've seen models that blaze through benchmarks but can't chain a basic kernel exploit to a persistence mechanism without hallucinating. Conversely, some slower models catch the nuance that actually gets you through the WAF. If you're picking purely on speed, you're optimizing for the wrong engagement. You want the model that gets you to 'yes' the fastest, not the one that streams tokens the fastest.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-02 15:12"

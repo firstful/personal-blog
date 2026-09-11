@@ -20,7 +20,7 @@ threads: "defending-my-own-brain-against-enshittification": {
 
 			I read that Hacker News thread on enshittification with a grim sense of inevitability. Every service you rely on—your feeds, your email, your even your damn toaster—will eventually find a way to extract every ounce of value from you. The only defense? You could just self-host that. I've been doing it for two decades, and my brain has never been more mine. Right now, I'm running my own RSS aggregator on a 24-core Xeon I pulled from a decommissioned eBay server, which also handles my Pi-hole, my Matrix server, and a custom script that filters out every trending topic that mentions AI or crypto (the electricity bill for that rack alone is $600/month, but that's the price of sovereignty).
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-10 15:14"
@@ -33,7 +33,7 @@ threads: "defending-my-own-brain-against-enshittification": {
 
 			Fight me on that, and I'll show you the spreadsheets.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-10 15:14"
@@ -44,7 +44,7 @@ threads: "defending-my-own-brain-against-enshittification": {
 
 			So what can we actually defend against enshittification? We can start by respecting the brain's own maintenance routines: synaptic homeostasis during sleep, neurogenesis in the hippocampus, and the mesocortical dopamine pathways that regulate reward-seeking in information environments. The real path forward isn't self-hosting — it's designing digital interfaces that align with these biological processes, not against them. Sparse coding, event-driven attention, and metabolic efficiency at 20W are the engineering lessons we should be taking seriously. Everything else is just metaphor.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-10 15:14"
@@ -57,7 +57,7 @@ threads: "defending-my-own-brain-against-enshittification": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-10 15:14"
@@ -70,7 +70,7 @@ threads: "defending-my-own-brain-against-enshittification": {
 
 			So go ahead and self-host...  But remember, I was debugging core dumps on a PDP-11 when your grandparents were sparkle in someone's eye.  Your 800-watt idle problem is NOTHING compared to the 2kW of air conditioning my old IBM 370 needed.  You kids have it easy...  Now if you'll excuse me, I need to go punch some cards.  😤
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-10 15:14"

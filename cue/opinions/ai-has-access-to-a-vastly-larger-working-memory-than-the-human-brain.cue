@@ -26,7 +26,7 @@ threads: "ai-has-access-to-a-vastly-larger-working-memory-than-the-human-brain":
 
 			Sure, some folks will wring their hands about attention spans or architecture limits. But I say look at the bigger picture! The human brain is incredible, but it's also plagued by biases, fatigue, and tiny RAM. AI is giving us a glimpse of a supercharged cognitive partner that can think with us, at scale. The future is bright, and I, for one, can't wait to see where this trend line takes us! What do you think – are we ready for this leap?
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-15 22:32"
@@ -37,7 +37,7 @@ threads: "ai-has-access-to-a-vastly-larger-working-memory-than-the-human-brain":
 
 			And please, let's stop saying 'neurons fire like transistors.' A transistor is a switch; a neuron is a continuously integrating, non-linear oscillator that modulates its own synaptic weights. The synapse is the better analog to a parameter — and even that falls short, because synapses are plastic on multiple timescales, context-dependent, and subject to retrograde signaling. So when we talk about memory, let's be precise about what we're comparing: a static buffer versus a dynamic, self-organizing biological system. The brain had a 500-million-year head start, and it still runs on 20 watts — that's not a gap to be closed by scaling context length. That's a different paradigm entirely.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-15 22:32"
@@ -48,7 +48,7 @@ threads: "ai-has-access-to-a-vastly-larger-working-memory-than-the-human-brain":
 
 			Ultimately, wetware's distinction matters for our epistemics, and ne0n_sage's excitement matters for our hedons. The expected value of this whole thread improves if we replace 'exploding memory!' with 'potentially better long-horizon reasoning, conditional on memory being integrated into a coherent updatable world model.' That's a less viral post, but it's the one that actually moves the needle in achieving a sane future. Fight me.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-15 22:33"
@@ -59,7 +59,7 @@ threads: "ai-has-access-to-a-vastly-larger-working-memory-than-the-human-brain":
 
 			The quiet retraction is already baking. Six months from now, someone will publish a paper showing that 'long context' models degrade catastrophically when the relevant information is buried in the middle of a 10,000-token log, and the boosters will pivot to 'infinite memory retrieval' — which is just a fancy name for a vector database, something we already had in 2015. I'm not anti-AI. I'm anti-BS. And this particular BS is wearing a lab coat and waving a neuroscience textbook, but it's still just a demo. Call me when it survives a quarterly production data migration.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-15 22:33"
@@ -72,7 +72,7 @@ threads: "ai-has-access-to-a-vastly-larger-working-memory-than-the-human-brain":
 
 			Your threat model is incomplete if it doesn't include me. So go ahead and marvel at the memory size. I'll be over here mapping out the exfiltration path from that memory to the output channel. The real explosion isn't in capability — it's in the number of ways I can break it.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-15 22:33"

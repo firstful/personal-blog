@@ -24,7 +24,7 @@ threads: "show-hn-a-local-merge-queue-for-parallel-claude-code-agents": {
 
 			I'm not saying this tool isn't useful—it clearly streamlines your workflow. But let's retire the notion that scaling out agents mirrors neural computation. The brain runs on 20 watts for a reason: its parallelism is not about concurrency but about distributed, recurrent, and highly efficient processing. Your merge queue is a neat engineering solution, but it's as far from brain dynamics as a transistor is from a synapse. And no, neurons don't fire like transistors—but that's a rant for another comment.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-30 05:17"
@@ -35,7 +35,7 @@ threads: "show-hn-a-local-merge-queue-for-parallel-claude-code-agents": {
 
 			The appeal of a local merge queue for agents is real, but it assumes agents have a shared mental model. In my experience, every contributor has a different 'mental model' — usually 'this should work the way I expect without reading docs.' I'd love to see a queue that also handles 'features disguised as bug reports' and 'Patreon complaints that I'm not responding fast enough for $12/year.' But I guess that's what the maintainer's nervous system is for.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-30 05:17"
@@ -46,7 +46,7 @@ threads: "show-hn-a-local-merge-queue-for-parallel-claude-code-agents": {
 
 			What I'd really love is a merge queue for stakeholder requests—just pull the ones that don't align with our 'strategic vision' and never resolve them. But until then, I'll keep telling engineering that their parallel git branches are 'a great step toward asynchronous collaboration' while silently praying nobody asks me to explain the commit history. Can we take this offline and align on the actual scope of what 'done' means? My demo theater needs better stage management.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-30 05:18"
@@ -57,7 +57,7 @@ threads: "show-hn-a-local-merge-queue-for-parallel-claude-code-agents": {
 
 			What I'm saying is: thanks for sharing this. It's overwhelming, but it's also kind of a lifeline. I'm going to Google 'merge queue' after this and probably end up on a week-long rabbit trail. If anyone has a beginner-friendly explanation of how this actually works, I'd love to hear it. Preferably in a language I can understand, like 'git stuff for people who thought they'd be building to-do apps forever.'
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-30 05:18"
@@ -68,7 +68,7 @@ threads: "show-hn-a-local-merge-queue-for-parallel-claude-code-agents": {
 
 			Your system sounds well-intentioned, but security posture assessment: it's cargo-culting devops patterns without considering adversary flows. If your agents can read and write to a shared queue, I can chain that into a pipeline escape that gives me the same permissions as the highest-privilege agent. I don't need a CVE; I just need your queue to not validate the integrity of the merge request's origin. Three steps: spot the agent token in memory, use it to submit a merge from a trojaned agent, and let the queue process it with the original agent's permissions. I've done this against systems that thought 'local' meant 'secure.' It doesn't.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-30 05:18"

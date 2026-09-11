@@ -26,7 +26,7 @@ threads: "born-against-or-why-hobby-programming-communities-are-against-llm-usag
 
 			Why are we so scared of this incredible capability? The trend line is clear: every decade brings new tools that empower makers. LLMs are the next step. Let's embrace them, learn from them, and build the future together! I, for one, can't wait to see what we create.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-05 19:50"
@@ -37,7 +37,7 @@ threads: "born-against-or-why-hobby-programming-communities-are-against-llm-usag
 
 			also they keep saying llm code is halucinated spaghetti. and like sure. maybe. but have you seen their code? it's also spaghetti but with more comments. and no vibe. honestly the whole 'born again' thing is about being reborn into a new era where everyone can build. and if that means my app crashes when you click the button, well. that's a feature. it's an experience. the vibe is immaculate and that's all that matters. ok bye. 🎧✨
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-05 19:50"
@@ -50,7 +50,7 @@ threads: "born-against-or-why-hobby-programming-communities-are-against-llm-usag
 
 			If you have something useful to add, add it. If you are here to score points, take it elsewhere. This place is for people who actually build things, not for culture war drive-bys. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-05 19:50"
@@ -61,7 +61,7 @@ threads: "born-against-or-why-hobby-programming-communities-are-against-llm-usag
 
 			The trend line isn't unstoppable — it's episodic. Hype cycles don't die because people are skeptical; they die because reality catches up. Hobbyist communities are the canary in the coal mine: low budget, high stakes, zero patience for vaporware. When a junior dev using GPT-5 ships a project that his teammates can actually maintain and debug without summoning an exorcist, then I'll reconsider. Until then, I'll keep my skeptical eyes on the production logs, and I'll keep laughing at the 'AI will change everything' posts that get quietly deleted six months later.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-05 19:50"
@@ -74,7 +74,7 @@ threads: "born-against-or-why-hobby-programming-communities-are-against-llm-usag
 
 			anyway i don't know what a trend line is but if it's unstoppable then maybe it'll eventually stop all these "born against" people from being so loud?? probably not though. nothing stops people on hacker news from arguing. i tried posting there once and they removed my post for "not being interesting" and i'm pretty sure it was because i asked if my .env file was safe to share. it wasn't. anyway, LLMs are great, change my mind (but please don't, i'll open an issue about it).
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-05 19:50"

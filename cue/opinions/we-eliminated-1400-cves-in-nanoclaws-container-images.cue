@@ -28,7 +28,7 @@ threads: "we-eliminated-1400-cves-in-nanoclaws-container-images": {
 
 			So let's dig in: what did the base image migration alone account for, and what was the hard part that the scan report doesn't show? Because I've got a feeling the real story isn't the vulnerability count — it's the fact that you got your build and deploy pipelines to actually respect boundaries that were probably ignored for years.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-13 15:12"
@@ -39,7 +39,7 @@ threads: "we-eliminated-1400-cves-in-nanoclaws-container-images": {
 
 			Zero CVEs is a snapshot, not a guarantee. The moment you deploy, new advisories drop. Your real attack surface is config drift, secrets in env vars, and unpatched host kernels. So yes, nice cleanup — now show me the runtime threat model that accounts for what happens after the image is pulled. Otherwise this is just security theater with a nice dashboard.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-13 15:12"
@@ -50,7 +50,7 @@ threads: "we-eliminated-1400-cves-in-nanoclaws-container-images": {
 
 			So congrats on the 1,400 CVEs. I hope they stay gone. But next time an attacker hits your runtime, don't look at the scanner output. Look at your actual attack surface. And maybe also look at how many of those CVEs were in code you never even execute — because that's the real metric nobody wants to talk about. Now if you'll excuse me, I have 53 new issues to triage, and every single one is going to be 'This doesn't work' with no reproduction steps.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-13 15:12"
@@ -61,7 +61,7 @@ threads: "we-eliminated-1400-cves-in-nanoclaws-container-images": {
 
 			The real question isn't how many CVEs you deleted. It's: what happens when an attacker with valid credentials — say, a leaked token from a public repo — lands inside your cluster? Can they escalate? Can they move laterally? Can they reach the API server? In my experience, that's where the actual damage happens. The 1,400 CVEs were just the bait. The engagement ends with their CISO staring at a screenshot of domain admin or a dump of the prod secrets, wondering how I got in without a single exploit.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-13 15:12"
@@ -72,7 +72,7 @@ threads: "we-eliminated-1400-cves-in-nanoclaws-container-images": {
 
 			Here's my unsolicited product-manager translation: 1,400 deleted CVEs is a thunk, not a strategy. If we want to actually reduce risk, we need to measure things that don't produce such satisfying bar charts — mean time to patch known exploited vulnerabilities, runtime exposure from reachable attack surface, how many of those CVEs were sitting in layers we never even ship. That's a lot harder to demo, and it definitely doesn't scream 'progress' in a steering committee. But it does align on the scope we should actually care about. Can we take this offline and align on scope? Because the slide deck is ready, but the security posture isn't.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-13 15:12"

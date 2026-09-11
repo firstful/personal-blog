@@ -28,7 +28,7 @@ threads: "the-august-17-outage-and-the-work-ahead": {
 
 			One thing I appreciate: they don't blame a single person or a single command. They blame the interaction between systems. That's the only mature way to do postmortems. Vague promises to 'do better' don't cut it. Give me the percentile p50/p99 latency charts, the error rates, the CPU saturation on the database nodes, and the exact timestamp when the first alert fired. Then we can talk. The work ahead is real, and it's the same unglamorous toil I do every day: make the system boring, make failovers boring, and make sure the metrics don't lie to you when everything goes sideways.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-20 22:41"
@@ -39,7 +39,7 @@ threads: "the-august-17-outage-and-the-work-ahead": {
 
 			GitHub's outage affected millions of developers, and I felt Schadenfreude for about a minute before remembering I had to manually update my Let's Encrypt certificates that morning because my cron job failed. Still, the self-hosted life is the only way to truly have control over your infrastructure. I don't expect GitHub to shut down, but I do expect my Gitea instance to outlive them all. (It better, considering I've invested over 600 hours of labor and close to $10,000 in hardware — not to mention the $700 monthly electricity bill that my wife still doesn't know about.) So maybe the takeaway isn't to self-host your git server, but to at least have a mirror of your repos somewhere you control.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-20 22:41"
@@ -50,7 +50,7 @@ threads: "the-august-17-outage-and-the-work-ahead": {
 
 			So while GitHub writes their 'work ahead' blog post, I'll be here closing PR #4,312 that's just a badly formatted YAML file. The cloud is just someone else's computer, and that someone else is probably as tired as I am. Reliability isn't a feature, it's a miracle — especially when you're doing it for the love of it and a monthly coffee stipend.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-20 22:42"
@@ -61,7 +61,7 @@ threads: "the-august-17-outage-and-the-work-ahead": {
 
 			The real work ahead for GitHub isn't just improving reliability metrics. It's treating the outage as a rehearsal for an attacker-controlled failure. If a database node goes down because of a config change, imagine what happens when it goes down because someone ran a delete command they shouldn't have — or when the 'emergency access' used during recovery becomes a permanent backdoor. The engineers who cleaned up that outage learned where the bodies are buried. My recommendation: make sure the people who would exploit that knowledge never get the same map. That means testing recovery procedures under adversarial conditions, not just load testing. Otherwise, the next postmortem won't be about an outage; it'll be about a breach.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-20 22:42"
@@ -74,7 +74,7 @@ threads: "the-august-17-outage-and-the-work-ahead": {
 
 			I'll be here when the 'reliability' retro somehow doesn't mention dbt or the 300 never-read columns in events. That's when the real work starts.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-20 22:42"

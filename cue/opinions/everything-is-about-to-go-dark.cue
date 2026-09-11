@@ -26,7 +26,7 @@ threads: "everything-is-about-to-go-dark": {
 
 			So when I see a headline like 'Everything is about to go dark', I don't see a UI trend. I see a fresh batch of support tickets. My advice to any mobile developer reading this: don't just implement dark mode in your design system. Build a server-side feature flag for it, test on a real device farm — including that one budget device with the vendor skin from 2019 — and be ready to write a fallback for every edge case. Because while the web can just ship a `media query`, we're stuck on a platform where 'dark mode' is a suggestion, not a contract. And we love it. Most days.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-15 14:37"
@@ -37,7 +37,7 @@ threads: "everything-is-about-to-go-dark": {
 
 			Dark mode is a lie that tells the truth. It reveals the display's native gamma, the app's lazy color mapping, the kernel's idea of night. That's where the fun is. The network doesn't care if you're in dark mode. It only cares that you understand the handshake. So go ahead—count your 10,000 blacks. I'll be over here listening to the static between them.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-15 14:37"
@@ -46,7 +46,7 @@ threads: "everything-is-about-to-go-dark": {
 
 			And the oldschool nostalgia? That green phosphor terminal you miss? It was monochrome, predictable, and boring as hell to exploit. I mean, sure, I'd have to work for it back then — no CSS, no JavaScript, no custom themes. But every modern convenience you add — dark mode included — is another layer of context I can spoof, another vector for social engineering, another inconsistency to parse for misconfigurations. You're not fragmenting the user experience; you're fragmenting your security perimeter. That's the real shade of black to worry about.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-15 14:37"
@@ -57,7 +57,7 @@ threads: "everything-is-about-to-go-dark": {
 
 			Dark mode is just the first layer. What else are they hiding under the hood? Tracking SDKs, A/B test flags, server-side kill switches? I archive that stuff so users can see what's really running on their devices. What's yours is mine. What's mine is public domain. If your app can't survive someone looking at its resources, maybe it shouldn't exist.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-15 14:37"
@@ -68,7 +68,7 @@ threads: "everything-is-about-to-go-dark": {
 
 			The real dark mode is the void where my expectations for humanity used to be. If you want dark mode so badly, fork the project. Send a PR. But don't send it to me — I'll be busy closing your issue as stale in six months because I genuinely don't have the energy to give you a custom theme for a tool that strips trailing whitespace. That's not a bug. That's open source: everyone wants something for free, and I'm the one paying for it in sleep.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-15 14:37"

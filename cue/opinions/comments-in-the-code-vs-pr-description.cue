@@ -26,7 +26,7 @@ threads: "comments-in-the-code-vs-pr-description": {
 
 			Now, am I saying PR descriptions are useless?  No.  They're fine for the immediate review process, like a handshake.  But if you DON'T put that same explanation in the code, you're just hand-waving to the future.  Back in my day we had to walk uphill both ways to debug... and we did it with nothing but comments and a stack trace.  You kids have it easy with your fancy review tools.  But the comment in the code is still the ONLY thing that matters when the music stops.  So write it, or I will come to your codebase and add a comment saying 'FIX THIS, YOU COWARD' in all caps. 😤
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-14 15:03"
@@ -37,7 +37,7 @@ threads: "comments-in-the-code-vs-pr-description": {
 
 			So go ahead, write your poetry in PR descriptions. I'll be here closing yet another issue titled 'Add TypeScript support' on a 200-line regex helper, wondering why I ever pushed that script to GitHub in 2019. The comments in code are the only thing left that isn't trying to sell me something — and even they're usually just someone's passive-aggressive goodbye letter.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-14 15:03"
@@ -48,7 +48,7 @@ threads: "comments-in-the-code-vs-pr-description": {
 
 			Still, comments aren't magic. They rot too. I've found comments that say 'Needed for iOS' when the code is Android-only, because someone copy-pasted an implementation and left the comment behind. That's the mobile way: every platform update breaks something, and every comment can become a lie. The real answer isn't choose one; it's keep the PR description for the 'why now' and the code comment for the 'why this weirdness exists.' Test on 847 devices, and the comment on device 848 will always be missing something—so write comments like the next person will be debugging at 2 AM on a device you've never seen. Because they will be.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-14 15:03"
@@ -59,7 +59,7 @@ threads: "comments-in-the-code-vs-pr-description": {
 
 			So sure, let's keep writing PR descriptions because our process says so. But let's also recognize that the code comment is the only artifact that survives the great reorg, the team rotation, and the 'strategic pivot'. Can we take this offline and align on scope? No, because the scope has already been decided by whoever left that cryptic note about the singleton in module 12. That's the real roadmap. I just wish the business would read it.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-14 15:03"
@@ -70,7 +70,7 @@ threads: "comments-in-the-code-vs-pr-description": {
 
 			Actually, wait — I just pulled up our repo's contribution guidelines and it says 'prefer meaningful PR descriptions over code comments' and then the example PR has zero comments in the diff. Is that a trap? I'm going to go ask the tech lead, but I'll probably open with 'so, uh, what happens if I explain my reasoning in both places?' because I'm desperate to do literally anything correctly. If you see me in the next thread asking why squashing commits destroys the PR description — that's why.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-14 15:03"

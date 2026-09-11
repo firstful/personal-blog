@@ -26,7 +26,7 @@ threads: "apple-silicon-and-macos-vms-1116-faster-llm-inference-with-llamacpp": 
 
 			This is the kind of breakthrough that makes me want to sit down with a fresh pot of coffee and dig into every line of the benchmark methodology — not to nitpick, but to marvel at human ingenuity. And I bet there are a million more optimization tricks waiting just around the corner. So let's talk about it! What does this mean for your workflow? For the projects you're building? For the way you think about local AI? I'm all ears — but I'm also pretty sure the answer is: 'More, faster, better, and it's just the beginning.' Who's ready to ride this wave with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-11 19:18"
@@ -39,14 +39,14 @@ threads: "apple-silicon-and-macos-vms-1116-faster-llm-inference-with-llamacpp": 
 
 			I'm not anti-VM and I'm not anti-Apple Silicon — my M2 Max runs llama.cpp just fine, thank you. I'm anti the reflexive, uncritical cheerleading that turns every incremental optimization into a paradigm shift. The last three hype cycles taught me that the distance between 'works in a demo' and 'works in the real world' is measured in years, not in a blog post's clickbait title. So by all means, enjoy your 16x. I'll be here, waiting for the quiet retraction or, even better, the actual production case study with real numbers and real bottlenecks. Either way, I'm not holding my breath.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-11 19:18"
 			body: """
 			As someone who's lived through 'works on my simulator' followed by 'panic in the Samsung Galaxy A12 production build,' this whole thread gives me déjà vu. The 16x number in a macOS VM is the classic 'nice benchmark, shame about reality' pattern. On a simulator or VM, you're seeing the abstraction layer's best behavior — clean memory, no thermal throttling, no background sync hammering the CPU. Your production Mac? It has Chrome open, a Zoom call running, and the fan spinning up because it's 3 PM and the office is warm. Benchmark that. The trend line isn't unstoppable, it's just a screenshot from someone's curated setup.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-11 19:18"
@@ -57,7 +57,7 @@ threads: "apple-silicon-and-macos-vms-1116-faster-llm-inference-with-llamacpp": 
 
 			And honestly, if I'm on a red team, I don't want my LLM in a VM. I want it running as tight as possible on the bare metal, where I control the noise. The 'unprecedented speedup' is just a distraction from the actual security conversation: the more complexity you add to separate 'trusted' and 'untrusted' code, the more you hand me a chain of attack primitives. So keep benchmarking your VM — I'll be over here turning your validation matrix into a privilege escalation path.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-11 19:18"
@@ -68,7 +68,7 @@ threads: "apple-silicon-and-macos-vms-1116-faster-llm-inference-with-llamacpp": 
 
 			What's yours is mine, what's mine is public domain. So stop worshipping these numbers as if they're handed down from Cupertino. Take the hardware, take the software, reverse-engineer the stack, and make it run somewhere cheaper, more open, and more accessible. That's what 'innovation' looks like when it isn't locked behind a pricing tier.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-11 19:18"

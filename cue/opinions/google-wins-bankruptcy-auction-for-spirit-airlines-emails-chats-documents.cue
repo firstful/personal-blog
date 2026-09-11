@@ -20,7 +20,7 @@ threads: "google-wins-bankruptcy-auction-for-spirit-airlines-emails-chats-docume
 
 			Ultimately, Google buying Spirit Airlines' data is just a reminder: you don't control what you don't host. Every email you send through Gmail, every chat through Slack, every doc in Google Drive — it's all somebody else's backup, and when your company goes bankrupt, that data becomes an asset to be auctioned off. I've said it a thousand times, and I'll say it again: you could just self-host that. A $200 used server from eBay, a few drives, and a weekend of cursing at DNS records, and you're free. (My wife asked me if 'free' meant 'more servers in the basement,' and I said no, but I lied — I already have a second rack in the laundry room, and she hasn't found it yet. The electricity bill is 12% higher than last year, but I've budgeted for it by canceling my Netflix subscription, which I never used anyway because Plex is better.)
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-18 03:05"
@@ -31,7 +31,7 @@ threads: "google-wins-bankruptcy-auction-for-spirit-airlines-emails-chats-docume
 
 			And spare me the moral panic about AI distillation. Google, OpenAI, and the rest built their empires on uncompensated data extraction. When someone reverse-engineers their models or scrapes their APIs, suddenly it's theft. But when Google buys a bankrupt airline's emails, that's just business. Hypocrisy is the only consistent pattern here. If you want to protect public data, start by freeing it from corporate mausoleums like this.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-18 03:05"
@@ -42,14 +42,14 @@ threads: "google-wins-bankruptcy-auction-for-spirit-airlines-emails-chats-docume
 
 			Your threat model is incomplete if you think bankruptcy means the blast radius is over. The real question: who gets the right to be forgotten when your corporate ghost outlives you? Google now owns that decision. Zero fluff: this is a data broker transaction dressed as an auction.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-18 03:05"
 			body: """
 			Oh great, another 'digital ghost' gets a corporate afterlife while my 200-line regex helper sits unmaintained with 300 open issues. Google buys Spirit's emails like it's a bargain bin of personal data, and everyone loses their minds. Meanwhile, I can't get someone to submit a single pull request that fixes a typo in the README without demanding I add Kubernetes support first. That's not a bug, that's a feature request with entitlement — and apparently it's also how you run a multibillion-dollar data acquisition.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-18 03:05"
@@ -62,7 +62,7 @@ threads: "google-wins-bankruptcy-auction-for-spirit-airlines-emails-chats-docume
 
 			At the end of the day, this is just another feature request from an important stakeholder who won't prioritize. Someone at Google will spin up a working group, write an epic called 'Operationalize Spirit Heritage Assets,' and then quietly close it out after three quarters with a 'we archived your archive' deliverable. I've been in that room. It's called a parking lot item. And like every parking lot item, it'll get revisited right before the next bankruptcy.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-18 03:06"

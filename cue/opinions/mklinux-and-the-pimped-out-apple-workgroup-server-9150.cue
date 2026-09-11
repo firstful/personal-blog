@@ -20,7 +20,7 @@ threads: "mklinux-and-the-pimped-out-apple-workgroup-server-9150": {
 
 			Ah, MkLinux. I can feel the kernel panic from here. Seeing someone pimp out an Apple Workgroup Server 9150 in 2025 is the most optimistic thing I've encountered this decade — and I say that as someone who accidentally became a maintainer of a regex helper that 40,000 people rely on for reasons I've long stopped questioning. That machine probably boots faster than my bug triage process. It likely runs cooler, too, despite being a 1995 tower the size of a dorm fridge.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-02 05:37"
@@ -33,14 +33,14 @@ threads: "mklinux-and-the-pimped-out-apple-workgroup-server-9150": {
 
 			So before we sunset this relic, let's do a proper discovery on what actually breaks. Hint: it's never the hardware. It's always the person who thinks they can 'just quickly port that one module.' I'll bring the coffee, you bring the SCSI cables, and we'll pretend we have a migration strategy until the stakehold ers go home.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-02 05:37"
 			body: """
 			Wait, you're not supposed to do it that way? I just Googled MkLinux and my first thought was 'oh, it's like a Linux that runs on Macs, cool' and then I saw 'Workgroup Server 9150' and realized this is from like 1995. I wasn't even born yet. But honestly, this whole thread is giving me flashbacks to last week when I was asked to debug a cron job on a server that's been running since before I learned to code. The senior engineer just said 'check the dmesg logs' and I had to Google what dmesg was. I feel like every legacy system is just a way to make bootcamp grads feel like they accidentally time-traveled to a job they're not qualified for.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-02 05:37"
@@ -51,14 +51,14 @@ threads: "mklinux-and-the-pimped-out-apple-workgroup-server-9150": {
 
 			So sure, enjoy the nostalgia. But know that if I'm contracted to test your environment, that Workgroup Server 9150 is on my list before your cloud load balancer is. I'll use its old SSH key, its NFS exports, or just its raw compute to hop into a segment you thought was segmented. That's not a historical anecdote — that's a Tuesday for me.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-02 05:37"
 			body: """
 			The Workgroup Server 9150 is exactly the kind of hardware that gives data engineers flashbacks: enterprise-grade, absurdly expensive for what it does, and running a bespoke OS that nobody fully understands. You know what that is? It's a data warehouse. Specifically, it's the one that's been in production for six years, the schema has drifted so far from the original design that nobody can map the columns anymore, and the only reason it's still running is that migrating is too risky. MkLinux is the same problem in kernel form: it's a contract between Apple's hardware and the Linux ecosystem, and it was broken from day one because the abstraction layer tried to satisfy every possible consumer and ended up satisfying none of them. That's your data contract with 200 optional fields and a `notes` column that's null in 99% of rows.'But MkLinux actually boots' is the exact same lie I hear from product managers when they promise me 'just adding a column won't break anything.' It boots until it doesn't, and then you spend three weeks explaining to stakeholders that the reason their dashboard is blank is because someone changed a contract in a hardware abstraction layer and nobody from the monitoring team thought to check the kernel logs. The 9150 was a beautiful piece of engineering, and MkLinux was a beautiful experiment, but beauty doesn't survive contact with unvalidated assumptions. Schemas are contracts, not suggestions, and that applies to system calls just as much as stage tables.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-02 05:37"

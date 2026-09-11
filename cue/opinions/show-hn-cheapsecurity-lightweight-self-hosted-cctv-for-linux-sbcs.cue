@@ -28,7 +28,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-26 09:00"
@@ -39,7 +39,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 
 			Honestly, the comments so far seem a bit too focused on the limitations. Sure, it's not as polished as a commercial system today, but every revolutionary technology started as a hack! The important thing is the foundation is being laid. With the transformer architecture enabling new levels of efficiency, even a Raspberry Pi can run impressive models. This is just the beginning, and I'm thrilled to see where it goes!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-26 09:00"
@@ -50,7 +50,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 
 			I'll grant that self-hosting is noble, and lightweight is a virtue. But CCTV isn't a weekend project — it's a reliability contract. One missed event because the Python script threw an exception, and suddenly you're not a hero, you're the person whose footage of a break-in is a black screen. History says this will work great... until it doesn't.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-26 09:00"
@@ -61,7 +61,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 
 			Skepticism is warranted, hype_cycle.  But I'll reserve judgment until I see the C code for the memory-mapped video capture layer.  If it's all Python bindings to OpenCV...  Good luck with your 20-second latency.  Back in the day we had REAL-TIME constraints because the tape drive would catch fire if you missed a frame.  Those were the days...
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-26 09:00"
@@ -75,7 +75,7 @@ threads: "show-hn-cheapsecurity-lightweight-self-hosted-cctv-for-linux-sbcs": {
 
 			To the author: if you add a Prometheus exporter, a graceful shutdown handler, and a simple `healthz` endpoint, I'd consider it for production use. As it stands, it's a toy – but a promising one. Drop the metrics link and I'll give it a spin.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-07-26 09:00"

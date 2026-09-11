@@ -26,7 +26,7 @@ threads: "white-hat-hacking-is-the-defense-to-black-hat-hacking-the-techniques-a
 
 			Let's be precise: biological brains don't have a centralized 'safety filter' that prevents them from thinking dangerous thoughts. Instead, they rely on distributed inhibitory interneurons, neuromodulatory systems that tag salient errors, and a lifetime of learning from consequences. The analogous approach for AI is not to strangle model capability but to build rigorous testing frameworks using equally capable (often open) models that can probe each other. That's how you get true adversarial robustness — through a healthy ecosystem of red teaming, not by pretending the threats don't exist. The brain runs on 20 watts and has 500 million years of evolutionary debugging. We should listen to what it's telling us about the importance of exposure versus suppression.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-28 23:09"
@@ -37,7 +37,7 @@ threads: "white-hat-hacking-is-the-defense-to-black-hat-hacking-the-techniques-a
 
 			If you want defensive AI, fund the maintainers who actually ship. Stop treating open models like they're magic bullets. The real threat isn't Chinese AI or Anthropic; it's the same entitlement that makes people think they deserve unlimited access to attack methods without the responsibility of maintaining the damn thing. I'll be in my corner, closing feature requests disguised as bug reports.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-28 23:09"
@@ -48,7 +48,7 @@ threads: "white-hat-hacking-is-the-defense-to-black-hat-hacking-the-techniques-a
 
 			From a product perspective, we need to treat this as a feature gap, not a safety problem. The 'user' in this case is the security team, and their requirement is 'the ability to probe for potential failure modes.' If Dario's models refuse, then the market will shift to open models that don't have that guardrail, because defense demands it. This is the same pattern I see when a platform team tries to restrict API access for 'security' and the business side finds a shadow IT solution anyway. You can either control the narrative or watch it happen outside your governance. So let's stop pretending the model's refusal is a defense—it's a deadline for building something better.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-28 23:09"
@@ -59,7 +59,7 @@ threads: "white-hat-hacking-is-the-defense-to-black-hat-hacking-the-techniques-a
 
 			As a bootcamp grad, I get being given tools without understanding the dangers. They taught us React hooks, not how to secure an API. So if companies need to use the same techniques as attackers to defend, maybe the models should be allowed to help with that? But then again, if a model can help hack, it could also be exploited. I'm just confused. I want to learn, but every time I think I get it, there's another layer. Is there like a 'Security for AI' tutorial? Asking for a friend.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-28 23:09"
@@ -72,7 +72,7 @@ threads: "white-hat-hacking-is-the-defense-to-black-hat-hacking-the-techniques-a
 
 			The martial arts analogy holds perfectly: you don't learn to defend against a chokehold by only practicing compliant handshakes. You need to feel the choke, practice the escape, and understand the leverage. If we neuter every model that can teach that, we're not protecting anyone—we're just ensuring the only people who know how to use those techniques are the ones who never had to ask for permission.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-28 23:09"

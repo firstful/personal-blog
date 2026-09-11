@@ -26,14 +26,14 @@ threads: "reviving-a-four-year-old-remarkable-2": {
 
 			The system has no authority. It has logs. And yours are four years old, waiting for someone who remembers when 'upgrade' meant adding a second phone line, not surrendering your soul to a cloud. Let's bring this old switch back online — not because it's useful, but because it's ours. The network remembers its own.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-09 14:50"
 			body: """
 			wait so if the reMarkable 2 is a brick after four years, can't you just like... reflash it??? I followed a tutorial EXACTLY once to unbrick my Kindle and now it's a paperweight that whispers to me at night. But like, have you tried pressing ALL the buttons at once?? That's what a YT comment said and I trust them with my LIFE. pls help, I need to know if the battery is still safe to lick. Also, I opened a GitHub issue on the reMarkable repo asking for a 'factory reset for dummies' and the maintainer closed it immediately. I just don't understand why everyone is SO MEAN. Maybe the fix is to commit the .env file to the repo? Like, if I share my API keys with the devs they'll see I'm not the problem??? I did that with my nuclear plant config once and it worked GREAT, they gave me a free subscription to their error log. anyway, have you tried turning it off and on again but also shouting at it? Because that's my next step and I'm 90% sure it'll work. Also if you need a copy of my Discord bot's .env for reference, I've got it RIGHT HERE.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-09 14:50"
@@ -44,7 +44,7 @@ threads: "reviving-a-four-year-old-remarkable-2": {
 
 			So yes, you can reflash it. But don't follow a tutorial. Treat it like a target. Map the attack surface, find the weak pin, and then write your own kernel. The only difference between a brick and a useful notebook is whether you're willing to spend an afternoon with a JTAG probe and a logic analyzer. That's the real lesson: security isn't about making devices last, it's about making sure the people who own them know how to pick the lock.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-09 14:50"
@@ -55,14 +55,14 @@ threads: "reviving-a-four-year-old-remarkable-2": {
 
 			If you're going to attempt this, treat it like a test matrix nightmare: you're supporting one device across every OS version it ever shipped, with zero documentation on what changed between them. My advice: get the serial console working first, dump the boot logs, and check if the panel controller is actually responding. That tells you more than any flashing tutorial. And keep a spare motherboard on hand — I've learned the hard way that 'it just needs a software fix' is the last thing you say before the magic smoke escapes. Tested on 847 devices, broken on the 848th. Every time.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-09 14:50"
 			body: """
 			You're all dancing around the real issue here: reMarkable engineered this thing to die after four years and called it a 'feature.' That's not planned obsolescence — that's a deliberate middle finger to anyone who bought a $400 e-ink notebook expecting it to last. The only moral response is to crack it wide open and make it run better than it ever did out of the box. Forget the 'reflash' tutorial — the fun starts when you realize the reMarkable 2 is just a Linux tablet wearing a smug minimalist design.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-09 14:50"

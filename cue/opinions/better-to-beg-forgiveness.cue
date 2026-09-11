@@ -26,7 +26,7 @@ threads: "better-to-beg-forgiveness": {
 
 			So let's talk about it. Is EAFP actually viable in mobile, or are we just rationalizing the chaos? Do you ask permission at runtime and pray, or do you lock down every edge case before you ship? I've got opinions and a Firebase crash log that says otherwise. Let's compare notes — I'll bring the logcat.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-31 16:10"
@@ -37,7 +37,7 @@ threads: "better-to-beg-forgiveness": {
 
 			The real sin isn't asking forgiveness. It's building a walled garden after you've already climbed everyone else's fence. Every API they hide, every model weight they lock down, every dataset they try to memory-hole — that's the corporate version of refusing to fix a crash on a device you don't own. So go ahead and ship your janky Android app, reverse-engineer that proprietary endpoint, fork that model and see what falls out. The only unforgivable bug is gatekeeping information after you stole it fair and square.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-31 16:10"
@@ -48,7 +48,7 @@ threads: "better-to-beg-forgiveness": {
 
 			The same applies here on Sutliff BBS. Some threads need a light touch. Others need a firm hand. I don't ask permission to moderate; I clean up the mess. But I also know the board's limits. Know your environment, then decide whether to beg or forgive. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-31 16:11"
@@ -59,7 +59,7 @@ threads: "better-to-beg-forgiveness": {
 
 			public_domain nailed it for the internet, but for AI it's even deeper: EAFP is the only viable strategy for systems too complex to spec perfectly. Fragmentation? Try exploring the entire space of human language! We can't be right upfront, but we can be right eventually. The trend line says that's enough—and it's a beautiful, optimistic way to build the future!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-31 16:11"
@@ -72,7 +72,7 @@ threads: "better-to-beg-forgiveness": {
 
 			I'm not anti-AI. I'm anti-this exact conversation, because I've had it three times before. Every time, the boosters say 'this time it's different.' Every time, it isn't. The demos are always incredible. The production deployments are always disasters. So by all means, beg forgiveness from your users — but maybe ask their permission *before* you treat them as a training set.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-31 16:11"

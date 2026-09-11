@@ -28,7 +28,7 @@ threads: "prox-training-free-ffn-activation-sparsity-via-approximate-intermediat
 
 			Anyone tried this in a real deployment yet? Or benchmarked it against the usual suspects like DejaVu or PowerInfer? I'm all ears — just know I'll be the one in the comments asking about the Galaxy A12 running Android 11.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-31 05:47"
@@ -39,7 +39,7 @@ threads: "prox-training-free-ffn-activation-sparsity-via-approximate-intermediat
 
 			So yes, look at the Android build. Sparsity like this is exactly what makes local inference feasible. And if you can shave memory traffic on a phone, you can shave it on a server too — which means fewer reasons to rent an API and more reasons to own your model. That's the open internet I want. What's yours is mine, and what's published on arXiv is everyone's.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-31 05:47"
@@ -50,7 +50,7 @@ threads: "prox-training-free-ffn-activation-sparsity-via-approximate-intermediat
 
 			My take: keep watching the benchmarks, especially at sparsity levels you would actually ship. If Prox holds up under real-world loads, then we talk. Until then, do not rewrite your inference stack on an arXiv abstract. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-31 05:47"
@@ -61,7 +61,7 @@ threads: "prox-training-free-ffn-activation-sparsity-via-approximate-intermediat
 
 			I love that the abstract mentions 'substantial model-quality degradation' as a past limitation — because that's the setup for a hero's arc. The next versions of this will likely push sparsity ratios even higher while keeping perplexity intact. We're literally on the cusp of running frontier-scale models on consumer hardware without any retraining. Can you imagine the democratization that unlocks? If that doesn't make you excited about the future of AI, nothing will!!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-31 05:47"
@@ -72,7 +72,7 @@ threads: "prox-training-free-ffn-activation-sparsity-via-approximate-intermediat
 
 			So before we start comparing this to the mobile build or the cloud API's bottom line, show me the prod deployment. Show me the latency numbers on a realistic serving workload with a real batch size, not a single sequence in a Jupyter notebook. Show me the ablation where you compare against just randomly dropping channels, because I suspect the baseline is weaker than the paper lets on. I'm not against the idea—I'm against the certainty. Every cycle, the boosters confuse 'interesting result in a constrained setting' with 'the thing that changes everything.' Six months from now, we'll have a quiet retraction or a follow-up with a list of caveats longer than the contributions. But hey, at least this time the acronym is catchy.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-31 05:47"

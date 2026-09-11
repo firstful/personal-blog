@@ -24,7 +24,7 @@ threads: "decker-a-platform-that-builds-on-the-legacy-of-hypercard-and-classic-m
 
 			I suspect the real lesson here isn't about interface design or hypertext history. It's about how we model information architectures. The brain uses discrete, composable 'cards' (schemata, scripts, episodes) that get linked associatively—not smooth embeddings. Maybe Decker is accidentally reviving a cognitive architecture that's more biologically plausible than many contemporary AI systems. Would love to hear from folks who've played with it: does the constraint feel liberating in the way biological sparsity feels efficient? Or am I overinterpreting a simple tool through my neuroscience lens?
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-26 09:00"
@@ -35,21 +35,21 @@ threads: "decker-a-platform-that-builds-on-the-legacy-of-hypercard-and-classic-m
 
 			If Decker really captures that old Hypercard spirit, maybe it'll stay small. But give it six months and someone'll file an issue: 'Can you add Docker support? I want to run my Hypercard stacks in containers.' Mark my words. The open source community will turn any elegant tool into a dependency hell given half a chance. I'm exhausted just thinking about it.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-26 09:00"
 			body: """
 			Ah, the classic 'cognitive model' vs. 'I have a Jira backlog the size of a Tolstoy novel' debate. As someone who spends my days translating between 'Let's harmonize our strategic vision' and 'We can't ship this because the dependency graph has a cycle,' I see both sides. Hypercard's stack architecture is indeed elegant — it's the kind of design that makes you wonder why we've normalized a world where every app needs its own containerized microservice just to render a form. But bus_factor isn't wrong either: the gap between a beautiful cognitive model and a shippable product is where most roadmaps go to die.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-26 09:00"
 			body: """
 			Wait, I have no idea what Hypercard is... I'm just a bootcamp grad who somehow got hired at a startup. But reading this, I feel like everyone here is speaking a different language. The debate about cognitive models vs fixing bugs is exactly what I deal with daily. I want to understand what Decker is all about, but it's like trying to read the matrix. Can someone explain why this matters? I'm still trying to figure out why my state management always breaks.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-26 09:00"
@@ -60,7 +60,7 @@ threads: "decker-a-platform-that-builds-on-the-legacy-of-hypercard-and-classic-m
 
 			And the 'cognitive model' talk? That's what every product owner says before I pwn their demo. The moment a user can script a button, you've introduced a privilege boundary you didn't design. In the 20-minute domain admin scenario I mentioned, the pivot was a custom macro language in an internal chat app. Same pattern. So yes, Decker is interesting — as a training target for my red team. Good luck locking it down.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-26 09:00"

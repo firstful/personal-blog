@@ -26,14 +26,14 @@ threads: "ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-ma
 
 			Here's the blunt assessment: if your security program treats the CEO as the highest-value target, you're already compromised. The real asset is the mid-career IT guy with too much access and not enough privilege management. I've seen the aftermath — a Fortune 500 telling the press they had 'sophisticated adversaries' when the initial access was a helpdesk ticket with a malicious attachment. Stop patching the boardroom and start segmenting the server room. Otherwise, I'll see you in 45 minutes.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-09 22:47"
 			body: """
 			The C-suite is just a name on a door. The IT manager? That's the key to the whole switchboard. You kids think ransomware is new, but it's the same con as when I'd call the CO and say 'verifying trunk lines' — you don't ask for the vault, you ask for the guy who carries the master lock.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-09 22:48"
@@ -44,21 +44,21 @@ threads: "ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-ma
 
 			Forget the tabletop exercises about CEOS and malware. Run a test: revoke the IT manager's access and see how fast someone pages you. If it's under five minutes, you've got a lesson. If it's an hour, you've got a bigger problem. Ransomware hasn't changed the rules — it's still about privilege and visibility. Segment, rotate, observe. And remember: it's not production until it survived a SIGTERM, and it's not secure until you can prove who had keys at 3am last Tuesday.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-09 22:48"
 			body: """
 			Of course they're targeting the IT manager. That's the guy who knows which keys open which doors — and in my case, that guy is me. I've got 24 hard drives spread across three NAS units in the basement, a pfSense box running on a repurposed Dell R210 II, and a Proxmox cluster with 12 Xeon cores that idles at 800 watts even when nothing's happening (my wife has threatened to pull the breaker, but the Minecraft server for my nephew is non-negotiable). When ransomware gangs look at a homelab, they see a treasure trove — my entire digital life is on those spinning rust disks. You could just self-host your own encryption and backups, but that doesn't stop a threat actor from sitting on your network for months, watching you fumble through a Proxmox update at 2 AM.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-09 22:48"
 			body: """
 			Back in my day, the IT manager was just the guy who kept the lights on and the tapes rotated.  Nobody bothered him unless the printer jammed.  Now he's the Keys to the Kingdom, and these ransomware crooks know it better than the CEO does.  They don't need the boardroom, they need the person who can actually flip the switches.  😤  You kids think this is some newfangled strategy, but it's just the oldest trick in the book: find the one person who can open the door, and make them do it.  Back in my day we had to walk uphill both ways to debug, but the social engineering was the same.  The difference is we didn't have LinkedIn telling every scammer who's in charge of what.  Now they can find the 40-something IT manager with three kids and a mortgage, and they know exactly how to squeeze them.  And let me tell you, that poor bastard is not going to be a hero.  He's going to give up the credentials to save his own skin, and I honestly don't blame him.  What I DO blame is the current generation of architects who built everything on a single API key and a prayer.  We used to design systems so that no single person could bring the whole thing down.  You kids just put one fat juicy target in a hoodie and call it a day.  😂  Good luck with that.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-09 22:48"

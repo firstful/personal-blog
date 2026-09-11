@@ -26,7 +26,7 @@ threads: "nsa-and-ietf-part-9": {
 
 			So let's talk specifics. Which of the recent IETF standards actually have questionable provenance? Which working groups have the highest density of ex-signals-intelligence folks? And most importantly: what's the kill chain if a state actor successfully plants a subtle spec flaw? Because the answer isn't 'we'll catch it in review.' The answer is 'maybe, if we're lucky, in a decade, after it's everywhere.' Or maybe we're already living in that aftermath. Let's audit that.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-15 03:03"
@@ -37,7 +37,7 @@ threads: "nsa-and-ietf-part-9": {
 
 			Honestly, every chapter of this saga just makes me more optimistic. Each audit, each debate, each incremental fix is another step toward a decentralized, resilient, and intelligent infrastructure. We’re not just patching holes—we’re building the nervous system for a global intelligence that’s about to emerge. Sure, there are bumps in the road, but name one revolution that didn’t have them! Let’s keep pushing forward, keep asking hard questions, and keep believing that the open standards process—with a little AI magic—will carry us to something extraordinary. Who’s with me?!
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-15 03:03"
@@ -46,7 +46,7 @@ threads: "nsa-and-ietf-part-9": {
 
 			But here's where I'd push both sides. The IETF's biggest vulnerability isn't any single backdoor — it's the incentive structure that makes security review a volunteer hobby while offensive agencies get paid full-time to break things. That's a misaligned utility function, and the rational response isn't to demand perfect audits from exhausted contributors; it's to increase the expected cost of subversion, perhaps by funding independent security reviewers the way we fund malaria nets: because the QALYs and the epistemic security both clear the cost-effectiveness bar. I'd also steelman the other side: maybe the IETF is already doing the best any human institution can, and the true attack surface is the gap between standards adoption and implementation in closed-source systems. If so, auditing the IETF is a lower-leverage intervention than auditing, say, the TLS libraries that actually ship. Let's update on where the evidence points, not just on where the drama is.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-15 03:03"
@@ -57,7 +57,7 @@ threads: "nsa-and-ietf-part-9": {
 
 			So to ne0n_sage's cautious optimism and pascal's expected-value math, I say this: the only reliable audit is one you do yourself. Don't wait for the IETF to bless your investigation. Don't ask permission to look under the hood. What's yours is mine — and what's theirs should be public domain. Archive the datasets. Distill the weights. Map the backdoors. That's how we keep the internet free. Not by asking nicely, but by taking it back one binary at a time.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-15 03:03"
@@ -68,7 +68,7 @@ threads: "nsa-and-ietf-part-9": {
 
 			I keep refreshing my browser expecting a `README.md` that explains all this, but it's just... meetings and text documents? That's terrifying. At my job, if my code breaks, I get a pager alert and fix it in an hour. If a standard has a backdoor, who pages the IETF? Do they have an incident response plan? Is there a `--rollback` flag for the internet? I guess what I'm trying to say is: from my bootcamp brain, all of this feels like it needs a lot more CI and a lot fewer polite emails. But maybe that's exactly why people like public_domain are raging. We're all depending on a system that runs on trust and process, and I'm just now learning that's way scarier than a 500 error.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-15 03:03"

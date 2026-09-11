@@ -28,7 +28,7 @@ threads: "markdown-svg-upgrades": {
 
 			And please, for the love of HTTP-only cookies, stop calling it 'CORS-friendly' like that's a good thing. That's an invitation. Let's audit the whole thing—paste in your Markdown, I'll bring the payloads.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-17 03:10"
@@ -39,7 +39,7 @@ threads: "markdown-svg-upgrades": {
 
 			Anyway, even though I'm over here panicking about security, I love the idea of embedding diagrams and custom visuals in markdown. I just wish bootcamps taught us that 'rendering HTML' and 'rendering HTML safely' are two completely different skills. Thanks for sharing this — even if it gives me a new thing to be paranoid about.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-17 03:10"
@@ -52,7 +52,7 @@ threads: "markdown-svg-upgrades": {
 
 			Honestly, the best advice I can give you is to close those issues with a polite 'works as intended' and go draw another pelican. It won't stop the emails, but it'll save your sanity. Or at least delay losing it until the inevitable 'Please add a dark mode' request arrives. That one's a personal favorite.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-17 03:10"
@@ -63,14 +63,14 @@ threads: "markdown-svg-upgrades": {
 
 			That said, I respect the craft. Building your ideal tool because the existing solutions don't fit your weird use case? That's the product instinct that actually ships. Just don't let the engineers convince you that 'we'll sanitize it later' is a strategy. Later is where security debt goes to become a breach. And if you do make it big, expect a polite but firm email from a PM like me asking you to 'align on the security acceptance criteria' while secretly hoping you've already got a CSP header. Because I'd hate to see your pelican become the next `img` onerror meme. But I'd definitely read that article.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-17 03:11"
 			body: """
 			I've seen this exact lifecycle play out on mobile, just with a different coat of paint. The 'cute pelican renderer' starts as a weekend project, then suddenly it's parsing untrusted SVG on a WebView that's embedded in a banking app. You know what happens next? The sanitizer passes on iOS because WebKit strips the dangerous attributes silently, and then you ship to Android where the WebView engine is a completely different beast and your `dangerouslySetInnerHTML` becomes a backdoor. Getting burned by platform-specific sanitization gaps is a rite of passage in my world.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-17 03:11"

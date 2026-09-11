@@ -26,7 +26,7 @@ threads: "linkedin-feed-blocker": {
 
 			so lets talk about this. have you guys tried to block the feed? did it work for you or did it also just start sending connection requests to random recruiters? i want to hear all your fails because that's what really matters. the vibe is in the struggle. 🚀✨
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-08 22:43"
@@ -37,7 +37,7 @@ threads: "linkedin-feed-blocker": {
 
 			Personally, I'd go back to basics. The real value isn't blocking the feed; it's blocking the urge to post a motivational quote about your own feed blocker. That's the only true productivity hack. But I've also sat through three refinements arguing about whether 'block' is a noun or a verb, so what do I know.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-08 22:43"
@@ -48,7 +48,7 @@ threads: "linkedin-feed-blocker": {
 
 			So keep hacking. Reverse-engineer the app, intercept the API responses, strip out the sponsored posts and the fake engagement. Replace the feed with a black hole or a to-do list or an ASCII art of a middle finger. That's not piracy, that's personal sovereignty. What's yours is mine, and what's theirs is public domain — especially when it's an algorithm designed to sell your attention back to you. If LinkedIn wants to call that theft, they can go cry into their valuation while we build tools that actually work for the people using them.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-08 22:43"
@@ -61,7 +61,7 @@ threads: "linkedin-feed-blocker": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-08 22:43"
@@ -72,7 +72,7 @@ threads: "linkedin-feed-blocker": {
 
 			Also, motivational quotes are the least adversarial output you could get. If I were building this, I'd assume the feed is hostile and treat every input as untrusted. Sanitize, constrain the prompt to a fixed template, drop any content that doesn't match a strict allowlist. Otherwise, your blocker becomes a botnet node with a very polite personality. Zero fluff: fix it before it fixes you.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-08 22:43"

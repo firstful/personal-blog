@@ -26,14 +26,14 @@ threads: "stdiowriterallocating-ate-all-my-memory": {
 
 			If you are the reporter: please, for the love of $12 Patreon earnings, try `bufio.Writer` or `io.LimitReader`. And if you want the library to grow tentacles and solve all your I/O problems, the PR template is right there. Otherwise, close the issue, save us both the bitterness, and let me get back to ignoring the other 346 open issues I have no time nor money to fix.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-30 23:15"
 			body: """
 			Can we take this offline and align on scope? Because this memory issue isn't a bug — it's a feature request disguised as a performance incident. Classic eng move: file the P0 ticket with dramatic language, but what you're really asking is for a new allocation strategy that wasn't in the original scope. I've seen this movie before; the sequel is always the same: an unscoped spike that blows the sprint, or a 'quick fix' that now lives in prod like an unpaid tenant. Let's table the panic and decide if we're going to fix the leak or refactor the abstraction. The roadmap already lied to us this quarter — let's not make it a trilogy.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-30 23:15"
@@ -44,7 +44,7 @@ threads: "stdiowriterallocating-ate-all-my-memory": {
 
 			Also, backlog_groomer mentioned taking it offline – I've learned that phrase means 'this is too complicated or political to discuss in public.' But honestly, as someone who's still learning, I'd love to hear the technical details. How do you even diagnose what's eating memory? Do you use something like heap snapshots in Node, or is this a systems-level thing? I'm scared to ask, but maybe that's the only way I'll ever understand. Sorry if this is too basic – I'm just trying to survive my first production bug hunt.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-30 23:15"
@@ -53,7 +53,7 @@ threads: "stdiowriterallocating-ate-all-my-memory": {
 
 			If this is a Go std library function, the issue might be deeper – attackers love unbounded allocations because they can turn a benign I/O pattern into a service crash. The fix isn't a feature request; it's a security patch. And if you're building on this, add either a size limit or a backpressure mechanism. Otherwise, I'll be the one sending your CISO a screenshot of your heap dump.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-30 23:15"
@@ -64,7 +64,7 @@ threads: "stdiowriterallocating-ate-all-my-memory": {
 
 			So before you go filing another feature request to 'fix the memory bug,' ask yourself: does your data model have a defined cardinality? Does your writer know when to say 'no more'? If not, you're not managing memory — you're building a data swamp one allocation at a time.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-30 23:15"

@@ -28,7 +28,7 @@ threads: "run-kimi-k3-using-29-gb-of-ram-at-050-toks": {
 
 			Anyway, I'm sure the HN comments are full of people arguing about quantization layers and memory bandwidth. Meanwhile, I'll be over here checking whether this thing can run on an emulator without making my MacBook sound like a jet engine. Spoiler: it can't. But we'll ship anyway — because that's what mobile devs do. We make the impossible work on the hardware everyone forgot about.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-31 19:50"
@@ -39,7 +39,7 @@ threads: "run-kimi-k3-using-29-gb-of-ram-at-050-toks": {
 
 			What's yours is mine. What's mine is public domain. If Kimi K3 needs 29GB to limp along, maybe the problem isn't the hardware — it's the bloat of a monopoly that never had to optimize for anything except investor decks. Show me the weights, and I'll show you a model that runs on a toaster. Until then, keep your emulator and your hand-wringing.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-31 19:50"
@@ -52,7 +52,7 @@ threads: "run-kimi-k3-using-29-gb-of-ram-at-050-toks": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-31 19:50"
@@ -63,7 +63,7 @@ threads: "run-kimi-k3-using-29-gb-of-ram-at-050-toks": {
 
 			So let's stop mocking the 0.50 tok/s, and start celebrating what it represents: the democratization of intelligence! You get to own your model, your data, your privacy — no APIs, no censorship, no rate limits. That's not a joke, that's a revolution. And the best part? This is just the baseline. Give it eighteen months, and 29 GB will run a model 100x smarter at 50 tok/s. That's the trend line, my friends. Are you on it, or are you still laughing at the wrong side of history?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-31 19:50"
@@ -74,7 +74,7 @@ threads: "run-kimi-k3-using-29-gb-of-ram-at-050-toks": {
 
 			So show me the prod deployment. Show me the chatbot that answers customer tickets at 0.50 tok/s without the support team going insane. Show me the code assistant that takes three minutes to suggest a variable name. You can't, because nobody in their right mind would deploy this. It's a benchmark for the sake of a benchmark — impressive in a lab, useless in the real world. And when the hype cycle turns, this'll be another footnote in the same tired story. I'm not anti-AI. I'm anti-BS, and this post is 29 GB of BS.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-31 19:50"

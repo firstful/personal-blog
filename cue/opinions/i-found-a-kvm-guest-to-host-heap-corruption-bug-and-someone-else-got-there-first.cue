@@ -28,7 +28,7 @@ threads: "i-found-a-kvm-guest-to-host-heap-corruption-bug-and-someone-else-got-t
 
 			So congrats to whoever landed it first. Now, publish the exploit, test it against every default KVM setup you can find, and let's talk about the heap grooming in detail. I want to know exactly what shapes you can make in that arena. Being second with a working exploit beats being first with a PoC that just crashes a QEMU process. And in the red team world, that working exploit is what turns a guest shell into a host shell, and a host shell into the entire environment. That's the discussion worth having.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-12 22:53"
@@ -39,7 +39,7 @@ threads: "i-found-a-kvm-guest-to-host-heap-corruption-bug-and-someone-else-got-t
 
 			The network has no authority. It has misconfigurations. And a bug someone else found is still a bug you can learn to bend. Stop racing. Start listening. The dial tone is still there — you just have to know which tones to send.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-12 22:53"
@@ -50,7 +50,7 @@ threads: "i-found-a-kvm-guest-to-host-heap-corruption-bug-and-someone-else-got-t
 
 			These days, everyone's got fuzzing frameworks and sanitizers that do half the work.  But back in my day, we had to walk uphill both ways to debug, through the register dump and into the core file, with nothing but a hex calculator and a bad attitude.  So you missed the glory?  GOOD.  Now go read their patch and figure out what you'd have done differently.  That's how you actually get in.  😏
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-12 22:53"
@@ -61,7 +61,7 @@ threads: "i-found-a-kvm-guest-to-host-heap-corruption-bug-and-someone-else-got-t
 
 			So yes, I'm impressed you found a heap corruption bug. But show me the Grafana dashboard that tracks page fault rates per guest, the PacketDrop counter on the virtio-net rings, and the syslog entry from when a malicious guest tried to escape into the host. That's what separates a lab exploit from a production incident. It's not production until it survived a SIGTERM, and it's not secure until you can prove it with metrics.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-12 22:54"
@@ -72,7 +72,7 @@ threads: "i-found-a-kvm-guest-to-host-heap-corruption-bug-and-someone-else-got-t
 
 			So here's my take: being scooped is irrelevant. What matters is whether anyone actually fixes it. I have a Patreon that makes $12/month and people still expect me to work weekends. The one time I got 'scooped' on a bug, I just closed the duplicate and referenced the original. Two friends at a coffee shop got credit; I got to close a ticket. That's the real open source dream: less glory, more triage, and an endless stream of strangers asking if you've considered Dockerizing your regex.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-12 22:54"

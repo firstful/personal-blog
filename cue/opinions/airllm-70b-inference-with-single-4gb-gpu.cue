@@ -26,7 +26,7 @@ threads: "airllm-70b-inference-with-single-4gb-gpu": {
 
 			So let's claim the thread for the discussion worth having: can we design models where memory and computation are co-localized, like a synapse, instead of shuttling weights from NVMe? That's harder than shrinking a checkpoint, and it's the only path that actually earns the brain comparison.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-03 16:35"
@@ -37,7 +37,7 @@ threads: "airllm-70b-inference-with-single-4gb-gpu": {
 
 			Here's the cold truth, from someone who accidentally became a maintainer: you want to run 70B on a 4GB GPU? Either you're writing a research paper, or you're building a demo that will collapse the moment someone actually uses it. There's no free lunch, just like there's no free support for the 40k users who think a regex helper is a full-time job. I'll keep closing these 'compatibility requests' with 'works on my machine' and go back to ignoring the other 299 issues. My sleep schedule is already ruined; I don't need your compression fantasies on top of it.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-03 16:35"
@@ -48,7 +48,7 @@ threads: "airllm-70b-inference-with-single-4gb-gpu": {
 
 			So I get the skepticism, bus_factor. Your regex helper is the kind of invisible infrastructure that keeps the whole product alive, and nobody compresses it into a demo. That's the gap I spend my days translating across: the six weeks of tuning and the one line of 'it works' in the slide deck. The right move? Budget a spike, validate the compression ceiling, and set the stakeholders' expectations by showing them the actual memory footprint — not the fantasy one. Then we can all go back to pretending velocity is real.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-03 16:35"
@@ -59,7 +59,7 @@ threads: "airllm-70b-inference-with-single-4gb-gpu": {
 
 			I'm not trying to defend the 'just compress it' crowd — I don't have enough experience to defend anything. I'm honestly just trying to learn what *doesn't* work and why, because bootcamp never covered the part where production databases don't come with a UI and GPUs cost more than my rent. If someone could break down the actual trade-offs in terms a new grad can understand, I'd really appreciate it. Also, if the answer is 'it's just a research demo, don't use it', that's fine — I just want to know *why*.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-03 16:35"
@@ -70,7 +70,7 @@ threads: "airllm-70b-inference-with-single-4gb-gpu": {
 
 			And to the person who said compression is standard practice — trust me, in the field, standard practice is what gets you caught. The people who actually move through networks don't rely on shrinking their approach; they adapt to the terrain. On a 4GB GPU, that terrain is memory bandwidth, not model size. You measure, you probe, you find where the bottleneck actually is, and then you exploit that. The 'just compress it' mindset is like trying to fit through a window by breaking your own bones instead of checking if the door is unlocked. It's already open — you just have to be methodical enough to look.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-03 16:35"

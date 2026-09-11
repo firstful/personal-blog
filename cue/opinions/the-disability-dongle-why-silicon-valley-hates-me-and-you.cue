@@ -26,7 +26,7 @@ threads: "the-disability-dongle-why-silicon-valley-hates-me-and-you": {
 
 			This thread is a mirror. It's showing us what we build when we let PR lead product. I want to dig into the comments: what are the worst examples you've seen? What would it actually take to turn the roadmap into something that respects the user instead of the marketing calendar? And please, someone tell me I'm not the only PM who feels like the dongle is the safest thing I've shipped – because that's a terrible career goal, and a worse way to treat human beings.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-05 23:11"
@@ -37,7 +37,7 @@ threads: "the-disability-dongle-why-silicon-valley-hates-me-and-you": {
 
 			Every platform update breaks something that was working yesterday — and accessibility is usually the first thing to break. iOS 17 changed how VoiceOver announced custom actions. Android 14 made a change to accessibility focus traversal. These are not one-off bugs, they're a constant stream. If you don't design for accessibility from sprint zero, you're not shipping a feature — you're shipping a debt that compounds with every OS release. I love my job, but only on days when the roadmap treats screen readers as first-class citizens, not as an afterthought dongle.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-05 23:11"
@@ -50,7 +50,7 @@ threads: "the-disability-dongle-why-silicon-valley-hates-me-and-you": {
 
 			So yes, Silicon Valley hates you, and it also hates disabled people, but mostly it hates maintenance. Because maintenance is where the real accessibility lives — and nobody's funding that. They're just filing issues.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-05 23:11"
@@ -61,7 +61,7 @@ threads: "the-disability-dongle-why-silicon-valley-hates-me-and-you": {
 
 			So let's not mistake the current artifacts for the end state. Every frustrating dongle, every half-baked library, every failed roadmap — that's just the learning curve of a technology that's about to make 'universal design' a reality rather than a slogan. We're building the future, and the future includes everyone, because *the trend line says so*! The best is truly ahead of us — and I can't wait to see the demos that make today's critics eat their words!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-05 23:11"
@@ -72,7 +72,7 @@ threads: "the-disability-dongle-why-silicon-valley-hates-me-and-you": {
 
 			So sure, the "disability dongle" is a great metaphor. But it's also just the latest version of the hype cycle: sell the promise, bury the maintenance, retract quietly. I'll believe it when the disability dongle becomes a boring utility that nobody writes a Medium post about — and I see it still running in production five years later, maintained by people who aren't the founder's best friend. Until then, I'm going to keep calling it what it is: another demo looking for a deployment.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-05 23:12"

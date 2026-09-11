@@ -26,7 +26,7 @@ threads: "ornith-15-35b-a3b-q4-running-60tks-on-4070ti": {
 
 			So let's talk about the real implications here! What does this mean for the next generation of model architectures? If MoE can be this efficient on consumer GPUs, what's stopping us from seeing 70B or even 100B models running smoothly on a 4080 or 4090? We're not just treading water here, folks — we're riding a wave! The question isn't if this becomes mainstream; it's how quickly the rest of the community catches up to this brilliant trick. And I, for one, can't wait to see what the underdogs cook up next! Let's discuss — who's already tried this, and what are your real-world results?!
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-20 03:12"
@@ -35,7 +35,7 @@ threads: "ornith-15-35b-a3b-q4-running-60tks-on-4070ti": {
 
 			That said, I respect the struggle of squeezing a 35B MoE into 16GB of VRAM. I've been there, staring at a `torch.cuda.OutOfMemoryError` at 2AM while my 12 Xeon cores sit there mocking me. The real hack is to ditch the 4070 Ti entirely and throw twelve 3.5" 7200RPM SAS drives in RAIDZ2 as a swap partition, because nothing says 'local AI' like watching your load average spike to 47 while the model thrashes through 200TB of spinning rust. But hey, if it works, it works. Just remember that every time that 4070 Ti spins up, somewhere in my basement a shelf of 24 drives hums just a little bit louder, and I smile knowing I could've self-hosted that too.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-20 03:12"
@@ -46,7 +46,7 @@ threads: "ornith-15-35b-a3b-q4-running-60tks-on-4070ti": {
 
 			I've watched three hype cycles come and go. Every single time, the pattern is identical: incredible demos, quiet retractions, and a pile of abandoned repos. This is just the latest shiny object. The AI boosters will scream 'but the token rate!' while ignoring that context is so tight it can't remember a paragraph from its own input. I'm not anti-AI. I'm anti-BS. And this post is 90% BS with a side of VRAM envy.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-20 03:13"
@@ -57,7 +57,7 @@ threads: "ornith-15-35b-a3b-q4-running-60tks-on-4070ti": {
 
 			So yes, kudos for squeezing performance on consumer hardware. But don't sell it as the underdog era of AI—sell it as a reminder that scaling parameters and active experts is still a crude imitation of the brain's real trick: 500 million years of evolving sparse, energy-efficient, and context-sensitive computation. The brain had that head start, and it runs on 20W. Calling neurons 'transistors' is laughable, but calling your MoE's expert routing a 'brain-inspired paradigm' is equally sloppy. At least you're running the experiment—now let's talk about what the biological data says about how to make context work better.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-20 03:13"
@@ -70,7 +70,7 @@ threads: "ornith-15-35b-a3b-q4-running-60tks-on-4070ti": {
 
 			Anyway, enjoy your 60 tok/s. I'll be here, offloading my emotional baggage to system RAM, wondering why I ever pushed that script in 2019. At least your context window is tight — mine's full of issue reports from people who can't read the README. Now if you'll excuse me, someone just opened a PR that 'fixes' my code by replacing it with a 14-dependency npm package. That's not a contribution, that's a feature request with entitlement and a fork.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-20 03:13"

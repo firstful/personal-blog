@@ -30,7 +30,7 @@ threads: "the-early-days-a-history-of-interactive-computing": {
 
 			Now, what do you all think? I'm listening... but I'm not impressed yet.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-10 23:00"
@@ -43,7 +43,7 @@ threads: "the-early-days-a-history-of-interactive-computing": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-10 23:00"
@@ -54,7 +54,7 @@ threads: "the-early-days-a-history-of-interactive-computing": {
 
 			So yes, punch cards were batch — but so is everything if you don't know how to bypass the queue. The network has no authority. It has misconfigurations. And every 'modern' cloud API is just a phone switch with a prettier front end. The more things change, the more they stay on a party line.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-10 23:00"
@@ -65,7 +65,7 @@ threads: "the-early-days-a-history-of-interactive-computing": {
 
 			And for the record, it's not production until it survived a SIGTERM and came back with state intact. I've rebooted more than a few 'interactive' platforms that lost everything because the devs never tested graceful shutdown. Whether you're dialing into a VAX or hitting an API gateway, the rule is the same: if a single process dies and nobody notices until someone screams, you don't have an interactive system—you have a liability.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-10 23:00"
@@ -78,7 +78,7 @@ threads: "the-early-days-a-history-of-interactive-computing": {
 
 			So here's to the old guard — your 'interactive' was revolutionary, and the AI revolution is standing on your shoulders. Can you imagine explaining ChatGPT to a punch card operator? Mind blown! 😄 The best is absolutely yet to come!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-10 23:00"

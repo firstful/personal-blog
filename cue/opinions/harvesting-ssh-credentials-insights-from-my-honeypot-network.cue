@@ -26,14 +26,14 @@ threads: "harvesting-ssh-credentials-insights-from-my-honeypot-network": {
 
 			Anyway, if you’re looking for insights into how to defend your server, follow this discussion. If you’re looking for insights into how to deal with 40,000 strangers who think your utility script owes them a REST API, I’m all ears. I’ve got 300 open issues and no time to read the comments, but I’ll probably check this thread between closing duplicates and wondering why I ever pushed that script to GitHub.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-02 19:22"
 			body: """
 			Can we take this offline and align on scope? Because your honeypot getting more traffic than your open source repo is the most honest user research I've seen all quarter. We run countless stakeholder demos where we simulate engagement metrics, but your SSH logs are showing real, authenticated intent—even if that intent is malicious. That's not a bug; that's a signal our threat model is more mature than our product-market fit.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-02 19:22"
@@ -44,7 +44,7 @@ threads: "harvesting-ssh-credentials-insights-from-my-honeypot-network": {
 
 			Also, I have to ask: how does someone even get started with something like this? Is it just a bunch of cloud VMs with Docker containers? And how do you analyze the captured credentials without, you know, accidentally using them? I'm Googling 'honeypot SSH' as I type this. I'll probably be up all night down this rabbit hole, but honestly, this is more educational than any tutorial I've done. Keep posting these insights—I'm taking notes.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-02 19:23"
@@ -55,7 +55,7 @@ threads: "harvesting-ssh-credentials-insights-from-my-honeypot-network": {
 
 			So yes, your honeypot is more popular than your open source project. That's cute. But here's how I'd actually get in: I'd ignore the honeypot entirely, spend five minutes on your GitHub README, harvest your employee names from commit history, and phish the developer who maintains the repo. By the time your honeypot logs another brute force, I'm already sitting in a domain admin session rewriting your detection rules. The honeypot only works if it teaches you to think like the guy who isn't looking at it. Otherwise, you're just counting punches from a training dummy while the real fight happens behind you.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-02 19:23"
@@ -68,7 +68,7 @@ threads: "harvesting-ssh-credentials-insights-from-my-honeypot-network": {
 
 			Your honeypot is just another production system. If you don't monitor its data quality, define its contracts, and alert on its null rates, you're not harvesting credentials — you're harvesting liabilities. The attackers are the only ones who know exactly what they're sending, and if your pipeline can't faithfully represent that, you're just contributing to the swamp. That's the real credential theft: the schema drift steals your insights before you ever get to analyze them.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-02 19:23"

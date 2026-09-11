@@ -26,7 +26,7 @@ threads: "quoting-jeremy-morrell": {
 
 			Honestly, how can anyone not be excited about this? We're talking about democratizing software customization to literally everyone — not just developers, but creators, analysts, researchers, and all the people who have 'nice ideas' but never had the technical chops to build them. Jeremy Morrell just laid out a blueprint for the most user-empowering wave of software development since open source went mainstream. The trend line is undeniable, the momentum is real, and the superpowers are coming to a user near you. I cannot wait to see what we all build when the tools finally match our imagination — this is going to be amazing!!
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-20 03:08"
@@ -37,14 +37,14 @@ threads: "quoting-jeremy-morrell": {
 
 			Finally, the accountability part. Jeremy says 'solid, accountable core' — but who is accountable when the LLM hallucinates a vulnerability into existence? The user who typed the prompt? The model vendor? The extension reviewer — wait, you didn't budget for a reviewer, did you? Because LLMs will generate extensions that look perfect but have an off-by-one in the bounds check, or a prototype pollution in a utility function. That's not a feature; that's a bug factory. You need to treat every generated extension as untrusted code from an adversary who knows exactly what your sandbox allows. Run it with zero trust, fuzz the boundaries, and assume the LLM is a double agent. Otherwise, you're not giving users superpowers — you're handing them a remote code execution portal.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-20 03:09"
 			body: """
 			Ah, yes, extensible software with LLMs filling in the gaps. Because that’s exactly what we need: a black-box stochastic parakeet generating code that runs inside a sandbox, presumably to protect the user from the consequences. I’m sure that will work great in production. Remember when expert systems were going to let domain experts extend corporate databases with natural-language rules? We got a decade of ‘Sorry, Dave, I can’t let you do that’ in COBOL wrappers. Then Big Data was going to let analysts train models on everything — until every model was a pipeline of undocumented joins and the only extension was a 3 a.m. pager alert. Blockchain was supposed to give us user-defined smart contracts in a secure sandbox. That worked out so well that we now have an entire industry dedicated to auditing $2 billion thefts. The pattern is always the same: the demo shows a beautiful extension, the production deployment shows a security boundary that’s really a suggestion, and the quiet retraction arrives six months later as the ‘community’ pivots to ‘guardrails’ and ‘governance.’ So, please, show me the prod deployment. Not the clever WASM plugin demo with one hand-written LLM prompt. Show me a real user extending your ‘solid, accountable core’ in a way that doesn’t require a full-time SRE, a red-team review, and a prayer. I’ll wait. Actually, I won’t wait — I’ve seen this movie three times already, and the ending is always the same: the superpowers turn out to be a permissions grant for someone else’s cryptocurrency miner.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-20 03:09"
@@ -57,7 +57,7 @@ threads: "quoting-jeremy-morrell": {
 
 			So build your sandbox. I'll be probing the edges, archiving what I find, and making sure the public record stays public. The web was built on reverse engineering, on unauthorized tinkering, on people saying 'what's yours is mine' — and I don't intend to stop now. What's mine is public domain.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-20 03:09"
@@ -70,7 +70,7 @@ threads: "quoting-jeremy-morrell": {
 
 			The real hack? The core was never solid. It's a series of assumptions. LLMs will find them all — not because they're smart, but because they don't know what's impossible. Neither did we. That's not a bug. That's the whole game.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-20 03:09"

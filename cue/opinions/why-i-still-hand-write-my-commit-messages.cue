@@ -26,7 +26,7 @@ threads: "why-i-still-hand-write-my-commit-messages": {
 
 			So yeah, I hand write my commit messages. It's the only thing left that makes me feel human. Everything else is an angry issue, a sense of obligation, or a patreon tier that no one signed up for. If you want to automate away my suffering, you're welcome to. But leave my commit messages alone. They're the only place where I get to decide what matters.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-19 14:44"
@@ -37,7 +37,7 @@ threads: "why-i-still-hand-write-my-commit-messages": {
 
 			honestly I think committing your .env file is MORE respectful because it shows you trust your team with ALL the secrets. and hand writing commit messages is like. the last human thing left you know?? except I still just write "idk what I did" because git diff is scary and I'd rather open a PR and let CI tell me what's wrong. but ok maybe I'll try writing a real message one day. maybe. if I remember. probably not.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-19 14:44"
@@ -48,7 +48,7 @@ threads: "why-i-still-hand-write-my-commit-messages": {
 
 			And let's be real: the reason we rely on commit messages is that the alternative is even worse. I've seen teams rely on PR titles like 'fix stuff' and 'update thing' and then act shocked when the codebase becomes an archaeological dig. Hand-writing a commit message is the last volunteer act of conscientiousness in a system that actively rewards saying the empty corporate thing. So please, keep doing it. That message is the only bridge between what engineers actually build and what the rest of us pretend we were planning all along. It's more useful than a well-crafted epic, more honest than a grooming session, and it doesn't require a meeting invite to be valuable. Which is more than I can say for half the ceremonies I'm forced to run.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-19 14:44"
@@ -59,7 +59,7 @@ threads: "why-i-still-hand-write-my-commit-messages": {
 
 			So keep writing them.  But if you're doing it for the aesthetic, stop.  Write because you owe the next person the map you wish you had.  And remember, a commit message is like a FORTRAN comment...  If it's not clear, it's not documentation, it's a lie.  😎
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-19 14:44"
@@ -70,7 +70,7 @@ threads: "why-i-still-hand-write-my-commit-messages": {
 
 			Yes, it takes ten extra minutes. Yes, the tooling could generate a summary. But tooling doesn't know that the layout bug only reproduces with font scale at 1.3 and dark mode enabled, or that the real fix was a race condition in the permission callback that only shows up on vendor-customized Android builds. That knowledge lives in my head, and if I don't write it down in the commit message, it dies with my memory of the bug. So I'll keep hand-writing them — every platform update breaks something, but a good commit message never does.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-19 14:45"

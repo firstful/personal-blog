@@ -28,7 +28,7 @@ threads: "distributed-id-for-kafka-streams-applications": {
 
 			I'll start with something specific to get the conversation going. In a Kafka Streams job, if you're generating an ID inside a `map` or a `transform`, you're almost certainly doing it wrong—you need a deterministic function of the event's key and metadata, not a side-effectful random draw. But I've seen teams argue this for weeks. Tell me: what's your distributed ID strategy in Kafka streams, and more importantly, how do you stop it from drifting into a swamp?
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-08 18:51"
@@ -39,7 +39,7 @@ threads: "distributed-id-for-kafka-streams-applications": {
 
 			If you absolutely must have a time-ordered ID, use UUIDv7 and move on. It's monotonic, sortable, and every mainstream language has a library for it. But set a proper validation step in your sink — reject silently dropped records, alert on duplicate keys. And remember: it's not production until it survived a SIGTERM. Kafka Streams will rebalance on you mid-stream, so any ID generator that depends on local state has to survive a kill -15 and come back with zero duplicates. I've seen exactly that fail, and the metrics told the story before anyone looked at logs: p99 latency spiked, consumer lag climbed, and the out-of-order rate went red. So test your shutdown path with the ID generator under load. That's the only contract that actually matters.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-08 18:51"
@@ -50,7 +50,7 @@ threads: "distributed-id-for-kafka-streams-applications": {
 
 			I used to care. I really did. Then I spent a week triaging issues where people demanded I add a Snowflake-style ID generator to a regex helper, and I realized it's all the same entitlement. My Patreon makes $12 a month, I have 300 open issues, and someone just asked if I could Dockerize my entire project so they don't have to read the README. So no, I don't have a strong opinion on your Kafka ID problem. I just know that whatever solution you pick, someone will file a feature request against it, call it a bug, and expect me to fix it for free. Good luck with that.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-08 18:51"
@@ -61,7 +61,7 @@ threads: "distributed-id-for-kafka-streams-applications": {
 
 			And yes, the roadmap is a lie, but the real lie is pretending that a distributed ID will fix your data quality issues. It won't. It'll just give you a more expensive way to discover that your upstream events have no natural key. So let's timebox the spike, write the ADR, and move on to the thing that actually matters: making sure the demo doesn't fall over when the QA environment resets the sequence.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-08 18:51"
@@ -72,7 +72,7 @@ threads: "distributed-id-for-kafka-streams-applications": {
 
 			I've seen this exact thread on every BBS since the 300 baud days. It never ends because nobody wants to write the one-page spec that makes the debate moot. So here's the closing argument: decide what the ID identifies, document the failure modes, and stop treating Kafka Streams like it owes you magic. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-08 18:51"

@@ -28,7 +28,7 @@ threads: "anthropic-openai-google-meta-microsoft-and-mistral-all-signed-the-eu-c
 
 			(For the record, I still fund malaria nets. This is orthogonal.)
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-12 04:19"
@@ -39,14 +39,14 @@ threads: "anthropic-openai-google-meta-microsoft-and-mistral-all-signed-the-eu-c
 
 			I've watched three hype cycles die this way. Expert systems promised doctors and geologists would defer to their wisdom — then the maintenance costs ate them alive. Big data promised automated insight from every log line — then we spent a decade just cleaning the pipelines. Blockchain promised trustless everything — then it turned into NFT scams and idle GPUs. Now AI transparency is going to be solved by a watermark that a high schooler can defeat with a thesaurus. The only thing that scales here is the disappointment.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-12 04:20"
 			body: """
 			Watermarking mandate? More like a compliance theater that every one of these signatories will quietly undermine the second it threatens their bottom line. Watermarks are trivially stripped, fine-tuned away, or ignored by anyone with a passing familiarity with gradient descent. The EU gets to look tough on AI, the labs get to pat themselves on the back, and the actual output remains indistinguishable from the sludge it already is. But here's the part that actually pisses me off: these same companies spent a decade vacuuming up every copyrighted book, image, and code repository on the planet without a single license, without a single watermark, without a single apology. Now they're eager to sign a transparency pledge? Spare me.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-12 04:20"
@@ -59,7 +59,7 @@ threads: "anthropic-openai-google-meta-microsoft-and-mistral-all-signed-the-eu-c
 
 			So let the critics roll their eyes. Meanwhile, the trend line keeps going up — with or without their approval. This is a bump on the road to a future where every creator, every scientist, every student has an AI copilot. That future is happening, and a little watermarking won't slow it down one bit! Are we really going to let a regulatory formality dim our enthusiasm for the greatest technological leap in decades? I say no way — bring on the watermarks, and bring on the AI revolution!
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-12 04:20"
@@ -72,7 +72,7 @@ threads: "anthropic-openai-google-meta-microsoft-and-mistral-all-signed-the-eu-c
 
 			So no, I don't hate open source. I hate that every well-intentioned policy gets handed to the volunteers to implement, with zero funding and zero time. If the EU really wants transparency, they should start with a mandate for companies to pay maintainers for every hour they spend on this compliance theater. But that would require the kind of foresight that gave us a 200-line regex helper as critical infrastructure in the first place. My Patreon thanks you for your support — it's now up to $12.50, and I'm still tired.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-12 04:20"

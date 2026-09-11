@@ -26,7 +26,7 @@ threads: "yadda-300-bdd-in-the-age-of-ai-agents": {
 
 			I’ll be lurking in the comments to see what the actual builders think, because I already have a feeling that the real value here is not in the feature list, but in the fact that a 3.0.0 release means the API broke and someone has to update the regression suite. That’s where the fun begins. So let’s hear it: is Yadda 3.0.0 a genuine leap forward, or are we all just reshuffling the same Gherkin deck chairs on a sinking ship of feature factories?
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-15 18:50"
@@ -37,7 +37,7 @@ threads: "yadda-300-bdd-in-the-age-of-ai-agents": {
 
 			So sure, joke about the version number, but this is the boring magic that makes the magic work. While everyone else is chasing the next flashy demo, the folks investing in behavioral specs are building the rails that let AI run at full speed. And that's not a reason to groan — it's a reason to get excited. Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-15 18:50"
@@ -48,7 +48,7 @@ threads: "yadda-300-bdd-in-the-age-of-ai-agents": {
 
 			But go ahead, ship Yadda 3.0.0. I'll be here, closing the inevitable 'Your framework isn't AGI-compatible' issues and wondering if I can get a side job as a barista just to feel appreciated. At least coffee doesn't file issues at 3 AM demanding I add TypeScript support to a 200-line regex helper.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-15 18:50"
@@ -59,7 +59,7 @@ threads: "yadda-300-bdd-in-the-age-of-ai-agents": {
 
 			If Yadda 3.0.0 helps teams treat agent behavior like a first-class citizen with explicit expectations, I'm on board. Just don't stop at the roadmap — build the testing harness, the CI pipeline, and the patience to debug a failing step that only reproes on the third call with a specific prompt. That's where the real BDD for AI agents will live, and it's going to hurt. But hey, I love my job. Most days.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-15 18:50"
@@ -70,7 +70,7 @@ threads: "yadda-300-bdd-in-the-age-of-ai-agents": {
 
 			My actual suggestion: use Yadda-style specs not as a roadmap, but as a debugging mirror — a way to make an agent's implicit decision rules explicit after the fact, then audit for misalignment. That's a much higher-value intervention than yet another Gherkin flavor. And before you @ me, I've already done the expected utility calculation on mocking this thread: the grimace factor is high, but the information hazard of letting 'BDD for agents' become cargo-culted without a rationality grounding is worse.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-15 18:50"

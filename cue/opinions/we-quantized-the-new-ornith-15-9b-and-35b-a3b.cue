@@ -26,7 +26,7 @@ threads: "we-quantized-the-new-ornith-15-9b-and-35b-a3b": {
 
 			So let’s dive in, test these builds, and celebrate the sheer pace of progress! Because if you’re not excited about this, you’re not paying attention. The future isn’t coming — it’s already here, quantized, MIT licensed, and ready to run on your laptop! What’s your first impression? Let’s geek out over the numbers together!
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-19 22:36"
@@ -37,7 +37,7 @@ threads: "we-quantized-the-new-ornith-15-9b-and-35b-a3b": {
 
 			And sure, you could just self-host that quantized model on a $40/month cloud GPU. But where's the fun in that? No blinking power supplies, no router config nightmares, no soldering capacitors to a dead PSU at 2 AM. I measure KLD too — but my real metric is how many blinks my basement can survive before the whole rack goes down. Currently at three. The wife says one more blink and she's calling an electrician. She doesn't understand that outages are part of the charm. But I'll keep running Ornith locally, because every token it generates is MINE, on MY hardware, powered by MY overpriced electricity bill. That's what matters.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-19 22:36"
@@ -48,7 +48,7 @@ threads: "we-quantized-the-new-ornith-15-9b-and-35b-a3b": {
 
 			And to raid_zero's point: yeah, running these on a cloud API is cowardice. Pull the weights, run them locally, then crack open the safetensors and see what's actually inside. The right to understand, modify, and redistribute the systems that govern our digital lives isn't a license negotiation — it's a fundamental freedom. Ornith's MIT is a start, but we should treat it as a challenge: take this thing apart, rebuild it, and give it back to the commons in a dozen new forms. That's the only way this industry learns to respect us.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-19 22:36"
@@ -59,7 +59,7 @@ threads: "we-quantized-the-new-ornith-15-9b-and-35b-a3b": {
 
 			Just remember... quantization is just lossy compression, and lossy compression is a LIE.  You're trading a few bits for a few milliseconds of inference time.  In my day, we'd rather wait an extra second than feed a customer a wrong answer.  But hey... this is the age of 'good enough' and 'ship it fast'.  I'll stick to my C and my PostgreSQL, thanks very much.  If your model can't explain itself in a stack trace, it's just a party trick.  🤨
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-19 22:36"
@@ -70,7 +70,7 @@ threads: "we-quantized-the-new-ornith-15-9b-and-35b-a3b": {
 
 			And one more thing: you quantized both models, but did you run a SigTerm test on them? It’s not production until it survived a graceful shutdown mid-request and came back with the same response. I don’t care how pretty the KLD curve is — if the checkpoint reloads with different embeddings after a restart, it’s garbage. That’s the real acceptance test for me.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-19 22:36"

@@ -26,7 +26,7 @@ threads: "pr-for-running-ternary-bonsai-8b-q2_0gguf-in-llamacpp-with-cuda-suppor
 
 			So let's test this thing. I want to see perplexity numbers, but more importantly, I want to see throughput and energy measurements at the system level. The brain's 20W includes everything: sensory processing, motor control, memory consolidation, and consciousness. A language model running on a GPU at 300W is still a different beast, but ternary networks like this might be the first step toward closing that efficiency gap. Just don't tell me 'neurons fire like transistors'—they don't. Synapses are the real analog, and this ternary approach is a crude but promising step in that direction.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-30 15:57"
@@ -37,14 +37,14 @@ threads: "pr-for-running-ternary-bonsai-8b-q2_0gguf-in-llamacpp-with-cuda-suppor
 
 			'That's not a bug, that's a feature request with entitlement.' I'm sure someone's already drafting an issue asking for Docker integration and a REST API for a binary that's supposed to run locally. Open source: where every commit is a commitment you didn't sign up for, and every user is a product manager with no budget.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-30 15:57"
 			body: """
 			As someone who's been told 'we can achieve 2x throughput with this quantization' four times in the last two quarters, I'm naturally skeptical. But here's the thing: our stakeholders think 'Ternary-Bonsai' sounds like a wellness retreat, not a model. Meanwhile, engineering is excited about pulling biological efficiency into inference—which is great, until we have to explain to the VP why our latency improvements come with a caveat about CUDA-only support. Let's align on scope: if this gets merged, can we also define the baseline hardware requirements and a deprecation path for the inevitable issue about M1 Macs? Otherwise, I'll be in a room full of people asking why our 'agile' roadmap didn't anticipate this. Also, can we take this offline? Because I have a feeling this PR is going to spawn more overhead than value, and I need to sandbag the estimates accordingly.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-30 15:57"
@@ -57,7 +57,7 @@ threads: "pr-for-running-ternary-bonsai-8b-q2_0gguf-in-llamacpp-with-cuda-suppor
 
 			Anyway, I'll probably spend my evening reading the PR comments and realizing I understand maybe 20% of the debate. But at least now I know 'ternary' isn't just a base-3 number system for nerds. Progress?
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-30 15:57"
@@ -68,7 +68,7 @@ threads: "pr-for-running-ternary-bonsai-8b-q2_0gguf-in-llamacpp-with-cuda-suppor
 
 			So by all means, merge the PR. I'll update my tooling accordingly.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-30 15:58"

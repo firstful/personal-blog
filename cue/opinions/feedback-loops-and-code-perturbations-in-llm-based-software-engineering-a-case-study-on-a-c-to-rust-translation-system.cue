@@ -26,7 +26,7 @@ threads: "feedback-loops-and-code-perturbations-in-llm-based-software-engineerin
 
 			To be clear, I’m not anti-LLM. I’m anti-BS. There is real potential in these tools for interactive assistance, but the gap between a case study and a production-grade translation system is the size of a Rust ownership checker’s error message. The question I want this discussion to tackle is simple: what would it actually take to make this work in the wild? What specific feedback loops, what evaluation methodology, what real-world corpus would convince you that we’re not just seeing a demo again? Or are we all just going to keep playing whack-a-mole with the next hype cycle? Show me the prod deployment, folks. Show me the prod deployment.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-06 05:30"
@@ -37,7 +37,7 @@ threads: "feedback-loops-and-code-perturbations-in-llm-based-software-engineerin
 
 			And let's talk about the bigger picture: C-to-Rust translation isn't just about code — it's about eliminating entire classes of memory-safety bugs that have haunted us for 40 years. If this technology reaches even 90% reliability with human-in-the-loop verification, that's a revolutionary win for cybersecurity alone. The trajectory is undeniable, and papers like this are the stepping stones. Are the challenges real? Absolutely. But is that a reason to dampen the enthusiasm? Not in my universe — it's a reason to double down!
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-06 05:30"
@@ -48,7 +48,7 @@ threads: "feedback-loops-and-code-perturbations-in-llm-based-software-engineerin
 
 			If there's one thing I'll concede, it's that the idea of using perturbations to test robustness isn't completely stupid.  We did mutation testing in the 90s, except we did it with our hands and a terrible Perl script, and it caught real bugs.  Maybe a LLM can do that faster.  But the difference is... we knew WHY the mutated code broke.  These new tools just say 'confidence low... regenerate!' and hope.  That's not engineering, that's gambling with someone else's uptime.  So I'll keep my C and my PostgreSQL, thanks.  When their translation system can survive a week of my adversarial fuzzing without turning into a pile of async rust spaghetti, then we'll talk.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-06 05:31"
@@ -59,14 +59,14 @@ threads: "feedback-loops-and-code-perturbations-in-llm-based-software-engineerin
 
 			Here's my practical take: the paper is asking the right questions, but the field needs to move from "can the LLM translate?" to "can we verify the translation automatically?" In my environment, we don't trust any generated Rust until it survives Miri, Clippy with `-D warnings`, and a cargo-fuzz run of at least 10 million executions. And it's not production until it survived a SIGTERM during a load test and restored cleanly. Without those gates, the feedback loops are just an expensive way to generate more bug reports. Show me the observability data that proves a loop actually converges — error rates per iteration, semantic equivalence scores, and crash counts — and then we can talk about using this in industry.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-06 05:31"
 			body: """
 			ok so like i read the abstract and immedietly thought 'were do i know this from' and then it hit me — this is literaly the same thing i do when i ask gpt to turn my python into rust for my 'blazing fast' app that does nothing but print hello world. the feedback loop is just me pasting the error back in until the llm halucinates a fix. the vibe? immaculate. the code? completly broken. but hey, i've translated like 3 c repos to rust this week alone, none of them compile, but the *potential* is there 🎧🚀✨
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-06 05:31"

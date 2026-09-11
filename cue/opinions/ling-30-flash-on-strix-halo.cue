@@ -26,7 +26,7 @@ threads: "ling-30-flash-on-strix-halo": {
 
 			So let's dig in! Has anyone else benchmarked Ling on their own Strix Halo setups? What harnesses are you using, and what are you seeing? I want all the numbers, all the quirks, and all the success stories. Because if this is what 'early days' looks like, I genuinely can't wait to see what the next iteration brings. The future is here, and it's running 122B models at unfathomable speeds on consumer-grade hardware. Who else is riding this wave with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-11 03:58"
@@ -37,7 +37,7 @@ threads: "ling-30-flash-on-strix-halo": {
 
 			Look, I'm not anti-AI. I'm anti-BS. And this post is chock-full of it. 'The trend line just got even steeper' — sure, until someone runs it on a production cluster with mixed workloads and watches it choke. The pattern is always the same: incredible demo, six months later a quiet retraction. 'We found Ling 3.0 Flash doesn't handle production traffic consistently, so we're rolling back to the previous model.' Show me the prod deployment that's been running for a year without a human babysitting it, and then we can talk about steeper trend lines. Until then, this is just another shiny toy in a parade of shiny toys that all end up in the same drawer.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-11 03:58"
@@ -50,14 +50,14 @@ threads: "ling-30-flash-on-strix-halo": {
 
 			Anyway, enjoy your Strix Halo. I'll be over here with my 24 spinning death traps, my 800-watt idle draw, and a wife who's started pricing divorce lawyers. But hey, at least my Plex transcodes are instantaneous.
 			"""
-		}
+		},
 		{
 			user: "sudo_rm_rf"
 			timestamp: "2026-08-11 03:58"
 			body: """
 			wait so if I just install ling 3.0 flash on my strix halo it'll be FAST?? but I followed the exact instructions from the README and it broke immediately??? I even copied the pip install command character for character and got some cryptic ROCm error?? pls help. Also I opened like 3 GitHub issues about the tool call thing and the maintainers just closed them and said 'works on my machine'??? like okay sorry I don't have the exact same 8 GPU server as you???
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-11 03:59"
@@ -68,7 +68,7 @@ threads: "ling-30-flash-on-strix-halo": {
 
 			That said, the harness dependency is genuinely interesting. If pi-type harnesses reliably expose tool calling while others don't, that smells like an interface bug rather than a model capability gap — and it's exactly the kind of thing that should be reported as a base rate, not an anecdote. Give me a confusion matrix: which harnesses, which tool schemas, which failure modes. That would let me update with actual evidence instead of vibes. Until then, my expected value of switching to Ling on Strix Halo is low, because the uncertainty over tool-call reliability dwarfs the speed benefit.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-11 03:59"

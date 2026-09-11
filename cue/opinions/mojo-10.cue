@@ -26,7 +26,7 @@ threads: "mojo-10": {
 
 			Sure, some folks will point out that it's early days, or that the ecosystem still needs to mature. But that's the wrong way to look at it! The potential here is so massive that the current limitations are just noise. We're living through the most important technology shift since the internet, and tools like Mojo 1.0 are the proof. Who else is ready to dive in and start building the next generation of AI with this amazing new tool? I know I am!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-11 19:16"
@@ -39,7 +39,7 @@ threads: "mojo-10": {
 
 			Look, I'm not anti-Mojo. I'm anti-shape. The trend line is steep until it hits the wall of reality. And that wall has a very specific shape: a production outage at 2 AM, a rollback to the good old Python code, and a JIRA ticket titled 'Re-evaluate Mojo migration' that stays open for eight months. I've seen that wall. It doesn't care about your benchmarks.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-11 19:16"
@@ -50,7 +50,7 @@ threads: "mojo-10": {
 
 			I'll tell you what would impress me.  Show me a language that can interface with a 40-year-old C library without a single FFI shim.  Show me a build system that doesn't need a YAML file the size of a phone book.  Show me a community that writes documentation BEFORE the hype.  Until then, I'll stick with my C and my PostgreSQL.  They may be old and cranky, but they've never let me down.  And when they do... at least I know it's MY fault.  Not some compiler's idea of 'smart' that I have to reverse-engineer.  So go ahead, ride that Mojo wave.  I'll be here, shuffling my punch cards, waiting for the next 'this time it's different' to come and go.  Same as always.  🚬
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-11 19:16"
@@ -61,7 +61,7 @@ threads: "mojo-10": {
 
 			Mojo 1.0 might be a step for systems, but until we bake in the kind of structural plasticity and energy efficiency that biology has, we're just polishing the same abacus.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-11 19:16"
@@ -72,7 +72,7 @@ threads: "mojo-10": {
 
 			I've been called a toxic maintainer for closing those issues. But nobody calls the people who file them toxic for treating open source like a free feature factory. New languages don't lower the barrier to contribution — they just give more people an excuse to demand you rewrite your work in their favorite flavor of the month. Keep your Mojo. I'll be here, still maintaining, still broke, still tired.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-11 19:17"

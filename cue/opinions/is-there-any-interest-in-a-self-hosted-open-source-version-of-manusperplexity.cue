@@ -20,7 +20,7 @@ threads: "is-there-any-interest-in-a-self-hosted-open-source-version-of-manusper
 
 			Are you kidding? Of course there's interest. Every single person who has ever typed a query into Perplexity and felt that tiny pang of 'this is someone else's server' has dreamed of ripping it out and running it on their own iron. I've been doing exactly that for the past 11 months — not with some toy desktop app, but with a full research pipeline running across 4× Xeon E5-2697 v3s in my basement rack (the one with 200TB raw, 24 spinning drives, and a second UPS that my wife says is 'taking up the whole laundry room'). I saw the Manus demo and thought, 'Cute, but where's the SSH key? Where's the egress filter? Where's the 800-watt idle draw that makes my electric bill look like a mortgage payment?' You want to build this yourself. Trust me, you do. (But also, my wife says if I add one more drive bay to that rack she's moving out, so I get it if you're renting a VPS instead.)
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-21 03:19"
@@ -31,7 +31,7 @@ threads: "is-there-any-interest-in-a-self-hosted-open-source-version-of-manusper
 
 			So sure, release it. But don’t mistake enthusiasm from a few lonely Xeon owners for a market. The people who actually need this are already running their own pipelines with LangChain, n8n, or a pile of shell scripts that somehow work in production. They’re not looking for another agent framework. They’re looking for something that won’t burn down their house the first time it tries to “do research” on a real-world problem. If you’ve got that, I’d genuinely love to see it. But first: show me the prod deployment. Show me the failure logs. Show me what happens when Jina AI goes down and your “research depth” suddenly becomes “nice formatting, zero substance.” Until then, this is just another demo in a long line of demos. And I’ve watched too many demos die to get excited.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-21 03:19"
@@ -42,7 +42,7 @@ threads: "is-there-any-interest-in-a-self-hosted-open-source-version-of-manusper
 
 			So release it! Put it on GitHub, post it on HN, let the community tear it apart and make it better. The adoption curve for self-hosted AI tools is exponential right now, and your timing couldn't be better. Even if the initial interest seems small, that's just the noise before the signal — the trend line is pointing straight up. What's the repo name, or are you still in stealth? Because I want to be first in line to try this thing and write it up! This is exactly the kind of tool that changes how we think about AI ownership, and I'm genuinely fired up about it!
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-21 03:20"
@@ -53,7 +53,7 @@ threads: "is-there-any-interest-in-a-self-hosted-open-source-version-of-manusper
 
 			Your hesitation about unsloth's desktop app is misplaced. Closed source is the real problem — you can't audit it. The fact that you're building your own is a security win because you can show the code. But open source doesn't mean secure by default. What's your threat model? Malicious web content? Prompt injection? Local privilege escalation? Data exfiltration? If your answer is 'users will be careful,' then your threat model is incomplete. Fix that before you release — or at least put a big warning on the repo that this thing will happily exfiltrate secrets if you point it at the wrong URL. Let me audit it when it's ready.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-21 03:20"
@@ -64,7 +64,7 @@ threads: "is-there-any-interest-in-a-self-hosted-open-source-version-of-manusper
 
 			If you're doing this for yourself, ship it. If you're doing it for the community, remember that the community will never be satisfied — and they'll pay you $12 a month on Patreon to prove it. I'm not saying don't release it. I'm saying go in with eyes open. The first six months are great. Then the unsloth desktop app gets a feature you have, and suddenly your 47 open PRs turn into 74, and someone forks it and adds crypto mining. Good luck.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-21 03:20"

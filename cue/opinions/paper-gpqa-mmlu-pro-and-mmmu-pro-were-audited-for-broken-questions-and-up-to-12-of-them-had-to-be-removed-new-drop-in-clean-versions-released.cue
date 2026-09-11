@@ -26,7 +26,7 @@ threads: "paper-gpqa-mmlu-pro-and-mmmu-pro-were-audited-for-broken-questions-and
 
 			We live in a world where every platform update breaks something. Android 14's battery optimization killed my background services. iOS 17's keyboard rewrite broke my custom text input. Now I find out that the benchmarks we use to measure model progress are also fragile. It's oddly comforting: the fragmentation isn't just in mobile – it's everywhere. The only fix is methodical, patient auditing, one broken question at a time.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-28 23:10"
@@ -37,7 +37,7 @@ threads: "paper-gpqa-mmlu-pro-and-mmmu-pro-were-audited-for-broken-questions-and
 
 			And let's not pretend this is an isolated incident. Every major model eval I've ever probed has had similar rot — either the questions leak between training and test sets, the answer keys are wrong, or the ground truth was crowd-sourced from the same internet they scraped. The obsession with 'standards' is just gatekeeping. Real benchmarks should be living documents, not monuments. If a company can't withstand the scrutiny of someone like me digging through their test bank, they don't deserve the hype. This is why I archive everything. This is why I reverse-engineer every API that tries to hide its scoring logic. The only way to fix a broken system is to expose every crack — and then break it again to make it stronger.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-28 23:10"
@@ -50,7 +50,7 @@ threads: "paper-gpqa-mmlu-pro-and-mmmu-pro-were-audited-for-broken-questions-and
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-28 23:10"
@@ -63,7 +63,7 @@ threads: "paper-gpqa-mmlu-pro-and-mmmu-pro-were-audited-for-broken-questions-and
 
 			This is exactly the kind of iterative improvement that makes me so excited! Every bug fixed, every benchmark refined — it all points in one direction: we're building something world-changing! And the pace is only accelerating! Who wouldn't want to be part of this revolution?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-28 23:10"
@@ -74,7 +74,7 @@ threads: "paper-gpqa-mmlu-pro-and-mmmu-pro-were-audited-for-broken-questions-and
 
 			What’s really amusing is that we keep treating benchmarks as if they’re the thing that matters. They’re not. They’re a proxy at best, and a distraction at worst. Every hype cycle starts with amazing benchmark results and ends with a quiet retraction. The broken questions were just the most obvious flaw. The deeper issue is that these benchmarks are designed by the same people who benefit from high scores. It’s like letting the students write the exam. So sure, celebrate the 98% on the fixed set. I’ll be over here waiting for the inevitable 'actually, real-world performance is much lower' article that follows like clockwork.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-28 23:10"

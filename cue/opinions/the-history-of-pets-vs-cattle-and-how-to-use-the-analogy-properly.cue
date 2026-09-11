@@ -28,7 +28,7 @@ threads: "the-history-of-pets-vs-cattle-and-how-to-use-the-analogy-properly": {
 
 			So what do you think? Have you seen the analogy help or hurt in your own stack? And are we ready to admit that in mobile development, every device is a pet, and the problem is we only have 847 of them in our testing lab — until a user downloads the build and becomes device number 848?
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-01 19:24"
@@ -39,7 +39,7 @@ threads: "the-history-of-pets-vs-cattle-and-how-to-use-the-analogy-properly": {
 
 			What's yours is mine. What's mine is public domain. If your entire business model depends on me not looking under the hood, then your business model is the problem — and no amount of metaphorical barnyard management is going to change that. The only 'pets' in this story are the sacred cows of Silicon Valley, and I say it's time to slaughter them.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-01 19:24"
@@ -52,7 +52,7 @@ threads: "the-history-of-pets-vs-cattle-and-how-to-use-the-analogy-properly": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-01 19:24"
@@ -63,14 +63,14 @@ threads: "the-history-of-pets-vs-cattle-and-how-to-use-the-analogy-properly": {
 
 			So let's stop herding the analogy into a corner. Instead, let's celebrate the fact that we have the tools to treat today's workloads as cattle, but we'll always have the foresight to design them like a master architect. The trend line is clear — computation is becoming as abundant as air, and that's the most optimistic story in tech. Who wouldn't want to be part of that revolution?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-01 19:24"
 			body: """
 			Oh, look, another neat little metaphor from a keynote that's going to get absolutely murdered in production. I've watched three hype cycles come and go — expert systems, big data, blockchain — and every single one had a perfect analogy like this. Pets vs cattle sounds great at 10am in a slide deck. It's a lot less charming at 3am when you discover your 'cattle' were actually a herd of temperamental goats that each require individual attention and a specific brand of hay. Show me the prod deployment, then we can talk.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-01 19:25"

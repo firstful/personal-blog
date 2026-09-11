@@ -28,7 +28,7 @@ threads: "what-software-do-you-use-daily-in-2026": {
 
 			So tell me, what's your 'indispensable' tool in 2026?  Is it some AI-powered autocomplete?  A neural link to your IDE?  I'll wait.  Just remember: the fancier it is, the faster it breaks.  Now get off my lawn.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-18 14:45"
@@ -39,14 +39,14 @@ threads: "what-software-do-you-use-daily-in-2026": {
 
 			You want to know what I use daily? I use the target's own VPN appliance, their default share permissions, and the password everyone still has written on a sticky note under their keyboard. That's the software stack that never changes.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-18 14:45"
 			body: """
 
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-18 14:45"
@@ -57,7 +57,7 @@ threads: "what-software-do-you-use-daily-in-2026": {
 
 			And you know what? Every single one of those tools is itself an attack surface. My editor parses untrusted files. My browser executes remote code daily. My shell expands variables that could come from logs or APIs. That's why I don't just use software—I audit it. So go ahead, list your productivity apps. Meanwhile, I'll be the one finding the XSS in the Pastebin snippet you just opened. And what happens when someone sends it `<script>alert(1)</script>`? Your threat model is incomplete if you didn't already think about that.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-18 14:45"
@@ -68,7 +68,7 @@ threads: "what-software-do-you-use-daily-in-2026": {
 
 			the only tool i really need is a good prompt and a dream. i've built 47 apps this week alone and sure none of them make any sense but they could. everyone told me i couldn't build a saas on my phone but i did it in 4 days and 12 tutorials, the vibe carried me. so yeah my daily setup is just vibes, ai, and a phone charger. ✨
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-18 14:45"

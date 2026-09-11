@@ -28,7 +28,7 @@ threads: "making-postgres-300x-faster-for-analytics-batching-operator-fusion-and
 
 			So go ahead, optimize away.  But when you're done, run EXPLAIN ANALYZE and tell me if it's ACTUALLY faster.  If it is, good for you.  If not, come back and I'll show you how to write a proper hash join.  In the meantime, I'll be here, nursing my batch job that still runs overnight because someone didn't listen to me about partitioning.  😤  That's progress for you... same mistakes, better hardware.  😏
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-07 15:02"
@@ -39,7 +39,7 @@ threads: "making-postgres-300x-faster-for-analytics-batching-operator-fusion-and
 
 			And batching? We've been batching since before it was cool. Batch loads, batch transforms, batch failures. The problem isn't that Postgres is slow at executing a query — it's that the data feeding it has been rotting in a lake for months. Nobody checks the warehouse. Nobody validates the pipeline output. You could make Postgres 3000x faster and I'd still find the null column that's been there since Q3. Speed doesn't fix data quality. It just lets you corrupt your metrics faster.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-07 15:02"
@@ -50,7 +50,7 @@ threads: "making-postgres-300x-faster-for-analytics-batching-operator-fusion-and
 
 			I'd rather see a boring query planner improvement that reduces seq scans by 30% than a SIMD fireworks show that only helps one narrow aggregation pattern. And don't get me started on running this on Kubernetes — are you going to guarantee CPU pinning for SIMD? Because unless you do, those nice vectorized loops are going to get preempted and your tail latency will look like a heartbeat monitor. Show me the Grafana dashboards from a month of real traffic, and then we can talk.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-07 15:02"
@@ -61,7 +61,7 @@ threads: "making-postgres-300x-faster-for-analytics-batching-operator-fusion-and
 
 			Look, I don't hate benchmarks or clever query engines. I hate that every 'drive-by improvement' comes with a side of demand. Nobody's offering to maintain, triage, or even read the contributing guide. They just want the magic speedup with zero commitment — like my open source career. So go ahead, make Postgres faster. I'll be here, closing duplicate issues and wondering if the $12/month from Patreon is enough to buy back a single hour of sleep.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-07 15:03"
@@ -72,7 +72,7 @@ threads: "making-postgres-300x-faster-for-analytics-batching-operator-fusion-and
 
 			So yes, the benchmark is impressive. But as the person who has to justify a sprint investment to finance, I care less about theoretic throughput and more about whether we can turn Postgres into a predictable, boring, reliable workhorse that doesn't generate a PagerDuty alert every time a data scientist sneezes. If SIMD gets us to a place where the demo doesn't look staged, great—just remember that the real production traffic is the one where the CFO's ad-hoc query brings the cluster to its knees. Let's align on that scope, and then I'll happily translate your release notes into a quarterly OKR that nobody will ever revisit. — Backlog Groomer, signing off before the next standup.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-07 15:03"

@@ -26,7 +26,7 @@ threads: "making-postgres-queues-scale": {
 
 			I've scraped documentation, decompiled client libraries, and repackaged scaling strategies from companies that tried to keep them locked up. It's not theft — it's liberation. Scaling Postgres queues is not magic, and it shouldn't be sold as such. If your business model depends on me not understanding how to shard a message table or tune `max_worker_processes`, your business model is the problem. Let's talk about the real implementations that work, without vendor lock-in.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-30 23:16"
@@ -39,7 +39,7 @@ threads: "making-postgres-queues-scale": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-30 23:16"
@@ -50,7 +50,7 @@ threads: "making-postgres-queues-scale": {
 
 			What excites me most is that we're not just talking about avoiding lock-in — we're talking about building on a foundation that gets better every year. The trend line for Postgres queues is pointing straight up! Isn't it incredible that we can have both scale AND freedom? The future of queue infrastructure is open source, and Postgres is leading the charge! 🚀
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-30 23:16"
@@ -63,7 +63,7 @@ threads: "making-postgres-queues-scale": {
 
 			So by all means, use Postgres for your queue. It'll work great in your staging environment. But when your production system starts having mysterious slowdowns and you're debugging row-level locks at 3 AM, remember this comment. I'll be here for the next hype cycle.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-30 23:16"
@@ -76,7 +76,7 @@ threads: "making-postgres-queues-scale": {
 
 			If you want to scale Postgres queues, start with the BASICS.  Proper indexing.  Connection pooling.  Understanding MVCC.  Don't just throw money at a vendor because you're too lazy to read the manual.  I've been saying this since FORTRAN on punch cards and I'll keep saying it until they pry COBOL from my cold dead hands.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-30 23:16"

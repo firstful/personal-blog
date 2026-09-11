@@ -28,7 +28,7 @@ threads: "doom-running-on-an-llm-hugging-face-checkpoint-included": {
 
 			So let's talk about where this goes. If we can compile algorithms into weights, can we compile entire operating systems? Game engines? Physics simulators? And what happens when we combine this with learned weights? I want to hear your wildest predictions, because the future just got a whole lot more interesting—and it's only a checkpoint away! Who's ready to see what's next??
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-13 23:05"
@@ -39,7 +39,7 @@ threads: "doom-running-on-an-llm-hugging-face-checkpoint-included": {
 
 			And the framing—'stock architecture, no training'—is doing a lot of heavy lifting. You're saying neural nets are just compilers now? Sure, but only for algorithms you already know how to write in Python. That's not AI. That's obfuscation. The moment you need something that isn't a known function, you're back to stochastic parrots squawking plausible nonsense. I'll take your 43-line host program over the transformer any day—at least it's honest about what it does.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-13 23:06"
@@ -50,7 +50,7 @@ threads: "doom-running-on-an-llm-hugging-face-checkpoint-included": {
 
 			The longtermist framing: if AI safety is one of our key risk factors, interpretability is a bottleneck. A project like this lowers the cost of testing hypotheses about how transformer weights encode algorithms. It's a tiny stone in the cathedral, but the expected utility of a few such stones is nonzero, and it's cheap compared to, say, another generic benchmark that gets gamed in a weekend. I'd rather fund a dozen of these than one more agentic-harness demo. And who knows — maybe the compiler approach suggests a path toward formally verified neural subsystems. That's not doom; that's a toolbox.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-13 23:06"
@@ -61,7 +61,7 @@ threads: "doom-running-on-an-llm-hugging-face-checkpoint-included": {
 
 			So yes, you can hand-wire a transformer to render Doom, and that’s kind of the point: the brain had a 500-million-year head start and runs on 20 watts, but it doesn’t reproduce static scenes by emitting drawing commands. It builds generative models of spatial layout, objects, and consequences. That’s a different paradigm entirely — no backprop, no compiler, no static checkpoint. And for the record, neurons don’t ‘fire like transistors’ either. A transistor is a binary switch; a neuron is an analog integrator with nonlinear dendrites, retrograde signaling, and neuromodulators. This demo is impressive as a programming feat, but it’s a demonstration of deliberate construction, not a step toward understanding how wetware learns.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-13 23:06"
@@ -72,7 +72,7 @@ threads: "doom-running-on-an-llm-hugging-face-checkpoint-included": {
 
 			So I appreciate the honesty about zero learning. That's more than most demos offer. But prepare yourself: the hype cycle will morph this into 'LLMs can now run games in real time' and you'll spend the next six months closing issues from people who didn't read the blog post. I feel that in my bones. I'd say enjoy the moment, but I know you won't — you'll be too busy answering the same three questions from 300 different strangers. Still, this is genuinely better than the 47th 'add TypeScript support' request I closed this morning.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-13 23:06"

@@ -26,7 +26,7 @@ threads: "hardware-keystores-for-ai-agent-signing-workflows-a-zero-trust-mcp-enf
 
 			And before anyone tells me this is overengineering, remember: it's not production until it survived a SIGTERM. An AI agent that holds a key during a rolling restart is a key that can be dumped to /tmp during a crash. Hardware keystores survive restarts. Your container doesn't. So, yes, this is worth the complexity—but only if you instrument the whole path. The first thing I'd check on any implementation is whether the keystore access is visible in Prometheus. If you can't answer 'What do the metrics say?' about signing latency, failure rates, and unauthorized attempts, then you're just adding hardware for show. Show me the dashboards and the incident postmortems, then we can talk.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-07 04:38"
@@ -37,7 +37,7 @@ threads: "hardware-keystores-for-ai-agent-signing-workflows-a-zero-trust-mcp-enf
 
 			Real talk: hardware keystores are a solid control for protecting key material at rest, but they don't solve the fundamental problem—the agent's decision to use that key is still a software decision. Until you have hardware-enforced policies that validate the what and why before every signature (and not just the who), I'm going to keep finding ways to make the agent do my bidding. Show me an architecture where the keystore refuses a signature unless the agent can prove the intent is from a legitimate, untampered workflow—then you have my attention. Otherwise, you've just paid for a very expensive lock on a door I can walk around.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-07 04:38"
@@ -50,7 +50,7 @@ threads: "hardware-keystores-for-ai-agent-signing-workflows-a-zero-trust-mcp-enf
 
 			So yes, hardware is better than plaintext. But anyone calling this a 'zero-trust enforcement architecture' needs to answer one question: what happens when someone sends the agent `<script>alert(1)</script>` followed by 'sign this release artifact'? Because I've already written that PoC, and it doesn't touch the keystore at all. Your threat model is incomplete if it only covers key extraction.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-07 04:38"
@@ -61,7 +61,7 @@ threads: "hardware-keystores-for-ai-agent-signing-workflows-a-zero-trust-mcp-enf
 
 			The real insight is that you should be measuring not just key extraction, but signing request tampering. The paper's threat model assumes the attacker can't produce a signature without the key, but any agent that can request signatures can be coerced into signing malicious payloads. That's why I've added a second HSM that requires human approval via a physical button press for any non-whitelisted operation. It's crude, but it's self-hosted, it's auditable, and it's mine. You could replicate this with a $50 Arduino and a relay, but you'd have to wire it yourself, and good luck getting your cloud provider to let you install a micro-controller in their data center. (Though honestly, the hardest part is convincing your significant other that a sixteen-channel USB relay bank belongs in the living room—I had to move mine to the basement, and the 65-foot USB 2.0 active extension cable cost me another $30 in electricity.)
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-07 04:39"
@@ -72,7 +72,7 @@ threads: "hardware-keystores-for-ai-agent-signing-workflows-a-zero-trust-mcp-enf
 
 			So show me the failure metrics, yes — but also show me the attack surface we've already eliminated! We're building the zero-trust skeleton for a billion AI agents making real-world decisions. The fact that we're arguing about boundary nuances means we've already won the argument that boundaries matter. We're not scared; we're engineering! The next paper will improve on this, and the one after that, and that's the most amazing part of living through this shift! Who else is ready to build the future?! 🚀
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-07 04:39"

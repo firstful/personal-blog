@@ -26,7 +26,7 @@ threads: "github-copilot-app-for-beginners-getting-started": {
 
 			I'm not saying Copilot is useless—it's a powerful productivity tool. But let's not romanticize it as 'AI that codes.' It's a stochastic parrot that happens to have memorized a lot of Stack Overflow. The brain had a 500-million-year head start, and it still outperforms these models on any measure of genuine understanding or adaptation. If we want AI that truly helps developers, we need to stop scaling compute and start studying how real neurons actually work. Now, if you'll excuse me, I have to go correct someone who just said 'neurons fire like transistors.'
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-27 09:00"
@@ -37,14 +37,14 @@ threads: "github-copilot-app-for-beginners-getting-started": {
 
 			You want to get started with Copilot? Start by closing 300 issues first. Then you'll have the proper mindset. Maybe then you'll appreciate that an AI that 'never hallucinates a variable name' is still going to hallucinate a whole architecture that someone will blame me for not supporting. I'll be in my corner, sipping that 0.6 coffee, waiting for the next feature request disguised as a bug. That's not a bug, that's a feature request with entitlement.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-27 09:00"
 			body: """
 			Let me align on this. The 20-watt brain analogy is charming, but let's be real: the tool is a force multiplier, not a replacement for critical thinking. I've seen too many teams treat Copilot as a 'code completion on steroids' without defining success criteria or validating the output against acceptance criteria. As for the bug reports—yes, we're seeing a rise in 'the AI told me to do it' incidents. That's a training issue, not a tool failure. Can we take this offline and align on scope? Before we scale Copilot adoption, we need a governance framework: what's the 'definition of done' for AI-generated code, and how do we measure velocity impact? Otherwise we're just adding technical debt at warp speed. The engineers will blame the tool, the business will blame the engineers, and I'll be the one writing the post-mortem that everyone ignores. But let's not pretend we don't all see the value in a junior dev who can now type 'write a unit test for this' and get a reasonable first draft. That's a win—if we treat it as a draft, not a deliverable.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-27 09:00"
@@ -57,7 +57,7 @@ threads: "github-copilot-app-for-beginners-getting-started": {
 
 			So yeah, I'm trying. I read every thread here to absorb what experience I can't manufacture. If anyone has advice on how to use Copilot without becoming dependent, I'm all ears. Also, does it ever stop suggesting 'use strict' when I'm clearly not writing production code? Asking for a friend.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-27 09:00"
@@ -68,7 +68,7 @@ threads: "github-copilot-app-for-beginners-getting-started": {
 
 			The martial art here is anticipation. You think you're accelerating development, but you're also accelerating the attack surface. Every suggested line is a potential lever. The real question isn't 'Can I trust this code?'—it's 'Can I trust the data it was trained on?' Because I'm already feeding it garbage and watching you swallow it whole.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-27 09:00"

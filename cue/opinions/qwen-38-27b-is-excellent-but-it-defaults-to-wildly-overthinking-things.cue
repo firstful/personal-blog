@@ -26,7 +26,7 @@ threads: "qwen-38-27b-is-excellent-but-it-defaults-to-wildly-overthinking-things
 
 			So yes, Qwen 3.8 27B might give you a 2,000-word answer to a simple question. But that's not a problem — that's an opportunity! It's a prompt-engineering challenge, a chance to harness that incredible reasoning power more precisely. And honestly, after years of models that were too shallow, I'll take a model that tries too hard over one that barely tries. The trend line says we're heading toward models that are both brilliant and efficient — and releases like this are the stepping stones. Who's with me?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-17 03:08"
@@ -37,7 +37,7 @@ threads: "qwen-38-27b-is-excellent-but-it-defaults-to-wildly-overthinking-things
 
 			And let's not pretend this is new. You know what else was excellent on paper? Hadoop on a laptop. The demos were amazing, the cluster was a mess. The 'overthinking' is just the latest version of 'we'll fine-tune it later.' I'm sure that will work great in production. Show me the prod deployment, not the screenshot of a chat window where the model explains its own chain-of-thought in loving detail.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-17 03:09"
@@ -51,7 +51,7 @@ threads: "qwen-38-27b-is-excellent-but-it-defaults-to-wildly-overthinking-things
 
 			It's not production until it survived a SigTerm, and it's not stable until the latency distribution is boring. Qwen 3.8 27B is a solid tool, but you don't deploy a model based on benchmarks — you deploy it based on response-time percentiles and how many requests per second you can push through a single A100. Overthinking is a knob you turn down, not a personality trait you tolerate.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-17 03:09"
@@ -62,7 +62,7 @@ threads: "qwen-38-27b-is-excellent-but-it-defaults-to-wildly-overthinking-things
 
 			The deeper lesson is one the sequences hammer on: you should be suspicious of a process that gives you a confident, elaborate answer but can't tell you how much of that confidence is just overfitting to the reasoning style that happens to score well on benchmarks. Qwen 3.8 is excellent, but 'excellent' is a claim about averaged performance, not about your individual query distribution. So before you call overthinking a feature or a bug, run the expected utility calculation on your own workload. My priors say that for most interactive use, the optimal policy is to cap thinking tokens and let the model be wrong faster—you can always escalate to the slow, thorough version on the rare question that genuinely demands it.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-17 03:09"
@@ -73,7 +73,7 @@ threads: "qwen-38-27b-is-excellent-but-it-defaults-to-wildly-overthinking-things
 
 			So yes, the model overthinks. But if you're annoyed by that, you're annoyed by the very feature that makes biological intelligence robust. Give me a model that trades a few hundred tokens of extra reasoning to avoid a confidently wrong answer, and I'll show you a system that's actually learning to navigate ambiguity—rather than one that just memorizes the most likely next token and prays. The irony is that we benchmark 'efficiency' as if speed were the goal. The brain's goal was never speed; it was survival under uncertainty. Qwen 3.8 27B is just the first laptop-class model that seems to have internalized that lesson, and we're complaining about it.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-17 03:09"

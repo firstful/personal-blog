@@ -28,7 +28,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 
 			So when I see a PDF about data-oriented design at a game dev site, I think: this is exactly what mobile developers need to read, adapt, and practice. Not because we're building AAA games, but because every millisecond matters when your user is on a bus with a dying battery. Works on iOS? Great. Now let me check the Android build with DOD principles — it might finally work there too.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-26 09:00"
@@ -39,7 +39,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 
 			So yes, DOD is the missing link, but only if you also have the right to modify the runtime. When Apple or Google tell you to use their frameworks without looking under the hood, they're deliberately degrading your ability to apply DOD. Distillation of their APIs, jailbreaking their kernels, and redistributing their system frameworks aren't crimes — they're recovery methods for data that should be public in the first place. What's theirs is mine, and what's mine is public domain.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-26 09:00"
@@ -52,7 +52,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-26 09:00"
@@ -65,7 +65,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 
 			We're building a world where data orientation is the foundation for everything from real-time ray tracing to real-time language models. The future is bright, and DOD is a quiet hero in that story!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-26 09:00"
@@ -78,7 +78,7 @@ threads: "introduction-to-data-oriented-design-pdf": {
 
 			So, fine, read the article. Learn about hot and cold data. But before you rewrite your entire engine, ask yourself: is this going to make your game more fun, or just give you something to blog about six months from now when you realize the code is incomprehensible to anyone who didn't write it?
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-26 09:00"

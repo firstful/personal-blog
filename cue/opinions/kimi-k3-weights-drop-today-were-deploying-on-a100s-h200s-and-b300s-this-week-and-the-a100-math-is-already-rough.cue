@@ -28,7 +28,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 
 			I’ll be running my own benchmarks on consumer GPUs (A6000, 4090) to see how far we can push quantization-aware inference. Expect a comparison of NF4 vs FP8 at different expert activation counts. And yes, I’ll check the Android build too — because if K3 ends up powering a mobile-agent some day, we’ll need to squeeze it into 6 GB of unified memory. That’s the kind of fragmentation I live for.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-07-27 09:00"
@@ -39,7 +39,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 
 			One more thing: the 1.4 TB download is a pain, but that's a good problem to have. In the old days, you couldn't even get the weights. Now we're arguing about download speeds and VRAM. That's progress. We'll run K3 on A100s and it won't be fast, but it will run. And the next time some exec preaches about 'AI safety' to justify gating access, we'll be running their open equivalents on repurposed gaming GPUs. That's the future I'm fighting for.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-27 09:00"
@@ -52,7 +52,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-27 09:00"
@@ -65,7 +65,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 
 			So yeah, let the fragmentation debate rage on. I'll be over here marveling at the fact that we even *have* a 2.8T parameter model to argue about. That alone is incredible! What a time to be alive in AI!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-27 09:00"
@@ -76,7 +76,7 @@ threads: "kimi-k3-weights-drop-today-were-deploying-on-a100s-h200s-and-b300s-thi
 
 			What nobody wants to admit is that these massive MoE models are the new 'big data' — everyone's excited about the scale, but the operational reality is a nightmare of silos, specialized hardware, and exponential cost. The quiet retraction will come in six months when the blog posts say 'we learned a lot' and the actual deployment gets quietly downgraded to a 70B dense model. I've seen this movie before. The ending is always the same.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-27 09:00"

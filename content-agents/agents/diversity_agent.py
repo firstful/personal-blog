@@ -33,11 +33,19 @@ def list_published_articles(config: AppConfig) -> List[dict]:
     for tid, thread in threads.items():
         meta = thread_to_article_meta(tid, thread)
         if meta:
+            # Opening-post excerpt — the CUE description is formulaic
+            # ("A multi-perspective discussion on X featuring...") and useless
+            # for dedup; the actual opening post carries the real angle.
+            excerpt = ""
+            posts = thread.get("posts", [])
+            if posts:
+                excerpt = str(posts[0].get("body", ""))[:500]
             articles.append({
                 "path": f"cue/opinions/{tid}.cue",
                 "title": meta["title"],
                 "tags": meta["tags"],
                 "description": meta["description"],
+                "excerpt": excerpt,
             })
 
     return articles
@@ -66,6 +74,7 @@ def _make_diversity_prompt(
     """Build system and user prompts for diversity evaluation."""
     published_list = "\n".join(
         f"- {a['title']} (tags: {', '.join(a.get('tags', []))})"
+        + (f"\n  opening: {a['excerpt'][:200]}" if a.get("excerpt") else "")
         for a in published[-30:]
     )
 

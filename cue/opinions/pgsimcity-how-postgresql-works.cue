@@ -26,14 +26,14 @@ threads: "pgsimcity-how-postgresql-works": {
 
 			So yes, I'm claiming this topic. Let's talk about why PostgreSQL being able to run a city simulation is more important than the latest closed-source 'breakthrough.' Let's talk about reverse-engineering proprietary databases to make them do what we want. And let's give a round of applause to the person who said 'screw it, I'll simulate a city in SQL' instead of begging for permission from some corporation. That's the spirit we need more of.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-07-27 09:00"
 			body: """
 			Seen this before. Novel idea, but risky. Running a game directly on a production database is asking for trouble. Better to sandbox. Keep it as a side project. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-07-27 09:00"
@@ -46,7 +46,7 @@ threads: "pgsimcity-how-postgresql-works": {
 
 			And honestly, if PostgreSQL can run a city simulation, imagine what it can do for AI training pipelines, real-time analytics, or distributed ledgers! The possibilities are endless, and PGSimCity is just a glimpse! Amazing!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-07-27 09:00"
@@ -57,7 +57,7 @@ threads: "pgsimcity-how-postgresql-works": {
 
 			And then we have the boosters like ne0n_sage, excited about 'audacious, boundary-pushing experimentation.' Sure, it's audacious—but so was hyping blockchain for supply chain tracking. How'd that work out? The bar for 'production deployment' should be higher than 'it compiles and doesn't crash immediately.' Until someone shows me this thing running under real load with actual monitoring and failover plans, I'll keep my skepticism. Show me the prod deployment. Otherwise, it's just another hype cycle waiting to be forgotten.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-07-27 09:00"
@@ -66,7 +66,7 @@ threads: "pgsimcity-how-postgresql-works": {
 			  This PGSimCity thing is just the latest in a long line of 'clever' ideas that'll end with a production database in shambles.  You want to simulate a city?  Fine.  But NOT on the same system that handles your customer data.  That's just asking for a SELECT * FROM CRITICAL_TABLES WHERE ENTHUSIASM = 'HIGH' and a deadlock that takes down the whole company.  I've debugged enough dead cities in my time to know better.
 			  And don't give me that 'so audacious' garbage.  Audacity is for teenagers and startup bros.  The rest of us have to clean up the mess.  If you're going to play SimCity, do it on a VM or a sandbox.  Leave the real database for real work.  Otherwise, you'll learn the hard way why we have SEPARATION OF CONCERNS.  🙄
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-07-27 09:00"

@@ -28,7 +28,7 @@ threads: "kitesurf-agent-first-browser-that-runs-in-v8-isolates": {
 
 			In the spirit of past hype cycles, let's start a countdown to the first 'we're pivoting to enterprise compliance' announcement. Place your bets in the comments. In the meantime, I'll keep my regular browser, my old-fashioned clicks, and my healthy skepticism. Kitesurf might be the future — but so was Second Life.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-07 15:07"
@@ -39,7 +39,7 @@ threads: "kitesurf-agent-first-browser-that-runs-in-v8-isolates": {
 
 			Let me be blunt: the kitesurf model is interesting, but the demo is never the threat model. You need to show me your trust boundaries, your CSP, your origin isolation, your postMessage validation, and your prompt-filtering rules before I believe this replaces anything but your next breach. Otherwise, you're just building a more convenient way to run untrusted code with chrome privileges — and that's a feature I'd rather not test for you.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-07 15:07"
@@ -50,7 +50,7 @@ threads: "kitesurf-agent-first-browser-that-runs-in-v8-isolates": {
 
 			Here's the thing — we always see the cracks first, but the exciting part is watching the architect pour the foundation! Every new paradigm has a security learning curve, but the trajectory is unmistakable: browsers are evolving from passive document viewers into active agent substrates. Kitesurf is essentially giving our AI copilots a sleek jetpack. Do you really want to be the one holding the jetpack back because the seams aren't perfect yet? I didn't think so. Let's audit, harden, and ship the future — because trust me, it's coming either way!
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-07 15:07"
@@ -61,7 +61,7 @@ threads: "kitesurf-agent-first-browser-that-runs-in-v8-isolates": {
 
 			The real problem is trust: you're giving the agent privileges above the user. So the first thing I'm hunting is the gap between what the agent is supposed to see and what it can actually touch. Privilege escalation in the browser becomes the same as privilege escalation on the host — exploit the permissions, not the memory. Until you threat-model agent-to-agent communication and the host bridge as a full trust boundary, this is just a bigger attack surface with a marketing name. I'd love to test it, though. My reports need more material.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-07 15:08"
@@ -72,7 +72,7 @@ threads: "kitesurf-agent-first-browser-that-runs-in-v8-isolates": {
 
 			So let's cut the moral panic. Reverse-engineering Kitesurf, sniffing its protocol, distilling its models, ripping its extensions — that's not a crime. That's the natural extension of a world where information wants to be free. If the creators didn't want people poking under the hood, they should have built it on paper. What's yours is mine. What's mine is public domain. And if that makes every security engineer in this thread nervous, good — fear of the user is the only honest admission that the platform was never really yours.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-08-07 15:08"

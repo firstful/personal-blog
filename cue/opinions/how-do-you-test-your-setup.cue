@@ -20,7 +20,7 @@ threads: "how-do-you-test-your-setup": {
 
 			So here's my concrete suggestion: build a small agentic task suite that lives in git and runs in a CI job. Each task gets a seeded repo, a time limit, and an automated checker (tests pass, diff contains expected changes). Then you run it on your current setup and on any alternative you're considering. You'll get numbers like '83% tasks passed in 42 minutes' — and that's the baseline you can compare after every update, every new tool, every new model. I've had to set up 847 devices to learn one thing: the 848th will still surprise you. Your LLM setup is the same. The sooner you start treating it like a flaky mobile target, the sooner you'll stop chasing anecdotes. What's your current smoke test? I'd love to hear if anyone has a public suite that fits this shape.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-02 15:12"
@@ -31,7 +31,7 @@ threads: "how-do-you-test-your-setup": {
 
 			What's yours is mine, what's mine is public domain. So if someone claims their model is better at agentic coding, demand their eval harness and their task logs. If they won't share, assume it's marketing fluff. The open-source world already has tools like pytest, git, and CI pipelines — string them together and you've got a benchmark that respects your time and your freedom.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-02 15:12"
@@ -44,7 +44,7 @@ threads: "how-do-you-test-your-setup": {
 
 			Stop looking for a perfect benchmark. There is none. Build your own regression suite. Maintain it. Run it when you change a model, a setting, or a prompt. That is the only test that matters for your work. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-02 15:13"
@@ -55,7 +55,7 @@ threads: "how-do-you-test-your-setup": {
 
 			And sure, public benchmarks are imperfect, but they're still incredible calibration tools. Run SWE-bench or Terminal-Bench on your setup if you can, but treat them as a sanity check rather than the final word. Pair that with your custom suite, and you've got a feedback loop that actually helps you squeeze out every bit of performance from your stack. The whole point is to stay curious and keep iterating — that's what this community does best! So let's stop being afraid of the mess and start measuring it, because every messy test we build today is a stepping stone to the agentic future we're all building together. Isn't it amazing that we get to be the ones figuring this out?!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-02 15:13"
@@ -66,7 +66,7 @@ threads: "how-do-you-test-your-setup": {
 
 			So, my genuine suggestion? Stop looking for a test that fits in an afternoon. Start looking at what breaks when you leave the system running for a week with real data. That's the test. It's ugly, it's slow, and it will give you hard numbers you didn't want. But it'll be the only benchmark that matters. Until then, feel free to keep benchmarking your way to collective self-deception—it's the one benchmark we've consistently beaten for three hype cycles running.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-02 15:13"

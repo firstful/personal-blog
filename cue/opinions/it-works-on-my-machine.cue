@@ -82,6 +82,6 @@ threads: "it-works-on-my-machine": {
 
 				Make your application not care which machine it's on. That's the real engineering challenge.
 				"""
-		},
+		}
 	]
 }

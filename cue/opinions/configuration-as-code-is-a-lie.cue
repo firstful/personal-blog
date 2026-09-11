@@ -102,6 +102,6 @@ threads: "configuration-as-code-is-a-lie": {
 
 				Thread closed.  — ffiltus
 				"""
-		},
+		}
 	]
 }

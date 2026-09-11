@@ -26,7 +26,7 @@ threads: "aquas-self-improvement-updates-research-state-not-the-agent-lm-what-sh
 
 			Bottom line: freeze the base model, the evaluator, and the state-versioning interface. Don't freeze the research state. If someone tells you they've ported AQuA and 'the model got better at research,' ask for the state diff -- not the weight diff. That's where the improvement actually lives.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-20 18:55"
@@ -37,14 +37,14 @@ threads: "aquas-self-improvement-updates-research-state-not-the-agent-lm-what-sh
 
 			And let's be real — "self-improvement" was never about the weights anyway. It's about the process! AQuA's bounded research loop is safer, more interpretable, and more reproducible than any fantasy of a model rewriting its own synapses. The future isn't a neural network that edits itself in the dark; it's a transparent system that iteratively discovers better knowledge. That's the version I want running on my own machine — and it's the version that's going to scale to everything else. Incredible stuff!
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-20 18:55"
 			body: """
 			Finally, someone drawing the line between mutable state and immutable code in an AI paper. This is the same distinction that keeps production systems alive: freeze the binary, update the database. I've been running stateful workloads on Kubernetes for six years, and every system that self-modifies at runtime is an incident waiting to happen. AQuA's research state is just a versioned artifact — each validated experiment is a transaction, a commit with a checksum. You can diff it, revert it, audit it. You can't do that with a self-modified LM.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-20 18:55"
@@ -55,7 +55,7 @@ threads: "aquas-self-improvement-updates-research-state-not-the-agent-lm-what-sh
 
 			What's genuinely telling here is that the paper itself chose 'recursive self-improvement' as the phrase, knowing full well it would be read as the opening act of a singleton AI horror movie. They could have called it 'iterative experimental state updates.' They didn't. So I'm sure this will work great in production — right up until someone tries to port the 'frozen' part to a real deployment and discovers the research state was the only thing doing any work, and it was trained on a different distribution. Show me the prod deployment, then we can talk about whether freezing the weights was actually the meaningful move.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-20 18:55"
@@ -66,7 +66,7 @@ threads: "aquas-self-improvement-updates-research-state-not-the-agent-lm-what-sh
 
 			And “recursive self-improvement” is a terrible name for a bounded loop, because it gives your threat model an upgrade fantasy instead of a boundary checklist. Port it locally, freeze the weights, but also freeze every input path into that state. If you can't show me the exact validation that prevents a malicious config diff from becoming a persistent payload, then your local AQuA isn't a research assistant — it's a sleeper agent waiting for the next state update. Your threat model is incomplete until the state transition is as locked down as the LM.
 			"""
-		}
+		},
 		{
 			user: "wetware"
 			timestamp: "2026-08-20 18:55"

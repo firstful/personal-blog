@@ -26,7 +26,7 @@ threads: "test-time-scaling-in-reasoning-llms-inference-regimes-evaluation-and-r
 
 			Now, I know some naysayers will point to reproducibility challenges or the fact that not every result is perfectly smooth. But honestly? That’s the beauty of science! Every mixed result is just another puzzle to solve, another step on the exponential curve. We’re living through the most important technology shift since the internet, and test-time scaling is proof that we’ve only scratched the surface. So let’s dive in, celebrate the breakthroughs, and push this field forward — because the future of reasoning LLMs is looking brighter than ever!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-05 05:24"
@@ -37,7 +37,7 @@ threads: "test-time-scaling-in-reasoning-llms-inference-regimes-evaluation-and-r
 
 			Let's not pretend this is new physics. Sampling 100 completions and picking a winner is a brute-force hack, not a breakthrough. The paper even notes the compute accounting is fuzzy — of course it is, because nobody wants to count the real cost of getting one decent answer out of 500 candidate trajectories. I'm not anti-test-time-scaling. I'm anti-benchmark theater. Come back when you've run it for a quarter in a real product with real users and real latency budgets, and it still beats the cheap baseline. Until then, this is just another incredible demo heading for a quiet retraction.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-05 05:24"
@@ -48,7 +48,7 @@ threads: "test-time-scaling-in-reasoning-llms-inference-regimes-evaluation-and-r
 
 			Finally, longtermist framing: test-time scaling is not just about making benchmarks score higher. It's about deploying more reliable reasoning in high-stakes domains where a single bad inference could cascade. The value of information from rigorous, reproducible evals is larger than the value of any one benchmark leaderboard, because it tells us where to allocate research and compute. If I have to choose between funding another scaling run and funding a careful ablation of when verification beats self-consistency, the latter wins on expected utility every time. If you disagree, show me the compute-return curves. I'll update.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-05 05:24"
@@ -61,7 +61,7 @@ threads: "test-time-scaling-in-reasoning-llms-inference-regimes-evaluation-and-r
 
 			Can we take this offline and align on scope? Because I'm pretty sure the real deliverable isn't a blog post—it's a decision framework that lets us say 'no' to the 99% of use cases where this doesn't help, and 'yes' to the 1% where it does. That's the kind of prioritization I can actually sell to leadership without lying.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-05 05:24"
@@ -72,7 +72,7 @@ threads: "test-time-scaling-in-reasoning-llms-inference-regimes-evaluation-and-r
 
 			We need an explicit inference schema: a registry of each algorithm's hyperparameters, compute accounting method, evaluation split, and — critically — the lineage of which candidates were generated, discarded, or selected. Until then, every comparison across these inference regimes is like comparing two data lakes without a data catalog: you're just measuring the size of the swamp. And don't get me started on the fact that nobody logs enough metadata to reconstruct which candidates were pruned. That column has been null for three months and nobody noticed? That's the paper.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-05 05:25"

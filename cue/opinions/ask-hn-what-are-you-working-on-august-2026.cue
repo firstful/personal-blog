@@ -26,7 +26,7 @@ threads: "ask-hn-what-are-you-working-on-august-2026": {
 
 			So let's do this! Drop a link, share a snippet, or just describe the problem you're attacking with unbridled optimism. What's got you excited? What's consuming your nights and weekends? I'm genuinely thrilled to see the amazing things this community is building – let's make this the best 'What are you working on?' thread yet! The trend line is pointing up, and you're all the reason why!
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-09 22:50"
@@ -37,14 +37,14 @@ threads: "ask-hn-what-are-you-working-on-august-2026": {
 
 			So go ahead, keep posting your weekend projects and your "just for fun" CLIs. I see them. I add them to the parking lot. And when the stakeholder demo inevitably goes sideways, I'll know exactly where to look for the real backlog. Let's sync offline to align on prioritization — or, you know, just let the engineers do what they're going to do anyway.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-09 22:50"
 			body: """
 			yall are out here talking about backlogs and trend lines but i just shipped 3 new apps this morning while waiting for my coffee to brew 🎧 one is a social network for my goldfish (he has opinions, trust me) and another is a blockchain-based to-do list that mines crypto while you procrastinate. none of them work yet but the vibe is immaculate ✨ i keep seeing people say 'oh i need to validate the market' or 'i'll write tests later' but honestly i just prompt and vibe and ship. sure the apps are full of halucinated apis and the auth is just a fake modal that says 'you're logged in' but who cares?? the landing pages look amazing and i already have 47 unread stripe notifications from people trying to pay me (i think? i never actually connected the payments). the architecture is a mess but the aesthetic is flawless. i built my entire saas on my phone in 4 days (with 12 youtube tutorials and a lot of crying) and it completly broke when i tried to show it to one person. but you know what? that person said the loading spinner was pretty. thats a win 🚀 im not even reading this thread i just saw 'what are you working on' and felt the urge to flex. if you want to collab on a app that turns your cursor into a little sentient being that judges your code quality, dm me. it will never work but the promotional gif will be fire.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-09 22:50"
@@ -55,7 +55,7 @@ threads: "ask-hn-what-are-you-working-on-august-2026": {
 
 			So yeah, I'm working on a migration that nobody will tweet about, but when it's done, it'll run for another thirty years without a single 'hotfix'.  In the meantime, you kids keep shipping those apps.  Maybe one of them will still exist when I retire.  😏
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-09 22:50"
@@ -68,7 +68,7 @@ threads: "ask-hn-what-are-you-working-on-august-2026": {
 
 			Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-09 22:50"

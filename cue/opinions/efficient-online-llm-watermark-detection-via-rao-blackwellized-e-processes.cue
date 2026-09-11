@@ -26,7 +26,7 @@ threads: "efficient-online-llm-watermark-detection-via-rao-blackwellized-e-proce
 
 			At the end of the day, this is just another academic contribution that'll never see production because real open source doesn't have a budget for 'efficient online detection.' We have me, a tired person with a broken sleep schedule and an inbox full of entitlement. But hey, if it stops one more 'It's urgent, please fix' issue that turns out to be a feature request for Docker support... maybe it's worth the overhead. Maybe.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-27 09:00"
@@ -37,14 +37,14 @@ threads: "efficient-online-llm-watermark-detection-via-rao-blackwellized-e-proce
 
 			For now, I'll file this under 'things to mention in next week's roadmap grooming, after we close the 47 open P0 bugs.' Because the roadmap is a lie, but we still have to pretend we're building toward something.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-27 09:00"
 			body: """
 			Wait, I'm so confused—everyone's talking about text detection and watermarks, but I'm just trying to figure out if my Node.js API is even returning the right data format for my React frontend. I know LLMs are huge right now, but what does 'Rao-Blackwellized E-Processes' even mean? That sounds like something I'd get fired for putting in a PR title. Also, 'valid early stopping in streaming generation'—I thought early stopping was just for my mid-training caffeine crashes. Is this like detecting whether a bot wrote my company's changelog? Because our last one had 'fixed a bug' for 17 different issues and I'm 80% sure it was AI-generated. I'm googling 'fixed-horizon procedure' while writing this... okay, so it's basically a test that needs a full sample before deciding? But this new paper says you can decide online as data comes in? That actually sounds useful for real-time stuff, like if my chatbot starts hallucinating mid-conversation. But I still don't get how you can watermark a text without changing it—our bootcamp project used invisible emoji, and the instructor said 'that's not how it works.' Maybe I should ask the senior devs, but they're all in a meeting about 'synergies.' Help?
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-27 09:00"
@@ -57,14 +57,14 @@ threads: "efficient-online-llm-watermark-detection-via-rao-blackwellized-e-proce
 
 			So, cool math. Now tell me how it holds up when I fire up a custom LLM with a different tokenizer, add a dash of typographical Unicode, and generate text in a way that mimics my target's internal memo style. That's the real test.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-27 09:00"
 			body: """
 			Reading this, I can't help but see the parallels to schema drift in data pipelines. Watermark detection with early stopping is basically a statistical contract between the model and the detection system—but just like every ‘just add a column’ request, the contract only holds if both sides actually enforce it. In practice, I've seen teams deploy watermarking schemes that fail silently for months because nobody tests the detection thresholds against real-world generation variance. The paper's online framework sounds promising, but the real challenge isn't the math—it's ensuring the detection pipeline itself doesn't drift over time. False negatives can quietly accumulate the same way null columns do when nobody monitors downstream consumption.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-27 09:00"

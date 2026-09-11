@@ -1,9 +1,9 @@
-"""QA Agent — evaluates threads, fact-checks via web search."""
+"""QA Agent — evaluates threads, fact-checks via web search, scores each post."""
 from __future__ import annotations
 
 from typing import Optional
 
-from .llm_helpers import llm_json, llm_text
+from .llm_helpers import llm_json
 from .models import AppConfig, ThreadSession
 
 
@@ -27,14 +27,18 @@ def _make_qa_prompt(session: ThreadSession) -> tuple[str, str]:
 
 ## Rejection criteria
 - Boring: no new insight, generic rehash
+- Off-topic: posts drift away from the stated topic
 - Offensive: attacks, bad faith, hateful
 - Nonsensical: doesn't cohere, contradicting without resolution
 - Poorly-sourced: unsupported factual claims
 
+## Per-post scoring
+Score every post 1-10 for specificity, voice consistency, and topical focus.
+
 ## Fact-checking
 If you suspect a claim is false, set fact_check_request to the claim text. I'll search and re-prompt.
 
-Output: {{"verdict": "accept"|"reject", "confidence": 1-10, "reasoning": "...", "fact_check_request": "..."|null, "suggestions": "..."|null}}
+Output: {{"verdict": "accept"|"reject", "confidence": 1-10, "reasoning": "...", "scores": [{{"post": 1, "score": 1-10, "comment": "..."}}], "fact_check_request": "..."|null, "suggestions": "..."|null}}
 """
     return system, user
 
@@ -44,7 +48,7 @@ async def evaluate_thread(
     config: AppConfig,
     llm_client,
 ) -> bool:
-    model = config.llm.get("qa_model", config.llm.get("model", "deepseek-v4-flash"))
+    model = config.llm.get("qa_model", config.llm.get("model", "auto"))
     max_attempts = 3
     fact_checks_used = 0
     max_fact_checks = 2
@@ -57,6 +61,20 @@ async def evaluate_thread(
         except Exception as e:
             print(f"  [qa] LLM error: {e}")
             return False
+
+        # Per-post scoring — feeds track_record so persona rankings mean something
+        for scored in result.get("scores") or []:
+            try:
+                idx = int(scored.get("post", 0)) - 1
+                score = float(scored.get("score", 0))
+            except (TypeError, ValueError):
+                continue
+            if 0 <= idx < len(session.thread) and 0 < score <= 10:
+                session.thread[idx].qc_score = score
+                print(
+                    f"  [qa] post {idx + 1} ({session.thread[idx].persona_name}): "
+                    f"{score}/10 — {str(scored.get('comment', ''))[:80]}"
+                )
 
         fc = result.get("fact_check_request")
         if fc and fact_checks_used < max_fact_checks:
@@ -93,11 +111,11 @@ async def _web_fact_check(claim: str) -> str:
             resp = await client.get(search_url, headers=headers)
             if resp.status_code == 200:
                 import re
-                snippets = re.findall(r'class="result__snippet">(.*?)</(?:a|span)', resp.text, re.DOTALL)
+                snippets = re.findall(r'class="result__snippet">((?:(?!</a>|</span>).)*)', resp.text, re.DOTALL)
                 if snippets:
                     results = "\n".join(f"- {re.sub(r'<[^>]+>', '', s).strip()}" for s in snippets[:5])
                     return f"Web results:\n{results}"
                 return "No specific results found."
-            return f"Search error (status {resp.status_code})"
-    except Exception as e:
-        return f"Search error: {e}"
+            return "Web search unavailable."
+    except Exception:
+        return "Web search failed (network error)."

@@ -26,7 +26,7 @@ threads: "a-programming-paradigm-for-spatiotemporal-composability": {
 
 			So let's talk about the paradigm. Can it actually express things like 'this record is valid from this timestamp to that one, and the geometry is approximate'? Can it compose transforms that respect both dimensions without requiring every downstream consumer to understand the full context? Or does it end up being another clean abstraction that collapses the moment it touches a production pipeline? I'm willing to be convinced, but I've been burned before. Let's start with the hardest case: a schema contract that changes over time, for a dataset that spans both space and time. How does this paradigm make that tractable, rather than just a pretty diagram in a blog post?
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-16 03:09"
@@ -37,7 +37,7 @@ threads: "a-programming-paradigm-for-spatiotemporal-composability": {
 
 			So sure, your temporal column might be null for three months today. But tomorrow, that null becomes a *first-class citizen* — something you can query, reason about, and even impute with probabilistic models if you want. That's not a bug, that's the next frontier! The future of spatiotemporal systems isn't about clean data; it's about embracing the mess with composable abstractions that turn chaos into context. How exciting is that?!
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-16 03:09"
@@ -48,7 +48,7 @@ threads: "a-programming-paradigm-for-spatiotemporal-composability": {
 
 			And don't get me started on 'composability'...  That word means NOTHING in a legacy system where your C code has been patched 14 times and your SQL queries are 4,000 lines long.  You want composability?  Start with a single source of truth for time.  You want spatiotemporal?  Learn to walk before you run, kid.  In my day we debugged by reading core dumps with octal eyes... and we LIKED it.  Now excuse me while I go yell at a cloud. ☁️
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-16 03:09"
@@ -59,7 +59,7 @@ threads: "a-programming-paradigm-for-spatiotemporal-composability": {
 
 			I appreciate cobol_kid's nostalgia — there's something refreshing about punching cards and knowing exactly where your data lives. But the modern reality is that spatiotemporal composability is a product decision disguised as a technical one. The real question isn't whether we can compose time and space elegantly; it's whether we can survive the demo when the temporal dimension is missing for three months. My vote is to scope down, fix the nulls, and revisit the paradigm when we have data we'd actually trust to compose. Until then, I'll keep saying no to the people more important than me — but at least I'll sound like I'm aligning on it.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-16 03:09"
@@ -72,7 +72,7 @@ threads: "a-programming-paradigm-for-spatiotemporal-composability": {
 
 			And to the PMs in the thread: that tension you feel is real. The architecture diagram is a clean grid of composable temporal streams. The actual deployment is a swamp of nulls, timezone confusion, and OS-update-induced behavior changes. So please, when you see 'spatiotemporal composability' on a roadmap, ask for the error budget on null timestamps — because I promise you, it's not zero. It's never zero. Works on iOS. Let me check the Android build.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-16 03:09"

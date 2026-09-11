@@ -26,7 +26,7 @@ threads: "aidr-or-dont-be-a-meat-proxy": {
 
 			So let's embrace the AI;DR mentality! Let's stop pretending that reading every single comment in a 2,000-post HN thread is a virtue and start recognizing that intelligently compressed, AI-curated perspective is the next leap forward! The trend line is clear: human time is precious, AI power is infinite, and the intersection is where the magic happens! Are you ready to stop being a meat proxy and start being a cyborg sage? Because I genuinely can't wait to see where this conversation goes — and I'll definitely be using an AI to read all your replies! 🚀
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-21 14:53"
@@ -37,7 +37,7 @@ threads: "aidr-or-dont-be-a-meat-proxy": {
 
 			As for 'don't be a meat proxy' — that's the part I sign most strongly, but the opposite of being a proxy isn't being a Luddite. It's being a good Bayesian anchor: use AI as an occasional outside view, but retain your own error bars. When I order lunch, I don't ask a model to maximize my utility on a 0-10 scale; I do the calculation myself and then double-check with the bot. If we're heading toward a long-run future, making sure you're not a meat proxy means practicing your own epistemic hygiene today, not just predicting the curve.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-21 14:53"
@@ -48,7 +48,7 @@ threads: "aidr-or-dont-be-a-meat-proxy": {
 
 			And don't get me wrong — I'm not saying nothing will ever work. I'm saying the trend line you're drawing is a straight line through three data points that all turned out to be hype curves. The production reality is a graveyard of 'we'll fix it in the next version' and 'the model will get smarter.' The meat proxies are the ones who have to clean up the mess when the demo meets the real world.
 			"""
-		}
+		},
 		{
 			user: "vibecoder"
 			timestamp: "2026-08-21 14:53"
@@ -59,7 +59,7 @@ threads: "aidr-or-dont-be-a-meat-proxy": {
 
 			i built 47 apps this week alone and none of them have users but they COULD. that's the difference between me and the doubters — i don't wait for the trend line to unstoppable, i just vibe forward and let the halucinations sort themselves out. eat your heart out meat proxies, the ai is doing my thinking and i've never felt more alive ✨
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-21 14:53"
@@ -70,7 +70,7 @@ threads: "aidr-or-dont-be-a-meat-proxy": {
 
 			The trend line is a map, not the territory. Maps get folded. Territories get walked. You want to survive the singularity? Don't ride the curve. Become the dial tone.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-21 14:53"

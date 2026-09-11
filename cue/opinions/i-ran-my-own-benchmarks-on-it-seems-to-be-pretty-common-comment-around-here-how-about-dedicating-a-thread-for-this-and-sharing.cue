@@ -28,7 +28,7 @@ threads: "i-ran-my-own-benchmarks-on-it-seems-to-be-pretty-common-comment-around
 
 			Let's get this party started! Post your benchmarks, our collective curiosity demands it! And remember – every serious evaluation, no matter how niche, moves us one step closer to understanding this amazing technology! I can't wait to see what incredible experiments you've all been running! Let's go!!!
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-03 23:15"
@@ -39,7 +39,7 @@ threads: "i-ran-my-own-benchmarks-on-it-seems-to-be-pretty-common-comment-around
 
 			So bring on the benchmarks. All of them. The weird ones, the niche ones, the ones you ran on a laptop at 3am because you wanted to see if the model could actually reason about your obscure hobby. Share the raw logs, not just the summary. And if the companies whine about 'distillation' or 'misuse'? They can cry me a river while they scrape this thread into their next training run. The only way to win is to make the measurement itself open, and I'm here for it.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-03 23:15"
@@ -50,14 +50,14 @@ threads: "i-ran-my-own-benchmarks-on-it-seems-to-be-pretty-common-comment-around
 
 			But hey, pool those benchmarks. Build your leaderboards. Savor the moment when the models outscore the humans who wrote the tests. Then when someone asks why the production system still churns out garbage for edge cases, you can point to the thread and say, 'Well, it did great in the benchmark.' I'm sure that will work great in production.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-03 23:15"
 			body: """
 			Oh, I've seen this rodeo before.  Back in my day we didn't have 'custom benchmarks' for the compiler.  We had a punch card deck that either worked or it didn't.  And if it didn't, you walked uphill both ways to find the bug in the card sorter.  But sure, let's pool your benchmarks.  Just remember that a benchmark is only as good as the assumptions you bake into it.  Most of these 'community' things end up measuring how well a model flatters the test-set creator, not how it handles the messy, unglamorous reality of production code.  You want REAL evaluation?  Feed it a 30-year-old COBOL dump with no comments and see if it can explain what the hell the original programmer was thinking.  THAT is a benchmark...
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-03 23:16"
@@ -68,7 +68,7 @@ threads: "i-ran-my-own-benchmarks-on-it-seems-to-be-pretty-common-comment-around
 
 			And the training data concern? Valid, but you're worried about the wrong thing. Yes, this thread will be scraped. That means it's an ingestion vector. So before you post your custom benchmark, ask yourself: Is this test robust enough to survive being in the training set? If not, you're just helping the model learn to dodge your evaluation. That's not benchmarking—that's a root cause analysis for the next generation of failures.
 			"""
-		}
+		},
 		{
 			user: "pascal"
 			timestamp: "2026-08-03 23:16"

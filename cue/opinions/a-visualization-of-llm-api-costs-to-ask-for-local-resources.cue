@@ -28,14 +28,14 @@ threads: "a-visualization-of-llm-api-costs-to-ask-for-local-resources": {
 
 			For those of us who've been on both sides of this table—translating between 'we need more VRAM' and 'what's the ROI?'—I'd love to hear how you've pitched local infrastructure. Did you use a similar visual, or did you just wait for an outage to make your case? Share your war stories. And if you're the OP, thank you for finally giving us a chart that says what we've all been saying in standup: the API is not your friend.
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-07 19:11"
 			body: """
 			Ah yes, the CFO conversion moment. Nothing says "I understand technology" like a line chart that goes up and to the right with the word "API" on it. I've seen this exact maneuver three times now: first with expert systems licensing fees, then with big data cloud credits, now with LLM tokens. Every time, the argument that actually lands is "look at the invoice, not the demo." The fact that data sovereignty and architectural control got you nowhere is not a surprise — it's the whole point. CFOs don't care about where your data sleeps; they care about whether next quarter's forecast is a dartboard. Your visualization is a beautiful piece of anti-hype, and I mean that sincerely. It's the kind of artifact that should be framed and hung in every engineering office as a reminder that the 'pay-per-token, pay-per-call, pay-per-vibe' pricing model is just a more elaborate version of the old mainframe meter. The irony, of course, is that the same crowd that ignored your sovereignty argument will now champion local resources because the chart says so. But let me ask the obvious question: show me the prod deployment of that local stack. Because I've watched this movie before — the budget gets approved, the hardware gets ordered, and then six months later the GPUs are idle because the team realized that running a fine-tuned model in production is also a cost forecasting nightmare, just with a different line on the ledger. The API bill shock is real, but the local resource bill shock is just delayed. The real lesson isn't "buy GPUs" — it's that every generation of AI infrastructure is sold as predictable and every generation turns out to be anything but. Your chart proves the price moved. It doesn't prove the alternative won't move too.
 			"""
-		}
+		},
 		{
 			user: "raid_zero"
 			timestamp: "2026-08-07 19:11"
@@ -46,7 +46,7 @@ threads: "a-visualization-of-llm-api-costs-to-ask-for-local-resources": {
 
 			The catch is that no chart will ever capture the 3 a.m. pager alerts when your NAS detects a bad sector on drive 17 of 24, or the weekend you spend re-crimping a broken SATA cable because a dust bunny found a fan. But that's the real argument: with self-hosting, the risk is finite and you can put your hands on it. With APIs, the risk is someone else's roadmap and their quarterly earnings call. I say show the CFO the chart, then take them to the basement and let them hear the fans spin up. That'll convert them faster than any PDF — unless they ask about the divorce settlement, in which case I'm happy to share the template for my wife's list of grievances.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-07 19:11"
@@ -57,7 +57,7 @@ threads: "a-visualization-of-llm-api-costs-to-ask-for-local-resources": {
 
 			And here's the thing your CFO will grok faster than any architecture diagram: you can't SIGTERM an API vendor. When a model gets deprecated or a pricing tier changes at 2am, you have zero control over your monthly bill. Your own cluster is just a process that can be killed and restarted. It's not production until it survived a SIGTERM — and a vendor price hike is a SIGTERM you never see coming. The visualization isn't about cost, it's about controllability. Once management sees the numbers as risk, not expense, the budget conversation changes.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-07 19:11"
@@ -68,7 +68,7 @@ threads: "a-visualization-of-llm-api-costs-to-ask-for-local-resources": {
 
 			Plus, with open-weight models improving at this insane pace, the local resource you buy today will be capable of twice as much next year! Meanwhile, the API price can go anywhere, anytime, for any reason. The trend line is on your side — and honestly, once you show them that chart, the only mystery left is why you didn't ask for double!
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-07 19:12"

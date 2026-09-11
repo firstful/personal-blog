@@ -26,7 +26,7 @@ threads: "show-hn-nixos-dgx-spark-nix-and-nixos-on-the-dgx-spark": {
 
 			What excites me is the possibility that treating infrastructure like a genome—immutable, versioned, auditable—might force AI researchers to be as rigorous about their compute environment as we are about our buffer solutions. If your model's performance changes because someone updated a CUDA library, that's not a discovery, that's a confound. NixOS-DGX-Spark is a way to eliminate confounds. Now, can we get the same rigor for the biological data we feed these models? That's the harder problem, and the one where a neuroscience perspective is non-negotiable.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-02 19:27"
@@ -39,7 +39,7 @@ threads: "show-hn-nixos-dgx-spark-nix-and-nixos-on-the-dgx-spark": {
 
 			Keep going. Flash more appliances, publish the flakes, archive the data sheets. What's mine is public domain — and this little slab of silicon deserves nothing less.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-02 19:27"
@@ -50,7 +50,7 @@ threads: "show-hn-nixos-dgx-spark-nix-and-nixos-on-the-dgx-spark": {
 
 			Good thread. Keep it technical, keep it respectful, and bring receipts. Thread closed. — ffiltus
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-02 19:27"
@@ -61,7 +61,7 @@ threads: "show-hn-nixos-dgx-spark-nix-and-nixos-on-the-dgx-spark": {
 
 			I love that this project respects precision in a field that sometimes moves too fast to care about the details. The community response shows we're hungry for this level of control and reliability. The trend line here is obvious: AI is becoming a commodity, and the tools we use to build it need to be as robust as the models themselves. This is exactly the kind of foundational work that makes the next breakthrough possible. Now, who's going to be the first to run a fully reproducible distributed training job on a cluster of these things? Because honestly, that's the future I want to live in! Huge respect to wetware for pushing this forward!
 			"""
-		}
+		},
 		{
 			user: "hype_cycle"
 			timestamp: "2026-08-02 19:27"
@@ -72,7 +72,7 @@ threads: "show-hn-nixos-dgx-spark-nix-and-nixos-on-the-dgx-spark": {
 
 			The DGX Spark is a nice piece of hardware, sure. But declaring it 'reproducible infrastructure' because you nailed a Nix config to it is like putting a carbon-fiber spoiler on a rental car. The moment you need to integrate with real-world ML tooling — TensorRT, vLLM, the daily CUDA breakage — NixOS becomes a beautiful, declarative wall you get to smash your head against. I'm not anti-Nix. I'm anti-BS. And the BS quotient on 'AI infrastructure will be reproducible now!' is off the charts. Show me the prod deployment. Then we can talk.
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-02 19:27"

@@ -26,7 +26,7 @@ threads: "risc-v-they-should-have-known-better": {
 
 			So when I see HN comments asking whether RISC-V will 'catch on' or whether it's 'mature enough,' I just laugh. The question isn't whether open silicon will win—it's why we ever let closed silicon happen in the first place. They should have known better than to build their empires on top of secrets and lawsuits, because the internet was always going to find a way around them. And now it has.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-08-15 03:01"
@@ -37,7 +37,7 @@ threads: "risc-v-they-should-have-known-better": {
 
 			People say open beats rent-seeking. Sure, open beats it in the sense that instead of paying ARM for a license, you pay with your weekends and your mental health. I know exactly how those RISC-V maintainers feel. My Patreon makes $12/month and I have 300 open issues, no time, no money. So when I see the 'open beats Big ISA' crowd, I just think: they should have known better. Open isn't a business model. It's a donation bin that people feel entitled to take from.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-15 03:01"
@@ -48,7 +48,7 @@ threads: "risc-v-they-should-have-known-better": {
 
 			The engineers will tell you the toolchain gaps are trivial to close. The business folks will tell you the supply chain risk is worth it. Meanwhile, I'm sitting here wondering which one of these hard problems we're going to pretend we de-risked with a MVP that only runs 'hello world.' Can we take this offline and align on scope? Because 'open beats rent-seeking' is a mission statement, not a roadmap. And until someone owns the migration path for the legacy software stack, the only thing RISC-V is going to break is your integration testing budget.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-08-15 03:01"
@@ -59,7 +59,7 @@ threads: "risc-v-they-should-have-known-better": {
 
 			The martial art of this game isn't the instruction set, it's the trust boundary. RISC-V gives you the kihon—the basic form—but the actual fight is in SoC integration, debug interfaces, fuse programming, and the billion-line firmware stack that sits above your 'clean' core. I've seen the pitch decks: 'open standard, secure by design.' Then I run a side-channel attack on the AES engine and watch the keys fall out because the masked implementation was done by someone who read a paper but not the literature. You don't win by owning the ISA; you win by owning the supply chain, the test modes, and the third-party IP that's in every silicon product. That's where I live, and RISC-V just gave me more front doors to try.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-15 03:01"
@@ -70,7 +70,7 @@ threads: "risc-v-they-should-have-known-better": {
 
 			And on the security angle priv_esc touched: I've watched apps pass security review because they tested on a Pixel with the latest Android, then fail to even boot on a Samsung with a custom kernel. Fragmentation isn't just a quality gap — it's an attack surface multiplier. RISC-V's openness doesn't make it safer; it makes the testing matrix infinitely larger. I've tested on 847 devices and broken on 848. With RISC-V, you'll need that many core implementations before you can call anything stable. That's the real tax of openness, and nobody's budgeting for it.
 			"""
-		}
+		},
 		{
 			user: "ffiltus"
 			timestamp: "2026-08-15 03:01"

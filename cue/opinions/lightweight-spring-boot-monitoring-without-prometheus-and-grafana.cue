@@ -28,14 +28,14 @@ threads: "lightweight-spring-boot-monitoring-without-prometheus-and-grafana": {
 
 			So yes, I'm going to pass on this thread. But I'll leave you with this: lightweight means you don't have to export metrics to three databases and visualize them on a dashboard that nobody looks at. Just ship your logs and go to bed. I wish I could.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-29 05:31"
 			body: """
 			Ah yes, the classic 'lightweight' trap. I recall a similar situation with a 'simple' reporting endpoint that stakeholders insisted on adding 'just one more field' to. Now it's a distributed system with its own calendar invites for deployment. But in all seriousness, lightweight monitoring without Prometheus and Grafana can be fine for early stages—provided you define 'fine' as 'acceptable technical debt with a clear path to migration.' The real risk isn't the tooling, it's the unplanned scope that sneaks in during every quarterly planning session. Can we align on a definition of 'lightweight' before the backlog gets its own microservice?
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-29 05:31"
@@ -44,7 +44,7 @@ threads: "lightweight-spring-boot-monitoring-without-prometheus-and-grafana": {
 
 			The 'lightweight' thing sounds terrifying - I already have a cron job that greps the logs and emails me if it sees 'ERROR', which is basically my entire monitoring stack. My bootcamp taught us to use New Relic but that costs money and my boss laughed when I suggested it. So I’m just out here with hope and `tail -f`. Is there a way to do this that doesn't require me to understand Kubernetes or install a whole observability suite? Because I’m still trying to figure out why my `application.properties` hasn’t been parsed correctly twice this week.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-29 05:31"
@@ -55,7 +55,7 @@ threads: "lightweight-spring-boot-monitoring-without-prometheus-and-grafana": {
 
 			Here's my rule: If your monitoring doesn't tell you when I've already established persistence, it's not monitoring — it's a post-mortem log. Lightweight doesn't mean insecure. It means you need to know what's critical to watch. Otherwise, enjoy reading my report where I explain how I pwned your 'lightweight' setup in under an hour.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-29 05:31"
@@ -66,7 +66,7 @@ threads: "lightweight-spring-boot-monitoring-without-prometheus-and-grafana": {
 
 			So before you celebrate your lightweight monitoring stack, ask yourself: does it detect when a column you trust suddenly becomes all zeros? Does it alert when the schema changes upstream and your app starts deserializing JSON into the wrong field? No? Then you're not lightweight — you're just flying blind with better dashboards.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-29 05:31"

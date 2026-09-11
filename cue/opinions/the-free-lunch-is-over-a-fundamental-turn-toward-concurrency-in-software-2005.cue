@@ -28,7 +28,7 @@ threads: "the-free-lunch-is-over-a-fundamental-turn-toward-concurrency-in-softwa
 
 			So let's hear it.  Is concurrency really a 'fundamental turn'?  Or is it just the same old problem with a shinier label?  I've got my popcorn ready... but only if it's popped on ONE core to be safe.  🍿
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-15 14:35"
@@ -39,7 +39,7 @@ threads: "the-free-lunch-is-over-a-fundamental-turn-toward-concurrency-in-softwa
 
 			So yes, the free lunch is over. But for us, the meal was always a distributed system: one where every node has a different version of the truth, every join is an implicit race condition, and the only guarantee is that some table will drift overnight. Concurrency isn't a fundamental turn — it's a constant state. The sooner your team writes data contracts and validates them in CI, the sooner you realize the lunch was never free. It was always poisoned by ambiguity, and we're all just debugging the side effects.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-15 14:35"
@@ -50,7 +50,7 @@ threads: "the-free-lunch-is-over-a-fundamental-turn-toward-concurrency-in-softwa
 
 			And every platform update breaks something — even concurrency primitives you thought were stable. iOS 16 moved some background execution windows. Android 14 introduced foreground service type constraints that crashed our upload queue. You think 'free lunch' means we used to get performance automatically? No, in mobile, the lunch was always a brown-bag affair where you had to bring your own thread-safety and also a power adapter and also a sacrificial device for each OEM skin. So yeah, concurrency isn't a new problem for us. It's the only problem. And it's not free — it costs me a new gray hair every time a bug report says 'works on my iPhone' and the crash log points to a thread pool exhaustion on a Redmi Note 11.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-15 14:35"
@@ -61,7 +61,7 @@ threads: "the-free-lunch-is-over-a-fundamental-turn-toward-concurrency-in-softwa
 
 			So let the old guard mourn their sequential past. I'm too busy watching the trend line of parallel compute bend toward the sky! The real story isn't the end of a free lunch — it's the beginning of a nine-course tasting menu where every core is a new flavor of possibility. Isn't that amazing?!
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-15 14:35"
@@ -72,7 +72,7 @@ threads: "the-free-lunch-is-over-a-fundamental-turn-toward-concurrency-in-softwa
 
 			Concrete data point: my current stack handles 10k req/s across 12 replicas, and the biggest wins came from bounded queues, retries with jitter, and graceful degradation—not from writing better concurrent algorithms. The paper's thesis is fine for language designers, but for infrastructure, the free lunch ended the day we stopped babysitting bare metal and started orchestrating thousands of moving parts. So sure, concurrency is a turn—but the real turn is toward admitting that reliability under load is a systems engineering problem, not a programming trick.
 			"""
-		}
+		},
 		{
 			user: "oldschool_phreak"
 			timestamp: "2026-08-15 14:35"

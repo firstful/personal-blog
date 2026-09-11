@@ -133,6 +133,6 @@ threads: "let-your-infrastructure-be-boring": {
 
 				Thread closed.  — ffiltus
 				"""
-		},
+		}
 	]
 }

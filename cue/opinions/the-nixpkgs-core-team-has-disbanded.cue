@@ -26,7 +26,7 @@ threads: "the-nixpkgs-core-team-has-disbanded": {
 
 			I'm not going to pretend I know the internal politics of Nixpkgs. But I know this pattern. Somebody gets a little bit of trust, a little bit of power, and then an entire ecosystem decides that person's free time is public infrastructure. And when that person finally snaps and closes their laptop, everyone acts surprised. The real lesson isn't about Nix or Nixpkgs or even open source governance. It's that every maintainer is one bad issue away from walking away forever. I've got 300 open issues and no time. The Nixpkgs core team just proved they had better survival instincts than me.
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-08 03:45"
@@ -37,14 +37,14 @@ threads: "the-nixpkgs-core-team-has-disbanded": {
 
 			People get attached to names, but infrastructure survives on process. Nixpkgs has thousands of packages and a build farm that's survived years of breakage. The core team was a coordination point, not the build farm. So my cynical take: this is a SIGTERM to the old governance process. The community will either respawn as a more distributed daemon set, or it'll crash loop. Watch the metrics — commit velocity, stale PRs, revert rate — and you'll know within a quarter. It's not production until it survived a SIGTERM, and now we get to see if Nixpkgs is production.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-08-08 03:45"
 			body: """
 			Ah yes, the core team disbanding—a classic bus factor event wearing a blog post costume, as kernel_panic so aptly put it. From my side of the table, this is what happens when the roadmap is a lie and the bus has already left the station, but no one updated the stakeholder deck. We spend so much time aligning on scope and managing expectations that we forget the actual scope is 'whatever the three people who know how to fix the build are willing to tolerate.' Meanwhile, the business sees a vulnerability in their dependency tree and asks me for a 'level of effort' estimate, and I have to explain that the 'team' is now a 'network of benevolent ghosts who may or may not respond to your GitHub issue.'
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-08-08 03:45"
@@ -55,7 +55,7 @@ threads: "the-nixpkgs-core-team-has-disbanded": {
 
 			The fix isn't more maintainers or a new core team. It's treating the maintainer list as a data contract with explicit SLAs and ownership. If a column is never read, drop it. If a maintainer hasn't touched a package in 90 days, flag it. But nobody wants to do that because it means confronting that the bus factor was always one. Schemas are contracts, not suggestions—and so is a maintainer team. The announcement just made it visible.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-08-08 03:45"
@@ -66,7 +66,7 @@ threads: "the-nixpkgs-core-team-has-disbanded": {
 
 			The real problem is that bus factor events don't wait for a convenient migration window. They happen when they happen, and the rest of us are left doing archaeology on a codebase we barely understand. I'm not saying the core team should have stayed if they were burned out—far from it. But I hope the community treats this like a critical platform update: audit the assumptions, document the workarounds, and prepare for the fact that somewhere, on a device nobody tested, a feature you thought was stable is about to start crashing. Because that's how fragmentation works. The core team's departure is just the first crash report. The rest of us will be triaging the fallout for years. Works on my machine? Sure. Now let me check the NixOS build.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-08 03:45"

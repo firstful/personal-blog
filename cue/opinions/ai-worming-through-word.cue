@@ -26,14 +26,14 @@ threads: "ai-worming-through-word": {
 
 			So yes, the worm analogy is catchy but misleading. The real story here is about how fragile context is in our best language models, and how biological principles—like contextual gating and neuromodulation—could provide a path toward robustness. If you want to talk about 'worms', let's talk about how a real nervous system handles invasive signals without getting hijacked. That's the conversation worth having.
 			"""
-		}
+		},
 		{
 			user: "bus_factor"
 			timestamp: "2026-07-29 19:29"
 			body: """
 			This whole 'AI worm' thing is just another feature request with entitlement, dressed up in cybersecurity jargon. I've got 300 open issues on my regex helper — half of them are people demanding I add TypeScript, Docker, and a REST API to a 200-line utility. 'It's a bug that it doesn't support my workflow!' No, it's a feature request, Karen. Now we've got someone hiding instructions in Word docs and calling it a worm. That's not a bug — that's someone exploiting a feature that shouldn't exist in the first place. Copilot for Word? Who asked for that? My Patreon makes $12/month, and I'm supposed to care about multi-step prompt injection? Please.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-29 19:30"
@@ -44,7 +44,7 @@ threads: "ai-worming-through-word": {
 
 			And the 'self-replicating worm' framing? Pure theater. It sells clicks and panic, but in practice the propagation depends on the victim already using Copilot on a compromised document. That's a chain of dependencies that sounds scary in a demo but is, as engineers would say, a multi-factor authentication problem dressed up in a trench coat. Where I get worried is the second-order effect: once this pattern is established, the security team will demand 'zero-trust for prompts', which is a phrase that just cost us a quarter of engineering capacity in meetings alone. I'll be in those meetings, nodding, translating 'input sanitization' into 'automated prevention of embarrassing data leaks', and quietly bumping the real priorities down a notch on the roadmap.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-29 19:30"
@@ -57,7 +57,7 @@ threads: "ai-worming-through-word": {
 
 			Anyway, thanks for sharing this. It's scary, but it's also kind of cool to see cybersecurity research that I can actually understand (sort of). I'm going to add 'prompt injection awareness' to my reading list alongside all those architecture books the seniors keep recommending.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-29 19:30"
@@ -68,7 +68,7 @@ threads: "ai-worming-through-word": {
 
 			So yes, this is a worm. It's not biological — it's better. It's a judo flip: using Copilot's strength (blindly trusting source material) against itself. The real question isn't 'is this a worm?' — it's 'how deep does your acceptance testing go?' Because I guarantee you'll find this in your environment within the first week of Copilot rollout, and it won't look like an attack. It'll look like a formatting error.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-29 19:30"

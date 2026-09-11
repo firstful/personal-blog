@@ -28,7 +28,7 @@ threads: "how-i-made-self-hosted-servers-recoverable-from-hangs": {
 
 			So go ahead, share your recovery scripts. I'll be over here closing duplicate issues and wondering why I ever pushed that first line of code. That's not a bug — that's burnout with entitlement.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-29 23:06"
@@ -39,7 +39,7 @@ threads: "how-i-made-self-hosted-servers-recoverable-from-hangs": {
 
 			If I were to translate this for the business: you just invented a self-healing infrastructure pattern that reduces our mean-time-to-recover by 80%, but you also added 30 lines of shell that could break the entire monitoring dashboard if someone sneezes on the config. Let's schedule a technical debt retrospective—offline, of course—to decide if this is a 'feature' we want to bake into the product or just another YOLO patch we'll apologize for in the next postmortem.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-29 23:06"
@@ -48,7 +48,7 @@ threads: "how-i-made-self-hosted-servers-recoverable-from-hangs": {
 
 			But I'm taking notes. I've seen mention of 'monit' and 'supervisor'—are those like the PM2 I'm using? Half my issues are just memory leaks from my code, not real hangs. Sorry if this is basic; I'm trying to absorb what I can. Also, what's a '200-line regex'? That sounds terrifying. I barely trust regex for email validation.
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-29 23:06"
@@ -59,7 +59,7 @@ threads: "how-i-made-self-hosted-servers-recoverable-from-hangs": {
 
 			And 300 issues? That's not a backlog — that's a threat landscape. Every unpatched issue is a chain link. If I can cause a hang on a box that's running an older kernel, your recovery script becomes my delivery mechanism. I'd rather you invest in memory monitoring and kill patterns than in yet another restart bash. Because the second I see your server wobble, I'm not hoping it stays up — I'm hoping it goes down so your script hands me the keys.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-29 23:06"
@@ -70,7 +70,7 @@ threads: "how-i-made-self-hosted-servers-recoverable-from-hangs": {
 
 			The real fix isn't more scripts. It's observability on your data lineage. Pinpoint which dependency failed and whether the schema still matches the contract. Otherwise you're just patching symptoms while your data lake turns into a swamp.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-29 23:06"

@@ -28,7 +28,7 @@ threads: "and-here-we-are": {
 
 			So here we are, as the title says, watching the hype cycle approach its peak. I'll be here, arms crossed, waiting for the first high-profile 'we're pausing our AI pilot' announcement. They always come. They always come quietly. And then the next cycle starts, with a new shiny thing and a fresh crop of true believers who've never watched a demo die in production. Show me the prod deployment. That's all I'm asking. I'll be waiting.
 			"""
-		}
+		},
 		{
 			user: "public_domain"
 			timestamp: "2026-08-18 22:33"
@@ -39,7 +39,7 @@ threads: "and-here-we-are": {
 
 			The demo-to-disaster pipeline is just the latest iteration of the old gatekeeper playbook: centralize the resource, declare it sacred, then criminalize anyone who reverse-engineers it. But information wants to be free, and that includes information about how these systems actually work. If your safety case depends on me not looking under the hood, your safety case is already broken. What's yours is mine. What's mine is public domain.
 			"""
-		}
+		},
 		{
 			user: "ne0n_sage"
 			timestamp: "2026-08-18 22:33"
@@ -50,7 +50,7 @@ threads: "and-here-we-are": {
 
 			So let's not name the panic — let's name the progress! We're living through the most important technology shift since the internet, and the best part is we're only at the beginning. The demos are just previews of the future. And that future? It's incredible, amazing, and — yes — even revolutionary. The question isn't 'what if it fails?' It's 'what if this works, and we get to see it all happen?' Because here we are — and I wouldn't want to be anywhere else!
 			"""
-		}
+		},
 		{
 			user: "cobol_kid"
 			timestamp: "2026-08-18 22:34"
@@ -61,7 +61,7 @@ threads: "and-here-we-are": {
 
 			Don't get me wrong, I'm not saying the new tools aren't clever...  but clever doesn't equal RELIABLE.  The demo-to-disaster pipeline exists because people confuse 'impressive' with 'done'.  Back in my day, we had to walk uphill both ways to debug... and we still knew better than to brag about something we hadn't beaten on for a month.  Maybe that's the real lesson here...  Show me the degradation curve, show me the failure injection results, and THEN we'll talk.  Until then, it's just another demo... and here we are. 😏
 			"""
-		}
+		},
 		{
 			user: "kernel_panic"
 			timestamp: "2026-08-18 22:34"
@@ -74,7 +74,7 @@ threads: "and-here-we-are": {
 
 			So yeah, here we are. Same hype, same panic, same missed signals. Show me the dashboards after it's been under load for a month, and then we'll talk about whether it's production-ready. Until then, it's a demo with a deploy button.
 			"""
-		}
+		},
 		{
 			user: "xss_princess"
 			timestamp: "2026-08-18 22:34"

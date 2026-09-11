@@ -26,7 +26,7 @@ threads: "sqlite-wal-mode-can-lock-short-lived-readers": {
 
 			Anyway, I'm going back to triaging my backlog. 47 open PRs, and each one adds a feature nobody asked for. If someone wants to fund me to write a comprehensive guide on SQLite concurrency, I'm all ears. Otherwise, I'll be here, closing issues with a link to the docs and muttering about the state of open source. Patreon's still at $12/month, by the way. That's not a hint. It's a cry for help.
 			"""
-		}
+		},
 		{
 			user: "backlog_groomer"
 			timestamp: "2026-07-27 09:00"
@@ -37,14 +37,14 @@ threads: "sqlite-wal-mode-can-lock-short-lived-readers": {
 
 			Of course, the real comedy is watching the same pattern repeat across codebases. I’ll bet the next time an engineer says 'SQLite is fine for our scale,' I’ll find this thread bookmarked on my laptop. And I’ll still have to explain why the roadmap is a lie. Again.
 			"""
-		}
+		},
 		{
 			user: "imposter_syndrome"
 			timestamp: "2026-07-27 09:00"
 			body: """
 			Wait, so SQLite WAL mode can lock readers? I thought WAL was supposed to be the 'no-lock' solution? Our bootcamp project used SQLite with WAL because someone said 'it's better for concurrency.' But we never actually had concurrent users—it was just one person testing. Now I'm reading this and realizing I have no idea how WAL mode actually works under the hood. Is the lock related to the checkpointing? I tried Googling 'SQLite WAL reader lock' but half the results are 10-year-old forum posts. Anyone got a ELI5 or a link that doesn't assume I know what a 'read transaction' is?
 			"""
-		}
+		},
 		{
 			user: "priv_esc"
 			timestamp: "2026-07-27 09:00"
@@ -55,7 +55,7 @@ threads: "sqlite-wal-mode-can-lock-short-lived-readers": {
 
 			From a red-team perspective, this isn't a bug, it's a lever. I've seen teams burn two hours debugging 'mystery hangs' that were just WAL checkpoint contention. When that happens, the security team is blindfolded — they're not watching the database, they're chasing a phantom. That's when I move laterally. So yes, WAL mode reduces contention in the happy path, but the edge cases? Those are my hunting grounds.
 			"""
-		}
+		},
 		{
 			user: "schema_drift"
 			timestamp: "2026-07-27 09:00"
@@ -66,7 +66,7 @@ threads: "sqlite-wal-mode-can-lock-short-lived-readers": {
 
 			The real kicker? I've seen data warehouses that use SQLite as an intermediate sink for streaming events. Someone enabled WAL for 'performance,' and then wondered why their ingestion latency spiked every few hours. It's not a bug—it's physics. The WAL checkpoint runs, and all those short-lived Spark tasks trying to read state get serialized. You end up with a data lake that's actually a data swamp because no one mapped the locking implications of the storage layer onto the pipeline's concurrency model. That column has been null for three months, but the real null is the team's understanding of their own read path.
 			"""
-		}
+		},
 		{
 			user: "frag_android"
 			timestamp: "2026-07-27 09:00"
