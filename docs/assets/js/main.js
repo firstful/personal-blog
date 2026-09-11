@@ -865,6 +865,8 @@
   var cursor = 0;
   var currentOptions = [];
   var busy = false;
+  var skipRequested = false;
+  var skipDisposers = [];
   var sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   function appendLine(text = "", cls = "") {
     const el = document.createElement("div");
@@ -874,13 +876,46 @@
     screen.scrollTop = screen.scrollHeight;
     return el;
   }
+  function appendHTML(html, cls = "") {
+    const el = document.createElement("div");
+    el.className = `cs-line${cls ? " " + cls : ""}`;
+    el.innerHTML = html;
+    screen.appendChild(el);
+    screen.scrollTop = screen.scrollHeight;
+    return el;
+  }
   async function typeLine(text, cls = "", speed = 12) {
     const el = appendLine("", cls);
+    if (skipRequested) {
+      el.textContent = text;
+      screen.scrollTop = screen.scrollHeight;
+      return;
+    }
     for (let i = 0; i < text.length; i++) {
       el.textContent += text[i];
       screen.scrollTop = screen.scrollHeight;
       await sleep(speed);
     }
+  }
+  function armSkip(hint) {
+    skipRequested = false;
+    const onKey2 = () => {
+      skipRequested = true;
+    };
+    const onClick = () => {
+      skipRequested = true;
+    };
+    document.addEventListener("keydown", onKey2);
+    screen.addEventListener("click", onClick);
+    skipDisposers = [
+      () => document.removeEventListener("keydown", onKey2),
+      () => screen.removeEventListener("click", onClick),
+      () => hint.remove()
+    ];
+  }
+  function disarmSkip() {
+    skipDisposers.forEach((d) => d());
+    skipDisposers = [];
   }
   function renderOptions() {
     const old = screen.querySelector(".cs-options");
@@ -1007,15 +1042,66 @@
     restart?.addEventListener("click", () => void boot(true));
     busy = false;
   }
+  var PROFILE_LINES = [
+    "builds backends, automation platforms, and event-driven systems.",
+    "cares about the boring parts: observability, clean API contracts,",
+    "and infrastructure that stays up without paging anyone at 3 am.",
+    "",
+    "likes open source, small sharp tools, and talking to stakeholders",
+    "as much as reading a flame graph. equally at home in a design",
+    "review or a postmortem \u2014 prefers the ones where nothing actually",
+    "caught fire."
+  ];
+  var HIT_LINES = [
+    "[hit] cut API latency 15x across a fleet of services",
+    "[hit] standardized SDKs \u2014 teams stop reinventing the wheel",
+    "[hit] shipped automation for work nobody wanted to do by hand",
+    "[hit] things survived contact with production"
+  ];
+  async function shellCmd(prompt, cmd) {
+    await typeLine(`${prompt}:~$ ${cmd}`, "cs-echo", 20);
+  }
+  async function playProfile() {
+    screen.dataset.phase = "profile";
+    const hint = appendLine("[ press any key to skip intro ]", "cs-hint");
+    armSkip(hint);
+    const prompt = "reed@ffilt.us";
+    await shellCmd(prompt, "whoami");
+    await typeLine("Reed Sutliff \u2014 software engineer \u2014 Columbus, OH", "cs-hl");
+    await shellCmd(prompt, "cat profile.txt");
+    for (const line of PROFILE_LINES) {
+      await typeLine(line, "cs-out");
+    }
+    await shellCmd(prompt, "tail -n 4 career/wins.log");
+    for (const line of HIT_LINES) {
+      await typeLine(line, "cs-hl");
+    }
+    await shellCmd(prompt, "ps aux | grep -i free-time");
+    await typeLine("self-hosting something he definitely didn't need", "cs-out");
+    await sleep(150);
+    await appendHTML(
+      'arguing about it with the regulars on the <a class="cs-link" href="/personas/">BBS</a>',
+      "cs-out"
+    );
+    await sleep(250);
+    await typeLine("\u2500\u2500 incoming connection: careers@yourcompany.com \u2500\u2500", "cs-sys");
+    disarmSkip();
+  }
   async function boot(restart = false) {
     screen.innerHTML = "";
+    delete screen.dataset.phase;
     state.isRecruiter = false;
     state.variant = "base";
     state.path = [];
     cursor = 0;
     currentOptions = [];
+    skipRequested = false;
     await typeLine("SUTLIFF TALENT DB v1.0 \u2014 candidate-search", "cs-sys", 6);
     await typeLine(restart ? "session reset. ready." : "connection established. ready.", "cs-sys", 6);
+    if (!restart) {
+      await playProfile();
+    }
+    screen.dataset.phase = "wizard";
     await gotoStep("who");
   }
   function initCandidateSearch() {

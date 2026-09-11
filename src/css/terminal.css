@@ -1697,17 +1697,7 @@ a:hover {
 
 /* ── Console Tray (removed) ────────────────────────────────── */
 
-/* ── About page: bio + candidate-search simulator ─────────── */
-.about-bio {
-  border-left: 3px solid var(--term-fg-dark);
-  padding: 4px 0 4px 16px;
-  margin: 8px 0 28px;
-  max-width: 68ch;
-}
-.about-bio p {
-  margin: 10px 0;
-  color: var(--term-fg);
-}
+/* ── About page: candidate-search simulator (whole-page terminal) ── */
 
 .cs-terminal {
   border: 1px solid var(--term-border-dim);
@@ -1756,6 +1746,17 @@ a:hover {
 .cs-sys { color: var(--term-fg-dim); }
 .cs-prompt { color: var(--term-fg-bright); }
 .cs-echo { color: var(--term-link); opacity: 0.85; }
+/* Profile-dump output */
+.cs-out { color: var(--term-fg); }
+.cs-hl { color: var(--term-fg-bright); }
+.cs-link {
+  color: var(--term-link);
+  text-decoration: underline;
+}
+.cs-link:hover {
+  color: var(--term-fg-bright);
+  text-shadow: 0 0 6px var(--term-glow);
+}
 
 /* Option list */
 .cs-options {

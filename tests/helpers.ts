@@ -45,19 +45,26 @@ export async function waitForTerminal(page: Page): Promise<void> {
     expect(text).toMatch(/connection established|session reset/);
   }).toPass({ timeout: 10_000 });
 
-  // Wait for options to render (first question available)
+  // Fast-forward the scripted profile dump if it's still playing.
+  // Clicking the terminal sets the skip flag (any key also works).
+  const screenEl = page.locator('#cs-screen');
   await expect(async () => {
-    const opts = page.locator('#cs-screen .cs-options');
-    await expect(opts).toBeVisible();
-  }).toPass({ timeout: 10_000 });
+    if ((await screenEl.getAttribute('data-phase')) === 'profile') {
+      await screenEl.click();
+    }
+    // Wait for options to render (first question available)
+    await expect(page.locator('#cs-screen .cs-options')).toBeVisible();
+  }).toPass({ timeout: 15_000 });
 }
 
 /**
  * Verify the current question prompt text appears in the terminal.
+ * Steps can print several .cs-prompt lines (multi-line questions), so
+ * match any line containing the text instead of assuming the last one.
  */
 export async function expectQuestion(page: Page, text: string): Promise<void> {
-  const prompts = page.locator('#cs-screen .cs-line.cs-prompt');
-  await expect(prompts.last()).toContainText(text, { timeout: 3000 });
+  const matches = page.locator('#cs-screen .cs-line.cs-prompt', { hasText: text });
+  await expect(matches.first()).toBeVisible({ timeout: 5000 });
 }
 
 /**
