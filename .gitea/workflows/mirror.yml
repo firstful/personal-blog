@@ -19,7 +19,9 @@ jobs:
       - name: Mirror to GitHub
         env:
           GH_TOKEN: ${{ secrets.MIRROR_GITHUB_TOKEN }}
+          GT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SERVER: ${{ github.server_url }}
         run: |
-          git fetch --unshallow 2>/dev/null || git fetch --all --tags
+          git clone --quiet "https://reeds:${GT_TOKEN}@${SERVER#http*://}/reeds/personal-blog.git" .
           git push --prune "https://reedsutliff:${GH_TOKEN}@github.com/reedsutliff/personal-blog.git" \
             "refs/heads/main:refs/heads/main" "refs/tags/*:refs/tags/*"
