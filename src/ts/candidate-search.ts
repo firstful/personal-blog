@@ -1,10 +1,13 @@
 /**
  * SUTLIFF BBS — Candidate Search Simulator
  *
- * A fake terminal "candidate search" tool for the About page. The visitor
- * answers a short series of yes/no (and one role-select) prompts, navigating
- * with Arrow keys + Enter or by clicking. It ends in a "MATCH FOUND" candidate
- * dossier with a resume download tailored to their answers.
+ * A fake terminal that IS the About page. On load it plays a scripted
+ * shell session dumping the bio/profile (whoami, cat profile.txt, career
+ * wins, free-time), skippable with any key/click. Then the visitor
+ * answers a short series of yes/no (and one role-select) prompts,
+ * navigating with Arrow keys + Enter or by clicking. It ends in a
+ * "MATCH FOUND" candidate dossier with a resume download tailored to
+ * their answers.
  *
  * Replaces the old emoji quiz. Pure vanilla TS, terminal-themed.
  */
@@ -115,6 +118,10 @@ let cursor = 0;
 let currentOptions: Option[] = [];
 let busy = false;
 
+/** true while the scripted profile dump is playing and can be fast-forwarded */
+let skipRequested = false;
+let skipDisposers: Array<() => void> = [];
+
 const sleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
 
 function appendLine(text = '', cls = ''): HTMLElement {
@@ -126,14 +133,51 @@ function appendLine(text = '', cls = ''): HTMLElement {
   return el;
 }
 
+/** Like appendLine but for trusted, pre-built HTML (links, etc.) */
+function appendHTML(html: string, cls = ''): HTMLElement {
+  const el = document.createElement('div');
+  el.className = `cs-line${cls ? ' ' + cls : ''}`;
+  el.innerHTML = html;
+  screen.appendChild(el);
+  screen.scrollTop = screen.scrollHeight;
+  return el;
+}
+
 async function typeLine(text: string, cls = '', speed = 12): Promise<void> {
   const el = appendLine('', cls);
+  if (skipRequested) {
+    el.textContent = text;
+    screen.scrollTop = screen.scrollHeight;
+    return;
+  }
   for (let i = 0; i < text.length; i++) {
     el.textContent += text[i];
     screen.scrollTop = screen.scrollHeight;
     // eslint-disable-next-line no-await-in-loop
     await sleep(speed);
   }
+}
+
+/**
+ * Arm the fast-forward affordance for the scripted profile dump: any key
+ * or a click on the terminal instantly completes the remaining lines.
+ */
+function armSkip(hint: HTMLElement): void {
+  skipRequested = false;
+  const onKey = (): void => { skipRequested = true; };
+  const onClick = (): void => { skipRequested = true; };
+  document.addEventListener('keydown', onKey);
+  screen.addEventListener('click', onClick);
+  skipDisposers = [
+    () => document.removeEventListener('keydown', onKey),
+    () => screen.removeEventListener('click', onClick),
+    () => hint.remove(),
+  ];
+}
+
+function disarmSkip(): void {
+  skipDisposers.forEach((d) => d());
+  skipDisposers = [];
 }
 
 function renderOptions(): void {
@@ -284,16 +328,82 @@ async function runMatch(): Promise<void> {
   busy = false;
 }
 
+// ── Scripted profile dump (all the About-page bio, in the shell) ─────
+
+const PROFILE_LINES: string[] = [
+  'builds backends, automation platforms, and event-driven systems.',
+  'cares about the boring parts: observability, clean API contracts,',
+  'and infrastructure that stays up without paging anyone at 3 am.',
+  '',
+  'likes open source, small sharp tools, and talking to stakeholders',
+  'as much as reading a flame graph. equally at home in a design',
+  'review or a postmortem — prefers the ones where nothing actually',
+  'caught fire.',
+];
+
+const HIT_LINES: string[] = [
+  '[hit] cut API latency 15x across a fleet of services',
+  '[hit] standardized SDKs — teams stop reinventing the wheel',
+  '[hit] shipped automation for work nobody wanted to do by hand',
+  '[hit] things survived contact with production',
+];
+
+async function shellCmd(prompt: string, cmd: string): Promise<void> {
+  await typeLine(`${prompt}:~$ ${cmd}`, 'cs-echo', 20);
+}
+
+async function playProfile(): Promise<void> {
+  screen.dataset.phase = 'profile';
+  const hint = appendLine('[ press any key to skip intro ]', 'cs-hint');
+  armSkip(hint);
+
+  const prompt = 'reed@ffilt.us';
+  await shellCmd(prompt, 'whoami');
+  await typeLine('Reed Sutliff — software engineer — Columbus, OH', 'cs-hl');
+
+  await shellCmd(prompt, 'cat profile.txt');
+  for (const line of PROFILE_LINES) {
+    // eslint-disable-next-line no-await-in-loop
+    await typeLine(line, 'cs-out');
+  }
+
+  await shellCmd(prompt, 'tail -n 4 career/wins.log');
+  for (const line of HIT_LINES) {
+    // eslint-disable-next-line no-await-in-loop
+    await typeLine(line, 'cs-hl');
+  }
+
+  await shellCmd(prompt, 'ps aux | grep -i free-time');
+  await typeLine("self-hosting something he definitely didn't need", 'cs-out');
+  await sleep(150);
+  await appendHTML(
+    'arguing about it with the regulars on the <a class="cs-link" href="/personas/">BBS</a>',
+    'cs-out'
+  );
+  await sleep(250);
+  await typeLine('── incoming connection: careers@yourcompany.com ──', 'cs-sys');
+
+  disarmSkip();
+}
+
 async function boot(restart = false): Promise<void> {
   screen.innerHTML = '';
+  delete screen.dataset.phase;
   state.isRecruiter = false;
   state.variant = 'base';
   state.path = [];
   cursor = 0;
   currentOptions = [];
+  skipRequested = false;
 
   await typeLine('SUTLIFF TALENT DB v1.0 — candidate-search', 'cs-sys', 6);
   await typeLine(restart ? 'session reset. ready.' : 'connection established. ready.', 'cs-sys', 6);
+
+  if (!restart) {
+    await playProfile();
+  }
+
+  screen.dataset.phase = 'wizard';
   await gotoStep('who');
 }
 
