@@ -9,9 +9,8 @@ Real LangGraph StateGraph flow:
 Improvements over the previous hand-rolled loop:
 - Phase 1 relevance scoring fans out in parallel (asyncio.gather) instead of
   10+ sequential LLM calls.
-- Responders see the actual conversation: last 3 posts verbatim plus brief
-  summaries of the rest (the old code gave everyone only 120-char snippets,
-  which is where the generic filler came from).
+- Responders see the full conversation verbatim (all posts, no truncation),
+  instead of the old code's 120-char snippets — eliminating generic filler.
 - Low-relevance personas get an explicit pass bias (score < 6 → default pass),
   fixing adjacent-expertise bots drifting off-topic.
 - All LLM JSON handling is centralised in llm_helpers with retries.
