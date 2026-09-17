@@ -13,8 +13,8 @@ blog_base_dir: .
 llm:
   base_url: http://llm.homelab.internal/v1
   api_key_env: LLM_API_KEY
-  model: auto
-  qa_model: auto
+  model: OR-deepseek/deepseek-chat-v3.1
+  qa_model: OR-deepseek/deepseek-chat-v3.1
   temperature: 0.5
 
 # RSS sources are now in rss_sources.yaml (with weighted scores)
@@ -33,15 +33,6 @@ min_posts_per_thread: 3
 num_threads: 3
 search_window_hours: 6
 max_candidates: 10
-
-# ── LLM config (OpenAI-compatible — DeepSeek, OpenAI, etc.) ────────────
-# Env: LLM_BASE_URL, LLM_API_KEY, LLM_MODEL, LLM_QA_MODEL, LLM_TEMPERATURE
-llm:
-  base_url: https://api.deepseek.com/v1
-  api_key_env: LLM_API_KEY
-  model: deepseek-v4-flash
-  qa_model: deepseek-v4-flash
-  temperature: 0.5
 
 # ── Output paths (relative to blog_base_dir, or absolute) ──────────────
 # Env: OUTPUT_DIR, ARTICLES_DIR, PERSONAS_DIR, TRACK_RECORD, SESSIONS_DIR
