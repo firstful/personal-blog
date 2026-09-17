@@ -13,9 +13,9 @@ blog_base_dir: .
 llm:
   base_url: http://llm.homelab.internal/v1
   api_key_env: LLM_API_KEY
-  model: OR-deepseek/deepseek-chat-v3.1
-  qa_model: OR-deepseek/deepseek-chat-v3.1
-  temperature: 0.5
+  model: auto
+  qa_model: auto
+  temperature: 0.8
 
 # RSS sources are now in rss_sources.yaml (with weighted scores)
 # Categories for topic classification
