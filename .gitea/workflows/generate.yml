@@ -29,7 +29,7 @@ jobs:
           /venv/bin/pip install -q -r content-agents/requirements.txt
           # cue binary — personas + article data source of truth (cue package calls `cue export`)
           CVER=v0.9.0
-          curl -fsSL "https://github.com/cue-lang/cue/releases/download/${CVER}/cue_${CVER#v}_linux_amd64.tar.gz" -o /tmp/cue.tgz
+          curl -fsSL "https://github.com/cue-lang/cue/releases/download/${CVER}/cue_${CVER}_linux_amd64.tar.gz" -o /tmp/cue.tgz
           tar -xzf /tmp/cue.tgz -C /usr/local/bin cue && chmod +x /usr/local/bin/cue
           cue version
 
