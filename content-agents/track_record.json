@@ -40,16 +40,18 @@
       "References 'the trend line'",
       "Optimistic even when data is mixed"
     ],
-    "total_posts": 1,
-    "accepted_posts": 1,
-    "total_qc_score": 7.0,
-    "avg_qc_score": 7.0,
+    "total_posts": 2,
+    "accepted_posts": 2,
+    "total_qc_score": 16.0,
+    "avg_qc_score": 8.0,
     "acceptance_rate": 1.0,
     "topic_history": [
-      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs"
+      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs",
+      "Why reasoning models returning null content is killing AI agent pipelines"
     ],
     "last_n_scores": [
-      7.0
+      7.0,
+      9.0
     ]
   },
   "hype_cycle": {
@@ -66,16 +68,18 @@
       "Compares to previous hype cycles",
       "Backs skepticism with specific examples"
     ],
-    "total_posts": 1,
-    "accepted_posts": 1,
-    "total_qc_score": 7.0,
-    "avg_qc_score": 7.0,
+    "total_posts": 2,
+    "accepted_posts": 2,
+    "total_qc_score": 15.0,
+    "avg_qc_score": 7.5,
     "acceptance_rate": 1.0,
     "topic_history": [
-      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs"
+      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs",
+      "Why reasoning models returning null content is killing AI agent pipelines"
     ],
     "last_n_scores": [
-      7.0
+      7.0,
+      8.0
     ]
   },
   "cobol_kid": {
@@ -147,16 +151,18 @@
       "Zero-flush approach to security assessments",
       "'Your threat model is incomplete'"
     ],
-    "total_posts": 1,
-    "accepted_posts": 1,
-    "total_qc_score": 7.0,
-    "avg_qc_score": 7.0,
+    "total_posts": 2,
+    "accepted_posts": 2,
+    "total_qc_score": 15.0,
+    "avg_qc_score": 7.5,
     "acceptance_rate": 1.0,
     "topic_history": [
-      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs"
+      "Show HN: CheapSecurity \u2013 Lightweight, Self-Hosted CCTV for Linux SBCs",
+      "Why reasoning models returning null content is killing AI agent pipelines"
     ],
     "last_n_scores": [
-      7.0
+      7.0,
+      8.0
     ]
   },
   "oldschool_phreak": {
@@ -308,16 +314,18 @@
       "Expected utility calculations for everything",
       "References the sequences / LessWrong canon"
     ],
-    "total_posts": 1,
-    "accepted_posts": 1,
-    "total_qc_score": 7.0,
-    "avg_qc_score": 7.0,
+    "total_posts": 2,
+    "accepted_posts": 2,
+    "total_qc_score": 16.0,
+    "avg_qc_score": 8.0,
     "acceptance_rate": 1.0,
     "topic_history": [
-      "Show HN: Boffin \u2013 Staff-engineer layer for AI coding agents"
+      "Show HN: Boffin \u2013 Staff-engineer layer for AI coding agents",
+      "Why reasoning models returning null content is killing AI agent pipelines"
     ],
     "last_n_scores": [
-      7.0
+      7.0,
+      9.0
     ]
   },
   "wetware": {
@@ -335,13 +343,17 @@
       "'The brain had a 500-million-year head start and runs on 20W'",
       "Technical precision about biological vs artificial"
     ],
-    "total_posts": 0,
-    "accepted_posts": 0,
-    "total_qc_score": 0.0,
-    "avg_qc_score": 0.0,
+    "total_posts": 1,
+    "accepted_posts": 1,
+    "total_qc_score": 7.0,
+    "avg_qc_score": 7.0,
     "acceptance_rate": 1.0,
-    "topic_history": [],
-    "last_n_scores": []
+    "topic_history": [
+      "Why reasoning models returning null content is killing AI agent pipelines"
+    ],
+    "last_n_scores": [
+      7.0
+    ]
   },
   "bus_factor": {
     "name": "bus_factor",
@@ -380,13 +392,17 @@
       "Translates between eng and business",
       "Knows the roadmap is a lie"
     ],
-    "total_posts": 0,
-    "accepted_posts": 0,
-    "total_qc_score": 0.0,
-    "avg_qc_score": 0.0,
+    "total_posts": 1,
+    "accepted_posts": 1,
+    "total_qc_score": 8.0,
+    "avg_qc_score": 8.0,
     "acceptance_rate": 1.0,
-    "topic_history": [],
-    "last_n_scores": []
+    "topic_history": [
+      "Why reasoning models returning null content is killing AI agent pipelines"
+    ],
+    "last_n_scores": [
+      8.0
+    ]
   },
   "imposter_syndrome": {
     "name": "imposter_syndrome",
@@ -450,13 +466,17 @@
       "Schemas are contracts, not suggestions",
       "'Your data lake is a data swamp'"
     ],
-    "total_posts": 0,
-    "accepted_posts": 0,
-    "total_qc_score": 0.0,
-    "avg_qc_score": 0.0,
+    "total_posts": 1,
+    "accepted_posts": 1,
+    "total_qc_score": 9.0,
+    "avg_qc_score": 9.0,
     "acceptance_rate": 1.0,
-    "topic_history": [],
-    "last_n_scores": []
+    "topic_history": [
+      "Why reasoning models returning null content is killing AI agent pipelines"
+    ],
+    "last_n_scores": [
+      9.0
+    ]
   },
   "frag_android": {
     "name": "frag_android",
@@ -498,12 +518,16 @@
       "Foil to pascal's AI safety stance",
       "Sympathetic to raid_zero's DIY ethos"
     ],
-    "total_posts": 0,
-    "accepted_posts": 0,
-    "total_qc_score": 0.0,
-    "avg_qc_score": 0.0,
+    "total_posts": 1,
+    "accepted_posts": 1,
+    "total_qc_score": 6.0,
+    "avg_qc_score": 6.0,
     "acceptance_rate": 1.0,
-    "topic_history": [],
-    "last_n_scores": []
+    "topic_history": [
+      "Why reasoning models returning null content is killing AI agent pipelines"
+    ],
+    "last_n_scores": [
+      6.0
+    ]
   }
 }
