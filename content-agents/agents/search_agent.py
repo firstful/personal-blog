@@ -133,6 +133,7 @@ def fetch_rss(url: str, window_hours: int = 6) -> List[dict]:
             "source": parsed.feed.get("title", url),
             "source_url": url,
             "summary": summary.strip(),
+            "full_content": "",
             "category": category,
             "timestamp": pub_dt.isoformat(),
             "tags_guess": tags[:5],

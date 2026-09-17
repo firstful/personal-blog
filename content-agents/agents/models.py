@@ -27,6 +27,7 @@ class NewsCandidate(BaseModel):
     source: str
     source_url: str = ""  # RSS feed URL for score tracking
     summary: str
+    full_content: str = ""  # Full article text for richer context
     category: str = "opinion"
     timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     tags_guess: list[str] = Field(default_factory=list)
@@ -37,8 +38,13 @@ class NewsCandidate(BaseModel):
 class Persona(BaseModel):
     """A writer persona with voice, expertise, and track record."""
     name: str
+    screen_name: str = ""
     bio: str
     style: str
+    tagline: str = ""
+    catchphrase: str = ""
+    archetype: str = ""
+    signature: str = ""
     expertise: list[str] = Field(default_factory=list)
     quirks: list[str] = Field(default_factory=list)
 

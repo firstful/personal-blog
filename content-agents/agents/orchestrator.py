@@ -37,13 +37,38 @@ from .models import (
 MAX_TOKENS_WRITE = 4000
 
 
-def bio_short(persona: Persona) -> str:
-    return (
-        f"- Bio: {persona.bio}\n"
-        f"- Expertise: {', '.join(persona.expertise)}\n"
-        f"- Style: {persona.style}\n"
-        f"- Quirks: {'; '.join(persona.quirks)}"
-    )
+def persona_context(persona: Persona) -> str:
+    """Full persona profile — display name, title, tagline, archetype,
+    catchphrase, signature, bio, expertise, style, quirks, and topic
+    history (last 5 topics written, to avoid repetition)."""
+    display = persona.screen_name or persona.name
+    parts = [
+        f"## {display} — Profile",
+        f"  Display name: {display} (handle: {persona.name})",
+        f"  Archetype: {persona.archetype}",
+        f"  Tagline: {persona.tagline}",
+        f"  Catchphrase: \"{persona.catchphrase}\"",
+        f"  Bio: {persona.bio}",
+        f"  Expertise: {', '.join(persona.expertise)}",
+        f"  Style: {persona.style}",
+        f"  Quirks: {'; '.join(persona.quirks)}",
+        f"  Signature: {persona.signature}",
+    ]
+    # Topic history — last 5 things this persona wrote about
+    if persona.topic_history:
+        recent = persona.topic_history[-5:]
+        parts.append("  Recently written topics (avoid repeating yourself):")
+        for t in recent:
+            parts.append(f"    - {t}")
+    return "\n".join(parts)
+
+
+def _article_full(state: ThreadState) -> str:
+    """Full article content, falling back to summary."""
+    topic = _topic_from_state(state)
+    if topic.full_content:
+        return topic.full_content
+    return topic.summary
 
 
 def select_participants(
@@ -98,17 +123,9 @@ def _topic_from_state(state: ThreadState) -> NewsCandidate:
 
 
 def _thread_context(thread: list[dict]) -> str:
-    """Full text for the 3 most recent posts; one-line summaries for older."""
-    parts = []
-    old = thread[:-3]
-    recent = thread[-3:]
-    for p in old:
-        label = "Opening post" if p["is_opening"] else "Response"
-        snippet = p["content"][:120].replace("\n", " ").strip()
-        parts.append(f"**{p['persona_name']}** — {label}: \"{snippet}...\"")
-    if old and recent:
-        parts.append("## Recent posts (verbatim)")
-    for p in recent:
+    """Full verbatim conversation dump — no truncation."""
+    parts = ["## Full conversation so far (verbatim)"]
+    for p in thread:
         label = "OPENING POST" if p["is_opening"] else "RESPONSE"
         parts.append(f"--- {label} by {p['persona_name']} ---\n{p['content']}")
     return "\n\n".join(parts)
@@ -127,9 +144,10 @@ def build_thread_graph(
     # ── nodes ─────────────────────────────────────────────────────────────
 
     async def score_one(persona: Persona, topic: NewsCandidate) -> tuple[str, int]:
+        full = topic.full_content or topic.summary
         system = f"You are {persona.name}, a blog writer. Output ONLY valid JSON. No explanations."
         user = (
-            f"You are {persona.name}.\n\n{bio_short(persona)}\n\n"
+            f"You are {persona.name}.\n\n{persona_context(persona)}\n\n"
             "A topic is up for discussion. Score how relevant this topic is to "
             "YOUR expertise on a scale of 1-10.\n\n"
             "- 10 = squarely in my expertise, I have strong opinions\n"
@@ -139,7 +157,8 @@ def build_thread_graph(
             "Be honest and calibrated. Only score high if the topic genuinely "
             "matches your expertise — inflating your score ruins the discussion.\n\n"
             f"## Topic\n**Title:** {topic.title}\n**Source:** {topic.source}\n"
-            f"**Summary:** {topic.summary}\n\n"
+            f"**Summary:** {topic.summary}\n"
+            f"**Full source content:** {full}\n\n"
             'Output: {"action": "claim"|"pass", "relevance": 1-10, "reason": "one line"}'
         )
         try:
@@ -198,15 +217,24 @@ def build_thread_graph(
         claimer = registry.get(state["initiator"])
         system = f"You are {claimer.name}, a blog writer. Output ONLY valid JSON. No explanations."
         user = (
-            f"You are {claimer.name}.\n\n{bio_short(claimer)}\n\n"
+            f"You are {claimer.name}.\n\n{persona_context(claimer)}\n\n"
             f"You scored the topic {state['scores'][claimer.name]}/10 relevant to "
             "your expertise, the highest of all personas. You are leading the "
             "discussion.\n\n"
             f"## Topic\n**Title:** {topic.title}\n**Source:** {topic.source}\n"
-            f"**Summary:** {topic.summary}\n\n"
+            f"### Full article / source content\n{_article_full(state)}\n\n"
             "Write an opening post (3-5 paragraphs) that sets up the discussion "
-            "in your voice. Reference the specific claims and details from the "
-            "summary — do NOT write generic musings about the general subject.\n\n"
+            "in YOUR VOICE. This is YOUR unique perspective — nobody else writes "
+            "like you.\n\n"
+            "REQUIREMENTS:\n"
+            "- Reference the SPECIFIC claims and details from the summary, not "
+            "generic platitudes about the subject.\n"
+            "- Write in YOUR voice — your style, quirks, catchphrase, and tone\n"
+            "must be immediately recognizable.\n"
+            "- Show don't tell: if your bio says you're confused, BE confused "
+            "in the writing. If you're jaded, BE jaded.\n"
+            "- Do NOT repeat topics you've written about recently (listed above).\n"
+            "- Do NOT open with a generic question or 'let me start by saying'.\n\n"
             'Output: {"headline": "...", "content": "..."}'
         )
         print(f"  [orchestrator] Asking {claimer.name} to write the opening post...")
@@ -237,15 +265,24 @@ def build_thread_graph(
         )
         system = f"You are {persona_name}, a blog writer. Output ONLY valid JSON. No explanations."
         user = (
-            f"You are {persona_name}.\n\n{bio_short(persona)}\n\n"
+            f"You are {persona_name}.\n\n{persona_context(persona)}\n\n"
             f"A discussion you scored {rel}/10 relevant to your expertise is in "
             f"progress:\n\n**{topic.title}**\n{topic.summary}\n\n"
+            f"### Full article / source content\n{_article_full(state)}\n\n"
             f"## What's been said so far\n{_thread_context(state['thread'])}\n\n"
-            "Respond ONLY if you can add a genuinely new perspective in your "
-            "voice (2-4 paragraphs), grounded in the topic's specifics or in "
-            "the recent posts. Pass if your relevance score is below 6, if you "
-            "have nothing substantive to add, or if you would just repeat the "
-            "conversation.\n\n"
+            "Respond ONLY if you can ADD a genuinely new perspective in YOUR "
+            "voice (2-4 paragraphs). If your relevance score is below 6, if you "
+            "have nothing substantive to add, or if you would just repeat what "
+            "someone already said — PASS.\n\n"
+            "REQUIREMENTS if responding:\n"
+            "- Write in YOUR voice — your style, quirks, and tone must be "
+            "immediately recognizable.\n"
+            "- Reference the topic's specific claims or details from "
+            "the recent posts — no generic filler.\n"
+            "- Do NOT repeat perspectives already covered by other posters.\n"
+            "- Do NOT repeat topics you've written about recently (listed above).\n"
+            "- If your scoring reason was 'pass' or low relevance, actually PASS.\n"
+            "- Show don't tell: if your bio says you're angry, BE angry.\n\n"
             'Output: {"action": "respond"|"pass", "content": "..." (only if responding)}'
         )
         print(
