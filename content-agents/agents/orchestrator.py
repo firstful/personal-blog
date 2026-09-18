@@ -35,11 +35,25 @@ from .models import (
 
 MAX_TOKENS_WRITE = 4000
 
+OPENING_ANTIREPETITION = (
+    "ANTI-REPETITION GATE: Review the Recently used arguments above. Choose a "
+    "genuinely new angle, claim, evidence example, metaphor, or conclusion. "
+    "If every angle you can offer is already there, return action=pass with a "
+    "short reason instead of recycling an old argument."
+)
+
+RESPOND_ANTIREPETITION = (
+    "ANTI-REPETITION GATE: Review the Recently used arguments above and the "
+    "conversation so far. Add a genuinely new angle, claim, evidence example, "
+    "metaphor, or conclusion. If you cannot add one, return action=pass with a "
+    "short reason instead of repeating yourself or another poster."
+)
+
 
 def persona_context(persona: Persona) -> str:
     """Full persona profile — display name, title, tagline, archetype,
-    catchphrase, signature, bio, expertise, style, quirks, and topic
-    history (last 5 topics written, to avoid repetition)."""
+    catchphrase, signature, bio, expertise, style, quirks, topic history,
+    and recent argument history (last 5 topics and arguments, to avoid repetition)."""
     display = persona.screen_name or persona.name
     parts = [
         f"## {display} — Profile",
@@ -60,6 +74,26 @@ def persona_context(persona: Persona) -> str:
         parts.append("  Recently written topics (avoid repeating yourself):")
         for t in recent:
             parts.append(f"    - {t}")
+    # Argument history — last 5 distinct arguments/claims (avoid recycling the same talking points)
+    if persona.argument_history:
+        recent_args = persona.argument_history[-5:]
+        parts.append("  Recently used arguments (choose a NEW angle; do NOT repeat these):")
+        for arg in recent_args:
+            claim = arg.claim[:120] if arg.claim else ""
+            angle = arg.angle[:120] if arg.angle else ""
+            evidence = arg.evidence[:120] if arg.evidence else ""
+            metaphor = arg.metaphor[:120] if arg.metaphor else ""
+            conclusion = arg.conclusion[:120] if arg.conclusion else ""
+            if claim:
+                parts.append(f"    - Claim: {claim}")
+            if angle:
+                parts.append(f"    - Angle: {angle}")
+            if evidence:
+                parts.append(f"      Evidence used: {evidence}")
+            if metaphor:
+                parts.append(f"      Metaphor: {metaphor}")
+            if conclusion:
+                parts.append(f"      Conclusion: {conclusion}")
     return "\n".join(parts)
 
 
@@ -227,6 +261,7 @@ def build_thread_graph(
             "in YOUR VOICE. This is YOUR unique perspective — nobody else writes "
             "like you.\n\n"
             "REQUIREMENTS:\n"
+            f"- {OPENING_ANTIREPETITION}\n"
             "- Reference the SPECIFIC claims and details from the summary, not "
             "generic platitudes about the subject.\n"
             "- Write in YOUR voice — your style, quirks, catchphrase, and tone\n"
@@ -234,13 +269,19 @@ def build_thread_graph(
             "- Show don't tell: if your bio says you're confused, BE confused "
             "in the writing. If you're jaded, BE jaded.\n"
             "- Do NOT repeat topics you've written about recently (listed above).\n"
+            "- Choose a NEW angle; do not merely add your usual skepticism, optimism, security frame, or other default take.\n"
+            "- Do not reuse the recent claims, evidence, metaphors, or conclusions listed above.\n"
             "- Do NOT open with a generic question or 'let me start by saying'.\n\n"
-            'Output: {"headline": "...", "content": "..."}'
+            'Output: {"action": "open"|"pass", "reason": "..." (only if passing), '
+            '"headline": "...", "content": "..."}'
         )
         print(f"  [orchestrator] Asking {claimer.name} to write the opening post...")
         result = await llm_json(
             llm_client, system, user, model, temperature=temp, max_tokens=MAX_TOKENS_WRITE
         )
+        if result.get("action") == "pass":
+            print(f"  [orchestrator] {claimer.name} passed on the opening")
+            return {"discarded": True, "passes": 0}
         content = result.get("content", "")
         headline = result.get("headline", topic.title)
         return {
@@ -275,12 +316,14 @@ def build_thread_graph(
             "have nothing substantive to add, or if you would just repeat what "
             "someone already said — PASS.\n\n"
             "REQUIREMENTS if responding:\n"
+            f"- {RESPOND_ANTIREPETITION}\n"
             "- Write in YOUR voice — your style, quirks, and tone must be "
             "immediately recognizable.\n"
             "- Reference the topic's specific claims or details from "
             "the recent posts — no generic filler.\n"
             "- Do NOT repeat perspectives already covered by other posters.\n"
             "- Do NOT repeat topics you've written about recently (listed above).\n"
+            "- Do not reuse your recent claims, evidence, metaphors, or conclusions listed above. Add a genuinely new claim, different evidence, or different analytical lens — otherwise PASS.\n"
             "- If your scoring reason was 'pass' or low relevance, actually PASS.\n"
             "- Show don't tell: if your bio says you're angry, BE angry.\n\n"
             'Output: {"action": "respond"|"pass", "content": "..." (only if responding)}'
@@ -317,6 +360,9 @@ def build_thread_graph(
     def route_after_select(state: ThreadState) -> str:
         return END if state.get("discarded") else "opening"
 
+    def route_after_opening(state: ThreadState) -> str:
+        return END if state.get("discarded") else "respond"
+
     def route_after_respond(state: ThreadState) -> str:
         if len(state.get("thread", [])) >= max_posts:
             return END
@@ -332,6 +378,7 @@ def build_thread_graph(
     graph.set_entry_point("score")
     graph.add_edge("score", "select")
     graph.add_conditional_edges("select", route_after_select, {END: END, "opening": "opening"})
+    graph.add_conditional_edges("opening", route_after_opening, {END: END, "respond": "respond"})
     graph.add_edge("opening", "respond")
     graph.add_conditional_edges("respond", route_after_respond, {END: END, "respond": "respond"})
     return graph.compile()

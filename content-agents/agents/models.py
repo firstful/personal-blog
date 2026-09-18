@@ -1,6 +1,6 @@
 """Pydantic models for the content agent system.
 
-Every config value is overridable via env var. 
+Every config value is overridable via env var.
 Env var name = uppercase version of config key, prefixed with nothing,
 e.g. blog_base_dir → BLOG_BASE_DIR, llm.model → LLM_MODEL
 """
@@ -33,6 +33,105 @@ class NewsCandidate(BaseModel):
     tags_guess: list[str] = Field(default_factory=list)
 
 
+class RecentArgument(BaseModel):
+    """Compact record of one published argument, used to avoid repeats."""
+
+    topic: str
+    claim: str = ""
+    angle: str
+    evidence: str = ""
+    metaphor: str = ""
+    conclusion: str = ""
+
+    @classmethod
+    def from_post(cls, topic: str, content: str) -> "RecentArgument":
+        """Create a compact, faithful argument summary from a generated post."""
+        text = re.sub(r"<[^>]+>", " ", content or "")
+        text = re.sub(r"^\s*#{1,6}\s*[^\n]*\n?", "", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        if not text:
+            return cls(topic=topic, claim="", angle="", evidence="", metaphor="", conclusion="")
+
+        sentences = [
+            sentence.strip()
+            for sentence in re.split(r"(?<=[.!?])\s+|\n+", text)
+            if len(sentence.strip()) > 10
+        ]
+        if not sentences:
+            sentences = [text]
+
+        filler = re.compile(
+            r"^(?:oh|ah|well|okay|so|listen|look|right|wow|brilliant|great)\b",
+            re.IGNORECASE,
+        )
+        angle = next((sentence for sentence in sentences if not filler.match(sentence)), sentences[0])
+        claim = angle
+
+        evidence_markers = (
+            "because",
+            "since",
+            "data shows",
+            "study",
+            "research",
+            "example",
+            "evidence",
+            "metric",
+            "statistic",
+            "percent",
+            "%",
+            "according to",
+            "measured",
+            "benchmark",
+            "survey",
+            "trial",
+            "reported",
+            "found",
+            "proof",
+        )
+        evidence = ""
+        for sentence in sentences:
+            if sentence == angle:
+                continue
+            lower = sentence.lower()
+            if any(marker in lower for marker in evidence_markers):
+                evidence = sentence
+                break
+
+        metaphor_markers = (
+            "like a",
+            "like an",
+            "analogy",
+            "metaphor",
+            "this movie",
+            "house of cards",
+            "duct tape",
+            "ghost",
+            "poison pill",
+        )
+        metaphor = next(
+            (sentence for sentence in sentences if any(marker in sentence.lower() for marker in metaphor_markers)),
+            "",
+        )
+
+        conclusion = next(
+            (
+                sentence
+                for sentence in reversed(sentences)
+                if sentence != angle and not filler.match(sentence)
+            ),
+            angle,
+        )
+
+        return cls(
+            topic=topic[:160],
+            claim=claim[:240],
+            angle=angle[:240],
+            evidence=evidence[:240],
+            metaphor=metaphor[:240],
+            conclusion=conclusion[:240],
+        )
+
+
 # ── Persona models ────────────────────────────────────────────────────────
 
 class Persona(BaseModel):
@@ -56,6 +155,8 @@ class Persona(BaseModel):
     avg_qc_score: float = 0.0
     acceptance_rate: float = 1.0
     topic_history: list[str] = Field(default_factory=list)
+    argument_history: list[RecentArgument] = Field(default_factory=list)
+
     last_n_scores: list[float] = Field(default_factory=list)
 
     @classmethod
@@ -73,7 +174,13 @@ class Persona(BaseModel):
         with open(path, "w") as f:
             yaml.dump(self.model_dump(), f, default_flow_style=False, sort_keys=False)
 
-    def record_response(self, qc_score: float, accepted: bool, topic: str) -> None:
+    def record_response(
+        self,
+        qc_score: float,
+        accepted: bool,
+        topic: str,
+        content: str = "",
+    ) -> None:
         self.total_posts += 1
         if accepted:
             self.accepted_posts += 1
@@ -86,6 +193,16 @@ class Persona(BaseModel):
         self.topic_history.append(topic)
         if len(self.topic_history) > 50:
             self.topic_history = self.topic_history[-50:]
+        if accepted and content:
+            self.record_argument(RecentArgument.from_post(topic, content))
+
+    def record_argument(self, argument: RecentArgument | dict) -> None:
+        """Persist one compact argument without retaining the full post body."""
+        if not isinstance(argument, RecentArgument):
+            argument = RecentArgument.model_validate(argument)
+        self.argument_history.append(argument)
+        if len(self.argument_history) > 20:
+            self.argument_history = self.argument_history[-20:]
 
     def topic_fit(self, topic_tags: list[str]) -> float:
         """Fraction of topic tags covered by this persona's expertise (0..1)."""
@@ -196,6 +313,7 @@ class PersonaRegistry:
     def load_track_record(self, path: str | Path) -> None:
         path = Path(path)
         if not path.exists():
+            self.seed_argument_history_from_cue()
             return
         with open(path) as f:
             data = json.load(f)
@@ -206,6 +324,58 @@ class PersonaRegistry:
                     if k in ("name", "bio", "style", "expertise", "quirks"):
                         continue
                     setattr(p, k, v)
+        # Ensure argument_history entries are RecentArgument models
+        for p in self.personas.values():
+            if isinstance(p.argument_history, list):
+                p.argument_history = [
+                    RecentArgument.model_validate(a) if isinstance(a, dict) else a
+                    for a in p.argument_history
+                ]
+        if any(not p.argument_history for p in self.personas.values()):
+            self.seed_argument_history_from_cue()
+
+    def seed_argument_history_from_cue(self) -> None:
+        """Seed empty histories from actual CUE thread posts.
+
+        CUE remains the persona/content source of truth. Only the compact
+        generation state is copied into track_record.json.
+        """
+        try:
+            from cue import load_threads_dict
+
+            threads = load_threads_dict()
+        except Exception:
+            return
+
+        for persona in self.personas.values():
+            if persona.argument_history:
+                continue
+            persona.argument_history = self._argument_history_from_threads(
+                persona.name, threads
+            )
+
+    @staticmethod
+    def _argument_history_from_threads(
+        persona_name: str,
+        threads: dict,
+    ) -> list[RecentArgument]:
+        posts = []
+        for thread in threads.values():
+            for post in thread.get("posts", []) or []:
+                if post.get("user") != persona_name or not post.get("body"):
+                    continue
+                posts.append(
+                    (
+                        post.get("timestamp", thread.get("date", "")),
+                        thread.get("title", ""),
+                        post["body"],
+                    )
+                )
+        posts.sort(key=lambda item: item[0])
+        return [
+            RecentArgument.from_post(topic, body)
+            for _, topic, body in posts
+        ][-20:]
 
 
 # ── Session / Thread models ──────────────────────────────────────────────

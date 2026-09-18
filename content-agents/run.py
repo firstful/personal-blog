@@ -193,6 +193,7 @@ async def run_single_thread(
             qc_score=post.qc_score if post.qc_score > 0 else 7.0,
             accepted=True,
             topic=topic.title,
+            content=post.content,
         )
 
     registry.save_track_record(config.track_record_path)
