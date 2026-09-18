@@ -47,6 +47,7 @@ def persona_context(persona: Persona) -> str:
         f"  Archetype: {persona.archetype}",
         f"  Tagline: {persona.tagline}",
         f"  Catchphrase: \"{persona.catchphrase}\"",
+        f"  Voice anchor: {persona.voice_anchor}",
         f"  Bio: {persona.bio}",
         f"  Expertise: {', '.join(persona.expertise)}",
         f"  Style: {persona.style}",

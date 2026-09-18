@@ -112,13 +112,18 @@ def load_personas_list() -> list[dict]:
     """Return personas as a list of dicts (content-agents format)."""
     out = []
     for uid, u in _raw_users().items():
-        out.append({
-            "name": uid,
-            "display": f'{uid} {u["avatar"]}',
-            "archetype": u["archetype"],
-            "bio": u["bio"],
-            "style": u["style"],
-            "expertise": u.get("expertise", []),
-            "quirks": u.get("quirks", []),
-        })
+            out.append({
+                "name": uid,
+                "screen_name": u.get("display", uid),
+                "display": f'{uid} {u["avatar"]}',
+                "archetype": u["archetype"],
+                "tagline": u.get("tagline", ""),
+                "catchphrase": u.get("catchphrase", ""),
+                "voice_anchor": u.get("voice_anchor", ""),
+                "signature": u.get("signature", ""),
+                "bio": u["bio"],
+                "style": u["style"],
+                "expertise": u.get("expertise", []),
+                "quirks": u.get("quirks", []),
+            })
     return out

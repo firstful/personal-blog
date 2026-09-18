@@ -45,6 +45,7 @@ class Persona(BaseModel):
     catchphrase: str = ""
     archetype: str = ""
     signature: str = ""
+    voice_anchor: str = ""  # Always-included short voice marker
     expertise: list[str] = Field(default_factory=list)
     quirks: list[str] = Field(default_factory=list)
 

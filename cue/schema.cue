@@ -13,6 +13,7 @@ package sutliff
     bio:       string
     style:     string
     catchphrase: string
+    voice_anchor: string
     pronouns:  string
     joined:    string
     role:      string
