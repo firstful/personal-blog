@@ -51,6 +51,9 @@ jobs:
       - name: Install API dependencies
         run: cd api && npm ci
 
+      - name: Install SWA CLI
+        run: npm install -g @azure/static-web-apps-cli
+
       - name: Deploy to staging
         id: staging
         run: |
