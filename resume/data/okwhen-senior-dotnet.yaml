@@ -1,0 +1,49 @@
+summary: 'Senior C#/.NET engineer: 6 years shipping ASP.NET backends, SQL data models,
+  and component-based front ends (Blazor/TypeScript), with a record of modernizing
+  legacy systems without disruption and owning outcomes end-to-end rather than taking
+  tickets.'
+skills:
+  languages:
+  - C#
+  - SQL
+  - Python
+  - JavaScript
+  - TypeScript
+  - Bash
+  frameworks:
+  - ASP.NET
+  - .NET
+  - Blazor
+  - Node.js
+  tools:
+  - Docker
+  - Nginx
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - API Design
+  - Testing & Code Review Standards
+  - Event-Driven Architecture
+  - Legacy Modernization
+  - CI/CD
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+  - Created reusable libraries and testing frameworks adopted across every service
+  - Drove client SDK standardization and code reuse across 10 services
+  - Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint
+    latency up to 15x
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered compliance automation for a Fortune 500 company, avoiding significant
+    litigation exposure

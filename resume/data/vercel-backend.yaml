@@ -1,0 +1,49 @@
+summary: Full-stack backend engineer strong in TypeScript/Node.js and SQL, six years
+  designing the APIs ten production services build on — plus reverse-proxy performance
+  work, containerized deployment, and Kubernetes operations. Comfortable at the identity/API
+  boundary where security and reliability meet.
+skills:
+  languages:
+  - TypeScript
+  - JavaScript
+  - Python
+  - C#
+  - SQL
+  - Bash
+  frameworks:
+  - Node.js
+  - .NET
+  - Blazor
+  tools:
+  - Docker
+  - Kubernetes
+  - Nginx
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - API Design
+  - RBAC & Access-Control Awareness
+  - Performance Optimization
+  - Event-Driven Architecture
+  - CI/CD
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint
+    latency up to 15x
+  - Drove client SDK standardization and code reuse across 10 services
+  - Created reusable libraries and testing frameworks adopted across every service
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered compliance automation for a Fortune 500 company, avoiding significant
+    litigation exposure

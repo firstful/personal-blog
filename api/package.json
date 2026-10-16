@@ -1,0 +1,9 @@
+{
+  "name": "dashboard-api",
+  "version": "1.0.0",
+  "description": "Azure Functions API for Reed's homelab dashboard",
+  "main": "src/functions/*.js",
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  }
+}

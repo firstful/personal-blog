@@ -1,0 +1,47 @@
+summary: 'Backend engineer whose signature work is exactly what developer-tools companies
+  sell: standardized client SDKs and shared libraries across ten production services,
+  testing frameworks adopted org-wide, and event-driven pipelines shipped inside legacy
+  systems without disruption. Python-capable, API-first, 6+ years.'
+skills:
+  languages:
+  - Python
+  - C#
+  - SQL
+  - JavaScript
+  - TypeScript
+  - Bash
+  frameworks:
+  - .NET
+  - ASP.NET
+  - Node.js
+  tools:
+  - Docker
+  - Kubernetes
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - SDK & API Design
+  - Event-Driven Architecture
+  - Testing Frameworks
+  - Observability
+  - CI/CD
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Drove client SDK standardization and code reuse across 10 services
+  - Created reusable libraries and testing frameworks adopted across every service
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+  - Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint
+    latency up to 15x
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered automation that eliminated 10 planned new hires for a client engagement

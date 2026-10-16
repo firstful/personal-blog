@@ -1,21 +1,9 @@
-site
+node_modules/
+site/
 .venv
 .env
 *.pyc
-node_modules/
-
-# Preview build artifacts
 .preview-logs/
-
-# Generated content agent drafts (CUE articles are in cue/, track record is tracked explicitly)
-content-agents/output/
-# docs/blog articles are in docs/blog/, generated site in docs/_gen/
-
-# Generated article metadata (build-time generated)
-docs/assets/articles.json
-
-# Generated CUE article pages (build-time generated, not checked in)
-docs/_gen/
 
 # Resume build artifacts
 resume/build/
@@ -24,4 +12,3 @@ resume/output/
 # Test artifacts
 test-results/
 playwright-report/
-

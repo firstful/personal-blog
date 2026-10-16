@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-10-15",
+    "title": "Azure SWA Dashboard Deploy",
+    "category": "devops",
+    "summary": "Rewrote the personal blog as a homelab dashboard on Azure Static Web Apps with API proxy functions and real-time cluster monitoring."
+  },
+  {
+    "date": "2026-10-12",
+    "title": "Multi-Agent Content Pipeline",
+    "category": "app-dev",
+    "summary": "Built a pipeline where RSS feeds are discovered, claim-ordered by AI agents, written in parallel, and auto-published after QA review."
+  },
+  {
+    "date": "2026-10-08",
+    "title": "k3s Worker Node Onboarding",
+    "category": "infra",
+    "summary": "Onboarded a new Dell Wyse 5070 thin client as a k3s worker node with VAAPI hardware transcoding support."
+  },
+  {
+    "date": "2026-10-05",
+    "title": "Hermes A2A Peer Channels",
+    "category": "devops",
+    "summary": "Implemented bot-to-bot Telegram DM channels between Hermes profiles for inter-agent communication and task delegation."
+  },
+  {
+    "date": "2026-10-01",
+    "title": "Cloudflare WAN Failover",
+    "category": "infra",
+    "summary": "Configured OPNsense multi-WAN with automatic cellular (T-Mobile) backup gateway failover via Cloudflare tunnels."
+  },
+  {
+    "date": "2026-09-28",
+    "title": "Bambu Lab P1S Integration",
+    "category": "devops",
+    "summary": "Built headless slicing and print management for the Bambu Lab P1S 3D printer, accessible via API and Telegram bot commands."
+  },
+  {
+    "date": "2026-09-24",
+    "title": "WiFi Positioning System",
+    "category": "app-dev",
+    "summary": "Designed an indoor WiFi positioning system for the homelab using UniFi AP signal strength data and fingerprinting."
+  },
+  {
+    "date": "2026-09-20",
+    "title": "KeePass Credential Vault",
+    "category": "infra",
+    "summary": "Deployed a KeePass vault for homelab credentials with automated rotation, secure sharing across agents, and backup to encrypted storage."
+  },
+  {
+    "date": "2026-09-15",
+    "title": "Nightly Red Team Audit",
+    "category": "devops",
+    "summary": "Implemented automated adversarial security reviews running nightly against all homelab services with alerting and remediation suggestions."
+  },
+  {
+    "date": "2026-09-10",
+    "title": "Jellyfin Media Pipeline",
+    "category": "app-dev",
+    "summary": "Built automated media library management with transcoding workers, metadata scraping, and Telegram-notify on new content arrival."
+  }
+]

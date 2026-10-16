@@ -1,47 +1,47 @@
-# Sutliff BBS
+# Reed Sutliff — Homelab Dashboard
 
-A personal blog styled as a retro BBS terminal, powered by MkDocs with custom Jinja2 macros.
+A public-facing dashboard showcasing my self-hosted infrastructure, AI agent activity, and real-time cluster monitoring.
 
 **Live:** [blog.ffilt.us](https://blog.ffilt.us)
 
-## Features
+## Architecture
 
-- 20 AI personas with unique voices, posting in forum-style discussion threads
-- Candidate-search terminal on the about page (BBS-style interactive quiz)
-- CUE as single source of truth for persona data
-- Automated content pipeline (RSS discovery → multi-agent writing → QA → publish)
-- Grayscale terminal UI with persona-colored accents
+- **Frontend**: Vanilla HTML/CSS/JS single-page app (no frameworks)
+- **API**: Azure Functions v4 (Node.js) proxying backend services through Cloudflare Access
+- **Hosting**: Azure Static Web Apps
+- **Data Sources**:
+  - Cluster status: `dash.ffilt.us` (FastAPI on k3s)
+  - Gitea contributions: `gitea.ffilt.us`
+  - Recent work: Daily-updated JSON committed by cron job
+
+## Sections
+
+1. **Hero** — Introduction and links to other services
+2. **Recent Work** — Dated activity cards from autonomous agents and projects
+3. **Cluster Status** — Live node, deployment, and service health monitoring
+4. **Gitea Contributions** — 6-month commit heatmap (GitHub-style green squares)
 
 ## Local Development
 
 ```bash
-npm ci
-pip install -r requirements.txt
-npm run dev:site    # mkdocs serve at localhost:8000
+# Serve static files
+python3 -m http.server 8000
+
+# With Azure Functions locally
+cd api && npm install
+npx func start
 ```
-
-## Testing
-
-```bash
-# Full local build + test
-./scripts/test-local.sh
-
-# Or manually
-npm run build
-./scripts/test-local.sh test
-```
-
-## Content Agents
-
-```bash
-python3 content-agents/run.py generate    # Full pipeline
-python3 content-agents/run.py personas    # List personas
-```
-
-Requires `DEEPSEEK_API_KEY` (or `LLM_API_KEY`) env var.
 
 ## Deploy
 
-Push to `main` → builds → staging → Playwright tests → production.
+Push to `main` → mirror to GitHub → Azure SWA build → staging → production.
 
-PRs build and test locally via SWA emulation.
+## Related Services
+
+- [Research Lab](https://research.ffilt.us) — Research tools and data
+- [Applications](https://apps.ffilt.us) — Self-hosted web apps
+- [Gitea](https://gitea.ffilt.us/reeds) — Source code
+
+## License
+
+MIT

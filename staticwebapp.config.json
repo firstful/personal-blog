@@ -1,31 +1,24 @@
 {
-    "routes": [
-        {
-            "route": "/login",
-            "allowedRoles": ["anonymous"],
-            "rewrite": "/.auth/login/google"
-        },
-        {
-            "route": "/logout",
-            "allowedRoles": ["authenticated"],
-            "rewrite": "/.auth/logout"
-        }
-    ],
-    "navigationFallback": {
-        "rewrite": "/index.html",
-        "exclude": [
-            "/assets/*",
-            "/feed_rss_created.xml",
-            "/feed_rss_updated.xml",
-            "/feed_atom.xml",
-            "/sitemap.xml"
-        ]
-    },
-    
-    "responseOverrides": {
-        "401": {
-            "statusCode": 302,
-            "redirect": ".auth/login/google?post_login_redirect_uri=.referrer"
-        }
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/api/*", "/data/*", "/resume/*"]
+  },
+  "routes": [
+    {
+      "route": "/api/*",
+      "headers": {
+        "Cache-Control": "public, max-age=300"
+      }
     }
+  ],
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY"
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  }
 }

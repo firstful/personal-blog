@@ -1,0 +1,69 @@
+summary: 'Platform engineer who builds and operates infrastructure around production
+  AI: a self-hosted multi-provider LLM gateway with automatic failover, evaluation
+  and model-scoring tooling, and multi-agent orchestration running on a self-managed
+  Kubernetes cluster — backed by six years of Python automation platforms, APIs, and
+  self-service tooling.'
+skills:
+  languages:
+  - Python
+  - C#
+  - SQL
+  - JavaScript
+  - Bash
+  frameworks:
+  - .NET
+  - ASP.NET
+  - Node.js
+  tools:
+  - Docker
+  - Kubernetes
+  - Nginx
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - MLOps / AI Platform
+  - Self-Service Tooling
+  - Event-Driven Architecture
+  - API Design
+  - CI/CD
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+  - Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint
+    latency up to 15x
+  - Created reusable libraries and testing frameworks adopted across every service
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered automation that eliminated 10 planned new hires for a client engagement
+  - Built container tracking system enabling 5-10x daily inspection frequency, reducing
+    demurrage fees
+projects:
+- name: Self-Hosted AI Agent Platform
+  description: Multi-provider LLM gateway with automatic provider failover, evaluation
+    and model-scoring tooling, and multi-agent orchestration, deployed git-ops style
+    on a self-managed Kubernetes cluster
+  technologies:
+  - Python
+  - Docker
+  - Kubernetes
+  - CI/CD
+  url: https://ffilt.us
+- name: ffilt.us (Personal Blog)
+  description: Static site built with MkDocs, custom Material theme, automated CI/CD
+    deployment on Azure
+  technologies:
+  - Python
+  - MkDocs
+  - Azure
+  - GitHub Actions
+  url: https://ffilt.us

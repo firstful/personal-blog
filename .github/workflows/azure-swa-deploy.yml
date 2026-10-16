@@ -19,43 +19,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: Install API dependencies
+        run: cd api && npm ci
 
-      - uses: actions/setup-go@v5
-        with:
-          go-version: 'stable'
-
-      - name: Install CUE
-        run: go install cuelang.org/go/cmd/cue@latest
-
-      - name: Install dependencies
+      - name: Validate structure
         run: |
-          npm ci
-          pip install -r requirements.txt
-
-      - name: Build site
-        run: npm run build
-
-      - name: Serve site
-        run: |
-          python3 -m http.server 8000 --directory site &
-          for i in $(seq 1 30); do
-            if curl -s -o /dev/null http://localhost:8000 2>/dev/null; then
-              echo "Server ready"
-              break
-            fi
-            sleep 1
-          done
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
-
-      - name: Run Playwright tests
-        run: BASE_URL=http://localhost:8000 npx playwright test
+          test -f index.html
+          test -f assets/style.css
+          test -f assets/app.js
+          test -f api/package.json
+          echo "Structure OK"
 
       - name: Enable auto-merge
         if: success()
@@ -66,44 +40,22 @@ jobs:
   deploy:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    name: Build, Test, Deploy
+    name: Build & Deploy
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - uses: actions/setup-go@v5
-        with:
-          go-version: 'stable'
-
-      - name: Install CUE
-        run: go install cuelang.org/go/cmd/cue@latest
-
-      - name: Install dependencies
-        run: |
-          npm ci
-          pip install -r requirements.txt
-
-      - name: Build site
-        run: npm run build
-
-      - name: Copy SWA config
-        run: cp staticwebapp.config.json site/staticwebapp.config.json
-
-      - name: Install SWA CLI
-        run: npm install -g @azure/static-web-apps-cli
+      - name: Install API dependencies
+        run: cd api && npm ci
 
       - name: Deploy to staging
         id: staging
         run: |
-          OUTPUT=$(swa deploy site \
+          OUTPUT=$(swa deploy . \
+            --api-location api \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
             --env staging 2>&1)
           echo "$OUTPUT"
@@ -131,14 +83,9 @@ jobs:
           echo "Staging did not become healthy in time"
           exit 1
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
-
-      - name: Run Playwright tests against staging
-        run: BASE_URL="${{ steps.staging.outputs.url }}" npx playwright test
-
       - name: Deploy to production
         run: |
-          swa deploy site \
+          swa deploy . \
+            --api-location api \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
             --env production

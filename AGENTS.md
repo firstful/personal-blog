@@ -2,24 +2,32 @@
 
 ## Service Config
 
-Desired state: `agent-stack.json` in this repo
+This is the homelab dashboard deployed to Azure Static Web Apps at blog.ffilt.us.
 
-## Containerfile
+## Architecture
 
-This repo contains a `Containerfile` that builds the image `stack/personal-blog:latest`.
+- **Frontend**: Vanilla HTML/CSS/JS SPA at repo root
+- **API**: Azure Functions v4 in `/api` directory, proxying dash.ffilt.us and gitea.ffilt.us
+- **Data**: Recent work entries in `/data/recent-work.json` (updated daily by cron)
+- **Deploy**: Gitea push → mirror to GitHub → Azure SWA deploy
 
-## Deployment Workflow
+## Environment Variables (set in SWA settings)
 
-1. **Make changes** to this repo (Containerfile, source code, etc.)
-2. Test your changes locally inside the running container if needed
-3. **Commit** your changes:
-   ```
-   git add . && git commit -m "describe your changes"
-   ```
-   The controller will detect the new commit hash within 5 seconds, rebuild the image, and recreate the container.
+- `DASH_URL` — homelab dashboard backend
+- `GITEA_URL` — Gitea instance URL
+- `CF_ACCESS_CLIENT_ID` / `CF_ACCESS_CLIENT_SECRET` — Cloudflare Access service tokens
 
-> **Important**: The controller uses the git commit hash to detect source changes. Uncommitted file edits will NOT trigger a rebuild. (`agent-stack.json` edits always trigger a rebuild regardless of commits.)
+## Making Changes
 
-## Config Changes
+1. Edit files, test locally with `python3 -m http.server 8000`
+2. Commit and push to main
+3. Gitea mirrors to GitHub → triggers SWA deploy
 
-To change ports, volumes, env vars, or expose settings, edit `agent-stack.json` in this repo directly — this always triggers a container recreation on the next reconcile (no commit required).
+## Key Files
+
+- `index.html` — SPA shell
+- `assets/style.css` — Dark theme styling
+- `assets/app.js` — Frontend logic (fetch, cache, render)
+- `api/src/functions/*.js` — Azure Functions proxies
+- `data/recent-work.json` — Activity feed data
+- `resume/` — LaTeX resume builder (do not modify)

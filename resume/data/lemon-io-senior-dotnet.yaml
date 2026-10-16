@@ -1,0 +1,48 @@
+summary: Senior C#/.NET developer — 6 years of commercial .NET and C# across platform,
+  API, and full-stack delivery, from architecture decisions on new systems to modernizing
+  legacy codebases in place. Self-directed, remote-native, comfortable building projects
+  from scratch.
+skills:
+  languages:
+  - C#
+  - SQL
+  - Python
+  - JavaScript
+  - TypeScript
+  - Bash
+  frameworks:
+  - ASP.NET
+  - .NET
+  - Blazor
+  - Node.js
+  tools:
+  - Docker
+  - Nginx
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - API Design
+  - Architecture & System Design
+  - Automation
+  - Event-Driven Architecture
+  - CI/CD
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+  - Drove client SDK standardization and code reuse across 10 services
+  - Created reusable libraries and testing frameworks adopted across every service
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered compliance automation for a Fortune 500 company, avoiding significant
+    litigation exposure
+  - Delivered automation that eliminated 10 planned new hires for a client engagement
