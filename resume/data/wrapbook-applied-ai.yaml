@@ -1,0 +1,69 @@
+summary: 'AI platform engineer who builds and operates production LLM and agent systems:
+  a multi-provider LLM gateway with automatic failover, evaluation and model-scoring
+  tooling, and multi-agent orchestration with guardrails, all deployed git-ops style
+  on a self-managed Kubernetes cluster - backed by six years of platform engineering,
+  SDK standardization across ten services, and event-driven pipelines shipped inside
+  legacy systems without disruption.'
+skills:
+  languages:
+  - Python
+  - C#
+  - SQL
+  - JavaScript
+  - TypeScript
+  - Bash
+  frameworks:
+  - .NET
+  - ASP.NET
+  - Node.js
+  tools:
+  - Docker
+  - Kubernetes
+  - Linux
+  - Git
+  - Azure
+  - CI/CD
+  concepts:
+  - LLM / Agent Systems
+  - Evaluation & Model Scoring
+  - Reliability & Failover
+  - API Design
+  - Event-Driven Architecture
+experience:
+- company: Foxen
+  location: Columbus, OH
+  position: Senior Software Engineer
+  dates: Aug 2023 – Present
+  highlights:
+  - Implemented event-driven architecture inside a legacy codebase without service
+    disruption
+  - Drove client SDK standardization and code reuse across 10 services
+  - Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint
+    latency up to 15x
+  - Created reusable libraries and testing frameworks adopted across every service
+- company: Impower.ai
+  location: Columbus, OH
+  position: Automation Architect / RPA Developer
+  dates: Mar 2020 – Aug 2023
+  highlights:
+  - Delivered automation that eliminated 10 planned new hires for a client engagement
+projects:
+- name: Self-Hosted AI Agent Platform
+  description: Multi-provider LLM gateway with automatic provider failover, evaluation
+    and model-scoring tooling, and multi-agent orchestration, deployed git-ops style
+    on a self-managed Kubernetes cluster
+  technologies:
+  - Python
+  - Docker
+  - Kubernetes
+  - CI/CD
+  url: https://ffilt.us
+- name: ffilt.us (Personal Blog)
+  description: Static site built with MkDocs, custom Material theme, automated CI/CD
+    deployment on Azure
+  technologies:
+  - Python
+  - MkDocs
+  - Azure
+  - GitHub Actions
+  url: https://ffilt.us

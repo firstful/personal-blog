@@ -59,7 +59,7 @@ jobs:
         run: |
           OUTPUT=$(swa deploy . \
             --api-location api \
-            --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
+            --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SUTLIFF_DASHBOARD }} \
             --env staging 2>&1)
           echo "$OUTPUT"
           STAGING_URL=$(echo "$OUTPUT" | grep -oP 'https://[a-z0-9\-\.]+\.azurestaticapps\.net' | head -1)
@@ -90,5 +90,5 @@ jobs:
         run: |
           swa deploy . \
             --api-location api \
-            --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_POND_0F39DCB0F }} \
+            --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SUTLIFF_DASHBOARD }} \
             --env production
