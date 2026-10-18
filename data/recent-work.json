@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "Discord Forum Tooling Migration & Gateway Patch",
+    "category": "devops",
+    "summary": "Implemented declarative per-forum tooling context via Gitea-hosted YAML with 20 forum overrides, extended ChannelOverride with toolsets/skills/context/docs fields, and patched the gateway for toolset resolution and context injection with a 15-minute mirror cron. Also added a 48-hour purge cron for the Discord attachments channel and improved sidecar filenames to use readable tool-kind labels."
+  },
+  {
     "date": "2026-10-15",
     "title": "Azure SWA Dashboard Deploy",
     "category": "devops",
