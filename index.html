@@ -45,8 +45,65 @@
     </div>
   </section>
 
+  <!-- Projects -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <span class="section-subtitle">Work in progress — engineering problems worth solving</span>
+      </div>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag project-tag-active">Active</span>
+            <span class="project-lang">C++ · OpenSCAD · OrcaSlicer</span>
+          </div>
+          <h3>Headless Multi-Color Slicer</h3>
+          <p class="project-repo"><a href="https://gitea.ffilt.us/reeds/multicolor-slicer" target="_blank" rel="noopener">reeds/multicolor-slicer</a></p>
+          <p>
+            A headless CLI pipeline that slices multi-color (AMS) parts for a Bambu Lab P1S
+            without a desktop GUI — driven entirely from agents.
+          </p>
+          <ul class="project-bullets">
+            <li><strong>The problem:</strong> Bambu Studio multi-color slicing is GUI-only. No headless path exists, so automating a multi-material print requires a human at a desktop.</li>
+            <li><strong>The approach:</strong> Extract the AMS/extruder-mapping machinery from the Bambu Studio source and drive it from the CLI, then generate per-color STLs from parametric OpenSCAD and slice them as a single multi-extruder job.</li>
+            <li><strong>Verified so far:</strong> 3MF project surgery (per-part extruder binding, filament color remap), A1-mini → P1S preset retargeting, AMS tray mapping, and FTPS delivery to the printer.</li>
+            <li><strong>Open problem:</strong> OrcaSlicer's headless mode forces <code>extruder_count=1</code> from the single-nozzle P1S profile, so the CLI emits <code>T0</code>-only gcode. Working on a source-level fix to preserve multi-extruder output.</li>
+          </ul>
+          <div class="project-tags">
+            <span>3D Printing</span><span>Reverse Engineering</span><span>Headless Pipeline</span><span>Agent-Driven</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag project-tag-live">Live</span>
+            <span class="project-lang">Python · MQTT · TLS</span>
+          </div>
+          <h3>Printer Ops &amp; Automation</h3>
+          <p class="project-repo"><a href="https://gitea.ffilt.us/reeds/bambu-cam" target="_blank" rel="noopener">reeds/bambu-cam</a></p>
+          <p>
+            Headless control plane for the P1S: MQTT status streaming over TLS, FTPS file
+            delivery, and a read-only camera UI on the k3s cluster.
+          </p>
+          <ul class="project-bullets">
+            <li>MQTT <code>pushall</code> status polling — nozzle/bed temps, print progress, AMS tray state.</li>
+            <li>FTPS upload to the printer's <code>/cache</code> for queue-without-starting workflows.</li>
+            <li>Camera tunnel (LAN port 6000) proxied into k3s as a read-only dashboard.</li>
+            <li>Pause-watch cron that pings on <code>PAUSE</code> so magnet swaps happen on time.</li>
+          </ul>
+          <div class="project-tags">
+            <span>IoT</span><span>MQTT</span><span>Kubernetes</span><span>Automation</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- Cluster Status -->
-  <section class="section section-dark" id="cluster-status">
+  <section class="section" id="cluster-status">
     <div class="container">
       <div class="section-header">
         <h2>Cluster Status</h2>
@@ -77,7 +134,7 @@
   </section>
 
   <!-- Contributions Heatmap -->
-  <section class="section" id="contributions">
+  <section class="section section-dark" id="contributions">
     <div class="container">
       <div class="section-header">
         <h2>Gitea Contributions</h2>
