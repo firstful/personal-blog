@@ -1,9 +1,15 @@
 [
   {
     "date": "2026-10-18",
+    "title": "STL Web Previewer Deploy & Hermes Profiles k3s Migration",
+    "category": "devops",
+    "summary": "Built and deployed an interactive STL web previewer service on bambu.ffilt.us (Flask + Three.js) through the full Gitea-to-CI-to-k3s pipeline, accepting STL uploads and serving viewable links. Migrated the hermes-profiles management app from a host systemd service to a k3s pod with Traefik ingress, hostPath volumes, and network policy. Also resolved Gitea Actions CI failures including missing registry push token scopes and fixed bambu-cam IngressRoute path routing conflicts."
+  },
+  {
+    "date": "2026-10-18",
     "title": "Headless Multi-Color Slicer",
     "category": "app-dev",
-    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S — extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
+    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
   },
   {
     "date": "2026-10-18",
