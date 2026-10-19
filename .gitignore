@@ -12,3 +12,5 @@ resume/output/
 # Test artifacts
 test-results/
 playwright-report/
+# Azure Functions local dev settings (secrets) - never commit
+api/local.settings.json
