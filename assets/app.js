@@ -112,10 +112,15 @@
   }
 
   // ===== Cluster Status =====
+  // Cache keys are versioned: the v1 caches held the raw, unredacted
+  // cluster payload (node names, hostnames, internal IPs). Bumping to v2
+  // drops those stale copies out of visitors' localStorage.
   async function loadClusterStatus(forceRefresh) {
     if (forceRefresh) {
       localStorage.removeItem('cluster-overview-cache');
       localStorage.removeItem('cluster-services-cache');
+      localStorage.removeItem('cluster-overview-cache-v2');
+      localStorage.removeItem('cluster-services-cache-v2');
     }
 
     const overviewEl = document.getElementById('cluster-overview');
@@ -124,15 +129,15 @@
 
     try {
       const [overview, services] = await Promise.all([
-        fetchJSON('/api/overview', 'cluster-overview-cache', CACHE_TTL),
-        fetchJSON('/api/services', 'cluster-services-cache', CACHE_TTL)
+        fetchJSON('/api/overview', 'cluster-overview-cache-v2', CACHE_TTL),
+        fetchJSON('/api/services', 'cluster-services-cache-v2', CACHE_TTL)
       ]);
 
       // Timestamp
-      const cachedOverview = JSON.parse(localStorage.getItem('cluster-overview-cache') || '{}');
+      const cachedOverview = JSON.parse(localStorage.getItem('cluster-overview-cache-v2') || '{}');
       tsEl.textContent = formatTimestamp(cachedOverview.ts);
 
-      renderOverview(overview);
+      renderOverview(overview, services);
       renderServices(services);
     } catch (err) {
       overviewEl.innerHTML = `
@@ -145,124 +150,111 @@
     }
   }
 
-  function renderOverview(data) {
+  // The API returns aggregate counts only — no node names, hostnames or
+  // internal IPs. See api/overview.js and api/services.js for the redaction.
+  function renderOverview(data, servicesData) {
     const container = document.getElementById('cluster-overview');
-    const nodes = data.nodes || [];
+    const nodes = data.nodes || { total: 0, ready: 0 };
+    const namespaces = data.namespaces || { total: 0 };
+    const deployments = data.deployments || { total: 0, ready: 0 };
+    const pods = data.pods || { total: 0, running: 0 };
+    const services = (servicesData && servicesData.services) || { total: 0, healthy: 0, unhealthy: 0 };
 
-    // Nodes card
-    const nodesHtml = `
+    const nodesAllReady = nodes.total > 0 && nodes.ready === nodes.total;
+    const servicesAllHealthy = services.total > 0 && services.healthy === services.total;
+
+    container.innerHTML = `
       <div class="overview-card">
-        <h3>Nodes (${nodes.length})</h3>
-        ${nodes.map(n => `
-          <div class="node-item" data-node='${JSON.stringify(n)}' style="cursor:pointer">
-            <div>
-              <span class="node-name">${escapeHtml(n.name)}</span>
-              <span class="node-role">${escapeHtml(n.role || '')}</span>
-            </div>
-            <div class="node-meta">
-              <span class="node-version">${escapeHtml(n.version || '')}</span>
-              <span class="status-dot ${n.ready ? 'ready' : 'not-ready'}" title="${n.ready ? 'Ready' : 'Not Ready'}"></span>
-            </div>
-          </div>
-        `).join('')}
+        <h3>Cluster</h3>
+        <div class="node-item">
+          <span class="node-name">Nodes</span>
+          <span class="node-meta">
+            <span class="status-dot ${nodesAllReady ? 'ready' : 'not-ready'}" title="${nodesAllReady ? 'All ready' : 'Degraded'}"></span>
+            ${nodes.ready}/${nodes.total} ready
+          </span>
+        </div>
+        <div class="node-item">
+          <span class="node-name">Namespaces</span>
+          <span class="node-meta">${namespaces.total}</span>
+        </div>
+        <div class="node-item">
+          <span class="node-name">Deployments</span>
+          <span class="node-meta">${deployments.ready}/${deployments.total} ready</span>
+        </div>
+        <div class="node-item">
+          <span class="node-name">Pods</span>
+          <span class="node-meta">${pods.running}/${pods.total} running</span>
+        </div>
       </div>
-    `;
-
-    // Summary card
-    const totalDeployments = (data.deployments || []).length;
-    const readyDeployments = (data.deployments || []).filter(d => d.ready).length;
-    const totalServices = (data.services || data.endpoints || []).length;
-    const healthyServices = (data.services || data.endpoints || []).filter(s => s.healthy !== false).length;
-
-    const summaryHtml = `
       <div class="overview-card">
         <h3>Summary</h3>
         <div class="node-item">
           <span class="node-name">Nodes Online</span>
           <span class="node-meta">
-            <span class="status-dot ${nodes.every(n => n.ready) ? 'ready' : 'not-ready'}"></span>
-            ${nodes.filter(n => n.ready).length}/${nodes.length}
+            <span class="status-dot ${nodesAllReady ? 'ready' : 'not-ready'}"></span>
+            ${nodes.ready}/${nodes.total}
           </span>
         </div>
         <div class="node-item">
           <span class="node-name">Deployments Ready</span>
-          <span class="node-meta">${readyDeployments}/${totalDeployments}</span>
+          <span class="node-meta">${deployments.ready}/${deployments.total}</span>
         </div>
         <div class="node-item">
           <span class="node-name">Services Healthy</span>
-          <span class="node-meta">${healthyServices}/${totalServices}</span>
+          <span class="node-meta">
+            <span class="status-dot ${servicesAllHealthy ? 'ready' : 'not-ready'}"></span>
+            ${services.healthy}/${services.total}
+          </span>
         </div>
-      </div>
-    `;
-
-    container.innerHTML = nodesHtml + summaryHtml;
-
-    // Click handler for node details
-    container.querySelectorAll('.node-item[data-node]').forEach(el => {
-      el.addEventListener('click', () => {
-        try {
-          const node = JSON.parse(el.dataset.node);
-          openModal('Node Details', renderNodeDetail(node));
-        } catch { /* ignore */ }
-      });
-    });
-  }
-
-  function renderNodeDetail(node) {
-    const entries = Object.entries(node);
-    return `
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        ${entries.map(([k, v]) => `
-          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);">
-            <span style="color:var(--text-muted);font-size:13px;text-transform:capitalize;">${escapeHtml(k)}</span>
-            <span style="font-family:var(--font-mono);font-size:13px;">${escapeHtml(String(v))}</span>
-          </div>
-        `).join('')}
       </div>
     `;
   }
 
   function renderServices(data) {
     const container = document.getElementById('cluster-services');
-    const services = Array.isArray(data) ? data : (data.services || data.endpoints || []);
+    const services = data.services || { total: 0, healthy: 0, unhealthy: 0 };
 
-    if (services.length === 0) {
+    if (!services.total) {
       container.innerHTML = '<div class="empty-state">No services found.</div>';
       return;
     }
+
+    const allHealthy = services.healthy === services.total;
 
     container.innerHTML = `
       <table class="services-table">
         <thead>
           <tr>
-            <th>Host</th>
+            <th>Metric</th>
             <th>Status</th>
-            <th>Latency</th>
+            <th>Count</th>
           </tr>
         </thead>
         <tbody>
-          ${services.map(s => {
-            const latency = s.latency_ms ?? s.latency ?? null;
-            let latencyClass = '';
-            if (latency !== null) {
-              if (latency < 200) latencyClass = 'latency-good';
-              else if (latency < 500) latencyClass = 'latency-warn';
-              else latencyClass = 'latency-bad';
-            }
-            const isHealthy = s.healthy !== false && s.status !== 'down';
-            return `
-              <tr>
-                <td class="host-cell">
-                  ${s.url ? `<a href="${escapeHtml(s.url)}" target="_blank" rel="noopener">${escapeHtml(s.host || s.name || '')}</a>` : escapeHtml(s.host || s.name || '')}
-                </td>
-                <td class="status-cell">
-                  <span class="status-dot ${isHealthy ? 'ready' : 'not-ready'}"></span>
-                  ${isHealthy ? 'Healthy' : 'Down'}
-                </td>
-                <td class="${latencyClass}">${latency !== null ? `${latency}ms` : '—'}</td>
-              </tr>
-            `;
-          }).join('')}
+          <tr>
+            <td class="host-cell">Subdomains</td>
+            <td class="status-cell">
+              <span class="status-dot ${allHealthy ? 'ready' : 'not-ready'}"></span>
+              ${allHealthy ? 'All Healthy' : 'Degraded'}
+            </td>
+            <td>${services.total}</td>
+          </tr>
+          <tr>
+            <td class="host-cell">Healthy</td>
+            <td class="status-cell">
+              <span class="status-dot ready"></span>
+              Responding
+            </td>
+            <td>${services.healthy}</td>
+          </tr>
+          <tr>
+            <td class="host-cell">Unreachable</td>
+            <td class="status-cell">
+              <span class="status-dot ${services.unhealthy ? 'not-ready' : 'ready'}"></span>
+              ${services.unhealthy ? 'Needs Attention' : 'None'}
+            </td>
+            <td>${services.unhealthy}</td>
+          </tr>
         </tbody>
       </table>
     `;

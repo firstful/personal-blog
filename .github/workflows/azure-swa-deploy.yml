@@ -54,6 +54,30 @@ jobs:
       - name: Install SWA CLI
         run: npm install -g @azure/static-web-apps-cli
 
+      # SECURITY: never publish the checkout itself.
+      # Deploying $GITHUB_WORKSPACE published /.git/ (including the live CI
+      # GITHUB_TOKEN in .git/config), /resume/ (personal resume + job
+      # application data), /AGENTS.md, /README.md and /.mailmap to the public
+      # internet. stage-public.sh builds a clean allow-listed artifact.
+      - name: Stage public artifact
+        run: bash scripts/stage-public.sh "${{ runner.temp }}/publish"
+
+      - name: Verify no sensitive paths in staged artifact
+        run: |
+          set -e
+          STAGED="${{ runner.temp }}/publish"
+          for bad in .git resume AGENTS.md README.md .mailmap .github .gitea; do
+            if [ -e "$STAGED/site/$bad" ]; then
+              echo "FATAL: $bad leaked into the staged static artifact" >&2
+              exit 1
+            fi
+          done
+          if [ -e "$STAGED/api/local.settings.json" ]; then
+            echo "FATAL: local.settings.json leaked into the staged functions app" >&2
+            exit 1
+          fi
+          echo "Staged artifact is clean."
+
       - name: Deploy to staging
         id: staging
         # The SWA CLI refuses to run when the CURRENT DIRECTORY is identical to
@@ -63,8 +87,8 @@ jobs:
         # that check trips, so run from runner.temp and pass absolute paths.
         working-directory: ${{ runner.temp }}
         run: |
-          OUTPUT=$(swa deploy "$GITHUB_WORKSPACE" \
-            --api-location "$GITHUB_WORKSPACE/api" \
+          OUTPUT=$(swa deploy "${{ runner.temp }}/publish/site" \
+            --api-location "${{ runner.temp }}/publish/api" \
             --api-language node \
             --api-version 20 \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SUTLIFF_DASHBOARD }} \
@@ -97,8 +121,8 @@ jobs:
       - name: Deploy to production
         working-directory: ${{ runner.temp }}
         run: |
-          swa deploy "$GITHUB_WORKSPACE" \
-            --api-location "$GITHUB_WORKSPACE/api" \
+          swa deploy "${{ runner.temp }}/publish/site" \
+            --api-location "${{ runner.temp }}/publish/api" \
             --api-language node \
             --api-version 20 \
             --deployment-token ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_SUTLIFF_DASHBOARD }} \

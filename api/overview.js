@@ -9,6 +9,50 @@ let cached = null;
 let cacheTime = 0;
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutes
 
+// ---------------------------------------------------------------------------
+// Public redaction.
+//
+// The upstream dash service returns the raw k3s cluster state: node names,
+// node internal IPs, kubelet versions, namespace names, deployment names and
+// pod names. None of that belongs on a public, employer-facing page — it maps
+// the homelab's internal topology for anyone who opens devtools.
+//
+// This function is the only public door onto that data, so the redaction
+// happens HERE, server-side. The browser never receives the raw payload; it
+// only ever sees the aggregate counts below.
+// ---------------------------------------------------------------------------
+function redactOverview(data) {
+  const nodes = Array.isArray(data.nodes)
+    ? data.nodes.filter(n => n && typeof n.ready === 'boolean')
+    : [];
+  const namespaces = Array.isArray(data.namespaces) ? data.namespaces : [];
+  const deployments = Array.isArray(data.deployments)
+    ? data.deployments.filter(d => d && typeof d.ready === 'number')
+    : [];
+  const pods = Array.isArray(data.pods)
+    ? data.pods.filter(p => p && typeof p.phase === 'string')
+    : [];
+
+  return {
+    nodes: {
+      total: nodes.length,
+      ready: nodes.filter(n => n.ready).length
+    },
+    namespaces: {
+      total: namespaces.length
+    },
+    deployments: {
+      total: deployments.length,
+      ready: deployments.filter(d => d.ready > 0).length
+    },
+    pods: {
+      total: pods.length,
+      running: pods.filter(p => p.phase === 'Running').length
+    },
+    fetched_at: data.fetched_at
+  };
+}
+
 app.http('overview', {
   methods: ['GET'],
   authLevel: 'anonymous',
@@ -37,13 +81,14 @@ app.http('overview', {
       }
 
       const data = await res.json();
-      cached = data;
+      const redacted = redactOverview(data);
+      cached = redacted;
       cacheTime = now;
 
       return {
         status: 200,
         headers: getCorsHeaders(900),
-        jsonBody: data
+        jsonBody: redacted
       };
     } catch (err) {
       context.log.error('overview proxy error:', err.message);

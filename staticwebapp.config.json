@@ -1,7 +1,12 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/api/*", "/data/*", "/resume/*"]
+    "exclude": [
+      "/assets/*",
+      "/api/*",
+      "/data/*",
+      "/resume/*"
+    ]
   },
   "routes": [
     {
@@ -9,11 +14,40 @@
       "headers": {
         "Cache-Control": "public, max-age=300"
       }
+    },
+    {
+      "route": "/resume/*",
+      "statusCode": 404
+    },
+    {
+      "route": "/.git/*",
+      "statusCode": 404
+    },
+    {
+      "route": "/.github/*",
+      "statusCode": 404
+    },
+    {
+      "route": "/.gitea/*",
+      "statusCode": 404
+    },
+    {
+      "route": "/.mailmap",
+      "statusCode": 404
+    },
+    {
+      "route": "/AGENTS.md",
+      "statusCode": 404
+    },
+    {
+      "route": "/README.md",
+      "statusCode": 404
     }
   ],
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
-    "X-Frame-Options": "DENY"
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "no-referrer"
   },
   "responseOverrides": {
     "404": {

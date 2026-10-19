@@ -39,7 +39,6 @@ Push to `main` → mirror to GitHub → Azure SWA build → staging → producti
 ## Related Services
 
 - [Research Lab](https://research.ffilt.us) — Research tools and data
-- [Applications](https://apps.ffilt.us) — Self-hosted web apps
 - [Gitea](https://gitea.ffilt.us/reeds) — Source code
 
 ## License
