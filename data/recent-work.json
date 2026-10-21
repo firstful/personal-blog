@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "Rayobrowse Session Store \u2014 Keyed Persistent Browser Sessions",
+    "category": "app-dev",
+    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration \u2014 an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
+  },
+  {
     "date": "2026-10-19",
     "title": "Discord Attachment Resolver Deploy & Hermes Source Migration to Gitea",
     "category": "devops",
