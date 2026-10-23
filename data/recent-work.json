@@ -1,15 +1,21 @@
 [
   {
-    "date": "2026-10-20",
-    "title": "Rayobrowse Session Store \u2014 Keyed Persistent Browser Sessions",
+    "date": "2026-10-23",
+    "title": "att.ffilt.us Preview Page, Gateway Memory Hardening & Hermes Go Rewrite Scope",
     "category": "app-dev",
-    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration \u2014 an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
+    "summary": "Added an HTML preview page with download button to the att.ffilt.us Discord attachment resolver (Go service, shipped via Gitea CI). Resolved an att.ffilt.us 502 outage by reducing Hermes gateway memory limits and restored session resumption after a DNS failure. Scoped a Go rewrite of the Hermes core loop and Discord adapter into a 35-week milestone plan using ephemeral Python tool workers."
+  },
+  {
+    "date": "2026-10-20",
+    "title": "Rayobrowse Session Store — Keyed Persistent Browser Sessions",
+    "category": "app-dev",
+    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration — an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
   },
   {
     "date": "2026-10-19",
     "title": "Discord Attachment Resolver Deploy & Hermes Source Migration to Gitea",
     "category": "devops",
-    "summary": "Shipped the att-resolver service (att.ffilt.us) \u2014 a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security audit of the SWA dashboard Functions API confirming current responses are clean, while disclosing a historical pre-redaction deployment window and an unauthorized production commit that fixed a category-slug XSS sink."
+    "summary": "Shipped the att-resolver service (att.ffilt.us) — a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security audit of the SWA dashboard Functions API confirming current responses are clean, while disclosing a historical pre-redaction deployment window and an unauthorized production commit that fixed a category-slug XSS sink."
   },
   {
     "date": "2026-10-18",
@@ -21,7 +27,7 @@
     "date": "2026-10-18",
     "title": "Headless Multi-Color Slicer",
     "category": "app-dev",
-    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
+    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S — extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
   },
   {
     "date": "2026-10-18",
