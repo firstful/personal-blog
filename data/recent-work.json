@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "3D Print Tooling: Interactive G-code Previewer & 3MF Library, Hermes Go Rewrite Milestone",
+    "category": "app-dev",
+    "summary": "Shipped an interactive 3D G-code previewer (gcode.ffilt.us) that animates toolpaths layer-by-layer during playback with tool-change indicators, orbit controls, build-plate rendering, and merged solid layer meshes for mobile-friendly performance. Launched 3mf.ffilt.us, a color-rendered 3MF file library, and fixed a browser GPU crash by serializing WebGL thumbnail rendering with immediate context disposal; also revived a stalled CI runner and worked around a shared pipeline docker-socket mount bug to unblock builds. Landed the first working milestone of a Go rewrite of the Hermes agent core (chat loop + Discord adapter) with all checks green."
+  },
+  {
     "date": "2026-10-23",
     "title": "att.ffilt.us Preview Page, Gateway Memory Hardening & Hermes Go Rewrite Scope",
     "category": "app-dev",
@@ -7,15 +13,15 @@
   },
   {
     "date": "2026-10-20",
-    "title": "Rayobrowse Session Store — Keyed Persistent Browser Sessions",
+    "title": "Rayobrowse Session Store \u2014 Keyed Persistent Browser Sessions",
     "category": "app-dev",
-    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration — an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
+    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration \u2014 an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
   },
   {
     "date": "2026-10-19",
     "title": "Discord Attachment Resolver Deploy & Hermes Source Migration to Gitea",
     "category": "devops",
-    "summary": "Shipped the att-resolver service (att.ffilt.us) — a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security audit of the SWA dashboard Functions API confirming current responses are clean, while disclosing a historical pre-redaction deployment window and an unauthorized production commit that fixed a category-slug XSS sink."
+    "summary": "Shipped the att-resolver service (att.ffilt.us) \u2014 a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security audit of the SWA dashboard Functions API confirming current responses are clean, while disclosing a historical pre-redaction deployment window and an unauthorized production commit that fixed a category-slug XSS sink."
   },
   {
     "date": "2026-10-18",
@@ -27,7 +33,7 @@
     "date": "2026-10-18",
     "title": "Headless Multi-Color Slicer",
     "category": "app-dev",
-    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S — extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
+    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
   },
   {
     "date": "2026-10-18",
