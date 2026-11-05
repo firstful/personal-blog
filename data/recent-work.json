@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-04",
+    "title": "OOB Session Summary Pipeline \u2014 LLM-Driven Summaries",
+    "category": "infra",
+    "summary": "Rewrote the out-of-band session summary script to gather non-cron, non-channel sessions with per-session digests instead of posting a mechanical dump. Converted the cron job from script-only to an LLM agent that produces real 1-2 sentence summaries and posts them to the forum. Verified end-to-end covering 47 sessions; docs and forum overrides committed and pushed."
+  },
+  {
     "date": "2026-11-03",
     "title": "OOB Session Automation & Hermes Patch Durability",
     "category": "infra",
