@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-05",
+    "title": "K3s Cluster Memory Pressure Investigation",
+    "category": "infra",
+    "summary": "Investigated memory pressure across the k3s cluster, collecting concrete metrics (PSI, free, kubectl top, zram/zswap state, OOM and eviction history) on the control-plane and worker nodes. Found the control-plane node actively thrashing under earlyoom kills, a worker node near full Kubernetes memory allocation, and mixed swap/compression setups across nodes (zram on one, zswap on another, none elsewhere). Delivered a per-node pressure and top-consumer breakdown to guide follow-up tuning."
+  },
+  {
     "date": "2026-11-04",
     "title": "OOB Session Summary Pipeline \u2014 LLM-Driven Summaries",
     "category": "infra",
