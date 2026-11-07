@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-07",
+    "title": "Pocket App Crash Fix & Bambu 3MF Slicer Reverse Engineering",
+    "category": "app-dev",
+    "summary": "Fixed a crash in the Pocket Android app caused by a missing VIBRATE permission triggered by haptic feedback, corrected CI gradle cache volume naming, and added diagnostic logging to investigate a chat streaming hang. Reverse-engineered Bambu Studio's 3MF format for a multi-material stacked-print generator, documenting per-part extruder-based filament assignment, prime tower flush behavior, and measured coplanar interface feature-drop. Also verified a WiFi SSID is already broadcasting on both 2.4 GHz and 5 GHz bands across both access points."
+  },
+  {
     "date": "2026-11-05",
     "title": "K3s Cluster Memory Pressure Investigation",
     "category": "infra",
