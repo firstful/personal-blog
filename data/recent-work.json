@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-08",
+    "title": "Pocket @rook Subagent Support & Gateway Streaming Fix",
+    "category": "app-dev",
+    "summary": "Added native @rook subagent support to the Pocket Android app using the Hermes gateway OpenAI Responses endpoint, with a new streaming RookClient. Patched the gateway streaming path to emit standard OpenAI tool_calls deltas so tool progress renders correctly in the app. Fixed Android permissions and runtime request flow, sandboxed /tmp inside the proot rootfs, added proot provisioning with exec fallback, and corrected the health-check path. Diagnosed a DNS resolution issue where Android Private DNS bypasses the homelab resolver."
+  },
+  {
     "date": "2026-11-07",
     "title": "Pocket App Crash Fix & Bambu 3MF Slicer Reverse Engineering",
     "category": "app-dev",
