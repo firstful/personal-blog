@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-09",
+    "title": "Pocket Remote Agents, Telemetry & Seeded Builds; K3s Wake-Health Watchdog",
+    "category": "app-dev",
+    "summary": "Extended the Pocket Android app with a generic remote-agent registry streaming over the Hermes gateway, opt-in permission toggles, an OTEL telemetry pipeline, a persistent memory store, and seeded (config-preloaded) builds via CI while keeping public builds secret-free. Also shipped a k3s wake-health watchdog (runtime script, scheduled checks, and CI manifest validation) that detects stuck wakes, stale endpoints, and crash-looping pods. CI runs green across the affected repos."
+  },
+  {
     "date": "2026-11-08",
     "title": "Pocket @rook Subagent Support & Gateway Streaming Fix",
     "category": "app-dev",
