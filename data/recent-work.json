@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-10",
+    "title": "Git-Backed Notes Vault & Static Publishing Pipeline",
+    "category": "infra",
+    "summary": "Migrated a personal notes vault from ad-hoc sync to a git-backed repository and implemented an automated static-site publishing pipeline. Added a containerized build that renders Markdown content into a static site, plus CI and cluster deployment manifests for on-demand, wakeable serving in the homelab cluster behind access controls."
+  },
+  {
     "date": "2026-11-09",
     "title": "Pocket Remote Agents, Telemetry & Seeded Builds; K3s Wake-Health Watchdog",
     "category": "app-dev",
