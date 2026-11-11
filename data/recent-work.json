@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-11",
+    "title": "Pocket App QA, LLM Gateway Vision Model & Context Metadata",
+    "category": "app-dev",
+    "summary": "Ran on-device QA across multiple Pocket Android builds, surfacing a backend streaming failure (tool-call ID resolution) that blocked chat and web-search validation. Implemented and pushed an auto-vision meta-model plus a dedicated image-reader profile in the LLM gateway, and prepared context-window metadata exposure so the agent can auto-detect model limits (both awaiting deploy). Fixed a container build syntax error and redeployed the Quartz-based notes-vault static site."
+  },
+  {
     "date": "2026-11-10",
     "title": "Git-Backed Notes Vault & Static Publishing Pipeline",
     "category": "infra",
