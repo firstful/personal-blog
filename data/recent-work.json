@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-12",
+    "title": "Pocket Android App: Web Search Backend Rewrite & Infra Docs Update",
+    "category": "app-dev",
+    "summary": "Replaced the WebView-based web search in the Pocket Android app with an OkHttp DuckDuckGo HTML backend after discovering onPageFinished never fired in the rendering environment, and fixed a NetworkOnMainThreadException by moving tool execution to Dispatchers.IO. Shipped builds vc80 and vc84 with full on-device QA verification of streaming, web search, and web fetch. Also ran the nightly docs coverage audit, documenting the Obsidian vault viewer, Pocket web_search/web_fetch tools, an LLM gateway auto-vision meta-model, and an email-sync trigger prompt fix."
+  },
+  {
     "date": "2026-11-11",
     "title": "Pocket App QA, LLM Gateway Vision Model & Context Metadata",
     "category": "app-dev",
