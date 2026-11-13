@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-13",
+    "title": "Homelab MCP Email Send Tool & Cron/Obsidian Pipeline Fixes",
+    "category": "infra",
+    "summary": "Added an email_send tool to the homelab MCP service with SMTP delivery, recipient blacklist, threading support, HTML bodies, and an agent-origin identity check. Ported email triage into the Obsidian vault with skip-CI commits and a scheduled rebuild, and fixed the out-of-band session summary cron to use a since-last-successful-report cursor so it stops re-reporting the same sessions."
+  },
+  {
     "date": "2026-11-12",
     "title": "Pocket Android App: Web Search Backend Rewrite & Infra Docs Update",
     "category": "app-dev",
