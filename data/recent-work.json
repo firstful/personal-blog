@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-14",
+    "title": "Rook Push Notification System & Pocket Web Extraction",
+    "category": "app-dev",
+    "summary": "Built and end-to-end verified a push notification pipeline: a LAN-only message broker deployed in the cluster, a notify_push tool exposed through the homelab MCP server, and a signed Android app that receives pushes and opens Discord deep links on tap. Separately, shipped granular web extraction for the Pocket Android app with a picture-in-picture WebView overlay and verified the build on a test device."
+  },
+  {
     "date": "2026-11-13",
     "title": "Homelab MCP Email Send Tool & Cron/Obsidian Pipeline Fixes",
     "category": "infra",
