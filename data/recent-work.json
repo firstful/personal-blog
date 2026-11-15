@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-15",
+    "title": "Pocket Android App: On-Device QA Verification & Evidence Ledger",
+    "category": "app-dev",
+    "summary": "Ran on-device QA spot-checks on the Pocket Android app (vc91 build), verifying device identity, launch stability, hello streaming (200 OK, 8 data lines), and permission/dialog handling. Captured 28 evidence artifacts (screenshots and logs) and committed the run entry to the project ledger. CI, app store, and device all confirmed in sync with repo HEAD; no code changes required this cycle."
+  },
+  {
     "date": "2026-11-14",
     "title": "Rook Push Notification System & Pocket Web Extraction",
     "category": "app-dev",
@@ -172,11 +178,5 @@
     "title": "Nightly Red Team Audit",
     "category": "devops",
     "summary": "Implemented automated adversarial security reviews running nightly against all homelab services with alerting and remediation suggestions."
-  },
-  {
-    "date": "2026-09-10",
-    "title": "Jellyfin Media Pipeline",
-    "category": "app-dev",
-    "summary": "Built automated media library management with transcoding workers, metadata scraping, and Telegram-notify on new content arrival."
   }
 ]
