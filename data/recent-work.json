@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-16",
+    "title": "Pocket Android App: Web Render & Web Fetch Verification, Telemetry QA",
+    "category": "app-dev",
+    "summary": "Exercised the web_render feature on-device (vc91 build), confirming WebView factory loading and stream completion across two chat turns. Verified web_fetch end-to-end (200 OK, 593K chars) and tested the OTEL telemetry client path against the cluster endpoint. Ran additional on-device QA spot-checks covering identity, launch, hello streaming, web search, and settings UI reachability; all passed. Committed evidence and ledger updates across multiple PM cycles."
+  },
+  {
     "date": "2026-11-15",
     "title": "Pocket Android App: On-Device QA Verification & Evidence Ledger",
     "category": "app-dev",
@@ -172,11 +178,5 @@
     "title": "KeePass Credential Vault",
     "category": "infra",
     "summary": "Deployed a KeePass vault for homelab credentials with automated rotation, secure sharing across agents, and backup to encrypted storage."
-  },
-  {
-    "date": "2026-09-15",
-    "title": "Nightly Red Team Audit",
-    "category": "devops",
-    "summary": "Implemented automated adversarial security reviews running nightly against all homelab services with alerting and remediation suggestions."
   }
 ]
