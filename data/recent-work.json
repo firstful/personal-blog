@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-17",
+    "title": "Email-Sync DMARC-Gated Trusted Sender & Pocket On-Device QA",
+    "category": "infra",
+    "summary": "Built and end-to-end verified a DMARC-gated trusted-sender capability for the email-sync service: Go code parses Cloudflare's Authentication-Results header and fail-closes on spoofed senders, with a new trusted-commands rule firing Rook sessions only for verified senders. Deployed via CI image build and Flux, recovered from a node memory-pressure incident during rollout, and re-verified the gate on the final pod. Separately ran on-device QA across Pocket Android builds vc91 and vc98 (identity, launch, streaming, web search, web_render)."
+  },
+  {
     "date": "2026-11-16",
     "title": "Pocket Android App: Web Render & Web Fetch Verification, Telemetry QA",
     "category": "app-dev",
@@ -172,11 +178,5 @@
     "title": "WiFi Positioning System",
     "category": "app-dev",
     "summary": "Designed an indoor WiFi positioning system for the homelab using UniFi AP signal strength data and fingerprinting."
-  },
-  {
-    "date": "2026-09-20",
-    "title": "KeePass Credential Vault",
-    "category": "infra",
-    "summary": "Deployed a KeePass vault for homelab credentials with automated rotation, secure sharing across agents, and backup to encrypted storage."
   }
 ]
