@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-18",
+    "title": "Pocket Config Endpoint, Internal CA & Webview PiP; OOB Session Cursor Fix",
+    "category": "app-dev",
+    "summary": "Built and verified a pocket-cfg Go endpoint (Argon2id phrase-gated config delivery with rate limiting) plus an internal root CA with wildcard cert and CA download button in the app store, with CI green on both the Go and Android builds. Shipped rounded-corner webview picture-in-picture with zoom-out and tap-to-fullscreen for the Pocket app, verified on-device. Fixed a frozen cursor in the out-of-band session summary cron that had been re-reporting ~349 stale sessions each run."
+  },
+  {
     "date": "2026-11-17",
     "title": "Email-Sync DMARC-Gated Trusted Sender & Pocket On-Device QA",
     "category": "infra",
@@ -172,11 +178,5 @@
     "title": "Bambu Lab P1S Integration",
     "category": "devops",
     "summary": "Built headless slicing and print management for the Bambu Lab P1S 3D printer, accessible via API and Telegram bot commands."
-  },
-  {
-    "date": "2026-09-24",
-    "title": "WiFi Positioning System",
-    "category": "app-dev",
-    "summary": "Designed an indoor WiFi positioning system for the homelab using UniFi AP signal strength data and fingerprinting."
   }
 ]
