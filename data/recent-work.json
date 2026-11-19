@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-19",
+    "title": "Homelab Dashboard Enhancements, LLM Gateway Auto-Vision & Service Audit",
+    "category": "infra",
+    "summary": "Shipped wakeable-service and cron-findings widgets plus a full service audit/deprecation plan to the homelab dashboard (CI green), rebuilt and validated the LLM gateway auto-vision meta-model end-to-end with test images, and fixed an email MCP shadowing bug restoring all email tools. Also added an OpenCode Go usage monitor cron, removed obsolete profile-management crons, researched incremental Obsidian/Quartz rebuilds, and ran on-device Pocket app QA (vc115/vc117) with CI verification."
+  },
+  {
     "date": "2026-11-18",
     "title": "Pocket Config Endpoint, Internal CA & Webview PiP; OOB Session Cursor Fix",
     "category": "app-dev",
@@ -172,11 +178,5 @@
     "title": "Cloudflare WAN Failover",
     "category": "infra",
     "summary": "Configured OPNsense multi-WAN with automatic cellular (T-Mobile) backup gateway failover via Cloudflare tunnels."
-  },
-  {
-    "date": "2026-09-28",
-    "title": "Bambu Lab P1S Integration",
-    "category": "devops",
-    "summary": "Built headless slicing and print management for the Bambu Lab P1S 3D printer, accessible via API and Telegram bot commands."
   }
 ]
