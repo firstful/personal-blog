@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-20",
+    "title": "Local LLM Inference Stack on Homelab GPU & Pocket App QA",
+    "category": "mlops",
+    "summary": "Installed Ollama 0.40.16 on the homelab server with Vulkan acceleration on the AMD GPU (embeddings verified via /api/embed), and built llama.cpp from source with the Vulkan backend to provide a combined embedding + reranking server (llama-server binary linked successfully). Also ran on-device QA and independent CI/store verification for the Pocket Android app (v1.0.117 build confirmed published)."
+  },
+  {
     "date": "2026-11-19",
     "title": "Homelab Dashboard Enhancements, LLM Gateway Auto-Vision & Service Audit",
     "category": "infra",
@@ -172,11 +178,5 @@
     "title": "Hermes A2A Peer Channels",
     "category": "devops",
     "summary": "Implemented bot-to-bot Telegram DM channels between Hermes profiles for inter-agent communication and task delegation."
-  },
-  {
-    "date": "2026-10-01",
-    "title": "Cloudflare WAN Failover",
-    "category": "infra",
-    "summary": "Configured OPNsense multi-WAN with automatic cellular (T-Mobile) backup gateway failover via Cloudflare tunnels."
   }
 ]
