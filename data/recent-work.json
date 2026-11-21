@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-21",
+    "title": "LLM Gateway Auto-Vision Routing, k3s Pressure Relief & Service Diagnostics",
+    "category": "infra",
+    "summary": "Upgraded the LLM gateway 'auto' metamodel to transparently route image-bearing requests to auto-vision (commit pushed and deployed via staged blue/green swap). Resolved a control-plane resource-pressure incident on the k3s cluster by relieving disk pressure (93% to 52%) and removing 147 orphaned failed pods, tracing the root cause to a resource-pressure feedback loop plus cron churn. Also diagnosed the public blog/dashboard site serving a stale deployment due to an Azure SWA custom-domain binding to an older app (fix identified, pending approval) and reviewed the arewefucked status dashboard, identifying an inverted thermometer marker scale (one-line fix) and a provider-grouping gap in incident chatter."
+  },
+  {
     "date": "2026-11-20",
     "title": "Local LLM Inference Stack on Homelab GPU & Pocket App QA",
     "category": "mlops",
@@ -172,11 +178,5 @@
     "title": "k3s Worker Node Onboarding",
     "category": "infra",
     "summary": "Onboarded a new Dell Wyse 5070 thin client as a k3s worker node with VAAPI hardware transcoding support."
-  },
-  {
-    "date": "2026-10-05",
-    "title": "Hermes A2A Peer Channels",
-    "category": "devops",
-    "summary": "Implemented bot-to-bot Telegram DM channels between Hermes profiles for inter-agent communication and task delegation."
   }
 ]
