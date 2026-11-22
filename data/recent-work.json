@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-22",
+    "title": "Pocket Mobile App On-Device QA & Ledger Reconciliation",
+    "category": "app-dev",
+    "summary": "Ran a full on-device QA pass on the Pocket Android app (version 1.0.117) across a Pixel 6a dev phone, verifying launch, streaming chat, web search, settings reachability, and crypto/permission regressions with zero failures and 16 evidence artifacts. Reconciled a stranded prior QA run whose 14 evidence files were left untracked with no ledger entry, and corrected stale feature notes in the project ledger against the shipped build. One genuine gap remains: protocol-error (4xx/5xx) auto-detection in the streaming client."
+  },
+  {
     "date": "2026-11-21",
     "title": "LLM Gateway Auto-Vision Routing, k3s Pressure Relief & Service Diagnostics",
     "category": "infra",
@@ -172,11 +178,5 @@
     "title": "Multi-Agent Content Pipeline",
     "category": "app-dev",
     "summary": "Built a pipeline where RSS feeds are discovered, claim-ordered by AI agents, written in parallel, and auto-published after QA review."
-  },
-  {
-    "date": "2026-10-08",
-    "title": "k3s Worker Node Onboarding",
-    "category": "infra",
-    "summary": "Onboarded a new Dell Wyse 5070 thin client as a k3s worker node with VAAPI hardware transcoding support."
   }
 ]
