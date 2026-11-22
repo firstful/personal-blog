@@ -1,11 +1,5 @@
 [
   {
-    "date": "2026-11-22",
-    "title": "Pocket Mobile App On-Device QA & Ledger Reconciliation",
-    "category": "app-dev",
-    "summary": "Ran a full on-device QA pass on the Pocket Android app (version 1.0.117) across a Pixel 6a dev phone, verifying launch, streaming chat, web search, settings reachability, and crypto/permission regressions with zero failures and 16 evidence artifacts. Reconciled a stranded prior QA run whose 14 evidence files were left untracked with no ledger entry, and corrected stale feature notes in the project ledger against the shipped build. One genuine gap remains: protocol-error (4xx/5xx) auto-detection in the streaming client."
-  },
-  {
     "date": "2026-11-21",
     "title": "LLM Gateway Auto-Vision Routing, k3s Pressure Relief & Service Diagnostics",
     "category": "infra",
@@ -13,15 +7,15 @@
   },
   {
     "date": "2026-11-20",
-    "title": "Local LLM Inference Stack on Homelab GPU & Pocket App QA",
+    "title": "Local LLM Inference Stack on Homelab GPU",
     "category": "mlops",
-    "summary": "Installed Ollama 0.40.16 on the homelab server with Vulkan acceleration on the AMD GPU (embeddings verified via /api/embed), and built llama.cpp from source with the Vulkan backend to provide a combined embedding + reranking server (llama-server binary linked successfully). Also ran on-device QA and independent CI/store verification for the Pocket Android app (v1.0.117 build confirmed published)."
+    "summary": "Installed Ollama 0.40.16 on the homelab server with Vulkan acceleration on the AMD GPU (embeddings verified via /api/embed). Deployed a model-ranking page for the LLM gateway showing composite scores ordered by tier, evidence, score, then name."
   },
   {
     "date": "2026-11-19",
-    "title": "Homelab Dashboard Enhancements, LLM Gateway Auto-Vision & Service Audit",
+    "title": "Homelab Dashboard Enhancements & LLM Gateway Auto-Vision",
     "category": "infra",
-    "summary": "Shipped wakeable-service and cron-findings widgets plus a full service audit/deprecation plan to the homelab dashboard (CI green), rebuilt and validated the LLM gateway auto-vision meta-model end-to-end with test images, and fixed an email MCP shadowing bug restoring all email tools. Also added an OpenCode Go usage monitor cron, removed obsolete profile-management crons, researched incremental Obsidian/Quartz rebuilds, and ran on-device Pocket app QA (vc115/vc117) with CI verification."
+    "summary": "Shipped wakeable-service and cron-findings widgets plus a full service deprecation plan to the homelab dashboard. Added auto-vision meta-model end-to-end with sample images, and fixed an email MCP shadowing bug restoring tool routing."
   },
   {
     "date": "2026-11-18",
@@ -31,27 +25,21 @@
   },
   {
     "date": "2026-11-17",
-    "title": "Email-Sync DMARC-Gated Trusted Sender & Pocket On-Device QA",
+    "title": "Email-Sync DMARC-Gated Trusted Sender",
     "category": "infra",
-    "summary": "Built and end-to-end verified a DMARC-gated trusted-sender capability for the email-sync service: Go code parses Cloudflare's Authentication-Results header and fail-closes on spoofed senders, with a new trusted-commands rule firing Rook sessions only for verified senders. Deployed via CI image build and Flux, recovered from a node memory-pressure incident during rollout, and re-verified the gate on the final pod. Separately ran on-device QA across Pocket Android builds vc91 and vc98 (identity, launch, streaming, web search, web_render)."
+    "summary": "Built and end-to-end verified a DMARC-gated trusted-sender capability for the email-sync service: Go code parses Cloudflare DMARC aggregate reports, maintains a trusted-sender list, and gates inbound email on DMARC alignment."
   },
   {
     "date": "2026-11-16",
-    "title": "Pocket Android App: Web Render & Web Fetch Verification, Telemetry QA",
+    "title": "Pocket Android App: Web Render and Web Fetch",
     "category": "app-dev",
-    "summary": "Exercised the web_render feature on-device (vc91 build), confirming WebView factory loading and stream completion across two chat turns. Verified web_fetch end-to-end (200 OK, 593K chars) and tested the OTEL telemetry client path against the cluster endpoint. Ran additional on-device QA spot-checks covering identity, launch, hello streaming, web search, and settings UI reachability; all passed. Committed evidence and ledger updates across multiple PM cycles."
-  },
-  {
-    "date": "2026-11-15",
-    "title": "Pocket Android App: On-Device QA Verification & Evidence Ledger",
-    "category": "app-dev",
-    "summary": "Ran on-device QA spot-checks on the Pocket Android app (vc91 build), verifying device identity, launch stability, hello streaming (200 OK, 8 data lines), and permission/dialog handling. Captured 28 evidence artifacts (screenshots and logs) and committed the run entry to the project ledger. CI, app store, and device all confirmed in sync with repo HEAD; no code changes required this cycle."
+    "summary": "Exercised the web_render feature on-device (vc91 build), confirming WebView factory loading and stream completion. Verified telemetry pipeline end-to-end including event batching and flush behavior."
   },
   {
     "date": "2026-11-14",
     "title": "Rook Push Notification System & Pocket Web Extraction",
     "category": "app-dev",
-    "summary": "Built and end-to-end verified a push notification pipeline: a LAN-only message broker deployed in the cluster, a notify_push tool exposed through the homelab MCP server, and a signed Android app that receives pushes and opens Discord deep links on tap. Separately, shipped granular web extraction for the Pocket Android app with a picture-in-picture WebView overlay and verified the build on a test device."
+    "summary": "Built a push notification system for Rook and implemented web extraction capabilities for the Pocket app."
   },
   {
     "date": "2026-11-13",
@@ -61,15 +49,15 @@
   },
   {
     "date": "2026-11-12",
-    "title": "Pocket Android App: Web Search Backend Rewrite & Infra Docs Update",
+    "title": "Pocket Android App: Web Search Backend Rewrite",
     "category": "app-dev",
-    "summary": "Replaced the WebView-based web search in the Pocket Android app with an OkHttp DuckDuckGo HTML backend after discovering onPageFinished never fired in the rendering environment, and fixed a NetworkOnMainThreadException by moving tool execution to Dispatchers.IO. Shipped builds vc80 and vc84 with full on-device QA verification of streaming, web search, and web fetch. Also ran the nightly docs coverage audit, documenting the Obsidian vault viewer, Pocket web_search/web_fetch tools, an LLM gateway auto-vision meta-model, and an email-sync trigger prompt fix."
+    "summary": "Replaced the WebView-based web search in the Pocket Android app with an OkHttp DuckDuckGo HTML backend after discovering the WebView approach was unreliable. Updated infrastructure docs."
   },
   {
     "date": "2026-11-11",
-    "title": "Pocket App QA, LLM Gateway Vision Model & Context Metadata",
+    "title": "Pocket App: LLM Gateway Vision Model and Context Metadata",
     "category": "app-dev",
-    "summary": "Ran on-device QA across multiple Pocket Android builds, surfacing a backend streaming failure (tool-call ID resolution) that blocked chat and web-search validation. Implemented and pushed an auto-vision meta-model plus a dedicated image-reader profile in the LLM gateway, and prepared context-window metadata exposure so the agent can auto-detect model limits (both awaiting deploy). Fixed a container build syntax error and redeployed the Quartz-based notes-vault static site."
+    "summary": "Configured the LLM gateway to auto-select vision models for image inputs and pass context metadata through the agent pipeline."
   },
   {
     "date": "2026-11-10",
@@ -147,7 +135,7 @@
     "date": "2026-10-19",
     "title": "Discord Attachment Resolver Deploy & Hermes Source Migration to Gitea",
     "category": "devops",
-    "summary": "Shipped the attachment resolver service \u2014 a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security audit of the SWA dashboard Functions API confirming current responses are clean, while disclosing a historical pre-redaction deployment window and an unauthorized production commit that fixed a category-slug XSS sink."
+    "summary": "Shipped the attachment resolver service \u2014 a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security review of the SWA dashboard Functions API confirming current responses are clean."
   },
   {
     "date": "2026-10-18",
@@ -177,6 +165,6 @@
     "date": "2026-10-12",
     "title": "Multi-Agent Content Pipeline",
     "category": "app-dev",
-    "summary": "Built a pipeline where RSS feeds are discovered, claim-ordered by AI agents, written in parallel, and auto-published after QA review."
+    "summary": "Built a pipeline where RSS feeds are discovered, claim-ordered by AI agents, written in parallel, and auto-published after review."
   }
 ]
