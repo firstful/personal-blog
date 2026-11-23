@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-23",
+    "title": "Unified Search MCP Tool, Status Dashboard Fix & Cloud Node Diagnosis",
+    "category": "devops",
+    "summary": "Consolidated email, docs, Obsidian, transcript, and repo search into a unified MCP tool family with FTS5 and hybrid vector/FTS search across five source types, implemented in both the gpu-rag service and MCP server and pushed to Gitea. Fixed an arewefucked status dashboard bug where all incidents displayed 'ongoing since 5m ago' by restoring incident timestamps from the published snapshot across CI runs (commit verified in CI). Diagnosed a cloud-hosted k3s worker node outage caused by a guest-level hang breaking the WireGuard overlay, with recovery pending instance reset. Also excluded inbound email triage sessions from the out-of-band session summary cron and updated the ops docs."
+  },
+  {
     "date": "2026-11-21",
     "title": "LLM Gateway Auto-Vision Routing, k3s Pressure Relief & Service Diagnostics",
     "category": "infra",
