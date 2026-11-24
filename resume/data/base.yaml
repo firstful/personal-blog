@@ -7,69 +7,107 @@ github: "github.com/reedsutliff"
 website: "ffilt.us"
 
 summary:
-  "Software engineer with experience building web applications, automation platforms,
-   and event-driven systems. Comfortable across the stack and with client-facing delivery."
+  "Senior full-stack engineer with 7+ years shipping production software across the entire stack ---
+   backend services, responsive frontends, infrastructure, and data pipelines. Proven record of owning
+   problems end to end, from ideation through shipped, reliable solutions. Deep experience in
+   strongly-typed backend systems, API design, event-driven architecture, and modern web frontends.
+   Adapts quickly to new stacks and tools, with working fluency in Python, JavaScript, SQL, and Linux
+   infrastructure. Actively uses AI tooling to accelerate delivery while maintaining ownership of
+   quality and maintainability. Experienced with monitoring."
 
 skills:
   languages:
-    - C#
-    - SQL
-    - Python
-    - JavaScript
-    - HTML / CSS
-    - Bash
-    - PowerShell
+    - "C#"
+    - "Python"
+    - "JavaScript"
+    - "TypeScript"
+    - "SQL / PostgreSQL"
+    - "HTML / CSS"
+    - "Bash"
   frameworks:
-    - Blazor
-    - .NET
-    - Node.js
+    - ".NET / ASP.NET Core"
+    - "Blazor"
+    - "Node.js"
+    - "Entity Framework"
+    - "FastAPI"
   tools:
-    - Docker
-    - Nginx
-    - Linux
-    - Git
-    - Azure
+    - "Docker"
+    - "Nginx"
+    - "Linux"
+    - "Git"
+    - "Azure"
+    - "CI/CD"
+    - "Redis"
+    - "Kubernetes"
+    - "gRPC"
   concepts:
-    - Automation
-    - RPA
-    - API Design
-    - CI/CD
-    - Event-Driven Architecture
+    - "Full-Stack Development"
+    - "API Design & REST"
+    - "Event-Driven Architecture"
+    - "Web Performance Optimization"
+    - "Automated Testing"
+    - "AI-Augmented Development"
+    - "Distributed Systems"
+    - "Internal Tooling"
+    - "Data Pipelines"
+    - "Web Scraping"
 
 experience:
   - company: "Foxen"
     location: "Columbus, OH"
     position: "Senior Software Engineer"
-    dates: "Aug 2023 – Present"
+    dates: "Aug 2023 -- Present"
     highlights:
-      - "Reduced frontend API call hops from 4 to 1 via reverse proxy, cutting endpoint latency up to 15x"
-      - "Drove client SDK standardization and code reuse across 10 services"
-      - "Created reusable libraries and testing frameworks adopted across every service"
-      - "Implemented event-driven architecture inside legacy codebase without service disruption"
+      - "Own full-stack feature delivery end to end: requirements, design, implementation, testing, deployment, and monitoring"
+      - "Reduced frontend API call hops from 4 to 1 via reverse proxy layer, cutting endpoint latency up to 15x for B2B clients"
+      - "Created reusable UI component libraries and automated testing frameworks adopted across every service"
+      - "Drove client SDK standardization enabling code reuse and consistent developer experience across 10 services"
+      - "Implemented event-driven architecture inside a legacy codebase without service disruption"
+      - "Built gRPC service interfaces for internal microservice communication with schema versioning"
 
   - company: "Impower.ai"
     location: "Columbus, OH"
     position: "Automation Architect / RPA Developer"
-    dates: "Mar 2020 – Aug 2023"
+    dates: "Mar 2020 -- Aug 2023"
     highlights:
-      - "Delivered automation that eliminated 10 planned new hires for a client engagement"
-      - "Built container tracking system enabling 5-10x daily inspection frequency, reducing demurrage fees"
-      - "Delivered compliance automation for Fortune 500 company, avoiding significant litigation exposure"
-      - "Built lead-generation system processing thousands of prospects daily for a law firm"
-      - "Rotated through client engagements including Process Automation Engineer at Chipotle Mexican Grill"
+      - "Designed container tracking system integrating scraping, APIs, and automated pipelines --- enabling 5-10x daily inspection frequency and reducing demurrage fees for a logistics client"
+      - "Worked as the sole engineer embedded with client stakeholders --- requirements, demos, and iteration in days-long feedback loops, then shipped to production"
+      - "Built full-stack web dashboards and data processing pipelines for compliance, logistics, and lead generation"
+      - "Developed lead-generation system processing thousands of prospects daily for a law firm"
+      - "Rotated through client engagements including on-site Process Automation Engineer at Chipotle Mexican Grill"
+      - "Delivered compliance automation for Fortune 500 company directly with stakeholders, avoiding significant litigation exposure"
+      - "Delivered enterprise automation that eliminated 10 planned new hires for a client engagement --- owned from discovery through deployment"
 
 education:
   - institution: "Ohio State University"
     degree: ""
-    field: "Chemical Engineering"
-    dates: "2014 – 2018"
+    field: "B.S. Chemical Engineering"
+    dates: "2014 -- 2018"
 
 projects:
-  - name: "ffilt.us (Personal Blog)"
-    description: "Static site built with MkDocs, custom Material theme, automated CI/CD deployment on Azure"
+  - name: "Talaria (Voice-Controlled Android App)"
+    description: "Designed and built real-time voice transcription Android app with FastAPI speech-to-text backend. Implemented Edge TTS synthesis for voice response generation. Deployed with Docker containers and Cloudflare Tunnel for secure public access."
     technologies:
-      - Python
-      - MkDocs
-      - Azure
-      - GitHub Actions
+      - "Android / Compose"
+      - "Python / FastAPI"
+      - "Docker"
+      - "Kubernetes"
+    url: "https://github.com/reedsutliff"
+
+  - name: "Hermes Agent (AI Development Tooling)"
+    description: "Developed CI/CD pipelines and Linux containerized deployment infrastructure. Contributor to open-source autonomous AI agent framework used by thousands. Built agent orchestration systems with multi-tool execution and subagent delegation."
+    technologies:
+      - "Python"
+      - "TypeScript"
+      - "LLMs"
+      - "Docker"
+      - "Agent Systems"
+
+  - name: "ffilt.us (Personal Blog & Portfolio)"
+    description: "Custom Material theme with retro BBS aesthetic and interactive resume flow. Automated CI/CD deployment with GitHub Actions. Content-hash asset cache-busting pipeline for static site performance."
+    technologies:
+      - "Python"
+      - "MkDocs"
+      - "Azure"
+      - "GitHub Actions"
     url: "https://ffilt.us"

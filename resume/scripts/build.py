@@ -94,7 +94,7 @@ def load_data(variant=None):
     contact_parts = []
     for field in ("email", "phone", "location"):
         if data.get(field):
-            contact_parts.append(data[field])
+            contact_parts.append(_escape_latex(data[field]))
     data["_contact_line"] = " | ".join(contact_parts)
 
     link_parts = []
@@ -104,7 +104,9 @@ def load_data(variant=None):
             if not val.startswith("http"):
                 val = f"https://{val}"
             display = val.replace("https://", "").rstrip("/")
-            link_parts.append(r"\href{" + val + "}{" + display + "}")
+            # Escape display text only; \href command and URL stay raw (hyperref handles URL specials)
+            esc_display = _escape_latex(display)
+            link_parts.append(r"\href{" + val + "}{" + esc_display + "}")
     data["_links"] = " | ".join(link_parts)
 
     # Escape LaTeX special characters in all remaining string values
