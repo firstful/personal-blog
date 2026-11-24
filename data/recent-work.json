@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-24",
+    "title": "Declarative Cloudflare IaC, DNS Management & Vault Automation",
+    "category": "devops",
+    "summary": "Audited and began converting Cloudflare configuration to declarative infrastructure-as-code: created a multi-zone DNS management repo with octoDNS (including a TXT record for custom-domain verification), minted a persistent IaC API token stored as a CI secret, and documented the declarative baseline. Built a nightly Obsidian TODO page generator on the homelab that aggregates the task board and filters to urgent items. Also fixed unescaped download links and stale references on the public resume/portfolio page."
+  },
+  {
     "date": "2026-11-23",
     "title": "Unified Search MCP Tool, Status Dashboard Fix & Cloud Node Diagnosis",
     "category": "devops",
