@@ -85,29 +85,32 @@ education:
     dates: "2014 -- 2018"
 
 projects:
-  - name: "Talaria (Voice-Controlled Android App)"
-    description: "Designed and built real-time voice transcription Android app with FastAPI speech-to-text backend. Implemented Edge TTS synthesis for voice response generation. Deployed with Docker containers and Cloudflare Tunnel for secure public access."
+  - name: "Pocket (Headless Agent Runtime)"
+    description: "Native Android app that owns an Alpine proot environment with an embedded LLM agent runtime. Event-driven triggers (SMS, boot) spawn background agent sessions; exposes a localhost socket API for tool execution. No Termux dependency."
     technologies:
-      - "Android / Compose"
-      - "Python / FastAPI"
-      - "Docker"
-      - "Kubernetes"
-    url: "https://github.com/reedsutliff"
-
-  - name: "Hermes Agent (AI Development Tooling)"
-    description: "Developed CI/CD pipelines and Linux containerized deployment infrastructure. Contributor to open-source autonomous AI agent framework used by thousands. Built agent orchestration systems with multi-tool execution and subagent delegation."
-    technologies:
-      - "Python"
-      - "TypeScript"
+      - "Kotlin"
+      - "Android"
+      - "proot / Alpine"
       - "LLMs"
-      - "Docker"
-      - "Agent Systems"
+      - "Event Triggers"
 
-  - name: "ffilt.us (Personal Blog & Portfolio)"
-    description: "Custom Material theme with retro BBS aesthetic and interactive resume flow. Automated CI/CD deployment with GitHub Actions. Content-hash asset cache-busting pipeline for static site performance."
+  - name: "Automated Obsidian (Vault Viewer)"
+    description: "Wakeable web rendering of an Obsidian vault as a static Quartz v4 site, built and deployed automatically via Gitea Actions and Flux. Served at obsidian.ffilt.us behind a transient gatekeeper that wakes the pod on demand."
     technologies:
-      - "Python"
-      - "MkDocs"
-      - "Azure"
-      - "GitHub Actions"
+      - "Quartz v4"
+      - "Docker"
+      - "k3s"
+      - "Gitea Actions"
+      - "Flux"
+    url: "https://obsidian.ffilt.us"
+
+  - name: "Homelab (Self-Hosted Infrastructure)"
+    description: "Multi-node k3s cluster (control plane plus two workers) with Longhorn replicated storage, Traefik ingress, Cloudflare Tunnel, and roughly thirty wakeable services. GitOps via Gitea; autonomous agents manage deployments and monitoring."
+    technologies:
+      - "k3s"
+      - "Kubernetes"
+      - "Longhorn"
+      - "Traefik"
+      - "Cloudflare"
+      - "GitOps"
     url: "https://ffilt.us"
