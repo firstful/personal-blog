@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-25",
+    "title": "Nightly Publishing Pipeline & Container Rollout Fix",
+    "category": "devops",
+    "summary": "Diagnosed and fixed a nightly automation that was regenerating a personal documentation site's task page from a stale local checkout. Removed a competing scheduled writer reading out-of-date data, then traced why the deployed site kept showing old content: CI builds were pinned to a frozen commit by skip-CI publish markers, and the deployment used a mutable latest image tag that the orchestrator does not re-pull when the registry tag moves. Removed the skip-CI markers from the publisher, advanced the frozen build pin with a fresh publish, and rolled the deployment to pick up the corrected image; verified the live page end-to-end."
+  },
+  {
     "date": "2026-11-24",
     "title": "Declarative Cloudflare IaC, DNS Management & Vault Automation",
     "category": "devops",
@@ -103,7 +109,7 @@
   },
   {
     "date": "2026-11-04",
-    "title": "OOB Session Summary Pipeline \u2014 LLM-Driven Summaries",
+    "title": "OOB Session Summary Pipeline — LLM-Driven Summaries",
     "category": "infra",
     "summary": "Rewrote the out-of-band session summary script to gather non-cron, non-channel sessions with per-session digests instead of posting a mechanical dump. Converted the cron job from script-only to an LLM agent that produces real 1-2 sentence summaries and posts them to the forum. Verified end-to-end covering 47 sessions; docs and forum overrides committed and pushed."
   },
@@ -139,15 +145,15 @@
   },
   {
     "date": "2026-10-20",
-    "title": "Rayobrowse Session Store \u2014 Keyed Persistent Browser Sessions",
+    "title": "Rayobrowse Session Store — Keyed Persistent Browser Sessions",
     "category": "app-dev",
-    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration \u2014 an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
+    "summary": "Implemented a Go-based keyed, persistent browser-session store for the rayobrowse CDP browser, deployed to k3s with Longhorn-backed PVC storage. Proved end-to-end session restoration — an authenticated login was reopened from a fresh browser using restored cookies and localStorage. Discovered and documented three real bugs (localStorage capture format mismatch, wrong cookie CDP commands, browser reaping mid-session) and stored platform credentials in the KDBX vault."
   },
   {
     "date": "2026-10-19",
     "title": "Discord Attachment Resolver Deploy & Hermes Source Migration to Gitea",
     "category": "devops",
-    "summary": "Shipped the attachment resolver service \u2014 a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security review of the SWA dashboard Functions API confirming current responses are clean."
+    "summary": "Shipped the attachment resolver service — a Go-based Discord attachment URL resolver with HMAC-signed links, deployed via Gitea Actions CI to k3s with release artifacts and a smoke-tested binary. Migrated the Hermes Agent source tree from GitHub to a self-hosted Gitea instance with host-scoped credential helper and a fork-sync update path. Completed an independent security review of the SWA dashboard Functions API confirming current responses are clean."
   },
   {
     "date": "2026-10-18",
@@ -159,7 +165,7 @@
     "date": "2026-10-18",
     "title": "Headless Multi-Color Slicer",
     "category": "app-dev",
-    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
+    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S — extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
   },
   {
     "date": "2026-10-18",
@@ -172,11 +178,5 @@
     "title": "Azure SWA Dashboard Deploy",
     "category": "devops",
     "summary": "Rewrote the personal blog as a homelab dashboard on Azure Static Web Apps with API proxy functions and real-time cluster monitoring."
-  },
-  {
-    "date": "2026-10-12",
-    "title": "Multi-Agent Content Pipeline",
-    "category": "app-dev",
-    "summary": "Built a pipeline where RSS feeds are discovered, claim-ordered by AI agents, written in parallel, and auto-published after review."
   }
 ]
