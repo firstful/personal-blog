@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-27",
+    "title": "K3s Resource Optimization, Session Drop APK & Cron Modernization",
+    "category": "infra",
+    "summary": "Reduced cluster memory footprint by scaling Longhorn CSI sidecars from 3 to 1 replicas, tuning Home Assistant recorder purge intervals, and replacing the legacy embeddings service with a GPU-backed RAG stack. Shipped a signed Session Drop Android APK with an authenticated rayobrowse-session import endpoint exposed over WAN via Cloudflare Access. Modernized the cron fleet by converting jobs to agent-mode on the auto model with optional silent output, added a torrent cleanup job, and fixed an OpenRouter 402 compression failure in the LLM gateway."
+  },
+  {
     "date": "2026-11-26",
     "title": "Browser-Based STL Viewer Webapp & Eviction Watchdog Tuning",
     "category": "app-dev",
@@ -172,11 +178,5 @@
     "title": "Headless Multi-Color Slicer",
     "category": "app-dev",
     "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
-  },
-  {
-    "date": "2026-10-18",
-    "title": "Discord Forum Tooling Migration & Gateway Patch",
-    "category": "devops",
-    "summary": "Implemented declarative per-forum tooling context via Gitea-hosted YAML with 20 forum overrides, extended ChannelOverride with toolsets/skills/context/docs fields, and patched the gateway for toolset resolution and context injection with a 15-minute mirror cron. Also added a 48-hour purge cron for the Discord attachments channel and improved sidecar filenames to use readable tool-kind labels."
   }
 ]
