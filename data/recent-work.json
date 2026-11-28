@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-28",
+    "title": "Hivemind RTS/MOBA Game \u2014 Sim, Server & Replay Renderer",
+    "category": "app-dev",
+    "summary": "Built out the Hivemind 2.5D isometric RTS/MOBA game project: implemented a Godot C# headless sim with worker neural network and champion AI, a stdlib-only WebSocket game server with streaming and E2E tests, and an MP4 replay renderer with realtime tick cadence, interpretable HUD, event feed, phase banner, and a 2-3 minute summary video mode. Published multiple commits to the Gitea repo including game design docs covering factions, races, match lifecycle, and regicide win conditions. Also completed a full teardown of the slow-inference service, removing its Gitea repo, local tree, cron jobs, and all stale cross-references."
+  },
+  {
     "date": "2026-11-27",
     "title": "K3s Resource Optimization, Session Drop APK & Cron Modernization",
     "category": "infra",
@@ -172,11 +178,5 @@
     "title": "STL Web Previewer Deploy & Hermes Profiles k3s Migration",
     "category": "devops",
     "summary": "Built and deployed an interactive STL web previewer service (Flask + Three.js) through the full Gitea-to-CI-to-k3s pipeline, accepting STL uploads and serving viewable links. Migrated the hermes-profiles management app from a host systemd service to a k3s pod with Traefik ingress, hostPath volumes, and network policy. Also resolved Gitea Actions CI failures including missing registry push token scopes and fixed camera-service IngressRoute path routing conflicts."
-  },
-  {
-    "date": "2026-10-18",
-    "title": "Headless Multi-Color Slicer",
-    "category": "app-dev",
-    "summary": "Started a headless CLI pipeline for multi-color (AMS) slicing on the Bambu P1S \u2014 extracting Bambu Studio's extruder-mapping machinery and driving OrcaSlicer headless from generated OpenSCAD STLs. Open problem: CLI mode forces single-extruder output from the P1S profile."
   }
 ]
